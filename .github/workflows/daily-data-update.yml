@@ -1,0 +1,58 @@
+name: Daily data update
+
+on:
+  schedule:
+    # GitHub Actions uses UTC. 00:23 UTC is 08:23 in Asia/Shanghai.
+    - cron: "23 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-data-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Refresh model data
+        run: pnpm fetch:data
+        env:
+          AA_API_KEY: ${{ secrets.AA_API_KEY }}
+
+      - name: Validate generated site
+        run: |
+          pnpm check
+          pnpm build
+
+      - name: Commit refreshed data
+        run: |
+          if git diff --quiet -- data; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "chore(data): daily refresh"
+          git push

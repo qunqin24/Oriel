@@ -1,0 +1,546 @@
+{
+  "fetched_at": "2026-07-23T13:29:12.751Z",
+  "tier": "free",
+  "data": [
+    {
+      "id": "865b890e-c487-4e78-a404-d1af7d7ee910",
+      "name": "GPT-4o Mini Transcribe, OpenAI",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "c7303d61-c95c-4ea0-91ac-8b7c9241ba5f",
+      "name": "Gemini 2.5 Flash, Google",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": 0.1
+    },
+    {
+      "id": "8f16f54e-400b-42c1-9f76-6492377f41c7",
+      "name": "Speechmatics Enhanced",
+      "model_creator": {
+        "id": "33abe1aa-c54f-445e-adf6-0f7a470ef068",
+        "name": "Speechmatics"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "5a86207e-e78f-48ba-bad4-894caded7b99",
+      "name": "Voxtral Small, Mistral",
+      "model_creator": {
+        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
+        "name": "Mistral"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "88ba5688-920d-411d-a341-5f21d27ead16",
+      "name": "Solaria-1, Gladia",
+      "model_creator": {
+        "id": "549aa512-cfd7-461c-ac15-5a0545ba4d60",
+        "name": "Gladia"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "73a2fa0c-efbb-4f01-a0fe-c76c686bc48b",
+      "name": "WhisperX",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "aa_wer_index": null
+    },
+    {
+      "id": "615fd1ea-2158-4c5d-b758-8c97a5469f7a",
+      "name": "Nova 2 Omni, Amazon",
+      "model_creator": {
+        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
+        "name": "Amazon"
+      },
+      "aa_wer_index": 0.1
+    },
+    {
+      "id": "f1eb3e2c-3748-4c3f-a6b5-a0f63f6ccf7d",
+      "name": "GPT-4o Transcribe, OpenAI",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "a85d608d-5bd5-47aa-a363-cf10161d6733",
+      "name": "Smallest AI Pulse Pro",
+      "model_creator": {
+        "id": "000cfce6-a1fa-478d-a83c-16a4928d91cf",
+        "name": "Smallest.ai"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "48022903-152e-47ef-97be-e9c5caf99c51",
+      "name": "Gemini 2.5 Lite, Google",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": 0.1
+    },
+    {
+      "id": "122b3bfc-f895-4c9a-a7a1-1744134834fd",
+      "name": "Gemini 3 Flash (High), Google",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "9fac584c-fdf3-4982-aaa3-422a2fc5f5db",
+      "name": "Nova 2 Pro, Amazon",
+      "model_creator": {
+        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
+        "name": "Amazon"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "53bc8d3f-50bc-4b6a-9138-7ab4ecbe7892",
+      "name": "Speechmatics Standard",
+      "model_creator": {
+        "id": "33abe1aa-c54f-445e-adf6-0f7a470ef068",
+        "name": "Speechmatics"
+      },
+      "aa_wer_index": 0.1
+    },
+    {
+      "id": "eb4301fe-da04-41f3-87e1-bf807e95cd93",
+      "name": "Parakeet RNNT 1.1B, NVIDIA",
+      "model_creator": {
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA"
+      },
+      "aa_wer_index": 0.1
+    },
+    {
+      "id": "a61e9ed6-2089-46ec-8514-63581e540189",
+      "name": "Parakeet TDT 0.6B V2, NVIDIA",
+      "model_creator": {
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA"
+      },
+      "aa_wer_index": 0.1
+    },
+    {
+      "id": "ae083e8b-477f-4114-90e2-3484f97f2d76",
+      "name": "Gemini 2.0 Flash Lite, Google",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "baecc05e-83d2-489d-8f23-e139dd22f88b",
+      "name": "Fun-Realtime-ASR-preview",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "1becd7bb-dc7a-4f2d-8415-e8c02ffdebac",
+      "name": "Chirp 3, Google",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "3e239d92-a810-4dfa-b9a8-257cd5766b94",
+      "name": "Whisper Large v2, OpenAI",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "9624e72d-1a28-4210-8016-ac65f20c7048",
+      "name": "Cloud Speech-To-Text (Chirp), Google",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": 0.3
+    },
+    {
+      "id": "e95f995b-c4d9-494b-9398-4cf64e3567b0",
+      "name": "Qwen3 ASR 1.7B",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "aa_wer_index": null
+    },
+    {
+      "id": "92149d99-58d9-4b93-8f78-d713ebcb9258",
+      "name": "Universal, AssemblyAI",
+      "model_creator": {
+        "id": "4fb0e648-ff21-4fe3-909b-290fba140579",
+        "name": "AssemblyAI"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "bb5af4f9-cb59-4424-bd6c-a1b2ce7732ec",
+      "name": "Gemini 3.1 Pro Preview (High)",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "38853c48-3328-44a9-a5eb-a233c806e2a6",
+      "name": "Gemini 3.1 Flash-Lite Preview (Minimal)",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "3dcc3661-cede-4572-8ef3-0221679e589d",
+      "name": "Gemini 3.1 Flash-Lite Preview (High)",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": null
+    },
+    {
+      "id": "9480308b-edde-403f-b67d-f0125f974f4e",
+      "name": "Qwen3.5 Omni Plus",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "cf64b74a-9c92-4ea2-a1c8-559b93375b23",
+      "name": "MAI-Transcribe-1",
+      "model_creator": {
+        "id": "ef5ce458-9986-4652-915a-e31fac5506b0",
+        "name": "Microsoft"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "d0e234f7-4a65-406c-b2ad-48160e82c834",
+      "name": "Soniox V4",
+      "model_creator": {
+        "id": "2ec53bc5-5f0a-4614-b05b-ddefb9c5d4a5",
+        "name": "Soniox"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "9c53fcbc-f016-4bc0-af49-57b8a906e81d",
+      "name": "Gemini 2.5 Pro, Google",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "0836780c-8853-44b4-837c-deb52e5f7d3a",
+      "name": "Gemini 3.1 Pro Preview (Low)",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "d19f07f9-8a59-4e7b-80db-22f02830965c",
+      "name": "Qwen3 ASR 0.6B",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "aa_wer_index": null
+    },
+    {
+      "id": "8580ae07-5e50-4d47-ae23-28c374a3ba21",
+      "name": "Voxtral Mini Transcribe 2, Mistral",
+      "model_creator": {
+        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
+        "name": "Mistral"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "69a3c281-fbaa-4102-b7de-7eb99354a561",
+      "name": "Scribe v2, ElevenLabs",
+      "model_creator": {
+        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
+        "name": "ElevenLabs"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "3a525d2a-dabf-494c-bc60-9c4bf6924207",
+      "name": "Gemma 4 12B, Google",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": 0.1
+    },
+    {
+      "id": "7f2fc6f3-6709-4afb-a886-af941ddef8b3",
+      "name": "Universal-3 Pro, AssemblyAI",
+      "model_creator": {
+        "id": "4fb0e648-ff21-4fe3-909b-290fba140579",
+        "name": "AssemblyAI"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "2f113779-7b7e-4f20-9a00-1605af5c71c8",
+      "name": "Qwen3 Omni, Alibaba",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "aa_wer_index": null
+    },
+    {
+      "id": "087013a3-3e75-4c4f-b31d-170628834d54",
+      "name": "Whisper Large v3 Turbo, OpenAI",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "47d9e505-3e43-4ac1-86f9-480295100d57",
+      "name": "Gradium Speech-to-Text",
+      "model_creator": {
+        "id": "a7dece53-2775-474b-8a96-8be0a1e0ea38",
+        "name": "Gradium"
+      },
+      "aa_wer_index": 0.1
+    },
+    {
+      "id": "5562b407-12f3-4392-9f78-801d33be65b1",
+      "name": "Cohere Transcribe",
+      "model_creator": {
+        "id": "671d3708-c407-4b8f-b350-f728e4689d26",
+        "name": "Cohere"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "6ff63323-a01b-4ecf-983c-3d0da4855461",
+      "name": "Smallest AI Pulse",
+      "model_creator": {
+        "id": "000cfce6-a1fa-478d-a83c-16a4928d91cf",
+        "name": "Smallest.ai"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "484244d8-0d89-48c2-8f6d-9be27093bf9a",
+      "name": "Nova-3, Deepgram",
+      "model_creator": {
+        "id": "e89cf922-cec7-4064-a472-c439f5a04da9",
+        "name": "Deepgram"
+      },
+      "aa_wer_index": 0.1
+    },
+    {
+      "id": "59da3665-ab26-4516-a22d-2abc8837773a",
+      "name": "Qwen3.5 Omni Flash",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "aa_wer_index": 0.1
+    },
+    {
+      "id": "7280bf24-0103-4109-b8f1-fd04de2be1e1",
+      "name": "Gemini 3 Flash (Minimal), Google",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": null
+    },
+    {
+      "id": "39cc7fd8-fb66-46ef-b611-071fc5bb0a22",
+      "name": "LLM Speech, Azure",
+      "model_creator": {
+        "id": "ef5ce458-9986-4652-915a-e31fac5506b0",
+        "name": "Microsoft"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "9abf9a6a-0b89-4261-b0f6-01780e1e86ea",
+      "name": "Modulate STT Batch English VFast",
+      "model_creator": {
+        "id": "1cd84a95-a774-4756-b889-264693ba346e",
+        "name": "Modulate"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "8c223ca3-e765-4b46-bec0-e694742d542a",
+      "name": "MAI-Transcribe-1.5",
+      "model_creator": {
+        "id": "ef5ce458-9986-4652-915a-e31fac5506b0",
+        "name": "Microsoft"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "b1e3a5c7-0001-4a3a-9f01-0a1b2c3d4e5f",
+      "name": "Universal-3.5 Pro, AssemblyAI",
+      "model_creator": {
+        "id": "4fb0e648-ff21-4fe3-909b-290fba140579",
+        "name": "AssemblyAI"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "4005366d-a689-4e44-a8f1-0f3ca220d862",
+      "name": "Grok Speech to Text, SpaceXAI",
+      "model_creator": {
+        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+        "name": "SpaceXAI"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "e838f4db-f772-4cdb-b5b6-bedacbe43178",
+      "name": "Melia",
+      "model_creator": {
+        "id": "33abe1aa-c54f-445e-adf6-0f7a470ef068",
+        "name": "Speechmatics"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "e91b57bb-d6af-497d-b7b7-ca0a95283db9",
+      "name": "Resonant-1",
+      "model_creator": {
+        "id": "98f2673d-23e8-46f8-8938-c8391fb15967",
+        "name": "Reson8"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "aa357afd-030d-4c20-98ab-b58d5619c0f8",
+      "name": "Canary Qwen 2.5B, NVIDIA",
+      "model_creator": {
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "dc693d5d-3d87-40fa-935c-5dc99e741932",
+      "name": "Solaria-3, Gladia",
+      "model_creator": {
+        "id": "549aa512-cfd7-461c-ac15-5a0545ba4d60",
+        "name": "Gladia"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "bd9b97ab-6643-4d85-b7eb-04cba9f07b60",
+      "name": "Amazon Transcribe",
+      "model_creator": {
+        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
+        "name": "Amazon"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "5ebd8b63-9bdf-4802-ac5d-d21205dddf22",
+      "name": "Chirp 2, Google",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": 0.1
+    },
+    {
+      "id": "9627f2ad-2c4b-4873-ac6d-2ed0dbd77ed9",
+      "name": "Gemini 2.5 Pro (Low Budget Reasoning), Google",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": null
+    },
+    {
+      "id": "e5225334-e7d5-4ac1-8e46-977d9d75e17b",
+      "name": "Rev AI",
+      "model_creator": {
+        "id": "08177ad2-7196-4cd4-b7fd-d0b64b3c05ca",
+        "name": "Rev AI"
+      },
+      "aa_wer_index": 0.1
+    },
+    {
+      "id": "3a1bf554-7807-47cf-8708-ceb0de2b1b49",
+      "name": "Qwen3 ASR Flash, Alibaba",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "aa_wer_index": 0.1
+    },
+    {
+      "id": "4b9dafcd-ea65-4c83-a712-307307b3e410",
+      "name": "Inkling (256K), Thinking Machines",
+      "model_creator": {
+        "id": "8f3f9fdd-e42f-4814-a35e-5da1925b539b",
+        "name": "Thinking Machines"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "89d58b09-c51a-4524-8304-6bcea5a65ae1",
+      "name": "Soniox v5 Async",
+      "model_creator": {
+        "id": "2ec53bc5-5f0a-4614-b05b-ddefb9c5d4a5",
+        "name": "Soniox"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "4810d50c-9471-43f2-a53c-e68f496e24dd",
+      "name": "Whisper Large v3, OpenAI",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "aa_wer_index": 0
+    }
+  ]
+}

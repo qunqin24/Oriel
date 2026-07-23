@@ -1,0 +1,19 @@
+---
+import { LlmClientView } from "@/components/llm-client-view";
+import BaseLayout from "@/layouts/base-layout.astro";
+import { getLanguageModels } from "@/lib/data";
+
+const { data, fetched_at, intelligence_index_version } = getLanguageModels();
+---
+
+<BaseLayout
+  title="语言模型榜单"
+  description="基于智能指数、编程指数与生成速度的全景语言模型排行榜。"
+>
+  <LlmClientView
+    models={data}
+    indexVersion={intelligence_index_version}
+    fetchedAt={fetched_at}
+    client:load
+  />
+</BaseLayout>

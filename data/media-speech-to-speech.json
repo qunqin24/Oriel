@@ -1,0 +1,378 @@
+{
+  "fetched_at": "2026-07-23T13:29:11.925Z",
+  "tier": "free",
+  "data": [
+    {
+      "id": "07c7220d-6974-4533-9c7b-f5b8f05c5afd",
+      "name": "Gemini 3.1 Flash Audio Preview (Mar 2026) - Minimal",
+      "slug": "gemini-3-1-flash-audio-preview-mar-2026-minimal",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "bba_score": 0.71,
+      "fdb_score": null,
+      "tau_voice_score": 0.26
+    },
+    {
+      "id": "3e50297e-753b-482b-b9c3-a982d88e5548",
+      "name": "Nova 2.0 Sonic",
+      "slug": "nova-sonic-2-0",
+      "model_creator": {
+        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
+        "name": "Amazon"
+      },
+      "bba_score": 0.88,
+      "fdb_score": null,
+      "tau_voice_score": null
+    },
+    {
+      "id": "eead24bb-ad0b-45be-b0ab-7b16381c2daf",
+      "name": "GPT 4o audio chatcompletions",
+      "slug": "4o-audio-chatcompletions",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": 0.54,
+      "fdb_score": null,
+      "tau_voice_score": null
+    },
+    {
+      "id": "534d564b-7aee-48f5-a918-38781c4eef37",
+      "name": "Gemini 2.5 Flash Native Audio Dialog",
+      "slug": "gemini-2-5-flash-native-audio-dialog",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "bba_score": 0.69,
+      "fdb_score": null,
+      "tau_voice_score": null
+    },
+    {
+      "id": "1cef3aa9-5c86-410c-ad74-66f2b50901cb",
+      "name": "Step-Audio R1.1 (Realtime)",
+      "slug": "step-audio-r1-async",
+      "model_creator": {
+        "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
+        "name": "StepFun"
+      },
+      "bba_score": 0.98,
+      "fdb_score": null,
+      "tau_voice_score": null
+    },
+    {
+      "id": "783efa91-a38c-49b8-aa80-6321d4ac9ca1",
+      "name": "Gemini 2.5 Flash Native Audio Dialog Thinking",
+      "slug": "gemini-2-5-flash-native-audio-dialog-thinking",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "bba_score": 0.91,
+      "fdb_score": null,
+      "tau_voice_score": null
+    },
+    {
+      "id": "88cd2439-5343-481c-88f4-ee0895880f6c",
+      "name": "Grok Voice Agent",
+      "slug": "grok-voice",
+      "model_creator": {
+        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+        "name": "SpaceXAI"
+      },
+      "bba_score": 0.93,
+      "fdb_score": 0.72,
+      "tau_voice_score": 0.27
+    },
+    {
+      "id": "68ce64b6-1461-48c5-90b9-5318f969bea5",
+      "name": "PersonaPlex",
+      "slug": "personaplex-7b-v1",
+      "model_creator": {
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA"
+      },
+      "bba_score": 0.19,
+      "fdb_score": 0.91,
+      "tau_voice_score": null
+    },
+    {
+      "id": "db545ba6-dcb7-4fc1-b2ee-06ecce28d9a1",
+      "name": "GPT-Realtime-1.5",
+      "slug": "gpt-realtime-1-5",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": 0.81,
+      "fdb_score": 0.96,
+      "tau_voice_score": 0.39
+    },
+    {
+      "id": "e1f98bde-27b5-4143-b983-813c93e16eac",
+      "name": "GPT-4o mini Realtime (Dec '24)",
+      "slug": "gpt-4o-mini-realtime-dec-2024",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": 0.69,
+      "fdb_score": null,
+      "tau_voice_score": null
+    },
+    {
+      "id": "6ea9257f-c9f6-4789-be83-3d90c49f1c86",
+      "name": "GPT-5 (ChatGPT)",
+      "slug": "gpt-5-chatgpt",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": null,
+      "fdb_score": null,
+      "tau_voice_score": null
+    },
+    {
+      "id": "eb149ab8-c4ed-4b96-87a5-07d1caf6f3bb",
+      "name": "GPT Realtime Mini (Oct 2025)",
+      "slug": "gpt-realtime-mini-oct-25",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": 0.64,
+      "fdb_score": 0.96,
+      "tau_voice_score": 0.15
+    },
+    {
+      "id": "35eb07d8-832c-4483-97af-c5acff809414",
+      "name": "Gemini 3.1 Flash Audio Preview (Mar 2026) - High",
+      "slug": "gemini-3-1-flash-audio-preview-mar-2026-high",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "bba_score": 0.97,
+      "fdb_score": null,
+      "tau_voice_score": 0.38
+    },
+    {
+      "id": "62e7db61-ca85-4d6a-a672-8be58febaca3",
+      "name": "Qwen3.5 Omni Plus Realtime",
+      "slug": "qwen-3-5-omni-plus-realtime",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "bba_score": 0.99,
+      "fdb_score": null,
+      "tau_voice_score": null
+    },
+    {
+      "id": "3bb2967d-6a98-4109-b6ef-539d51c0aba2",
+      "name": "Qwen3.5 Omni Flash Realtime",
+      "slug": "qwen-3-5-omni-flash-realtime",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "bba_score": 0.59,
+      "fdb_score": null,
+      "tau_voice_score": null
+    },
+    {
+      "id": "0af0e3ee-57c7-4f3b-bf90-77e4d0b13f00",
+      "name": "FLM-Audio",
+      "slug": "flm-audio",
+      "model_creator": {
+        "id": "16d14346-12bc-4670-8864-b7012634e57e",
+        "name": "Cofe AI"
+      },
+      "bba_score": 0.16,
+      "fdb_score": 0.62,
+      "tau_voice_score": null
+    },
+    {
+      "id": "f0385007-f4b3-4d58-aa7c-f9532c972d2f",
+      "name": "Moshi",
+      "slug": "moshi",
+      "model_creator": {
+        "id": "3fb07ce5-152b-4aa5-bb68-230c2196f6d4",
+        "name": "Kyutai"
+      },
+      "bba_score": 0.04,
+      "fdb_score": 0.61,
+      "tau_voice_score": null
+    },
+    {
+      "id": "0498a1aa-41a0-48d9-9775-34bb24cca99b",
+      "name": "Freeze-Omni",
+      "slug": "freeze-omni",
+      "model_creator": {
+        "id": "6b958331-4ffd-49f3-b472-76fa76ba2b5a",
+        "name": "VITA-MLLM"
+      },
+      "bba_score": 0.33,
+      "fdb_score": 0.59,
+      "tau_voice_score": null
+    },
+    {
+      "id": "9e27b911-89cf-4d56-b49d-1fb964e27531",
+      "name": "Gemini 2.5 Flash Native Audio Preview (Sep 2025)",
+      "slug": "gemini-2-5-flash-native-audio-preview-sep-2025",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "bba_score": null,
+      "fdb_score": 0.3,
+      "tau_voice_score": null
+    },
+    {
+      "id": "836f822d-ebb7-4ac2-87fb-412bbc531189",
+      "name": "Gemini 2.5 Flash Native Audio Preview (Dec 2025)",
+      "slug": "gemini-2-5-flash-native-audio-preview-dec-2025",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "bba_score": null,
+      "fdb_score": 0.44,
+      "tau_voice_score": 0.23
+    },
+    {
+      "id": "c3d8614d-465c-42cf-b8a0-ca434a84c953",
+      "name": "GPT Realtime (Aug 2025)",
+      "slug": "gpt-realtime-aug-25",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": 0.83,
+      "fdb_score": 0.94,
+      "tau_voice_score": 0.3
+    },
+    {
+      "id": "d82b466a-19a5-4557-83e8-bfb412121204",
+      "name": "Nemotron 3 VoiceChat (V1)",
+      "slug": "nemotron-voicechat",
+      "model_creator": {
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA"
+      },
+      "bba_score": 0.27,
+      "fdb_score": 0.53,
+      "tau_voice_score": null
+    },
+    {
+      "id": "f4030cd7-f5b5-4eeb-90e5-4a8b4e69ab03",
+      "name": "Qwen3 Omni 30B A3B Instruct (Realtime)",
+      "slug": "qwen3-omni-30b-a3b-instruct-realtime",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "bba_score": 0.57,
+      "fdb_score": null,
+      "tau_voice_score": null
+    },
+    {
+      "id": "2908fe10-a17c-4f56-a05b-c5348e8a8701",
+      "name": "GPT-4o Realtime (Dec 2024)",
+      "slug": "gpt-4o-realtime-dec-2024",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": null,
+      "fdb_score": 0.9,
+      "tau_voice_score": 0.28
+    },
+    {
+      "id": "afbeb1c3-63a5-4746-ba17-16f2034f4546",
+      "name": "Qwen3 Omni 30B A3B Instruct",
+      "slug": "qwen3-omni-30b-a3b-instruct",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "bba_score": 0.59,
+      "fdb_score": 0.73,
+      "tau_voice_score": null
+    },
+    {
+      "id": "d9f4eed0-6367-4f1f-abbb-6ed522044afc",
+      "name": "Grok Voice Think Fast 1.0",
+      "slug": "grok-voice-think-fast-1-0",
+      "model_creator": {
+        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+        "name": "SpaceXAI"
+      },
+      "bba_score": 0.97,
+      "fdb_score": 0.78,
+      "tau_voice_score": 0.52
+    },
+    {
+      "id": "95efc3a2-6a67-4c4d-bd62-284403a4552f",
+      "name": "GPT-Realtime-2 High",
+      "slug": "gpt-realtime-2-high",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": 0.97,
+      "fdb_score": 0.95,
+      "tau_voice_score": 0.4
+    },
+    {
+      "id": "8cc86d62-5111-4cde-8905-ea60917c9a11",
+      "name": "GPT-Realtime-2 Minimal",
+      "slug": "gpt-realtime-2-minimal",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": 0.72,
+      "fdb_score": 0.96,
+      "tau_voice_score": 0.31
+    },
+    {
+      "id": "d0658e30-d2b8-4e49-937d-b2f98db70ec2",
+      "name": "GPT-Realtime-2 Medium",
+      "slug": "gpt-realtime-2-medium",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": 0.93,
+      "fdb_score": 0.95,
+      "tau_voice_score": 0.37
+    },
+    {
+      "id": "6c9e382a-149e-411f-b501-eed4c9cfc043",
+      "name": "Deepslate Opal",
+      "slug": "deepslate-opal",
+      "model_creator": {
+        "id": "cad85467-c140-4c0f-8f6e-8528f7f15250",
+        "name": "Deepslate"
+      },
+      "bba_score": 0.85,
+      "fdb_score": 0.86,
+      "tau_voice_score": 0.18
+    },
+    {
+      "id": "5eafaf53-ac96-47f4-84ce-e9ca792eaa18",
+      "name": "Fun-Realtime-Audiochat",
+      "slug": "fun-realtime-audiochat",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "bba_score": 0.98,
+      "fdb_score": 0.98,
+      "tau_voice_score": null
+    }
+  ]
+}

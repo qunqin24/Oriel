@@ -1,0 +1,22 @@
+---
+import { CompareClientView } from "@/components/compare-client-view";
+import BaseLayout from "@/layouts/base-layout.astro";
+import { getLanguageModels } from "@/lib/data";
+
+const { data } = getLanguageModels();
+---
+
+<BaseLayout
+  title="模型对比"
+  description="并排对比语言模型的智能、价格与性能指标。"
+>
+  <div class="flex flex-col gap-6 max-w-6xl mx-auto w-full">
+    <div class="flex flex-col gap-2 pb-4 border-b border-border">
+      <h1 class="text-3xl font-bold tracking-tight text-foreground">模型对比</h1>
+      <p class="text-sm text-muted-foreground max-w-2xl">
+        并排查看综合智能、编程、价格与延迟等关键指标，绿色为该行最优值。
+      </p>
+    </div>
+    <CompareClientView models={data} client:load />
+  </div>
+</BaseLayout>

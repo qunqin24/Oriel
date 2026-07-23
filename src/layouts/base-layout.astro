@@ -1,0 +1,194 @@
+---
+import { CompareTray } from "@/components/compare-tray";
+import { SiteFooter } from "@/components/site-footer";
+import { NAV, getLanguageModels } from "@/lib/data";
+import "@/styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Oriel 汇总语言、图像、视频、语音与音乐模型榜单，清晰呈现质量、价格与速度。",
+} = Astro.props;
+const pageTitle = title ? `${title} · Oriel` : "Oriel — 独立 AI 模型评测";
+const pathname = Astro.url.pathname;
+const { fetched_at: fetchedAt } = getLanguageModels();
+---
+
+<!doctype html>
+<html lang="zh-CN" class="h-full antialiased">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="min-h-full flex flex-col">
+    <header class="sticky top-0 z-50 w-full border-b hairline-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div class="flex h-14 items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <a href="/" class="flex items-center gap-3 transition-opacity hover:opacity-80">
+          <div class="flex gap-0.5 items-center justify-center h-5 w-5 bg-foreground rounded-[3px] text-background">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="9" y1="3" x2="9" y2="21"></line>
+            </svg>
+          </div>
+          <div class="flex items-baseline gap-2">
+            <span class="font-bold tracking-tight text-foreground text-lg">Oriel</span>
+            <span class="font-mono text-[10px] text-muted-foreground uppercase tracking-wider hidden sm:inline-block">独立模型评测</span>
+          </div>
+        </a>
+
+        <nav class="flex items-center gap-1 sm:gap-2" aria-label="主导航">
+          {
+            NAV.map((item) => {
+              const active =
+                item.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(item.href);
+              return (
+                <a
+                  href={item.href}
+                  class:list={[
+                    "px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
+                    active
+                      ? "bg-secondary text-secondary-foreground"
+                      : "text-muted-foreground hover:bg-secondary/50 hover:text-foreground",
+                  ]}
+                  aria-current={active ? "page" : undefined}
+                >
+                  {item.label}
+                </a>
+              );
+            })
+          }
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+      <div class="w-full pb-24">
+        <slot />
+      </div>
+    </main>
+
+    <SiteFooter fetchedAt={fetchedAt} />
+    <CompareTray client:load />
+
+    <script>
+      const COMPARE_KEY = "oriel-compare-llm";
+      const COMPARE_EVENT = "oriel-compare-change";
+      const COMPARE_LIMIT = 4;
+
+      type CompareEntry = {
+        id: string;
+        name: string;
+        creator: string;
+      };
+
+      function readCompareEntries(): CompareEntry[] {
+        try {
+          const parsed = JSON.parse(
+            localStorage.getItem(COMPARE_KEY) ?? "[]"
+          ) as CompareEntry[];
+          return Array.isArray(parsed) ? parsed.slice(0, COMPARE_LIMIT) : [];
+        } catch {
+          return [];
+        }
+      }
+
+      function syncStaticCompareButtons() {
+        const entries = readCompareEntries();
+        const selectedIds = new Set(entries.map((entry) => entry.id));
+
+        document
+          .querySelectorAll<HTMLButtonElement>("[data-compare-toggle]")
+          .forEach((button) => {
+            const id = button.dataset.modelId ?? "";
+            const active = selectedIds.has(id);
+            const full = entries.length >= COMPARE_LIMIT && !active;
+
+            button.dataset.active = String(active);
+            button.disabled = full;
+            button.textContent = active ? "已加入对比" : "+ 加入对比";
+            button.title = full
+              ? `最多对比 ${COMPARE_LIMIT} 个模型`
+              : active
+                ? "从对比中移除"
+                : "加入对比";
+          });
+      }
+
+      document.addEventListener("click", (event) => {
+        const target = event.target as Element | null;
+        const tab = target?.closest<HTMLButtonElement>("[data-tab-id]");
+
+        if (tab) {
+          const tabsRoot = tab.closest<HTMLElement>("[data-segmented-tabs]");
+          const tabId = tab.dataset.tabId;
+          if (!tabsRoot || !tabId) return;
+
+          [...tabsRoot.querySelectorAll<HTMLButtonElement>("[data-tab-id]")]
+            .filter(
+              (button) =>
+                button.closest("[data-segmented-tabs]") === tabsRoot
+            )
+            .forEach((button) => {
+              button.setAttribute(
+                "aria-selected",
+                String(button.dataset.tabId === tabId)
+              );
+            });
+          [...tabsRoot.querySelectorAll<HTMLElement>("[data-tab-panel]")]
+            .filter(
+              (panel) =>
+                panel.closest("[data-segmented-tabs]") === tabsRoot
+            )
+            .forEach((panel) => {
+              panel.hidden = panel.dataset.tabPanel !== tabId;
+            });
+          return;
+        }
+
+        const compareButton =
+          target?.closest<HTMLButtonElement>("[data-compare-toggle]");
+        if (!compareButton || compareButton.disabled) return;
+
+        const id = compareButton.dataset.modelId;
+        const name = compareButton.dataset.modelName;
+        if (!id || !name) return;
+
+        const entries = readCompareEntries();
+        const existingIndex = entries.findIndex((entry) => entry.id === id);
+        const next =
+          existingIndex >= 0
+            ? entries.filter((entry) => entry.id !== id)
+            : entries.length < COMPARE_LIMIT
+              ? [
+                  ...entries,
+                  {
+                    id,
+                    name,
+                    creator: compareButton.dataset.modelCreator ?? "",
+                  },
+                ]
+              : entries;
+
+        localStorage.setItem(COMPARE_KEY, JSON.stringify(next));
+        window.dispatchEvent(new Event(COMPARE_EVENT));
+        syncStaticCompareButtons();
+      });
+
+      window.addEventListener(COMPARE_EVENT, syncStaticCompareButtons);
+      window.addEventListener("storage", (event) => {
+        if (event.key === COMPARE_KEY) syncStaticCompareButtons();
+      });
+      syncStaticCompareButtons();
+    </script>
+  </body>
+</html>
