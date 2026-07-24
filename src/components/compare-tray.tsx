@@ -14,9 +14,9 @@ export function CompareTray() {
   const ids = items.map((i) => i.id).join(",");
 
   return (
-    <div className="fixed bottom-4 left-1/2 z-50 w-[calc(100%-2rem)] max-w-3xl -translate-x-1/2">
-      <div className="instrument-panel px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-3 shadow-lg">
-        <div className="flex items-center gap-2 min-w-0 flex-1 overflow-x-auto">
+    <div className="fixed bottom-3 sm:bottom-4 left-1/2 z-50 w-[calc(100%-1.5rem)] sm:w-[calc(100%-2rem)] max-w-3xl -translate-x-1/2 pb-[env(safe-area-inset-bottom)]">
+      <div className="instrument-panel px-3 py-3 sm:px-4 flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3 shadow-lg">
+        <div className="flex items-center gap-2 min-w-0 flex-1 overflow-x-auto scrollbar-none overscroll-x-contain">
           <span className="text-[11px] font-mono uppercase tracking-wider text-muted-foreground shrink-0">
             对比 {count}/{max}
           </span>
@@ -27,7 +27,7 @@ export function CompareTray() {
             >
               <VendorIcon name={item.creator} size={14} />
               <span
-                className="text-xs font-medium max-w-[8rem] truncate"
+                className="text-xs font-medium max-w-28 sm:max-w-32 truncate"
                 title={item.name}
               >
                 {item.name}
@@ -35,7 +35,7 @@ export function CompareTray() {
               <button
                 type="button"
                 onClick={() => remove(item.id)}
-                className="text-muted-foreground hover:text-foreground px-1 text-sm leading-none"
+                className="text-muted-foreground hover:text-foreground px-1.5 py-1 text-sm leading-none min-h-8 min-w-8 sm:min-h-0 sm:min-w-0"
                 aria-label={`移除 ${item.name}`}
               >
                 ×
@@ -43,17 +43,17 @@ export function CompareTray() {
             </div>
           ))}
         </div>
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-2 shrink-0 justify-end">
           <button
             type="button"
             onClick={clear}
-            className="text-xs font-medium text-muted-foreground hover:text-foreground px-2 py-1.5"
+            className="text-xs font-medium text-muted-foreground hover:text-foreground px-2 py-2 sm:py-1.5"
           >
             清空
           </button>
           <a
             href={`/compare?ids=${ids}`}
-            className="text-xs font-semibold px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="text-xs font-semibold px-3 py-2 sm:py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
           >
             开始对比
           </a>

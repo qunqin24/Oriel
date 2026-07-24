@@ -1,8 +1,7 @@
 "use client";
 
+import { BarChart } from "@/components/charts/bar-chart";
 import { ChartPanel } from "@/components/charts/chart-panel";
-import { ScatterPlot } from "@/components/charts/scatter-plot";
-import { TimelineChart } from "@/components/charts/timeline-chart";
 import { StaticSegmentedTabs } from "@/components/static-segmented-tabs";
 import { VendorIcon } from "@/components/vendor-icon";
 import {
@@ -25,6 +24,16 @@ function median(values: number[]): number | null {
   return sorted.length % 2 === 0
     ? (sorted[mid - 1] + sorted[mid]) / 2
     : sorted[mid];
+}
+
+function includeCurrentModel(
+  sortedModels: LanguageModel[],
+  current: LanguageModel,
+  limit = 10
+) {
+  const visible = sortedModels.slice(0, limit);
+  if (visible.some((item) => item.id === current.id)) return visible;
+  return [...visible.slice(0, Math.max(0, limit - 1)), current];
 }
 
 function IndexBar({
@@ -108,33 +117,94 @@ export function ModelAnalysisTabs({ model, peers }: Props) {
     1
   );
 
-  const priceScatterPoints = peers
-    .filter(
-      (m) =>
-        m.evaluations.artificial_analysis_intelligence_index != null &&
-        m.pricing?.price_1m_output_tokens != null &&
-        m.pricing.price_1m_output_tokens > 0
-    )
-    .map((m) => ({
-      id: m.id,
-      label: m.name,
-      x: m.pricing!.price_1m_output_tokens!,
-      y: m.evaluations.artificial_analysis_intelligence_index!,
-    }));
+  const priceComparisonModels = includeCurrentModel(
+    peers
+      .filter(
+        (peer) =>
+          peer.pricing?.price_1m_output_tokens != null &&
+          peer.pricing.price_1m_output_tokens > 0
+      )
+      .sort(
+        (a, b) =>
+          (a.pricing?.price_1m_output_tokens ?? Infinity) -
+          (b.pricing?.price_1m_output_tokens ?? Infinity)
+      ),
+    model
+  ).sort(
+    (a, b) =>
+      (a.pricing?.price_1m_output_tokens ?? Infinity) -
+      (b.pricing?.price_1m_output_tokens ?? Infinity)
+  );
 
-  const speedScatterPoints = peers
-    .filter(
-      (m) =>
-        m.evaluations.artificial_analysis_intelligence_index != null &&
-        m.performance?.median_output_tokens_per_second != null &&
-        m.performance.median_output_tokens_per_second > 0
-    )
-    .map((m) => ({
-      id: m.id,
-      label: m.name,
-      x: m.performance!.median_output_tokens_per_second!,
-      y: m.evaluations.artificial_analysis_intelligence_index!,
-    }));
+  const priceBarItems = priceComparisonModels.map((peer) => ({
+    label: peer.name,
+    value: peer.pricing?.price_1m_output_tokens ?? null,
+    creator: peer.model_creator?.name,
+    highlight: peer.id === model.id,
+  }));
+
+  const speedComparisonModels = includeCurrentModel(
+    peers
+      .filter(
+        (peer) =>
+          peer.performance?.median_output_tokens_per_second != null &&
+          peer.performance.median_output_tokens_per_second > 0
+      )
+      .sort(
+        (a, b) =>
+          (b.performance?.median_output_tokens_per_second ?? 0) -
+          (a.performance?.median_output_tokens_per_second ?? 0)
+      ),
+    model
+  ).sort(
+    (a, b) =>
+      (b.performance?.median_output_tokens_per_second ?? 0) -
+      (a.performance?.median_output_tokens_per_second ?? 0)
+  );
+
+  const speedBarItems = speedComparisonModels.map((peer) => ({
+    label: peer.name,
+    value: peer.performance?.median_output_tokens_per_second ?? null,
+    creator: peer.model_creator?.name,
+    highlight: peer.id === model.id,
+  }));
+
+  const yearlyPeakMap = new Map<number, LanguageModel>();
+  peers.forEach((peer) => {
+    if (!peer.release_date) return;
+    const year = new Date(peer.release_date).getFullYear();
+    const score =
+      peer.evaluations.artificial_analysis_intelligence_index;
+    if (!Number.isFinite(year) || score == null) return;
+    const current = yearlyPeakMap.get(year);
+    if (
+      !current ||
+      score >
+        (current.evaluations.artificial_analysis_intelligence_index ??
+          -Infinity)
+    ) {
+      yearlyPeakMap.set(year, peer);
+    }
+  });
+
+  const historyModels = [...yearlyPeakMap.values()];
+  if (!historyModels.some((peer) => peer.id === model.id)) {
+    historyModels.push(model);
+  }
+  historyModels.sort(
+    (a, b) =>
+      new Date(a.release_date ?? 0).getTime() -
+      new Date(b.release_date ?? 0).getTime()
+  );
+  const historyBarItems = historyModels.map((peer) => ({
+    label: peer.name,
+    value: peer.evaluations.artificial_analysis_intelligence_index,
+    creator: peer.model_creator?.name,
+    sub: peer.release_date
+      ? `${new Date(peer.release_date).getFullYear()} 年发布`
+      : "发布日期未知",
+    highlight: peer.id === model.id,
+  }));
 
   const currentScore =
     model.evaluations.artificial_analysis_intelligence_index;
@@ -316,28 +386,26 @@ export function ModelAnalysisTabs({ model, peers }: Props) {
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <ChartPanel title="智能 vs 输出价格" note="金色点为当前模型">
-                  <ScatterPlot
-                    points={priceScatterPoints}
-                    xLabel="输出价格（$/1M tokens）"
-                    yLabel="智能指数"
-                    logX
-                    formatX={(v) => `$${v}`}
-                    formatY={(v) => formatNumber(v, 0)}
-                    labelTopN={4}
-                    highlightId={model.id}
+                <ChartPanel
+                  title="输出价格最低对比"
+                  note="Top 9 + 当前模型 · 金色为当前模型"
+                >
+                  <BarChart
+                    items={priceBarItems}
+                    valueFormat="price"
+                    lowerIsBetter
+                    barLabel="输出价格对比"
                   />
                 </ChartPanel>
-                <ChartPanel title="智能 vs 生成速度" note="金色点为当前模型">
-                  <ScatterPlot
-                    points={speedScatterPoints}
-                    xLabel="生成速度（Tokens / 秒）"
-                    yLabel="智能指数"
-                    logX
-                    formatX={(v) => formatNumber(v, 0)}
-                    formatY={(v) => formatNumber(v, 0)}
-                    labelTopN={4}
-                    highlightId={model.id}
+                <ChartPanel
+                  title="生成速度最高对比"
+                  note="Top 9 + 当前模型 · 金色为当前模型"
+                >
+                  <BarChart
+                    items={speedBarItems}
+                    digits={0}
+                    valueSuffix=" TPS"
+                    barLabel="生成速度对比"
                   />
                 </ChartPanel>
               </div>
@@ -349,10 +417,15 @@ export function ModelAnalysisTabs({ model, peers }: Props) {
           label: "历史表现",
           content: (
             <ChartPanel
-              title="智能指数演进时间线"
-              note="虚线为前沿边界 · 金色为当前模型"
+              title="年度智能峰值"
+              note="按发布时间排列 · 金色为当前模型"
             >
-              <TimelineChart data={peers} highlightId={model.id} />
+              <BarChart
+                items={historyBarItems}
+                digits={1}
+                barLabel="年度智能峰值"
+                showRank={false}
+              />
             </ChartPanel>
           ),
         },

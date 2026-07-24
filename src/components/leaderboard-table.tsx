@@ -77,11 +77,11 @@ export function LeaderboardTable<T>({
   }
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full min-w-0">
       {/* Toolbar */}
-      <div className="flex justify-between items-center mb-3">
-        <div className="relative max-w-sm w-full">
-          <svg className="absolute left-2.5 top-2 h-4 w-4 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <div className="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center mb-3">
+        <div className="relative w-full sm:max-w-sm">
+          <svg className="absolute left-2.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
@@ -90,20 +90,20 @@ export function LeaderboardTable<T>({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={searchPlaceholder}
-            className="w-full pl-9 pr-4 py-1.5 text-sm bg-card hairline-border rounded-md focus:outline-none focus:ring-1 focus:ring-ring text-foreground"
+            className="w-full pl-9 pr-4 py-2 sm:py-1.5 text-sm bg-card hairline-border rounded-md focus:outline-none focus:ring-1 focus:ring-ring text-foreground"
           />
         </div>
-        <div className="text-xs text-muted-foreground font-mono">
+        <div className="text-xs text-muted-foreground font-mono shrink-0 self-end sm:self-auto">
           {sorted.length} / {rows.length} 结果
         </div>
       </div>
 
       {/* Table Container */}
-      <div className="w-full overflow-x-auto instrument-panel">
-        <table className="w-full text-sm text-left">
+      <div className="w-full overflow-x-auto instrument-panel overscroll-x-contain">
+        <table className="w-full text-sm text-left min-w-xl">
           <thead className="text-[11px] uppercase tracking-wider text-muted-foreground bg-muted">
             <tr>
-              <th className="px-4 py-2.5 font-semibold w-10 text-center border-b border-border">
+              <th className="sticky left-0 z-20 px-2.5 sm:px-4 py-2.5 font-semibold w-10 text-center border-b border-border bg-muted">
                 #
               </th>
               {columns.map((col, i) => {
@@ -115,9 +115,9 @@ export function LeaderboardTable<T>({
                 return (
                   <th
                     key={col.key}
-                    className={`px-4 py-2.5 font-semibold whitespace-nowrap border-b border-border
+                    className={`px-2.5 sm:px-4 py-2.5 font-semibold whitespace-nowrap border-b border-border bg-muted
                       ${col.align === "right" ? "text-right" : col.align === "center" ? "text-center" : "text-left"}
-                      ${isFirst && !alone ? "w-60 max-w-60" : "w-auto"}
+                      ${isFirst && !alone ? "sticky left-10 z-20 w-44 max-w-44 sm:w-60 sm:max-w-60 shadow-[1px_0_0_var(--border)]" : "w-auto"}
                     `}
                   >
                     {sortable ? (
@@ -142,7 +142,7 @@ export function LeaderboardTable<T>({
           <tbody className="divide-y divide-border">
             {sorted.map((row, index) => (
               <tr key={getRowKey(row)} className="bg-card hover:bg-muted/30 transition-colors group">
-                <td className="px-4 py-2 text-center">
+                <td className="sticky left-0 z-10 px-2.5 sm:px-4 py-2 text-center bg-card group-hover:bg-muted/30">
                   <span className={`inline-block min-w-5 font-mono text-xs font-semibold
                     ${index === 0 ? "text-(--oriel-gold)" : index < 3 ? "text-foreground" : "text-muted-foreground"}`}>
                     {index + 1}
@@ -158,11 +158,11 @@ export function LeaderboardTable<T>({
                   return (
                     <td
                       key={col.key}
-                      className={`px-4 py-2.5
+                      className={`px-2.5 sm:px-4 py-2.5
                         ${col.align === "right" ? "text-right" : col.align === "center" ? "text-center" : "text-left"}
                         ${typeof raw === "number" && !isNode ? "mono-data" : ""}
                         ${isFirst ? "font-medium text-foreground" : "text-muted-foreground text-[13px]"}
-                        ${isFirst && !alone ? "max-w-60" : ""}
+                        ${isFirst && !alone ? "sticky left-10 z-10 max-w-44 sm:max-w-60 bg-card group-hover:bg-muted/30 shadow-[1px_0_0_var(--border)]" : ""}
                       `}
                     >
                       {isFirst && !isNode ? (

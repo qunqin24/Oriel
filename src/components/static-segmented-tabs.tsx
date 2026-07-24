@@ -9,9 +9,9 @@ type TabItem = {
 
 export function StaticSegmentedTabs({ tabs }: { tabs: TabItem[] }) {
   return (
-    <div className="flex flex-col gap-6 mt-6" data-segmented-tabs>
+    <div className="flex flex-col gap-4 sm:gap-6 mt-4 sm:mt-6 min-w-0" data-segmented-tabs>
       <div
-        className="flex gap-1 border-b border-border overflow-x-auto"
+        className="flex gap-1 border-b border-border overflow-x-auto scrollbar-none overscroll-x-contain -mx-1 px-1"
         role="tablist"
         aria-label="榜单分类"
       >
@@ -24,7 +24,7 @@ export function StaticSegmentedTabs({ tabs }: { tabs: TabItem[] }) {
               role="tab"
               aria-selected={selected}
               data-tab-id={tab.id}
-              className="segmented-tab px-4 pb-2 pt-1 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 flex items-center gap-2"
+              className="segmented-tab shrink-0 px-3 sm:px-4 pb-2 pt-1 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 flex items-center gap-1.5 sm:gap-2"
             >
               {tab.label}
               {typeof tab.count === "number" ? (

@@ -18,6 +18,10 @@ import {
   formatSeconds,
 } from "@/lib/format";
 import type { ColumnDef, LanguageModel } from "@/lib/types";
+import {
+  getValueScore,
+  getValueScoreMetrics,
+} from "@/lib/value-score";
 
 interface LlmClientViewProps {
   models: LanguageModel[];
@@ -190,12 +194,10 @@ export function LlmClientView({
       ),
     [models]
   );
-  const priceRows = useMemo(
+  const valueRows = useMemo(
     () =>
       models.filter(
-        (m) =>
-          m.pricing?.price_1m_output_tokens != null &&
-          m.pricing.price_1m_output_tokens > 0
+        (model) => getValueScore(model) != null
       ),
     [models]
   );
@@ -221,14 +223,7 @@ export function LlmClientView({
     models,
     (m) => m.performance?.median_output_tokens_per_second
   );
-  const cheapest = models.reduce<LanguageModel | null>((best, m) => {
-    const price = m.pricing?.price_1m_output_tokens;
-    if (price == null || price <= 0) return best;
-    if (!best || price < (best.pricing?.price_1m_output_tokens ?? Infinity)) {
-      return m;
-    }
-    return best;
-  }, null);
+  const topValue = pickTop(models, getValueScore);
 
   const highlights = [
     topIntelligence && {
@@ -264,13 +259,13 @@ export function LlmClientView({
         0
       )} tok/s`,
     },
-    cheapest && {
-      id: cheapest.id,
-      label: "输出最便宜",
-      name: cheapest.name,
-      creator: cheapest.model_creator?.name,
+    topValue && {
+      id: topValue.id,
+      label: "性价比最高",
+      name: topValue.name,
+      creator: topValue.model_creator?.name,
       dot: "bg-violet-500",
-      detail: formatPrice(cheapest.pricing?.price_1m_output_tokens),
+      detail: formatNumber(getValueScore(topValue), 1),
     },
   ].filter(Boolean) as {
     id: string;
@@ -282,16 +277,16 @@ export function LlmClientView({
   }[];
 
   return (
-    <div className="flex flex-col gap-6 max-w-7xl mx-auto py-8 px-6 w-full">
-      <div className="flex flex-col gap-3 pb-6 border-b border-border">
-        <h1 className="text-3xl font-bold tracking-tight text-foreground">
+    <div className="flex flex-col gap-5 sm:gap-6 max-w-7xl mx-auto w-full">
+      <div className="flex flex-col gap-3 pb-5 sm:pb-6 border-b border-border">
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
           语言模型 (LLMs)
         </h1>
-        <p className="text-muted-foreground text-sm max-w-2xl">
-          按综合智能、编程、智能体与价格拆分榜单，对比 {models.length}{" "}
+        <p className="text-muted-foreground text-sm max-w-2xl leading-relaxed">
+          按综合智能、编程、智能体与性价比拆分榜单，对比 {models.length}{" "}
           款语言模型的能力与成本。
         </p>
-        <div className="flex items-center gap-4 mt-1 text-[11px] font-mono text-muted-foreground uppercase tracking-wider">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-4 mt-1 text-[11px] font-mono text-muted-foreground uppercase tracking-wider">
           <span className="bg-secondary px-2 py-0.5 rounded text-secondary-foreground">
             指数 v{indexVersion ?? "2.1"}
           </span>
@@ -305,12 +300,12 @@ export function LlmClientView({
       </div>
 
       {highlights.length > 0 ? (
-        <div className="flex flex-wrap gap-3">
+        <div className="grid grid-cols-1 sm:flex sm:flex-wrap gap-2 sm:gap-3">
           {highlights.map((item) => (
             <a
               key={`${item.label}-${item.id}`}
               href={`/llm/${item.id}`}
-              className="text-xs font-semibold px-3 py-1.5 rounded-md border hairline-border bg-card hover:border-primary transition-colors flex items-center gap-2 max-w-[min(100%,22rem)]"
+              className="text-xs font-semibold px-3 py-2 sm:py-1.5 rounded-md border hairline-border bg-card hover:border-primary transition-colors flex items-center gap-2 min-w-0 sm:max-w-[min(100%,22rem)]"
               title={`${item.label}: ${item.name} (${item.detail})`}
             >
               <span className={`w-2 h-2 rounded-full shrink-0 ${item.dot}`} />
@@ -439,39 +434,52 @@ export function LlmClientView({
               ),
             },
             {
-              id: "price",
-              label: "价格",
-              count: priceRows.length,
+              id: "value",
+              label: "性价比",
+              count: valueRows.length,
               content: (
                 <LeaderboardTable
-                  rows={priceRows}
+                  rows={valueRows}
                   columns={[
                     {
-                      key: "price_out",
-                      label: "价格",
+                      key: "value_score",
+                      label: "性价比",
                       align: "left",
                       sortable: true,
-                      getValue: (m) => m.pricing?.price_1m_output_tokens,
+                      getValue: getValueScore,
                       getSearchText: (m) =>
                         `${m.name} ${m.model_creator?.name ?? ""}`,
-                      format: (_val, m) => (
-                        <ModelNameWithBadges
-                          name={m.name}
-                          creator={m.model_creator?.name}
-                          href={`/llm/${m.id}`}
-                          badges={[
-                            `出 ${formatPrice(m.pricing?.price_1m_output_tokens)}`,
-                            `入 ${formatPrice(m.pricing?.price_1m_input_tokens)}`,
-                          ]}
-                        />
-                      ),
+                      format: (value, m) => {
+                        const metrics = getValueScoreMetrics(m);
+                        return (
+                          <ModelNameWithBadges
+                            name={m.name}
+                            creator={m.model_creator?.name}
+                            href={`/llm/${m.id}`}
+                            badges={[
+                              `性价比 ${formatNumber(
+                                value == null ? null : Number(value),
+                                1
+                              )}`,
+                              `基准均分 ${formatNumber(
+                                metrics?.benchmarkAverage,
+                                1
+                              )}`,
+                              `${metrics?.benchmarkCount ?? 0} 项基准`,
+                              `出 ${formatPrice(
+                                m.pricing?.price_1m_output_tokens
+                              )}`,
+                            ]}
+                          />
+                        );
+                      },
                     },
                     compareColumn,
                   ]}
                   getRowKey={(m) => m.id}
-                  defaultSortKey="price_out"
-                  defaultSortDir="asc"
-                  searchPlaceholder="搜索价格榜…"
+                  defaultSortKey="value_score"
+                  defaultSortDir="desc"
+                  searchPlaceholder="搜索性价比榜…"
                 />
               ),
             },

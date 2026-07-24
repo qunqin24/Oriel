@@ -184,23 +184,23 @@ export function CompareClientView({ models }: Props) {
         </div>
       </div>
 
-      <div className="overflow-x-auto instrument-panel">
-        <table className="w-full table-fixed text-sm border-separate border-spacing-0">
+      <div className="overflow-x-auto instrument-panel overscroll-x-contain">
+        <table className="w-full table-fixed text-sm border-separate border-spacing-0 min-w-md sm:min-w-160">
           <colgroup>
-            <col className="w-36" />
+            <col className="w-28 sm:w-36" />
             {selected.map((m) => (
               <col key={m.id} />
             ))}
           </colgroup>
           <thead>
             <tr>
-              <th className="sticky left-0 z-10 bg-muted text-left px-4 py-3 text-[11px] uppercase tracking-wider text-muted-foreground font-semibold border-b border-border">
+              <th className="sticky left-0 z-10 bg-muted text-left px-2.5 sm:px-4 py-3 text-[11px] uppercase tracking-wider text-muted-foreground font-semibold border-b border-border shadow-[1px_0_0_var(--border)]">
                 指标
               </th>
               {selected.map((m) => (
                 <th
                   key={m.id}
-                  className="px-4 py-3 border-b border-border bg-muted align-top overflow-hidden"
+                  className="px-2.5 sm:px-4 py-3 border-b border-border bg-muted align-top overflow-hidden min-w-28 sm:min-w-36"
                 >
                   <div className="flex flex-col gap-2 items-stretch min-w-0">
                     <div className="flex items-start gap-2 min-w-0">
@@ -250,7 +250,7 @@ export function CompareClientView({ models }: Props) {
               );
               return (
                 <tr key={metric.key} className="hover:bg-muted/20">
-                  <th className="sticky left-0 z-10 bg-card text-left px-4 py-3 text-muted-foreground font-medium border-b border-border">
+                  <th className="sticky left-0 z-10 bg-card text-left px-2.5 sm:px-4 py-3 text-muted-foreground font-medium border-b border-border shadow-[1px_0_0_var(--border)] text-[13px] sm:text-sm">
                     {metric.label}
                   </th>
                   {selected.map((m) => {
@@ -259,7 +259,7 @@ export function CompareClientView({ models }: Props) {
                     return (
                       <td
                         key={m.id}
-                        className={`px-4 py-3 border-b border-border font-mono text-[13px] overflow-hidden ${
+                        className={`px-2.5 sm:px-4 py-3 border-b border-border font-mono text-xs sm:text-[13px] overflow-hidden ${
                           win
                             ? "text-emerald-700 font-semibold bg-emerald-50/60"
                             : "text-foreground"

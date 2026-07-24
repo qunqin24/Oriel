@@ -22,16 +22,16 @@ const { fetched_at: fetchedAt } = getLanguageModels();
 <html lang="zh-CN" class="h-full antialiased">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <title>{pageTitle}</title>
   </head>
-  <body class="min-h-full flex flex-col">
+  <body class="min-h-full flex flex-col overflow-x-hidden">
     <header class="sticky top-0 z-50 w-full border-b hairline-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div class="flex h-14 items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <a href="/" class="flex items-center gap-3 transition-opacity hover:opacity-80">
+      <div class="flex h-14 items-center gap-3 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <a href="/" class="flex items-center gap-2.5 shrink-0 transition-opacity hover:opacity-80">
           <div class="flex gap-0.5 items-center justify-center h-5 w-5 bg-foreground rounded-[3px] text-background">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
               <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -44,7 +44,7 @@ const { fetched_at: fetchedAt } = getLanguageModels();
           </div>
         </a>
 
-        <nav class="flex items-center gap-1 sm:gap-2" aria-label="主导航">
+        <nav class="flex min-w-0 flex-1 items-center justify-end gap-0.5 sm:gap-1 overflow-x-auto scrollbar-none overscroll-x-contain" aria-label="主导航">
           {
             NAV.map((item) => {
               const active =
@@ -55,7 +55,7 @@ const { fetched_at: fetchedAt } = getLanguageModels();
                 <a
                   href={item.href}
                   class:list={[
-                    "px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
+                    "shrink-0 px-2.5 py-1.5 text-[13px] sm:text-sm font-medium rounded-md transition-colors",
                     active
                       ? "bg-secondary text-secondary-foreground"
                       : "text-muted-foreground hover:bg-secondary/50 hover:text-foreground",
@@ -71,8 +71,8 @@ const { fetched_at: fetchedAt } = getLanguageModels();
       </div>
     </header>
 
-    <main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
-      <div class="w-full pb-24">
+    <main class="flex-1 w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 md:py-8">
+      <div class="w-full pb-28 sm:pb-24">
         <slot />
       </div>
     </main>

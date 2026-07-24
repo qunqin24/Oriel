@@ -39,25 +39,25 @@ export function HomePage() {
   const costModelPrice = costModel?.pricing?.price_1m_output_tokens ? `$${costModel.pricing.price_1m_output_tokens}/M` : "$0.9/M";
 
   return (
-    <div className="flex flex-col gap-12 max-w-6xl mx-auto py-8 px-6">
+    <div className="flex flex-col gap-8 sm:gap-12 max-w-6xl mx-auto py-2 sm:py-6">
       {/* Hero */}
-      <section className="flex flex-col gap-6 max-w-3xl">
+      <section className="flex flex-col gap-5 sm:gap-6 max-w-3xl">
         <div>
-          <div className="inline-flex items-center px-2 py-1 bg-secondary text-secondary-foreground text-[11px] font-mono font-medium rounded uppercase tracking-wider mb-4 border hairline-border">
+          <div className="inline-flex items-center px-2 py-1 bg-secondary text-secondary-foreground text-[11px] font-mono font-medium rounded uppercase tracking-wider mb-3 sm:mb-4 border hairline-border">
             Oriel Index v{stats.intelligenceIndexVersion ?? "2.1"}
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.1]">
+          <h1 className="text-[1.75rem] leading-[1.15] sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground sm:leading-[1.1]">
             A window into machine intelligence.
           </h1>
-          <p className="text-lg text-muted-foreground mt-4 leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground mt-3 sm:mt-4 leading-relaxed">
             独立观察与记录 AI 模型的能力、成本、速度与演进。打破黑盒迷雾，通过高密度数据面板为您提供精准的模型选型决策依据。
           </p>
         </div>
-        <div className="flex items-center gap-4 mt-2">
-          <a href="/llm" className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors shadow-sm">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3 mt-1 sm:mt-2">
+          <a href="/llm" className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors shadow-sm w-full sm:w-auto">
             查看语言模型榜单
           </a>
-          <div className="relative w-64">
+          <div className="relative w-full sm:w-64">
             <svg className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             <input type="text" placeholder="搜索模型..." className="w-full pl-9 pr-4 py-2.5 bg-card border hairline-border rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-ring" />
           </div>
@@ -66,11 +66,11 @@ export function HomePage() {
 
       {/* Today's Insights (Dense Metric Cards) */}
       <section className="flex flex-col gap-4">
-        <div className="flex items-end justify-between mb-2">
-          <h2 className="text-xl font-bold tracking-tight text-foreground">今日观察摘要</h2>
-          <span className="text-xs text-muted-foreground font-mono">Top Insights</span>
+        <div className="flex items-end justify-between gap-3 mb-1 sm:mb-2">
+          <h2 className="text-lg sm:text-xl font-bold tracking-tight text-foreground">今日观察摘要</h2>
+          <span className="text-xs text-muted-foreground font-mono shrink-0">Top Insights</span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
           <a href="/llm" className="group">
             <MetricCard 
               label="智能领先" 
@@ -102,12 +102,12 @@ export function HomePage() {
 
       {/* Categories Grid */}
       <section className="flex flex-col gap-4">
-        <div className="flex items-end justify-between mb-2 border-b border-border pb-2">
-          <h2 className="text-xl font-bold tracking-tight text-foreground">五大模态面板</h2>
-          <span className="text-xs text-muted-foreground font-mono">Modalities</span>
+        <div className="flex items-end justify-between gap-3 mb-1 sm:mb-2 border-b border-border pb-2">
+          <h2 className="text-lg sm:text-xl font-bold tracking-tight text-foreground">五大模态面板</h2>
+          <span className="text-xs text-muted-foreground font-mono shrink-0">Modalities</span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <a href="/llm" className="instrument-panel p-5 hover:border-primary/40 transition-colors group flex flex-col justify-between min-h-35">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+          <a href="/llm" className="instrument-panel p-4 sm:p-5 hover:border-primary/40 transition-colors group flex flex-col justify-between min-h-35">
             <div>
               <div className="flex justify-between items-start mb-2">
                 <h3 className="font-semibold text-base text-foreground group-hover:text-primary transition-colors">语言模型 (LLM)</h3>
@@ -124,7 +124,7 @@ export function HomePage() {
             </div>
           </a>
 
-          <a href="/image" className="instrument-panel p-5 hover:border-primary/40 transition-colors group flex flex-col justify-between min-h-35">
+          <a href="/image" className="instrument-panel p-4 sm:p-5 hover:border-primary/40 transition-colors group flex flex-col justify-between min-h-35">
             <div>
               <div className="flex justify-between items-start mb-2">
                 <h3 className="font-semibold text-base text-foreground group-hover:text-primary transition-colors">图像生成 (Image)</h3>
@@ -141,7 +141,7 @@ export function HomePage() {
             </div>
           </a>
 
-          <a href="/video" className="instrument-panel p-5 hover:border-primary/40 transition-colors group flex flex-col justify-between min-h-35">
+          <a href="/video" className="instrument-panel p-4 sm:p-5 hover:border-primary/40 transition-colors group flex flex-col justify-between min-h-35">
             <div>
               <div className="flex justify-between items-start mb-2">
                 <h3 className="font-semibold text-base text-foreground group-hover:text-primary transition-colors">视频生成 (Video)</h3>
@@ -158,7 +158,7 @@ export function HomePage() {
             </div>
           </a>
 
-          <a href="/speech" className="instrument-panel p-5 hover:border-primary/40 transition-colors group flex flex-col justify-between min-h-35">
+          <a href="/speech" className="instrument-panel p-4 sm:p-5 hover:border-primary/40 transition-colors group flex flex-col justify-between min-h-35">
             <div>
               <div className="flex justify-between items-start mb-2">
                 <h3 className="font-semibold text-base text-foreground group-hover:text-primary transition-colors">语音模型 (Speech)</h3>
@@ -175,7 +175,7 @@ export function HomePage() {
             </div>
           </a>
 
-          <a href="/music" className="instrument-panel p-5 hover:border-primary/40 transition-colors group flex flex-col justify-between min-h-35">
+          <a href="/music" className="instrument-panel p-4 sm:p-5 hover:border-primary/40 transition-colors group flex flex-col justify-between min-h-35">
             <div>
               <div className="flex justify-between items-start mb-2">
                 <h3 className="font-semibold text-base text-foreground group-hover:text-primary transition-colors">音乐生成 (Music)</h3>

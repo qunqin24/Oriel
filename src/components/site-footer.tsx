@@ -3,7 +3,7 @@ import { formatRelativeFetched } from "@/lib/format";
 export function SiteFooter({ fetchedAt }: { fetchedAt?: string }) {
   return (
     <footer className="border-t hairline-border bg-card mt-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row justify-between items-center sm:items-start gap-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-8 flex flex-col sm:flex-row justify-between items-center sm:items-start gap-4">
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
           <p className="font-bold text-foreground text-lg tracking-tight">Oriel</p>
           <p className="text-sm text-muted-foreground mt-1 font-mono uppercase tracking-wider text-[10px]">独立 AI 模型评测</p>

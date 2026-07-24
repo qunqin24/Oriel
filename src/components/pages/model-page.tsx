@@ -88,17 +88,17 @@ export function ModelPage({ model, peers }: PageProps) {
     : "https://artificialanalysis.ai/models";
 
   return (
-    <div className="flex flex-col gap-8 max-w-5xl mx-auto w-full">
-      <nav className="flex items-center gap-2 text-xs text-muted-foreground">
-        <a href="/llm" className="hover:text-foreground transition-colors">
+    <div className="flex flex-col gap-6 sm:gap-8 max-w-5xl mx-auto w-full min-w-0">
+      <nav className="flex items-center gap-2 text-xs text-muted-foreground min-w-0">
+        <a href="/llm" className="hover:text-foreground transition-colors shrink-0">
           语言模型
         </a>
-        <span aria-hidden>/</span>
+        <span aria-hidden className="shrink-0">/</span>
         <span className="text-foreground truncate">{model.name}</span>
       </nav>
 
       {/* Header */}
-      <div className="flex flex-col gap-4 pb-6 border-b border-border">
+      <div className="flex flex-col gap-4 pb-5 sm:pb-6 border-b border-border">
         <div className="flex flex-wrap items-center gap-2">
           <StatusBadge label={model.model_creator?.name || "Unknown"} />
           <StatusBadge label="LLM" variant="outline" />
@@ -110,11 +110,11 @@ export function ModelPage({ model, peers }: PageProps) {
           ) : null}
         </div>
 
-        <div className="flex items-start gap-3">
+        <div className="flex items-start gap-3 min-w-0">
           <div className="mt-1 shrink-0">
             <VendorIcon name={model.model_creator?.name} size={28} />
           </div>
-          <h1 className="text-3xl font-bold tracking-tight text-foreground wrap-break-word">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground wrap-break-word min-w-0">
             {model.name}
           </h1>
         </div>

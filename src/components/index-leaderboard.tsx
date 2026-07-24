@@ -55,41 +55,26 @@ export function IndexLeaderboard({ models }: Props) {
   const topAgentic = getTop10("agentic");
 
   return (
-    <div className="tri-grid">
-      <div className="chart-panel">
-        <div className="chart-panel-head">
-          <h3 className="chart-panel-title">综合智能指数 Top 10</h3>
-        </div>
-        <div className="chart-panel-body">
-          <BarChart
-            items={topIntelligence}
-            digits={1}
-          />
-        </div>
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-4">
+      <div className="instrument-panel p-4 sm:p-5 flex flex-col gap-3 min-w-0">
+        <h3 className="text-sm font-semibold text-foreground">
+          综合智能指数 Top 10
+        </h3>
+        <BarChart items={topIntelligence} digits={1} />
       </div>
 
-      <div className="chart-panel">
-        <div className="chart-panel-head">
-          <h3 className="chart-panel-title">编程代码指数 Top 10</h3>
-        </div>
-        <div className="chart-panel-body">
-          <BarChart
-            items={topCoding}
-            digits={1}
-          />
-        </div>
+      <div className="instrument-panel p-4 sm:p-5 flex flex-col gap-3 min-w-0">
+        <h3 className="text-sm font-semibold text-foreground">
+          编程代码指数 Top 10
+        </h3>
+        <BarChart items={topCoding} digits={1} />
       </div>
 
-      <div className="chart-panel">
-        <div className="chart-panel-head">
-          <h3 className="chart-panel-title">智能体决策指数 Top 10</h3>
-        </div>
-        <div className="chart-panel-body">
-          <BarChart
-            items={topAgentic}
-            digits={1}
-          />
-        </div>
+      <div className="instrument-panel p-4 sm:p-5 flex flex-col gap-3 min-w-0">
+        <h3 className="text-sm font-semibold text-foreground">
+          智能体决策指数 Top 10
+        </h3>
+        <BarChart items={topAgentic} digits={1} />
       </div>
     </div>
   );
