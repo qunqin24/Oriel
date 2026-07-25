@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-24T03:51:20.727Z",
+  "fetched_at": "2026-07-25T03:45:20.482Z",
   "tier": "free",
   "data": [
     {
@@ -136,6 +136,15 @@
         "name": "NVIDIA"
       },
       "aa_wer_index": 0.1
+    },
+    {
+      "id": "345c2ba4-d0bb-4650-80c2-04708dbacf98",
+      "name": "StepAudio 2.5 ASR, StepFun",
+      "model_creator": {
+        "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
+        "name": "StepFun"
+      },
+      "aa_wer_index": 0
     },
     {
       "id": "ae083e8b-477f-4114-90e2-3484f97f2d76",

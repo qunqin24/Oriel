@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-24T03:51:19.978Z",
+  "fetched_at": "2026-07-25T03:45:19.967Z",
   "tier": "free",
   "data": [
     {
@@ -25,6 +25,54 @@
       "bba_score": 0.88,
       "fdb_score": null,
       "tau_voice_score": null
+    },
+    {
+      "id": "b5e9b179-8846-40f6-b0f3-d09097f9a96a",
+      "name": "Qwen Audio 3.0 Realtime Flash",
+      "slug": "qwen-audio-3-0-realtime-flash",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "bba_score": 0.96,
+      "fdb_score": 0.97,
+      "tau_voice_score": 0.36
+    },
+    {
+      "id": "7a4916ce-2869-4c69-aaa2-ade89eac494f",
+      "name": "GPT-Realtime-2.1 High",
+      "slug": "gpt-realtime-2-1-high",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": 0.96,
+      "fdb_score": 0.96,
+      "tau_voice_score": 0.46
+    },
+    {
+      "id": "121a6c7b-e1a8-43a0-9d30-87e256bca373",
+      "name": "GPT-Realtime-2.1 Mini Minimal",
+      "slug": "gpt-realtime-2-1-mini-minimal",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": 0.63,
+      "fdb_score": 0.92,
+      "tau_voice_score": 0.23
+    },
+    {
+      "id": "f4d17d8a-0223-478c-beec-8b2c7ff0ac1c",
+      "name": "GPT-Realtime-2.1 Mini High",
+      "slug": "gpt-realtime-2-1-mini-high",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": 0.75,
+      "fdb_score": 0.92,
+      "tau_voice_score": 0.29
     },
     {
       "id": "eead24bb-ad0b-45be-b0ab-7b16381c2daf",
@@ -156,6 +204,18 @@
       },
       "bba_score": 0.97,
       "fdb_score": null,
+      "tau_voice_score": 0.38
+    },
+    {
+      "id": "63268f9e-9b6b-42b4-93f1-c98081522e1a",
+      "name": "GPT-Realtime-2.1 Minimal",
+      "slug": "gpt-realtime-2-1-minimal",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": 0.87,
+      "fdb_score": 0.93,
       "tau_voice_score": 0.38
     },
     {
@@ -363,16 +423,16 @@
       "tau_voice_score": 0.18
     },
     {
-      "id": "5eafaf53-ac96-47f4-84ce-e9ca792eaa18",
-      "name": "Fun-Realtime-Audiochat",
-      "slug": "fun-realtime-audiochat",
+      "id": "dd1d2d0a-833a-445f-92eb-9e7c5a4040d0",
+      "name": "Qwen Audio 3.0 Realtime Plus",
+      "slug": "qwen-audio-3-0-realtime-plus",
       "model_creator": {
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "bba_score": 0.98,
+      "bba_score": 0.99,
       "fdb_score": 0.98,
-      "tau_voice_score": null
+      "tau_voice_score": 0.55
     }
   ]
 }

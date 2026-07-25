@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-24T03:51:19.360Z",
+  "fetched_at": "2026-07-25T03:45:19.483Z",
   "tier": "free",
   "data": [
     {
@@ -45,6 +45,17 @@
       },
       "elo": 1208,
       "ci_95": 14
+    },
+    {
+      "id": "735c1745-d548-499f-85b5-25a0a4b58218",
+      "name": "StepAudio 2.5 TTS",
+      "slug": "st260629",
+      "model_creator": {
+        "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
+        "name": "StepFun"
+      },
+      "elo": 1199,
+      "ci_95": 16
     },
     {
       "id": "6e0eadf0-3bf9-4424-a563-90292f2a0afd",
@@ -100,17 +111,6 @@
       },
       "elo": 1178,
       "ci_95": 12
-    },
-    {
-      "id": "c84d8fe6-60f5-4ccd-9428-e0fee47eefc8",
-      "name": "StepAudio 2.5 TTS",
-      "slug": "step-audio-2.5-tts",
-      "model_creator": {
-        "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
-        "name": "StepFun"
-      },
-      "elo": 1176,
-      "ci_95": 18
     },
     {
       "id": "49285d46-f230-416c-aa92-6322c9f60629",
