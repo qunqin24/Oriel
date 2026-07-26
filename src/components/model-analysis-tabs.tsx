@@ -320,7 +320,9 @@ export function ModelAnalysisTabs({ model, peers }: Props) {
                             size={14}
                             className="shrink-0"
                           />
-                          <span className="truncate">{m.name}</span>
+                          <span className="truncate" data-tip={m.name}>
+                            {m.name}
+                          </span>
                         </span>
                         <span className="font-mono text-xs text-muted-foreground shrink-0">
                           {formatNumber(
@@ -476,7 +478,10 @@ export function ModelAnalysisTabs({ model, peers }: Props) {
                               name={model.model_creator?.name}
                               size={14}
                             />
-                            <span className="font-semibold text-foreground truncate">
+                            <span
+                              className="font-semibold text-foreground truncate"
+                              data-tip={model.name}
+                            >
                               {model.name}
                             </span>
                             <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground shrink-0">
@@ -518,13 +523,13 @@ export function ModelAnalysisTabs({ model, peers }: Props) {
                           <td className={`py-3.5 pl-4 pr-6 ${cellBorder}`}>
                             <a
                               href={`/llm/${m.id}`}
-                              className="flex items-center gap-2.5 min-w-0 hover:text-primary transition-colors"
+                              className="flex items-center gap-2.5 min-w-0 hover:text-oriel-gold transition-colors"
                             >
                               <VendorIcon
                                 name={m.model_creator?.name}
                                 size={14}
                               />
-                              <span className="font-medium truncate">
+                              <span className="font-medium truncate" data-tip={m.name}>
                                 {m.name}
                               </span>
                             </a>

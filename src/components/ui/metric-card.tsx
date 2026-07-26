@@ -27,7 +27,7 @@ export function MetricCard({ label, value, subValue, trend, trendValue, classNam
       <div className="flex flex-col gap-0.5 mt-1 min-w-0">
         <span className="text-2xl font-bold font-mono text-foreground tracking-tight truncate">{value}</span>
         {subValue && (
-          <span className="text-[11px] text-muted-foreground font-medium truncate" title={subValue}>{subValue}</span>
+          <span className="text-[11px] text-muted-foreground font-medium truncate" data-tip={subValue}>{subValue}</span>
         )}
       </div>
     </div>

@@ -175,7 +175,7 @@ export function LeaderboardTableView<T>({
                       `}
                     >
                       {isFirst && !isNode ? (
-                        <div className="truncate" title={String(raw)}>
+                        <div className="truncate" data-tip={String(raw)}>
                           {text}
                         </div>
                       ) : (

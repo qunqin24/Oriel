@@ -213,13 +213,13 @@ export function CompareClientView({ models }: Props) {
                         <a
                           href={`/llm/${m.id}`}
                           className="font-semibold text-foreground hover:text-oriel-gold transition-colors block truncate"
-                          title={m.name}
+                          data-tip={m.name}
                         >
                           {m.name}
                         </a>
                         <span
                           className="text-[11px] font-mono text-muted-foreground block truncate"
-                          title={m.model_creator?.name}
+                          data-tip={m.model_creator?.name}
                         >
                           {m.model_creator?.name}
                         </span>
@@ -265,7 +265,7 @@ export function CompareClientView({ models }: Props) {
                             : "text-foreground"
                         }`}
                       >
-                        <span className="block truncate" title={metric.format(raw)}>
+                        <span className="block truncate" data-tip={metric.format(raw)}>
                           {metric.format(raw)}
                         </span>
                       </td>

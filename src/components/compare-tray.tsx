@@ -28,7 +28,7 @@ export function CompareTray() {
               <VendorIcon name={item.creator} size={14} />
               <span
                 className="text-xs font-medium max-w-28 sm:max-w-32 truncate"
-                title={item.name}
+                data-tip={item.name}
               >
                 {item.name}
               </span>

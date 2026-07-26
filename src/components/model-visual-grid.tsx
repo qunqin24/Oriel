@@ -173,7 +173,7 @@ export function ModelVisualGrid({ models }: Props) {
                   <span className="model-rank-badge">#{idx + 1}</span>
                 </div>
                 <div className="model-header-info">
-                  <h3 className="model-title-text" title={m.name}>
+                  <h3 className="model-title-text" data-tip={m.name}>
                     {m.name}
                   </h3>
                   <div className="model-creator-tag">

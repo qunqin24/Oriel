@@ -65,7 +65,6 @@ export function BarChart({
           >
             <div
               className="flex w-[42%] sm:w-1/3 min-w-0 max-w-44 sm:max-w-none sm:min-w-36 items-center gap-1.5 sm:gap-2.5"
-              title={item.label}
             >
               {showRank ? (
                 <span className="text-[10px] font-mono text-muted-foreground w-4 text-right shrink-0">
@@ -82,11 +81,15 @@ export function BarChart({
                   className={`text-foreground truncate text-[13px] sm:text-sm ${
                     item.highlight ? "font-semibold" : "font-medium"
                   }`}
+                  data-tip={item.label}
                 >
                   {item.label}
                 </span>
                 {item.sub ? (
-                  <span className="text-[10px] text-muted-foreground truncate">
+                  <span
+                    className="text-[10px] text-muted-foreground truncate"
+                    data-tip={item.sub}
+                  >
                     {item.sub}
                   </span>
                 ) : null}

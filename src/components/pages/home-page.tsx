@@ -30,12 +30,11 @@ function LeadingModel({
   creator?: string | null;
 }) {
   return (
-    <span
-      className="font-medium text-foreground truncate inline-flex items-center gap-1.5 min-w-0"
-      title={name}
-    >
+    <span className="font-medium text-foreground truncate inline-flex items-center gap-1.5 min-w-0">
       <VendorIcon name={creator} size={14} className="shrink-0" />
-      <span className="truncate">{name}</span>
+      <span className="truncate" data-tip={name}>
+        {name}
+      </span>
     </span>
   );
 }

@@ -29,7 +29,10 @@ export function ModelNameCell({
   className = "",
 }: Props) {
   const title = (
-    <span className="font-semibold text-foreground truncate block" title={name}>
+    <span
+      className="font-semibold text-foreground truncate block"
+      data-tip={name}
+    >
       {name}
     </span>
   );
@@ -42,7 +45,7 @@ export function ModelNameCell({
           <a
             href={href}
             className="font-semibold text-foreground hover:text-oriel-gold transition-colors cursor-pointer block truncate"
-            title={name}
+            data-tip={name}
           >
             {name}
           </a>
@@ -50,7 +53,10 @@ export function ModelNameCell({
           title
         )}
         {showCreator && creator ? (
-          <span className="text-[11px] text-muted-foreground mt-0.5 font-mono truncate">
+          <span
+            className="text-[11px] text-muted-foreground mt-0.5 font-mono truncate"
+            data-tip={creator}
+          >
             {creator}
           </span>
         ) : null}

@@ -94,7 +94,9 @@ export function ModelPage({ model, peers }: PageProps) {
           语言模型
         </a>
         <span aria-hidden className="shrink-0">/</span>
-        <span className="text-foreground truncate">{model.name}</span>
+        <span className="text-foreground truncate" data-tip={model.name}>
+          {model.name}
+        </span>
       </nav>
 
       {/* Header */}
@@ -250,7 +252,10 @@ export function ModelPage({ model, peers }: PageProps) {
             </dd>
 
             <dt className="text-muted-foreground">Slug</dt>
-            <dd className="font-mono text-xs text-right text-muted-foreground truncate max-w-50">
+            <dd
+              className="font-mono text-xs text-right text-muted-foreground truncate max-w-50"
+              data-tip={model.slug || undefined}
+            >
               {model.slug || "—"}
             </dd>
           </dl>

@@ -230,6 +230,32 @@
   border-color: color-mix(in oklab, var(--border) 70%, transparent);
 }
 
+/* Full text of clipped labels, driven by scripts/truncation-tooltip.ts */
+.truncation-tip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  max-width: min(24rem, calc(100vw - 1rem));
+  padding: 0.375rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  color: var(--foreground);
+  font-size: 12px;
+  line-height: 1.45;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.5);
+  pointer-events: none;
+}
+
+.truncation-tip[hidden] {
+  display: none;
+}
+
+:root[data-theme="light"] .truncation-tip {
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.14);
+}
+
 .gold-glow {
   box-shadow: var(--gold-glow);
 }
