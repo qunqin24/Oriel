@@ -2,6 +2,9 @@
 @import "@fontsource-variable/instrument-sans";
 @import "@fontsource/ibm-plex-mono/400.css";
 @import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/ibm-plex-mono/600.css";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
   --font-sans: "Instrument Sans Variable", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -28,54 +31,100 @@
   --color-border: var(--border);
 
   --color-oriel-gold: var(--oriel-gold);
+  --color-gold: var(--oriel-gold);
+  --color-positive: var(--data-positive);
+  --color-negative: var(--data-negative);
 
   --radius-sm: calc(var(--radius) - 2px);
   --radius-md: var(--radius);
   --radius-lg: calc(var(--radius) + 2px);
 }
 
+/*
+ * THE OBSERVATORY — dark instrument terminal (default theme).
+ * Cold blue-black glass, warm gold through the window.
+ */
 :root {
-  /* THE ANALYTICAL INSTRUMENT - Color Palette */
-  --background: #f4f5f7; /* Cold light gray background */
-  --foreground: #111827; /* Very dark gray for high readability */
+  color-scheme: dark;
 
-  --card: #ffffff;
-  --card-foreground: #111827;
+  --background: #0b0d12;
+  --foreground: #e7eaf2;
 
-  /* Primary is a very dark, sharp tone */
-  --primary: #0f172a;
-  --primary-foreground: #f8fafc;
+  --card: #12151d;
+  --card-foreground: #e7eaf2;
 
-  /* Secondary for subtle buttons and tags */
-  --secondary: #e2e8f0;
-  --secondary-foreground: #334155;
+  /* Light-on-dark primary for solid controls */
+  --primary: #e7eaf2;
+  --primary-foreground: #0b0d12;
 
-  /* Muted elements */
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
+  --secondary: #1b2029;
+  --secondary-foreground: #b4bccc;
 
-  /* Accent - used for highlighting */
-  --accent: #f8fafc;
-  --accent-foreground: #0f172a;
+  --muted: #161a23;
+  --muted-foreground: #8b94a7;
 
-  /* Crisp borders */
-  --border: #cbd5e1;
+  --accent: #1b2029;
+  --accent-foreground: #e7eaf2;
 
-  /* Radii - very sharp for the instrument feel */
+  --border: #242a38;
+
   --radius: 6px;
 
-  /* Brand specifics */
-  --oriel-gold: #d4af37;
-  
-  /* Semantic Data Colors */
-  --data-positive: #059669; /* emerald-600 */
-  --data-negative: #dc2626; /* red-600 */
+  /* Brand — the gold light in the oriel window */
+  --oriel-gold: #e0b15c;
+  --gold-glow: 0 0 0 1px color-mix(in oklab, var(--oriel-gold) 35%, transparent),
+    0 0 18px color-mix(in oklab, var(--oriel-gold) 12%, transparent);
+
+  /* Rank tiers: gold / silver / bronze */
+  --rank-1: #e0b15c;
+  --rank-2: #a8b2c4;
+  --rank-3: #c08d5e;
+
+  /* Semantic data colors */
+  --data-positive: #4cc38a;
+  --data-negative: #f16a6a;
 
   /* Scrollbar */
   --scrollbar-size: 8px;
   --scrollbar-track: transparent;
   --scrollbar-thumb: color-mix(in oklab, var(--border) 85%, var(--foreground) 15%);
   --scrollbar-thumb-hover: color-mix(in oklab, var(--border) 55%, var(--foreground) 45%);
+}
+
+/* Daylight reading of the same instrument. */
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --background: #f3f4f6;
+  --foreground: #14181f;
+
+  --card: #ffffff;
+  --card-foreground: #14181f;
+
+  --primary: #14181f;
+  --primary-foreground: #f7f8fa;
+
+  --secondary: #e4e7ec;
+  --secondary-foreground: #3c4454;
+
+  --muted: #eceef2;
+  --muted-foreground: #626b7d;
+
+  --accent: #f7f8fa;
+  --accent-foreground: #14181f;
+
+  --border: #d2d7e0;
+
+  --oriel-gold: #b8860b;
+  --gold-glow: 0 0 0 1px color-mix(in oklab, var(--oriel-gold) 40%, transparent),
+    0 0 14px color-mix(in oklab, var(--oriel-gold) 10%, transparent);
+
+  --rank-1: #b8860b;
+  --rank-2: #6b7689;
+  --rank-3: #9a6b3f;
+
+  --data-positive: #059669;
+  --data-negative: #dc2626;
 }
 
 @layer base {
@@ -109,6 +158,10 @@
     background: transparent;
   }
 
+  html {
+    background-color: var(--background);
+  }
+
   body {
     background-color: var(--background);
     color: var(--foreground);
@@ -116,13 +169,35 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  ::selection {
+    background: color-mix(in oklab, var(--oriel-gold) 30%, transparent);
+  }
+
+  :focus-visible {
+    outline: 2px solid color-mix(in oklab, var(--oriel-gold) 70%, transparent);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
-/* Base custom utilities for Oriel Analytical Instrument */
+/* Panel: card surface with a faint top highlight, like glass catching light */
 .instrument-panel {
   background-color: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
+  box-shadow: inset 0 1px 0 color-mix(in oklab, var(--foreground) 4%, transparent);
+}
+
+:root[data-theme="light"] .instrument-panel {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
@@ -141,8 +216,22 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* Micro label: uppercase mono eyebrow used across panels */
+.terminal-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
 .hairline-border {
   border-color: color-mix(in oklab, var(--border) 70%, transparent);
+}
+
+.gold-glow {
+  box-shadow: var(--gold-glow);
 }
 
 .segmented-tab {
@@ -155,7 +244,7 @@
 }
 
 .segmented-tab[aria-selected="true"] {
-  border-color: var(--primary);
+  border-color: var(--oriel-gold);
   color: var(--foreground);
 }
 
@@ -165,8 +254,8 @@
 }
 
 .segmented-tab[aria-selected="true"] .segmented-tab-count {
-  background: color-mix(in oklab, var(--primary) 10%, transparent);
-  color: var(--primary);
+  background: color-mix(in oklab, var(--oriel-gold) 15%, transparent);
+  color: var(--oriel-gold);
 }
 
 .compare-toggle {
@@ -176,13 +265,13 @@
 }
 
 .compare-toggle:hover {
-  background: color-mix(in oklab, var(--primary) 90%, transparent);
+  background: color-mix(in oklab, var(--primary) 88%, transparent);
 }
 
 .compare-toggle[data-active="true"] {
-  border: 1px solid color-mix(in oklab, var(--border) 70%, transparent);
-  background: var(--secondary);
-  color: var(--secondary-foreground);
+  border: 1px solid color-mix(in oklab, var(--oriel-gold) 45%, transparent);
+  background: color-mix(in oklab, var(--oriel-gold) 10%, transparent);
+  color: var(--oriel-gold);
   box-shadow: none;
 }
 

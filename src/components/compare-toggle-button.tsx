@@ -37,9 +37,9 @@ export function CompareToggleButton({
             ? "从对比中移除"
             : "加入对比"
       }
-      className={`font-semibold rounded-md transition-colors disabled:opacity-40 disabled:cursor-not-allowed ${sizeCls} ${
+      className={`font-semibold rounded-md whitespace-nowrap transition-colors disabled:opacity-40 disabled:cursor-not-allowed ${sizeCls} ${
         active
-          ? "bg-secondary text-secondary-foreground border hairline-border hover:bg-muted"
+          ? "border border-oriel-gold/45 bg-oriel-gold/10 text-oriel-gold hover:bg-oriel-gold/15"
           : "bg-primary text-primary-foreground shadow-sm hover:bg-primary/90"
       } ${className}`}
     >

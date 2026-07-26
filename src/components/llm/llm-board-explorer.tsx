@@ -434,14 +434,14 @@ export function LlmBoardExplorer({
             onClick={() => toggleVendor(v.name)}
             className={`shrink-0 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium border transition-colors ${
               active
-                ? "border-primary bg-primary text-primary-foreground"
-                : "hairline-border bg-card text-muted-foreground hover:text-foreground hover:border-primary/40"
+                ? "border-oriel-gold/60 bg-oriel-gold/12 text-oriel-gold"
+                : "hairline-border bg-card text-muted-foreground hover:text-foreground hover:border-oriel-gold/40"
             }`}
           >
             {v.name}
             <span
               className={`font-mono text-[10px] ${
-                active ? "text-primary-foreground/80" : "text-muted-foreground"
+                active ? "text-oriel-gold/80" : "text-muted-foreground"
               }`}
             >
               {v.count}
@@ -483,7 +483,7 @@ export function LlmBoardExplorer({
               onClick={() => onDimChange(tab.id)}
               className={`shrink-0 px-3 sm:px-4 pb-2 pt-1 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 flex items-center gap-1.5 sm:gap-2 ${
                 selected
-                  ? "border-primary text-foreground"
+                  ? "border-oriel-gold text-foreground"
                   : "border-transparent text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -491,7 +491,7 @@ export function LlmBoardExplorer({
               <span
                 className={`px-1.5 py-0.5 text-[10px] rounded-md font-mono ${
                   selected
-                    ? "bg-primary/10 text-primary"
+                    ? "bg-oriel-gold/15 text-oriel-gold"
                     : "bg-secondary text-muted-foreground"
                 }`}
               >

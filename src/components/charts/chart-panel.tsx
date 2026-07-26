@@ -11,11 +11,11 @@ export function ChartPanel({ title, note, children }: Props) {
     <section className="instrument-panel px-4 py-4 sm:px-6 sm:py-6 md:px-8 flex flex-col gap-3 sm:gap-4 min-w-0">
       <header className="flex flex-col gap-2">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground leading-snug">
+          <h3 className="terminal-label !text-[11px] text-foreground/80 leading-snug">
             {title}
           </h3>
           {note ? (
-            <p className="font-mono text-[11px] sm:text-xs text-muted-foreground bg-secondary px-2 py-0.5 rounded w-fit max-w-full">
+            <p className="font-mono text-[11px] sm:text-xs text-muted-foreground border hairline-border px-2 py-0.5 rounded w-fit max-w-full">
               {note}
             </p>
           ) : null}

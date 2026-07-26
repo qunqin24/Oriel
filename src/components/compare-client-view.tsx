@@ -177,7 +177,7 @@ export function CompareClientView({ models }: Props) {
           </button>
           <a
             href="/llm"
-            className="text-xs font-semibold px-3 py-1.5 rounded-md border hairline-border bg-card hover:border-primary transition-colors"
+            className="text-xs font-semibold px-3 py-1.5 rounded-md border hairline-border bg-card hover:border-oriel-gold/50 transition-colors"
           >
             + 继续添加
           </a>
@@ -212,7 +212,7 @@ export function CompareClientView({ models }: Props) {
                       <div className="min-w-0 flex-1 overflow-hidden text-left">
                         <a
                           href={`/llm/${m.id}`}
-                          className="font-semibold text-foreground hover:text-primary transition-colors block truncate"
+                          className="font-semibold text-foreground hover:text-oriel-gold transition-colors block truncate"
                           title={m.name}
                         >
                           {m.name}
@@ -261,7 +261,7 @@ export function CompareClientView({ models }: Props) {
                         key={m.id}
                         className={`px-2.5 sm:px-4 py-3 border-b border-border font-mono text-xs sm:text-[13px] overflow-hidden ${
                           win
-                            ? "text-emerald-700 font-semibold bg-emerald-50/60"
+                            ? "text-positive font-semibold bg-positive/10"
                             : "text-foreground"
                         }`}
                       >

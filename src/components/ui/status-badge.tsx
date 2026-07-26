@@ -12,10 +12,10 @@ export function StatusBadge({ label, variant = "neutral", className = "" }: Stat
   let variantClasses = "";
   switch (variant) {
     case "positive":
-      variantClasses = "bg-emerald-100 text-emerald-800 border border-emerald-200";
+      variantClasses = "bg-positive/10 text-positive border border-positive/25";
       break;
     case "warning":
-      variantClasses = "bg-amber-100 text-amber-800 border border-amber-200";
+      variantClasses = "bg-gold/10 text-gold border border-gold/25";
       break;
     case "outline":
       variantClasses = "bg-transparent text-muted-foreground border hairline-border";

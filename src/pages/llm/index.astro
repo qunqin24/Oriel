@@ -112,7 +112,7 @@ const initialVendors = (params.get("vendor") ?? "")
               className={`h-full transition-colors cursor-pointer ${
                 h.gold
                   ? "border-oriel-gold/50 bg-oriel-gold/5 group-hover:border-oriel-gold"
-                  : "group-hover:border-primary/40"
+                  : "group-hover:border-oriel-gold/50"
               }`}
             />
           </a>
@@ -124,7 +124,7 @@ const initialVendors = (params.get("vendor") ?? "")
     <section class="flex flex-col gap-4 min-w-0">
       <div class="flex items-end justify-between gap-3 mb-1 sm:mb-2 border-b border-border pb-2">
         <h2 class="text-lg sm:text-xl font-bold tracking-tight text-foreground">多维榜单</h2>
-        <span class="text-xs text-muted-foreground font-mono shrink-0">Leaderboards</span>
+        <span class="terminal-label shrink-0">Leaderboards</span>
       </div>
       <LlmBoardExplorer
         models={models}
@@ -142,7 +142,7 @@ const initialVendors = (params.get("vendor") ?? "")
     <section class="flex flex-col gap-4 min-w-0">
       <div class="flex items-end justify-between gap-3 mb-1 sm:mb-2 border-b border-border pb-2">
         <h2 class="text-lg sm:text-xl font-bold tracking-tight text-foreground">洞察</h2>
-        <span class="text-xs text-muted-foreground font-mono shrink-0">Insights</span>
+        <span class="terminal-label shrink-0">Insights</span>
       </div>
       <LlmInsights models={models} intelligenceIndexVersion={intelligence_index_version} />
     </section>

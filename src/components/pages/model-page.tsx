@@ -222,14 +222,14 @@ export function ModelPage({ model, peers }: PageProps) {
       </div>
 
       {/* Summary */}
-      <p className="text-base md:text-lg leading-relaxed text-foreground font-medium border-l-4 border-primary pl-4">
+      <p className="text-base md:text-lg leading-relaxed text-foreground font-medium border-l-2 border-oriel-gold pl-4">
         {buildSummary(model)}
       </p>
 
       {/* Specs */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="instrument-panel p-6">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">
+          <h3 className="terminal-label !text-[11px] text-foreground/80 mb-4">
             模型信息
           </h3>
           <dl className="grid grid-cols-[1fr_auto] gap-x-6 gap-y-3 text-sm">
@@ -257,7 +257,7 @@ export function ModelPage({ model, peers }: PageProps) {
         </div>
 
         <div className="instrument-panel p-6">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">
+          <h3 className="terminal-label !text-[11px] text-foreground/80 mb-4">
             经济与性能
           </h3>
           <dl className="grid grid-cols-[1fr_auto] gap-x-6 gap-y-3 text-sm">

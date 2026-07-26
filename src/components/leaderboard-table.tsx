@@ -110,9 +110,9 @@ export function LeaderboardTableView<T>({
       {/* Table Container */}
       <div className="w-full overflow-x-auto instrument-panel overscroll-x-contain">
         <table className="w-full text-sm text-left min-w-xl">
-          <thead className="text-[11px] uppercase tracking-wider text-muted-foreground bg-muted">
+          <thead className="text-[10px] font-mono uppercase tracking-[0.12em] text-muted-foreground bg-muted">
             <tr>
-              <th className="sticky left-0 z-20 px-2.5 sm:px-4 py-2.5 font-semibold w-10 text-center border-b border-border bg-muted">
+              <th className="sticky left-0 z-20 px-2.5 sm:px-4 py-2 font-semibold w-10 text-center border-b border-border bg-muted">
                 #
               </th>
               {columns.map((col, i) => {
@@ -124,7 +124,7 @@ export function LeaderboardTableView<T>({
                 return (
                   <th
                     key={col.key}
-                    className={`px-2.5 sm:px-4 py-2.5 font-semibold whitespace-nowrap border-b border-border bg-muted
+                    className={`px-2.5 sm:px-4 py-2 font-semibold whitespace-nowrap border-b border-border bg-muted
                       ${col.align === "right" ? "text-right" : col.align === "center" ? "text-center" : "text-left"}
                       ${isFirst && !alone ? "sticky left-10 z-20 w-44 max-w-44 sm:w-60 sm:max-w-60 shadow-[1px_0_0_var(--border)]" : "w-auto"}
                     `}
@@ -133,7 +133,7 @@ export function LeaderboardTableView<T>({
                       <button
                         type="button"
                         onClick={() => onSort?.(col.key)}
-                        className={`flex items-center gap-1 hover:text-foreground transition-colors ${active ? "text-foreground font-bold" : ""} ${col.align === "right" ? "ml-auto" : col.align === "center" ? "mx-auto" : ""}`}
+                        className={`flex items-center gap-1 hover:text-foreground transition-colors ${active ? "text-oriel-gold font-bold" : ""} ${col.align === "right" ? "ml-auto" : col.align === "center" ? "mx-auto" : ""}`}
                       >
                         {col.label}
                         <span className="font-mono w-3 text-center opacity-70">
@@ -151,9 +151,9 @@ export function LeaderboardTableView<T>({
           <tbody className="divide-y divide-border">
             {rows.map((row, index) => (
               <tr key={getRowKey(row)} className="bg-card hover:bg-muted/30 transition-colors group">
-                <td className="sticky left-0 z-10 px-2.5 sm:px-4 py-2 text-center bg-card group-hover:bg-muted/30">
+                <td className="sticky left-0 z-10 px-2.5 sm:px-4 py-1.5 text-center bg-card group-hover:bg-muted/30">
                   <span className={`inline-block min-w-5 font-mono text-xs font-semibold
-                    ${index === 0 ? "text-(--oriel-gold)" : index < 3 ? "text-foreground" : "text-muted-foreground"}`}>
+                    ${index === 0 ? "text-(--rank-1)" : index === 1 ? "text-(--rank-2)" : index === 2 ? "text-(--rank-3)" : "text-muted-foreground"}`}>
                     {index + 1}
                   </span>
                 </td>
@@ -167,7 +167,7 @@ export function LeaderboardTableView<T>({
                   return (
                     <td
                       key={col.key}
-                      className={`px-2.5 sm:px-4 py-2.5
+                      className={`px-2.5 sm:px-4 py-1.5
                         ${col.align === "right" ? "text-right" : col.align === "center" ? "text-center" : "text-left"}
                         ${typeof raw === "number" && !isNode ? "mono-data" : ""}
                         ${isFirst ? "font-medium text-foreground" : "text-muted-foreground text-[13px]"}

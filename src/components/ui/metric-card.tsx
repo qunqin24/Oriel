@@ -16,8 +16,8 @@ export function MetricCard({ label, value, subValue, trend, trendValue, classNam
         <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">{label}</span>
         {trend && trendValue && (
           <span className={`text-[10px] font-mono font-bold tracking-wider px-1.5 py-0.5 rounded-sm border ${
-            trend === "up" ? "border-emerald-500/30 text-emerald-600 bg-emerald-500/5" :
-            trend === "down" ? "border-red-500/30 text-red-600 bg-red-500/5" :
+            trend === "up" ? "border-positive/30 text-positive bg-positive/5" :
+            trend === "down" ? "border-negative/30 text-negative bg-negative/5" :
             "border-border text-muted-foreground bg-muted/30"
           }`}>
             {trend === "up" ? "↑" : trend === "down" ? "↓" : "−"} {trendValue}

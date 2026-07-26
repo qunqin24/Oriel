@@ -41,7 +41,7 @@ export function ModelNameCell({
         {href ? (
           <a
             href={href}
-            className="font-semibold text-foreground hover:text-primary transition-colors cursor-pointer block truncate"
+            className="font-semibold text-foreground hover:text-oriel-gold transition-colors cursor-pointer block truncate"
             title={name}
           >
             {name}

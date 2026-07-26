@@ -9,7 +9,8 @@ export function PageHero({ eyebrow, title, description, meta }: Props) {
   return (
     <section className="flex flex-col gap-2.5 sm:gap-3 pb-5 sm:pb-6 border-b border-border">
       {eyebrow && (
-        <div className="inline-flex items-center px-2 py-1 bg-secondary text-secondary-foreground text-[11px] font-mono font-medium rounded uppercase tracking-wider mb-1 sm:mb-2 border hairline-border w-fit">
+        <div className="terminal-label inline-flex items-center gap-1.5 mb-1 sm:mb-2 w-fit">
+          <span className="inline-block h-1 w-1 rounded-full bg-oriel-gold" aria-hidden />
           {eyebrow}
         </div>
       )}

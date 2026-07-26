@@ -42,7 +42,7 @@ export function SegmentedTabs({
               aria-selected={selected}
               className={`shrink-0 px-3 sm:px-4 pb-2 pt-1 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 flex items-center gap-1.5 sm:gap-2 ${
                 selected
-                  ? "border-primary text-foreground"
+                  ? "border-oriel-gold text-foreground"
                   : "border-transparent text-muted-foreground hover:text-foreground"
               }`}
               onClick={() => select(tab.id)}
@@ -52,7 +52,7 @@ export function SegmentedTabs({
                 <span
                   className={`px-1.5 py-0.5 text-[10px] rounded-md font-mono ${
                     selected
-                      ? "bg-primary/10 text-primary"
+                      ? "bg-oriel-gold/15 text-oriel-gold"
                       : "bg-secondary text-muted-foreground"
                   }`}
                 >

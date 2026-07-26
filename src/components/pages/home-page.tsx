@@ -58,9 +58,7 @@ function SectionHeader({
       <h2 className="text-lg sm:text-xl font-bold tracking-tight text-foreground">
         {title}
       </h2>
-      <span className="text-xs text-muted-foreground font-mono shrink-0">
-        {note}
-      </span>
+      <span className="terminal-label shrink-0">{note}</span>
     </div>
   );
 }
@@ -81,12 +79,12 @@ function LeaderboardPanel({
     <section className="instrument-panel px-4 py-4 sm:px-6 sm:py-6 md:px-8 flex flex-col gap-3 sm:gap-4 min-w-0">
       <header className="flex flex-col gap-2">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground leading-snug">
+          <h3 className="terminal-label !text-[11px] text-foreground/80 leading-snug">
             {title}
           </h3>
           <a
             href={href}
-            className="font-mono text-[11px] sm:text-xs text-muted-foreground bg-secondary hover:text-foreground transition-colors px-2 py-0.5 rounded w-fit max-w-full"
+            className="font-mono text-[11px] sm:text-xs text-muted-foreground hover:text-oriel-gold transition-colors px-2 py-0.5 rounded w-fit max-w-full border hairline-border"
           >
             {note}
           </a>
@@ -146,30 +144,48 @@ export function HomePage() {
   ];
 
   return (
-    <div className="flex flex-col gap-8 sm:gap-12 max-w-6xl mx-auto py-2 sm:py-6">
+    <div className="flex flex-col gap-10 sm:gap-16 max-w-6xl mx-auto py-4 sm:py-10">
       {/* Hero */}
-      <section className="relative flex flex-col gap-4 sm:gap-5 max-w-3xl">
-        <div>
-          <div className="inline-flex items-center px-2 py-1 bg-secondary text-secondary-foreground text-[11px] font-mono font-medium rounded uppercase tracking-wider mb-3 border hairline-border">
-            Oriel Index v{stats.intelligenceIndexVersion ?? "2.1"}
-          </div>
-          <h1 className="text-[1.75rem] leading-[1.15] sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground sm:leading-[1.1]">
-            A window into machine intelligence.
+      <section className="relative flex flex-col gap-6 sm:gap-8">
+        <div className="max-w-3xl">
+          <h1 className="text-4xl leading-[1.08] sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground">
+            A window into
+            <br />
+            machine intelligence
+            <span className="text-oriel-gold">.</span>
           </h1>
-          <p className="text-base sm:text-lg text-muted-foreground mt-3 leading-relaxed">
-            独立观察与记录 AI 模型的能力、成本、速度与演进。打破黑盒迷雾,通过高密度数据面板为您提供精准的模型选型决策依据。
+          <p className="text-base sm:text-lg text-muted-foreground mt-4 sm:mt-5 leading-relaxed max-w-2xl">
+            独立观察与记录 AI 模型的能力、成本、速度与演进。打破黑盒迷雾,为模型选型提供精准的数据依据。
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row sm:items-center gap-3 mt-1">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3">
           <a
             href="/llm"
-            className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors shadow-sm w-full sm:w-auto"
+            className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors w-full sm:w-auto"
           >
             查看语言模型榜单
           </a>
-          <span className="text-xs text-muted-foreground font-mono">
-            已收录 {formatNumber(stats.totalModels, 0)} 个模型 · 数据快照{" "}
-            {formatDate(stats.fetchedAt)}
+          <a
+            href="/compare"
+            className="inline-flex items-center justify-center px-5 py-2.5 border hairline-border text-foreground font-medium rounded-md hover:bg-secondary/50 transition-colors w-full sm:w-auto"
+          >
+            对比模型
+          </a>
+        </div>
+        {/* 终端状态行 */}
+        <div className="instrument-panel flex flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3 font-mono text-[11px] sm:text-xs text-muted-foreground">
+          <span className="inline-flex items-center gap-2 text-foreground">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-oriel-gold opacity-60"></span>
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-oriel-gold"></span>
+            </span>
+            数据快照 {formatDate(stats.fetchedAt)}
+          </span>
+          <span>收录 {formatNumber(stats.totalModels, 0)} 模型</span>
+          <span>5 大模态 · 12 组数据集</span>
+          <span className="hidden sm:inline">Oriel Index v{stats.intelligenceIndexVersion ?? "4.1"}</span>
+          <span className="ml-auto hidden md:inline text-muted-foreground/70">
+            来源 Artificial Analysis
           </span>
         </div>
       </section>
@@ -187,7 +203,7 @@ export function HomePage() {
                 1
               )}
               subValue={highlights.topIntelligence?.name}
-              className="h-full group-hover:border-primary/40 transition-colors cursor-pointer"
+              className="h-full group-hover:border-oriel-gold/50 transition-colors cursor-pointer"
             />
           </a>
           <a href="/llm" className="group">
@@ -199,7 +215,7 @@ export function HomePage() {
                 1
               )}
               subValue={highlights.topCoding?.name}
-              className="h-full group-hover:border-primary/40 transition-colors cursor-pointer"
+              className="h-full group-hover:border-oriel-gold/50 transition-colors cursor-pointer"
             />
           </a>
           <a href="/llm" className="group">
@@ -213,7 +229,7 @@ export function HomePage() {
                   ? `${highlights.topValue.name} · 输出价/M`
                   : undefined
               }
-              className="h-full group-hover:border-primary/40 transition-colors cursor-pointer"
+              className="h-full group-hover:border-oriel-gold/50 transition-colors cursor-pointer"
             />
           </a>
           <a href="/llm" className="group">
@@ -224,7 +240,7 @@ export function HomePage() {
                   ?.median_time_to_first_token_seconds
               )}
               subValue={highlights.fastest?.name}
-              className="h-full group-hover:border-primary/40 transition-colors cursor-pointer"
+              className="h-full group-hover:border-oriel-gold/50 transition-colors cursor-pointer"
             />
           </a>
           <a href="#modalities" className="group">
@@ -232,7 +248,7 @@ export function HomePage() {
               label="收录模型"
               value={formatNumber(stats.totalModels, 0)}
               subValue="五大模态 · 12 组数据集"
-              className="h-full group-hover:border-primary/40 transition-colors cursor-pointer"
+              className="h-full group-hover:border-oriel-gold/50 transition-colors cursor-pointer"
             />
           </a>
         </div>
@@ -320,10 +336,10 @@ export function HomePage() {
             <a
               key={card.href}
               href={card.href}
-              className="instrument-panel p-4 hover:border-primary/40 transition-colors group flex flex-col justify-between gap-4 min-h-28"
+              className="instrument-panel p-4 hover:border-oriel-gold/50 transition-colors group flex flex-col justify-between gap-4 min-h-28"
             >
               <div className="flex justify-between items-start gap-2">
-                <h3 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">
+                <h3 className="font-semibold text-sm text-foreground group-hover:text-oriel-gold transition-colors">
                   {card.title}
                 </h3>
                 <span className="font-mono text-xs text-muted-foreground shrink-0">
