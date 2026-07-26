@@ -1,0 +1,136 @@
+---
+/**
+ * code_v3 类目的专用渲染器。
+ *
+ * 这个类目不是打分制——每个项目列的值是 Pass / Skip / Pending /
+ * Failed(n/m) / "轮数/评级" 之一，解析规则见 lib/cat-board-code.ts，
+ * 照抄源站前端的分类逻辑，保证呈现和原站一致。
+ */
+import { headerLabel, isThinkHeader, isThinkOn } from "@/lib/cat-board";
+import { isAuxiliaryColumn, parseCodeV3Cell } from "@/lib/cat-board-code";
+import type { CatBoardCategory } from "@/lib/cat-board";
+import type { Dict, Locale } from "@/i18n";
+
+interface Props {
+  category: CatBoardCategory;
+  locale: Locale;
+  dict: Dict;
+}
+
+const { category, locale, dict } = Astro.props;
+const status = dict.catBoard.codeStatus;
+---
+
+<div class="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+  <table class="w-full min-w-[46rem] border-collapse text-sm">
+    <thead>
+      <tr class="border-b border-rule">
+        {
+          category.headers.map((header, index) => (
+            <th
+              scope="col"
+              class={`py-2 whitespace-nowrap ${
+                index === 0
+                  ? "text-left pr-3"
+                  : isAuxiliaryColumn(header) || isThinkHeader(header)
+                    ? "text-left pl-3"
+                    : "text-center px-2"
+              }`}
+              title={isThinkHeader(header) ? dict.catBoard.thinkHint : undefined}
+            >
+              <span class="eyebrow">{headerLabel(header, locale)}</span>
+            </th>
+          ))
+        }
+      </tr>
+    </thead>
+    <tbody>
+      {
+        category.rows.map((row, rowIndex) => (
+          <tr class="border-b border-rule/50">
+            {row.map((raw, colIndex) => {
+              const header = category.headers[colIndex] ?? "";
+              if (colIndex === 0) {
+                return (
+                  <td
+                    class:list={[
+                      "py-1.5 pr-3 text-left max-w-[13rem] truncate",
+                      rowIndex === 0 ? "text-gold" : "text-fg",
+                    ]}
+                    title={raw}
+                  >
+                    {raw}
+                  </td>
+                );
+              }
+              if (isAuxiliaryColumn(header)) {
+                return (
+                  <td class="py-1.5 pl-3 text-left text-[12px] text-mute whitespace-nowrap">
+                    {raw || <span class="text-mute/50">—</span>}
+                  </td>
+                );
+              }
+              if (isThinkHeader(header)) {
+                const on = isThinkOn(raw);
+                return (
+                  <td
+                    class="data py-1.5 pl-3 text-left text-[12px] whitespace-nowrap"
+                    title={dict.catBoard.thinkHint}
+                  >
+                    <span class={on ? "text-fg" : "text-mute"}>
+                      {on ? dict.catBoard.think.on : dict.catBoard.think.off}
+                    </span>
+                  </td>
+                );
+              }
+
+              const cell = parseCodeV3Cell(raw);
+              return (
+                <td class="data py-1.5 px-2 text-center whitespace-nowrap">
+                  {cell.kind === "pass" && (
+                    <span class="text-rise" title={status.pass}>
+                      {status.pass}
+                    </span>
+                  )}
+                  {cell.kind === "skip" && (
+                    <span class="text-mute/60" title={status.skip}>
+                      {status.skip}
+                    </span>
+                  )}
+                  {cell.kind === "pending" && (
+                    <span
+                      class="rounded-sm border border-dashed border-rule px-1.5 py-0.5 text-[11px] text-mute"
+                      title={status.pending}
+                    >
+                      {status.pending}
+                    </span>
+                  )}
+                  {cell.kind === "failed" && (
+                    <span class="text-fall" title={`${status.failed} ${cell.detail}`}>
+                      {status.failed}
+                      <span class="ml-1 text-[11px] text-mute">({cell.detail})</span>
+                    </span>
+                  )}
+                  {cell.kind === "rank-grade" && (
+                    <span class="text-fg">
+                      {cell.rounds}
+                      <span class="ml-1 rounded-sm border border-rule px-1 py-px text-[11px] text-mute">
+                        {cell.grade}
+                      </span>
+                    </span>
+                  )}
+                  {cell.kind === "text" &&
+                    (cell.value ? (
+                      <span class="text-fg">{cell.value}</span>
+                    ) : (
+                      <span class="text-mute/50">—</span>
+                    ))}
+                </td>
+              );
+            })}
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>

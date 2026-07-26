@@ -1,0 +1,124 @@
+---
+import BaseLayout from "@/layouts/base.astro";
+import SectionHead from "@/components/section-head.astro";
+import RankList from "@/components/rank-list.astro";
+import { MEDIA_BOARDS, MEDIA_TOTAL } from "@/lib/data";
+import { formatInteger, formatNumber } from "@/lib/format";
+import { fill, t, type Locale } from "@/i18n";
+import type { RankRow } from "@/lib/types";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+
+const PREVIEW = 10;
+
+/**
+ * 每个榜单默认只展开前 10，其余收进原生 details——
+ * 11 个榜单全铺开是 600 多行，而用 tab 切换又要为此加载 React。
+ * details 两头都占：默认可扫读，需要时能看全，零 JS。
+ */
+const boards = MEDIA_BOARDS.map((board) => {
+  const isElo = board.unit(dict) === dict.media.elo;
+  const values = board.rows
+    .map((row) => row.value)
+    .filter((value): value is number => value != null);
+
+  // 已发布精度下并列最优的数量。太多就说明这份榜单排不出先后。
+  const best = values.length
+    ? board.lowerIsBetter
+      ? Math.min(...values)
+      : Math.max(...values)
+    : null;
+  const tied = best == null ? 0 : values.filter((value) => value === best).length;
+  const tieMatters = tied >= Math.max(3, values.length * 0.25);
+
+  const digits = isElo ? 0 : 2;
+  const rows: RankRow[] = board.rows.map((row) => ({
+    name: row.name,
+    creator: row.creator,
+    value: row.value,
+    display: formatNumber(row.value, locale, digits),
+    ci: row.ci,
+  }));
+
+  return {
+    ...board,
+    isElo,
+    rows,
+    tied,
+    tieMatters,
+    range:
+      isElo && values.length
+        ? `${board.unit(dict)} ${Math.min(...values)}–${Math.max(...values)}`
+        : undefined,
+  };
+});
+---
+
+<BaseLayout locale={locale} active="media" title={dict.media.title} description={dict.media.lead}>
+  <div class="flex flex-col gap-10">
+    <header class="flex flex-col gap-3">
+      <span class="eyebrow">{dict.nav.media}</span>
+      <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+        <span class="figure text-4xl text-fg">{formatInteger(MEDIA_TOTAL, locale)}</span>
+        <h1 class="text-lg font-semibold tracking-tight text-fg">{dict.media.title}</h1>
+        <span class="data text-[12px] text-mute">{MEDIA_BOARDS.length}</span>
+      </div>
+      <p class="max-w-2xl text-sm leading-relaxed text-mute">{dict.media.lead}</p>
+
+      <nav class="flex flex-wrap gap-x-4 gap-y-1.5 pt-1" aria-label={dict.media.title}>
+        {
+          boards.map((board) => (
+            <a
+              href={`#${board.id}`}
+              class="text-[12px] text-mute transition-colors hover:text-fg"
+            >
+              {board.label(dict)}
+              <span class="data ml-1 text-mute/60">{board.rows.length}</span>
+            </a>
+          ))
+        }
+      </nav>
+    </header>
+
+    {
+      boards.map((board) => (
+        <section id={board.id} class="scroll-mt-6">
+          <SectionHead
+            title={board.label(dict)}
+            note={`${board.unit(dict)} · ${board.rows.length}`}
+          />
+
+          <RankList
+            id={board.id}
+            rows={board.rows}
+            locale={locale}
+            zeroBaseline={!board.isElo}
+            lowerIsBetter={board.lowerIsBetter}
+            rangeLabel={board.range}
+            preview={PREVIEW}
+            expandLabel={fill(dict.media.expand, { count: board.rows.length })}
+            collapseLabel={dict.media.collapse}
+          />
+
+          {/* 数据本身撑不起排名时，明说，而不是照排不误 */}
+          {board.tieMatters && (
+            <p class="mt-2 text-[12px] text-fall">
+              {fill(dict.media.tieCaveat, { count: board.tied })}
+            </p>
+          )}
+          {board.lowerIsBetter && (
+            <p class="mt-1 text-[12px] text-mute">{dict.media.werNote}</p>
+          )}
+          {board.isElo && (
+            <p class="mt-1 text-[12px] text-mute">{dict.media.ciNote}</p>
+          )}
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>

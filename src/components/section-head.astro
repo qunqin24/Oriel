@@ -1,0 +1,31 @@
+---
+/**
+ * 区块标题：一条贯穿到底的发丝线，把版面切成观测记录的条目。
+ * 标题本身刻意小——页面上最大的元素永远是数字，不是文字。
+ */
+interface Props {
+  title: string;
+  /** 右端的次要标注，通常是数量或单位 */
+  note?: string;
+  href?: string;
+  linkLabel?: string;
+  id?: string;
+}
+
+const { title, note, href, linkLabel, id } = Astro.props;
+---
+
+<div class="rule-head mb-4" id={id}>
+  <h2 class="text-sm font-semibold tracking-tight text-fg">{title}</h2>
+  {note && <span class="data shrink-0 text-[12px] text-mute">{note}</span>}
+  {
+    href && (
+      <a
+        href={href}
+        class="data shrink-0 text-[12px] text-mute transition-colors hover:text-fg"
+      >
+        {linkLabel} →
+      </a>
+    )
+  }
+</div>

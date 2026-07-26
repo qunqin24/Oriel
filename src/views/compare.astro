@@ -1,0 +1,42 @@
+---
+import BaseLayout from "@/layouts/base.astro";
+import CompareBoard from "@/components/compare-board";
+import { EXPLORER_ROWS } from "@/lib/explorer";
+import { COMPARE_LIMIT } from "@/lib/compare-store";
+import { href, t, type Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+---
+
+<BaseLayout
+  locale={locale}
+  active="compare"
+  title={dict.compare.title}
+  description={dict.compare.lead}
+  tray
+>
+  <div class="flex flex-col gap-8">
+    <header class="flex flex-col gap-3">
+      <span class="eyebrow">{dict.nav.compare}</span>
+      <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+        <span class="figure text-4xl text-fg">{COMPARE_LIMIT}</span>
+        <h1 class="text-lg font-semibold tracking-tight text-fg">{dict.compare.title}</h1>
+      </div>
+      <p class="max-w-2xl text-sm leading-relaxed text-mute">{dict.compare.lead}</p>
+    </header>
+
+    <CompareBoard
+      rows={EXPLORER_ROWS}
+      locale={locale}
+      labels={{ compare: dict.compare, models: dict.models }}
+      modelBase={href(locale, "/models")}
+      browseHref={href(locale, "/models")}
+      client:load
+    />
+  </div>
+</BaseLayout>

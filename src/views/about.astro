@@ -1,0 +1,102 @@
+---
+import BaseLayout from "@/layouts/base.astro";
+import SectionHead from "@/components/section-head.astro";
+import { MODELS, SNAPSHOT } from "@/lib/data";
+import { SNAPSHOT_DATES } from "@/lib/history";
+import { coverage } from "@/lib/metrics";
+import { formatDate, formatInteger } from "@/lib/format";
+import { fill, t, type Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+
+const n = (value: number) => formatInteger(value, locale);
+
+/**
+ * 正文里的数字全部在这里填，不写死在文案里——
+ * 覆盖率和历史天数每天都在变，写死的那一刻就开始过期。
+ */
+const values = {
+  version: String(SNAPSHOT.indexVersion ?? "—"),
+  total: n(MODELS.length),
+  intelligence: n(coverage(MODELS, "intelligence")),
+  coding: n(coverage(MODELS, "coding")),
+  agentic: n(coverage(MODELS, "agentic")),
+  price: n(coverage(MODELS, "priceOut")),
+  performance: n(coverage(MODELS, "throughput")),
+  days: String(SNAPSHOT_DATES.length),
+  first: SNAPSHOT_DATES[0] ? formatDate(SNAPSHOT_DATES[0], locale) : "—",
+};
+
+const ESCAPE: Record<string, string> = {
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+};
+
+/** 先转义再把 **…** 变成 <strong>。文案是我们自己写的，但转义该做还是要做。 */
+function emphasize(text: string): string {
+  return text
+    .replace(/[&<>]/g, (char) => ESCAPE[char]!)
+    .replace(/\*\*(.+?)\*\*/g, "<strong class='text-fg font-semibold'>$1</strong>");
+}
+
+const sections = [
+  { title: dict.about.sourceTitle, body: dict.about.sourceBody },
+  { title: dict.about.indexTitle, body: dict.about.indexBody },
+  { title: dict.about.valueTitle, body: dict.about.valueBody, formula: dict.about.valueFormula },
+  { title: dict.about.coverageTitle, body: dict.about.coverageBody },
+  { title: dict.about.historyTitle, body: dict.about.historyBody },
+  { title: dict.about.arenaTitle, body: dict.about.arenaBody },
+  { title: dict.about.limitsTitle, body: dict.about.limitsBody },
+].map((section) => ({
+  ...section,
+  html: emphasize(fill(section.body, values)),
+}));
+---
+
+<BaseLayout locale={locale} active="about" title={dict.about.title} description={dict.about.lead}>
+  <div class="flex max-w-2xl flex-col gap-10">
+    <header class="flex flex-col gap-3">
+      <span class="eyebrow">{dict.nav.about}</span>
+      <h1 class="text-lg font-semibold tracking-tight text-fg">{dict.about.title}</h1>
+      <p class="text-sm leading-relaxed text-mute">{dict.about.lead}</p>
+    </header>
+
+    {
+      sections.map((section) => (
+        <section>
+          <SectionHead title={section.title} />
+          {section.formula && (
+            <p class="data mb-3 rounded-sm border border-rule px-3 py-2 text-xs text-fg">
+              {section.formula}
+            </p>
+          )}
+          <p class="text-sm leading-relaxed text-mute" set:html={section.html} />
+        </section>
+      ))
+    }
+
+    <footer class="border-t border-rule pt-6 text-[12px] text-mute">
+      <p>
+        {dict.rail.source}:{" "}
+        <a
+          href="https://artificialanalysis.ai"
+          rel="noreferrer noopener"
+          target="_blank"
+          class="text-fg transition-colors hover:text-gold"
+        >
+          {dict.rail.sourceName}
+        </a>
+      </p>
+      <p class="data mt-1">
+        {dict.rail.snapshot} {formatDate(SNAPSHOT.fetchedAt, locale)} · {dict.rail.indexVersion} v
+        {SNAPSHOT.indexVersion}
+      </p>
+    </footer>
+  </div>
+</BaseLayout>

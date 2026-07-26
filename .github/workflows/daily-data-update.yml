@@ -39,14 +39,28 @@ jobs:
         env:
           AA_API_KEY: ${{ secrets.AA_API_KEY }}
 
+      - name: Refresh 猫榜 data
+        # 第三方社区仓库，不受我们控制、没有 SLA，表结构已经改过好几次。
+        # 拉取失败不该拖垮当天的主数据更新——继续用仓库里已有的旧快照，
+        # 前端本来就把它当可能缺失/过期的数据源处理。
+        continue-on-error: true
+        run: pnpm fetch:cat-board
+
       - name: Validate generated site
+        env:
+          # 设了就产出 sitemap 和绝对 hreflang；没设也能构建。
+          SITE_URL: ${{ vars.SITE_URL }}
         run: |
           pnpm check
           pnpm build
+          # 上游数据形状变了（某个榜单突然全空、字段消失）在这里拦住，
+          # 而不是等一份坏快照被提交进仓库。
+          pnpm verify
 
       - name: Commit refreshed data
         run: |
-          if git diff --quiet -- data; then
+          # data/history/ 是新目录，第一次运行时 git diff 看不到它，用 status 兜底。
+          if git diff --quiet -- data && [ -z "$(git status --porcelain -- data)" ]; then
             echo "No data changes to commit."
             exit 0
           fi

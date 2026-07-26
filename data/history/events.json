@@ -1,0 +1,516 @@
+{
+  "generated_at": "2026-07-26T16:09:14.786Z",
+  "events": [
+    {
+      "date": "2026-07-25",
+      "type": "added",
+      "model": {
+        "id": "8decf027-5114-4721-9ee1-81c0552980a0",
+        "name": "Agnes 2.5 Pro Alpha",
+        "slug": "agnes-2-5-pro-alpha",
+        "creator": "Sapiens AI",
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
+      },
+      "intelligence": 38.8
+    },
+    {
+      "date": "2026-07-25",
+      "type": "added",
+      "model": {
+        "id": "712be54a-77ae-41b2-9a58-21181479d6ee",
+        "name": "Claude Opus 5 (Adaptive Reasoning, High Effort)",
+        "slug": "claude-opus-5-high",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
+      },
+      "intelligence": 58.9
+    },
+    {
+      "date": "2026-07-25",
+      "type": "added",
+      "model": {
+        "id": "20928ba9-3a3f-415f-9519-b84ff64ecf34",
+        "name": "Claude Opus 5 (Adaptive Reasoning, Low Effort)",
+        "slug": "claude-opus-5-low",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
+      },
+      "intelligence": 50.6
+    },
+    {
+      "date": "2026-07-25",
+      "type": "added",
+      "model": {
+        "id": "b8fc61f7-5e9a-49e6-8547-6ac56db24627",
+        "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+        "slug": "claude-opus-5",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
+      },
+      "intelligence": 60.7
+    },
+    {
+      "date": "2026-07-25",
+      "type": "added",
+      "model": {
+        "id": "ff51be8f-e362-4a7e-9043-687ba15de207",
+        "name": "Claude Opus 5 (Adaptive Reasoning, Medium Effort)",
+        "slug": "claude-opus-5-medium",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
+      },
+      "intelligence": 56.3
+    },
+    {
+      "date": "2026-07-25",
+      "type": "added",
+      "model": {
+        "id": "1305c921-7aaa-4d6d-99b5-99b3acf15e19",
+        "name": "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)",
+        "slug": "claude-opus-5-xhigh",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
+      },
+      "intelligence": 60.1
+    },
+    {
+      "date": "2026-07-25",
+      "type": "price",
+      "model": {
+        "id": "a797eaf3-6d75-4f29-86a8-e1243ce52d43",
+        "name": "Gemma 3n E4B Instruct",
+        "slug": "gemma-3n-e4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "priceIn",
+      "from": 0.02,
+      "to": 0.06
+    },
+    {
+      "date": "2026-07-25",
+      "type": "price",
+      "model": {
+        "id": "a797eaf3-6d75-4f29-86a8-e1243ce52d43",
+        "name": "Gemma 3n E4B Instruct",
+        "slug": "gemma-3n-e4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "priceOut",
+      "from": 0.04,
+      "to": 0.12
+    },
+    {
+      "date": "2026-07-25",
+      "type": "price",
+      "model": {
+        "id": "92f245a7-43b4-4ffd-8bfb-866746bf824d",
+        "name": "GLM-5.1 (Non-reasoning)",
+        "slug": "glm-5-1-non-reasoning",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "priceIn",
+      "from": 1.4,
+      "to": 1.38
+    },
+    {
+      "date": "2026-07-25",
+      "type": "price",
+      "model": {
+        "id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
+        "name": "GLM-5.1 (Reasoning)",
+        "slug": "glm-5-1",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "priceIn",
+      "from": 1.4,
+      "to": 1.39
+    },
+    {
+      "date": "2026-07-25",
+      "type": "price",
+      "model": {
+        "id": "e8aa417f-18fe-46b0-ba62-ef99785a9585",
+        "name": "GLM-5.2 (Non-reasoning)",
+        "slug": "glm-5-2-non-reasoning",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "priceIn",
+      "from": 1.4,
+      "to": 1.35
+    },
+    {
+      "date": "2026-07-25",
+      "type": "price",
+      "model": {
+        "id": "e8aa417f-18fe-46b0-ba62-ef99785a9585",
+        "name": "GLM-5.2 (Non-reasoning)",
+        "slug": "glm-5-2-non-reasoning",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "priceOut",
+      "from": 4.4,
+      "to": 4.25
+    },
+    {
+      "date": "2026-07-25",
+      "type": "price",
+      "model": {
+        "id": "5ea94a4a-55ac-4ea1-8898-2b3971e94af6",
+        "name": "Grok 4",
+        "slug": "grok-4",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "priceIn",
+      "from": 5.5,
+      "to": 3
+    },
+    {
+      "date": "2026-07-25",
+      "type": "price",
+      "model": {
+        "id": "5ea94a4a-55ac-4ea1-8898-2b3971e94af6",
+        "name": "Grok 4",
+        "slug": "grok-4",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "priceOut",
+      "from": 27.5,
+      "to": 15
+    },
+    {
+      "date": "2026-07-25",
+      "type": "price",
+      "model": {
+        "id": "922c69c7-9037-43c6-8bcf-a1c555e7f3eb",
+        "name": "Llama 4 Maverick",
+        "slug": "llama-4-maverick",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "priceIn",
+      "from": 0.31,
+      "to": 0.27
+    },
+    {
+      "date": "2026-07-25",
+      "type": "price",
+      "model": {
+        "id": "4764d31d-f4af-4297-8bd1-e993f26bcb64",
+        "name": "MiMo-V2.5-Pro (Non-reasoning)",
+        "slug": "mimo-v2-5-pro-non-reasoning",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "priceIn",
+      "from": 0.66,
+      "to": 0.43
+    },
+    {
+      "date": "2026-07-25",
+      "type": "price",
+      "model": {
+        "id": "4764d31d-f4af-4297-8bd1-e993f26bcb64",
+        "name": "MiMo-V2.5-Pro (Non-reasoning)",
+        "slug": "mimo-v2-5-pro-non-reasoning",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "priceOut",
+      "from": 1.72,
+      "to": 0.87
+    },
+    {
+      "date": "2026-07-25",
+      "type": "price",
+      "model": {
+        "id": "2d28a13a-096e-475a-beb8-26bbd1c7d51c",
+        "name": "Qwen3.5 9B (Reasoning)",
+        "slug": "qwen3-5-9b",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "priceIn",
+      "from": 0.1,
+      "to": 0.14
+    },
+    {
+      "date": "2026-07-25",
+      "type": "price",
+      "model": {
+        "id": "2d28a13a-096e-475a-beb8-26bbd1c7d51c",
+        "name": "Qwen3.5 9B (Reasoning)",
+        "slug": "qwen3-5-9b",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "priceOut",
+      "from": 0.15,
+      "to": 0.2
+    },
+    {
+      "date": "2026-07-25",
+      "type": "score",
+      "model": {
+        "id": "508943e4-e9e1-4d10-9c0e-a7650e9d7315",
+        "name": "EXAONE 4.5 33B",
+        "slug": "exaone-4-5-33b",
+        "creator": "LG AI Research",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "intelligence",
+      "from": 23,
+      "to": 20.2
+    },
+    {
+      "date": "2026-07-25",
+      "type": "score",
+      "model": {
+        "id": "508943e4-e9e1-4d10-9c0e-a7650e9d7315",
+        "name": "EXAONE 4.5 33B",
+        "slug": "exaone-4-5-33b",
+        "creator": "LG AI Research",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "coding",
+      "from": null,
+      "to": 23.6
+    },
+    {
+      "date": "2026-07-25",
+      "type": "score",
+      "model": {
+        "id": "508943e4-e9e1-4d10-9c0e-a7650e9d7315",
+        "name": "EXAONE 4.5 33B",
+        "slug": "exaone-4-5-33b",
+        "creator": "LG AI Research",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 9.7
+    },
+    {
+      "date": "2026-07-25",
+      "type": "score",
+      "model": {
+        "id": "feb02d3b-ff8d-4ed4-b165-13f8d4a7192c",
+        "name": "Gemma 4 12B (Reasoning)",
+        "slug": "gemma-4-12b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "intelligence",
+      "from": 22,
+      "to": 21.8
+    },
+    {
+      "date": "2026-07-25",
+      "type": "score",
+      "model": {
+        "id": "feb02d3b-ff8d-4ed4-b165-13f8d4a7192c",
+        "name": "Gemma 4 12B (Reasoning)",
+        "slug": "gemma-4-12b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "coding",
+      "from": null,
+      "to": 31
+    },
+    {
+      "date": "2026-07-25",
+      "type": "score",
+      "model": {
+        "id": "b07aef0a-b192-46a1-b1c9-40b06d1b9061",
+        "name": "Gemma 4 E2B (Reasoning)",
+        "slug": "gemma-4-e2b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "intelligence",
+      "from": 9.3,
+      "to": 9.5
+    },
+    {
+      "date": "2026-07-25",
+      "type": "score",
+      "model": {
+        "id": "d80eb0f1-f62e-4d31-99d2-7a925eb126b0",
+        "name": "Gemma 4 E4B (Reasoning)",
+        "slug": "gemma-4-e4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "intelligence",
+      "from": 12.2,
+      "to": 11.9
+    },
+    {
+      "date": "2026-07-25",
+      "type": "score",
+      "model": {
+        "id": "66f4ce73-9a9b-4b49-9c6e-bedb9bfdc720",
+        "name": "Ministral 3 3B",
+        "slug": "ministral-3-3b",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "intelligence",
+      "from": 6.8,
+      "to": 6.5
+    },
+    {
+      "date": "2026-07-25",
+      "type": "score",
+      "model": {
+        "id": "5d4acc80-7a88-4e84-bfe7-99071b84e6a4",
+        "name": "Qwen3.5 2B (Reasoning)",
+        "slug": "qwen3-5-2b",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-25"
+      },
+      "metric": "intelligence",
+      "from": 7.6,
+      "to": 6.9
+    },
+    {
+      "date": "2026-07-24",
+      "type": "added",
+      "model": {
+        "id": "2ffa7571-fa78-453a-b589-9aa3fac702d2",
+        "name": "G9v3-3B",
+        "slug": "g9v3-3b",
+        "creator": "AI9Stars",
+        "first_seen": "2026-07-24",
+        "last_seen": "2026-07-24"
+      },
+      "intelligence": 16.1
+    },
+    {
+      "date": "2026-07-24",
+      "type": "score",
+      "model": {
+        "id": "715e05fb-1313-441c-bf1d-8651c752a841",
+        "name": "K-EXAONE (Reasoning)",
+        "slug": "k-exaone",
+        "creator": "LG AI Research",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-24"
+      },
+      "metric": "intelligence",
+      "from": 24.7,
+      "to": 22.1
+    },
+    {
+      "date": "2026-07-24",
+      "type": "score",
+      "model": {
+        "id": "715e05fb-1313-441c-bf1d-8651c752a841",
+        "name": "K-EXAONE (Reasoning)",
+        "slug": "k-exaone",
+        "creator": "LG AI Research",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-24"
+      },
+      "metric": "coding",
+      "from": null,
+      "to": 32.1
+    },
+    {
+      "date": "2026-07-24",
+      "type": "score",
+      "model": {
+        "id": "715e05fb-1313-441c-bf1d-8651c752a841",
+        "name": "K-EXAONE (Reasoning)",
+        "slug": "k-exaone",
+        "creator": "LG AI Research",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-24"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 8
+    },
+    {
+      "date": "2026-07-24",
+      "type": "score",
+      "model": {
+        "id": "9815da7d-70f4-44d6-b539-9ffef0faa152",
+        "name": "Nemotron Cascade 2 30B A3B",
+        "slug": "nemotron-cascade-2-30b-a3b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-24"
+      },
+      "metric": "intelligence",
+      "from": 21.3,
+      "to": 17.6
+    },
+    {
+      "date": "2026-07-24",
+      "type": "score",
+      "model": {
+        "id": "9815da7d-70f4-44d6-b539-9ffef0faa152",
+        "name": "Nemotron Cascade 2 30B A3B",
+        "slug": "nemotron-cascade-2-30b-a3b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-24"
+      },
+      "metric": "coding",
+      "from": null,
+      "to": 25.3
+    },
+    {
+      "date": "2026-07-24",
+      "type": "score",
+      "model": {
+        "id": "9815da7d-70f4-44d6-b539-9ffef0faa152",
+        "name": "Nemotron Cascade 2 30B A3B",
+        "slug": "nemotron-cascade-2-30b-a3b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-24"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 3.7
+    }
+  ]
+}

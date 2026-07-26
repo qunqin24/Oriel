@@ -1,0 +1,271 @@
+---
+/**
+ * 能力前沿图——本站的签名元素。
+ *
+ * 573 个「有发布日期且有智能指数」的模型各是一个点，按发布时间铺开。
+ * 金色阶梯是当时的能力上界：只会被抬高，不会因为某个弱模型发布而回落。
+ *
+ * 全部在构建期算好，输出为内联 SVG。没有 JS，也没有客户端图表库——
+ * 一个数据站最该证明的事，是它的数据在关掉 JS 之后依然读得到。
+ */
+import { frontier } from "@/lib/metrics";
+import { MODELS, SNAPSHOT } from "@/lib/data";
+import { formatDate, formatNumber } from "@/lib/format";
+import { t, type Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+
+const points = frontier(MODELS);
+const leaders = points.filter((point) => point.isFrontier);
+
+const W = 900;
+const H = 340;
+// 右侧留白要装得下当前领先者的标注圆圈，否则最新的那个点会被画框切掉。
+const PAD = { top: 16, right: 30, bottom: 24, left: 32 };
+const plotW = W - PAD.left - PAD.right;
+const plotH = H - PAD.top - PAD.bottom;
+
+const hasData = points.length > 0 && leaders.length > 0;
+
+// 右边界取到快照当天，让图的右缘就是「现在」。
+const tMin = hasData ? points[0]!.time : 0;
+const tMax = hasData
+  ? Math.max(points.at(-1)!.time, Date.parse(SNAPSHOT.fetchedAt))
+  : 1;
+const tSpan = Math.max(tMax - tMin, 1);
+
+const peak = hasData ? Math.max(...points.map((point) => point.intelligence)) : 0;
+// 顶部只留一点余量。取整到 10 会在峰值 60.7 时把上界推到 70，
+// 白白空出七分之一的画面。
+const yMax = Math.max(10, Math.ceil((peak * 1.03) / 5) * 5);
+
+const x = (time: number) => PAD.left + ((time - tMin) / tSpan) * plotW;
+const y = (value: number) => PAD.top + (1 - value / yMax) * plotH;
+const r2 = (n: number) => Math.round(n * 10) / 10;
+
+// 年份网格线：落在数据区间内的每个 1 月 1 日。
+const firstYear = new Date(tMin).getUTCFullYear();
+const lastYear = new Date(tMax).getUTCFullYear();
+const yearTicks: Array<{ year: number; x: number }> = [];
+for (let year = firstYear + 1; year <= lastYear; year += 1) {
+  const time = Date.UTC(year, 0, 1);
+  if (time >= tMin && time <= tMax) yearTicks.push({ year, x: r2(x(time)) });
+}
+
+// 刻度用 10/20/25 这类整步长，而不是把上界二等分——后者会得到 32.5 这种读数。
+const tickStep = [5, 10, 20, 25, 50, 100].find((step) => yMax / step <= 4) ?? 100;
+const valueTicks: Array<{ value: number; y: number }> = [];
+for (let value = 0; value <= yMax; value += tickStep) {
+  valueTicks.push({ value, y: r2(y(value)) });
+}
+
+/**
+ * 阶梯路径：上界保持到下一个刷新点才跳升。
+ * 直接连线会画出一条「能力在两次发布之间平滑增长」的假象。
+ */
+const stair = (() => {
+  if (!hasData) return "";
+  const segments: string[] = [];
+  const first = leaders[0]!;
+  segments.push(`M${r2(x(first.time))},${r2(y(first.intelligence))}`);
+  for (const leader of leaders.slice(1)) {
+    segments.push(`H${r2(x(leader.time))}`);
+    segments.push(`V${r2(y(leader.intelligence))}`);
+  }
+  segments.push(`H${r2(x(tMax))}`);
+  return segments.join(" ");
+})();
+
+const current = leaders.at(-1);
+const others = points.filter((point) => !point.isFrontier);
+
+// 原生 tooltip 会原样显示节点内的空白，所以在这里拼成一整行，
+// 不要在模板里用多行 JSX 表达式拼。
+const leaderTips = new Map(
+  leaders.map((leader) => [
+    leader.slug,
+    `${leader.name} · ${leader.creator} · ${formatDate(leader.date, locale)} · ${formatNumber(leader.intelligence, locale, 1)}`,
+  ])
+);
+
+const title = `${dict.home.frontierTitle} — ${dict.home.frontierAxis}`;
+const desc = hasData
+  ? `${points.length} ${dict.common.models}, ${formatDate(points[0]!.date, locale)} – ${formatDate(SNAPSHOT.fetchedAt, locale)}. ${dict.home.frontierNote}`
+  : dict.home.frontierEmpty;
+---
+
+{
+  hasData ? (
+    <figure class="flex flex-col gap-3">
+      {/*
+        移动端专属摘要：SVG 用 viewBox 整体缩放，文字跟着一起缩小——容器窄到
+        手机宽度时，下面这张图的坐标轴和"当前最高分"标注会缩到 4-6px，
+        读不出来。CSS 没有办法让 SVG 里的文字不跟着缩（没有等效于
+        vector-effect="non-scaling-stroke" 的文字版本），只能给 SVG 设最小宽度
+        再套一个横向滚动容器——但那样这张图签名性的数字（当前最高分）就要
+        靠用户自己滑到最右边才看得到。所以移动端单独放一条这个摘要，
+        不依赖横向滚动就能看到最新数字。
+      */}
+      {current && (
+        <div class="flex items-baseline gap-3 sm:hidden">
+          <span class="figure text-3xl text-fg">
+            {formatNumber(current.intelligence, locale, 1)}
+          </span>
+          <span class="text-xs text-mute">
+            {current.creator} · {formatDate(current.date, locale)}
+          </span>
+        </div>
+      )}
+
+      <div class="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+        <svg
+          viewBox={`0 0 ${W} ${H}`}
+          class="h-auto w-full min-w-[640px]"
+          role="img"
+          aria-labelledby="frontier-title frontier-desc"
+          preserveAspectRatio="xMidYMid meet"
+        >
+        <title id="frontier-title">{title}</title>
+        <desc id="frontier-desc">{desc}</desc>
+
+        {/* 网格 */}
+        <g stroke="var(--plot-grid)" stroke-width="1">
+          {valueTicks.map((tick) => (
+            <line x1={PAD.left} y1={tick.y} x2={W - PAD.right} y2={tick.y} />
+          ))}
+          {yearTicks.map((tick) => (
+            <line x1={tick.x} y1={PAD.top} x2={tick.x} y2={H - PAD.bottom} />
+          ))}
+        </g>
+
+        {/* 刻度 */}
+        <g class="data" fill="var(--mute)" font-size="11">
+          {valueTicks.map((tick) => (
+            <text x={PAD.left - 7} y={tick.y + 3} text-anchor="end">
+              {tick.value}
+            </text>
+          ))}
+          {yearTicks.map((tick) => (
+            <text x={tick.x} y={H - PAD.bottom + 14} text-anchor="middle">
+              {tick.year}
+            </text>
+          ))}
+        </g>
+
+        {/* 每个模型一个点。重叠处自然变亮，密度即分布。 */}
+        <g fill="var(--plot-dot)" fill-opacity="0.7">
+          {others.map((point) => (
+            <circle cx={r2(x(point.time))} cy={r2(y(point.intelligence))} r="2.2" />
+          ))}
+        </g>
+
+        {/* 能力上界 */}
+        <path
+          d={stair}
+          fill="none"
+          stroke="var(--gold)"
+          stroke-width="1.5"
+          stroke-linejoin="round"
+          vector-effect="non-scaling-stroke"
+        />
+
+        {/*
+          刷新过上界的模型。描一圈底色，让它们从阶梯线上浮出来——
+          同色同宽的话，27 个点会完全溶进那条线里。
+          原生 title 让它们在没有 JS 时也能自报家门。
+        */}
+        <g fill="var(--gold)" stroke="var(--ground)" stroke-width="1.5">
+          {leaders.map((leader) => (
+            <circle cx={r2(x(leader.time))} cy={r2(y(leader.intelligence))} r="3.2">
+              <title>{leaderTips.get(leader.slug)}</title>
+            </circle>
+          ))}
+        </g>
+
+        {/* 当前领先者：图上唯一的文字标注 */}
+        {current && (
+          <g>
+            <circle
+              cx={r2(x(current.time))}
+              cy={r2(y(current.intelligence))}
+              r="5.5"
+              fill="none"
+              stroke="var(--gold)"
+              stroke-width="1"
+              opacity="0.5"
+            />
+            <text
+              class="figure"
+              x={r2(x(current.time)) - 10}
+              y={r2(y(current.intelligence)) - 12}
+              text-anchor="end"
+              fill="var(--fg)"
+              font-size="15"
+            >
+              {formatNumber(current.intelligence, locale, 1)}
+            </text>
+            <text
+              class="data"
+              x={r2(x(current.time)) - 10}
+              y={r2(y(current.intelligence)) + 1}
+              text-anchor="end"
+              fill="var(--mute)"
+              font-size="11"
+            >
+              {current.creator}
+            </text>
+          </g>
+        )}
+        </svg>
+      </div>
+
+      <figcaption class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 text-[12px] text-mute">
+        <span class="flex items-center gap-2">
+          <svg width="16" height="7" aria-hidden="true">
+            <path d="M0 5 H7 V2 H16" stroke="var(--gold)" stroke-width="1.5" fill="none" />
+          </svg>
+          {dict.home.frontierNote}
+        </span>
+        <span class="data">{dict.home.frontierAxis}</span>
+      </figcaption>
+
+      {/* 无障碍与零 JS 的兜底：前沿的完整数据 */}
+      <details class="text-[12px] text-mute">
+        <summary class="cursor-pointer transition-colors hover:text-fg">
+          {dict.common.dataTable} · {leaders.length}
+        </summary>
+        <table class="mt-3 w-full text-left">
+          <thead class="text-mute">
+            <tr class="border-b border-rule">
+              <th scope="col" class="py-1.5 pr-3 font-normal">{dict.models.cols.release}</th>
+              <th scope="col" class="py-1.5 pr-3 font-normal">{dict.models.cols.name}</th>
+              <th scope="col" class="py-1.5 pr-3 font-normal">{dict.models.cols.creator}</th>
+              <th scope="col" class="py-1.5 text-right font-normal">
+                {dict.models.cols.intelligence}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {leaders.map((leader) => (
+              <tr class="border-b border-rule/50">
+                <td class="data py-1.5 pr-3 whitespace-nowrap">{leader.date}</td>
+                <td class="py-1.5 pr-3 text-fg">{leader.name}</td>
+                <td class="py-1.5 pr-3">{leader.creator}</td>
+                <td class="data py-1.5 text-right text-fg">
+                  {formatNumber(leader.intelligence, locale, 1)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </details>
+    </figure>
+  ) : (
+    <p class="text-sm text-mute">{dict.home.frontierEmpty}</p>
+  )
+}

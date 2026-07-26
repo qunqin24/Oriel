@@ -1,0 +1,21 @@
+---
+import type { GetStaticPaths } from "astro";
+import ModelDetail from "@/views/model-detail.astro";
+import { MODELS } from "@/lib/data";
+import type { LanguageModel } from "@/lib/types";
+
+// slug 已验证 586 个全部唯一，可以直接做路由——旧站用的是 uuid。
+export const getStaticPaths = (() =>
+  MODELS.map((model) => ({
+    params: { slug: model.slug },
+    props: { model },
+  }))) satisfies GetStaticPaths;
+
+interface Props {
+  model: LanguageModel;
+}
+
+const { model } = Astro.props;
+---
+
+<ModelDetail locale="en" model={model} />

@@ -1,0 +1,128 @@
+---
+/**
+ * 单个指标的历史轨迹。
+ *
+ * 目前只有 4 天历史，绝大多数模型的线是平的。平线不算错，但等于噪音——
+ * 所以值没变过时直接写「N 天记录内无变化」，比画一条水平线信息量更大。
+ * 版本换代造成的断段由 metricSeries 切好，这里各段各画，中间自然断开。
+ */
+import { MIN_TREND_POINTS, metricSeries, SNAPSHOT_DATES } from "@/lib/history";
+import { fill, t, type Locale } from "@/i18n";
+import type { MetricKey } from "@/lib/history-schema";
+
+interface Props {
+  modelId: string;
+  metric: MetricKey;
+  locale: Locale;
+  label: string;
+  /** 数值越低越好时，下降画成上涨色 */
+  lowerIsBetter?: boolean;
+  format: (value: number) => string;
+}
+
+const { modelId, metric, locale, label, lowerIsBetter = false, format } =
+  Astro.props;
+const dict = t(locale);
+
+const segments = metricSeries(modelId, metric);
+const flat = segments.flat();
+const days = SNAPSHOT_DATES.length;
+
+const values = flat.map((point) => point.value);
+const changed = values.length > 1 && new Set(values).size > 1;
+const drawable = changed && segments.some((s) => s.length >= 2);
+
+const W = 168;
+const H = 34;
+const PAD = 3;
+
+const min = values.length ? Math.min(...values) : 0;
+const max = values.length ? Math.max(...values) : 1;
+const span = max - min || 1;
+
+const dateIndex = new Map(SNAPSHOT_DATES.map((date, index) => [date, index]));
+const lastIndex = Math.max(SNAPSHOT_DATES.length - 1, 1);
+
+const px = (date: string) =>
+  PAD + ((dateIndex.get(date) ?? 0) / lastIndex) * (W - PAD * 2);
+const py = (value: number) =>
+  PAD + (1 - (value - min) / span) * (H - PAD * 2);
+
+const paths = drawable
+  ? segments
+      .filter((segment) => segment.length >= 2)
+      .map((segment) =>
+        segment
+          .map(
+            (point, index) =>
+              `${index === 0 ? "M" : "L"}${px(point.date).toFixed(1)},${py(point.value).toFixed(1)}`
+          )
+          .join(" ")
+      )
+  : [];
+
+const first = flat[0]?.value ?? null;
+const last = flat.at(-1)?.value ?? null;
+const improved =
+  first != null && last != null && first !== last
+    ? lowerIsBetter
+      ? last < first
+      : last > first
+    : null;
+---
+
+<div class="flex flex-col gap-1.5">
+  <span class="eyebrow">{label}</span>
+
+  {
+    days < MIN_TREND_POINTS ? (
+      <p class="text-[12px] text-mute">{dict.model.trajectoryThin}</p>
+    ) : !changed ? (
+      <p class="text-[12px] text-mute">
+        {fill(dict.model.trajectoryFlat, { days })}
+      </p>
+    ) : (
+      <div class="flex items-center gap-3">
+        <svg
+          viewBox={`0 0 ${W} ${H}`}
+          width={W}
+          height={H}
+          fill="none"
+          role="img"
+          aria-label={`${label}: ${format(first ?? 0)} → ${format(last ?? 0)}`}
+          class="shrink-0"
+        >
+          {paths.map((d) => (
+            <path
+              d={d}
+              stroke={
+                improved === null
+                  ? "var(--mute)"
+                  : improved
+                    ? "var(--rise)"
+                    : "var(--fall)"
+              }
+              stroke-width="1.25"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              vector-effect="non-scaling-stroke"
+            />
+          ))}
+          {flat.length > 0 && (
+            <circle
+              cx={px(flat.at(-1)!.date).toFixed(1)}
+              cy={py(flat.at(-1)!.value).toFixed(1)}
+              r="2"
+              fill="var(--gold)"
+            />
+          )}
+        </svg>
+        <span class="data text-xs">
+          <span class="text-mute">{format(first ?? 0)}</span>
+          <span class="mx-1 text-mute">→</span>
+          <span class="text-fg">{format(last ?? 0)}</span>
+        </span>
+      </div>
+    )
+  }
+</div>

@@ -1,0 +1,175 @@
+---
+/**
+ * 带条形的排名列表。首页的智能指数榜和 /media 的 11 个竞技场共用。
+ *
+ * 关于基线：智能指数有绝对零点，条形从 0 起；Elo 没有，从 0 画会让
+ * 1180 和 1337 看起来几乎一样长。所以 Elo 榜用数据区间做基线，
+ * 并把区间明写在标尾——不标出来的非零基线就是在骗人。
+ *
+ * 关于折叠：所有行都在同一个 <ol> 里，超出预览数的行打 data-extra，
+ * 由一个 checkbox + CSS 控制显隐。切成两段各渲一次会让后半段
+ * 从 1 重新编号、条形按自己的区间重新缩放——两个都是静默的错。
+ */
+import { formatNumber } from "@/lib/format";
+import type { Locale } from "@/i18n";
+import type { RankRow } from "@/lib/types";
+
+interface Props {
+  rows: RankRow[];
+  locale: Locale;
+  /** 指数类从 0 起；Elo 这种没有绝对零点的用数据区间 */
+  zeroBaseline?: boolean;
+  /** 数值越低越好（比如词错误率） */
+  lowerIsBetter?: boolean;
+  rangeLabel?: string;
+  /** 只直接展示前 N 行，其余折叠 */
+  preview?: number;
+  expandLabel?: string;
+  collapseLabel?: string;
+  /** checkbox 与 label 关联用，同一页里必须唯一 */
+  id?: string;
+}
+
+const {
+  rows,
+  locale,
+  zeroBaseline = true,
+  lowerIsBetter = false,
+  rangeLabel,
+  preview,
+  expandLabel,
+  collapseLabel,
+  id,
+} = Astro.props;
+
+const values = rows
+  .map((row) => row.value)
+  .filter((value): value is number => value != null && Number.isFinite(value));
+
+const hi = values.length ? Math.max(...values) : 1;
+const lo = values.length ? Math.min(...values) : 0;
+
+// 非零基线时留 8% 余量，让最低的一条也还看得见。
+const base = zeroBaseline ? 0 : lo - (hi - lo) * 0.08;
+const span = Math.max(hi - base, 1e-9);
+
+const ratio = (value: number | null) => {
+  if (value == null || !Number.isFinite(value)) return 0;
+  const raw = (value - base) / span;
+  return Math.max(0.015, Math.min(1, lowerIsBetter ? 1 - raw + 0.015 : raw));
+};
+
+const pct = (value: number) => `${(value * 100).toFixed(2)}%`;
+
+const cut = preview != null && rows.length > preview ? preview : rows.length;
+const collapsible = cut < rows.length;
+const toggleId = id ? `expand-${id}` : undefined;
+---
+
+<div class="rank-list">
+  {
+    collapsible && (
+      <input type="checkbox" id={toggleId} class="peer sr-only" />
+    )
+  }
+
+  <ol class="flex flex-col">
+    {
+      rows.map((row, index) => (
+        <li
+          class="flex items-center gap-3 border-b border-rule/60 py-1.5 text-sm"
+          data-extra={index >= cut ? "" : undefined}
+        >
+          <span
+            class:list={[
+              "data w-7 shrink-0 text-right text-[12px]",
+              index === 0 ? "text-gold" : "text-mute",
+            ]}
+          >
+            {index + 1}
+          </span>
+
+          <span class="min-w-0 flex-[2] truncate" title={row.name}>
+            {row.href ? (
+              <a href={row.href} class="text-fg transition-colors hover:text-gold">
+                {row.name}
+              </a>
+            ) : (
+              <span class="text-fg">{row.name}</span>
+            )}
+          </span>
+
+          <span class="hidden min-w-0 flex-1 truncate text-[12px] text-mute sm:block">
+            {row.creator}
+          </span>
+
+          {/* 条形 + 95% 误差须。误差须重叠说明两个名次的差异没有统计意义。 */}
+          <span class="relative hidden h-3 flex-[2] sm:block" aria-hidden="true">
+            <span
+              class:list={[
+                "absolute inset-y-[5px] left-0 rounded-sm",
+                index === 0 ? "bg-gold" : "bg-[var(--plot-dot)]",
+              ]}
+              style={`width:${pct(ratio(row.value))}`}
+            />
+            {row.ci != null && row.value != null && (
+              <span
+                class="absolute inset-y-[6.5px] border-x border-mute/70"
+                style={`left:${pct(ratio(row.value - row.ci))};width:${pct(
+                  ratio(row.value + row.ci) - ratio(row.value - row.ci)
+                )}`}
+              />
+            )}
+          </span>
+
+          <span class="data w-16 shrink-0 text-right text-fg">
+            {row.display}
+            {row.ci != null && (
+              <span class="ml-1 text-[11px] text-mute">
+                ±{formatNumber(row.ci, locale, 0)}
+              </span>
+            )}
+          </span>
+        </li>
+      ))
+    }
+  </ol>
+
+  {
+    collapsible && (
+      <label
+        for={toggleId}
+        class="data inline-block cursor-pointer py-1.5 text-[12px] text-mute transition-colors hover:text-fg peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-gold"
+      >
+        <span data-expand>{expandLabel}</span>
+        <span data-collapse>{collapseLabel}</span>
+      </label>
+    )
+  }
+
+  {rangeLabel && <p class="data mt-2 text-right text-[11px] text-mute">{rangeLabel}</p>}
+</div>
+
+<style>
+  /* 折叠靠 checkbox 的状态驱动，不需要 JS */
+  .rank-list :global(li[data-extra]) {
+    display: none;
+  }
+
+  .rank-list:has(> input:checked) :global(li[data-extra]) {
+    display: flex;
+  }
+
+  /* 展开后按钮改说「收起」。按钮本身必须留着，否则展开就收不回去了。 */
+  .rank-list label [data-collapse] {
+    display: none;
+  }
+
+  .rank-list:has(> input:checked) label [data-expand] {
+    display: none;
+  }
+
+  .rank-list:has(> input:checked) label [data-collapse] {
+    display: inline;
+  }
+</style>

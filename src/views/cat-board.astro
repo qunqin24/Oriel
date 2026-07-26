@@ -1,0 +1,179 @@
+---
+/**
+ * 猫榜——llm2014/llm_benchmark 的民间自费评测。
+ *
+ * 与站内其余页面的关键区别：这不是 Oriel 的数据，是第三方社区评测，
+ * 没有 LICENSE、由个人独立维护、题库不公开且每月滚动更新。所以：
+ *   - 只展示最新一期，不追历史趋势（三个类目的表结构本身在源仓库
+ *     历史上就变过好几次，跨期比较没有意义）
+ *   - 模型名不链接到 /models/[slug]（两套命名体系互不相干）
+ *   - 数据缺失时优雅降级，而不是让构建失败（见 lib/cat-board.ts）
+ */
+import BaseLayout from "@/layouts/base.astro";
+import CatBoardTable from "@/components/cat-board-table.astro";
+import CatBoardCodeTable from "@/components/cat-board-code-table.astro";
+import { CAT_BOARD } from "@/lib/cat-board";
+import { SNAPSHOT } from "@/lib/data";
+import { t, type Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+
+const logic = CAT_BOARD?.categories.logic ?? null;
+const code = CAT_BOARD?.categories.code ?? null;
+const vision = CAT_BOARD?.categories.vision ?? null;
+
+/** "2026-07" 与快照月份的差距，超过 2 个月就在页面上标出来。 */
+function monthsBehind(reportDate: string): number {
+  const [ry, rm] = reportDate.split("-").map(Number);
+  const now = new Date(SNAPSHOT.fetchedAt);
+  return (now.getUTCFullYear() - ry!) * 12 + (now.getUTCMonth() + 1 - rm!);
+}
+
+const tabs = [
+  { id: "logic" as const, label: dict.catBoard.tabs.logic, data: logic },
+  { id: "code" as const, label: dict.catBoard.tabs.code, data: code },
+  { id: "vision" as const, label: dict.catBoard.tabs.vision, data: vision },
+];
+const firstAvailable = tabs.find((tab) => tab.data)?.id ?? "logic";
+const hasAnyCategory = tabs.some((tab) => tab.data);
+---
+
+<BaseLayout
+  locale={locale}
+  active="catBoard"
+  title={dict.catBoard.title}
+  description={dict.catBoard.lead}
+>
+  <div class="flex flex-col gap-6">
+    <header class="flex flex-col gap-3">
+      <span class="eyebrow">{dict.nav.catBoard}</span>
+      <h1 class="text-lg font-semibold tracking-tight text-fg">{dict.catBoard.title}</h1>
+      <p class="max-w-2xl text-sm leading-relaxed text-mute">{dict.catBoard.lead}</p>
+      <p class="text-[12px] text-mute">
+        {dict.catBoard.sourceNote}:{" "}
+        <a
+          href="https://github.com/llm2014/llm_benchmark"
+          rel="noreferrer noopener"
+          target="_blank"
+          class="text-fg transition-colors hover:text-gold"
+        >
+          {dict.catBoard.sourceLinkLabel}
+        </a>
+        {" · "}
+        <a
+          href="https://llm2014.github.io/llm_benchmark/"
+          rel="noreferrer noopener"
+          target="_blank"
+          class="text-fg transition-colors hover:text-gold"
+        >
+          {dict.catBoard.siteLinkLabel}
+        </a>
+      </p>
+    </header>
+
+    {
+      !hasAnyCategory ? (
+        <div class="panel px-5 py-10 text-center">
+          <p class="text-sm text-fg">{dict.catBoard.unavailable}</p>
+          <p class="mt-1 text-xs text-mute">{dict.catBoard.unavailableHint}</p>
+        </div>
+      ) : (
+        <div class="cat-board-tabs">
+          {tabs.map((tab) => (
+            <input
+              type="radio"
+              name="cat-board-tab"
+              id={`cat-tab-${tab.id}`}
+              class="sr-only"
+              checked={tab.id === firstAvailable}
+              disabled={!tab.data}
+            />
+          ))}
+
+          <div class="mb-4 flex gap-1" role="radiogroup" aria-label={dict.catBoard.title}>
+            {tabs.map((tab) => (
+              <label
+                for={`cat-tab-${tab.id}`}
+                data-tab={tab.id}
+                class:list={[
+                  "cat-board-tab-label rounded-sm border border-transparent px-2.5 py-1 text-[13px] transition-colors",
+                  tab.data
+                    ? "cursor-pointer text-mute hover:text-fg"
+                    : "cursor-not-allowed text-mute/40",
+                ]}
+              >
+                {tab.label}
+              </label>
+            ))}
+          </div>
+
+          {tabs.map((tab) => {
+            if (!tab.data) {
+              return (
+                <section data-panel={tab.id} class="panel px-5 py-10 text-center">
+                  <p class="text-sm text-fg">{dict.catBoard.unavailable}</p>
+                  <p class="mt-1 text-xs text-mute">{dict.catBoard.unavailableHint}</p>
+                </section>
+              );
+            }
+
+            const behind = monthsBehind(tab.data.reportDate);
+            return (
+              <section data-panel={tab.id} class="flex flex-col gap-3">
+                <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                  <span class="data text-[12px] text-mute">
+                    {dict.catBoard.reportDate} {tab.data.reportDate}
+                  </span>
+                  {behind >= 3 && (
+                    <span class="text-[12px] text-fall">
+                      {dict.catBoard.staleWarning.replace("{months}", String(behind))}
+                    </span>
+                  )}
+                </div>
+
+                {tab.id === "code" ? (
+                  <CatBoardCodeTable category={tab.data} locale={locale} dict={dict} />
+                ) : (
+                  <CatBoardTable category={tab.data} locale={locale} />
+                )}
+
+                <p class="text-[12px] text-mute">
+                  {tab.id === "code" && dict.catBoard.codeNote} {dict.catBoard.monthCaveat}
+                </p>
+              </section>
+            );
+          })}
+        </div>
+      )
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  /*
+   * 纯 CSS 的分段切换，与 rank-list.astro 的折叠用同一套技巧：
+   * :has() 检测哪个 radio 被选中，driving 面板显隐和标签高亮。
+   * 三个类目写三条规则，比循环生成更直白，也更容易在类目变化时改。
+   */
+  .cat-board-tabs section[data-panel] {
+    display: none;
+  }
+
+  .cat-board-tabs:has(#cat-tab-logic:checked) section[data-panel="logic"],
+  .cat-board-tabs:has(#cat-tab-code:checked) section[data-panel="code"],
+  .cat-board-tabs:has(#cat-tab-vision:checked) section[data-panel="vision"] {
+    display: flex;
+  }
+
+  .cat-board-tabs:has(#cat-tab-logic:checked) label[data-tab="logic"],
+  .cat-board-tabs:has(#cat-tab-code:checked) label[data-tab="code"],
+  .cat-board-tabs:has(#cat-tab-vision:checked) label[data-tab="vision"] {
+    border-color: var(--gold);
+    color: var(--fg);
+  }
+</style>

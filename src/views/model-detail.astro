@@ -1,0 +1,288 @@
+---
+import BaseLayout from "@/layouts/base.astro";
+import SectionHead from "@/components/section-head.astro";
+import Trajectory from "@/components/trajectory.astro";
+import CompareButton from "@/components/compare-button";
+import { MODELS } from "@/lib/data";
+import { catalogEntry, eventsForModel } from "@/lib/history";
+import { cheaperAlternatives, METRICS, rankAmong, type MetricId } from "@/lib/metrics";
+import {
+  formatDate,
+  formatNumber,
+  formatPrice,
+  formatSeconds,
+  NO_VALUE,
+} from "@/lib/format";
+import { fill, href, t, type Locale } from "@/i18n";
+import type { LanguageModel } from "@/lib/types";
+
+interface Props {
+  locale: Locale;
+  model: LanguageModel;
+}
+
+const { locale, model } = Astro.props;
+const dict = t(locale);
+
+const creator = model.model_creator?.name ?? "";
+const catalog = catalogEntry(model.id);
+const intelligence = model.evaluations.artificial_analysis_intelligence_index;
+
+/** 三个指数并排，各自带同侪排名。没测的明说「未评测」而不是留白。 */
+const indices: Array<{ id: MetricId; label: string }> = [
+  { id: "intelligence", label: dict.model.intelligence },
+  { id: "coding", label: dict.model.coding },
+  { id: "agentic", label: dict.model.agentic },
+];
+
+const pricing = [
+  { label: dict.model.priceIn, value: model.pricing?.price_1m_input_tokens },
+  { label: dict.model.priceOut, value: model.pricing?.price_1m_output_tokens },
+  { label: dict.model.cacheHit, value: model.pricing?.price_1m_cache_hit_tokens },
+  { label: dict.model.cacheWrite, value: model.pricing?.price_1m_cache_write_tokens },
+].filter((row) => row.value != null);
+
+const performance = [
+  {
+    label: dict.model.throughput,
+    value: model.performance?.median_output_tokens_per_second,
+    format: (v: number) => `${formatNumber(v, locale, 0)} ${dict.models.units.tokensPerSecond}`,
+  },
+  {
+    label: dict.model.ttft,
+    value: model.performance?.median_time_to_first_token_seconds,
+    format: (v: number) => formatSeconds(v),
+  },
+  {
+    label: dict.model.ttfat,
+    value: model.performance?.median_time_to_first_answer_token_seconds,
+    format: (v: number) => formatSeconds(v),
+  },
+  {
+    label: dict.model.e2e,
+    value: model.performance?.median_end_to_end_response_time_seconds,
+    format: (v: number) => formatSeconds(v),
+  },
+].filter((row) => row.value != null);
+
+const alternatives = cheaperAlternatives(model, MODELS);
+const modelEvents = eventsForModel(model.id);
+
+const title = model.name;
+const description = `${model.name}${creator ? ` · ${creator}` : ""} — ${dict.model.intelligence} ${formatNumber(intelligence, locale, 1)}`;
+---
+
+<BaseLayout locale={locale} active="models" title={title} description={description} tray>
+  <div class="flex flex-col gap-12">
+    <header class="flex flex-col gap-5">
+      <a
+        href={href(locale, "/models")}
+        data-back-to-board
+        class="data w-fit text-[12px] text-mute transition-colors hover:text-fg"
+      >
+        ← {dict.model.backToBoard}
+      </a>
+
+      <script>
+        /**
+         * 榜单页把当前筛选/维度/排序状态存进 sessionStorage（见
+         * model-explorer.tsx）。这里读回来改写链接地址，这样从详情页
+         * 点「返回榜单」能回到刚才那一屏，而不是每次都落到默认总览。
+         * 只在两者路径前缀一致时才用，避免中英文或跨会话串台。
+         */
+        function restoreBackLink() {
+          const link = document.querySelector<HTMLAnchorElement>("[data-back-to-board]");
+          if (!link) return;
+          const defaultHref = link.getAttribute("href");
+          const saved = sessionStorage.getItem("oriel:models-return");
+          if (!defaultHref || !saved) return;
+          if (saved === defaultHref || saved.startsWith(`${defaultHref}?`)) {
+            link.setAttribute("href", saved);
+          }
+        }
+        restoreBackLink();
+        document.addEventListener("astro:page-load", restoreBackLink);
+      </script>
+
+      <div class="flex flex-col gap-2">
+        <span class="eyebrow">{creator}</span>
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <h1 class="max-w-2xl text-xl font-semibold tracking-tight text-fg sm:text-2xl">
+            {model.name}
+          </h1>
+          <CompareButton
+            slug={model.slug}
+            name={model.name}
+            creator={creator}
+            labels={dict.compare}
+            client:idle
+          />
+        </div>
+        <dl class="flex flex-wrap gap-x-6 gap-y-1 text-[12px] text-mute">
+          <div class="flex gap-1.5">
+            <dt>{dict.model.released}</dt>
+            <dd class="data text-fg">{formatDate(model.release_date, locale)}</dd>
+          </div>
+          {
+            catalog && (
+              <div class="flex gap-1.5">
+                <dt>{dict.model.firstSeen}</dt>
+                <dd class="data text-fg">{catalog.first_seen}</dd>
+              </div>
+            )
+          }
+        </dl>
+      </div>
+
+      {/* 页面上最大的元素是指数值 */}
+      <div class="grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-rule bg-rule sm:grid-cols-3">
+        {
+          indices.map(({ id, label }) => {
+            const value = METRICS[id].get(model);
+            const rank = rankAmong(model, MODELS, id);
+            return (
+              <div class="flex flex-col gap-1.5 bg-ground px-4 py-4">
+                <span class="eyebrow">{label}</span>
+                {value == null ? (
+                  <>
+                    <span class="figure text-2xl text-mute/60">{NO_VALUE}</span>
+                    <span class="text-[12px] text-mute">{dict.model.noData}</span>
+                  </>
+                ) : (
+                  <>
+                    <span
+                      class:list={[
+                        "figure text-4xl",
+                        rank?.rank === 1 ? "text-gold" : "text-fg",
+                      ]}
+                    >
+                      {formatNumber(value, locale, 1)}
+                    </span>
+                    {rank && (
+                      <span class="text-[12px] text-mute">
+                        {fill(dict.model.rankAmong, {
+                          rank: rank.rank,
+                          total: rank.total,
+                        })}
+                      </span>
+                    )}
+                  </>
+                )}
+              </div>
+            );
+          })
+        }
+      </div>
+    </header>
+
+    <div class="grid gap-10 md:grid-cols-2">
+      <section>
+        <SectionHead title={dict.model.pricing} note={dict.models.units.perMillion} />
+        {
+          pricing.length === 0 ? (
+            <p class="text-sm text-mute">{dict.model.noDataHint}</p>
+          ) : (
+            <dl class="flex flex-col">
+              {pricing.map((row) => (
+                <div class="flex items-baseline justify-between gap-4 border-b border-rule/60 py-2 text-sm last:border-b-0">
+                  <dt class="text-mute">{row.label}</dt>
+                  <dd class="data text-fg">{formatPrice(row.value)}</dd>
+                </div>
+              ))}
+            </dl>
+          )
+        }
+      </section>
+
+      <section>
+        <SectionHead title={dict.model.performance} />
+        {
+          performance.length === 0 ? (
+            <p class="text-sm text-mute">{dict.model.noDataHint}</p>
+          ) : (
+            <dl class="flex flex-col">
+              {performance.map((row) => (
+                <div class="flex items-baseline justify-between gap-4 border-b border-rule/60 py-2 text-sm last:border-b-0">
+                  <dt class="text-mute">{row.label}</dt>
+                  <dd class="data text-fg">{row.format(row.value!)}</dd>
+                </div>
+              ))}
+            </dl>
+          )
+        }
+      </section>
+    </div>
+
+    <section>
+      <SectionHead title={dict.model.trajectory} note={`${modelEvents.length}`} />
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Trajectory
+          modelId={model.id}
+          metric="intelligence"
+          locale={locale}
+          label={dict.model.intelligence}
+          format={(value) => formatNumber(value, locale, 1)}
+        />
+        <Trajectory
+          modelId={model.id}
+          metric="priceOut"
+          locale={locale}
+          label={dict.model.priceOut}
+          lowerIsBetter
+          format={(value) => formatPrice(value)}
+        />
+        <Trajectory
+          modelId={model.id}
+          metric="throughput"
+          locale={locale}
+          label={dict.model.throughput}
+          format={(value) => formatNumber(value, locale, 0)}
+        />
+      </div>
+    </section>
+
+    <section>
+      <SectionHead title={dict.model.alternatives} note={dict.model.alternativesNote} />
+      {
+        alternatives.length === 0 ? (
+          <p class="text-sm text-mute">{dict.model.alternativesEmpty}</p>
+        ) : (
+          <ul class="flex flex-col">
+            {alternatives.map((alternative) => {
+              const altPrice = alternative.pricing?.price_1m_output_tokens ?? 0;
+              const ownPrice = model.pricing?.price_1m_output_tokens ?? 0;
+              const saving = ownPrice > 0 ? 1 - altPrice / ownPrice : 0;
+              return (
+                <li class="flex flex-wrap items-baseline gap-x-4 gap-y-1 border-b border-rule/60 py-2 text-sm last:border-b-0">
+                  <a
+                    href={href(locale, `/models/${alternative.slug}`)}
+                    class="min-w-0 flex-1 truncate text-fg transition-colors hover:text-gold"
+                  >
+                    {alternative.name}
+                  </a>
+                  <span class="shrink-0 text-[12px] text-mute">
+                    {alternative.model_creator?.name}
+                  </span>
+                  <span class="data shrink-0 text-xs text-mute">
+                    {dict.models.cols.intelligence}{" "}
+                    <span class="text-fg">
+                      {formatNumber(
+                        alternative.evaluations.artificial_analysis_intelligence_index,
+                        locale,
+                        1
+                      )}
+                    </span>
+                  </span>
+                  <span class="data w-24 shrink-0 text-right text-xs">
+                    <span class="text-fg">{formatPrice(altPrice)}</span>
+                    <span class="ml-1.5 text-rise">−{Math.round(saving * 100)}%</span>
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+        )
+      }
+    </section>
+  </div>
+</BaseLayout>

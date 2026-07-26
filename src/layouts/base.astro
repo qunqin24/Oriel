@@ -1,0 +1,390 @@
+---
+import "@/styles/global.css";
+import OrielMark from "@/components/oriel-mark.astro";
+import ThemeToggle from "@/components/theme-toggle.astro";
+import InstrumentReadout from "@/components/instrument-readout.astro";
+import CompareTray from "@/components/compare-tray";
+import { ClientRouter } from "astro:transitions";
+import { NAV, navHref, type NavKey } from "@/lib/nav";
+import { MODELS, VENDORS } from "@/lib/data";
+import { HTML_LANG, href, swapLocale, t, type Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+  active?: NavKey;
+  title?: string;
+  description?: string;
+  /**
+   * 只在跟对比有关的页面挂托盘。
+   * 它是 React island，挂上就意味着这一页要加载 180KB 的 React 运行时——
+   * 首页、变化、媒体、方法这几页不需要对比，也就不该为此付这个钱。
+   */
+  tray?: boolean;
+}
+
+const { locale, active, title, description, tray = false } = Astro.props;
+const dict = t(locale);
+
+const pageTitle = title ? `${title} · ${dict.site.name}` : `${dict.site.name} — ${dict.site.tagline}`;
+const pageDescription = description ?? dict.site.description;
+const pathname = Astro.url.pathname;
+const otherLocale: Locale = locale === "zh" ? "en" : "zh";
+
+/**
+ * hreflang 按规范要求绝对地址。Astro.site 来自 SITE_URL，没设置时
+ * 退化成相对路径——不理想，但比输出一个写死的假域名强。
+ */
+const canonical = (path: string) =>
+  Astro.site ? new URL(path, Astro.site).href : path;
+
+const zhHref = canonical(swapLocale(pathname, "zh"));
+const enHref = canonical(swapLocale(pathname, "en"));
+---
+
+<!doctype html>
+<html lang={HTML_LANG[locale]} class="h-full" translate="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={pageDescription} />
+    {/*
+      站点已经自带中英切换，Chrome/Google 的自动翻译跟它是重复功能，
+      关掉后也顺带清掉一个控制台噪音：ClientRouter 的软导航偶尔会让
+      Chrome 翻译服务跟丢页面上下文，抛出"Language detection is not
+      supported for this page"——不是应用报错，是浏览器内置翻译服务
+      在软导航下的已知行为，但用 translate="no" 更干净：不必让用户
+      看到这条错误，也少了一次没必要的语言检测。
+      两个属性都需要：translate 是通用 web 标准，content="notranslate"
+      专门给 Google 翻译（包括 Android 版 Chrome）用。
+    */}
+    <meta name="google" content="notranslate" />
+    <title>{pageTitle}</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+
+    <link rel="canonical" href={canonical(pathname)} />
+
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={HTML_LANG[locale]} />
+    <meta property="og:site_name" content={dict.site.name} />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="alternate" hreflang="zh-Hans" href={zhHref} />
+    <link rel="alternate" hreflang="en" href={enHref} />
+    <link rel="alternate" hreflang="x-default" href={zhHref} />
+
+    {/*
+      首帧前把主题和画布颜色都定下来。
+
+      背景色写在 30KB 的外部样式表里，而样式表要下载解析完才生效——
+      在那之前浏览器用的是默认白色画布，深色主题下每次导航都会闪一下白。
+      所以这里直接在 <html> 上写内联样式：内联样式优先级高于样式表，
+      且这段脚本在样式表之前同步执行，第一帧就是对的颜色。
+
+      color-scheme 同时决定滚动条和表单控件的默认配色，一并设上。
+
+      两个色值是 global.css 里 --ground 的副本。改配色时两处要一起改，
+      下面的主题切换也用同一组值。
+    */}
+    <script is:inline>
+      (() => {
+        const GROUND = { light: "#ffffff", dark: "#171c26" };
+        window.__orielGround = GROUND;
+
+        function applyTheme(root) {
+          const stored = localStorage.getItem("oriel-theme");
+          // 简约白是站点默认，不跟随系统的深色偏好——用户切换过一次就会记住。
+          // 想改回跟随系统，把下面的 "light" 换成:
+          //   window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+          const theme = stored === "light" || stored === "dark" ? stored : "light";
+          root.dataset.theme = theme;
+          root.style.colorScheme = theme;
+          root.style.backgroundColor = GROUND[theme];
+        }
+
+        applyTheme(document.documentElement);
+
+        /*
+         * ClientRouter 的 swapRootAttributes 会清空 <html> 上的全部属性，
+         * 包括 data-theme 和上面那两行内联样式；而这段脚本内容不变，
+         * Astro 会判定它已执行、不再重跑。所以必须挂事件补回来。
+         *
+         * 用 before-swap 而不是 after-swap：前者能拿到还没换上去的新文档，
+         * 直接写进去，交换时属性就已经是对的——不存在「换上去再改回来」的那一帧。
+         */
+        if (!window.__orielThemeSwap) {
+          window.__orielThemeSwap = true;
+          document.addEventListener("astro:before-swap", (event) => {
+            applyTheme(event.newDocument.documentElement);
+          });
+        }
+      })();
+    </script>
+
+    <ClientRouter />
+  </head>
+
+  <body class="min-h-full">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-sm focus:bg-panel focus:px-3 focus:py-2 focus:text-sm"
+    >
+      {dict.common.skipToContent}
+    </a>
+
+    {/*
+      移动端顶栏：仪表信息挪到页脚，这里只留导航。
+
+      导航现在有 7 个目的地（观测台/语言模型/变化/媒体/猫榜/对比/方法）。
+      横向滚动条在窄屏上塞不下 logo + 7 项 + 语言切换 + 主题切换——算下来
+      留给导航本身的宽度只剩约 189px，7 个目的地里只能露出 2-3 个，
+      其余全靠用户自己发现能横滑，这是导航设计里的反模式：主导航应该
+      一眼看到全部去处，不该藏在不明显的横滑里。所以换成汉堡菜单，
+      点开后纵向列出全部 7 项。
+
+      菜单本身是浮层（position: fixed），不占文档流——展开时不会撑高
+      header、不会把页面内容往下推。背后的半透明遮罩也是一个指向同一个
+      checkbox 的 <label>，点它就能关闭菜单，不需要 JS。仍然是与
+      rank-list.astro 的展开/收起同一套 checkbox + CSS :has() 技巧。
+    */}
+    <header
+      class="mobile-nav sticky top-0 z-40 border-b border-rule bg-ground/95 backdrop-blur lg:hidden"
+    >
+      <div class="relative z-30 flex items-center gap-3 bg-ground px-4 py-2.5">
+        <a href={href(locale, "/")} class="flex shrink-0 items-center gap-2">
+          <OrielMark size={15} />
+          <span class="figure text-sm text-fg">ORIEL</span>
+        </a>
+
+        <input type="checkbox" id="mobile-nav-toggle" class="sr-only" />
+
+        <div class="ml-auto flex shrink-0 items-center gap-1.5">
+          <a
+            href={swapLocale(pathname, otherLocale)}
+            class="data rounded-sm border border-rule px-1.5 py-1 text-[12px] text-mute transition-colors hover:text-fg"
+            hreflang={otherLocale}
+          >
+            {otherLocale === "en" ? "EN" : "中"}
+          </a>
+          <ThemeToggle label={dict.rail.theme} />
+          <label
+            for="mobile-nav-toggle"
+            class="menu-toggle inline-flex h-7 w-7 cursor-pointer items-center justify-center rounded-sm border border-rule text-mute transition-colors hover:text-fg"
+            aria-label={dict.common.menu}
+          >
+            <svg
+              class="menu-icon-open"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="M3 6h18M3 12h18M3 18h18"></path>
+            </svg>
+            <svg
+              class="menu-icon-close"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="M6 6l12 12M18 6L6 18"></path>
+            </svg>
+          </label>
+        </div>
+      </div>
+
+      {/* 遮罩：点击任意位置关闭菜单，靠 label 指向同一个 checkbox 实现 */}
+      <label
+        for="mobile-nav-toggle"
+        class="mobile-nav-backdrop"
+        aria-hidden="true"
+      ></label>
+
+      <nav
+        class="mobile-nav-panel flex-col gap-0.5 border-b border-rule bg-ground px-3 py-2 shadow-lg"
+        aria-label={dict.site.name}
+      >
+        {
+          NAV.map((item) => (
+            <a
+              href={navHref(item, locale)}
+              aria-current={item.key === active ? "page" : undefined}
+              class:list={[
+                "rounded-sm px-3 py-2.5 text-sm transition-colors",
+                item.key === active
+                  ? "bg-panel text-fg"
+                  : "text-mute hover:bg-panel/60 hover:text-fg",
+              ]}
+            >
+              {item.label(dict)}
+            </a>
+          ))
+        }
+      </nav>
+    </header>
+
+    <style>
+      /*
+       * 浮层，不占文档流：header 是 position:sticky，本身就是一个定位
+       * 上下文，面板和遮罩用 position:absolute/fixed 挂在它上面，
+       * 展开收起都不会改变 header 自己的盒子高度，页面内容不会被推移。
+       */
+      .mobile-nav-backdrop,
+      .mobile-nav-panel {
+        position: fixed;
+        inset: 0;
+        z-index: 20;
+        opacity: 0;
+        pointer-events: none;
+        transition:
+          opacity 180ms ease,
+          transform 180ms ease;
+      }
+
+      .mobile-nav-backdrop {
+        background: rgb(0 0 0 / 32%);
+      }
+
+      .mobile-nav-panel {
+        top: 100%;
+        bottom: auto;
+        display: flex;
+        transform: translateY(-6px);
+      }
+
+      .menu-icon-close {
+        display: none;
+      }
+
+      .mobile-nav:has(#mobile-nav-toggle:checked) .mobile-nav-backdrop,
+      .mobile-nav:has(#mobile-nav-toggle:checked) .mobile-nav-panel {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .mobile-nav:has(#mobile-nav-toggle:checked) .menu-icon-open {
+        display: none;
+      }
+
+      .mobile-nav:has(#mobile-nav-toggle:checked) .menu-icon-close {
+        display: block;
+      }
+
+      /* 菜单开着时锁住页面滚动，强化"这是一个浮层"而不是页面的一部分 */
+      body:has(#mobile-nav-toggle:checked) {
+        overflow: hidden;
+      }
+    </style>
+
+    {/* 桌面端左栏：导航与仪表读数一直可见 */}
+    <aside
+      class="fixed inset-y-0 left-0 z-40 hidden w-56 flex-col justify-between border-r border-rule px-5 py-6 lg:flex"
+    >
+      <div class="flex flex-col gap-8">
+        <a href={href(locale, "/")} class="flex flex-col gap-1.5">
+          <span class="flex items-center gap-2">
+            <OrielMark size={17} />
+            <span class="figure text-lg text-fg">ORIEL</span>
+          </span>
+          <span class="text-[12px] leading-snug text-mute">{dict.site.tagline}</span>
+        </a>
+
+        <nav class="flex flex-col gap-0.5" aria-label={dict.site.name}>
+          {
+            NAV.map((item) => (
+              <a
+                href={navHref(item, locale)}
+                aria-current={item.key === active ? "page" : undefined}
+                class:list={[
+                  "-mx-2 rounded-sm px-2 py-1.5 text-sm transition-colors",
+                  item.key === active
+                    ? "bg-panel text-fg"
+                    : "text-mute hover:text-fg",
+                ]}
+              >
+                {item.label(dict)}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <InstrumentReadout
+          locale={locale}
+          dict={dict}
+          modelCount={MODELS.length}
+          vendorCount={VENDORS.length}
+        />
+
+        <div class="flex items-center justify-between border-t border-rule pt-4">
+          <a
+            href={swapLocale(pathname, otherLocale)}
+            hreflang={otherLocale}
+            class="data text-[12px] text-mute transition-colors hover:text-fg"
+          >
+            {otherLocale === "en" ? "English" : "中文"}
+          </a>
+          <ThemeToggle label={dict.rail.theme} />
+        </div>
+      </div>
+    </aside>
+
+    <main id="main" class="lg:pl-56">
+      <div class="mx-auto max-w-6xl px-4 py-8 sm:px-8 lg:py-12">
+        <slot />
+      </div>
+
+      {/* 移动端把仪表读数放页脚，桌面端它在左栏里 */}
+      <footer class="border-t border-rule px-4 py-8 sm:px-8 lg:hidden">
+        <InstrumentReadout
+          locale={locale}
+          dict={dict}
+          modelCount={MODELS.length}
+          vendorCount={VENDORS.length}
+          layout="row"
+        />
+      </footer>
+    </main>
+
+    {
+      tray && (
+        <CompareTray
+          labels={dict.compare}
+          compareHref={href(locale, "/compare")}
+          client:idle
+        />
+      )
+    }
+
+    <script is:inline>
+      // 委托到 document 且只装一次，让侧栏和顶栏的两个切换按钮共用一套逻辑。
+      if (!window.__orielTheme) {
+        window.__orielTheme = true;
+        document.addEventListener("click", (event) => {
+          if (!event.target.closest?.("[data-theme-toggle]")) return;
+          const root = document.documentElement;
+          const next = root.dataset.theme === "dark" ? "light" : "dark";
+          root.dataset.theme = next;
+          // 首帧脚本在 <html> 上写了内联背景色，优先级高于样式表——
+          // 切换时必须一起更新，否则底色会卡在旧主题上。
+          root.style.colorScheme = next;
+          root.style.backgroundColor = window.__orielGround[next];
+          localStorage.setItem("oriel-theme", next);
+        });
+      }
+    </script>
+  </body>
+</html>

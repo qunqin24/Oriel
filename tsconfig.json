@@ -3,10 +3,9 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "paths": {
-      "@/*": ["./src/*"],
-      "@lobehub-icons/*": ["./node_modules/@lobehub/icons/es/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": [".astro/types.d.ts", "src/**/*", "scripts/**/*", "astro.config.mjs"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }

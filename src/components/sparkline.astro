@@ -1,0 +1,64 @@
+---
+/**
+ * 极小的趋势线，用于侧栏的每日收录量。
+ *
+ * 少于 MIN_TREND_POINTS 个点就什么都不画——两个点能连成线，
+ * 但那条线不表达任何趋势，只会让读者以为自己看到了什么。
+ */
+import { MIN_TREND_POINTS } from "@/lib/history";
+
+interface Props {
+  values: number[];
+  width?: number;
+  height?: number;
+  label: string;
+}
+
+const { values, width = 72, height = 16, label } = Astro.props;
+
+const enough = values.length >= MIN_TREND_POINTS;
+
+const min = enough ? Math.min(...values) : 0;
+const max = enough ? Math.max(...values) : 0;
+const span = max - min;
+
+// 全平的序列（比如模型数几天没变）画在中线上，而不是贴底或贴顶。
+const points = enough
+  ? values
+      .map((value, index) => {
+        const x = (index / (values.length - 1)) * width;
+        const y = span === 0 ? height / 2 : height - ((value - min) / span) * height;
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      })
+      .join(" ")
+  : "";
+---
+
+{
+  enough && (
+    <svg
+      width={width}
+      height={height}
+      viewBox={`0 0 ${width} ${height}`}
+      fill="none"
+      role="img"
+      aria-label={label}
+      class="overflow-visible"
+    >
+      <polyline
+        points={points}
+        stroke="var(--mute)"
+        stroke-width="1"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        vector-effect="non-scaling-stroke"
+      />
+      <circle
+        cx={width}
+        cy={points.split(" ").at(-1)?.split(",")[1]}
+        r="1.75"
+        fill="var(--gold)"
+      />
+    </svg>
+  )
+}

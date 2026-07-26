@@ -1,0 +1,125 @@
+---
+import BaseLayout from "@/layouts/base.astro";
+import ModelExplorer from "@/components/model-explorer";
+import { EXPLORER_ROWS } from "@/lib/explorer";
+import { MODELS, VENDORS } from "@/lib/data";
+import { coverage } from "@/lib/metrics";
+import { formatInteger } from "@/lib/format";
+import { href, t, type Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+
+const covered = {
+  intelligence: coverage(MODELS, "intelligence"),
+  coding: coverage(MODELS, "coding"),
+  agentic: coverage(MODELS, "agentic"),
+  priceOut: coverage(MODELS, "priceOut"),
+  throughput: coverage(MODELS, "throughput"),
+};
+---
+
+<BaseLayout
+  locale={locale}
+  active="models"
+  title={dict.models.title}
+  description={dict.models.lead}
+  tray
+>
+  <div class="flex flex-col gap-8">
+    <header class="flex flex-col gap-3">
+      <span class="eyebrow">{dict.nav.models}</span>
+      <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+        {/* 页面上最大的元素是模型数，不是标题 */}
+        <span class="figure text-4xl text-fg">{formatInteger(MODELS.length, locale)}</span>
+        <h1 class="text-lg font-semibold tracking-tight text-fg">{dict.models.title}</h1>
+        <span class="data text-[12px] text-mute">
+          {formatInteger(VENDORS.length, locale)}
+          {dict.common.vendors}
+        </span>
+      </div>
+      <p class="max-w-2xl text-sm leading-relaxed text-mute">{dict.models.lead}</p>
+
+      {/* 覆盖率一次说清，省得读者以为破折号是「测出来很差」 */}
+      <dl class="flex flex-wrap gap-x-6 gap-y-1 text-[12px] text-mute">
+        {
+          (
+            [
+              ["intelligence", covered.intelligence],
+              ["coding", covered.coding],
+              ["agentic", covered.agentic],
+              ["priceOut", covered.priceOut],
+              ["speed", covered.throughput],
+            ] as const
+          ).map(([key, count]) => (
+            <div class="flex items-baseline gap-1.5">
+              <dt>{dict.models.cols[key]}</dt>
+              <dd class="data text-fg">
+                {formatInteger(count, locale)}
+                <span class="text-mute">/{MODELS.length}</span>
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </header>
+
+    <div data-explorer-mount>
+      <ModelExplorer
+        rows={EXPLORER_ROWS}
+        vendors={VENDORS}
+        locale={locale}
+        labels={{ models: dict.models, common: dict.common, compare: dict.compare }}
+        modelBase={href(locale, "/models")}
+        client:load
+      />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  /* 只在带筛选参数进入本页时短暂生效，见下面的脚本。 */
+  [data-explorer-mount][data-pending] {
+    visibility: hidden;
+  }
+</style>
+
+<script>
+  /**
+   * 本页的静态 HTML 永远是「总览」那一屏——构建期不知道地址栏参数。
+   * 带 ?dim=agentic 之类的参数进来时（比如从模型详情页点「返回榜单」），
+   * 交换进来的就是总览表格，React 要等水合完才能换成目标维度。
+   *
+   * 而 ClientRouter 的顺序是「先交换 DOM、再更新 location」，交换后那一帧
+   * 会被 110ms 的视图过渡完整地持有——用户于是看见总览停一下再跳到目标榜单。
+   *
+   * 所以在交换发生之前，先把这块内容标记为待定并隐藏；React 水合出正确内容后
+   * 再由组件自己揭开（见 model-explorer.tsx 写回地址栏的那个 effect）。
+   * 只在真的带参数时隐藏，没参数时静态 HTML 本来就是对的，保持零 JS 可读。
+   */
+  const EXPLORER_PARAMS = ["dim", "q", "vendor", "sort", "dir"];
+
+  if (!window.__orielExplorerPending) {
+    window.__orielExplorerPending = true;
+
+    document.addEventListener("astro:before-swap", (event) => {
+      const to = new URL(event.to);
+      if (!EXPLORER_PARAMS.some((key) => to.searchParams.has(key))) return;
+
+      const mount = event.newDocument.querySelector("[data-explorer-mount]");
+      if (!mount) return;
+      mount.setAttribute("data-pending", "");
+
+      // 水合万一没跑起来（脚本被拦、报错），别让内容永远藏着。
+      setTimeout(() => {
+        document
+          .querySelector("[data-explorer-mount][data-pending]")
+          ?.removeAttribute("data-pending");
+      }, 2000);
+    });
+  }
+</script>

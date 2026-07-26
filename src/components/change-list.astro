@@ -1,0 +1,146 @@
+---
+/**
+ * 变化流。首页取最近几天，/changes 取全部。
+ *
+ * 方向色的语义是「对使用者是好是坏」而不是「数字变大变小」：
+ * 降价是好事，所以画成上涨色。写反了会把每次降价都标成红色警告。
+ */
+import { formatDelta, formatDate, formatNumber, formatPrice } from "@/lib/format";
+import { modelById } from "@/lib/data";
+import { href, t, type Locale } from "@/i18n";
+import type { ChangeEvent, MetricKey } from "@/lib/history-schema";
+import type { DayEvents } from "@/lib/history";
+
+interface Props {
+  days: DayEvents[];
+  locale: Locale;
+}
+
+const { days, locale } = Astro.props;
+const dict = t(locale);
+
+const PRICE_METRICS: MetricKey[] = ["priceIn", "priceOut"];
+
+const isPrice = (metric: MetricKey | undefined) =>
+  metric != null && PRICE_METRICS.includes(metric);
+
+/** 值本身怎么显示：价格带 $，分数带一位小数。 */
+function show(metric: MetricKey | undefined, value: number | null | undefined) {
+  if (value == null) return null;
+  return isPrice(metric) ? formatPrice(value) : formatNumber(value, locale, 1);
+}
+
+/** 对使用者是好事还是坏事。价格方向与数值方向相反。 */
+function tone(event: ChangeEvent): "up" | "down" | "flat" {
+  if (event.from == null || event.to == null) return "flat";
+  const numericallyUp = event.to > event.from;
+  const good = isPrice(event.metric) ? !numericallyUp : numericallyUp;
+  return good ? "up" : "down";
+}
+
+function metricLabel(metric: MetricKey | undefined): string {
+  if (!metric) return "";
+  return dict.changes.metrics[metric] ?? metric;
+}
+
+function modelHref(event: ChangeEvent): string | null {
+  // 下架的模型没有详情页可去。
+  return modelById(event.model.id) ? href(locale, `/models/${event.model.slug}`) : null;
+}
+---
+
+{
+  days.length === 0 ? (
+    <div class="panel px-5 py-8 text-center">
+      <p class="text-sm text-fg">{dict.changes.empty}</p>
+      <p class="mt-1 text-xs text-mute">{dict.changes.emptyHint}</p>
+    </div>
+  ) : (
+    <div class="flex flex-col gap-7">
+      {days.map((day) => (
+        <section class="flex flex-col gap-2">
+          <header class="flex items-baseline gap-3">
+            <h3 class="figure text-base text-fg">{day.date.slice(5)}</h3>
+            <span class="data text-[12px] text-mute">
+              {formatDate(day.date, locale)}
+            </span>
+            <span class="data ml-auto text-[12px] text-mute">
+              {day.events.length} {dict.changes.eventCount}
+            </span>
+          </header>
+
+          <ul class="flex flex-col">
+            {day.events.map((event) => {
+              const link = modelHref(event);
+              const from = show(event.metric, event.from);
+              const to = show(event.metric, event.to);
+              const direction = tone(event);
+
+              return (
+                <li class="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b border-rule/60 py-2 text-sm last:border-b-0">
+                  <span class="eyebrow w-14 shrink-0 !text-[10px]">
+                    {dict.changes.types[event.type]}
+                  </span>
+
+                  <span class="min-w-0 flex-1">
+                    {link ? (
+                      <a
+                        href={link}
+                        class:list={[
+                          "transition-colors hover:text-gold",
+                          event.type === "removed" ? "text-mute line-through" : "text-fg",
+                        ]}
+                      >
+                        {event.model.name}
+                      </a>
+                    ) : (
+                      <span class="text-mute line-through">{event.model.name}</span>
+                    )}
+                    <span class="ml-2 text-[12px] text-mute">{event.model.creator}</span>
+                  </span>
+
+                  {event.type === "added" && event.intelligence != null && (
+                    <span class="data shrink-0 text-xs text-mute">
+                      {dict.model.intelligence}{" "}
+                      <span class="text-fg">
+                        {formatNumber(event.intelligence, locale, 1)}
+                      </span>
+                    </span>
+                  )}
+
+                  {event.metric && (
+                    <span class="data flex shrink-0 items-baseline gap-1.5 text-xs">
+                      <span class="text-mute">{metricLabel(event.metric)}</span>
+                      {from == null ? (
+                        <span class="text-mute">{dict.changes.firstScore}</span>
+                      ) : (
+                        <span class="text-mute">{from}</span>
+                      )}
+                      <span class="text-mute">→</span>
+                      {to == null ? (
+                        <span class="text-mute">{dict.changes.withdrawn}</span>
+                      ) : (
+                        <span class="text-fg">{to}</span>
+                      )}
+                      {from != null && to != null && (
+                        <span
+                          class:list={[
+                            direction === "up" && "text-rise",
+                            direction === "down" && "text-fall",
+                            direction === "flat" && "text-mute",
+                          ]}
+                        >
+                          {formatDelta(event.from, event.to)}
+                        </span>
+                      )}
+                    </span>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ))}
+    </div>
+  )
+}

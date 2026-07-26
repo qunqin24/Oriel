@@ -1,0 +1,44 @@
+---
+import BaseLayout from "@/layouts/base.astro";
+import { href, t } from "@/i18n";
+
+// 静态托管商只认根目录的 404.html，所以这一页两种语言都写上，
+// 而不是做成 /404 与 /en/404 两份——后者其中一份永远不会被送达。
+const zh = t("zh");
+const en = t("en");
+---
+
+<BaseLayout locale="zh" title={zh.common.notFoundTitle}>
+  <div class="flex max-w-lg flex-col gap-8 py-16">
+    <span class="figure text-6xl text-mute/40">404</span>
+
+    <div class="flex flex-col gap-2">
+      <h1 class="text-lg font-semibold tracking-tight text-fg">
+        {zh.common.notFoundTitle}
+      </h1>
+      <p class="text-sm leading-relaxed text-mute">{zh.common.notFoundBody}</p>
+    </div>
+
+    <div class="flex flex-col gap-2 border-t border-rule pt-6">
+      <h2 class="text-sm font-semibold tracking-tight text-fg">
+        {en.common.notFoundTitle}
+      </h2>
+      <p class="text-sm leading-relaxed text-mute">{en.common.notFoundBody}</p>
+    </div>
+
+    <div class="flex flex-wrap gap-2">
+      <a
+        href={href("zh", "/models")}
+        class="rounded-sm border border-rule px-3 py-1.5 text-xs text-mute transition-colors hover:border-mute hover:text-fg"
+      >
+        {zh.nav.models}
+      </a>
+      <a
+        href={href("en", "/models")}
+        class="rounded-sm border border-rule px-3 py-1.5 text-xs text-mute transition-colors hover:border-mute hover:text-fg"
+      >
+        {en.nav.models}
+      </a>
+    </div>
+  </div>
+</BaseLayout>

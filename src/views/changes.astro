@@ -1,0 +1,49 @@
+---
+import BaseLayout from "@/layouts/base.astro";
+import ChangeList from "@/components/change-list.astro";
+import { eventsByDay, EVENTS, SNAPSHOT_DATES } from "@/lib/history";
+import { formatDate, formatInteger } from "@/lib/format";
+import { fill, t, type Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+
+const days = eventsByDay();
+const first = SNAPSHOT_DATES[0];
+---
+
+<BaseLayout
+  locale={locale}
+  active="changes"
+  title={dict.changes.title}
+  description={dict.changes.lead}
+>
+  <div class="flex flex-col gap-8">
+    <header class="flex flex-col gap-3">
+      <span class="eyebrow">{dict.nav.changes}</span>
+      <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+        {/* 最大的元素是事件数 */}
+        <span class="figure text-4xl text-fg">{formatInteger(EVENTS.length, locale)}</span>
+        <h1 class="text-lg font-semibold tracking-tight text-fg">{dict.changes.title}</h1>
+        <span class="data text-[12px] text-mute">
+          {fill(dict.model.trajectoryRange, { days: SNAPSHOT_DATES.length })}
+        </span>
+      </div>
+      <p class="max-w-2xl text-sm leading-relaxed text-mute">{dict.changes.lead}</p>
+      {
+        first && (
+          <p class="data text-[12px] text-mute">
+            {formatDate(first, locale)} —{" "}
+            {formatDate(SNAPSHOT_DATES.at(-1)!, locale)}
+          </p>
+        )
+      }
+    </header>
+
+    <ChangeList days={days} locale={locale} />
+  </div>
+</BaseLayout>

@@ -1,63 +1,55 @@
-"use client";
+import { clearCompare, removeCompare, useCompare } from "@/lib/compare-store";
+import type { Dict } from "@/i18n";
 
-import { VendorIcon } from "@/components/vendor-icon";
-import { useCompare } from "@/lib/compare-store";
+type Props = {
+  labels: Dict["compare"];
+  compareHref: string;
+};
 
-export function CompareTray() {
-  const { items, count, max, remove, clear, ready } = useCompare();
+/**
+ * 已选模型的悬浮托盘。没选东西时完全不渲染——
+ * 一个常驻的空托盘只会占掉移动端一条屏幕。
+ */
+export default function CompareTray({ labels, compareHref }: Props) {
+  const { entries } = useCompare();
 
-  const isComparePage =
-    typeof window !== "undefined" && window.location.pathname === "/compare";
-
-  if (!ready || count === 0 || isComparePage) return null;
-
-  const ids = items.map((i) => i.id).join(",");
+  if (entries.length === 0) return null;
 
   return (
-    <div className="fixed bottom-3 sm:bottom-4 left-1/2 z-50 w-[calc(100%-1.5rem)] sm:w-[calc(100%-2rem)] max-w-3xl -translate-x-1/2 pb-[env(safe-area-inset-bottom)]">
-      <div className="instrument-panel px-3 py-3 sm:px-4 flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3 shadow-lg">
-        <div className="flex items-center gap-2 min-w-0 flex-1 overflow-x-auto scrollbar-none overscroll-x-contain">
-          <span className="text-[11px] font-mono uppercase tracking-wider text-muted-foreground shrink-0">
-            对比 {count}/{max}
-          </span>
-          {items.map((item) => (
-            <div
-              key={item.id}
-              className="inline-flex items-center gap-1.5 shrink-0 rounded-md border hairline-border bg-secondary/60 pl-2 pr-1 py-1"
-            >
-              <VendorIcon name={item.creator} size={14} />
-              <span
-                className="text-xs font-medium max-w-28 sm:max-w-32 truncate"
-                data-tip={item.name}
-              >
-                {item.name}
-              </span>
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 flex justify-center px-3 pb-3">
+      <div className="panel pointer-events-auto flex max-w-full items-center gap-2 px-2 py-1.5 shadow-lg">
+        <span className="eyebrow shrink-0 pl-1">{labels.tray}</span>
+
+        <ul className="scrollbar-none flex min-w-0 items-center gap-1.5 overflow-x-auto">
+          {entries.map((entry) => (
+            <li key={entry.slug} className="shrink-0">
               <button
                 type="button"
-                onClick={() => remove(item.id)}
-                className="text-muted-foreground hover:text-foreground px-1.5 py-1 text-sm leading-none min-h-8 min-w-8 sm:min-h-0 sm:min-w-0"
-                aria-label={`移除 ${item.name}`}
+                onClick={() => removeCompare(entry.slug)}
+                title={`${labels.remove}: ${entry.name}`}
+                className="flex max-w-[11rem] items-center gap-1.5 rounded-sm border border-rule px-1.5 py-1 text-[12px] text-mute transition-colors hover:border-mute hover:text-fg"
               >
-                ×
+                <span className="truncate">{entry.name}</span>
+                <span aria-hidden="true">×</span>
               </button>
-            </div>
+            </li>
           ))}
-        </div>
-        <div className="flex items-center gap-2 shrink-0 justify-end">
-          <button
-            type="button"
-            onClick={clear}
-            className="text-xs font-medium text-muted-foreground hover:text-foreground px-2 py-2 sm:py-1.5"
-          >
-            清空
-          </button>
-          <a
-            href={`/compare?ids=${ids}`}
-            className="text-xs font-semibold px-3 py-2 sm:py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-          >
-            开始对比
-          </a>
-        </div>
+        </ul>
+
+        <button
+          type="button"
+          onClick={clearCompare}
+          className="shrink-0 px-1.5 py-1 text-[12px] text-mute transition-colors hover:text-fg"
+        >
+          {labels.clear}
+        </button>
+
+        <a
+          href={compareHref}
+          className="shrink-0 rounded-sm border border-gold/50 px-2 py-1 text-[12px] text-gold transition-colors hover:bg-gold/10"
+        >
+          {labels.open}
+        </a>
       </div>
     </div>
   );

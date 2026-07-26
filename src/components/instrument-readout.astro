@@ -1,0 +1,78 @@
+---
+/**
+ * 常驻仪表读数：快照日期、收录量趋势、指数版本、数据来源。
+ *
+ * 桌面端固定在左栏里一直可见，移动端落到页脚。
+ * 它存在的意义是让「这些数字是活的、有时间戳的」这件事一直在视野里，
+ * 而不是藏在某个关于页面里。
+ */
+import Sparkline from "@/components/sparkline.astro";
+import { SNAPSHOT } from "@/lib/data";
+import { MODEL_COUNT_TREND } from "@/lib/history";
+import { formatDate, formatInteger } from "@/lib/format";
+import type { Dict, Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+  dict: Dict;
+  modelCount: number;
+  vendorCount: number;
+  layout?: "stack" | "row";
+}
+
+const { locale, dict, modelCount, vendorCount, layout = "stack" } = Astro.props;
+
+const date = SNAPSHOT.fetchedAt.slice(0, 10);
+const [year, month, day] = date.split("-");
+const counts = MODEL_COUNT_TREND.map((entry) => entry.count);
+---
+
+<div
+  class:list={[
+    "text-xs",
+    layout === "stack"
+      ? "flex flex-col gap-4"
+      : "flex flex-wrap items-end gap-x-8 gap-y-4",
+  ]}
+>
+  <div class="flex flex-col gap-1.5">
+    <span class="eyebrow">{dict.rail.snapshot}</span>
+    {/* 侧栏里最大的元素是这个日期——数字优先 */}
+    <div class="flex items-baseline gap-1.5">
+      <span class="figure text-2xl text-fg">{month}-{day}</span>
+      <span class="data text-[12px] text-mute">{year}</span>
+      <span
+        class="ml-0.5 inline-block h-1.5 w-1.5 rounded-full bg-gold"
+        title={formatDate(SNAPSHOT.fetchedAt, locale)}></span>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-1.5">
+    <span class="eyebrow">{dict.rail.trend}</span>
+    <div class="flex items-center gap-2.5">
+      <span class="data text-fg">{formatInteger(modelCount, locale)}</span>
+      <Sparkline values={counts} label={dict.rail.trend} />
+    </div>
+    <span class="data text-[12px] text-mute">
+      {formatInteger(vendorCount, locale)}
+      {dict.rail.vendors}
+    </span>
+  </div>
+
+  <div class="flex flex-col gap-1.5">
+    <span class="eyebrow">{dict.rail.indexVersion}</span>
+    <span class="data text-fg">v{SNAPSHOT.indexVersion ?? "—"}</span>
+  </div>
+
+  <div class="flex flex-col gap-1.5">
+    <span class="eyebrow">{dict.rail.source}</span>
+    <a
+      href="https://artificialanalysis.ai"
+      rel="noreferrer noopener"
+      target="_blank"
+      class="text-mute transition-colors hover:text-fg"
+    >
+      {dict.rail.sourceName}
+    </a>
+  </div>
+</div>
