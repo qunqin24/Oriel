@@ -7,9 +7,23 @@ export type TabItem = {
   content: ReactNode;
 };
 
-export function SegmentedTabs({ tabs }: { tabs: TabItem[] }) {
-  const [active, setActive] = useState(tabs[0]?.id);
+export function SegmentedTabs({
+  tabs,
+  value,
+  onChange,
+}: {
+  tabs: TabItem[];
+  value?: string;
+  onChange?: (id: string) => void;
+}) {
+  const [internal, setInternal] = useState(tabs[0]?.id);
+  const active = value ?? internal;
   const current = tabs.find((tab) => tab.id === active) ?? tabs[0];
+
+  function select(id: string) {
+    if (value === undefined) setInternal(id);
+    onChange?.(id);
+  }
 
   return (
     <div className="flex flex-col gap-4 sm:gap-6 mt-4 sm:mt-6 min-w-0">
@@ -31,7 +45,7 @@ export function SegmentedTabs({ tabs }: { tabs: TabItem[] }) {
                   ? "border-primary text-foreground"
                   : "border-transparent text-muted-foreground hover:text-foreground"
               }`}
-              onClick={() => setActive(tab.id)}
+              onClick={() => select(tab.id)}
             >
               {tab.label}
               {typeof tab.count === "number" ? (

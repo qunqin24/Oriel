@@ -3,16 +3,20 @@
 import React, { useMemo, useState } from "react";
 import type { ColumnDef } from "@/lib/types";
 
-type SortDir = "asc" | "desc";
+export type SortDir = "asc" | "desc";
 
-type Props<T> = {
+type ViewProps<T> = {
   rows: T[];
   columns: ColumnDef<T>[];
   getRowKey: (row: T) => string;
-  defaultSortKey?: string;
-  defaultSortDir?: SortDir;
-  searchKeys?: (keyof T | string)[];
+  sortKey: string;
+  sortDir: SortDir;
+  onSort?: (key: string) => void;
+  query?: string;
+  onQueryChange?: (q: string) => void;
   searchPlaceholder?: string;
+  totalCount?: number;
+  toolbarExtras?: React.ReactNode;
 };
 
 function compareValues(a: any, b: any, dir: SortDir) {
@@ -31,70 +35,75 @@ function compareValues(a: any, b: any, dir: SortDir) {
   return 0;
 }
 
-export function LeaderboardTable<T>({
+export function sortRows<T>(
+  rows: T[],
+  columns: ColumnDef<T>[],
+  sortKey: string,
+  sortDir: SortDir
+): T[] {
+  const col = columns.find((c) => c.key === sortKey);
+  if (!col) return rows;
+  return [...rows].sort((a, b) =>
+    compareValues(col.getValue(a), col.getValue(b), sortDir)
+  );
+}
+
+export function filterRows<T>(
+  rows: T[],
+  columns: ColumnDef<T>[],
+  query: string
+): T[] {
+  const q = query.trim().toLowerCase();
+  if (!q) return rows;
+  return rows.filter((row) =>
+    columns.some((c) => {
+      const raw = c.getValue(row);
+      if (String(raw ?? "").toLowerCase().includes(q)) return true;
+      const extra = c.getSearchText?.(row);
+      return String(extra ?? "").toLowerCase().includes(q);
+    })
+  );
+}
+
+/**
+ * 纯展示表格:排序、搜索、工具栏均由外部受控。
+ * 可在服务端渲染(Astro SSR)或客户端使用。
+ */
+export function LeaderboardTableView<T>({
   rows,
   columns,
   getRowKey,
-  defaultSortKey,
-  defaultSortDir = "desc",
+  sortKey,
+  sortDir,
+  onSort,
+  query,
+  onQueryChange,
   searchPlaceholder = "搜索模型…",
-}: Props<T>) {
-  const [query, setQuery] = useState("");
-  const [sortKey, setSortKey] = useState(
-    defaultSortKey ?? columns.find((c) => c.sortable !== false)?.key ?? columns[0]?.key
-  );
-  const [sortDir, setSortDir] = useState<SortDir>(defaultSortDir);
-
-  const sorted = useMemo(() => {
-    const col = columns.find((c) => c.key === sortKey);
-    const q = query.trim().toLowerCase();
-    let list = rows;
-    if (q) {
-      list = rows.filter((row) =>
-        columns.some((c) => {
-          const raw = c.getValue(row);
-          if (String(raw ?? "").toLowerCase().includes(q)) return true;
-          const extra = c.getSearchText?.(row);
-          return String(extra ?? "").toLowerCase().includes(q);
-        })
-      );
-    }
-    if (!col) return list;
-    return [...list].sort((a, b) =>
-      compareValues(col.getValue(a), col.getValue(b), sortDir)
-    );
-  }, [rows, columns, sortKey, sortDir, query]);
-
-  function onSort(key: string) {
-    const col = columns.find((c) => c.key === key);
-    if (!col || col.sortable === false) return;
-    if (sortKey === key) {
-      setSortDir((d) => (d === "asc" ? "desc" : "asc"));
-    } else {
-      setSortKey(key);
-      setSortDir(defaultSortDir);
-    }
-  }
-
+  totalCount,
+  toolbarExtras,
+}: ViewProps<T>) {
   return (
     <div className="flex flex-col w-full min-w-0">
       {/* Toolbar */}
       <div className="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center mb-3">
-        <div className="relative w-full sm:max-w-sm">
-          <svg className="absolute left-2.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-          <input
-            type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder={searchPlaceholder}
-            className="w-full pl-9 pr-4 py-2 sm:py-1.5 text-sm bg-card hairline-border rounded-md focus:outline-none focus:ring-1 focus:ring-ring text-foreground"
-          />
+        <div className="flex flex-1 items-center gap-2 min-w-0">
+          <div className="relative w-full sm:max-w-sm">
+            <svg className="absolute left-2.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              type="search"
+              value={query ?? ""}
+              onChange={(e) => onQueryChange?.(e.target.value)}
+              placeholder={searchPlaceholder}
+              className="w-full pl-9 pr-4 py-2 sm:py-1.5 text-sm bg-card hairline-border rounded-md focus:outline-none focus:ring-1 focus:ring-ring text-foreground"
+            />
+          </div>
+          {toolbarExtras}
         </div>
         <div className="text-xs text-muted-foreground font-mono shrink-0 self-end sm:self-auto">
-          {sorted.length} / {rows.length} 结果
+          {rows.length} / {totalCount ?? rows.length} 结果
         </div>
       </div>
 
@@ -123,7 +132,7 @@ export function LeaderboardTable<T>({
                     {sortable ? (
                       <button
                         type="button"
-                        onClick={() => onSort(col.key)}
+                        onClick={() => onSort?.(col.key)}
                         className={`flex items-center gap-1 hover:text-foreground transition-colors ${active ? "text-foreground font-bold" : ""} ${col.align === "right" ? "ml-auto" : col.align === "center" ? "mx-auto" : ""}`}
                       >
                         {col.label}
@@ -140,7 +149,7 @@ export function LeaderboardTable<T>({
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
-            {sorted.map((row, index) => (
+            {rows.map((row, index) => (
               <tr key={getRowKey(row)} className="bg-card hover:bg-muted/30 transition-colors group">
                 <td className="sticky left-0 z-10 px-2.5 sm:px-4 py-2 text-center bg-card group-hover:bg-muted/30">
                   <span className={`inline-block min-w-5 font-mono text-xs font-semibold
@@ -177,7 +186,7 @@ export function LeaderboardTable<T>({
                 })}
               </tr>
             ))}
-            {sorted.length === 0 && (
+            {rows.length === 0 && (
               <tr>
                 <td colSpan={columns.length + 1} className="px-4 py-8 text-center text-muted-foreground text-sm">
                   未找到匹配的模型数据
@@ -188,5 +197,61 @@ export function LeaderboardTable<T>({
         </table>
       </div>
     </div>
+  );
+}
+
+type ControlledProps<T> = {
+  rows: T[];
+  columns: ColumnDef<T>[];
+  getRowKey: (row: T) => string;
+  defaultSortKey?: string;
+  defaultSortDir?: SortDir;
+  searchKeys?: (keyof T | string)[];
+  searchPlaceholder?: string;
+};
+
+/** 自带排序/搜索 state 的受控包装,供无 URL 同步需求的页面直接使用。 */
+export function LeaderboardTable<T>({
+  rows,
+  columns,
+  getRowKey,
+  defaultSortKey,
+  defaultSortDir = "desc",
+  searchPlaceholder = "搜索模型…",
+}: ControlledProps<T>) {
+  const [query, setQuery] = useState("");
+  const [sortKey, setSortKey] = useState(
+    defaultSortKey ?? columns.find((c) => c.sortable !== false)?.key ?? columns[0]?.key
+  );
+  const [sortDir, setSortDir] = useState<SortDir>(defaultSortDir);
+
+  const sorted = useMemo(() => {
+    return sortRows(filterRows(rows, columns, query), columns, sortKey, sortDir);
+  }, [rows, columns, sortKey, sortDir, query]);
+
+  function onSort(key: string) {
+    const col = columns.find((c) => c.key === key);
+    if (!col || col.sortable === false) return;
+    if (sortKey === key) {
+      setSortDir((d) => (d === "asc" ? "desc" : "asc"));
+    } else {
+      setSortKey(key);
+      setSortDir(defaultSortDir);
+    }
+  }
+
+  return (
+    <LeaderboardTableView
+      rows={sorted}
+      columns={columns}
+      getRowKey={getRowKey}
+      sortKey={sortKey}
+      sortDir={sortDir}
+      onSort={onSort}
+      query={query}
+      onQueryChange={setQuery}
+      searchPlaceholder={searchPlaceholder}
+      totalCount={rows.length}
+    />
   );
 }

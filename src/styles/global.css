@@ -27,6 +27,8 @@
 
   --color-border: var(--border);
 
+  --color-oriel-gold: var(--oriel-gold);
+
   --radius-sm: calc(var(--radius) - 2px);
   --radius-md: var(--radius);
   --radius-lg: calc(var(--radius) + 2px);

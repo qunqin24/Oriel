@@ -17,6 +17,7 @@ import type {
   SpeechToSpeechModel,
   SpeechToTextModel,
 } from "./types";
+import { getValueScore } from "./value-score";
 
 function asEnvelope<T>(raw: unknown): DataEnvelope<T> {
   return raw as DataEnvelope<T>;
@@ -31,6 +32,20 @@ function byIntelligenceDesc(a: LanguageModel, b: LanguageModel) {
     (b.evaluations.artificial_analysis_intelligence_index ?? -Infinity) -
     (a.evaluations.artificial_analysis_intelligence_index ?? -Infinity)
   );
+}
+
+/** Highest-scoring model by a nullable metric; undefined when none qualify. */
+function bestBy<T>(items: T[], metric: (item: T) => number | null): T | undefined {
+  let best: T | undefined;
+  let bestValue = -Infinity;
+  for (const item of items) {
+    const value = metric(item);
+    if (value != null && Number.isFinite(value) && value > bestValue) {
+      best = item;
+      bestValue = value;
+    }
+  }
+  return best;
 }
 
 export function getLanguageModels() {
@@ -108,26 +123,28 @@ export function getMusicWithVocals() {
 
 export function getOverviewStats() {
   const llm = getLanguageModels();
+  const counts = {
+    language: llm.data.length,
+    image:
+      getTextToImage().data.length + getImageEditing().data.length,
+    video:
+      getTextToVideo().data.length +
+      getImageToVideo().data.length +
+      getTextToVideoAudio().data.length +
+      getImageToVideoAudio().data.length,
+    speech:
+      getTextToSpeech().data.length +
+      getSpeechToSpeech().data.length +
+      getSpeechToText().data.length,
+    music:
+      getMusicInstrumental().data.length +
+      getMusicWithVocals().data.length,
+  };
   return {
     fetchedAt: llm.fetched_at,
     intelligenceIndexVersion: llm.intelligence_index_version,
-    counts: {
-      language: llm.data.length,
-      image:
-        getTextToImage().data.length + getImageEditing().data.length,
-      video:
-        getTextToVideo().data.length +
-        getImageToVideo().data.length +
-        getTextToVideoAudio().data.length +
-        getImageToVideoAudio().data.length,
-      speech:
-        getTextToSpeech().data.length +
-        getSpeechToSpeech().data.length +
-        getSpeechToText().data.length,
-      music:
-        getMusicInstrumental().data.length +
-        getMusicWithVocals().data.length,
-    },
+    counts,
+    totalModels: Object.values(counts).reduce((sum, n) => sum + n, 0),
     top: {
       language: llm.data[0],
       image: getTextToImage().data[0],
@@ -135,7 +152,32 @@ export function getOverviewStats() {
       speech: getTextToSpeech().data[0],
       music: getMusicInstrumental().data[0],
     },
+    highlights: {
+      topIntelligence: llm.data[0],
+      topCoding: bestBy(
+        llm.data,
+        (m) => m.evaluations.artificial_analysis_coding_index
+      ),
+      topValue: bestBy(llm.data, getValueScore),
+      fastest: bestBy(llm.data, (m) => {
+        const ttft = m.performance?.median_time_to_first_token_seconds;
+        return ttft != null && ttft > 0 ? -ttft : null;
+      }),
+    },
   };
+}
+
+export function getLlmVendors() {
+  const llm = getLanguageModels();
+  const counts = new Map<string, number>();
+  for (const m of llm.data) {
+    const name = m.model_creator?.name;
+    if (!name) continue;
+    counts.set(name, (counts.get(name) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 }
 
 export const NAV = [

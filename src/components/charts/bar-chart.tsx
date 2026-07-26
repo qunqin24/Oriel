@@ -1,5 +1,3 @@
-"use client";
-
 import { VendorIcon } from "@/components/vendor-icon";
 import { formatNumber, formatPrice, formatSeconds } from "@/lib/format";
 

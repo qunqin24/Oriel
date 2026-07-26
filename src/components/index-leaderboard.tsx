@@ -1,5 +1,3 @@
-"use client";
-
 import { BarChart } from "@/components/charts/bar-chart";
 import type { LanguageModel } from "@/lib/types";
 

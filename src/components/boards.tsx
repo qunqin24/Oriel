@@ -3,29 +3,14 @@
 import { LeaderboardTable } from "@/components/leaderboard-table";
 import {
   arenaColumns,
-  languageColumns,
   speechToSpeechColumns,
   speechToTextColumns,
 } from "@/lib/columns";
 import type {
   ArenaModel,
-  LanguageModel,
   SpeechToSpeechModel,
   SpeechToTextModel,
 } from "@/lib/types";
-
-export function LanguageBoard({ rows }: { rows: LanguageModel[] }) {
-  return (
-    <LeaderboardTable
-      rows={rows}
-      columns={languageColumns}
-      getRowKey={(row) => row.id}
-      defaultSortKey="intelligence"
-      defaultSortDir="desc"
-      searchPlaceholder="搜索语言模型…"
-    />
-  );
-}
 
 export function ArenaBoard({
   rows,

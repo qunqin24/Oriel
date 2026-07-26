@@ -1,19 +1,150 @@
 ---
-import { LlmClientView } from "@/components/llm-client-view";
 import BaseLayout from "@/layouts/base-layout.astro";
-import { getLanguageModels } from "@/lib/data";
+import { LlmBoardExplorer } from "@/components/llm/llm-board-explorer";
+import { LlmInsights } from "@/components/llm/llm-insights";
+import { MetricCard } from "@/components/ui/metric-card";
+import { getLanguageModels, getLlmVendors } from "@/lib/data";
+import { formatDate, formatNumber, formatPrice, formatSeconds } from "@/lib/format";
+import { getValueScore } from "@/lib/value-score";
 
-const { data, fetched_at, intelligence_index_version } = getLanguageModels();
+const { data: models, fetched_at, intelligence_index_version } = getLanguageModels();
+const vendors = getLlmVendors();
+
+// 四维高光卡
+function bestBy(scoreOf: (m: (typeof models)[number]) => number | null) {
+  let best: (typeof models)[number] | null = null;
+  let bestScore = -Infinity;
+  for (const m of models) {
+    const s = scoreOf(m);
+    if (s != null && Number.isFinite(s) && s > bestScore) {
+      best = m;
+      bestScore = s;
+    }
+  }
+  return best;
+}
+const topIntelligence = models[0];
+const topCoding = bestBy((m) => m.evaluations.artificial_analysis_coding_index);
+const topSpeed = bestBy((m) => m.performance?.median_output_tokens_per_second ?? null);
+const topValue = bestBy((m) => getValueScore(m));
+
+const highlights = [
+  {
+    label: "智能领先",
+    model: topIntelligence,
+    value: formatNumber(topIntelligence?.evaluations.artificial_analysis_intelligence_index, 1),
+    gold: true,
+  },
+  {
+    label: "编程领先",
+    model: topCoding,
+    value: formatNumber(topCoding?.evaluations.artificial_analysis_coding_index, 1),
+    gold: false,
+  },
+  {
+    label: "速度最快",
+    model: topSpeed,
+    value: `${formatNumber(topSpeed?.performance?.median_output_tokens_per_second, 0)} tok/s`,
+    gold: false,
+  },
+  {
+    label: "性价比优选",
+    model: topValue,
+    value: formatPrice(topValue?.pricing?.price_1m_output_tokens),
+    gold: false,
+  },
+];
+
+// URL 状态 → 初始 props(与 explorer 内的默认逻辑保持一致)
+const params = Astro.url.searchParams;
+const DIMS = ["overview", "intelligence", "coding", "agentic", "value", "speed"] as const;
+type Dim = (typeof DIMS)[number];
+const dim: Dim = DIMS.includes(params.get("dim") as Dim)
+  ? (params.get("dim") as Dim)
+  : "overview";
+const VALID_SORT_KEYS: Record<Dim, string[]> = {
+  overview: ["name", "intelligence", "coding", "agentic", "value", "price_out", "price_in", "speed", "ttft", "release_date"],
+  intelligence: ["intelligence", "price_out", "speed", "release_date"],
+  coding: ["coding", "price_out", "speed", "release_date"],
+  agentic: ["agentic", "price_out", "speed", "release_date"],
+  value: ["value", "price_out", "speed", "release_date"],
+  speed: ["speed", "price_out", "ttft", "release_date"],
+};
+const rawSort = params.get("sort");
+const sortKey = rawSort && VALID_SORT_KEYS[dim].includes(rawSort) ? rawSort : undefined;
+const sortDir = params.get("dir") === "asc" ? "asc" : undefined;
+const q = params.get("q")?.slice(0, 80) ?? "";
+const vendorSet = new Set(vendors.map((v) => v.name));
+const initialVendors = (params.get("vendor") ?? "")
+  .split(",")
+  .filter((v) => vendorSet.has(v));
 ---
 
 <BaseLayout
   title="语言模型榜单"
   description="基于智能指数、编程指数与生成速度的全景语言模型排行榜。"
 >
-  <LlmClientView
-    models={data}
-    indexVersion={intelligence_index_version}
-    fetchedAt={fetched_at}
-    client:load
-  />
+  <div class="flex flex-col gap-8 sm:gap-12 max-w-7xl mx-auto w-full">
+    {/* 页头 */}
+    <section class="flex flex-col gap-4 sm:gap-5">
+      <div class="flex flex-col gap-2">
+        <div class="flex flex-wrap items-center gap-2 text-[11px] font-mono text-muted-foreground uppercase tracking-wider">
+          <span class="bg-secondary px-2 py-0.5 rounded text-secondary-foreground">
+            Oriel Index v{intelligence_index_version ?? "4.1"}
+          </span>
+          <span>快照 {formatDate(fetched_at)}</span>
+          <span>{formatNumber(models.length, 0)} 模型 · {vendors.length} 厂商</span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
+          语言模型
+        </h1>
+        <p class="text-muted-foreground text-sm max-w-2xl leading-relaxed">
+          按综合智能、编程、智能体、性价比与速度拆分 {formatNumber(models.length, 0)} 款语言模型,全部状态写入 URL,可直接分享。
+        </p>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        {highlights.map((h) => (
+          <a href={h.model ? `/llm/${h.model.id}` : "/llm"} class="group">
+            <MetricCard
+              label={h.label}
+              value={h.value}
+              subValue={h.model?.name}
+              className={`h-full transition-colors cursor-pointer ${
+                h.gold
+                  ? "border-oriel-gold/50 bg-oriel-gold/5 group-hover:border-oriel-gold"
+                  : "group-hover:border-primary/40"
+              }`}
+            />
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* 多维榜单 */}
+    <section class="flex flex-col gap-4 min-w-0">
+      <div class="flex items-end justify-between gap-3 mb-1 sm:mb-2 border-b border-border pb-2">
+        <h2 class="text-lg sm:text-xl font-bold tracking-tight text-foreground">多维榜单</h2>
+        <span class="text-xs text-muted-foreground font-mono shrink-0">Leaderboards</span>
+      </div>
+      <LlmBoardExplorer
+        models={models}
+        vendors={vendors}
+        initialDim={dim}
+        initialSortKey={sortKey}
+        initialSortDir={sortDir}
+        initialQuery={q}
+        initialVendors={initialVendors}
+        client:load
+      />
+    </section>
+
+    {/* 洞察 */}
+    <section class="flex flex-col gap-4 min-w-0">
+      <div class="flex items-end justify-between gap-3 mb-1 sm:mb-2 border-b border-border pb-2">
+        <h2 class="text-lg sm:text-xl font-bold tracking-tight text-foreground">洞察</h2>
+        <span class="text-xs text-muted-foreground font-mono shrink-0">Insights</span>
+      </div>
+      <LlmInsights models={models} intelligenceIndexVersion={intelligence_index_version} />
+    </section>
+  </div>
 </BaseLayout>
