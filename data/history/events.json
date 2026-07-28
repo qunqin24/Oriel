@@ -1,6 +1,216 @@
 {
-  "generated_at": "2026-07-27T04:10:53.483Z",
+  "generated_at": "2026-07-28T03:43:43.234Z",
   "events": [
+    {
+      "date": "2026-07-28",
+      "type": "price",
+      "model": {
+        "id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
+        "name": "GLM-5.1 (Reasoning)",
+        "slug": "glm-5-1",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-28"
+      },
+      "metric": "priceIn",
+      "from": 1.39,
+      "to": 1.38
+    },
+    {
+      "date": "2026-07-28",
+      "type": "price",
+      "model": {
+        "id": "b58b8272-cd3f-44b9-9b68-612f40779ce2",
+        "name": "Hy3-preview (Non-reasoning)",
+        "slug": "hy3-non-reasoning",
+        "creator": "Tencent",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-28"
+      },
+      "metric": "priceIn",
+      "from": 0.12,
+      "to": 0.06
+    },
+    {
+      "date": "2026-07-28",
+      "type": "price",
+      "model": {
+        "id": "b58b8272-cd3f-44b9-9b68-612f40779ce2",
+        "name": "Hy3-preview (Non-reasoning)",
+        "slug": "hy3-non-reasoning",
+        "creator": "Tencent",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-28"
+      },
+      "metric": "priceOut",
+      "from": 0.43,
+      "to": 0.23
+    },
+    {
+      "date": "2026-07-28",
+      "type": "price",
+      "model": {
+        "id": "8ca48626-ff5e-48b3-8401-38081376d706",
+        "name": "Hy3-preview (Reasoning)",
+        "slug": "hy3-preview",
+        "creator": "Tencent",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-28"
+      },
+      "metric": "priceIn",
+      "from": 0.12,
+      "to": 0.06
+    },
+    {
+      "date": "2026-07-28",
+      "type": "price",
+      "model": {
+        "id": "8ca48626-ff5e-48b3-8401-38081376d706",
+        "name": "Hy3-preview (Reasoning)",
+        "slug": "hy3-preview",
+        "creator": "Tencent",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-28"
+      },
+      "metric": "priceOut",
+      "from": 0.43,
+      "to": 0.23
+    },
+    {
+      "date": "2026-07-28",
+      "type": "price",
+      "model": {
+        "id": "976cc8ad-7904-4056-83c5-960181f47d5f",
+        "name": "Llama 3.3 Instruct 70B",
+        "slug": "llama-3-3-instruct-70b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-28"
+      },
+      "metric": "priceOut",
+      "from": 0.71,
+      "to": 0.72
+    },
+    {
+      "date": "2026-07-28",
+      "type": "price",
+      "model": {
+        "id": "1f05af98-1ec6-4506-a0b8-57a8c9b63878",
+        "name": "Mistral Medium",
+        "slug": "mistral-medium",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-28"
+      },
+      "metric": "priceIn",
+      "from": 2.75,
+      "to": 1.5
+    },
+    {
+      "date": "2026-07-28",
+      "type": "price",
+      "model": {
+        "id": "1f05af98-1ec6-4506-a0b8-57a8c9b63878",
+        "name": "Mistral Medium",
+        "slug": "mistral-medium",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-28"
+      },
+      "metric": "priceOut",
+      "from": 8.1,
+      "to": 7.5
+    },
+    {
+      "date": "2026-07-28",
+      "type": "price",
+      "model": {
+        "id": "35d602fc-b8b8-4698-9f4d-f2ce11ca50e4",
+        "name": "Mistral Small (Feb '24)",
+        "slug": "mistral-small-2402",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-28"
+      },
+      "metric": "priceIn",
+      "from": 1,
+      "to": 0.15
+    },
+    {
+      "date": "2026-07-28",
+      "type": "price",
+      "model": {
+        "id": "35d602fc-b8b8-4698-9f4d-f2ce11ca50e4",
+        "name": "Mistral Small (Feb '24)",
+        "slug": "mistral-small-2402",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-28"
+      },
+      "metric": "priceOut",
+      "from": 3,
+      "to": 0.6
+    },
+    {
+      "date": "2026-07-28",
+      "type": "score",
+      "model": {
+        "id": "b07aef0a-b192-46a1-b1c9-40b06d1b9061",
+        "name": "Gemma 4 E2B (Reasoning)",
+        "slug": "gemma-4-e2b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-28"
+      },
+      "metric": "intelligence",
+      "from": 9.5,
+      "to": 9.4
+    },
+    {
+      "date": "2026-07-28",
+      "type": "score",
+      "model": {
+        "id": "66f4ce73-9a9b-4b49-9c6e-bedb9bfdc720",
+        "name": "Ministral 3 3B",
+        "slug": "ministral-3-3b",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-28"
+      },
+      "metric": "intelligence",
+      "from": 6.5,
+      "to": 6.3
+    },
+    {
+      "date": "2026-07-28",
+      "type": "score",
+      "model": {
+        "id": "a6ea7ec0-0aca-4442-98fb-4296c6d18b31",
+        "name": "Qwen3.5 0.8B (Reasoning)",
+        "slug": "qwen3-5-0-8b",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-28"
+      },
+      "metric": "intelligence",
+      "from": 5.5,
+      "to": 5.3
+    },
+    {
+      "date": "2026-07-28",
+      "type": "score",
+      "model": {
+        "id": "5d4acc80-7a88-4e84-bfe7-99071b84e6a4",
+        "name": "Qwen3.5 2B (Reasoning)",
+        "slug": "qwen3-5-2b",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-28"
+      },
+      "metric": "intelligence",
+      "from": 6.9,
+      "to": 7.1
+    },
     {
       "date": "2026-07-25",
       "type": "added",
