@@ -86,7 +86,14 @@ check("hreflang 互指", zhAlt?.endsWith("/en") && enAlt?.endsWith("/"), `${zhAl
 const zhModel = read("models/glm-4-5v/index.html");
 const enModel = read("en/models/glm-4-5v/index.html");
 check("模型页双语都存在且内容不同", zhModel.length > 0 && enModel.length > 0 && zhModel !== enModel);
-check("模型页数值一致（81 tok/s）", zhModel.includes("81") && enModel.includes("81"));
+// 吞吐量数值每天随上游刷新变化，不能硬编码具体数字——只校验中英文两页渲染的是同一个数。
+const zhThroughput = zhModel.match(/([\d,.]+)\s*token\/秒/)?.[1];
+const enThroughput = enModel.match(/([\d,.]+)\s*tokens\/sec/)?.[1];
+check(
+  "模型页数值一致（吞吐量）",
+  !!zhThroughput && zhThroughput === enThroughput,
+  `${zhThroughput} ⇄ ${enThroughput} tok/s`
+);
 
 console.log("\n【6】稀疏度降级");
 // 动态挑一个三项评测全空的模型，不写死 slug——上游随时会改。
