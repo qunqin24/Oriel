@@ -1,6 +1,735 @@
 {
-  "generated_at": "2026-07-29T03:47:30.806Z",
+  "generated_at": "2026-07-31T10:39:22.573Z",
   "events": [
+    {
+      "date": "2026-07-31",
+      "type": "added",
+      "model": {
+        "id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+        "name": "DeepSeek V4 Flash 0731 (Reasoning, Max Effort)",
+        "slug": "deepseek-v4-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-07-31"
+      },
+      "intelligence": 49.9
+    },
+    {
+      "date": "2026-07-31",
+      "type": "added",
+      "model": {
+        "id": "7261504e-503c-4a66-a9d3-a3272cdf9ad6",
+        "name": "Inkling Small",
+        "slug": "inkling-small",
+        "creator": "Thinking Machines",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-07-31"
+      },
+      "intelligence": 40.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "added",
+      "model": {
+        "id": "512d17ef-13d2-4f65-bf9b-154b0dec7e8d",
+        "name": "Kimi K3 (low)",
+        "slug": "kimi-k3-low",
+        "creator": "Kimi",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-07-31"
+      },
+      "intelligence": 46.6
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "eab1492c-b853-4852-aa71-06b0ec2481c1",
+        "name": "GPT-5 (ChatGPT)",
+        "slug": "gpt-5-chatgpt",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 1.25,
+      "to": null
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "eab1492c-b853-4852-aa71-06b0ec2481c1",
+        "name": "GPT-5 (ChatGPT)",
+        "slug": "gpt-5-chatgpt",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 10,
+      "to": null
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "aa55297e-8fbf-4372-b4ab-9b068dc6396c",
+        "name": "GPT-5.6 Luna (high)",
+        "slug": "gpt-5-6-luna-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 1,
+      "to": 0.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "aa55297e-8fbf-4372-b4ab-9b068dc6396c",
+        "name": "GPT-5.6 Luna (high)",
+        "slug": "gpt-5-6-luna-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 6,
+      "to": 1.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "050c61cd-cddc-463a-a30a-a82aaa37be59",
+        "name": "GPT-5.6 Luna (low)",
+        "slug": "gpt-5-6-luna-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 1,
+      "to": 0.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "050c61cd-cddc-463a-a30a-a82aaa37be59",
+        "name": "GPT-5.6 Luna (low)",
+        "slug": "gpt-5-6-luna-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 6,
+      "to": 1.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "426d24c8-49ae-482a-b4a8-20f1c53f21c1",
+        "name": "GPT-5.6 Luna (max)",
+        "slug": "gpt-5-6-luna",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 1,
+      "to": 0.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "426d24c8-49ae-482a-b4a8-20f1c53f21c1",
+        "name": "GPT-5.6 Luna (max)",
+        "slug": "gpt-5-6-luna",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 6,
+      "to": 1.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "58b812bf-8498-46db-b834-f43ccc614b61",
+        "name": "GPT-5.6 Luna (medium)",
+        "slug": "gpt-5-6-luna-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 1,
+      "to": 0.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "58b812bf-8498-46db-b834-f43ccc614b61",
+        "name": "GPT-5.6 Luna (medium)",
+        "slug": "gpt-5-6-luna-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 6,
+      "to": 1.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "dc64f856-3ded-497d-9527-d41d31267ed5",
+        "name": "GPT-5.6 Luna (Non-reasoning)",
+        "slug": "gpt-5-6-luna-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 1,
+      "to": 0.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "dc64f856-3ded-497d-9527-d41d31267ed5",
+        "name": "GPT-5.6 Luna (Non-reasoning)",
+        "slug": "gpt-5-6-luna-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 6,
+      "to": 1.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "87110ff0-1f79-41b4-9976-eda250597317",
+        "name": "GPT-5.6 Luna (xhigh)",
+        "slug": "gpt-5-6-luna-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 1,
+      "to": 0.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "87110ff0-1f79-41b4-9976-eda250597317",
+        "name": "GPT-5.6 Luna (xhigh)",
+        "slug": "gpt-5-6-luna-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 6,
+      "to": 1.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "81972fba-1219-477e-bbfb-18c656a63ff7",
+        "name": "GPT-5.6 Terra (high)",
+        "slug": "gpt-5-6-terra-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 2.5,
+      "to": 2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "81972fba-1219-477e-bbfb-18c656a63ff7",
+        "name": "GPT-5.6 Terra (high)",
+        "slug": "gpt-5-6-terra-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 15,
+      "to": 12
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "cc4a20cd-09fe-4962-a430-119c815e85fa",
+        "name": "GPT-5.6 Terra (low)",
+        "slug": "gpt-5-6-terra-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 2.5,
+      "to": 2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "cc4a20cd-09fe-4962-a430-119c815e85fa",
+        "name": "GPT-5.6 Terra (low)",
+        "slug": "gpt-5-6-terra-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 15,
+      "to": 12
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "bcf8db0a-3bb6-4d82-9516-0f57370c85a6",
+        "name": "GPT-5.6 Terra (max)",
+        "slug": "gpt-5-6-terra",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 2.5,
+      "to": 2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "bcf8db0a-3bb6-4d82-9516-0f57370c85a6",
+        "name": "GPT-5.6 Terra (max)",
+        "slug": "gpt-5-6-terra",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 15,
+      "to": 12
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "26e0f83a-ca98-4f34-94ac-7c5e251ee410",
+        "name": "GPT-5.6 Terra (medium)",
+        "slug": "gpt-5-6-terra-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 2.5,
+      "to": 2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "26e0f83a-ca98-4f34-94ac-7c5e251ee410",
+        "name": "GPT-5.6 Terra (medium)",
+        "slug": "gpt-5-6-terra-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 15,
+      "to": 12
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "9b97a35e-6ac7-44d9-91c6-422fa678963e",
+        "name": "GPT-5.6 Terra (Non-reasoning)",
+        "slug": "gpt-5-6-terra-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 2.5,
+      "to": 2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "9b97a35e-6ac7-44d9-91c6-422fa678963e",
+        "name": "GPT-5.6 Terra (Non-reasoning)",
+        "slug": "gpt-5-6-terra-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 15,
+      "to": 12
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "9e30696f-16fa-4b4f-ba53-161895a85fed",
+        "name": "GPT-5.6 Terra (xhigh)",
+        "slug": "gpt-5-6-terra-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 2.5,
+      "to": 2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "9e30696f-16fa-4b4f-ba53-161895a85fed",
+        "name": "GPT-5.6 Terra (xhigh)",
+        "slug": "gpt-5-6-terra-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 15,
+      "to": 12
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "c99f3bde-7c08-4de8-bd5c-8ee9123ebffa",
+        "name": "gpt-oss-120b (low)",
+        "slug": "gpt-oss-120b-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 0.6,
+      "to": 0.59
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "36f73aaf-d38a-4b56-a2b3-d04d17186910",
+        "name": "gpt-oss-20b (high)",
+        "slug": "gpt-oss-20b",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 0.06,
+      "to": 0.07
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "16149b9c-a1e9-4669-a5cb-ff3c00d78f89",
+        "name": "gpt-oss-20b (low)",
+        "slug": "gpt-oss-20b-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 0.2,
+      "to": 0.23
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "b23e6c69-96e5-44c9-8f58-4b42e0c399d5",
+        "name": "Hy3",
+        "slug": "hy3",
+        "creator": "Tencent",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 0.58,
+      "to": 0.56
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "5fb47ff6-a30e-4c2c-96f2-55e95a13390f",
+        "name": "Llama 3.2 Instruct 11B (Vision)",
+        "slug": "llama-3-2-instruct-11b-vision",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 0.36,
+      "to": 0.34
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "5fb47ff6-a30e-4c2c-96f2-55e95a13390f",
+        "name": "Llama 3.2 Instruct 11B (Vision)",
+        "slug": "llama-3-2-instruct-11b-vision",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 0.36,
+      "to": 0.34
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "9ca71ac4-41c8-42c0-87dd-5704a9e5b94d",
+        "name": "Llama 3.2 Instruct 90B (Vision)",
+        "slug": "llama-3-2-instruct-90b-vision",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 2.04,
+      "to": null
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "9ca71ac4-41c8-42c0-87dd-5704a9e5b94d",
+        "name": "Llama 3.2 Instruct 90B (Vision)",
+        "slug": "llama-3-2-instruct-90b-vision",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 2.04,
+      "to": null
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "976cc8ad-7904-4056-83c5-960181f47d5f",
+        "name": "Llama 3.3 Instruct 70B",
+        "slug": "llama-3-3-instruct-70b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 0.59,
+      "to": 0.6
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "5c3bdc0d-abab-4526-8079-34de4089bb4a",
+        "name": "LongCat 2.0",
+        "slug": "longcat-2-0",
+        "creator": "LongCat",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": null,
+      "to": 0.75
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "5c3bdc0d-abab-4526-8079-34de4089bb4a",
+        "name": "LongCat 2.0",
+        "slug": "longcat-2-0",
+        "creator": "LongCat",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": null,
+      "to": 2.95
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "63872e9c-3377-4a6b-b477-7bba244c38e9",
+        "name": "NVIDIA Nemotron 3 Super 120B A12B (Reasoning)",
+        "slug": "nvidia-nemotron-3-super-120b-a12b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": 0.25,
+      "to": 0.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "63872e9c-3377-4a6b-b477-7bba244c38e9",
+        "name": "NVIDIA Nemotron 3 Super 120B A12B (Reasoning)",
+        "slug": "nvidia-nemotron-3-super-120b-a12b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": 0.78,
+      "to": 0.8
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "b89c4faf-219e-4171-a1aa-e3bd2fd0a924",
+        "name": "Solar Pro 3",
+        "slug": "solar-pro-3",
+        "creator": "Upstage",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceIn",
+      "from": null,
+      "to": 0.15
+    },
+    {
+      "date": "2026-07-31",
+      "type": "price",
+      "model": {
+        "id": "b89c4faf-219e-4171-a1aa-e3bd2fd0a924",
+        "name": "Solar Pro 3",
+        "slug": "solar-pro-3",
+        "creator": "Upstage",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "priceOut",
+      "from": null,
+      "to": 0.6
+    },
+    {
+      "date": "2026-07-31",
+      "type": "score",
+      "model": {
+        "id": "b07aef0a-b192-46a1-b1c9-40b06d1b9061",
+        "name": "Gemma 4 E2B (Reasoning)",
+        "slug": "gemma-4-e2b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "intelligence",
+      "from": 9.4,
+      "to": 9.7
+    },
+    {
+      "date": "2026-07-31",
+      "type": "score",
+      "model": {
+        "id": "d80eb0f1-f62e-4d31-99d2-7a925eb126b0",
+        "name": "Gemma 4 E4B (Reasoning)",
+        "slug": "gemma-4-e4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "intelligence",
+      "from": 11.9,
+      "to": 12.2
+    },
+    {
+      "date": "2026-07-31",
+      "type": "score",
+      "model": {
+        "id": "66f4ce73-9a9b-4b49-9c6e-bedb9bfdc720",
+        "name": "Ministral 3 3B",
+        "slug": "ministral-3-3b",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "intelligence",
+      "from": 6.3,
+      "to": 6.8
+    },
+    {
+      "date": "2026-07-31",
+      "type": "score",
+      "model": {
+        "id": "a6ea7ec0-0aca-4442-98fb-4296c6d18b31",
+        "name": "Qwen3.5 0.8B (Reasoning)",
+        "slug": "qwen3-5-0-8b",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "intelligence",
+      "from": 5.3,
+      "to": 5.5
+    },
+    {
+      "date": "2026-07-31",
+      "type": "score",
+      "model": {
+        "id": "5d4acc80-7a88-4e84-bfe7-99071b84e6a4",
+        "name": "Qwen3.5 2B (Reasoning)",
+        "slug": "qwen3-5-2b",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-07-31"
+      },
+      "metric": "intelligence",
+      "from": 7.1,
+      "to": 7.6
+    },
     {
       "date": "2026-07-28",
       "type": "price",

@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-29T03:47:29.875Z",
+  "fetched_at": "2026-07-31T10:39:21.697Z",
   "tier": "free",
   "data": [
     {
@@ -433,6 +433,18 @@
       "bba_score": 0.99,
       "fdb_score": 0.98,
       "tau_voice_score": 0.55
+    },
+    {
+      "id": "ad8b4198-6d80-483a-aaeb-ce9150e0eade",
+      "name": "Grok Voice Think Fast 2.0 High",
+      "slug": "grok-voice-think-high-2-0",
+      "model_creator": {
+        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+        "name": "SpaceXAI"
+      },
+      "bba_score": 0.97,
+      "fdb_score": 0.95,
+      "tau_voice_score": 0.56
     }
   ]
 }

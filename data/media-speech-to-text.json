@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-29T03:47:29.875Z",
+  "fetched_at": "2026-07-31T10:39:21.697Z",
   "tier": "free",
   "data": [
     {
@@ -64,15 +64,6 @@
         "name": "Amazon"
       },
       "aa_wer_index": 0.1
-    },
-    {
-      "id": "f1eb3e2c-3748-4c3f-a6b5-a0f63f6ccf7d",
-      "name": "GPT-4o Transcribe, OpenAI",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI"
-      },
-      "aa_wer_index": 0
     },
     {
       "id": "a85d608d-5bd5-47aa-a363-cf10161d6733",
@@ -143,6 +134,24 @@
       "model_creator": {
         "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
         "name": "StepFun"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "f1eb3e2c-3748-4c3f-a6b5-a0f63f6ccf7d",
+      "name": "GPT-4o Transcribe, OpenAI",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "d15963b1-a8b7-483c-94c0-d59a6260d53a",
+      "name": "GPT Transcribe, OpenAI",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
       },
       "aa_wer_index": 0
     },
@@ -550,6 +559,15 @@
         "name": "OpenAI"
       },
       "aa_wer_index": 0
+    },
+    {
+      "id": "e47da9de-0d9f-4002-a04b-c684b3c1bf49",
+      "name": "GPT Live Transcribe, OpenAI",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "aa_wer_index": null
     }
   ]
 }
