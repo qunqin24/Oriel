@@ -1,0 +1,204 @@
+---
+/**
+ * 五边形雷达图：三项评测指数 + 吞吐 + 性价比，与全站均值对比。
+ *
+ * 几何计算交给 d3-shape / d3-scale（lineRadial + pointRadial + scaleLinear），
+ * 不自己手推极坐标三角函数。只在构建期的 frontmatter 里跑一次，产出纯静态
+ * SVG path——这几个包不会进浏览器包，运行时不需要一行 JS。
+ *
+ * 半径不从圆心起——真实数据最低也落在 15% 处，圆心这个位置专留给
+ * 「没测过」。这样「测过但分很低」和「没测」在图上不会长得一样，
+ * 呼应本站别处「未评测」不能画成空白或零的规则。
+ */
+import { curveLinearClosed, lineRadial, pointRadial } from "d3-shape";
+import { scaleLinear } from "d3-scale";
+import { MODELS } from "@/lib/data";
+import { METRICS, type MetricId } from "@/lib/metrics";
+import { t, type Locale } from "@/i18n";
+import type { LanguageModel } from "@/lib/types";
+
+interface Props {
+  locale: Locale;
+  model: LanguageModel;
+}
+
+const { locale, model } = Astro.props;
+const dict = t(locale);
+
+const AXES: MetricId[] = ["intelligence", "coding", "agentic", "throughput", "value"];
+const N = AXES.length;
+
+// VB 比图形直径宽不少——四字标签（"性价比"）伸出去还得留出容身空间，
+// 否则 SVG 视口会直接把超出 viewBox 的字裁掉半个字。
+const VB = 300;
+const C = VB / 2;
+const R = 96;
+const MIN_R = 0.15 * R;
+
+const angleStep = (2 * Math.PI) / N;
+
+const axes = AXES.map((id, i) => {
+  const def = METRICS[id];
+  const pool = MODELS.map(def.get).filter(
+    (v): v is number => v != null && Number.isFinite(v)
+  );
+  const domain: [number, number] = pool.length
+    ? [Math.min(...pool), Math.max(...pool)]
+    : [0, 1];
+  const radius = scaleLinear().domain(domain).range([MIN_R, R]).clamp(true);
+
+  const value = def.get(model);
+  const hasData = value != null && Number.isFinite(value);
+  const avg = pool.length ? pool.reduce((sum, v) => sum + v, 0) / pool.length : null;
+
+  return {
+    angle: i * angleStep,
+    label: def.label(dict),
+    hasData,
+    formatted: hasData ? def.format(value, locale) : dict.model.noData,
+    r: hasData ? radius(value!) : 0,
+    avgR: avg != null ? radius(avg) : MIN_R,
+  };
+});
+
+const coverage = axes.filter((a) => a.hasData).length;
+
+const xy = (angle: number, r: number) => {
+  const [x, y] = pointRadial(angle, r);
+  return { x, y };
+};
+
+const radialLine = lineRadial<{ angle: number; r: number }>()
+  .angle((d) => d.angle)
+  .radius((d) => d.r)
+  .curve(curveLinearClosed);
+
+const RINGS = [0.25, 0.5, 0.75, 1];
+const gridPaths = RINGS.map(
+  (frac) => radialLine(axes.map((a) => ({ angle: a.angle, r: frac * R }))) ?? ""
+);
+const spokes = axes.map((a) => xy(a.angle, R));
+const avgPath = radialLine(axes.map((a) => ({ angle: a.angle, r: a.avgR }))) ?? "";
+const modelPath = radialLine(axes.map((a) => ({ angle: a.angle, r: a.r }))) ?? "";
+
+/** 五个顶点位置固定，标签的锚点和偏移量直接查表，不用通用逻辑猜锚点。 */
+const LABEL_POS: Record<number, { dx: number; dy: number; anchor: "start" | "middle" | "end" }> = {
+  0: { dx: 0, dy: -12, anchor: "middle" },
+  1: { dx: 10, dy: -3, anchor: "start" },
+  2: { dx: 8, dy: 16, anchor: "start" },
+  3: { dx: -8, dy: 16, anchor: "end" },
+  4: { dx: -10, dy: -3, anchor: "end" },
+};
+
+const ariaLabel = `${model.name}: ${axes.map((a) => `${a.label} ${a.formatted}`).join(", ")}`;
+---
+
+{
+  coverage === 0 ? (
+    <p class="text-sm text-mute">{dict.model.noDataHint}</p>
+  ) : (
+    <div class="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
+      <svg
+        viewBox={`0 0 ${VB} ${VB}`}
+        width={VB}
+        height={VB}
+        class="shrink-0"
+        role="img"
+        aria-label={ariaLabel}
+      >
+        <g transform={`translate(${C},${C})`}>
+          {gridPaths.map((d) => (
+            <path
+              d={d}
+              fill="none"
+              stroke="var(--rule)"
+              stroke-width="1"
+              vector-effect="non-scaling-stroke"
+            />
+          ))}
+          {spokes.map((p) => (
+            <line
+              x1="0"
+              y1="0"
+              x2={p.x.toFixed(1)}
+              y2={p.y.toFixed(1)}
+              stroke="var(--rule)"
+              stroke-width="1"
+              vector-effect="non-scaling-stroke"
+            />
+          ))}
+
+          <path
+            d={avgPath}
+            fill="none"
+            stroke="var(--mute)"
+            stroke-width="1.25"
+            stroke-dasharray="3 3"
+            vector-effect="non-scaling-stroke"
+          />
+          <path
+            d={modelPath}
+            fill="var(--gold)"
+            fill-opacity="0.16"
+            stroke="var(--gold)"
+            stroke-width="1.5"
+            stroke-linejoin="round"
+            vector-effect="non-scaling-stroke"
+          />
+
+          {axes.map((a) => {
+            const p = xy(a.angle, a.r);
+            return a.hasData ? (
+              <circle cx={p.x.toFixed(1)} cy={p.y.toFixed(1)} r="2.5" fill="var(--gold)" />
+            ) : (
+              <circle
+                cx="0"
+                cy="0"
+                r="2.5"
+                fill="var(--ground)"
+                stroke="var(--mute)"
+                stroke-width="1"
+                stroke-dasharray="1.5 1.5"
+              />
+            );
+          })}
+
+          {axes.map((a, i) => {
+            const outer = xy(a.angle, R);
+            const pos = LABEL_POS[i];
+            const x = (outer.x + pos.dx).toFixed(1);
+            const y = (outer.y + pos.dy).toFixed(1);
+            return (
+              <text x={x} y={y} text-anchor={pos.anchor}>
+                <tspan x={x} dy="0" class="eyebrow" fill="var(--mute)">
+                  {a.label}
+                </tspan>
+                <tspan
+                  x={x}
+                  dy="13"
+                  class="data"
+                  font-size="11"
+                  fill={a.hasData ? "var(--fg)" : "var(--mute)"}
+                >
+                  {a.formatted}
+                </tspan>
+              </text>
+            );
+          })}
+        </g>
+      </svg>
+
+      <div class="flex flex-col gap-3 text-[12px]">
+        <div class="flex items-center gap-2">
+          <span class="h-2 w-2 shrink-0 rounded-full bg-gold" />
+          <span class="text-fg">{model.name}</span>
+        </div>
+        <div class="flex items-center gap-2 text-mute">
+          <span class="h-0 w-3 shrink-0 border-t border-dashed border-mute" />
+          <span>{dict.model.radarAverage}</span>
+        </div>
+        {coverage < N && <p class="max-w-xs text-mute">{dict.model.radarPartial}</p>}
+      </div>
+    </div>
+  )
+}

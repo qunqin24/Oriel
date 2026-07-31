@@ -30,6 +30,10 @@
   --color-gold: var(--gold);
   --color-rise: var(--rise);
   --color-fall: var(--fall);
+  --color-series-1: var(--series-1);
+  --color-series-2: var(--series-2);
+  --color-series-3: var(--series-3);
+  --color-series-4: var(--series-4);
 
   /* 全站统一 6px 圆角，不留直角。 */
   --radius-sm: 6px;
@@ -64,6 +68,18 @@
   /* 散点图里的普通模型点：存在感要弱于前沿线 */
   --plot-dot: #b4bcc7;
   --plot-grid: #eef0f2;
+
+  /*
+   * 对比页最多同屏 4 个模型叠在一张雷达图上，任意两个都可能同时出现——
+   * 这四色是跑过 dataviz 校验脚本（CVD 模拟 + 正常视觉 ΔE + 对比度，
+   * --pairs all）选出来的，全部两两可分。固定顺序，不循环、不按名次
+   * 重新分配：见 compare-radar.tsx 里的 slot 分配逻辑。
+   * 金色仍然只表示「这一行的最优值」，不用来表示模型身份。
+   */
+  --series-1: #e69f00;
+  --series-2: #56b4e9;
+  --series-3: #009e73;
+  --series-4: #cc79a7;
 }
 
 /*
@@ -86,6 +102,12 @@
 
   --plot-dot: #5c6980;
   --plot-grid: #242c3a;
+
+  /* 同一组色相，为深色底重新校验过明度，不是简单调亮/调暗。 */
+  --series-1: #a87400;
+  --series-2: #168dcf;
+  --series-3: #009e73;
+  --series-4: #96366b;
 }
 
 @layer base {

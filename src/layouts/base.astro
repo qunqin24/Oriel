@@ -96,10 +96,14 @@ const enHref = canonical(swapLocale(pathname, "en"));
 
         function applyTheme(root) {
           const stored = localStorage.getItem("oriel-theme");
-          // 简约白是站点默认，不跟随系统的深色偏好——用户切换过一次就会记住。
-          // 想改回跟随系统，把下面的 "light" 换成:
-          //   window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-          const theme = stored === "light" || stored === "dark" ? stored : "light";
+          // 没有存储偏好时跟随系统深色模式；用户手动切换过一次之后就记住那次选择，
+          // 不再跟随系统变化。
+          const theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
           root.dataset.theme = theme;
           root.style.colorScheme = theme;
           root.style.backgroundColor = GROUND[theme];

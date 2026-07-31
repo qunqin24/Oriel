@@ -1,0 +1,65 @@
+---
+/**
+ * 厂商图标，有则用 lobehub 的品牌 SVG，没有则退化成首字母头像。
+ * 图标文件是构建前同步进 public/ 的静态资源，见 scripts/sync-vendor-icons.ts。
+ */
+import { vendorIconSlug, vendorInitial, VENDOR_ICON_DUAL_TONE } from "@/lib/vendor-icons";
+
+interface Props {
+  name: string;
+  size?: number;
+  class?: string;
+}
+
+const { name, size = 14, class: className } = Astro.props;
+const slug = vendorIconSlug(name);
+const dualTone = slug != null && VENDOR_ICON_DUAL_TONE.has(slug);
+---
+
+{
+  slug && dualTone ? (
+    <Fragment>
+      {/*
+        <img src="*.svg"> 加载的 SVG 不继承页面的 color，currentColor 救不了——
+        两份烤好颜色的文件都渲染出来，用 dark: 切可见性，和主题按钮的太阳/
+        月亮图标同一个套路，不用等 JS 判断主题。
+      */}
+      <img
+        src={`/vendor-icons/${slug}-onlight.svg`}
+        width={size}
+        height={size}
+        alt=""
+        loading="lazy"
+        class:list={["shrink-0 object-contain align-middle dark:hidden", className]}
+      />
+      <img
+        src={`/vendor-icons/${slug}-ondark.svg`}
+        width={size}
+        height={size}
+        alt=""
+        loading="lazy"
+        class:list={["hidden shrink-0 object-contain align-middle dark:inline-block", className]}
+      />
+    </Fragment>
+  ) : slug ? (
+    <img
+      src={`/vendor-icons/${slug}.svg`}
+      width={size}
+      height={size}
+      alt=""
+      loading="lazy"
+      class:list={["inline-block shrink-0 object-contain align-middle", className]}
+    />
+  ) : (
+    <span
+      class:list={[
+        "inline-flex shrink-0 items-center justify-center rounded-full border border-rule bg-panel align-middle text-mute",
+        className,
+      ]}
+      style={`width:${size}px;height:${size}px;font-size:${Math.round(size * 0.58)}px`}
+      aria-hidden="true"
+    >
+      {vendorInitial(name)}
+    </span>
+  )
+}

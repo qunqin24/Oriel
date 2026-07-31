@@ -12,6 +12,7 @@
     "lint": "astro check",
     "fetch:data": "tsx scripts/fetch-data.ts",
     "fetch:cat-board": "tsx scripts/fetch-cat-board.ts",
+    "sync:icons": "tsx scripts/sync-vendor-icons.ts",
     "backfill:history": "tsx scripts/backfill-history.ts",
     "verify": "node scripts/verify-build.mjs"
   },
@@ -19,6 +20,8 @@
     "@fontsource-variable/instrument-sans": "^5.3.0",
     "@fontsource-variable/martian-mono": "^5.3.0",
     "@fontsource/ibm-plex-mono": "^5.3.0",
+    "d3-scale": "^4.0.2",
+    "d3-shape": "^3.2.0",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
@@ -26,7 +29,10 @@
     "@astrojs/check": "^0.9.9",
     "@astrojs/react": "^6.0.1",
     "@astrojs/sitemap": "^3.7.3",
+    "@lobehub/icons-static-svg": "^1.94.0",
     "@tailwindcss/vite": "^4.3.3",
+    "@types/d3-scale": "^4.0.9",
+    "@types/d3-shape": "^3.1.8",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

@@ -206,7 +206,7 @@ function makeRoot() {
   return { dataset: {}, style: {} };
 }
 
-function run(storedTheme) {
+function run(storedTheme, prefersDark = false) {
   const listeners = {};
   const root = makeRoot();
   const store = new Map();
@@ -226,7 +226,7 @@ function run(storedTheme) {
     },
   };
   context.window.localStorage = context.localStorage;
-  context.window.matchMedia = () => ({ matches: false });
+  context.window.matchMedia = () => ({ matches: prefersDark });
   vm.createContext(context);
   vm.runInContext(script, context);
 
@@ -275,15 +275,31 @@ check(
   Boolean(explorerBundle) &&
     read(`_astro/${explorerBundle}`).includes("[data-explorer-mount][data-pending]")
 );
+check(
+  "榜单改写参数时保留 ClientRouter history state（否则浏览器返回只改 URL）",
+  Boolean(explorerBundle) &&
+    !read(`_astro/${explorerBundle}`).includes("replaceState(null") &&
+    read(`_astro/${explorerBundle}`).includes("history.state")
+);
 
 console.log("\n【主题在软导航中的存活】");
 {
-  const { root } = run(null);
+  const { root } = run(null, false);
   check(
-    "未存储偏好时默认简约白",
+    "未存储偏好且系统浅色时默认简约白",
     root.dataset.theme === "light" &&
       root.style.backgroundColor === "#ffffff" &&
       root.style.colorScheme === "light",
+    `theme=${root.dataset.theme} bg=${root.style.backgroundColor}`
+  );
+}
+{
+  const { root } = run(null, true);
+  check(
+    "未存储偏好且系统深色时跟随深色",
+    root.dataset.theme === "dark" &&
+      root.style.backgroundColor === "#171c26" &&
+      root.style.colorScheme === "dark",
     `theme=${root.dataset.theme} bg=${root.style.backgroundColor}`
   );
 }

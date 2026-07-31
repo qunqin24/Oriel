@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 // 只从 explorer-config 取，绝不从 explorer.ts 取——后者 import 了数据文件，
 // 会把整份 585KB 数据集打进浏览器包。
 import {
@@ -20,6 +20,7 @@ import {
 } from "@/lib/format";
 import { COMPARE_LIMIT, toggleCompare, useCompare } from "@/lib/compare-store";
 import { localizeModelName } from "@/lib/model-name";
+import VendorIcon from "@/components/vendor-icon";
 import type { Dict, Locale } from "@/i18n";
 
 type Labels = {
@@ -149,6 +150,29 @@ export default function ModelExplorer({
     initialSortDir(readParams())
   );
   const [vendorQuery, setVendorQuery] = useState("");
+  const vendorMenuRef = useRef<HTMLDetailsElement>(null);
+
+  // <details> 原生只在点 <summary> 时开关——点菜单外面、或按 Esc，
+  // 也得能关掉，不然筛选面板会一直挡在表格上面。
+  useEffect(() => {
+    const closeIfOutside = (event: MouseEvent) => {
+      const menu = vendorMenuRef.current;
+      if (menu?.open && !menu.contains(event.target as Node)) {
+        menu.open = false;
+      }
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && vendorMenuRef.current?.open) {
+        vendorMenuRef.current.open = false;
+      }
+    };
+    document.addEventListener("click", closeIfOutside);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.removeEventListener("click", closeIfOutside);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, []);
 
   // 解包一次，之后所有筛选排序都用对象形态。
   const rows = useMemo(() => packed.map(unpackRow), [packed]);
@@ -165,7 +189,10 @@ export default function ModelExplorer({
     if (sortDir === "asc") params.set("dir", "asc");
     const search = params.toString();
     const url = search ? `?${search}` : window.location.pathname;
-    window.history.replaceState(null, "", url);
+    // ClientRouter 把导航 index 与滚动位置放在 history.state 里；这里如果
+    // 写成 null，浏览器返回到榜单时 Astro 会因为 popstate 没有 state 而
+    // 直接退出，只改地址、不交换 DOM。保留原 state，只改当前条目的 URL。
+    window.history.replaceState(window.history.state, "", url);
     // 详情页的「返回榜单」链接从这里读回筛选状态，否则点进一个模型
     // 再点返回，看到的永远是默认总览，而不是刚才那个维度/筛选/排序。
     sessionStorage.setItem(
@@ -299,7 +326,7 @@ export default function ModelExplorer({
           />
         </label>
 
-        <details className="relative">
+        <details ref={vendorMenuRef} className="relative">
           <summary className="cursor-pointer list-none rounded-sm border border-rule px-2.5 py-1.5 text-sm text-mute transition-colors hover:text-fg">
             {labels.models.vendor}
             {selectedVendors.length > 0 && (
@@ -446,8 +473,9 @@ export default function ModelExplorer({
                           >
                             {displayName(row.name, locale)}
                           </a>
-                          <span className="block truncate text-[12px] text-mute">
-                            {row.creator}
+                          <span className="flex min-w-0 items-center gap-1.5 truncate text-[12px] text-mute">
+                            <VendorIcon name={row.creator} size={12} />
+                            <span className="truncate">{row.creator}</span>
                           </span>
                         </td>
                       ) : (

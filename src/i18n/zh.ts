@@ -92,6 +92,10 @@ export const zh = {
     rankAmong: "在 {total} 个有此项数据的模型中排第 {rank}",
     noData: "未评测",
     noDataHint: "Artificial Analysis 尚未发布该模型的这项数据。",
+    radarTitle: "能力画像",
+    radarNote: "五维对比全站均值",
+    radarAverage: "全站均值",
+    radarPartial: "部分维度暂无评测数据，已在图上标出",
     intelligence: "智能指数",
     coding: "编程指数",
     agentic: "智能体指数",
@@ -180,6 +184,10 @@ export const zh = {
     full: "最多对比 4 个模型",
     tray: "对比栏",
     open: "查看对比",
+    radarTitle: "能力画像",
+    radarNote: "五维叠加对比",
+    radarAverage: "全站均值",
+    radarHint: "收缩到圆心的顶点表示该模型未测这一项",
   },
 
   about: {

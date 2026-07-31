@@ -88,6 +88,10 @@ export const en: Dict = {
     rankAmong: "Ranks {rank} of {total} models with this metric",
     noData: "Not tested",
     noDataHint: "Artificial Analysis has not published this metric for this model.",
+    radarTitle: "Capability profile",
+    radarNote: "5 axes vs. site average",
+    radarAverage: "Site average",
+    radarPartial: "Some dimensions have no data yet — marked on the chart",
     intelligence: "Intelligence index",
     coding: "Coding index",
     agentic: "Agentic index",
@@ -176,6 +180,10 @@ export const en: Dict = {
     full: "Compare holds four models",
     tray: "Compare tray",
     open: "Open comparison",
+    radarTitle: "Capability profile",
+    radarNote: "5 axes, overlaid",
+    radarAverage: "Site average",
+    radarHint: "A vertex pulled to the center means that model has no data for that axis",
   },
 
   about: {
