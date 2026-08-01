@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-31T10:39:21.697Z",
+  "fetched_at": "2026-08-01T03:58:19.597Z",
   "tier": "free",
   "data": [
     {
@@ -10,7 +10,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1246,
+      "elo": 1245,
       "ci_95": 9
     },
     {
@@ -54,7 +54,7 @@
         "id": "0ea38458-92d7-45de-a69d-c50bd8277273",
         "name": "Alibaba-ATH"
       },
-      "elo": 1150,
+      "elo": 1151,
       "ci_95": 8
     },
     {
@@ -76,7 +76,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1114,
+      "elo": 1113,
       "ci_95": 7
     },
     {
@@ -87,19 +87,8 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1110,
-      "ci_95": 7
-    },
-    {
-      "id": "1ce3af77-bb30-40ef-90e2-5aa9fa4588b9",
-      "name": "Wan 2.7",
-      "slug": "wan-2-7-v2v",
-      "model_creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba"
-      },
       "elo": 1109,
-      "ci_95": 9
+      "ci_95": 7
     },
     {
       "id": "50ed6856-5052-431d-8994-584b2e02f023",
@@ -113,6 +102,17 @@
       "ci_95": 8
     },
     {
+      "id": "1ce3af77-bb30-40ef-90e2-5aa9fa4588b9",
+      "name": "Wan 2.7",
+      "slug": "wan-2-7-v2v",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "elo": 1108,
+      "ci_95": 9
+    },
+    {
       "id": "b5d5057e-3d0d-4e22-b029-bd976cd1b6a6",
       "name": "Kling 3.0 720p (Standard)",
       "slug": "kling-3-0-standard",
@@ -120,7 +120,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1102,
+      "elo": 1101,
       "ci_95": 7
     },
     {
@@ -135,17 +135,6 @@
       "ci_95": 7
     },
     {
-      "id": "553f28a1-95de-4991-9084-d9275d862f68",
-      "name": "Kling 3.0 Omni 1080p (Pro)",
-      "slug": "kling-o3-pro",
-      "model_creator": {
-        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
-        "name": "KlingAI"
-      },
-      "elo": 1097,
-      "ci_95": 7
-    },
-    {
       "id": "249f428c-b651-4c9e-b599-5cc3c1db7616",
       "name": "Sora 2 (December)",
       "slug": "sora-2-december-no-audio",
@@ -155,6 +144,17 @@
       },
       "elo": 1096,
       "ci_95": 9
+    },
+    {
+      "id": "553f28a1-95de-4991-9084-d9275d862f68",
+      "name": "Kling 3.0 Omni 1080p (Pro)",
+      "slug": "kling-o3-pro",
+      "model_creator": {
+        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
+        "name": "KlingAI"
+      },
+      "elo": 1096,
+      "ci_95": 7
     },
     {
       "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
@@ -175,7 +175,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1092,
+      "elo": 1091,
       "ci_95": 7
     },
     {
@@ -208,7 +208,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1083,
+      "elo": 1082,
       "ci_95": 7
     },
     {
@@ -296,7 +296,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 964,
+      "elo": 963,
       "ci_95": 8
     },
     {
@@ -351,7 +351,7 @@
         "id": "5db3af1a-e372-4c62-98bd-f6027eeaf990",
         "name": "Sapiens AI"
       },
-      "elo": 912,
+      "elo": 911,
       "ci_95": 9
     }
   ]

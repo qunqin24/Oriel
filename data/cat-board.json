@@ -1,10 +1,10 @@
 {
-  "fetched_at": "2026-07-31T10:39:29.547Z",
+  "fetched_at": "2026-08-01T03:58:28.767Z",
   "source_repo": "https://github.com/llm2014/llm_benchmark",
   "source_site": "https://llm2014.github.io/llm_benchmark/",
   "categories": {
     "logic": {
-      "reportDate": "2026-07",
+      "reportDate": "2026-08",
       "headers": [
         "模型",
         "极限分数",
@@ -607,7 +607,7 @@
       ]
     },
     "code": {
-      "reportDate": "2026-07",
+      "reportDate": "2026-08",
       "headers": [
         "Model",
         "MacOS App(C)",
@@ -618,7 +618,7 @@
         "Simple Model(H)",
         "iOS+Server(I)",
         "Unprompted",
-        "IDE/CLI",
+        "Scaffold",
         "Think"
       ],
       "rows": [
@@ -675,32 +675,6 @@
           "1"
         ],
         [
-          "GPT-5.5 (high)",
-          "7/A",
-          "6/A",
-          "2/A+",
-          "12/A",
-          "47/C",
-          "Skip",
-          "Skip",
-          "1",
-          "Codex App",
-          "1"
-        ],
-        [
-          "Claude Opus 4.8 (high)",
-          "Pass",
-          "Pass",
-          "10/B+",
-          "7/A",
-          "20/B",
-          "10/B",
-          "Pending",
-          "2",
-          "Claude Code",
-          "1"
-        ],
-        [
           "Grok 4.5 (high)",
           "12/B+",
           "Skip",
@@ -725,19 +699,6 @@
           "0",
           "Claude Code",
           "1"
-        ],
-        [
-          "Claude Opus 4.6",
-          "9/A",
-          "11/A",
-          "12/B+",
-          "15/B",
-          "66/C",
-          "Skip",
-          "Skip",
-          "4",
-          "Claude Code",
-          "0"
         ],
         [
           "Claude Sonnet 5 (high)",
@@ -766,6 +727,19 @@
           "1"
         ],
         [
+          "GPT-5.6-Luna (max)",
+          "Skip",
+          "Skip",
+          "Skip",
+          "Skip",
+          "Skip",
+          "27/C",
+          "21/C",
+          "0",
+          "Codex App",
+          "1"
+        ],
+        [
           "Gemini 3.5 Flash (high)",
           "21/C",
           "15/B",
@@ -779,7 +753,7 @@
           "1"
         ],
         [
-          "DeepSeek V4 Pro (max)",
+          "DeepSeek V4 Pro preview(max)",
           "16/C",
           "8/B",
           "21/C",
@@ -805,20 +779,7 @@
           "1"
         ],
         [
-          "Kimi-K2.7-Code",
-          "30/C",
-          "18/C",
-          "26/C",
-          "55/D",
-          "Skip",
-          "30/C",
-          "Pending",
-          "0",
-          "Kimi Code",
-          "1"
-        ],
-        [
-          "DeepSeek V4 Flash (max)",
+          "DeepSeek V4 Flash preview(max)",
           "Failed(5/12)",
           "19/C",
           "32/C",
@@ -844,7 +805,7 @@
           "1"
         ],
         [
-          "Qwen3.6-Plus(Think)",
+          "Qwen3.6-Plus",
           "Failed(5/12)",
           "16/C",
           "43/D+",

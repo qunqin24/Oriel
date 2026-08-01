@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-31T10:39:21.697Z",
+  "fetched_at": "2026-08-01T03:58:19.597Z",
   "tier": "free",
   "data": [
     {
@@ -65,7 +65,7 @@
         "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
         "name": "SpaceXAI"
       },
-      "elo": 1326,
+      "elo": 1325,
       "ci_95": 9
     },
     {
@@ -98,7 +98,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1303,
+      "elo": 1298,
       "ci_95": 18
     },
     {
@@ -186,7 +186,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1276,
+      "elo": 1277,
       "ci_95": 9
     },
     {
@@ -230,7 +230,7 @@
         "id": "0c303112-430d-4367-a484-51defaa2e166",
         "name": "NVIDIA"
       },
-      "elo": 1267,
+      "elo": 1266,
       "ci_95": 12
     },
     {
@@ -267,17 +267,6 @@
       "ci_95": 9
     },
     {
-      "id": "5180943f-2a96-44a5-9461-80e5ae1e249e",
-      "name": "PixVerse V5",
-      "slug": "pixverse-v5",
-      "model_creator": {
-        "id": "1942f8d6-ab55-4408-99dd-2f99c70353f6",
-        "name": "PixVerse"
-      },
-      "elo": 1261,
-      "ci_95": 9
-    },
-    {
       "id": "17c5f1af-f8aa-480d-a9c8-08811a6af5c5",
       "name": "GenFlare",
       "slug": "genflare",
@@ -287,6 +276,17 @@
       },
       "elo": 1261,
       "ci_95": 10
+    },
+    {
+      "id": "5180943f-2a96-44a5-9461-80e5ae1e249e",
+      "name": "PixVerse V5",
+      "slug": "pixverse-v5",
+      "model_creator": {
+        "id": "1942f8d6-ab55-4408-99dd-2f99c70353f6",
+        "name": "PixVerse"
+      },
+      "elo": 1261,
+      "ci_95": 9
     },
     {
       "id": "4818889c-3943-4578-9467-4827fb187e39",
@@ -329,7 +329,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1259,
+      "elo": 1258,
       "ci_95": 9
     },
     {
@@ -362,7 +362,7 @@
         "id": "0c303112-430d-4367-a484-51defaa2e166",
         "name": "NVIDIA"
       },
-      "elo": 1250,
+      "elo": 1249,
       "ci_95": 11
     },
     {
@@ -384,7 +384,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1247,
+      "elo": 1248,
       "ci_95": 10
     },
     {
@@ -593,7 +593,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 1189,
+      "elo": 1190,
       "ci_95": 9
     },
     {
@@ -879,7 +879,7 @@
         "id": "a6906d95-a471-4a0c-ad10-b989571de20c",
         "name": "Runway"
       },
-      "elo": 996,
+      "elo": 995,
       "ci_95": 11
     },
     {
@@ -890,7 +890,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 987,
+      "elo": 986,
       "ci_95": 11
     },
     {
