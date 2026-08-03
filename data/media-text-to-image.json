@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-02T04:01:42.995Z",
+  "fetched_at": "2026-08-03T04:03:52.451Z",
   "tier": "free",
   "data": [
     {
@@ -69,17 +69,6 @@
       "ci_95": 7
     },
     {
-      "id": "ae424391-721f-4df7-bf24-a8bef3c4c46c",
-      "name": "Riverflow 2.0",
-      "slug": "sourceful_riverflow-2",
-      "model_creator": {
-        "id": "71724fa8-622e-455f-aaa2-ef3c5a067f8b",
-        "name": "Sourceful"
-      },
-      "elo": 1254,
-      "ci_95": 8
-    },
-    {
       "id": "1308be83-54a3-4284-880e-bd31996a9225",
       "name": "HiDream-O1-Image-1.5",
       "slug": "hidream-o1-image-1-5",
@@ -100,17 +89,6 @@
       },
       "elo": 1240,
       "ci_95": 9
-    },
-    {
-      "id": "5e15daca-e46e-4911-98bd-a0b5cb221dcb",
-      "name": "Reve 2.0",
-      "slug": "reve-2",
-      "model_creator": {
-        "id": "cc6e981e-eb3c-4ac3-a23e-4dbe3e1ffd99",
-        "name": "Reve"
-      },
-      "elo": 1238,
-      "ci_95": 10
     },
     {
       "id": "6a5056eb-6854-43c4-bf18-01d185ce9e2f",
@@ -1199,17 +1177,6 @@
         "name": "Alibaba"
       },
       "elo": 1038,
-      "ci_95": 8
-    },
-    {
-      "id": "f41ba31b-7ba3-44bc-9699-084440d1535e",
-      "name": "Ideogram v1",
-      "slug": "ideogram-v1",
-      "model_creator": {
-        "id": "a8b2ac11-1f36-44cb-9e88-383c4e0d749f",
-        "name": "Ideogram"
-      },
-      "elo": 1034,
       "ci_95": 8
     },
     {

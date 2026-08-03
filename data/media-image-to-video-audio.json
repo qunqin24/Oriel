@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-02T04:01:42.995Z",
+  "fetched_at": "2026-08-03T04:03:52.451Z",
   "tier": "free",
   "data": [
     {
@@ -21,8 +21,8 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1195,
-      "ci_95": 10
+      "elo": 1193,
+      "ci_95": 9
     },
     {
       "id": "c82a5e9e-6a94-40c3-ab47-7b4935f9c685",
@@ -32,8 +32,8 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1184,
-      "ci_95": 11
+      "elo": 1187,
+      "ci_95": 10
     },
     {
       "id": "e83498b8-ae29-4eb7-a343-2a2a74eb0e53",
@@ -65,7 +65,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1093,
+      "elo": 1092,
       "ci_95": 9
     },
     {
@@ -87,7 +87,7 @@
         "id": "67b5ce4d-0c81-4edc-b4c3-370acc2df555",
         "name": "Skywork AI"
       },
-      "elo": 1088,
+      "elo": 1087,
       "ci_95": 9
     },
     {
@@ -102,17 +102,6 @@
       "ci_95": 8
     },
     {
-      "id": "ac418cb9-179f-462d-9598-df5dbd89c2e6",
-      "name": "Veo 3.1 Preview",
-      "slug": "veo-3-1-preview",
-      "model_creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google"
-      },
-      "elo": 1082,
-      "ci_95": 8
-    },
-    {
       "id": "22ae7204-9ed9-4440-a8a6-48340dc8d446",
       "name": "grok-imagine-video",
       "slug": "grok-imagine-video",
@@ -120,19 +109,8 @@
         "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
         "name": "SpaceXAI"
       },
-      "elo": 1079,
+      "elo": 1080,
       "ci_95": 7
-    },
-    {
-      "id": "1c4980f9-feaf-4552-9267-b27e164772ed",
-      "name": "Veo 3.1 Fast Preview",
-      "slug": "veo-3-1-fast-preview",
-      "model_creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google"
-      },
-      "elo": 1078,
-      "ci_95": 8
     },
     {
       "id": "f3c7e331-2b60-4f87-bc9c-363264f211a8",
@@ -142,8 +120,8 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1076,
-      "ci_95": 8
+      "elo": 1077,
+      "ci_95": 7
     },
     {
       "id": "d149ad95-b3b2-4d23-8611-07a84c1a0e7f",
@@ -164,7 +142,7 @@
         "id": "1942f8d6-ab55-4408-99dd-2f99c70353f6",
         "name": "PixVerse"
       },
-      "elo": 1070,
+      "elo": 1069,
       "ci_95": 8
     },
     {
@@ -175,18 +153,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1068,
-      "ci_95": 7
-    },
-    {
-      "id": "d7c0367f-1adf-40ec-8195-5c5d1906efa8",
-      "name": "Vidu Q3 Pro",
-      "slug": "vidu-q3-pro",
-      "model_creator": {
-        "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
-        "name": "Vidu"
-      },
-      "elo": 1065,
+      "elo": 1066,
       "ci_95": 7
     },
     {
@@ -197,8 +164,19 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1064,
+      "elo": 1065,
       "ci_95": 8
+    },
+    {
+      "id": "d7c0367f-1adf-40ec-8195-5c5d1906efa8",
+      "name": "Vidu Q3 Pro",
+      "slug": "vidu-q3-pro",
+      "model_creator": {
+        "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
+        "name": "Vidu"
+      },
+      "elo": 1064,
+      "ci_95": 7
     },
     {
       "id": "553f28a1-95de-4991-9084-d9275d862f68",
@@ -230,7 +208,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1003,
+      "elo": 1000,
       "ci_95": 8
     },
     {
@@ -243,17 +221,6 @@
       },
       "elo": 1000,
       "ci_95": 0
-    },
-    {
-      "id": "ae573419-8440-49d2-9e15-19b7f389d5fe",
-      "name": "PixVerse V5.6 (January)",
-      "slug": "pixverse-v5-6-january",
-      "model_creator": {
-        "id": "1942f8d6-ab55-4408-99dd-2f99c70353f6",
-        "name": "PixVerse"
-      },
-      "elo": 957,
-      "ci_95": 8
     },
     {
       "id": "c783d9aa-c387-4f44-b371-563fd9bab06d",
@@ -285,8 +252,8 @@
         "id": "1942f8d6-ab55-4408-99dd-2f99c70353f6",
         "name": "PixVerse"
       },
-      "elo": 955,
-      "ci_95": 9
+      "elo": 954,
+      "ci_95": 8
     },
     {
       "id": "f8e18877-4f78-4f5b-b45b-16222c8f641f",
@@ -296,7 +263,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 935,
+      "elo": 933,
       "ci_95": 9
     },
     {
@@ -307,8 +274,8 @@
         "id": "5db3af1a-e372-4c62-98bd-f6027eeaf990",
         "name": "Sapiens AI"
       },
-      "elo": 930,
-      "ci_95": 10
+      "elo": 928,
+      "ci_95": 9
     },
     {
       "id": "6ccddbde-d734-4ac0-95a7-f7ed903ec45d",
@@ -329,7 +296,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 878,
+      "elo": 876,
       "ci_95": 9
     }
   ]
