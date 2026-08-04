@@ -1,6 +1,107 @@
 {
-  "generated_at": "2026-08-03T04:03:53.874Z",
+  "generated_at": "2026-08-04T03:44:50.486Z",
   "events": [
+    {
+      "date": "2026-08-04",
+      "type": "added",
+      "model": {
+        "id": "c5ccda86-5e84-4b69-9247-6d4287fc3336",
+        "name": "G9v3-39A5B",
+        "slug": "g9v3-39a5b",
+        "creator": "AI9Stars",
+        "first_seen": "2026-08-04",
+        "last_seen": "2026-08-04"
+      },
+      "intelligence": 30.9
+    },
+    {
+      "date": "2026-08-04",
+      "type": "added",
+      "model": {
+        "id": "3de7f196-0cf1-4466-8d22-406693b2a0a2",
+        "name": "Qwen3.8 Max",
+        "slug": "qwen3-8-max",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-04",
+        "last_seen": "2026-08-04"
+      },
+      "intelligence": 53.4
+    },
+    {
+      "date": "2026-08-04",
+      "type": "price",
+      "model": {
+        "id": "64312f37-3701-4243-a4c9-7c07a58cd6b9",
+        "name": "Grok 4.20 0309 v2 (Non-reasoning)",
+        "slug": "grok-4-20-non-reasoning",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-04"
+      },
+      "metric": "priceIn",
+      "from": 2,
+      "to": 1.25
+    },
+    {
+      "date": "2026-08-04",
+      "type": "price",
+      "model": {
+        "id": "64312f37-3701-4243-a4c9-7c07a58cd6b9",
+        "name": "Grok 4.20 0309 v2 (Non-reasoning)",
+        "slug": "grok-4-20-non-reasoning",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-04"
+      },
+      "metric": "priceOut",
+      "from": 6,
+      "to": 2.5
+    },
+    {
+      "date": "2026-08-04",
+      "type": "price",
+      "model": {
+        "id": "0de09623-2b1a-4c8d-86ef-7f5245d4e24b",
+        "name": "Inkling (xhigh)",
+        "slug": "inkling",
+        "creator": "Thinking Machines",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-04"
+      },
+      "metric": "priceIn",
+      "from": 1.87,
+      "to": 1
+    },
+    {
+      "date": "2026-08-04",
+      "type": "price",
+      "model": {
+        "id": "0de09623-2b1a-4c8d-86ef-7f5245d4e24b",
+        "name": "Inkling (xhigh)",
+        "slug": "inkling",
+        "creator": "Thinking Machines",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-04"
+      },
+      "metric": "priceOut",
+      "from": 4.68,
+      "to": 4.05
+    },
+    {
+      "date": "2026-08-04",
+      "type": "price",
+      "model": {
+        "id": "922c69c7-9037-43c6-8bcf-a1c555e7f3eb",
+        "name": "Llama 4 Maverick",
+        "slug": "llama-4-maverick",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-04"
+      },
+      "metric": "priceOut",
+      "from": 0.85,
+      "to": 0.91
+    },
     {
       "date": "2026-08-01",
       "type": "added",
