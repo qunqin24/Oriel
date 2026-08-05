@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-04T03:44:49.222Z",
+  "fetched_at": "2026-08-05T03:41:30.093Z",
   "tier": "free",
   "data": [
     {
@@ -11,7 +11,7 @@
         "name": "Google"
       },
       "elo": 1244,
-      "ci_95": 8
+      "ci_95": 7
     },
     {
       "id": "c82a5e9e-6a94-40c3-ab47-7b4935f9c685",
@@ -21,8 +21,8 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1239,
-      "ci_95": 10
+      "elo": 1238,
+      "ci_95": 9
     },
     {
       "id": "36db1f4d-a9f6-49d1-a74d-06bddbf2fe4f",
@@ -43,7 +43,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1160,
+      "elo": 1161,
       "ci_95": 7
     },
     {
@@ -54,7 +54,7 @@
         "id": "0ea38458-92d7-45de-a69d-c50bd8277273",
         "name": "Alibaba-ATH"
       },
-      "elo": 1149,
+      "elo": 1148,
       "ci_95": 7
     },
     {
@@ -76,7 +76,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1111,
+      "elo": 1112,
       "ci_95": 6
     },
     {
@@ -87,7 +87,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1108,
+      "elo": 1109,
       "ci_95": 8
     },
     {
@@ -99,7 +99,7 @@
         "name": "Skywork AI"
       },
       "elo": 1108,
-      "ci_95": 8
+      "ci_95": 7
     },
     {
       "id": "b5d5057e-3d0d-4e22-b029-bd976cd1b6a6",
@@ -120,18 +120,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1094,
-      "ci_95": 7
-    },
-    {
-      "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
-      "name": "Kling 3.0 Omni 720p (Standard)",
-      "slug": "kling-o3-standard",
-      "model_creator": {
-        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
-        "name": "KlingAI"
-      },
-      "elo": 1092,
+      "elo": 1093,
       "ci_95": 7
     },
     {
@@ -146,6 +135,17 @@
       "ci_95": 7
     },
     {
+      "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
+      "name": "Kling 3.0 Omni 720p (Standard)",
+      "slug": "kling-o3-standard",
+      "model_creator": {
+        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
+        "name": "KlingAI"
+      },
+      "elo": 1091,
+      "ci_95": 7
+    },
+    {
       "id": "f3c7e331-2b60-4f87-bc9c-363264f211a8",
       "name": "Veo 3.1 Fast",
       "slug": "veo-3-1-fast",
@@ -153,7 +153,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1091,
+      "elo": 1090,
       "ci_95": 6
     },
     {
@@ -164,7 +164,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1090,
+      "elo": 1089,
       "ci_95": 7
     },
     {
@@ -197,7 +197,7 @@
         "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
         "name": "SpaceXAI"
       },
-      "elo": 1068,
+      "elo": 1067,
       "ci_95": 6
     },
     {
@@ -208,7 +208,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1029,
+      "elo": 1028,
       "ci_95": 7
     },
     {
@@ -230,7 +230,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 990,
+      "elo": 988,
       "ci_95": 7
     },
     {
@@ -252,7 +252,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 962,
+      "elo": 961,
       "ci_95": 7
     },
     {
@@ -263,7 +263,7 @@
         "id": "1942f8d6-ab55-4408-99dd-2f99c70353f6",
         "name": "PixVerse"
       },
-      "elo": 951,
+      "elo": 950,
       "ci_95": 8
     },
     {
@@ -274,7 +274,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 945,
+      "elo": 944,
       "ci_95": 8
     },
     {
@@ -296,7 +296,7 @@
         "id": "5db3af1a-e372-4c62-98bd-f6027eeaf990",
         "name": "Sapiens AI"
       },
-      "elo": 915,
+      "elo": 914,
       "ci_95": 9
     }
   ]
