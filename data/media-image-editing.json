@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-07T03:22:49.817Z",
+  "fetched_at": "2026-08-08T02:26:02.151Z",
   "tier": "free",
   "data": [
     {
@@ -10,7 +10,7 @@
         "id": "cc6e981e-eb3c-4ac3-a23e-4dbe3e1ffd99",
         "name": "Reve"
       },
-      "elo": 1259,
+      "elo": 1260,
       "ci_95": 11
     },
     {
@@ -76,7 +76,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1240,
+      "elo": 1241,
       "ci_95": 7
     },
     {
@@ -87,7 +87,7 @@
         "id": "4756ee95-5ddf-45e8-a9d1-075d0e5b5200",
         "name": "Microsoft AI"
       },
-      "elo": 1232,
+      "elo": 1233,
       "ci_95": 9
     },
     {
@@ -120,7 +120,7 @@
         "id": "09468924-69a9-499b-8dd6-d0bb4c05285d",
         "name": "Luma Labs"
       },
-      "elo": 1219,
+      "elo": 1220,
       "ci_95": 9
     },
     {
@@ -142,7 +142,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1213,
+      "elo": 1212,
       "ci_95": 7
     },
     {
@@ -157,15 +157,15 @@
       "ci_95": 8
     },
     {
-      "id": "6a398b55-7f36-4039-bbbf-2045ef8ab525",
-      "name": "FLUX.2 [max]",
-      "slug": "black_forest_labs_flux-2-max",
+      "id": "d587cfaa-e0f2-495c-a012-5f1cfcdf5c09",
+      "name": "Wan 2.7 Pro",
+      "slug": "wan-2-7-pro",
       "model_creator": {
-        "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
-        "name": "Black Forest Labs"
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
       },
       "elo": 1201,
-      "ci_95": 8
+      "ci_95": 7
     },
     {
       "id": "84727a95-54d0-4237-b629-eae087023171",
@@ -179,15 +179,26 @@
       "ci_95": 8
     },
     {
-      "id": "d587cfaa-e0f2-495c-a012-5f1cfcdf5c09",
-      "name": "Wan 2.7 Pro",
-      "slug": "wan-2-7-pro",
+      "id": "6a398b55-7f36-4039-bbbf-2045ef8ab525",
+      "name": "FLUX.2 [max]",
+      "slug": "black_forest_labs_flux-2-max",
       "model_creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba"
+        "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
+        "name": "Black Forest Labs"
       },
       "elo": 1201,
       "ci_95": 7
+    },
+    {
+      "id": "7f1079f3-b886-4ac1-bd3e-7059da87ff28",
+      "name": "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
+      "slug": "nano-banana-2-lite",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "elo": 1200,
+      "ci_95": 9
     },
     {
       "id": "5eb8a48a-334c-4770-b722-3bf5a1842c12",
@@ -199,17 +210,6 @@
       },
       "elo": 1199,
       "ci_95": 8
-    },
-    {
-      "id": "7f1079f3-b886-4ac1-bd3e-7059da87ff28",
-      "name": "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
-      "slug": "nano-banana-2-lite",
-      "model_creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google"
-      },
-      "elo": 1199,
-      "ci_95": 9
     },
     {
       "id": "c8a7698c-a595-476d-a56b-8b3ef4f239b7",
@@ -230,7 +230,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1188,
+      "elo": 1189,
       "ci_95": 7
     },
     {
@@ -285,7 +285,7 @@
         "id": "cc6e981e-eb3c-4ac3-a23e-4dbe3e1ffd99",
         "name": "Reve"
       },
-      "elo": 1176,
+      "elo": 1177,
       "ci_95": 8
     },
     {
@@ -307,7 +307,7 @@
         "id": "582174aa-90d5-4a43-9c4d-64dc0af57547",
         "name": "Bytedance"
       },
-      "elo": 1170,
+      "elo": 1171,
       "ci_95": 8
     },
     {
@@ -322,17 +322,6 @@
       "ci_95": 7
     },
     {
-      "id": "e2201d15-3e29-48c6-89ba-e63ccf3dde15",
-      "name": "FLUX.2 [flex]",
-      "slug": "flux_flux-2--flex",
-      "model_creator": {
-        "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
-        "name": "Black Forest Labs"
-      },
-      "elo": 1164,
-      "ci_95": 8
-    },
-    {
       "id": "16e22800-1485-4b5f-b28c-bf802ca160ac",
       "name": "Qwen Image 2.0 Pro (2026-04-22)",
       "slug": "qwen-image-2-0-pro-alibaba-cloud-may-2026",
@@ -344,6 +333,17 @@
       "ci_95": 9
     },
     {
+      "id": "e2201d15-3e29-48c6-89ba-e63ccf3dde15",
+      "name": "FLUX.2 [flex]",
+      "slug": "flux_flux-2--flex",
+      "model_creator": {
+        "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
+        "name": "Black Forest Labs"
+      },
+      "elo": 1164,
+      "ci_95": 8
+    },
+    {
       "id": "878746c7-f8e0-48c0-941e-d8262608ca1a",
       "name": "Qwen Image Edit Plus 2511",
       "slug": "qwen_qwen-image-edit-2511",
@@ -351,7 +351,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1163,
+      "elo": 1164,
       "ci_95": 8
     },
     {
@@ -421,17 +421,6 @@
       "ci_95": 8
     },
     {
-      "id": "74606b04-5682-4ff2-85ce-56999ef61acb",
-      "name": "Step Image Edit 2",
-      "slug": "step-image-edit-2",
-      "model_creator": {
-        "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
-        "name": "StepFun"
-      },
-      "elo": 1141,
-      "ci_95": 10
-    },
-    {
       "id": "c64add40-5964-4a33-b25f-26eb1c990f27",
       "name": "Qwen Image Edit Plus 2509",
       "slug": "qwen_qwen-image-edit-2509",
@@ -441,6 +430,17 @@
       },
       "elo": 1141,
       "ci_95": 7
+    },
+    {
+      "id": "74606b04-5682-4ff2-85ce-56999ef61acb",
+      "name": "Step Image Edit 2",
+      "slug": "step-image-edit-2",
+      "model_creator": {
+        "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
+        "name": "StepFun"
+      },
+      "elo": 1141,
+      "ci_95": 10
     },
     {
       "id": "aa41be4d-efb7-4d31-99e6-72678c1d05fd",
@@ -476,17 +476,6 @@
       "ci_95": 8
     },
     {
-      "id": "9cb8045c-3c85-4023-8585-88ca0eff8452",
-      "name": "HiDream-O1-Image-Dev",
-      "slug": "hidream-o1-image-dev",
-      "model_creator": {
-        "id": "040f2c41-5df4-4708-8c77-6a2030be2539",
-        "name": "HiDream"
-      },
-      "elo": 1137,
-      "ci_95": 9
-    },
-    {
       "id": "df44f7b5-8035-4a99-a0bb-ff22149d0464",
       "name": "FLUX.2 [dev]",
       "slug": "flux_flux-2--dev",
@@ -494,8 +483,19 @@
         "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
         "name": "Black Forest Labs"
       },
-      "elo": 1136,
+      "elo": 1137,
       "ci_95": 7
+    },
+    {
+      "id": "9cb8045c-3c85-4023-8585-88ca0eff8452",
+      "name": "HiDream-O1-Image-Dev",
+      "slug": "hidream-o1-image-dev",
+      "model_creator": {
+        "id": "040f2c41-5df4-4708-8c77-6a2030be2539",
+        "name": "HiDream"
+      },
+      "elo": 1136,
+      "ci_95": 9
     },
     {
       "id": "2f5ebb1e-6d5f-48b0-95bf-3b590fd45971",
@@ -571,7 +571,7 @@
         "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
         "name": "StepFun"
       },
-      "elo": 1089,
+      "elo": 1090,
       "ci_95": 8
     },
     {
@@ -604,7 +604,7 @@
         "id": "2354746c-4775-4a06-b64d-0ba4137785b8",
         "name": "ByteDance Seed"
       },
-      "elo": 1077,
+      "elo": 1078,
       "ci_95": 8
     },
     {
@@ -637,7 +637,7 @@
         "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
         "name": "Black Forest Labs"
       },
-      "elo": 1023,
+      "elo": 1024,
       "ci_95": 8
     },
     {
@@ -648,7 +648,7 @@
         "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
         "name": "Black Forest Labs"
       },
-      "elo": 1014,
+      "elo": 1013,
       "ci_95": 8
     },
     {
@@ -659,7 +659,7 @@
         "id": "040f2c41-5df4-4708-8c77-6a2030be2539",
         "name": "HiDream"
       },
-      "elo": 984,
+      "elo": 983,
       "ci_95": 12
     },
     {
@@ -681,7 +681,7 @@
         "id": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
         "name": "Z AI"
       },
-      "elo": 945,
+      "elo": 946,
       "ci_95": 9
     },
     {
@@ -714,7 +714,7 @@
         "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
         "name": "StepFun"
       },
-      "elo": 848,
+      "elo": 847,
       "ci_95": 10
     },
     {
