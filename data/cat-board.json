@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-08T02:26:10.389Z",
+  "fetched_at": "2026-08-09T02:33:42.413Z",
   "source_repo": "https://github.com/llm2014/llm_benchmark",
   "source_site": "https://llm2014.github.io/llm_benchmark/",
   "categories": {
@@ -630,6 +630,7 @@
         "Simple Model(H)",
         "iOS+Server(I)",
         "Animation(J)",
+        "Data Process(K)",
         "Unprompted",
         "Scaffold",
         "Think"
@@ -644,6 +645,7 @@
           "2/A+(90.52)",
           "3/A+(122.57)",
           "Pending",
+          "Pending",
           "1",
           "Claude Code",
           "1"
@@ -657,6 +659,7 @@
           "4/A(123.94)",
           "1/A+(122.57)",
           "12/B+(573.18)",
+          "Pending",
           "3",
           "Claude Code",
           "1"
@@ -670,6 +673,7 @@
           "4/A(63.86)",
           "8/A(26.97)",
           "23/B(97.98)",
+          "8/B(770.41)",
           "2",
           "Codex App",
           "1"
@@ -683,6 +687,7 @@
           "6/A(29.59)",
           "5/A(43.22)",
           "22/B(43.23)",
+          "28/D+(383.49)",
           "2",
           "Claude Code",
           "1"
@@ -696,6 +701,7 @@
           "11/B(33.16)",
           "10/B(50.86)",
           "15/B(48.94)",
+          "Skip",
           "0",
           "Claude Code",
           "1"
@@ -708,6 +714,7 @@
           "Skip",
           "16/B(23.12)",
           "7/B+(15.98)",
+          "Skip",
           "Skip",
           "1",
           "Grok Build",
@@ -722,6 +729,7 @@
           "14/B(10.75)",
           "15/C+(28.61)",
           "30/C(26.76)",
+          "Skip",
           "0",
           "Claude Code",
           "1"
@@ -735,6 +743,7 @@
           "26/C(15.82)",
           "11/B(17.76)",
           "Failed",
+          "Skip",
           "0",
           "Claude Code",
           "1"
@@ -747,6 +756,7 @@
           "44/D+(12.41)",
           "17/B(1.61)",
           "24/D+(1.10)",
+          "Failed",
           "Failed",
           "2",
           "Claude Code",
@@ -761,6 +771,7 @@
           "22/C(154.97)",
           "16/C+(72.34)",
           "Failed",
+          "Skip",
           "1",
           "Claude Code",
           "1"
@@ -773,6 +784,7 @@
           "Failed(5/9)",
           "10/B(2.01)",
           "20/C+(13.29)",
+          "Failed",
           "Failed",
           "0",
           "Claude Code",
@@ -787,6 +799,7 @@
           "27/C(3.84)",
           "21/C(4.90)",
           "Failed",
+          "Skip",
           "0",
           "Codex",
           "1"
@@ -796,6 +809,7 @@
           "21/C",
           "20/C",
           "17/B",
+          "Skip",
           "Skip",
           "Skip",
           "Skip",
@@ -813,6 +827,7 @@
           "31/C(1.38)",
           "28/C(1.75)",
           "Failed",
+          "Skip",
           "0",
           "Claude Code",
           "1"
@@ -821,6 +836,7 @@
           "MiniMax-M3",
           "Skip",
           "51/D+",
+          "Skip",
           "Skip",
           "Skip",
           "Skip",
@@ -836,6 +852,7 @@
           "43/D+",
           "Failed(3/9)",
           "Failed(0/9)",
+          "Skip",
           "Skip",
           "Skip",
           "Skip",
