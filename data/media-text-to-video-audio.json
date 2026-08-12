@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-09T02:33:35.485Z",
+  "fetched_at": "2026-08-12T07:18:59.738Z",
   "tier": "free",
   "data": [
     {
@@ -10,7 +10,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1244,
+      "elo": 1243,
       "ci_95": 7
     },
     {
@@ -21,7 +21,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1238,
+      "elo": 1237,
       "ci_95": 9
     },
     {
@@ -32,7 +32,7 @@
         "id": "2354746c-4775-4a06-b64d-0ba4137785b8",
         "name": "ByteDance Seed"
       },
-      "elo": 1224,
+      "elo": 1223,
       "ci_95": 6
     },
     {
@@ -43,7 +43,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1161,
+      "elo": 1160,
       "ci_95": 7
     },
     {
@@ -69,17 +69,6 @@
       "ci_95": 7
     },
     {
-      "id": "d149ad95-b3b2-4d23-8611-07a84c1a0e7f",
-      "name": "Kling 3.0 1080p (Pro)",
-      "slug": "kling-3-0-pro",
-      "model_creator": {
-        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
-        "name": "KlingAI"
-      },
-      "elo": 1111,
-      "ci_95": 6
-    },
-    {
       "id": "1ce3af77-bb30-40ef-90e2-5aa9fa4588b9",
       "name": "Wan 2.7",
       "slug": "wan-2-7-v2v",
@@ -89,6 +78,17 @@
       },
       "elo": 1110,
       "ci_95": 8
+    },
+    {
+      "id": "d149ad95-b3b2-4d23-8611-07a84c1a0e7f",
+      "name": "Kling 3.0 1080p (Pro)",
+      "slug": "kling-3-0-pro",
+      "model_creator": {
+        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
+        "name": "KlingAI"
+      },
+      "elo": 1109,
+      "ci_95": 6
     },
     {
       "id": "50ed6856-5052-431d-8994-584b2e02f023",
@@ -120,24 +120,13 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1093,
+      "elo": 1092,
       "ci_95": 7
     },
     {
       "id": "553f28a1-95de-4991-9084-d9275d862f68",
       "name": "Kling 3.0 Omni 1080p (Pro)",
       "slug": "kling-o3-pro",
-      "model_creator": {
-        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
-        "name": "KlingAI"
-      },
-      "elo": 1091,
-      "ci_95": 7
-    },
-    {
-      "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
-      "name": "Kling 3.0 Omni 720p (Standard)",
-      "slug": "kling-o3-standard",
       "model_creator": {
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
@@ -157,6 +146,17 @@
       "ci_95": 6
     },
     {
+      "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
+      "name": "Kling 3.0 Omni 720p (Standard)",
+      "slug": "kling-o3-standard",
+      "model_creator": {
+        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
+        "name": "KlingAI"
+      },
+      "elo": 1090,
+      "ci_95": 7
+    },
+    {
       "id": "a8f7ab65-828a-4166-8fbf-616cbb01d773",
       "name": "Veo 3.1 Lite",
       "slug": "veo-3-1-lite",
@@ -164,7 +164,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1089,
+      "elo": 1088,
       "ci_95": 7
     },
     {
@@ -175,7 +175,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1079,
+      "elo": 1078,
       "ci_95": 6
     },
     {
@@ -197,8 +197,19 @@
         "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
         "name": "SpaceXAI"
       },
-      "elo": 1067,
+      "elo": 1066,
       "ci_95": 6
+    },
+    {
+      "id": "043f0cb2-3565-45ad-bf78-7e2de8288e94",
+      "name": "Vidu Q3 Turbo",
+      "slug": "vidu-q3-turbo",
+      "model_creator": {
+        "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
+        "name": "Vidu"
+      },
+      "elo": 1034,
+      "ci_95": 11
     },
     {
       "id": "6ccddbde-d734-4ac0-95a7-f7ed903ec45d",
@@ -208,7 +219,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1028,
+      "elo": 1027,
       "ci_95": 7
     },
     {
@@ -285,7 +296,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 922,
+      "elo": 921,
       "ci_95": 8
     },
     {
