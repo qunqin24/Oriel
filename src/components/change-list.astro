@@ -43,9 +43,14 @@ function metricLabel(metric: MetricKey | undefined): string {
   return dict.changes.metrics[metric] ?? metric;
 }
 
-function modelHref(event: ChangeEvent): string | null {
-  // 下架的模型没有详情页可去。
-  return modelById(event.model.id) ? href(locale, `/models/${event.model.slug}`) : null;
+/**
+ * 事件里的 model 是记录当天冻结的身份快照，slug 会随上游改名而失效
+ * （见过 ling-3-0-tiny-rc2 转正后 uuid 不变、slug 去掉 rc2）。
+ * 所以只用 uuid 定位，名字和 slug 一律以当天的数据为准；
+ * 查不到就是已下架，没有详情页可去。
+ */
+function currentModel(event: ChangeEvent) {
+  return modelById(event.model.id);
 }
 ---
 
@@ -71,7 +76,9 @@ function modelHref(event: ChangeEvent): string | null {
 
           <ul class="flex flex-col">
             {day.events.map((event) => {
-              const link = modelHref(event);
+              const model = currentModel(event);
+              const link = model ? href(locale, `/models/${model.slug}`) : null;
+              const name = model?.name ?? event.model.name;
               const from = show(event.metric, event.from);
               const to = show(event.metric, event.to);
               const direction = tone(event);
@@ -91,10 +98,10 @@ function modelHref(event: ChangeEvent): string | null {
                           event.type === "removed" ? "text-mute line-through" : "text-fg",
                         ]}
                       >
-                        {event.model.name}
+                        {name}
                       </a>
                     ) : (
-                      <span class="text-mute line-through">{event.model.name}</span>
+                      <span class="text-mute line-through">{name}</span>
                     )}
                     <span class="ml-2 text-[12px] text-mute">{event.model.creator}</span>
                   </span>
