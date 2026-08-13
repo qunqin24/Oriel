@@ -2,7 +2,8 @@ name: Daily data update
 
 on:
   schedule:
-    # GitHub Actions uses UTC. 00:23 UTC is 08:23 in Asia/Shanghai.
+    # GitHub Actions uses UTC. 名义时间是 00:23 UTC（北京时间 08:23），
+    # 托管 runner 忙时可能延迟；失败后可用 workflow_dispatch 手动补跑。
     - cron: "23 0 * * *"
   workflow_dispatch:
 
@@ -51,6 +52,7 @@ jobs:
           # 设了就产出 sitemap 和绝对 hreflang；没设也能构建。
           SITE_URL: ${{ vars.SITE_URL }}
         run: |
+          pnpm test
           pnpm check
           pnpm build
           # 上游数据形状变了（某个榜单突然全空、字段消失）在这里拦住，

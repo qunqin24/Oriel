@@ -32,7 +32,12 @@ SITE_URL=https://your-domain pnpm build
 
 ## 数据
 
-`scripts/fetch-data.ts` 每天 00:23 UTC 由 GitHub Action 运行，写两处：
+`scripts/fetch-data.ts` 由 GitHub Action 每天在 00:23 UTC **名义调度**，写两处。
+GitHub 托管定时任务可能因 runner 繁忙延迟；失败时可在 Actions 页面手动补跑。
+抓取会对临时网络错误重试，并按模型 `id` 清理分页边界的重复项；两个不同模型
+如果共用同一个 `slug`，任务会在写入前明确报错，不会静默覆盖详情页。
+
+写入内容包括：
 
 - `data/*.json` —— 当日快照，覆盖写入（12 个榜单）
 - `data/history/` —— **累积存档**
@@ -84,4 +89,5 @@ pnpm build && pnpm verify
 - **第三方数据降级** —— 猫榜数据缺失或过期时页面显示提示，不影响其余页面构建
 - **主题在软导航中存活** —— 模拟 `astro:before-swap` 的真实流程，确认深浅主题不会在切页时被清空
 
-每日 Action 在提交数据前会跑这套检查，上游数据形状变了能在入库前拦住。
+每日 Action 在提交数据前会跑单元测试和这套检查，上游数据形状变了能在入库前拦住。
+普通 push 与 pull request 也会运行同一套只读 CI，但不会抓取或提交数据。

@@ -38,12 +38,20 @@ const total = countPages(DIST);
 const enTotal = countPages(path.join(DIST, "en"));
 check(`总页面 ${total}`, total > 1000);
 check(`英文页面 ${enTotal}（应为总数的一半）`, enTotal === total / 2);
-const modelCount = JSON.parse(
+const languageEnvelope = JSON.parse(
   fs.readFileSync(path.join(ROOT, "data/language-models.json"), "utf8")
-).data.length;
+);
+const modelCount = languageEnvelope.data.length;
+const modelIds = languageEnvelope.data.map((model) => model.id);
+const modelSlugs = languageEnvelope.data.map((model) => model.slug);
+check("模型 id 全部唯一", new Set(modelIds).size === modelCount);
+check("模型 slug 全部唯一", new Set(modelSlugs).size === modelCount);
+const detailPageCount = fs
+  .readdirSync(path.join(DIST, "models"), { withFileTypes: true })
+  .filter((entry) => entry.isDirectory()).length;
 check(
   `模型详情页 ${modelCount} × 2`,
-  fs.readdirSync(path.join(DIST, "models")).length - 1 === modelCount
+  detailPageCount === modelCount
 );
 
 console.log("\n【4】零 JS 可读性");
@@ -70,7 +78,7 @@ for (const p of ["index.html", "changes/index.html", "media/index.html", "about/
 }
 const models = read("models/index.html");
 check(
-  "探索器 SSR 出全部 586 行（关掉 JS 也能读）",
+  `探索器 SSR 出全部 ${modelCount} 行（关掉 JS 也能读）`,
   (models.match(/<tr class="border-b border-rule\/50/g) || []).length === modelCount
 );
 
@@ -117,18 +125,47 @@ check(
 check("不出现满屏破折号", !sparseModel || (sparse.match(/—/g) || []).length < 12);
 
 console.log("\n【7】历史降级");
-const days = Object.keys(
-  JSON.parse(fs.readFileSync(path.join(ROOT, "data/history/2026-07.json"), "utf8")).snapshots
-).length;
+const historyDir = path.join(ROOT, "data/history");
+const historyMonths = fs
+  .readdirSync(historyDir)
+  .filter((name) => /^\d{4}-\d{2}\.json$/.test(name))
+  .map((name) =>
+    JSON.parse(fs.readFileSync(path.join(historyDir, name), "utf8"))
+  );
+const days = historyMonths.reduce(
+  (sum, month) => sum + Object.keys(month.snapshots).length,
+  0
+);
 check(`历史 ${days} 天`, days >= 1);
+
+const fetchedDate = /^\d{4}-\d{2}-\d{2}/.exec(languageEnvelope.fetched_at)?.[0];
+check("主快照含有效 fetched_at", Boolean(fetchedDate), languageEnvelope.fetched_at);
+const fetchedMonth = fetchedDate?.slice(0, 7);
+const currentMonth = historyMonths.find((month) => month.month === fetchedMonth);
+const currentSnapshot = fetchedDate
+  ? currentMonth?.snapshots?.[fetchedDate]
+  : undefined;
+check(`历史包含本次快照 ${fetchedDate ?? "日期无效"}`, Boolean(currentSnapshot));
+check(
+  "本次历史快照模型数与主快照一致",
+  currentSnapshot?.count === modelCount &&
+    Object.keys(currentSnapshot?.models ?? {}).length === modelCount,
+  `主快照 ${modelCount} / 历史 ${currentSnapshot?.count ?? "缺失"}`
+);
 check(
   "无变化的指标显示文字而不是平线",
   sparse.includes("天记录内无变化") || zhModel.includes("天记录内无变化")
 );
 const changes = read("changes/index.html");
-const eventCount = JSON.parse(
+const eventLog = JSON.parse(
   fs.readFileSync(path.join(ROOT, "data/history/events.json"), "utf8")
-).events.length;
+);
+const eventCount = eventLog.events.length;
+check(
+  "事件流与本次快照同日生成",
+  eventLog.generated_at?.slice(0, 10) === fetchedDate,
+  eventLog.generated_at
+);
 check(`变化页渲染了 ${eventCount} 条事件`, eventCount === 0 || changes.includes("条变化"));
 check(
   "价格下降标为上涨色（对使用者是好事）",

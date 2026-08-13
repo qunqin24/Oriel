@@ -6,11 +6,14 @@
 
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { normalizeModelList } from "./lib/model-list.ts";
 import { recordSnapshot, summarize } from "./lib/record.ts";
 import type { LanguageModel } from "../src/lib/types.ts";
 
 const BASE_URL = "https://artificialanalysis.ai/api/v2";
 const OUT_DIR = path.join(process.cwd(), "data");
+const FETCH_ATTEMPTS = 3;
+const FETCH_TIMEOUT_MS = 15_000;
 
 const apiKey = process.env.AA_API_KEY;
 if (!apiKey) {
@@ -36,12 +39,37 @@ const MEDIA_ENDPOINTS = [
 const fetchedAt = new Date().toISOString();
 
 async function fetchJson(url: string) {
-  const res = await fetch(url, { headers: { "x-api-key": apiKey! } });
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`${res.status} ${url}: ${body}`);
+  let lastError: unknown;
+
+  for (let attempt = 1; attempt <= FETCH_ATTEMPTS; attempt += 1) {
+    let res: Response | undefined;
+    try {
+      res = await fetch(url, {
+        headers: { "x-api-key": apiKey! },
+        signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+      });
+    } catch (error) {
+      lastError = error;
+    }
+
+    if (res?.ok) return res.json();
+    if (res) {
+      const body = (await res.text()).slice(0, 500);
+      const error = new Error(`${res.status} ${url}: ${body}`);
+      if (res.status !== 429 && res.status < 500) throw error;
+      lastError = error;
+    }
+
+    if (attempt < FETCH_ATTEMPTS) {
+      const delay = attempt * 1_000;
+      console.warn(
+        `fetch failed (${attempt}/${FETCH_ATTEMPTS}), ${delay}ms 后重试: ${url}`
+      );
+      await new Promise((resolve) => setTimeout(resolve, delay));
+    }
   }
-  return res.json();
+
+  throw lastError;
 }
 
 function fileName(endpoint: string) {
@@ -61,16 +89,25 @@ async function main() {
   await mkdir(OUT_DIR, { recursive: true });
 
   const first = await fetchJson(`${BASE_URL}/language/models/free?page=1`);
-  const models = [...first.data];
+  const fetchedModels = [...first.data] as LanguageModel[];
   const intelligenceIndexVersion = first.intelligence_index_version;
-  while (models.length > 0) {
+  while (fetchedModels.length > 0) {
     const lastPage = first.pagination.total_pages;
-    const fetchedPages = Math.ceil(models.length / first.pagination.page_size);
+    const fetchedPages = Math.ceil(
+      fetchedModels.length / first.pagination.page_size
+    );
     if (fetchedPages >= lastPage) break;
     const next = await fetchJson(
       `${BASE_URL}/language/models/free?page=${fetchedPages + 1}`
     );
-    models.push(...next.data);
+    fetchedModels.push(...next.data);
+  }
+
+  const { models, duplicateIds } = normalizeModelList(fetchedModels);
+  if (duplicateIds.length > 0) {
+    console.warn(
+      `分页结果含 ${duplicateIds.length} 个重复模型，已按 id 去重: ${duplicateIds.join(", ")}`
+    );
   }
   await save("language-models", {
     intelligence_index_version: intelligenceIndexVersion,

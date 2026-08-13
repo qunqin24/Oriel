@@ -10,6 +10,7 @@
     "start": "astro preview",
     "check": "astro check",
     "lint": "astro check",
+    "test": "tsx --test scripts/lib/model-list.test.ts",
     "fetch:data": "tsx scripts/fetch-data.ts",
     "fetch:cat-board": "tsx scripts/fetch-cat-board.ts",
     "sync:icons": "tsx scripts/sync-vendor-icons.ts",
