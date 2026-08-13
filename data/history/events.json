@@ -1,6 +1,275 @@
 {
-  "generated_at": "2026-08-12T07:19:01.343Z",
+  "generated_at": "2026-08-13T09:02:08.489Z",
   "events": [
+    {
+      "date": "2026-08-13",
+      "type": "added",
+      "model": {
+        "id": "8215372b-66ff-457b-855e-e8abeafc9571",
+        "name": "A.X-K2",
+        "slug": "a-x-k2",
+        "creator": "SK Telecom",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-13"
+      },
+      "intelligence": 35
+    },
+    {
+      "date": "2026-08-13",
+      "type": "added",
+      "model": {
+        "id": "82fc7dfd-8c22-49db-a23e-518b8404c1d8",
+        "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 5 Fallback)",
+        "slug": "claude-fable-5-opus-5-fallback",
+        "creator": "Anthropic",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-13"
+      },
+      "intelligence": null
+    },
+    {
+      "date": "2026-08-13",
+      "type": "added",
+      "model": {
+        "id": "83173329-c09a-41f1-a028-a282a5f908d7",
+        "name": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
+        "slug": "deepseek-v4-pro",
+        "creator": "DeepSeek",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-13"
+      },
+      "intelligence": 53
+    },
+    {
+      "date": "2026-08-13",
+      "type": "added",
+      "model": {
+        "id": "c8adc5cf-fd5a-407b-af51-dc3bede3e49c",
+        "name": "Grok 4.6 (high)",
+        "slug": "grok-4-6",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-13"
+      },
+      "intelligence": 60.9
+    },
+    {
+      "date": "2026-08-13",
+      "type": "added",
+      "model": {
+        "id": "18721247-4e56-4cf7-9a9d-c71cc60c0961",
+        "name": "K-EXAONE 2.0 0803",
+        "slug": "k-exaone-2-0-0803",
+        "creator": "LG AI Research",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-13"
+      },
+      "intelligence": 31
+    },
+    {
+      "date": "2026-08-13",
+      "type": "added",
+      "model": {
+        "id": "b01eefb1-c9f8-412d-8353-571031a52f23",
+        "name": "Motif 3",
+        "slug": "motif-3",
+        "creator": "Motif Technologies",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-13"
+      },
+      "intelligence": 47.4
+    },
+    {
+      "date": "2026-08-13",
+      "type": "added",
+      "model": {
+        "id": "7eabd8ca-bf43-4d56-b3df-efd1c4eebfb0",
+        "name": "Solar Open2 250B",
+        "slug": "solar-open2-250b",
+        "creator": "Upstage",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-13"
+      },
+      "intelligence": 37.4
+    },
+    {
+      "date": "2026-08-13",
+      "type": "added",
+      "model": {
+        "id": "1b64aa81-c223-4b8f-909b-82185a234765",
+        "name": "Solar Pro 4",
+        "slug": "solar-pro4",
+        "creator": "Upstage",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-13"
+      },
+      "intelligence": 41.6
+    },
+    {
+      "date": "2026-08-13",
+      "type": "price",
+      "model": {
+        "id": "b2e68f0a-8f66-4e4c-9821-2b786cea601b",
+        "name": "Claude 3 Sonnet",
+        "slug": "claude-3-sonnet",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-13"
+      },
+      "metric": "priceIn",
+      "from": 3,
+      "to": null
+    },
+    {
+      "date": "2026-08-13",
+      "type": "price",
+      "model": {
+        "id": "b2e68f0a-8f66-4e4c-9821-2b786cea601b",
+        "name": "Claude 3 Sonnet",
+        "slug": "claude-3-sonnet",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-13"
+      },
+      "metric": "priceOut",
+      "from": 15,
+      "to": null
+    },
+    {
+      "date": "2026-08-13",
+      "type": "price",
+      "model": {
+        "id": "f0083258-8646-45b8-8082-7aaf6c2ea82a",
+        "name": "gpt-oss-120b (high)",
+        "slug": "gpt-oss-120b",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-13"
+      },
+      "metric": "priceOut",
+      "from": 0.59,
+      "to": 0.6
+    },
+    {
+      "date": "2026-08-13",
+      "type": "price",
+      "model": {
+        "id": "92b19c88-fa87-4595-957e-fe9aa5fa5ad4",
+        "name": "Jamba 1.6 Large",
+        "slug": "jamba-1-6-large",
+        "creator": "AI21 Labs",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-13"
+      },
+      "metric": "priceIn",
+      "from": 2,
+      "to": null
+    },
+    {
+      "date": "2026-08-13",
+      "type": "price",
+      "model": {
+        "id": "92b19c88-fa87-4595-957e-fe9aa5fa5ad4",
+        "name": "Jamba 1.6 Large",
+        "slug": "jamba-1-6-large",
+        "creator": "AI21 Labs",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-13"
+      },
+      "metric": "priceOut",
+      "from": 8,
+      "to": null
+    },
+    {
+      "date": "2026-08-13",
+      "type": "price",
+      "model": {
+        "id": "e8ffd75b-766f-4551-8c52-6e54706220eb",
+        "name": "Jamba 1.6 Mini",
+        "slug": "jamba-1-6-mini",
+        "creator": "AI21 Labs",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-13"
+      },
+      "metric": "priceIn",
+      "from": 0.2,
+      "to": null
+    },
+    {
+      "date": "2026-08-13",
+      "type": "price",
+      "model": {
+        "id": "e8ffd75b-766f-4551-8c52-6e54706220eb",
+        "name": "Jamba 1.6 Mini",
+        "slug": "jamba-1-6-mini",
+        "creator": "AI21 Labs",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-13"
+      },
+      "metric": "priceOut",
+      "from": 0.4,
+      "to": null
+    },
+    {
+      "date": "2026-08-13",
+      "type": "price",
+      "model": {
+        "id": "78452c64-7303-4192-bca5-2d9ec5c623d4",
+        "name": "Jamba 1.7 Large",
+        "slug": "jamba-1-7-large",
+        "creator": "AI21 Labs",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-13"
+      },
+      "metric": "priceIn",
+      "from": 2,
+      "to": null
+    },
+    {
+      "date": "2026-08-13",
+      "type": "price",
+      "model": {
+        "id": "78452c64-7303-4192-bca5-2d9ec5c623d4",
+        "name": "Jamba 1.7 Large",
+        "slug": "jamba-1-7-large",
+        "creator": "AI21 Labs",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-13"
+      },
+      "metric": "priceOut",
+      "from": 8,
+      "to": null
+    },
+    {
+      "date": "2026-08-13",
+      "type": "price",
+      "model": {
+        "id": "583f98fb-c4b8-4df3-8d40-60ac0ed69882",
+        "name": "Muse Glimmer (high)",
+        "slug": "muse-glimmer",
+        "creator": "Meta",
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-08-13"
+      },
+      "metric": "priceIn",
+      "from": null,
+      "to": 0.32
+    },
+    {
+      "date": "2026-08-13",
+      "type": "price",
+      "model": {
+        "id": "583f98fb-c4b8-4df3-8d40-60ac0ed69882",
+        "name": "Muse Glimmer (high)",
+        "slug": "muse-glimmer",
+        "creator": "Meta",
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-08-13"
+      },
+      "metric": "priceOut",
+      "from": null,
+      "to": 1.35
+    },
     {
       "date": "2026-08-12",
       "type": "added",

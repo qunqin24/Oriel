@@ -1,19 +1,7 @@
 {
-  "fetched_at": "2026-08-12T07:18:59.738Z",
+  "fetched_at": "2026-08-13T09:02:07.022Z",
   "tier": "free",
   "data": [
-    {
-      "id": "07c7220d-6974-4533-9c7b-f5b8f05c5afd",
-      "name": "Gemini 3.1 Flash Audio Preview (Mar 2026) - Minimal",
-      "slug": "gemini-3-1-flash-audio-preview-mar-2026-minimal",
-      "model_creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google"
-      },
-      "bba_score": 0.71,
-      "fdb_score": null,
-      "tau_voice_score": 0.26
-    },
     {
       "id": "3e50297e-753b-482b-b9c3-a982d88e5548",
       "name": "Nova 2.0 Sonic",
@@ -171,6 +159,18 @@
       "tau_voice_score": null
     },
     {
+      "id": "07c7220d-6974-4533-9c7b-f5b8f05c5afd",
+      "name": "Gemini 3.1 Flash Audio Preview (Mar 2026) - Minimal",
+      "slug": "gemini-3-1-flash-audio-preview-mar-2026-minimal",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "bba_score": 0.71,
+      "fdb_score": null,
+      "tau_voice_score": 0.26
+    },
+    {
       "id": "6ea9257f-c9f6-4789-be83-3d90c49f1c86",
       "name": "GPT-5 (ChatGPT)",
       "slug": "gpt-5-chatgpt",
@@ -217,6 +217,18 @@
       "bba_score": 0.87,
       "fdb_score": 0.93,
       "tau_voice_score": 0.38
+    },
+    {
+      "id": "c3d8614d-465c-42cf-b8a0-ca434a84c953",
+      "name": "GPT Realtime (Aug 2025)",
+      "slug": "gpt-realtime-aug-25",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": 0.83,
+      "fdb_score": 0.94,
+      "tau_voice_score": 0.3
     },
     {
       "id": "62e7db61-ca85-4d6a-a672-8be58febaca3",
@@ -301,18 +313,6 @@
       "bba_score": null,
       "fdb_score": 0.44,
       "tau_voice_score": 0.23
-    },
-    {
-      "id": "c3d8614d-465c-42cf-b8a0-ca434a84c953",
-      "name": "GPT Realtime (Aug 2025)",
-      "slug": "gpt-realtime-aug-25",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI"
-      },
-      "bba_score": 0.83,
-      "fdb_score": 0.94,
-      "tau_voice_score": 0.3
     },
     {
       "id": "d82b466a-19a5-4557-83e8-bfb412121204",

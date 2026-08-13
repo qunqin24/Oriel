@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-12T07:18:59.738Z",
+  "fetched_at": "2026-08-13T09:02:07.022Z",
   "tier": "free",
   "data": [
     {
@@ -10,7 +10,7 @@
         "id": "cc6e981e-eb3c-4ac3-a23e-4dbe3e1ffd99",
         "name": "Reve"
       },
-      "elo": 1260,
+      "elo": 1262,
       "ci_95": 11
     },
     {
@@ -65,7 +65,7 @@
         "id": "582174aa-90d5-4a43-9c4d-64dc0af57547",
         "name": "Bytedance"
       },
-      "elo": 1247,
+      "elo": 1248,
       "ci_95": 11
     },
     {
@@ -100,6 +100,17 @@
       },
       "elo": 1230,
       "ci_95": 8
+    },
+    {
+      "id": "e2f79c9a-26da-4b33-84f2-917387002b17",
+      "name": "DreamImage 2.0",
+      "slug": "dreamimage-2-0",
+      "model_creator": {
+        "id": "e51b2853-ce5b-4967-8800-105722d65db7",
+        "name": "Newport AI"
+      },
+      "elo": 1223,
+      "ci_95": 11
     },
     {
       "id": "ba07faac-d296-472d-8249-9a0b6f78184a",
@@ -263,7 +274,7 @@
         "id": "2354746c-4775-4a06-b64d-0ba4137785b8",
         "name": "ByteDance Seed"
       },
-      "elo": 1184,
+      "elo": 1185,
       "ci_95": 7
     },
     {
@@ -322,17 +333,6 @@
       "ci_95": 7
     },
     {
-      "id": "16e22800-1485-4b5f-b28c-bf802ca160ac",
-      "name": "Qwen Image 2.0 Pro (2026-04-22)",
-      "slug": "qwen-image-2-0-pro-alibaba-cloud-may-2026",
-      "model_creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba"
-      },
-      "elo": 1165,
-      "ci_95": 9
-    },
-    {
       "id": "e2201d15-3e29-48c6-89ba-e63ccf3dde15",
       "name": "FLUX.2 [flex]",
       "slug": "flux_flux-2--flex",
@@ -342,6 +342,17 @@
       },
       "elo": 1164,
       "ci_95": 8
+    },
+    {
+      "id": "16e22800-1485-4b5f-b28c-bf802ca160ac",
+      "name": "Qwen Image 2.0 Pro (2026-04-22)",
+      "slug": "qwen-image-2-0-pro-alibaba-cloud-may-2026",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "elo": 1164,
+      "ci_95": 9
     },
     {
       "id": "878746c7-f8e0-48c0-941e-d8262608ca1a",
@@ -362,7 +373,7 @@
         "id": "db6e00a6-8552-4235-b26f-f89dc2bcba4f",
         "name": "Eigen AI"
       },
-      "elo": 1162,
+      "elo": 1161,
       "ci_95": 8
     },
     {
@@ -406,7 +417,7 @@
         "id": "3257e1b4-560b-4bb9-8197-39de391c491f",
         "name": "ImagineArt"
       },
-      "elo": 1153,
+      "elo": 1154,
       "ci_95": 9
     },
     {
@@ -417,18 +428,7 @@
         "id": "d3f67dc4-ba4d-4103-ba79-ee321ca99b40",
         "name": "Fal"
       },
-      "elo": 1152,
-      "ci_95": 8
-    },
-    {
-      "id": "aa41be4d-efb7-4d31-99e6-72678c1d05fd",
-      "name": "Wan 2.5 Preview",
-      "slug": "wan_wan-2-5-preview",
-      "model_creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba"
-      },
-      "elo": 1141,
+      "elo": 1151,
       "ci_95": 8
     },
     {
@@ -449,6 +449,17 @@
       "model_creator": {
         "id": "d3f67dc4-ba4d-4103-ba79-ee321ca99b40",
         "name": "Fal"
+      },
+      "elo": 1140,
+      "ci_95": 8
+    },
+    {
+      "id": "aa41be4d-efb7-4d31-99e6-72678c1d05fd",
+      "name": "Wan 2.5 Preview",
+      "slug": "wan_wan-2-5-preview",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
       },
       "elo": 1140,
       "ci_95": 8
@@ -494,7 +505,7 @@
         "id": "040f2c41-5df4-4708-8c77-6a2030be2539",
         "name": "HiDream"
       },
-      "elo": 1133,
+      "elo": 1132,
       "ci_95": 8
     },
     {
@@ -538,7 +549,7 @@
         "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
         "name": "Black Forest Labs"
       },
-      "elo": 1114,
+      "elo": 1115,
       "ci_95": 7
     },
     {
@@ -571,7 +582,7 @@
         "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
         "name": "StepFun"
       },
-      "elo": 1089,
+      "elo": 1090,
       "ci_95": 8
     },
     {
@@ -605,7 +616,7 @@
         "name": "ByteDance Seed"
       },
       "elo": 1078,
-      "ci_95": 8
+      "ci_95": 7
     },
     {
       "id": "3338f278-fb1f-4727-b9af-d51ae3ab7e36",
@@ -659,7 +670,7 @@
         "id": "040f2c41-5df4-4708-8c77-6a2030be2539",
         "name": "HiDream"
       },
-      "elo": 980,
+      "elo": 979,
       "ci_95": 12
     },
     {
@@ -692,7 +703,7 @@
         "id": "582174aa-90d5-4a43-9c4d-64dc0af57547",
         "name": "Bytedance"
       },
-      "elo": 917,
+      "elo": 916,
       "ci_95": 9
     },
     {
