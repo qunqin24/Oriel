@@ -1,6 +1,115 @@
 {
-  "generated_at": "2026-08-13T09:02:08.489Z",
+  "generated_at": "2026-08-14T03:03:46.122Z",
   "events": [
+    {
+      "date": "2026-08-14",
+      "type": "added",
+      "model": {
+        "id": "b2331108-72ed-415a-82d1-188633875bbc",
+        "name": "Gemini 3.7 Flash (high)",
+        "slug": "gemini-3-7-flash",
+        "creator": "Google",
+        "first_seen": "2026-08-14",
+        "last_seen": "2026-08-14"
+      },
+      "intelligence": 56
+    },
+    {
+      "date": "2026-08-14",
+      "type": "added",
+      "model": {
+        "id": "ddfdaf64-3f8e-40a6-a492-608ee83a1351",
+        "name": "Gemini 3.7 Flash (low)",
+        "slug": "gemini-3-7-flash-low",
+        "creator": "Google",
+        "first_seen": "2026-08-14",
+        "last_seen": "2026-08-14"
+      },
+      "intelligence": 50.9
+    },
+    {
+      "date": "2026-08-14",
+      "type": "added",
+      "model": {
+        "id": "eb0d4272-7204-42b9-b875-8866fed58548",
+        "name": "Gemini 3.7 Flash (medium)",
+        "slug": "gemini-3-7-flash-medium",
+        "creator": "Google",
+        "first_seen": "2026-08-14",
+        "last_seen": "2026-08-14"
+      },
+      "intelligence": 53.4
+    },
+    {
+      "date": "2026-08-14",
+      "type": "added",
+      "model": {
+        "id": "8df710d3-9dae-4498-9b4e-9818238e6f31",
+        "name": "Qwen3.8 2.4T A95B",
+        "slug": "qwen3-8-2-4t-a95b",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-14",
+        "last_seen": "2026-08-14"
+      },
+      "intelligence": 57.7
+    },
+    {
+      "date": "2026-08-14",
+      "type": "removed",
+      "model": {
+        "id": "82fc7dfd-8c22-49db-a23e-518b8404c1d8",
+        "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 5 Fallback)",
+        "slug": "claude-fable-5-opus-5-fallback",
+        "creator": "Anthropic",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-13"
+      }
+    },
+    {
+      "date": "2026-08-14",
+      "type": "price",
+      "model": {
+        "id": "83173329-c09a-41f1-a028-a282a5f908d7",
+        "name": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
+        "slug": "deepseek-v4-pro",
+        "creator": "DeepSeek",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-14"
+      },
+      "metric": "priceIn",
+      "from": 0.43,
+      "to": 1.32
+    },
+    {
+      "date": "2026-08-14",
+      "type": "price",
+      "model": {
+        "id": "83173329-c09a-41f1-a028-a282a5f908d7",
+        "name": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
+        "slug": "deepseek-v4-pro",
+        "creator": "DeepSeek",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-14"
+      },
+      "metric": "priceOut",
+      "from": 0.87,
+      "to": 3.96
+    },
+    {
+      "date": "2026-08-14",
+      "type": "score",
+      "model": {
+        "id": "83173329-c09a-41f1-a028-a282a5f908d7",
+        "name": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
+        "slug": "deepseek-v4-pro",
+        "creator": "DeepSeek",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-14"
+      },
+      "metric": "intelligence",
+      "from": 53,
+      "to": 53.2
+    },
     {
       "date": "2026-08-13",
       "type": "added",
