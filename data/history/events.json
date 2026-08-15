@@ -1,6 +1,156 @@
 {
-  "generated_at": "2026-08-14T03:03:46.122Z",
+  "generated_at": "2026-08-15T01:54:04.918Z",
   "events": [
+    {
+      "date": "2026-08-15",
+      "type": "price",
+      "model": {
+        "id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+        "name": "DeepSeek V4 Flash 0731 (Reasoning, Max Effort)",
+        "slug": "deepseek-v4-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-08-15"
+      },
+      "metric": "priceIn",
+      "from": 0.14,
+      "to": 0.44
+    },
+    {
+      "date": "2026-08-15",
+      "type": "price",
+      "model": {
+        "id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+        "name": "DeepSeek V4 Flash 0731 (Reasoning, Max Effort)",
+        "slug": "deepseek-v4-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-08-15"
+      },
+      "metric": "priceOut",
+      "from": 0.28,
+      "to": 1.32
+    },
+    {
+      "date": "2026-08-15",
+      "type": "score",
+      "model": {
+        "id": "fc4223e8-4586-4ca1-97ca-bb55ff586947",
+        "name": "KAT Coder Pro V2",
+        "slug": "kat-coder-pro-v2",
+        "creator": "KwaiKAT",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-15"
+      },
+      "metric": "intelligence",
+      "from": 34.5,
+      "to": 33.7
+    },
+    {
+      "date": "2026-08-15",
+      "type": "score",
+      "model": {
+        "id": "fc4223e8-4586-4ca1-97ca-bb55ff586947",
+        "name": "KAT Coder Pro V2",
+        "slug": "kat-coder-pro-v2",
+        "creator": "KwaiKAT",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-15"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 15.1
+    },
+    {
+      "date": "2026-08-15",
+      "type": "score",
+      "model": {
+        "id": "3b5ba264-ad25-429b-a460-4d8698205f0d",
+        "name": "Nex-N2-Pro",
+        "slug": "nex-n2-pro",
+        "creator": "Nex AGI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-15"
+      },
+      "metric": "intelligence",
+      "from": 42.1,
+      "to": 41.7
+    },
+    {
+      "date": "2026-08-15",
+      "type": "score",
+      "model": {
+        "id": "3b5ba264-ad25-429b-a460-4d8698205f0d",
+        "name": "Nex-N2-Pro",
+        "slug": "nex-n2-pro",
+        "creator": "Nex AGI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-15"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 31.2
+    },
+    {
+      "date": "2026-08-15",
+      "type": "score",
+      "model": {
+        "id": "eb4ba465-3fcd-4065-9fe2-e8225e7b2c6c",
+        "name": "Ring-2.6-1T",
+        "slug": "ring-2-6-1t",
+        "creator": "InclusionAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-15"
+      },
+      "metric": "intelligence",
+      "from": 31.3,
+      "to": 31.7
+    },
+    {
+      "date": "2026-08-15",
+      "type": "score",
+      "model": {
+        "id": "eb4ba465-3fcd-4065-9fe2-e8225e7b2c6c",
+        "name": "Ring-2.6-1T",
+        "slug": "ring-2-6-1t",
+        "creator": "InclusionAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-15"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 20.1
+    },
+    {
+      "date": "2026-08-15",
+      "type": "score",
+      "model": {
+        "id": "b6d2e43d-3082-43f5-9318-0f4dbcb54163",
+        "name": "Trinity Large Thinking",
+        "slug": "trinity-large-thinking",
+        "creator": "Arcee AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-15"
+      },
+      "metric": "intelligence",
+      "from": 18.4,
+      "to": 18.7
+    },
+    {
+      "date": "2026-08-15",
+      "type": "score",
+      "model": {
+        "id": "b6d2e43d-3082-43f5-9318-0f4dbcb54163",
+        "name": "Trinity Large Thinking",
+        "slug": "trinity-large-thinking",
+        "creator": "Arcee AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-15"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 3.7
+    },
     {
       "date": "2026-08-14",
       "type": "added",
