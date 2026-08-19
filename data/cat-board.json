@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-18T01:55:35.205Z",
+  "fetched_at": "2026-08-19T01:57:20.389Z",
   "source_repo": "https://github.com/llm2014/llm_benchmark",
   "source_site": "https://llm2014.github.io/llm_benchmark/",
   "categories": {
@@ -629,6 +629,20 @@
           "1"
         ],
         [
+          "Gemini 3.7 Flash (high)",
+          "Skip",
+          "12/B(38.76)",
+          "Skip",
+          "Skip",
+          "14/B(9.38)",
+          "8/B(16.84)",
+          "14/B(14.28)",
+          "34/D(28.93)",
+          "4",
+          "OpenCode CLI",
+          "1"
+        ],
+        [
           "Grok 4.6 (high)",
           "Skip",
           "Pass",
@@ -769,20 +783,6 @@
           "1"
         ],
         [
-          "DeepSeek V4 Pro preview(max)",
-          "16/C",
-          "21/C",
-          "36/C",
-          "Failed(0/9)",
-          "31/C(1.38)",
-          "28/C(1.75)",
-          "Failed",
-          "Skip",
-          "0",
-          "Claude Code",
-          "1"
-        ],
-        [
           "MiniMax-M3",
           "Skip",
           "51/D+",
@@ -793,20 +793,6 @@
           "Skip",
           "Skip",
           "1",
-          "Claude Code",
-          "1"
-        ],
-        [
-          "Qwen3.6-Plus",
-          "Failed(5/12)",
-          "43/D+",
-          "Failed(3/9)",
-          "Failed(0/9)",
-          "Skip",
-          "Skip",
-          "Skip",
-          "Skip",
-          "0",
           "Claude Code",
           "1"
         ]
