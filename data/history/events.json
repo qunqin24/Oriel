@@ -1,6 +1,587 @@
 {
-  "generated_at": "2026-08-19T01:57:12.877Z",
+  "generated_at": "2026-08-20T01:56:23.872Z",
   "events": [
+    {
+      "date": "2026-08-20",
+      "type": "added",
+      "model": {
+        "id": "cd684ea4-b475-4269-b001-d469d06d8a7a",
+        "name": "GLM-5.3 (max)",
+        "slug": "glm-5-3",
+        "creator": "Z AI",
+        "first_seen": "2026-08-20",
+        "last_seen": "2026-08-20"
+      },
+      "intelligence": 59.5
+    },
+    {
+      "date": "2026-08-20",
+      "type": "added",
+      "model": {
+        "id": "b01dee41-c62b-48ed-8d16-984adc405e5c",
+        "name": "Qwen3.8 27B",
+        "slug": "qwen3-8-27b",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-20",
+        "last_seen": "2026-08-20"
+      },
+      "intelligence": 52
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "0e34f05c-387e-4968-be15-ccec4a55d8c1",
+        "name": "DeepSeek R1 (Jan '25)",
+        "slug": "deepseek-r1-0120",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 1.68,
+      "to": 2
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "0e34f05c-387e-4968-be15-ccec4a55d8c1",
+        "name": "DeepSeek R1 (Jan '25)",
+        "slug": "deepseek-r1-0120",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 4.7,
+      "to": 4
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "a83f84b3-473a-4276-9ae1-8909da723159",
+        "name": "DeepSeek R1 0528 (May '25)",
+        "slug": "deepseek-r1",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 4.2,
+      "to": 3
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "ad173c8d-f14f-4230-90e9-60979b7720e7",
+        "name": "DeepSeek V4 Flash (Non-reasoning)",
+        "slug": "deepseek-v4-flash-non-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 0.14,
+      "to": 0.09
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "ad173c8d-f14f-4230-90e9-60979b7720e7",
+        "name": "DeepSeek V4 Flash (Non-reasoning)",
+        "slug": "deepseek-v4-flash-non-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 0.28,
+      "to": 0.2
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "89a2c945-1fab-4ee4-9f45-83a9f46cb221",
+        "name": "DeepSeek V4 Flash (Reasoning, High Effort)",
+        "slug": "deepseek-v4-flash-0420-high",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 0.14,
+      "to": 0.13
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "78332c88-fe60-42c8-af9d-3617e44cf1f5",
+        "name": "Gemini 3.6 Flash (high)",
+        "slug": "gemini-3-6-flash",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 1.5,
+      "to": 0.75
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "78332c88-fe60-42c8-af9d-3617e44cf1f5",
+        "name": "Gemini 3.6 Flash (high)",
+        "slug": "gemini-3-6-flash",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 7.5,
+      "to": 3.75
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "6e1b44ff-c227-496b-aef4-19b70cd18c76",
+        "name": "Gemma 4 26B A4B (Reasoning)",
+        "slug": "gemma-4-26b-a4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 0.13,
+      "to": 0.12
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "6e1b44ff-c227-496b-aef4-19b70cd18c76",
+        "name": "Gemma 4 26B A4B (Reasoning)",
+        "slug": "gemma-4-26b-a4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 0.4,
+      "to": 0.37
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "92f245a7-43b4-4ffd-8bfb-866746bf824d",
+        "name": "GLM-5.1 (Non-reasoning)",
+        "slug": "glm-5-1-non-reasoning",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 1.38,
+      "to": 1.39
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
+        "name": "GLM-5.1 (Reasoning)",
+        "slug": "glm-5-1",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 1.38,
+      "to": 1.39
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "b23e6c69-96e5-44c9-8f58-4b42e0c399d5",
+        "name": "Hy3",
+        "slug": "hy3",
+        "creator": "Tencent",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 0.56,
+      "to": 0.55
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "29976311-665a-4b2f-ac72-557c33e0758e",
+        "name": "Nemotron 3.5 Lightning",
+        "slug": "nemotron-3-5-lightning",
+        "creator": "NVIDIA",
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 0.05,
+      "to": 0.07
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "29976311-665a-4b2f-ac72-557c33e0758e",
+        "name": "Nemotron 3.5 Lightning",
+        "slug": "nemotron-3-5-lightning",
+        "creator": "NVIDIA",
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 0.2,
+      "to": 0.22
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "f6ccbe1d-bd7e-484b-9795-18cc9f91552d",
+        "name": "Qwen3 235B A22B 2507 (Reasoning)",
+        "slug": "qwen3-235b-a22b-instruct-2507-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 0.7,
+      "to": 0.23
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "f6ccbe1d-bd7e-484b-9795-18cc9f91552d",
+        "name": "Qwen3 235B A22B 2507 (Reasoning)",
+        "slug": "qwen3-235b-a22b-instruct-2507-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 8.4,
+      "to": 2.3
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "3373245b-e6dc-4b66-a7b0-3f06f9b7bd46",
+        "name": "Qwen3 235B A22B 2507 Instruct",
+        "slug": "qwen3-235b-a22b-instruct-2507",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 0.7,
+      "to": 0.23
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "3373245b-e6dc-4b66-a7b0-3f06f9b7bd46",
+        "name": "Qwen3 235B A22B 2507 Instruct",
+        "slug": "qwen3-235b-a22b-instruct-2507",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 2.8,
+      "to": 0.92
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "bf60740e-6aa5-422f-ba49-ef6e9d171205",
+        "name": "Qwen3 32B (Non-reasoning)",
+        "slug": "qwen3-32b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 0.7,
+      "to": 0.16
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "bf60740e-6aa5-422f-ba49-ef6e9d171205",
+        "name": "Qwen3 32B (Non-reasoning)",
+        "slug": "qwen3-32b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 2.8,
+      "to": 0.64
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "b00ecd62-a53f-4aed-b833-3e9d6b0170ba",
+        "name": "Qwen3 32B (Reasoning)",
+        "slug": "qwen3-32b-instruct-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 0.7,
+      "to": 0.16
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "b00ecd62-a53f-4aed-b833-3e9d6b0170ba",
+        "name": "Qwen3 32B (Reasoning)",
+        "slug": "qwen3-32b-instruct-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 8.4,
+      "to": 0.64
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "c8a79180-7d16-4474-8701-9a77c0baa56a",
+        "name": "Qwen3 Next 80B A3B (Reasoning)",
+        "slug": "qwen3-next-80b-a3b-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 0.5,
+      "to": 0.15
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "c8a79180-7d16-4474-8701-9a77c0baa56a",
+        "name": "Qwen3 Next 80B A3B (Reasoning)",
+        "slug": "qwen3-next-80b-a3b-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 6,
+      "to": 1.2
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "2698f6c6-e436-47ce-a583-dbc25596c571",
+        "name": "Qwen3 Next 80B A3B Instruct",
+        "slug": "qwen3-next-80b-a3b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 0.5,
+      "to": 0.15
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "2698f6c6-e436-47ce-a583-dbc25596c571",
+        "name": "Qwen3 Next 80B A3B Instruct",
+        "slug": "qwen3-next-80b-a3b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 2,
+      "to": 1.2
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "a803d3d0-d22e-49a0-ac2c-b9c6f1141065",
+        "name": "Qwen3 VL 235B A22B (Reasoning)",
+        "slug": "qwen3-vl-235b-a22b-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 0.7,
+      "to": 0.4
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "a803d3d0-d22e-49a0-ac2c-b9c6f1141065",
+        "name": "Qwen3 VL 235B A22B (Reasoning)",
+        "slug": "qwen3-vl-235b-a22b-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 8.4,
+      "to": 4
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "d58cf573-1bd3-4d1f-9182-5482a460f570",
+        "name": "Qwen3 VL 235B A22B Instruct",
+        "slug": "qwen3-vl-235b-a22b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 0.7,
+      "to": 0.4
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "d58cf573-1bd3-4d1f-9182-5482a460f570",
+        "name": "Qwen3 VL 235B A22B Instruct",
+        "slug": "qwen3-vl-235b-a22b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 2.8,
+      "to": 1.6
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "d370fcbf-c4a1-41a2-abc4-d204fcc3fcbf",
+        "name": "Qwen3 VL 32B (Reasoning)",
+        "slug": "qwen3-vl-32b-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 0.7,
+      "to": 0.16
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "d370fcbf-c4a1-41a2-abc4-d204fcc3fcbf",
+        "name": "Qwen3 VL 32B (Reasoning)",
+        "slug": "qwen3-vl-32b-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 8.4,
+      "to": 0.64
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "6da314d3-a984-4734-8f31-47dd32fb4699",
+        "name": "Qwen3 VL 32B Instruct",
+        "slug": "qwen3-vl-32b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceIn",
+      "from": 0.7,
+      "to": 0.16
+    },
+    {
+      "date": "2026-08-20",
+      "type": "price",
+      "model": {
+        "id": "6da314d3-a984-4734-8f31-47dd32fb4699",
+        "name": "Qwen3 VL 32B Instruct",
+        "slug": "qwen3-vl-32b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "priceOut",
+      "from": 2.8,
+      "to": 0.64
+    },
+    {
+      "date": "2026-08-20",
+      "type": "score",
+      "model": {
+        "id": "0a7dda4d-cc9c-4a90-abc1-abb5772c901b",
+        "name": "DeepSeek V3.1 Terminus (Reasoning)",
+        "slug": "deepseek-v3-1-terminus-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "intelligence",
+      "from": 31.1,
+      "to": 31.4
+    },
+    {
+      "date": "2026-08-20",
+      "type": "score",
+      "model": {
+        "id": "0a7dda4d-cc9c-4a90-abc1-abb5772c901b",
+        "name": "DeepSeek V3.1 Terminus (Reasoning)",
+        "slug": "deepseek-v3-1-terminus-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-20"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 19.9
+    },
     {
       "date": "2026-08-16",
       "type": "score",

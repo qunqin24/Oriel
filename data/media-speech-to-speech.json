@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-19T01:57:11.482Z",
+  "fetched_at": "2026-08-20T01:56:20.740Z",
   "tier": "free",
   "data": [
     {
@@ -169,6 +169,18 @@
       "bba_score": 0.71,
       "fdb_score": null,
       "tau_voice_score": 0.26
+    },
+    {
+      "id": "4e562227-4f14-41e0-a257-cb7fc8a92c74",
+      "name": "Higgs Realtime",
+      "slug": "higgs-realtime",
+      "model_creator": {
+        "id": "8342a503-53a9-4cb5-bc5b-daaa9e13dc23",
+        "name": "Boson AI"
+      },
+      "bba_score": null,
+      "fdb_score": null,
+      "tau_voice_score": null
     },
     {
       "id": "6ea9257f-c9f6-4789-be83-3d90c49f1c86",
