@@ -1,6 +1,128 @@
 {
-  "generated_at": "2026-08-23T02:06:25.638Z",
+  "generated_at": "2026-08-24T02:02:19.443Z",
   "events": [
+    {
+      "date": "2026-08-24",
+      "type": "added",
+      "model": {
+        "id": "7e30585f-fad7-40df-a8cb-03c1d96df38a",
+        "name": "Qwen3.8 27B (low)",
+        "slug": "qwen3-8-27b-low",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-24",
+        "last_seen": "2026-08-24"
+      },
+      "intelligence": 42.9
+    },
+    {
+      "date": "2026-08-24",
+      "type": "added",
+      "model": {
+        "id": "6657d7de-a2a9-40bc-a32f-86e80ad63698",
+        "name": "Qwen3.8 27B (medium)",
+        "slug": "qwen3-8-27b-medium",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-24",
+        "last_seen": "2026-08-24"
+      },
+      "intelligence": 44.5
+    },
+    {
+      "date": "2026-08-24",
+      "type": "removed",
+      "model": {
+        "id": "a2c8e7b2-57bf-4d1e-96ea-7944d786d94d",
+        "name": "Granite 4.0 1B",
+        "slug": "granite-4-0-nano-1b",
+        "creator": "IBM",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-23"
+      }
+    },
+    {
+      "date": "2026-08-24",
+      "type": "removed",
+      "model": {
+        "id": "a38d719a-709c-4983-b3e7-7090389ae9a6",
+        "name": "K2-V2 (high)",
+        "slug": "k2-v2",
+        "creator": "MBZUAI Institute of Foundation Models",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-23"
+      }
+    },
+    {
+      "date": "2026-08-24",
+      "type": "removed",
+      "model": {
+        "id": "a3043d4f-9b92-4261-8ea2-a2d391b09cf4",
+        "name": "Motif 3 (Beta)",
+        "slug": "motif-0714",
+        "creator": "Motif Technologies",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-23"
+      }
+    },
+    {
+      "date": "2026-08-24",
+      "type": "price",
+      "model": {
+        "id": "922c69c7-9037-43c6-8bcf-a1c555e7f3eb",
+        "name": "Llama 4 Maverick",
+        "slug": "llama-4-maverick",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-24"
+      },
+      "metric": "priceIn",
+      "from": 0.27,
+      "to": 0.26
+    },
+    {
+      "date": "2026-08-24",
+      "type": "price",
+      "model": {
+        "id": "922c69c7-9037-43c6-8bcf-a1c555e7f3eb",
+        "name": "Llama 4 Maverick",
+        "slug": "llama-4-maverick",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-24"
+      },
+      "metric": "priceOut",
+      "from": 0.85,
+      "to": 0.91
+    },
+    {
+      "date": "2026-08-24",
+      "type": "price",
+      "model": {
+        "id": "864da2a5-156c-45fd-873c-8923be91914f",
+        "name": "Magistral Medium 1.2",
+        "slug": "magistral-medium-2509",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-24"
+      },
+      "metric": "priceIn",
+      "from": 2,
+      "to": null
+    },
+    {
+      "date": "2026-08-24",
+      "type": "price",
+      "model": {
+        "id": "864da2a5-156c-45fd-873c-8923be91914f",
+        "name": "Magistral Medium 1.2",
+        "slug": "magistral-medium-2509",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-24"
+      },
+      "metric": "priceOut",
+      "from": 5,
+      "to": null
+    },
     {
       "date": "2026-08-20",
       "type": "added",
