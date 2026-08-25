@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-24T02:02:17.954Z",
+  "fetched_at": "2026-08-25T01:57:12.511Z",
   "tier": "free",
   "data": [
     {
@@ -10,8 +10,8 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1249,
-      "ci_95": 10
+      "elo": 1240,
+      "ci_95": 9
     },
     {
       "id": "88df9253-809f-4dc9-b993-3969fa606473",
@@ -21,8 +21,8 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1239,
-      "ci_95": 7
+      "elo": 1237,
+      "ci_95": 6
     },
     {
       "id": "c82a5e9e-6a94-40c3-ab47-7b4935f9c685",
@@ -32,7 +32,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1236,
+      "elo": 1227,
       "ci_95": 8
     },
     {
@@ -43,8 +43,8 @@
         "id": "2354746c-4775-4a06-b64d-0ba4137785b8",
         "name": "ByteDance Seed"
       },
-      "elo": 1222,
-      "ci_95": 6
+      "elo": 1221,
+      "ci_95": 5
     },
     {
       "id": "03ff7ea5-2ee9-4f2d-9c41-01f4279362cb",
@@ -65,7 +65,7 @@
         "id": "0ea38458-92d7-45de-a69d-c50bd8277273",
         "name": "Alibaba-ATH"
       },
-      "elo": 1146,
+      "elo": 1145,
       "ci_95": 6
     },
     {
@@ -77,7 +77,7 @@
         "name": "Alibaba-ATH"
       },
       "elo": 1121,
-      "ci_95": 7
+      "ci_95": 6
     },
     {
       "id": "1ce3af77-bb30-40ef-90e2-5aa9fa4588b9",
@@ -87,7 +87,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1109,
+      "elo": 1106,
       "ci_95": 7
     },
     {
@@ -98,8 +98,8 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1107,
-      "ci_95": 6
+      "elo": 1106,
+      "ci_95": 5
     },
     {
       "id": "50ed6856-5052-431d-8994-584b2e02f023",
@@ -109,7 +109,7 @@
         "id": "67b5ce4d-0c81-4edc-b4c3-370acc2df555",
         "name": "Skywork AI"
       },
-      "elo": 1103,
+      "elo": 1100,
       "ci_95": 7
     },
     {
@@ -121,7 +121,7 @@
         "name": "KlingAI"
       },
       "elo": 1099,
-      "ci_95": 6
+      "ci_95": 5
     },
     {
       "id": "b8dc1338-a685-4c03-ad98-cf61226547b0",
@@ -131,18 +131,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1089,
-      "ci_95": 7
-    },
-    {
-      "id": "f3c7e331-2b60-4f87-bc9c-363264f211a8",
-      "name": "Veo 3.1 Fast",
-      "slug": "veo-3-1-fast",
-      "model_creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google"
-      },
-      "elo": 1089,
+      "elo": 1090,
       "ci_95": 6
     },
     {
@@ -153,19 +142,8 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1088,
-      "ci_95": 7
-    },
-    {
-      "id": "553f28a1-95de-4991-9084-d9275d862f68",
-      "name": "Kling 3.0 Omni 1080p (Pro)",
-      "slug": "kling-o3-pro",
-      "model_creator": {
-        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
-        "name": "KlingAI"
-      },
-      "elo": 1087,
-      "ci_95": 7
+      "elo": 1089,
+      "ci_95": 6
     },
     {
       "id": "a8f7ab65-828a-4166-8fbf-616cbb01d773",
@@ -175,8 +153,30 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1087,
-      "ci_95": 7
+      "elo": 1089,
+      "ci_95": 6
+    },
+    {
+      "id": "553f28a1-95de-4991-9084-d9275d862f68",
+      "name": "Kling 3.0 Omni 1080p (Pro)",
+      "slug": "kling-o3-pro",
+      "model_creator": {
+        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
+        "name": "KlingAI"
+      },
+      "elo": 1088,
+      "ci_95": 6
+    },
+    {
+      "id": "f3c7e331-2b60-4f87-bc9c-363264f211a8",
+      "name": "Veo 3.1 Fast",
+      "slug": "veo-3-1-fast",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "elo": 1086,
+      "ci_95": 5
     },
     {
       "id": "d7c0367f-1adf-40ec-8195-5c5d1906efa8",
@@ -186,8 +186,8 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1076,
-      "ci_95": 6
+      "elo": 1075,
+      "ci_95": 5
     },
     {
       "id": "be866b8a-d073-4ee4-9652-73227c679dc4",
@@ -197,8 +197,8 @@
         "id": "1942f8d6-ab55-4408-99dd-2f99c70353f6",
         "name": "PixVerse"
       },
-      "elo": 1074,
-      "ci_95": 7
+      "elo": 1073,
+      "ci_95": 6
     },
     {
       "id": "22ae7204-9ed9-4440-a8a6-48340dc8d446",
@@ -210,6 +210,28 @@
       },
       "elo": 1062,
       "ci_95": 6
+    },
+    {
+      "id": "b5343afd-4bff-4e97-99fc-1e2edf2e8eb1",
+      "name": "LTX-2.5 Fast",
+      "slug": "ltx-2-5-fast",
+      "model_creator": {
+        "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
+        "name": "Lightricks"
+      },
+      "elo": 1062,
+      "ci_95": 10
+    },
+    {
+      "id": "791ff10c-594f-418b-9c1a-39313784d759",
+      "name": "LTX-2.5 Pro",
+      "slug": "ltx-2-5-pro",
+      "model_creator": {
+        "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
+        "name": "Lightricks"
+      },
+      "elo": 1059,
+      "ci_95": 10
     },
     {
       "id": "043f0cb2-3565-45ad-bf78-7e2de8288e94",
@@ -252,7 +274,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 985,
+      "elo": 983,
       "ci_95": 7
     },
     {
@@ -264,7 +286,7 @@
         "name": "Lightricks"
       },
       "elo": 976,
-      "ci_95": 7
+      "ci_95": 6
     },
     {
       "id": "c783d9aa-c387-4f44-b371-563fd9bab06d",
@@ -275,7 +297,7 @@
         "name": "Lightricks"
       },
       "elo": 958,
-      "ci_95": 7
+      "ci_95": 6
     },
     {
       "id": "c6a494f5-7ab7-4693-8382-fa03060d2fdf",
@@ -300,17 +322,6 @@
       "ci_95": 8
     },
     {
-      "id": "e451b7d7-42eb-4c07-9f57-5b5e9bd80c97",
-      "name": "LTX-2 Pro",
-      "slug": "ltx-2-pro",
-      "model_creator": {
-        "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
-        "name": "Lightricks"
-      },
-      "elo": 918,
-      "ci_95": 8
-    },
-    {
       "id": "b84149e7-a8a2-4dff-983d-bb1fe8fcd9ef",
       "name": "Agnes-Video-V2.0",
       "slug": "agnes-video-v2.0",
@@ -318,7 +329,18 @@
         "id": "5db3af1a-e372-4c62-98bd-f6027eeaf990",
         "name": "Sapiens AI"
       },
-      "elo": 914,
+      "elo": 917,
+      "ci_95": 8
+    },
+    {
+      "id": "e451b7d7-42eb-4c07-9f57-5b5e9bd80c97",
+      "name": "LTX-2 Pro",
+      "slug": "ltx-2-pro",
+      "model_creator": {
+        "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
+        "name": "Lightricks"
+      },
+      "elo": 916,
       "ci_95": 8
     }
   ]

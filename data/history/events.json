@@ -1,6 +1,362 @@
 {
-  "generated_at": "2026-08-24T02:02:19.443Z",
+  "generated_at": "2026-08-25T01:57:13.478Z",
   "events": [
+    {
+      "date": "2026-08-25",
+      "type": "added",
+      "model": {
+        "id": "c1c5db7c-968f-445a-a274-7b5689348bf8",
+        "name": "G9v3-39A5B",
+        "slug": "g9v3-39a5b",
+        "creator": "AI9Stars",
+        "first_seen": "2026-08-25",
+        "last_seen": "2026-08-25"
+      },
+      "intelligence": 34
+    },
+    {
+      "date": "2026-08-25",
+      "type": "added",
+      "model": {
+        "id": "a2c8e7b2-57bf-4d1e-96ea-7944d786d94d",
+        "name": "Granite 4.0 1B",
+        "slug": "granite-4-0-nano-1b",
+        "creator": "IBM",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "intelligence": 1.6
+    },
+    {
+      "date": "2026-08-25",
+      "type": "added",
+      "model": {
+        "id": "c07e65e6-32fc-451e-938d-7477a1c3ffcc",
+        "name": "Grok 4.6 (low)",
+        "slug": "grok-4-6-low",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-08-25",
+        "last_seen": "2026-08-25"
+      },
+      "intelligence": 51.7
+    },
+    {
+      "date": "2026-08-25",
+      "type": "added",
+      "model": {
+        "id": "26614164-6840-4e17-a65a-2deb2fe7e87b",
+        "name": "Grok 4.6 (medium)",
+        "slug": "grok-4-6-medium",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-08-25",
+        "last_seen": "2026-08-25"
+      },
+      "intelligence": 59
+    },
+    {
+      "date": "2026-08-25",
+      "type": "added",
+      "model": {
+        "id": "d6f43d0a-e8c4-447c-9ff7-5cf0a9d59aa3",
+        "name": "Grok 4.6 (xhigh)",
+        "slug": "grok-4-6-xhigh",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-08-25",
+        "last_seen": "2026-08-25"
+      },
+      "intelligence": 60
+    },
+    {
+      "date": "2026-08-25",
+      "type": "added",
+      "model": {
+        "id": "a38d719a-709c-4983-b3e7-7090389ae9a6",
+        "name": "K2-V2 (high)",
+        "slug": "k2-v2",
+        "creator": "MBZUAI Institute of Foundation Models",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "intelligence": 14.2
+    },
+    {
+      "date": "2026-08-25",
+      "type": "added",
+      "model": {
+        "id": "e1bfc488-5f48-4d42-abf6-7f3c53d79f9c",
+        "name": "LFM2.5-2.6B",
+        "slug": "lfm2-5-2-6b",
+        "creator": "Liquid AI",
+        "first_seen": "2026-08-25",
+        "last_seen": "2026-08-25"
+      },
+      "intelligence": 11
+    },
+    {
+      "date": "2026-08-25",
+      "type": "added",
+      "model": {
+        "id": "a3043d4f-9b92-4261-8ea2-a2d391b09cf4",
+        "name": "Motif 3 (Beta)",
+        "slug": "motif-0714",
+        "creator": "Motif Technologies",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "intelligence": 45.3
+    },
+    {
+      "date": "2026-08-25",
+      "type": "removed",
+      "model": {
+        "id": "c5ccda86-5e84-4b69-9247-6d4287fc3336",
+        "name": "G9v3-39A5B",
+        "slug": "g9v3-39a5b",
+        "creator": "AI9Stars",
+        "first_seen": "2026-08-04",
+        "last_seen": "2026-08-24"
+      }
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "8afc250d-b538-45a2-812a-4605f4ffd87e",
+        "name": "GPT-5.6 Sol (high)",
+        "slug": "gpt-5-6-sol-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceIn",
+      "from": 5,
+      "to": 4
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "8afc250d-b538-45a2-812a-4605f4ffd87e",
+        "name": "GPT-5.6 Sol (high)",
+        "slug": "gpt-5-6-sol-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceOut",
+      "from": 30,
+      "to": 20
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "0904b596-8932-43bd-9b21-324f128e1723",
+        "name": "GPT-5.6 Sol (low)",
+        "slug": "gpt-5-6-sol-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceIn",
+      "from": 5,
+      "to": 4
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "0904b596-8932-43bd-9b21-324f128e1723",
+        "name": "GPT-5.6 Sol (low)",
+        "slug": "gpt-5-6-sol-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceOut",
+      "from": 30,
+      "to": 20
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "d93edfe8-bf35-49ad-b56e-b18116142a1c",
+        "name": "GPT-5.6 Sol (max)",
+        "slug": "gpt-5-6-sol",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceIn",
+      "from": 5,
+      "to": 4
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "d93edfe8-bf35-49ad-b56e-b18116142a1c",
+        "name": "GPT-5.6 Sol (max)",
+        "slug": "gpt-5-6-sol",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceOut",
+      "from": 30,
+      "to": 20
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "6f174934-5b7d-4333-86cb-f5ebf4a862e3",
+        "name": "GPT-5.6 Sol (medium)",
+        "slug": "gpt-5-6-sol-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceIn",
+      "from": 5,
+      "to": 4
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "6f174934-5b7d-4333-86cb-f5ebf4a862e3",
+        "name": "GPT-5.6 Sol (medium)",
+        "slug": "gpt-5-6-sol-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceOut",
+      "from": 30,
+      "to": 20
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "7c4d1e30-6ecb-46cf-880c-41446d7b51f1",
+        "name": "GPT-5.6 Sol (Non-reasoning)",
+        "slug": "gpt-5-6-sol-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceIn",
+      "from": 5,
+      "to": 4
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "7c4d1e30-6ecb-46cf-880c-41446d7b51f1",
+        "name": "GPT-5.6 Sol (Non-reasoning)",
+        "slug": "gpt-5-6-sol-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceOut",
+      "from": 30,
+      "to": 20
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "d998db47-9b67-4727-a2bb-2e1261020ac0",
+        "name": "GPT-5.6 Sol (xhigh)",
+        "slug": "gpt-5-6-sol-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceIn",
+      "from": 5,
+      "to": 4
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "d998db47-9b67-4727-a2bb-2e1261020ac0",
+        "name": "GPT-5.6 Sol (xhigh)",
+        "slug": "gpt-5-6-sol-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceOut",
+      "from": 30,
+      "to": 20
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "91f3a4c8-b000-4513-942c-bfe283375c35",
+        "name": "Ling 2.6 Flash",
+        "slug": "ling-2-6-flash",
+        "creator": "InclusionAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceIn",
+      "from": 0.1,
+      "to": null
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "91f3a4c8-b000-4513-942c-bfe283375c35",
+        "name": "Ling 2.6 Flash",
+        "slug": "ling-2-6-flash",
+        "creator": "InclusionAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceOut",
+      "from": 0.3,
+      "to": null
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "b01dee41-c62b-48ed-8d16-984adc405e5c",
+        "name": "Qwen3.8 27B (xhigh)",
+        "slug": "qwen3-8-27b",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-20",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceIn",
+      "from": 0.45,
+      "to": 0.5
+    },
+    {
+      "date": "2026-08-25",
+      "type": "price",
+      "model": {
+        "id": "b01dee41-c62b-48ed-8d16-984adc405e5c",
+        "name": "Qwen3.8 27B (xhigh)",
+        "slug": "qwen3-8-27b",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-20",
+        "last_seen": "2026-08-25"
+      },
+      "metric": "priceOut",
+      "from": 3.2,
+      "to": 3
+    },
     {
       "date": "2026-08-24",
       "type": "added",
