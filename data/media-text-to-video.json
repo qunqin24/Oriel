@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-26T02:04:54.618Z",
+  "fetched_at": "2026-08-27T10:01:56.205Z",
   "tier": "free",
   "data": [
     {
@@ -87,7 +87,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1227,
+      "elo": 1228,
       "ci_95": 8
     },
     {
@@ -267,9 +267,9 @@
       "ci_95": 7
     },
     {
-      "id": "61270a9b-9d2e-4875-810f-e81508bc5504",
-      "name": "Kling 2.5 Turbo 1080p",
-      "slug": "kling-25-turbo-1080p",
+      "id": "fc9dbded-1710-4498-9711-850dc6603abf",
+      "name": "Kling 2.6 Pro (January)",
+      "slug": "kling-2-6-pro-january-no-audio",
       "model_creator": {
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
@@ -278,9 +278,9 @@
       "ci_95": 7
     },
     {
-      "id": "fc9dbded-1710-4498-9711-850dc6603abf",
-      "name": "Kling 2.6 Pro (January)",
-      "slug": "kling-2-6-pro-january-no-audio",
+      "id": "61270a9b-9d2e-4875-810f-e81508bc5504",
+      "name": "Kling 2.5 Turbo 1080p",
+      "slug": "kling-25-turbo-1080p",
       "model_creator": {
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
@@ -670,7 +670,7 @@
         "id": "a4e5bd55-a6cd-4dcf-8d4a-1d9643cd3826",
         "name": "Tencent"
       },
-      "elo": 1015,
+      "elo": 1016,
       "ci_95": 8
     },
     {
@@ -791,7 +791,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 949,
+      "elo": 950,
       "ci_95": 9
     },
     {

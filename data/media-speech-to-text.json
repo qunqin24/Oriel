@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-26T02:04:54.618Z",
+  "fetched_at": "2026-08-27T10:01:56.205Z",
   "tier": "free",
   "data": [
     {
@@ -165,11 +165,29 @@
       "aa_wer_index": 0
     },
     {
+      "id": "bb5af4f9-cb59-4424-bd6c-a1b2ce7732ec",
+      "name": "Gemini 3.1 Pro Preview (High)",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": 0
+    },
+    {
       "id": "baecc05e-83d2-489d-8f23-e139dd22f88b",
       "name": "Fun-Realtime-ASR-preview",
       "model_creator": {
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "41202839-17f1-44b8-81f5-232e825746f1",
+      "name": "Inworld STT 1",
+      "model_creator": {
+        "id": "3aab6d2e-04b0-43ee-996f-d8ef76ac3232",
+        "name": "Inworld"
       },
       "aa_wer_index": 0
     },
@@ -215,15 +233,6 @@
       "model_creator": {
         "id": "4fb0e648-ff21-4fe3-909b-290fba140579",
         "name": "AssemblyAI"
-      },
-      "aa_wer_index": 0
-    },
-    {
-      "id": "bb5af4f9-cb59-4424-bd6c-a1b2ce7732ec",
-      "name": "Gemini 3.1 Pro Preview (High)",
-      "model_creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google"
       },
       "aa_wer_index": 0
     },
@@ -532,6 +541,15 @@
         "name": "Alibaba"
       },
       "aa_wer_index": 0.1
+    },
+    {
+      "id": "69876c64-ae0b-4c20-99ca-520a83e02b61",
+      "name": "Gemini 3.5 Transcribe",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "aa_wer_index": 0
     },
     {
       "id": "4b9dafcd-ea65-4c83-a712-307307b3e410",

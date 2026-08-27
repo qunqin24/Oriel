@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-26T02:04:54.618Z",
+  "fetched_at": "2026-08-27T10:01:56.205Z",
   "tier": "free",
   "data": [
     {
@@ -671,17 +671,6 @@
         "name": "Maya Research"
       },
       "elo": 1055,
-      "ci_95": 14
-    },
-    {
-      "id": "77d660c1-f881-41ab-9982-167e09938218",
-      "name": "Flux TTS",
-      "slug": "flux-tts",
-      "model_creator": {
-        "id": "e89cf922-cec7-4064-a472-c439f5a04da9",
-        "name": "Deepgram"
-      },
-      "elo": 1053,
       "ci_95": 14
     },
     {

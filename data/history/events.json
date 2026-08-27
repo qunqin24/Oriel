@@ -1,6 +1,131 @@
 {
-  "generated_at": "2026-08-26T02:04:55.949Z",
+  "generated_at": "2026-08-27T10:01:57.468Z",
   "events": [
+    {
+      "date": "2026-08-27",
+      "type": "added",
+      "model": {
+        "id": "7707a46f-895f-4247-b7a8-ddab87c9a11d",
+        "name": "DeepSeek V4 Flash Vision (Reasoning, Max Effort)",
+        "slug": "deepseek-v4-flash-vision",
+        "creator": "DeepSeek",
+        "first_seen": "2026-08-27",
+        "last_seen": "2026-08-27"
+      },
+      "intelligence": 51.5
+    },
+    {
+      "date": "2026-08-27",
+      "type": "added",
+      "model": {
+        "id": "19496b81-9f41-4214-a77a-1df803b3c5ae",
+        "name": "GLM-5.3-Flash",
+        "slug": "glm-5-3-flash",
+        "creator": "Z AI",
+        "first_seen": "2026-08-27",
+        "last_seen": "2026-08-27"
+      },
+      "intelligence": 57.5
+    },
+    {
+      "date": "2026-08-27",
+      "type": "added",
+      "model": {
+        "id": "0c64b008-20c3-408d-bd68-15136df8cd2c",
+        "name": "Granite 4.2 3B",
+        "slug": "granite-4-2-3b",
+        "creator": "IBM",
+        "first_seen": "2026-08-27",
+        "last_seen": "2026-08-27"
+      },
+      "intelligence": 14.3
+    },
+    {
+      "date": "2026-08-27",
+      "type": "added",
+      "model": {
+        "id": "adfae555-f489-4f3e-9064-c6b7fcdd0783",
+        "name": "Granite 4.2 8B",
+        "slug": "granite-4-2-8b",
+        "creator": "IBM",
+        "first_seen": "2026-08-27",
+        "last_seen": "2026-08-27"
+      },
+      "intelligence": 19.6
+    },
+    {
+      "date": "2026-08-27",
+      "type": "added",
+      "model": {
+        "id": "353c92f3-2148-4c2d-9231-aa7e1322a1fd",
+        "name": "Qwen3.8 27B (Non-reasoning)",
+        "slug": "qwen3-8-27b-non-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-27",
+        "last_seen": "2026-08-27"
+      },
+      "intelligence": 34.7
+    },
+    {
+      "date": "2026-08-27",
+      "type": "price",
+      "model": {
+        "id": "fb65266f-5a7d-403c-85d5-ccdf0d1ca838",
+        "name": "DeepSeek V3.1 (Non-reasoning)",
+        "slug": "deepseek-v3-1",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-27"
+      },
+      "metric": "priceIn",
+      "from": 0.56,
+      "to": 0.57
+    },
+    {
+      "date": "2026-08-27",
+      "type": "price",
+      "model": {
+        "id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
+        "name": "GLM-5.1 (Reasoning)",
+        "slug": "glm-5-1",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-27"
+      },
+      "metric": "priceIn",
+      "from": 1.39,
+      "to": 1.38
+    },
+    {
+      "date": "2026-08-27",
+      "type": "price",
+      "model": {
+        "id": "340fb211-4fad-41d3-87d5-ed0d0cd34088",
+        "name": "HyperNova 60B 2605",
+        "slug": "hypernova-60b",
+        "creator": "Multiverse Computing",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-27"
+      },
+      "metric": "priceIn",
+      "from": null,
+      "to": 0.04
+    },
+    {
+      "date": "2026-08-27",
+      "type": "price",
+      "model": {
+        "id": "340fb211-4fad-41d3-87d5-ed0d0cd34088",
+        "name": "HyperNova 60B 2605",
+        "slug": "hypernova-60b",
+        "creator": "Multiverse Computing",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-08-27"
+      },
+      "metric": "priceOut",
+      "from": null,
+      "to": 0.14
+    },
     {
       "date": "2026-08-25",
       "type": "added",
