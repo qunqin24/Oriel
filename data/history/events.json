@@ -1,6 +1,45 @@
 {
-  "generated_at": "2026-08-27T10:01:57.468Z",
+  "generated_at": "2026-08-28T11:33:24.337Z",
   "events": [
+    {
+      "date": "2026-08-28",
+      "type": "added",
+      "model": {
+        "id": "f3a0e101-086f-44b3-a1b2-d23498f9716b",
+        "name": "Agnes 2.5 Pro Beta",
+        "slug": "agnes-2-5-pro-beta",
+        "creator": "Sapiens AI",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-08-28"
+      },
+      "intelligence": 49.1
+    },
+    {
+      "date": "2026-08-28",
+      "type": "added",
+      "model": {
+        "id": "1071dea1-43e7-4fe9-b936-3034bb622b2e",
+        "name": "Granite 4.2 30B",
+        "slug": "granite-4-2-30b",
+        "creator": "IBM",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-08-28"
+      },
+      "intelligence": 23.7
+    },
+    {
+      "date": "2026-08-28",
+      "type": "added",
+      "model": {
+        "id": "9ac3908c-9eb2-44db-8c01-3ec7da6fc2ae",
+        "name": "Qwen3.8-Flash-Next",
+        "slug": "qwen3-8-flash-next",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-08-28"
+      },
+      "intelligence": 55.8
+    },
     {
       "date": "2026-08-27",
       "type": "added",

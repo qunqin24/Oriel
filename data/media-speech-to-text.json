@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-27T10:01:56.205Z",
+  "fetched_at": "2026-08-28T11:33:20.481Z",
   "tier": "free",
   "data": [
     {
@@ -192,6 +192,15 @@
       "aa_wer_index": 0
     },
     {
+      "id": "cf64b74a-9c92-4ea2-a1c8-559b93375b23",
+      "name": "MAI-Transcribe-1",
+      "model_creator": {
+        "id": "4756ee95-5ddf-45e8-a9d1-075d0e5b5200",
+        "name": "Microsoft AI"
+      },
+      "aa_wer_index": 0
+    },
+    {
       "id": "1becd7bb-dc7a-4f2d-8415-e8c02ffdebac",
       "name": "Chirp 3, Google",
       "model_creator": {
@@ -260,15 +269,6 @@
       "model_creator": {
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
-      },
-      "aa_wer_index": 0
-    },
-    {
-      "id": "cf64b74a-9c92-4ea2-a1c8-559b93375b23",
-      "name": "MAI-Transcribe-1",
-      "model_creator": {
-        "id": "ef5ce458-9986-4652-915a-e31fac5506b0",
-        "name": "Microsoft"
       },
       "aa_wer_index": 0
     },
@@ -390,6 +390,15 @@
       "aa_wer_index": 0
     },
     {
+      "id": "8c223ca3-e765-4b46-bec0-e694742d542a",
+      "name": "MAI-Transcribe-1.5",
+      "model_creator": {
+        "id": "4756ee95-5ddf-45e8-a9d1-075d0e5b5200",
+        "name": "Microsoft AI"
+      },
+      "aa_wer_index": 0
+    },
+    {
       "id": "484244d8-0d89-48c2-8f6d-9be27093bf9a",
       "name": "Nova-3, Deepgram",
       "model_creator": {
@@ -431,15 +440,6 @@
       "model_creator": {
         "id": "1cd84a95-a774-4756-b889-264693ba346e",
         "name": "Modulate"
-      },
-      "aa_wer_index": 0
-    },
-    {
-      "id": "8c223ca3-e765-4b46-bec0-e694742d542a",
-      "name": "MAI-Transcribe-1.5",
-      "model_creator": {
-        "id": "ef5ce458-9986-4652-915a-e31fac5506b0",
-        "name": "Microsoft"
       },
       "aa_wer_index": 0
     },
