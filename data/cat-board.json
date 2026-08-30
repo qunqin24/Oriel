@@ -1,10 +1,10 @@
 {
-  "fetched_at": "2026-08-29T07:12:30.552Z",
+  "fetched_at": "2026-08-30T05:33:53.092Z",
   "source_repo": "https://github.com/llm2014/llm_benchmark",
   "source_site": "https://llm2014.github.io/llm_benchmark/",
   "categories": {
     "logic": {
-      "reportDate": "2026-08",
+      "reportDate": "2026-09",
       "headers": [
         "模型",
         "极限分数",
@@ -59,7 +59,7 @@
           "1"
         ],
         [
-          "Claude Opus 5 (xhigh)",
+          "Opus 5 (xhigh)",
           "71.24",
           "64.74",
           "9.12%",
@@ -111,7 +111,7 @@
           "1"
         ],
         [
-          "DeepSeek V4 Pro 0813(max)",
+          "DeepSeek V4 Pro 0813 (max)",
           "70.13",
           "59.63",
           "14.97%",
@@ -189,19 +189,6 @@
           "1"
         ],
         [
-          "GLM-5.2 (max)",
-          "66.53",
-          "54.70",
-          "17.78%",
-          "+29.2%",
-          "891",
-          "46273",
-          "¥36.28",
-          "¥28.00",
-          "26-06-14",
-          "1"
-        ],
-        [
           "Qwen3.8-Flash (xhigh)",
           "65.44",
           "54.49",
@@ -241,7 +228,7 @@
           "1"
         ],
         [
-          "Doubao-Seed-2.1-pro  (high)",
+          "Seed-2.1-pro (high)",
           "55.12",
           "45.78",
           "16.94%",
@@ -280,7 +267,7 @@
           "1"
         ],
         [
-          "Claude Sonnet 5 (xhigh)",
+          "Sonnet 5 (xhigh)",
           "47.80",
           "39.57",
           "17.22%",
@@ -293,7 +280,7 @@
           "1"
         ],
         [
-          "Tencent Hy3 (high)",
+          "Hy3 (high)",
           "57.89",
           "39.51",
           "31.75%",
@@ -332,7 +319,7 @@
           "1"
         ],
         [
-          "Doubao-Seed-2.0-lite 0428  (high)",
+          "Seed-2.0-lite 0428 (high)",
           "34.13",
           "26.18",
           "23.29%",
@@ -345,7 +332,7 @@
           "1"
         ],
         [
-          "Claude Opus 5",
+          "Opus 5",
           "34.94",
           "24.58",
           "29.65%",
@@ -540,7 +527,7 @@
           "1"
         ],
         [
-          "Claude Sonnet 5",
+          "Sonnet 5",
           "16.49",
           "9.67",
           "41.36%",
@@ -550,19 +537,6 @@
           "¥11.93",
           "¥69.00",
           "26-07-01",
-          "0"
-        ],
-        [
-          "GLM-5.2",
-          "12.42",
-          "8.05",
-          "35.19%",
-          "-23.4%",
-          "24",
-          "929",
-          "¥0.73",
-          "¥28.00",
-          "26-06-14",
           "0"
         ],
         [
@@ -592,7 +566,7 @@
           "0"
         ],
         [
-          "Doubao-Seed-2.1-pro",
+          "Seed-2.1-pro",
           "13.03",
           "6.17",
           "52.65%",
@@ -620,101 +594,80 @@
       ]
     },
     "code": {
-      "reportDate": "2026-08",
+      "reportDate": "2026-09",
       "headers": [
         "Model",
-        "MacOS App(C)",
-        "Web(E)",
-        "Game(F)",
-        "Rust App(G)",
         "Simple Model(H)",
         "iOS+Server(I)",
         "Animation(J)",
         "Data Process(K)",
+        "Metal(L)",
         "Unprompted",
         "Scaffold",
         "Think"
       ],
       "rows": [
         [
-          "Claude Fable 5 (high)",
-          "Pass",
-          "Pass",
-          "Pass",
-          "Pending",
+          "Fable 5 (high)",
           "2/A+(90.52)",
           "3/A+(103.95)",
           "7/A(59.02)",
+          "Pending",
           "Pending",
           "1",
           "Claude Code",
           "1"
         ],
         [
-          "Claude Opus 5 (max)",
-          "Pass",
-          "Pending",
-          "Pass",
-          "Pending",
+          "Opus 5 (max)",
           "4/A(123.94)",
           "1/A+(122.57)",
           "12/B+(573.18)",
           "16/D(304.84)",
-          "3",
+          "18/C(233.48)",
+          "4",
           "Claude Code",
           "1"
         ],
         [
           "GPT-5.6 Sol (max)",
-          "Pass",
-          "Pass",
-          "Pass",
-          "15/B+(683.21)",
           "4/A(63.86)",
           "8/A(26.97)",
           "23/B(97.98)",
           "8/B(770.41)",
-          "2",
+          "13/C(125.51)",
+          "3",
           "Codex App",
           "1"
         ],
         [
           "Kimi-K3 (max)",
-          "7/A(122.87)",
-          "12/B(171.72)",
-          "15/B(126.40)",
-          "18/B(771.86)",
           "6/A(29.59)",
           "5/A(43.22)",
           "22/B(43.23)",
           "28/D+(383.49)",
+          "25/D(193.42)",
           "2",
           "Claude Code",
           "1"
         ],
         [
           "GLM-5.3 (max)",
-          "Skip",
-          "Pass",
-          "Pass",
-          "Pending",
           "8/B+(11.48)",
           "7/A(25.25)",
           "20/C+(90.76)",
           "30/D(83.29)",
+          "24/D(343.68)",
           "0",
           "Claude Code",
           "1"
         ],
         [
           "Qwen3.8-Max (max)",
-          "Skip",
-          "Skip",
-          "8/B(293.87)",
-          "Skip",
           "11/B(33.16)",
           "10/B(50.86)",
           "15/B(48.94)",
+          "Skip",
           "Skip",
           "0",
           "Claude Code",
@@ -722,27 +675,21 @@
         ],
         [
           "Gemini 3.7 Flash (high)",
-          "Skip",
-          "12/B(38.76)",
-          "Skip",
-          "Skip",
           "14/B(9.38)",
           "8/B(16.84)",
           "14/B(14.28)",
           "34/D(28.93)",
+          "Skip",
           "4",
           "OpenCode CLI",
           "1"
         ],
         [
           "Grok 4.6 (high)",
-          "Skip",
-          "Pass",
-          "Skip",
-          "Skip",
           "16/C+(17.67)",
           "7/B+(18.69)",
           "20/C+(23.19)",
+          "Skip",
           "Skip",
           "1",
           "Grok Build",
@@ -750,41 +697,10 @@
         ],
         [
           "GLM-5.3-Flash (max)",
-          "Skip",
-          "Skip",
-          "Skip",
-          "Skip",
           "9/B(2.11)",
           "13/B(3.31)",
           "Failed",
           "Skip",
-          "0",
-          "Claude Code",
-          "1"
-        ],
-        [
-          "Grok 4.5 (high)",
-          "12/B+(55.98)",
-          "7/A(91.51)",
-          "Skip",
-          "Skip",
-          "16/B(23.12)",
-          "7/B+(15.98)",
-          "Failed",
-          "Skip",
-          "1",
-          "Grok Build",
-          "1"
-        ],
-        [
-          "GLM-5.2 (max)",
-          "16/B(58.92)",
-          "8/A(79.17)",
-          "8/A(51.98)",
-          "43/C(266.62)",
-          "14/B(10.75)",
-          "15/C+(28.61)",
-          "30/C(26.76)",
           "Skip",
           "0",
           "Claude Code",
@@ -792,27 +708,21 @@
         ],
         [
           "DeepSeek V4 Pro 0813 (max)",
-          "Skip",
-          "Skip",
-          "Skip",
-          "Skip",
           "14/B(13.46)",
           "16/C(12.73)",
           "Failed",
           "16/B(18.64)",
+          "27/D(69.58)",
           "0",
           "Claude Code",
           "1"
         ],
         [
           "Muse Spark 1.2 (xhigh)",
-          "Skip",
-          "Skip",
-          "19/B(134.29)",
-          "Skip",
           "26/C(15.82)",
           "11/B(17.76)",
           "Failed",
+          "Skip",
           "Skip",
           "0",
           "Claude Code",
@@ -820,79 +730,50 @@
         ],
         [
           "DeepSeek V4 Flash 0731 (max)",
-          "Skip",
-          "8/A(5.33)",
-          "9/A(7.62)",
-          "44/D+(12.41)",
           "17/B(7.38)",
           "24/D+(4.79)",
           "Failed",
           "Failed",
+          "Skip",
           "2",
           "Claude Code",
           "1"
         ],
         [
-          "Claude Sonnet 5 (high)",
-          "Skip",
-          "18/B(192.63)",
-          "14/B+(144.10)",
-          "Skip",
+          "Sonnet 5 (high)",
           "22/C(154.97)",
           "16/C+(72.34)",
           "Failed",
+          "Skip",
           "Skip",
           "1",
           "Claude Code",
           "1"
         ],
         [
-          "Tencent Hy3 (high)",
-          "11/B(8.06)",
-          "12/B(8.68)",
-          "13/B(11.04)",
-          "Failed(5/9)",
+          "Hy3 (high)",
           "10/B(2.01)",
           "20/C+(13.29)",
           "Failed",
           "Failed",
+          "Skip",
           "0",
           "Claude Code",
           "1"
         ],
         [
           "GPT-5.6 Luna (max)",
-          "Skip",
-          "Skip",
-          "Skip",
-          "Skip",
           "27/C(3.84)",
           "21/C(4.90)",
           "Failed",
+          "Skip",
           "Skip",
           "0",
           "Codex",
           "1"
         ],
         [
-          "Gemini 3.5 Flash (high)",
-          "21/C",
-          "20/C",
-          "17/B",
-          "Skip",
-          "Skip",
-          "Skip",
-          "Skip",
-          "Skip",
-          "3",
-          "Gemini CLI",
-          "1"
-        ],
-        [
           "MiniMax-M3",
-          "Skip",
-          "51/D+",
-          "Skip",
           "Skip",
           "Skip",
           "Skip",
@@ -944,7 +825,7 @@
           "1"
         ],
         [
-          "GPT-5(high)",
+          "GPT-5 (high)",
           "61.73",
           "53.79",
           "12.86%",
@@ -956,7 +837,7 @@
           "1"
         ],
         [
-          "Doubao-Seed-1.6-vision(Think)",
+          "Seed-1.6-vision (Think)",
           "60.58",
           "55.85",
           "7.82%",
@@ -968,7 +849,7 @@
           "1"
         ],
         [
-          "qwen3-vl-235b-a22b(Think)",
+          "qwen3-vl-235b-a22b (Think)",
           "58.21",
           "53.50",
           "8.10%",
@@ -980,7 +861,7 @@
           "0"
         ],
         [
-          "Doubao-Seed-1.6-thinking-0715",
+          "Seed-1.6-thinking-0715",
           "55.39",
           "50.87",
           "8.15%",
@@ -1004,7 +885,7 @@
           "1"
         ],
         [
-          "Doubao-Seed-1.6-vision",
+          "Seed-1.6-vision",
           "48.89",
           "43.74",
           "10.53%",
@@ -1040,7 +921,7 @@
           "0"
         ],
         [
-          "Claude Sonnet 4(Think)",
+          "Sonnet 4 (Think)",
           "47.57",
           "38.83",
           "18.37%",
@@ -1052,7 +933,7 @@
           "1"
         ],
         [
-          "Claude Sonnet 4",
+          "Sonnet 4",
           "45.53",
           "41.21",
           "9.48%",
@@ -1064,7 +945,7 @@
           "0"
         ],
         [
-          "文心一言4.5 Turbo VL 0829",
+          "ERNIE 4.5 Turbo VL 0829",
           "45.31",
           "39.99",
           "11.74%",
@@ -1112,7 +993,7 @@
           "1"
         ],
         [
-          "Doubao-Seed-1.6",
+          "Seed-1.6",
           "39.30",
           "35.32",
           "10.15%",
