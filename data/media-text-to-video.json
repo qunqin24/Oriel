@@ -1,7 +1,18 @@
 {
-  "fetched_at": "2026-09-02T04:47:51.190Z",
+  "fetched_at": "2026-09-03T04:44:43.695Z",
   "tier": "free",
   "data": [
+    {
+      "id": "ceee978e-c560-4ba9-9405-f7d390a47709",
+      "name": "Wan 3.0",
+      "slug": "wan-3-0",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "elo": 1333,
+      "ci_95": 12
+    },
     {
       "id": "88df9253-809f-4dc9-b993-3969fa606473",
       "name": "Gemini Omni Flash",
@@ -65,7 +76,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1243,
+      "elo": 1244,
       "ci_95": 8
     },
     {
@@ -131,7 +142,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 1213,
+      "elo": 1214,
       "ci_95": 11
     },
     {
@@ -241,7 +252,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 1204,
+      "elo": 1205,
       "ci_95": 11
     },
     {
@@ -538,7 +549,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1101,
+      "elo": 1100,
       "ci_95": 11
     },
     {
@@ -560,7 +571,7 @@
         "id": "2354746c-4775-4a06-b64d-0ba4137785b8",
         "name": "ByteDance Seed"
       },
-      "elo": 1079,
+      "elo": 1080,
       "ci_95": 8
     },
     {
@@ -652,23 +663,23 @@
       "ci_95": 8
     },
     {
-      "id": "740a4e7d-f3d8-4980-b389-63947db692f6",
-      "name": "T2V-01-Director",
-      "slug": "t2v-01-director",
-      "model_creator": {
-        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
-        "name": "MiniMax"
-      },
-      "elo": 1017,
-      "ci_95": 8
-    },
-    {
       "id": "498151a5-a67b-4104-94ce-891fbf1f035b",
       "name": "HunyuanVideo-1.5 (Fal)",
       "slug": "hunyuanvideo-1-5-fal",
       "model_creator": {
         "id": "a4e5bd55-a6cd-4dcf-8d4a-1d9643cd3826",
         "name": "Tencent"
+      },
+      "elo": 1017,
+      "ci_95": 8
+    },
+    {
+      "id": "740a4e7d-f3d8-4980-b389-63947db692f6",
+      "name": "T2V-01-Director",
+      "slug": "t2v-01-director",
+      "model_creator": {
+        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+        "name": "MiniMax"
       },
       "elo": 1017,
       "ci_95": 8
@@ -857,7 +868,7 @@
         "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
         "name": "StepFun"
       },
-      "elo": 914,
+      "elo": 915,
       "ci_95": 9
     },
     {
