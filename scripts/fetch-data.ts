@@ -1,7 +1,7 @@
 /**
  * 抓取 Artificial Analysis 的当日快照，写入 data/，并把语言模型部分归档进 data/history/。
  *
- * 由 .github/workflows/daily-data-update.yml 每天 00:23 UTC 触发。
+ * 由 .github/workflows/daily-data-update.yml 每天 21:00 UTC（北京时间次日 05:00）触发。
  */
 
 import { mkdir, writeFile } from "node:fs/promises";

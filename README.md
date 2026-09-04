@@ -32,7 +32,8 @@ SITE_URL=https://your-domain pnpm build
 
 ## 数据
 
-`scripts/fetch-data.ts` 由 GitHub Action 每天在 00:23 UTC **名义调度**，写两处。
+`scripts/fetch-data.ts` 由 GitHub Action 每天在 21:00 UTC（北京时间次日 05:00）
+**名义调度**，写两处。
 GitHub 托管定时任务可能因 runner 繁忙延迟；失败时可在 Actions 页面手动补跑。
 抓取会对临时网络错误重试，并按模型 `id` 清理分页边界的重复项；两个不同模型
 如果共用同一个 `slug`，任务会在写入前明确报错，不会静默覆盖详情页。

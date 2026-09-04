@@ -192,7 +192,7 @@ export const en: Dict = {
 
     sourceTitle: "Where the data comes from",
     sourceBody:
-      "Every figure comes from the public Artificial Analysis API, fetched once a day at 00:23 UTC and committed straight into this site's repository. Oriel runs no benchmarks of its own and applies no weighting, correction, or recalibration — the numbers here are the numbers upstream published.",
+      "Every figure comes from the public Artificial Analysis API, fetched once a day at 05:00 Beijing time (21:00 UTC) and committed straight into this site's repository. Oriel runs no benchmarks of its own and applies no weighting, correction, or recalibration — the numbers here are the numbers upstream published.",
 
     indexTitle: "The intelligence index",
     indexBody:

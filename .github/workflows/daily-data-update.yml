@@ -2,9 +2,9 @@ name: Daily data update
 
 on:
   schedule:
-    # GitHub Actions uses UTC. 名义时间是 00:23 UTC（北京时间 08:23），
+    # GitHub Actions uses UTC. 名义时间是 21:00 UTC（北京时间次日 05:00），
     # 托管 runner 忙时可能延迟；失败后可用 workflow_dispatch 手动补跑。
-    - cron: "23 0 * * *"
+    - cron: "0 21 * * *"
   workflow_dispatch:
 
 permissions:

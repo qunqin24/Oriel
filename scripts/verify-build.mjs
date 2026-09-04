@@ -138,7 +138,11 @@ const days = historyMonths.reduce(
 );
 check(`历史 ${days} 天`, days >= 1);
 
-const fetchedDate = /^\d{4}-\d{2}-\d{2}/.exec(languageEnvelope.fetched_at)?.[0];
+// 快照按北京时间（UTC+8）日期归档，与 history-schema.ts 的 snapshotDate 一致。
+const beijingDate = (iso) =>
+  new Date(new Date(iso).getTime() + 8 * 3_600_000).toISOString().slice(0, 10);
+
+const fetchedDate = /^\d{4}-\d{2}-\d{2}/.exec(beijingDate(languageEnvelope.fetched_at))?.[0];
 check("主快照含有效 fetched_at", Boolean(fetchedDate), languageEnvelope.fetched_at);
 const fetchedMonth = fetchedDate?.slice(0, 7);
 const currentMonth = historyMonths.find((month) => month.month === fetchedMonth);
@@ -163,7 +167,7 @@ const eventLog = JSON.parse(
 const eventCount = eventLog.events.length;
 check(
   "事件流与本次快照同日生成",
-  eventLog.generated_at?.slice(0, 10) === fetchedDate,
+  eventLog.generated_at ? beijingDate(eventLog.generated_at) === fetchedDate : false,
   eventLog.generated_at
 );
 check(`变化页渲染了 ${eventCount} 条事件`, eventCount === 0 || changes.includes("条变化"));

@@ -43,7 +43,7 @@ export type HistorySnapshot = {
 /** 一个月一个文件：data/history/2026-07.json */
 export type HistoryMonth = {
   month: string;
-  /** key 是 UTC 日期 "2026-07-26"。 */
+  /** key 是北京时间日期（UTC+8）"2026-07-26"。 */
   snapshots: Record<string, HistorySnapshot>;
 };
 
@@ -94,7 +94,7 @@ export function catalogIdentities(catalog: Catalog): Map<string, ModelIdentity> 
 export type ChangeEventType = "added" | "removed" | "score" | "price";
 
 export type ChangeEvent = {
-  /** UTC 日期 "2026-07-26" */
+  /** 北京时间日期（UTC+8）"2026-07-26" */
   date: string;
   type: ChangeEventType;
   model: ModelIdentity;
@@ -174,9 +174,14 @@ export function readMetric(tuple: MetricTuple, metric: MetricKey): number | null
   return tuple[metricIndex(metric)] ?? null;
 }
 
-/** ISO 时间戳 → UTC 日期。快照按 UTC 日归档，与 GitHub Action 的 cron 一致。 */
+/**
+ * ISO 时间戳 → 北京时间（UTC+8）日期。
+ * 快照按北京日归档，与 GitHub Action 的 cron（21:00 UTC = 次日 05:00 北京时间）一致。
+ */
 export function snapshotDate(isoTimestamp: string): string {
-  return new Date(isoTimestamp).toISOString().slice(0, 10);
+  return new Date(new Date(isoTimestamp).getTime() + 8 * 3_600_000)
+    .toISOString()
+    .slice(0, 10);
 }
 
 /** "2026-07-26" → "2026-07" */

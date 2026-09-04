@@ -196,7 +196,7 @@ export const zh = {
 
     sourceTitle: "数据来源",
     sourceBody:
-      "全部数据来自 Artificial Analysis 的公开 API，每天 00:23 UTC 抓取一次，直接提交进本站仓库。Oriel 自己不跑任何评测，也不对分数做加权、修正或重新标定——你在这里看到的数字和上游发布的一致。",
+      "全部数据来自 Artificial Analysis 的公开 API，每天北京时间凌晨 5 点抓取一次，直接提交进本站仓库。Oriel 自己不跑任何评测，也不对分数做加权、修正或重新标定——你在这里看到的数字和上游发布的一致。",
 
     indexTitle: "智能指数",
     indexBody:
