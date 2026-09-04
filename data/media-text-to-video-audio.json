@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-04T04:50:33.665Z",
+  "fetched_at": "2026-09-04T22:47:48.822Z",
   "tier": "free",
   "data": [
     {
@@ -54,7 +54,7 @@
         "id": "2354746c-4775-4a06-b64d-0ba4137785b8",
         "name": "ByteDance Seed"
       },
-      "elo": 1221,
+      "elo": 1222,
       "ci_95": 5
     },
     {
@@ -76,7 +76,7 @@
         "id": "0ea38458-92d7-45de-a69d-c50bd8277273",
         "name": "Alibaba-ATH"
       },
-      "elo": 1145,
+      "elo": 1146,
       "ci_95": 6
     },
     {
@@ -89,6 +89,17 @@
       },
       "elo": 1122,
       "ci_95": 6
+    },
+    {
+      "id": "5c9ce9f8-e783-4bdf-a989-948bd18488d0",
+      "name": "MAGI-2 Preview",
+      "slug": "magi-2-preview",
+      "model_creator": {
+        "id": "319e519d-a916-49f0-8708-ce0b54073a3c",
+        "name": "Sand.ai"
+      },
+      "elo": 1112,
+      "ci_95": 9
     },
     {
       "id": "d149ad95-b3b2-4d23-8611-07a84c1a0e7f",
@@ -234,17 +245,6 @@
       "ci_95": 5
     },
     {
-      "id": "791ff10c-594f-418b-9c1a-39313784d759",
-      "name": "LTX-2.5 Pro",
-      "slug": "ltx-2-5-pro",
-      "model_creator": {
-        "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
-        "name": "Lightricks"
-      },
-      "elo": 1060,
-      "ci_95": 9
-    },
-    {
       "id": "b5343afd-4bff-4e97-99fc-1e2edf2e8eb1",
       "name": "LTX-2.5 Fast",
       "slug": "ltx-2-5-fast",
@@ -252,7 +252,18 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 1060,
+      "elo": 1061,
+      "ci_95": 9
+    },
+    {
+      "id": "791ff10c-594f-418b-9c1a-39313784d759",
+      "name": "LTX-2.5 Pro",
+      "slug": "ltx-2-5-pro",
+      "model_creator": {
+        "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
+        "name": "Lightricks"
+      },
+      "elo": 1061,
       "ci_95": 9
     },
     {
@@ -263,7 +274,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1030,
+      "elo": 1028,
       "ci_95": 9
     },
     {
@@ -318,7 +329,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 959,
+      "elo": 960,
       "ci_95": 6
     },
     {
@@ -351,7 +362,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 920,
+      "elo": 921,
       "ci_95": 8
     },
     {
