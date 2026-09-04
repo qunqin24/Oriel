@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-03T04:44:43.695Z",
+  "fetched_at": "2026-09-04T04:50:33.665Z",
   "tier": "free",
   "data": [
     {
@@ -586,6 +586,24 @@
         "name": "OpenAI"
       },
       "aa_wer_index": null
+    },
+    {
+      "id": "03376727-6db2-4121-8e63-d242221dc439",
+      "name": "Distil-Whisper Large v2, Hugging Face",
+      "model_creator": {
+        "id": "7bb099e1-27a2-4f60-afd3-13eb1ec1ba6f",
+        "name": "Hugging Face"
+      },
+      "aa_wer_index": null
+    },
+    {
+      "id": "31cbe16c-4b8f-4938-a841-e14b7770a386",
+      "name": "MAI-Transcribe-2",
+      "model_creator": {
+        "id": "4756ee95-5ddf-45e8-a9d1-075d0e5b5200",
+        "name": "Microsoft AI"
+      },
+      "aa_wer_index": 0
     }
   ]
 }

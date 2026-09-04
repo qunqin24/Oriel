@@ -1,7 +1,18 @@
 {
-  "fetched_at": "2026-09-03T04:44:43.695Z",
+  "fetched_at": "2026-09-04T04:50:33.665Z",
   "tier": "free",
   "data": [
+    {
+      "id": "ceee978e-c560-4ba9-9405-f7d390a47709",
+      "name": "Wan 3.0",
+      "slug": "wan-3-0",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "elo": 1238,
+      "ci_95": 10
+    },
     {
       "id": "88df9253-809f-4dc9-b993-3969fa606473",
       "name": "Gemini Omni Flash",
@@ -12,17 +23,6 @@
       },
       "elo": 1238,
       "ci_95": 6
-    },
-    {
-      "id": "ceee978e-c560-4ba9-9405-f7d390a47709",
-      "name": "Wan 3.0",
-      "slug": "wan-3-0",
-      "model_creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba"
-      },
-      "elo": 1237,
-      "ci_95": 10
     },
     {
       "id": "0aa31432-4bf3-4f1b-ad2d-b31abba7a98c",
@@ -157,9 +157,9 @@
       "ci_95": 6
     },
     {
-      "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
-      "name": "Kling 3.0 Omni 720p (Standard)",
-      "slug": "kling-o3-standard",
+      "id": "553f28a1-95de-4991-9084-d9275d862f68",
+      "name": "Kling 3.0 Omni 1080p (Pro)",
+      "slug": "kling-o3-pro",
       "model_creator": {
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
@@ -168,9 +168,9 @@
       "ci_95": 6
     },
     {
-      "id": "553f28a1-95de-4991-9084-d9275d862f68",
-      "name": "Kling 3.0 Omni 1080p (Pro)",
-      "slug": "kling-o3-pro",
+      "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
+      "name": "Kling 3.0 Omni 720p (Standard)",
+      "slug": "kling-o3-standard",
       "model_creator": {
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
@@ -234,6 +234,17 @@
       "ci_95": 5
     },
     {
+      "id": "791ff10c-594f-418b-9c1a-39313784d759",
+      "name": "LTX-2.5 Pro",
+      "slug": "ltx-2-5-pro",
+      "model_creator": {
+        "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
+        "name": "Lightricks"
+      },
+      "elo": 1060,
+      "ci_95": 9
+    },
+    {
       "id": "b5343afd-4bff-4e97-99fc-1e2edf2e8eb1",
       "name": "LTX-2.5 Fast",
       "slug": "ltx-2-5-fast",
@@ -245,17 +256,6 @@
       "ci_95": 9
     },
     {
-      "id": "791ff10c-594f-418b-9c1a-39313784d759",
-      "name": "LTX-2.5 Pro",
-      "slug": "ltx-2-5-pro",
-      "model_creator": {
-        "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
-        "name": "Lightricks"
-      },
-      "elo": 1059,
-      "ci_95": 9
-    },
-    {
       "id": "043f0cb2-3565-45ad-bf78-7e2de8288e94",
       "name": "Vidu Q3 Turbo",
       "slug": "vidu-q3-turbo",
@@ -263,7 +263,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1031,
+      "elo": 1030,
       "ci_95": 9
     },
     {
@@ -340,7 +340,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 942,
+      "elo": 941,
       "ci_95": 8
     },
     {
@@ -362,7 +362,7 @@
         "id": "5db3af1a-e372-4c62-98bd-f6027eeaf990",
         "name": "Sapiens AI"
       },
-      "elo": 919,
+      "elo": 920,
       "ci_95": 8
     }
   ]
