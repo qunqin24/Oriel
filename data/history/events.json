@@ -1,6 +1,96 @@
 {
-  "generated_at": "2026-09-04T22:47:49.858Z",
+  "generated_at": "2026-09-05T22:40:05.685Z",
   "events": [
+    {
+      "date": "2026-09-06",
+      "type": "score",
+      "model": {
+        "id": "bbd93ebe-80da-4594-bb19-61e69d0331df",
+        "name": "Gemini 3.1 Pro Preview",
+        "slug": "gemini-3-1-pro-preview",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-06"
+      },
+      "metric": "intelligence",
+      "from": 38.3,
+      "to": 36.7
+    },
+    {
+      "date": "2026-09-06",
+      "type": "score",
+      "model": {
+        "id": "bbd93ebe-80da-4594-bb19-61e69d0331df",
+        "name": "Gemini 3.1 Pro Preview",
+        "slug": "gemini-3-1-pro-preview",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-06"
+      },
+      "metric": "coding",
+      "from": 68.7,
+      "to": 68.8
+    },
+    {
+      "date": "2026-09-06",
+      "type": "score",
+      "model": {
+        "id": "4928e950-7f37-4475-b0dc-c5bad781a321",
+        "name": "Mistral Large 3",
+        "slug": "mistral-large-3",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-06"
+      },
+      "metric": "intelligence",
+      "from": 9.7,
+      "to": 11.1
+    },
+    {
+      "date": "2026-09-06",
+      "type": "score",
+      "model": {
+        "id": "4928e950-7f37-4475-b0dc-c5bad781a321",
+        "name": "Mistral Large 3",
+        "slug": "mistral-large-3",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-06"
+      },
+      "metric": "coding",
+      "from": 20.2,
+      "to": 20.1
+    },
+    {
+      "date": "2026-09-06",
+      "type": "score",
+      "model": {
+        "id": "58a40aba-a44f-457f-9cca-75b43d4e6934",
+        "name": "Muse Spark 1.3 (max)",
+        "slug": "muse-spark-1-3",
+        "creator": "Meta",
+        "first_seen": "2026-09-04",
+        "last_seen": "2026-09-06"
+      },
+      "metric": "intelligence",
+      "from": 52.7,
+      "to": 53
+    },
+    {
+      "date": "2026-09-06",
+      "type": "score",
+      "model": {
+        "id": "b01dee41-c62b-48ed-8d16-984adc405e5c",
+        "name": "Qwen3.8 27B (xhigh)",
+        "slug": "qwen3-8-27b",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-20",
+        "last_seen": "2026-09-06"
+      },
+      "metric": "intelligence",
+      "from": 41.6,
+      "to": 41.4
+    },
     {
       "date": "2026-09-05",
       "type": "price",

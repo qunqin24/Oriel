@@ -1,18 +1,7 @@
 {
-  "fetched_at": "2026-09-04T22:47:48.822Z",
+  "fetched_at": "2026-09-05T22:40:04.544Z",
   "tier": "free",
   "data": [
-    {
-      "id": "ceee978e-c560-4ba9-9405-f7d390a47709",
-      "name": "Wan 3.0",
-      "slug": "wan-3-0",
-      "model_creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba"
-      },
-      "elo": 1238,
-      "ci_95": 10
-    },
     {
       "id": "88df9253-809f-4dc9-b993-3969fa606473",
       "name": "Gemini Omni Flash",
@@ -23,6 +12,17 @@
       },
       "elo": 1238,
       "ci_95": 6
+    },
+    {
+      "id": "ceee978e-c560-4ba9-9405-f7d390a47709",
+      "name": "Wan 3.0",
+      "slug": "wan-3-0",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "elo": 1238,
+      "ci_95": 10
     },
     {
       "id": "0aa31432-4bf3-4f1b-ad2d-b31abba7a98c",
@@ -43,7 +43,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1227,
+      "elo": 1228,
       "ci_95": 7
     },
     {
@@ -267,17 +267,6 @@
       "ci_95": 9
     },
     {
-      "id": "043f0cb2-3565-45ad-bf78-7e2de8288e94",
-      "name": "Vidu Q3 Turbo",
-      "slug": "vidu-q3-turbo",
-      "model_creator": {
-        "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
-        "name": "Vidu"
-      },
-      "elo": 1028,
-      "ci_95": 9
-    },
-    {
       "id": "6ccddbde-d734-4ac0-95a7-f7ed903ec45d",
       "name": "Wan 2.6",
       "slug": "wan-2-6",
@@ -287,6 +276,17 @@
       },
       "elo": 1028,
       "ci_95": 6
+    },
+    {
+      "id": "043f0cb2-3565-45ad-bf78-7e2de8288e94",
+      "name": "Vidu Q3 Turbo",
+      "slug": "vidu-q3-turbo",
+      "model_creator": {
+        "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
+        "name": "Vidu"
+      },
+      "elo": 1028,
+      "ci_95": 9
     },
     {
       "id": "54ccf54f-c5b1-4820-af60-57015ba37fc7",

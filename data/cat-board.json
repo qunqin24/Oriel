@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-04T22:47:56.830Z",
+  "fetched_at": "2026-09-05T22:40:11.819Z",
   "source_repo": "https://github.com/llm2014/llm_benchmark",
   "source_site": "https://llm2014.github.io/llm_benchmark/",
   "categories": {
@@ -19,6 +19,19 @@
         "Think"
       ],
       "rows": [
+        [
+          "GPT-6 Astra (xhigh)",
+          "90.16",
+          "87.64",
+          "2.80%",
+          "+25.1%",
+          "226",
+          "12495",
+          "¥120.70",
+          "¥345.00",
+          "26-09-05",
+          "1"
+        ],
         [
           "Fable 5.1 (xhigh ~Estimated)",
           "84.56",
@@ -633,6 +646,17 @@
         "Think"
       ],
       "rows": [
+        [
+          "GPT-6 Astra (max)",
+          "5/A+(41.53)",
+          "3/A+(64.74)",
+          "4/A+(75.84)",
+          "5/A(61.32)",
+          "Pending",
+          "4",
+          "Codex CLI",
+          "1"
+        ],
         [
           "Fable 5 (high)",
           "2/A+(90.52)",
