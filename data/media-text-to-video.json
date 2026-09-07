@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-06T22:43:25.176Z",
+  "fetched_at": "2026-09-07T23:17:56.765Z",
   "tier": "free",
   "data": [
     {
@@ -21,7 +21,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1323,
+      "elo": 1324,
       "ci_95": 9
     },
     {
@@ -76,7 +76,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1243,
+      "elo": 1244,
       "ci_95": 8
     },
     {
@@ -135,17 +135,6 @@
       "ci_95": 8
     },
     {
-      "id": "b5343afd-4bff-4e97-99fc-1e2edf2e8eb1",
-      "name": "LTX-2.5 Fast",
-      "slug": "ltx-2-5-fast",
-      "model_creator": {
-        "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
-        "name": "Lightricks"
-      },
-      "elo": 1213,
-      "ci_95": 11
-    },
-    {
       "id": "1ce3af77-bb30-40ef-90e2-5aa9fa4588b9",
       "name": "Wan 2.7",
       "slug": "wan-2-7-v2v",
@@ -155,6 +144,17 @@
       },
       "elo": 1213,
       "ci_95": 9
+    },
+    {
+      "id": "b5343afd-4bff-4e97-99fc-1e2edf2e8eb1",
+      "name": "LTX-2.5 Fast",
+      "slug": "ltx-2-5-fast",
+      "model_creator": {
+        "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
+        "name": "Lightricks"
+      },
+      "elo": 1213,
+      "ci_95": 11
     },
     {
       "id": "b5d5057e-3d0d-4e22-b029-bd976cd1b6a6",
@@ -179,17 +179,6 @@
       "ci_95": 7
     },
     {
-      "id": "d7c0367f-1adf-40ec-8195-5c5d1906efa8",
-      "name": "Vidu Q3 Pro",
-      "slug": "vidu-q3-pro",
-      "model_creator": {
-        "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
-        "name": "Vidu"
-      },
-      "elo": 1211,
-      "ci_95": 7
-    },
-    {
       "id": "7623b756-8b01-4e60-aed4-3322c1933e36",
       "name": "Veo 3",
       "slug": "veo-3-no-audio",
@@ -199,6 +188,17 @@
       },
       "elo": 1211,
       "ci_95": 8
+    },
+    {
+      "id": "d7c0367f-1adf-40ec-8195-5c5d1906efa8",
+      "name": "Vidu Q3 Pro",
+      "slug": "vidu-q3-pro",
+      "model_creator": {
+        "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
+        "name": "Vidu"
+      },
+      "elo": 1211,
+      "ci_95": 7
     },
     {
       "id": "c6a494f5-7ab7-4693-8382-fa03060d2fdf",
@@ -340,7 +340,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1186,
+      "elo": 1185,
       "ci_95": 8
     },
     {
@@ -476,20 +476,20 @@
       "ci_95": 9
     },
     {
-      "id": "e451b7d7-42eb-4c07-9f57-5b5e9bd80c97",
-      "name": "LTX-2 Pro",
-      "slug": "ltx-2-pro",
+      "id": "40f64093-99b7-4e9b-9705-651fc5b436c4",
+      "name": "LTX-2.3 Fast",
+      "slug": "ltx-2-3-fast",
       "model_creator": {
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 1120,
+      "elo": 1121,
       "ci_95": 8
     },
     {
-      "id": "40f64093-99b7-4e9b-9705-651fc5b436c4",
-      "name": "LTX-2.3 Fast",
-      "slug": "ltx-2-3-fast",
+      "id": "e451b7d7-42eb-4c07-9f57-5b5e9bd80c97",
+      "name": "LTX-2 Pro",
+      "slug": "ltx-2-pro",
       "model_creator": {
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
@@ -549,7 +549,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1101,
+      "elo": 1100,
       "ci_95": 11
     },
     {
@@ -736,7 +736,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1003,
+      "elo": 1004,
       "ci_95": 10
     },
     {
@@ -758,7 +758,7 @@
         "id": "a4e5bd55-a6cd-4dcf-8d4a-1d9643cd3826",
         "name": "Tencent"
       },
-      "elo": 996,
+      "elo": 995,
       "ci_95": 8
     },
     {
@@ -780,7 +780,7 @@
         "id": "09468924-69a9-499b-8dd6-d0bb4c05285d",
         "name": "Luma Labs"
       },
-      "elo": 973,
+      "elo": 974,
       "ci_95": 8
     },
     {

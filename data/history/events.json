@@ -1,6 +1,19 @@
 {
-  "generated_at": "2026-09-06T22:43:27.083Z",
+  "generated_at": "2026-09-07T23:17:58.670Z",
   "events": [
+    {
+      "date": "2026-09-08",
+      "type": "added",
+      "model": {
+        "id": "641a073a-41c9-4773-9b02-d965c16607c5",
+        "name": "MiniCPM5-2B",
+        "slug": "minicpm5-2b",
+        "creator": "OpenBMB",
+        "first_seen": "2026-09-08",
+        "last_seen": "2026-09-08"
+      },
+      "intelligence": 15
+    },
     {
       "date": "2026-09-06",
       "type": "score",
