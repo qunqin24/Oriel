@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-07T23:17:56.765Z",
+  "fetched_at": "2026-09-08T23:12:48.801Z",
   "tier": "free",
   "data": [
     {
@@ -10,7 +10,7 @@
         "id": "d3f67dc4-ba4d-4103-ba79-ee321ca99b40",
         "name": "Fal"
       },
-      "elo": 1201,
+      "elo": 1200,
       "ci_95": 9
     },
     {
@@ -98,7 +98,7 @@
         "id": "0ea38458-92d7-45de-a69d-c50bd8277273",
         "name": "Alibaba-ATH"
       },
-      "elo": 1088,
+      "elo": 1087,
       "ci_95": 7
     },
     {
@@ -120,7 +120,7 @@
         "id": "67b5ce4d-0c81-4edc-b4c3-370acc2df555",
         "name": "Skywork AI"
       },
-      "elo": 1086,
+      "elo": 1085,
       "ci_95": 7
     },
     {
@@ -197,7 +197,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1069,
+      "elo": 1068,
       "ci_95": 6
     },
     {
@@ -208,7 +208,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1062,
+      "elo": 1061,
       "ci_95": 6
     },
     {
@@ -230,7 +230,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1053,
+      "elo": 1052,
       "ci_95": 7
     },
     {
@@ -245,17 +245,6 @@
       "ci_95": 9
     },
     {
-      "id": "043f0cb2-3565-45ad-bf78-7e2de8288e94",
-      "name": "Vidu Q3 Turbo",
-      "slug": "vidu-q3-turbo",
-      "model_creator": {
-        "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
-        "name": "Vidu"
-      },
-      "elo": 1036,
-      "ci_95": 9
-    },
-    {
       "id": "5518540d-d1bc-48cc-9ad3-8f20769c021e",
       "name": "Agnes-Video-2.5",
       "slug": "agnes-video-2-5",
@@ -263,7 +252,18 @@
         "id": "5db3af1a-e372-4c62-98bd-f6027eeaf990",
         "name": "Sapiens AI"
       },
-      "elo": 1036,
+      "elo": 1035,
+      "ci_95": 8
+    },
+    {
+      "id": "043f0cb2-3565-45ad-bf78-7e2de8288e94",
+      "name": "Vidu Q3 Turbo",
+      "slug": "vidu-q3-turbo",
+      "model_creator": {
+        "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
+        "name": "Vidu"
+      },
+      "elo": 1035,
       "ci_95": 8
     },
     {
@@ -285,7 +285,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1003,
+      "elo": 1002,
       "ci_95": 7
     },
     {
@@ -318,7 +318,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 955,
+      "elo": 954,
       "ci_95": 7
     },
     {
@@ -340,7 +340,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 932,
+      "elo": 931,
       "ci_95": 8
     },
     {
@@ -373,7 +373,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 872,
+      "elo": 871,
       "ci_95": 9
     }
   ]

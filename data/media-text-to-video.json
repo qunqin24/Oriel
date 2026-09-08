@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-07T23:17:56.765Z",
+  "fetched_at": "2026-09-08T23:12:48.801Z",
   "tier": "free",
   "data": [
     {
@@ -10,7 +10,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1333,
+      "elo": 1332,
       "ci_95": 12
     },
     {
@@ -76,7 +76,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1244,
+      "elo": 1243,
       "ci_95": 8
     },
     {
@@ -98,7 +98,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1227,
+      "elo": 1228,
       "ci_95": 8
     },
     {
@@ -135,17 +135,6 @@
       "ci_95": 8
     },
     {
-      "id": "1ce3af77-bb30-40ef-90e2-5aa9fa4588b9",
-      "name": "Wan 2.7",
-      "slug": "wan-2-7-v2v",
-      "model_creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba"
-      },
-      "elo": 1213,
-      "ci_95": 9
-    },
-    {
       "id": "b5343afd-4bff-4e97-99fc-1e2edf2e8eb1",
       "name": "LTX-2.5 Fast",
       "slug": "ltx-2-5-fast",
@@ -155,6 +144,17 @@
       },
       "elo": 1213,
       "ci_95": 11
+    },
+    {
+      "id": "1ce3af77-bb30-40ef-90e2-5aa9fa4588b9",
+      "name": "Wan 2.7",
+      "slug": "wan-2-7-v2v",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "elo": 1213,
+      "ci_95": 9
     },
     {
       "id": "b5d5057e-3d0d-4e22-b029-bd976cd1b6a6",
@@ -230,7 +230,7 @@
         "id": "67b5ce4d-0c81-4edc-b4c3-370acc2df555",
         "name": "Skywork AI"
       },
-      "elo": 1209,
+      "elo": 1208,
       "ci_95": 9
     },
     {
@@ -252,7 +252,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 1205,
+      "elo": 1204,
       "ci_95": 11
     },
     {
@@ -483,7 +483,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 1121,
+      "elo": 1120,
       "ci_95": 8
     },
     {
@@ -549,7 +549,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1100,
+      "elo": 1099,
       "ci_95": 11
     },
     {
@@ -571,7 +571,7 @@
         "id": "2354746c-4775-4a06-b64d-0ba4137785b8",
         "name": "ByteDance Seed"
       },
-      "elo": 1080,
+      "elo": 1079,
       "ci_95": 8
     },
     {
