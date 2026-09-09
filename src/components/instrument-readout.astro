@@ -8,8 +8,9 @@
  */
 import Sparkline from "@/components/sparkline.astro";
 import { SNAPSHOT } from "@/lib/data";
+import { snapshotDate } from "@/lib/history-schema";
 import { MODEL_COUNT_TREND } from "@/lib/history";
-import { formatDate, formatInteger } from "@/lib/format";
+import { formatInteger, formatSnapshotDateTime } from "@/lib/format";
 import type { Dict, Locale } from "@/i18n";
 
 interface Props {
@@ -22,8 +23,7 @@ interface Props {
 
 const { locale, dict, modelCount, vendorCount, layout = "stack" } = Astro.props;
 
-const date = SNAPSHOT.fetchedAt.slice(0, 10);
-const [year, month, day] = date.split("-");
+const [year, month, day] = snapshotDate(SNAPSHOT.fetchedAt).split("-");
 const counts = MODEL_COUNT_TREND.map((entry) => entry.count);
 ---
 
@@ -43,7 +43,7 @@ const counts = MODEL_COUNT_TREND.map((entry) => entry.count);
       <span class="data text-[12px] text-mute">{year}</span>
       <span
         class="ml-0.5 inline-block h-1.5 w-1.5 rounded-full bg-gold"
-        title={formatDate(SNAPSHOT.fetchedAt, locale)}></span>
+        title={formatSnapshotDateTime(SNAPSHOT.fetchedAt, locale)}></span>
     </div>
   </div>
 

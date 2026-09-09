@@ -14,6 +14,7 @@ import CatBoardTable from "@/components/cat-board-table.astro";
 import CatBoardCodeTable from "@/components/cat-board-code-table.astro";
 import { CAT_BOARD } from "@/lib/cat-board";
 import { SNAPSHOT } from "@/lib/data";
+import { snapshotDate } from "@/lib/history-schema";
 import { t, type Locale } from "@/i18n";
 
 interface Props {
@@ -30,8 +31,8 @@ const vision = CAT_BOARD?.categories.vision ?? null;
 /** "2026-07" 与快照月份的差距，超过 2 个月就在页面上标出来。 */
 function monthsBehind(reportDate: string): number {
   const [ry, rm] = reportDate.split("-").map(Number);
-  const now = new Date(SNAPSHOT.fetchedAt);
-  return (now.getUTCFullYear() - ry!) * 12 + (now.getUTCMonth() + 1 - rm!);
+  const [sy, sm] = snapshotDate(SNAPSHOT.fetchedAt).split("-").map(Number);
+  return (sy! - ry!) * 12 + (sm! - rm!);
 }
 
 const tabs = [

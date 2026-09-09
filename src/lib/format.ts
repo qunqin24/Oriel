@@ -12,6 +12,9 @@ const INTL_LOCALE: Record<Locale, string> = {
   en: "en-US",
 };
 
+/** 数据快照的展示时区，与 history-schema.snapshotDate、GitHub Action cron 一致。 */
+export const SNAPSHOT_TIMEZONE = "Asia/Shanghai";
+
 /** 缺失值统一显示成破折号，而不是 0 或空白——「没测」和「是 0」是两回事。 */
 export const NO_VALUE = "—";
 
@@ -92,6 +95,40 @@ export function formatDateTime(
     hour: "2-digit",
     minute: "2-digit",
     timeZone: "UTC",
+  });
+}
+
+/** ISO 时间戳 → 本地化快照日期（北京时间日历日）。 */
+export function formatSnapshotDate(
+  value: string | null | undefined,
+  locale: Locale
+): string {
+  if (!value) return NO_VALUE;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleDateString(INTL_LOCALE[locale], {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    timeZone: SNAPSHOT_TIMEZONE,
+  });
+}
+
+/** ISO 时间戳 → 本地化快照日期时间（北京时间）。 */
+export function formatSnapshotDateTime(
+  value: string | null | undefined,
+  locale: Locale
+): string {
+  if (!value) return NO_VALUE;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleString(INTL_LOCALE[locale], {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: SNAPSHOT_TIMEZONE,
   });
 }
 

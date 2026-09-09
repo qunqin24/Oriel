@@ -10,7 +10,7 @@
  */
 import { frontier } from "@/lib/metrics";
 import { MODELS, SNAPSHOT } from "@/lib/data";
-import { formatDate, formatNumber } from "@/lib/format";
+import { formatDate, formatNumber, formatSnapshotDate } from "@/lib/format";
 import { t, type Locale } from "@/i18n";
 
 interface Props {
@@ -95,7 +95,7 @@ const leaderTips = new Map(
 
 const title = `${dict.home.frontierTitle} — ${dict.home.frontierAxis}`;
 const desc = hasData
-  ? `${points.length} ${dict.common.models}, ${formatDate(points[0]!.date, locale)} – ${formatDate(SNAPSHOT.fetchedAt, locale)}. ${dict.home.frontierNote}`
+  ? `${points.length} ${dict.common.models}, ${formatDate(points[0]!.date, locale)} – ${formatSnapshotDate(SNAPSHOT.fetchedAt, locale)}. ${dict.home.frontierNote}`
   : dict.home.frontierEmpty;
 ---
 
