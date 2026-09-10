@@ -245,6 +245,12 @@ export const en: Dict = {
     think: { on: "On", off: "Standard" },
     thinkHint: "Whether this run had the model's extended-thinking mode on — the same model often appears twice, once with it on and once off.",
     staleWarning: "This category hasn't been updated in {months} months",
+    rangeTitle: "Peak × median",
+    rangePeak: "Peak",
+    rangeMedian: "Median",
+    rangeGap: "Gap",
+    rangeNote: "Top {shown} of {total} by peak score",
+    rangeAria: "{name}, peak {peak}, median {median}",
   },
 
   common: {

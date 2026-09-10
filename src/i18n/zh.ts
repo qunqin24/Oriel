@@ -249,6 +249,12 @@ export const zh = {
     think: { on: "开启", off: "常规" },
     thinkHint: "该次测试是否开启了模型的思考/推理模式，同一模型常有推理开/关两行。",
     staleWarning: "该类目已 {months} 个月未更新",
+    rangeTitle: "极限 × 中位",
+    rangePeak: "极限",
+    rangeMedian: "中位",
+    rangeGap: "落差",
+    rangeNote: "按极限分数取前 {shown} / 共 {total}",
+    rangeAria: "{name}，极限 {peak}，中位 {median}",
   },
 
   common: {

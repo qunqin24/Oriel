@@ -6,9 +6,10 @@
  * Failed(n/m) / "轮数/评级" 之一，解析规则见 lib/cat-board-code.ts，
  * 照抄源站前端的分类逻辑，保证呈现和原站一致。
  */
-import { headerLabel, isThinkHeader, isThinkOn } from "@/lib/cat-board";
+import { catBoardVendor, headerLabel, isThinkHeader, isThinkOn } from "@/lib/cat-board";
 import { isAuxiliaryColumn, parseCodeV3Cell } from "@/lib/cat-board-code";
 import type { CatBoardCategory } from "@/lib/cat-board";
+import VendorIcon from "@/components/vendor-icon.astro";
 import type { Dict, Locale } from "@/i18n";
 
 interface Props {
@@ -54,12 +55,15 @@ const status = dict.catBoard.codeStatus;
                 return (
                   <td
                     class:list={[
-                      "py-1.5 pr-3 text-left max-w-[13rem] truncate",
+                      "py-1.5 pr-3 text-left",
                       rowIndex === 0 ? "text-gold" : "text-fg",
                     ]}
                     title={raw}
                   >
-                    {raw}
+                    <div class="flex max-w-[13rem] items-center gap-2">
+                      <VendorIcon name={catBoardVendor(raw) ?? raw} size={14} />
+                      <span class="truncate">{raw}</span>
+                    </div>
                   </td>
                 );
               }

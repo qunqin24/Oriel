@@ -1,0 +1,145 @@
+---
+/**
+ * 「极限 × 中位」区间图——猫榜的视觉摘要。
+ *
+ * 榜上最值得看的一组关系不是单个分数，而是极限分数与中位分数之间的
+ * 落差：极限高、中位塌下去，说明这个模型发挥不稳。逐行读两列数字很难
+ * 看出这件事，画成哑铃图，两个点的距离本身就是结论。
+ *
+ * 只画前若干个模型，避免图长得和下面的表一样、反而更累眼；被截掉的
+ * 数量明写在图注里，不制造「这就是全部」的错觉。
+ *
+ * 全部构建期算好、纯 HTML + CSS，无 JS、无客户端图表库——和站内其余
+ * 图表一致，关掉 JS 也读得到。
+ */
+import { catBoardRange, catBoardVendor } from "@/lib/cat-board";
+import type { CatBoardCategory } from "@/lib/cat-board";
+import VendorIcon from "@/components/vendor-icon.astro";
+import { fill, type Dict } from "@/i18n";
+
+interface Props {
+  category: CatBoardCategory;
+  dict: Dict;
+  /** 最多画几个模型 */
+  limit?: number;
+}
+
+const { category, dict, limit = 15 } = Astro.props;
+
+// 表头里没有分数列（code_v3）时 catBoardRange 返回 null，整块不渲染。
+const range = catBoardRange(category);
+const rows = range?.rows ?? [];
+const total = range?.total ?? 0;
+const shown = rows.slice(0, limit);
+const hasRange = shown.length > 0;
+
+const values = shown.flatMap((row) => [row.peak, row.median]);
+const lo = values.length ? Math.min(...values) : 0;
+const hi = values.length ? Math.max(...values) : 1;
+
+// 用「画出来的这几行」的区间做基线，端点明写在轴下——不标出来的非零
+// 基线就是在骗人。取全体会把低分段的离群模型也算进来，把前几名的间距
+// 压得看不出来。与 rank-list 里 Elo 榜只按展示行缩放的做法一致。
+const pad = Math.max((hi - lo) * 0.08, 1);
+const axisMin = Math.max(0, Math.floor((lo - pad) / 5) * 5);
+const axisMax = Math.ceil((hi + pad) / 5) * 5;
+const span = Math.max(axisMax - axisMin, 1e-9);
+
+const pos = (value: number) => ((value - axisMin) / span) * 100;
+const fmt = (value: number) => value.toFixed(2);
+
+const title = `${dict.catBoard.rangeTitle} — ${dict.catBoard.rangePeak} / ${dict.catBoard.rangeMedian}`;
+const note = fill(dict.catBoard.rangeNote, { shown: shown.length, total });
+---
+
+{
+  hasRange && (
+    <figure class="flex flex-col gap-2">
+      <figcaption class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <span class="eyebrow">{title}</span>
+        <span class="flex items-center gap-3 text-[11px] text-mute">
+          <span class="flex items-center gap-1.5">
+            <span class="inline-block h-2 w-2 rounded-full bg-fg" />
+            {dict.catBoard.rangePeak}
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="inline-block h-2 w-2 rounded-full bg-[var(--plot-dot)]" />
+            {dict.catBoard.rangeMedian}
+          </span>
+        </span>
+      </figcaption>
+
+      <div class="flex flex-col">
+        {shown.map((row, index) => {
+          const gap = row.gap ?? `${(row.peak - row.median).toFixed(2)}%`;
+          const left = pos(row.median);
+          const right = pos(row.peak);
+          return (
+            <div
+              class="flex items-center gap-2 border-b border-rule/40 py-1 sm:gap-3"
+              title={fill(dict.catBoard.rangeAria, {
+                name: row.name,
+                peak: fmt(row.peak),
+                median: fmt(row.median),
+              })}
+            >
+              <span class="data w-5 shrink-0 text-right text-[11px] text-mute">
+                {index + 1}
+              </span>
+              <span class="flex w-28 shrink-0 items-center gap-2 sm:w-44">
+                <VendorIcon name={catBoardVendor(row.name) ?? row.name} size={12} />
+                <span
+                  class:list={[
+                    "truncate text-[12px]",
+                    index === 0 ? "text-gold" : "text-fg",
+                  ]}
+                >
+                  {row.name}
+                </span>
+              </span>
+
+              <span class="relative h-4 min-w-0 flex-1" aria-hidden="true">
+                <span class="absolute top-1/2 left-0 h-px w-full -translate-y-1/2 bg-rule" />
+                <span
+                  class="absolute top-1/2 h-[3px] -translate-y-1/2 rounded-full bg-[var(--plot-dot)]"
+                  style={`left:${left}%;width:${Math.max(right - left, 0)}%`}
+                />
+                <span
+                  class="absolute top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--plot-dot)]"
+                  style={`left:${left}%`}
+                />
+                <span
+                  class:list={[
+                    "absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full",
+                    index === 0 ? "bg-gold" : "bg-fg",
+                  ]}
+                  style={`left:${right}%`}
+                />
+              </span>
+
+              <span class="data w-14 shrink-0 text-right text-[11px] text-mute">
+                {gap}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <span class="w-5 shrink-0" />
+        <span class="w-28 shrink-0 sm:w-44" />
+        <span class="data flex min-w-0 flex-1 justify-between text-[10px] text-mute">
+          <span>{axisMin}</span>
+          <span>{axisMax}</span>
+        </span>
+        <span class="w-14 shrink-0 text-right text-[10px] text-mute">
+          {dict.catBoard.rangeGap}
+        </span>
+      </div>
+
+      {shown.length < total && (
+        <p class="text-[11px] text-mute">{note}</p>
+      )}
+    </figure>
+  )
+}

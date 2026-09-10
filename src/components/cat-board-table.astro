@@ -6,12 +6,26 @@
  * 再解析成数字重新格式化——那等于对一份我们不了解全部规则的评分体系
  * 做二次加工。原样显示，只翻表头。
  *
+ * 唯一的例外是两个分数列：数字不变，但在底下垫一条按列最大值归一化的
+ * 细条，并把「变更」列按涨跌上色。长表格里逐行读数字很费眼，形状比
+ * 数字快。条形从 0 起（分数本身有绝对零点），不制造虚高的落差。
+ *
  * 首列（模型名）不链接到 /models/[slug]：猫榜的模型命名和 Oriel 的
  * slug 体系是两套不相干的来源（比如"讯飞星火X1.5"根本不在 AA 数据里），
  * 强行猜链接只会产出错误跳转。
  */
-import { headerLabel, isThinkHeader, isThinkOn } from "@/lib/cat-board";
+import {
+  catBoardVendor,
+  changeDirection,
+  headerLabel,
+  isChangeHeader,
+  isThinkHeader,
+  isThinkOn,
+  scoreKind,
+} from "@/lib/cat-board";
 import type { CatBoardCategory } from "@/lib/cat-board";
+import VendorIcon from "@/components/vendor-icon.astro";
+import CatBoardRange from "@/components/cat-board-range.astro";
 import { t, type Locale } from "@/i18n";
 
 interface Props {
@@ -21,66 +35,143 @@ interface Props {
 
 const { category, locale } = Astro.props;
 const dict = t(locale);
+
+// 每个分数列的列最大值，用来把该列所有条形归一到同一条基线上。
+const scoreColumns = new Map<number, "peak" | "median">();
+category.headers.forEach((header, index) => {
+  const kind = scoreKind(header);
+  if (kind) scoreColumns.set(index, kind);
+});
+
+const scoreMax = new Map<number, number>();
+for (const index of scoreColumns.keys()) {
+  const values = category.rows
+    .map((row) => Number.parseFloat(row[index] ?? ""))
+    .filter((value) => Number.isFinite(value));
+  scoreMax.set(index, values.length ? Math.max(...values) : 0);
+}
+
+function barWidth(cell: string, index: number): number | null {
+  const value = Number.parseFloat(cell);
+  const max = scoreMax.get(index) ?? 0;
+  if (!Number.isFinite(value) || max <= 0) return null;
+  // 最矮的也留一点可见高度，纯 0 的分数条不是「没有数据」，是「分数低」。
+  return Math.max(2, Math.min(100, (value / max) * 100));
+}
 ---
 
-<div class="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-  <table class="w-full min-w-[40rem] border-collapse text-sm">
-    <thead>
-      <tr class="border-b border-rule">
+<div class="flex flex-col gap-4">
+  <CatBoardRange category={category} dict={dict} />
+
+  <div class="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+    <table class="w-full min-w-[40rem] border-collapse text-sm">
+      <thead>
+        <tr class="border-b border-rule">
+          {
+            category.headers.map((header, index) => (
+              <th
+                scope="col"
+                class={`py-2 whitespace-nowrap ${index === 0 ? "text-left pr-3" : "text-right pl-3"}`}
+                title={isThinkHeader(header) ? dict.catBoard.thinkHint : undefined}
+              >
+                <span class="eyebrow">{headerLabel(header, locale)}</span>
+              </th>
+            ))
+          }
+        </tr>
+      </thead>
+      <tbody>
         {
-          category.headers.map((header, index) => (
-            <th
-              scope="col"
-              class={`py-2 whitespace-nowrap ${index === 0 ? "text-left pr-3" : "text-right pl-3"}`}
-              title={isThinkHeader(header) ? dict.catBoard.thinkHint : undefined}
-            >
-              <span class="eyebrow">{headerLabel(header, locale)}</span>
-            </th>
+          category.rows.map((row, rowIndex) => (
+            <tr class="border-b border-rule/50">
+              {row.map((cell, colIndex) => {
+                if (colIndex === 0) {
+                  return (
+                    <td
+                      class:list={[
+                        "py-1.5 pr-3 text-left",
+                        rowIndex === 0 ? "text-gold" : "text-fg",
+                      ]}
+                      title={cell}
+                    >
+                      <div class="flex max-w-[16rem] items-center gap-2">
+                        <VendorIcon name={catBoardVendor(cell) ?? cell} size={14} />
+                        <span class="truncate">{cell}</span>
+                      </div>
+                    </td>
+                  );
+                }
+
+                const header = category.headers[colIndex] ?? "";
+
+                const kind = scoreColumns.get(colIndex);
+                if (kind) {
+                  const width = barWidth(cell, colIndex);
+                  const fillColor =
+                    rowIndex === 0
+                      ? "color-mix(in oklab, var(--gold) 32%, transparent)"
+                      : kind === "peak"
+                        ? "color-mix(in oklab, var(--plot-dot) 60%, transparent)"
+                        : "color-mix(in oklab, var(--plot-dot) 32%, transparent)";
+                  return (
+                    <td class="data py-1.5 pl-3 text-right whitespace-nowrap text-fg">
+                      <span class="relative inline-block min-w-[4.5rem] align-middle">
+                        {width != null && (
+                          <span
+                            class="absolute inset-y-[1px] left-0 rounded-sm"
+                            style={`width:${width}%;background:${fillColor}`}
+                          />
+                        )}
+                        <span class="relative">
+                          {cell || <span class="text-mute/50">—</span>}
+                        </span>
+                      </span>
+                    </td>
+                  );
+                }
+
+                if (isThinkHeader(header)) {
+                  const on = isThinkOn(cell);
+                  return (
+                    <td
+                      class="data py-1.5 pl-3 text-right whitespace-nowrap"
+                      title={dict.catBoard.thinkHint}
+                    >
+                      <span class={on ? "text-fg" : "text-mute"}>
+                        {on ? dict.catBoard.think.on : dict.catBoard.think.off}
+                      </span>
+                    </td>
+                  );
+                }
+
+                if (isChangeHeader(header)) {
+                  const direction = changeDirection(cell);
+                  return (
+                    <td
+                      class:list={[
+                        "data py-1.5 pl-3 text-right whitespace-nowrap",
+                        direction === "up"
+                          ? "text-rise"
+                          : direction === "down"
+                            ? "text-fall"
+                            : "text-mute",
+                      ]}
+                    >
+                      {cell || <span class="text-mute/50">—</span>}
+                    </td>
+                  );
+                }
+
+                return (
+                  <td class="data py-1.5 pl-3 text-right whitespace-nowrap text-fg">
+                    {cell || <span class="text-mute/50">—</span>}
+                  </td>
+                );
+              })}
+            </tr>
           ))
         }
-      </tr>
-    </thead>
-    <tbody>
-      {
-        category.rows.map((row, rowIndex) => (
-          <tr class="border-b border-rule/50">
-            {row.map((cell, colIndex) => {
-              if (colIndex === 0) {
-                return (
-                  <td
-                    class:list={[
-                      "py-1.5 pr-3 text-left max-w-[16rem] truncate",
-                      rowIndex === 0 ? "text-gold" : "text-fg",
-                    ]}
-                    title={cell}
-                  >
-                    {cell}
-                  </td>
-                );
-              }
-              const header = category.headers[colIndex] ?? "";
-              if (isThinkHeader(header)) {
-                const on = isThinkOn(cell);
-                return (
-                  <td
-                    class="data py-1.5 pl-3 text-right whitespace-nowrap"
-                    title={dict.catBoard.thinkHint}
-                  >
-                    <span class={on ? "text-fg" : "text-mute"}>
-                      {on ? dict.catBoard.think.on : dict.catBoard.think.off}
-                    </span>
-                  </td>
-                );
-              }
-              return (
-                <td class="data py-1.5 pl-3 text-right whitespace-nowrap text-fg">
-                  {cell || <span class="text-mute/50">—</span>}
-                </td>
-              );
-            })}
-          </tr>
-        ))
-      }
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </div>
 </div>

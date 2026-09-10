@@ -99,3 +99,120 @@ export function isThinkOn(value: string): boolean {
   const normalized = value.trim().toLowerCase();
   return normalized === "1" || normalized === "true";
 }
+
+/**
+ * 模型名 -> 厂商标识，用来复用 vendor-icons.ts 那套 lobe 图标。
+ *
+ * 猫榜的数据只有模型名，没有 model_creator 字段，所以这里按家族前缀
+ * 反推厂商，返回值必须是 VENDOR_ICON_SLUGS 的 key（站点别处用的同一批
+ * 厂商名），才能解析到图标。返回值 null 表示上游没收录或无法判断，
+ * 组件会退化成首字母头像，不硬凑一个不准确的图标。
+ *
+ * 顺序即优先级，锚定在字符串开头，避免 "MiMo" 被 "MiniMax" 之类误伤。
+ * 源站模型命名会变（社区独立维护），新增家族时补一条，不在表里的自然降级。
+ */
+const MODEL_VENDORS: Array<[RegExp, string]> = [
+  [/^GPT/i, "OpenAI"],
+  [/^(Fable|Opus|Sonnet)/i, "Anthropic"],
+  [/^(Gemini|Gemma)/i, "Google"],
+  [/^Qwen/i, "Alibaba"],
+  [/^DeepSeek/i, "DeepSeek"],
+  [/^Kimi/i, "Kimi"],
+  [/^GLM/i, "Z AI"],
+  [/^Grok/i, "SpaceXAI"],
+  [/^Seed/i, "ByteDance Seed"],
+  [/^MiniMax/i, "MiniMax"],
+  [/^(Hy3|Hunyuan)/i, "Tencent"],
+  [/^Ling/i, "InclusionAI"],
+  [/^MiMo/i, "Xiaomi"],
+  [/^Step/i, "StepFun"],
+  [/^ERNIE/i, "Baidu"],
+  [/^LongCat/i, "LongCat"],
+  [/^Mistral/i, "Mistral"],
+  [/^Muse/i, "Meta"],
+];
+
+export function catBoardVendor(model: string): string | null {
+  const name = model.trim();
+  for (const [pattern, vendor] of MODEL_VENDORS) {
+    if (pattern.test(name)) return vendor;
+  }
+  return null;
+}
+
+/**
+ * 分数列与变更列的表头识别。
+ *
+ * logic 与 vision 都有「极限分数 / 中位分数」，code_v3 没有——识别不到就
+ * 不画条形、不画区间图，页面对第三种表结构保持原样。
+ *
+ * 变更列在源数据里叫过「变更」也出现过「较上次变更」，两种都认。
+ */
+const PEAK_HEADERS = new Set(["极限分数"]);
+const MEDIAN_HEADERS = new Set(["中位分数"]);
+const GAP_HEADERS = new Set(["中位差距"]);
+const CHANGE_HEADERS = new Set(["变更", "较上次变更"]);
+
+export function scoreKind(header: string): "peak" | "median" | null {
+  if (PEAK_HEADERS.has(header)) return "peak";
+  if (MEDIAN_HEADERS.has(header)) return "median";
+  return null;
+}
+
+export function isChangeHeader(header: string): boolean {
+  return CHANGE_HEADERS.has(header);
+}
+
+/** 把「+25.1% / -3.2%」解析成正/负，缺失值（—、-、空）返回 null。 */
+export function changeDirection(value: string): "up" | "down" | null {
+  const trimmed = value.trim();
+  if (!/\d/.test(trimmed)) return null;
+  if (trimmed.startsWith("+")) return "up";
+  if (trimmed.startsWith("-") || trimmed.startsWith("−")) return "down";
+  return null;
+}
+
+export type CatBoardRangeRow = {
+  name: string;
+  /** 极限分数 */
+  peak: number;
+  /** 中位分数 */
+  median: number;
+  /** 源站已格式化好的「中位差距」，没有该列时为 null */
+  gap: string | null;
+};
+
+/**
+ * 抽出「极限分数 vs 中位分数」的区间数据，按极限分数降序。
+ *
+ * 这是猫榜最值得可视化的一组数：极限高但中位塌陷，说明模型不稳定；
+ * 两个点的距离就是这个落差。数值解析失败的行直接跳过，不猜。
+ * 表头里缺任一分数字段就返回 null，code_v3 那条路径不会走到这里。
+ */
+export function catBoardRange(
+  category: CatBoardCategory
+): { rows: CatBoardRangeRow[]; total: number } | null {
+  const peakIndex = category.headers.findIndex((h) => PEAK_HEADERS.has(h));
+  const medianIndex = category.headers.findIndex((h) => MEDIAN_HEADERS.has(h));
+  if (peakIndex < 0 || medianIndex < 0) return null;
+
+  const gapIndex = category.headers.findIndex((h) => GAP_HEADERS.has(h));
+  const rows: CatBoardRangeRow[] = [];
+
+  for (const row of category.rows) {
+    const name = (row[0] ?? "").trim();
+    const peak = Number.parseFloat(row[peakIndex] ?? "");
+    const median = Number.parseFloat(row[medianIndex] ?? "");
+    if (!name || !Number.isFinite(peak) || !Number.isFinite(median)) continue;
+    rows.push({
+      name,
+      peak,
+      median,
+      gap: gapIndex >= 0 ? row[gapIndex]?.trim() || null : null,
+    });
+  }
+
+  if (rows.length === 0) return null;
+  rows.sort((a, b) => b.peak - a.peak);
+  return { rows, total: rows.length };
+}
