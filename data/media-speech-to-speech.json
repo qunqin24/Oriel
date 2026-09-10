@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-10T08:03:24.898Z",
+  "fetched_at": "2026-09-10T22:56:58.005Z",
   "tier": "free",
   "data": [
     {
@@ -159,6 +159,18 @@
       "tau_voice_score": null
     },
     {
+      "id": "9037857a-ff57-42c9-91b4-485f0dbdf005",
+      "name": "GPT-Live-1 (Sol, low)",
+      "slug": "gpt-live-1-diamond-alpha-sol-low",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": null,
+      "fdb_score": 0.97,
+      "tau_voice_score": 0.59
+    },
+    {
       "id": "07c7220d-6974-4533-9c7b-f5b8f05c5afd",
       "name": "Gemini 3.1 Flash Audio Preview (Mar 2026) - Minimal",
       "slug": "gemini-3-1-flash-audio-preview-mar-2026-minimal",
@@ -181,6 +193,18 @@
       "bba_score": 0.69,
       "fdb_score": 0.93,
       "tau_voice_score": 0.19
+    },
+    {
+      "id": "4db76486-bf77-4afc-bb90-d14f960898bc",
+      "name": "GPT-Live-1 (Astra, medium)",
+      "slug": "gpt-live-1-diamond-alpha-astra-medium",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "bba_score": null,
+      "fdb_score": 0.95,
+      "tau_voice_score": 0.68
     },
     {
       "id": "6ea9257f-c9f6-4789-be83-3d90c49f1c86",

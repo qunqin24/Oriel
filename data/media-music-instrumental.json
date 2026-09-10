@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-10T08:03:24.898Z",
+  "fetched_at": "2026-09-10T22:56:58.005Z",
   "tier": "free",
   "data": [
     {
@@ -19,7 +19,7 @@
         "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
         "name": "Mureka"
       },
-      "elo": 1177,
+      "elo": 1178,
       "ci_95": 14
     },
     {
@@ -43,6 +43,16 @@
       "ci_95": 8
     },
     {
+      "id": "79e226d1-b65d-43fe-84f5-583504a348a6",
+      "name": "StepAudio 3 Music",
+      "model_creator": {
+        "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
+        "name": "StepFun"
+      },
+      "elo": 1124,
+      "ci_95": 14
+    },
+    {
       "id": "82bc3b6a-ff83-416d-b32f-7bd6824ff376",
       "name": "Lyria 3 Pro",
       "model_creator": {
@@ -51,6 +61,16 @@
       },
       "elo": 1117,
       "ci_95": 8
+    },
+    {
+      "id": "0fc68799-de19-4991-a482-315ab880803f",
+      "name": "Lyria 3.5",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "elo": 1100,
+      "ci_95": 13
     },
     {
       "id": "1d06bf78-0a16-4fdf-8029-663a694e3470",
@@ -69,7 +89,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1067,
+      "elo": 1066,
       "ci_95": 8
     },
     {
@@ -79,7 +99,7 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1058,
+      "elo": 1060,
       "ci_95": 10
     },
     {
@@ -89,7 +109,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1052,
+      "elo": 1051,
       "ci_95": 8
     },
     {
@@ -99,7 +119,7 @@
         "id": "4c7aaf69-80e6-4b43-92b4-58ea2a1fe9e4",
         "name": "Producer.ai"
       },
-      "elo": 1036,
+      "elo": 1035,
       "ci_95": 9
     },
     {
@@ -109,7 +129,7 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1029,
+      "elo": 1031,
       "ci_95": 9
     },
     {
@@ -119,7 +139,7 @@
         "id": "4c7aaf69-80e6-4b43-92b4-58ea2a1fe9e4",
         "name": "Producer.ai"
       },
-      "elo": 1028,
+      "elo": 1031,
       "ci_95": 9
     },
     {
@@ -149,7 +169,7 @@
         "id": "fae49f90-2280-46b0-b364-40d25eb84564",
         "name": "Stability.ai"
       },
-      "elo": 959,
+      "elo": 960,
       "ci_95": 9
     },
     {
@@ -159,7 +179,7 @@
         "id": "e2dba554-1abb-4cb9-b2fd-588ca6f5e29c",
         "name": "Udio"
       },
-      "elo": 954,
+      "elo": 955,
       "ci_95": 9
     },
     {
@@ -169,7 +189,7 @@
         "id": "e988202c-0f2c-403d-8a90-a7df00a5ce81",
         "name": "Sonauto"
       },
-      "elo": 937,
+      "elo": 938,
       "ci_95": 9
     },
     {

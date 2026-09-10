@@ -1,6 +1,272 @@
 {
-  "generated_at": "2026-09-10T08:03:25.920Z",
+  "generated_at": "2026-09-10T22:56:59.230Z",
   "events": [
+    {
+      "date": "2026-09-11",
+      "type": "added",
+      "model": {
+        "id": "dbe7c625-3100-4463-b479-a228c41f75dd",
+        "name": "DeepSeek V4.1 Flash (Reasoning, Max Effort)",
+        "slug": "deepseek-v4-1-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-09-11",
+        "last_seen": "2026-09-11"
+      },
+      "intelligence": 39.5
+    },
+    {
+      "date": "2026-09-11",
+      "type": "added",
+      "model": {
+        "id": "433d5c5d-3092-4026-9727-1587ca07915d",
+        "name": "Ling-3.0-flash-VL",
+        "slug": "ling-3-0-flash-vl",
+        "creator": "InclusionAI",
+        "first_seen": "2026-09-11",
+        "last_seen": "2026-09-11"
+      },
+      "intelligence": 24.8
+    },
+    {
+      "date": "2026-09-11",
+      "type": "price",
+      "model": {
+        "id": "21a0a2f6-bc72-40d2-80db-ea4e66b02b90",
+        "name": "GPT-6 Astra (Non-reasoning)",
+        "slug": "gpt-6-astra-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-04",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "priceIn",
+      "from": 10,
+      "to": null
+    },
+    {
+      "date": "2026-09-11",
+      "type": "price",
+      "model": {
+        "id": "21a0a2f6-bc72-40d2-80db-ea4e66b02b90",
+        "name": "GPT-6 Astra (Non-reasoning)",
+        "slug": "gpt-6-astra-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-04",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "priceOut",
+      "from": 50,
+      "to": null
+    },
+    {
+      "date": "2026-09-11",
+      "type": "price",
+      "model": {
+        "id": "5c3bdc0d-abab-4526-8079-34de4089bb4a",
+        "name": "LongCat 2.0",
+        "slug": "longcat-2-0",
+        "creator": "LongCat",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "priceIn",
+      "from": 0.75,
+      "to": 0.3
+    },
+    {
+      "date": "2026-09-11",
+      "type": "price",
+      "model": {
+        "id": "5c3bdc0d-abab-4526-8079-34de4089bb4a",
+        "name": "LongCat 2.0",
+        "slug": "longcat-2-0",
+        "creator": "LongCat",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "priceOut",
+      "from": 2.95,
+      "to": 1.2
+    },
+    {
+      "date": "2026-09-11",
+      "type": "score",
+      "model": {
+        "id": "ba0224cf-0351-4f56-8508-b3f1a740ae4a",
+        "name": "Claude Sonnet 5 (Adaptive Reasoning, High Effort)",
+        "slug": "claude-sonnet-5-high",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 32
+    },
+    {
+      "date": "2026-09-11",
+      "type": "score",
+      "model": {
+        "id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
+        "name": "GLM-5.1 (Reasoning)",
+        "slug": "glm-5-1",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "intelligence",
+      "from": 27.4,
+      "to": 26.4
+    },
+    {
+      "date": "2026-09-11",
+      "type": "score",
+      "model": {
+        "id": "aa55297e-8fbf-4372-b4ab-9b068dc6396c",
+        "name": "GPT-5.6 Luna (high)",
+        "slug": "gpt-5-6-luna-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "intelligence",
+      "from": 32.9,
+      "to": 32.4
+    },
+    {
+      "date": "2026-09-11",
+      "type": "score",
+      "model": {
+        "id": "26e0f83a-ca98-4f34-94ac-7c5e251ee410",
+        "name": "GPT-5.6 Terra (medium)",
+        "slug": "gpt-5-6-terra-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "intelligence",
+      "from": 32.8,
+      "to": 30.4
+    },
+    {
+      "date": "2026-09-11",
+      "type": "score",
+      "model": {
+        "id": "adfae555-f489-4f3e-9064-c6b7fcdd0783",
+        "name": "Granite 4.2 8B",
+        "slug": "granite-4-2-8b",
+        "creator": "IBM",
+        "first_seen": "2026-08-27",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "intelligence",
+      "from": 12.4,
+      "to": 11.8
+    },
+    {
+      "date": "2026-09-11",
+      "type": "score",
+      "model": {
+        "id": "641a073a-41c9-4773-9b02-d965c16607c5",
+        "name": "MiniCPM5-2B",
+        "slug": "minicpm5-2b",
+        "creator": "OpenBMB",
+        "first_seen": "2026-09-08",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "intelligence",
+      "from": 14.3,
+      "to": 13.1
+    },
+    {
+      "date": "2026-09-11",
+      "type": "score",
+      "model": {
+        "id": "8665ca00-c687-44c7-875c-22618cb31c4f",
+        "name": "Qwen3.6 35B A3B (Reasoning)",
+        "slug": "qwen3-6-35b-a3b",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "intelligence",
+      "from": 22.3,
+      "to": 18.8
+    },
+    {
+      "date": "2026-09-11",
+      "type": "score",
+      "model": {
+        "id": "7e30585f-fad7-40df-a8cb-03c1d96df38a",
+        "name": "Qwen3.8 27B (low)",
+        "slug": "qwen3-8-27b-low",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-24",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "intelligence",
+      "from": 29.2,
+      "to": 26.5
+    },
+    {
+      "date": "2026-09-11",
+      "type": "score",
+      "model": {
+        "id": "6657d7de-a2a9-40bc-a32f-86e80ad63698",
+        "name": "Qwen3.8 27B (medium)",
+        "slug": "qwen3-8-27b-medium",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-24",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "intelligence",
+      "from": 30.7,
+      "to": 27.8
+    },
+    {
+      "date": "2026-09-11",
+      "type": "score",
+      "model": {
+        "id": "6657d7de-a2a9-40bc-a32f-86e80ad63698",
+        "name": "Qwen3.8 27B (medium)",
+        "slug": "qwen3-8-27b-medium",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-24",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 45.3
+    },
+    {
+      "date": "2026-09-11",
+      "type": "score",
+      "model": {
+        "id": "9ac3908c-9eb2-44db-8c01-3ec7da6fc2ae",
+        "name": "Qwen3.8-Flash-Next",
+        "slug": "qwen3-8-flash-next",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "intelligence",
+      "from": 42.2,
+      "to": 39.9
+    },
+    {
+      "date": "2026-09-11",
+      "type": "score",
+      "model": {
+        "id": "9ac3908c-9eb2-44db-8c01-3ec7da6fc2ae",
+        "name": "Qwen3.8-Flash-Next",
+        "slug": "qwen3-8-flash-next",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-09-11"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 53.9
+    },
     {
       "date": "2026-09-09",
       "type": "added",
