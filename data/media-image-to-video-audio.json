@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-10T22:56:58.005Z",
+  "fetched_at": "2026-09-11T23:00:07.391Z",
   "tier": "free",
   "data": [
     {
@@ -32,7 +32,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1191,
+      "elo": 1190,
       "ci_95": 8
     },
     {
@@ -65,7 +65,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1178,
+      "elo": 1179,
       "ci_95": 8
     },
     {
@@ -76,7 +76,7 @@
         "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
         "name": "SpaceXAI"
       },
-      "elo": 1115,
+      "elo": 1116,
       "ci_95": 7
     },
     {
@@ -87,7 +87,7 @@
         "id": "0ea38458-92d7-45de-a69d-c50bd8277273",
         "name": "Alibaba-ATH"
       },
-      "elo": 1108,
+      "elo": 1109,
       "ci_95": 7
     },
     {
@@ -120,7 +120,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1089,
+      "elo": 1088,
       "ci_95": 7
     },
     {
@@ -142,7 +142,7 @@
         "id": "67b5ce4d-0c81-4edc-b4c3-370acc2df555",
         "name": "Skywork AI"
       },
-      "elo": 1087,
+      "elo": 1088,
       "ci_95": 7
     },
     {
@@ -197,7 +197,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1072,
+      "elo": 1071,
       "ci_95": 7
     },
     {
@@ -241,7 +241,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1057,
+      "elo": 1058,
       "ci_95": 7
     },
     {
@@ -252,7 +252,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 1050,
+      "elo": 1049,
       "ci_95": 9
     },
     {
@@ -263,7 +263,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1040,
+      "elo": 1039,
       "ci_95": 8
     },
     {
@@ -285,7 +285,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 1012,
+      "elo": 1011,
       "ci_95": 9
     },
     {
@@ -322,20 +322,20 @@
       "ci_95": 8
     },
     {
-      "id": "40f64093-99b7-4e9b-9705-651fc5b436c4",
-      "name": "LTX-2.3 Fast",
-      "slug": "ltx-2-3-fast",
+      "id": "c783d9aa-c387-4f44-b371-563fd9bab06d",
+      "name": "LTX-2.3 Pro",
+      "slug": "ltx-2-3-pro",
       "model_creator": {
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 956,
+      "elo": 958,
       "ci_95": 7
     },
     {
-      "id": "c783d9aa-c387-4f44-b371-563fd9bab06d",
-      "name": "LTX-2.3 Pro",
-      "slug": "ltx-2-3-pro",
+      "id": "40f64093-99b7-4e9b-9705-651fc5b436c4",
+      "name": "LTX-2.3 Fast",
+      "slug": "ltx-2-3-fast",
       "model_creator": {
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
@@ -362,7 +362,7 @@
         "id": "5db3af1a-e372-4c62-98bd-f6027eeaf990",
         "name": "Sapiens AI"
       },
-      "elo": 926,
+      "elo": 925,
       "ci_95": 8
     },
     {

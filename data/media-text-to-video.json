@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-10T22:56:58.005Z",
+  "fetched_at": "2026-09-11T23:00:07.391Z",
   "tier": "free",
   "data": [
     {
@@ -98,7 +98,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1233,
+      "elo": 1232,
       "ci_95": 8
     },
     {
@@ -157,17 +157,6 @@
       "ci_95": 7
     },
     {
-      "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
-      "name": "Kling 3.0 Omni 720p (Standard)",
-      "slug": "kling-o3-standard",
-      "model_creator": {
-        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
-        "name": "KlingAI"
-      },
-      "elo": 1214,
-      "ci_95": 8
-    },
-    {
       "id": "b5d5057e-3d0d-4e22-b029-bd976cd1b6a6",
       "name": "Kling 3.0 720p (Standard)",
       "slug": "kling-3-0-standard",
@@ -177,6 +166,17 @@
       },
       "elo": 1214,
       "ci_95": 7
+    },
+    {
+      "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
+      "name": "Kling 3.0 Omni 720p (Standard)",
+      "slug": "kling-o3-standard",
+      "model_creator": {
+        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
+        "name": "KlingAI"
+      },
+      "elo": 1214,
+      "ci_95": 8
     },
     {
       "id": "440843ac-4961-4eef-a504-158724c11fee",
@@ -410,23 +410,23 @@
       "ci_95": 8
     },
     {
-      "id": "249f428c-b651-4c9e-b599-5cc3c1db7616",
-      "name": "Sora 2 (December)",
-      "slug": "sora-2-december-no-audio",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI"
-      },
-      "elo": 1171,
-      "ci_95": 9
-    },
-    {
       "id": "aea5e8ea-2766-4235-ad96-307ee1d985e3",
       "name": "Hailuo 02 Standard",
       "slug": "hailuo-02-standard",
       "model_creator": {
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
+      },
+      "elo": 1171,
+      "ci_95": 9
+    },
+    {
+      "id": "249f428c-b651-4c9e-b599-5cc3c1db7616",
+      "name": "Sora 2 (December)",
+      "slug": "sora-2-december-no-audio",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
       },
       "elo": 1171,
       "ci_95": 9
@@ -571,7 +571,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1103,
+      "elo": 1102,
       "ci_95": 10
     },
     {

@@ -1,6 +1,94 @@
 {
-  "generated_at": "2026-09-10T22:56:59.230Z",
+  "generated_at": "2026-09-11T23:00:09.438Z",
   "events": [
+    {
+      "date": "2026-09-12",
+      "type": "added",
+      "model": {
+        "id": "6ace0ead-584f-4ce6-a9b7-6c3f9cc91c3c",
+        "name": "Agnes 3.0 Flash",
+        "slug": "agnes-3-0-flash",
+        "creator": "Sapiens AI",
+        "first_seen": "2026-09-12",
+        "last_seen": "2026-09-12"
+      },
+      "intelligence": 35.5
+    },
+    {
+      "date": "2026-09-12",
+      "type": "score",
+      "model": {
+        "id": "8decf027-5114-4721-9ee1-81c0552980a0",
+        "name": "Agnes 2.5 Pro Alpha",
+        "slug": "agnes-2-5-pro-alpha",
+        "creator": "Sapiens AI",
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-09-12"
+      },
+      "metric": "intelligence",
+      "from": 26.8,
+      "to": 27.8
+    },
+    {
+      "date": "2026-09-12",
+      "type": "score",
+      "model": {
+        "id": "99f376bf-cbcb-4124-bf3e-6b0a4e6e9bea",
+        "name": "Claude Sonnet 5 (Adaptive Reasoning, Xhigh Effort)",
+        "slug": "claude-sonnet-5-xhigh",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-12"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 34.7
+    },
+    {
+      "date": "2026-09-12",
+      "type": "score",
+      "model": {
+        "id": "050c61cd-cddc-463a-a30a-a82aaa37be59",
+        "name": "GPT-5.6 Luna (low)",
+        "slug": "gpt-5-6-luna-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-12"
+      },
+      "metric": "intelligence",
+      "from": 21.8,
+      "to": 21.5
+    },
+    {
+      "date": "2026-09-12",
+      "type": "score",
+      "model": {
+        "id": "58b812bf-8498-46db-b834-f43ccc614b61",
+        "name": "GPT-5.6 Luna (medium)",
+        "slug": "gpt-5-6-luna-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-12"
+      },
+      "metric": "intelligence",
+      "from": 25.8,
+      "to": 25.5
+    },
+    {
+      "date": "2026-09-12",
+      "type": "score",
+      "model": {
+        "id": "bb3d7e75-8e22-4082-b9d6-1db0803e042f",
+        "name": "K2 Horizon 375B A23B",
+        "slug": "k2-horizon-375b-a23b",
+        "creator": "MBZUAI Institute of Foundation Models",
+        "first_seen": "2026-09-04",
+        "last_seen": "2026-09-12"
+      },
+      "metric": "intelligence",
+      "from": 33.9,
+      "to": 30.7
+    },
     {
       "date": "2026-09-11",
       "type": "added",

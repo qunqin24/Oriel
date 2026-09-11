@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-10T22:56:58.005Z",
+  "fetched_at": "2026-09-11T23:00:07.391Z",
   "tier": "free",
   "data": [
     {
@@ -21,7 +21,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1237,
+      "elo": 1238,
       "ci_95": 6
     },
     {
@@ -32,7 +32,7 @@
         "id": "d3f67dc4-ba4d-4103-ba79-ee321ca99b40",
         "name": "Fal"
       },
-      "elo": 1233,
+      "elo": 1230,
       "ci_95": 9
     },
     {
@@ -43,7 +43,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1225,
+      "elo": 1224,
       "ci_95": 7
     },
     {
@@ -76,7 +76,7 @@
         "id": "0ea38458-92d7-45de-a69d-c50bd8277273",
         "name": "Alibaba-ATH"
       },
-      "elo": 1148,
+      "elo": 1147,
       "ci_95": 6
     },
     {
@@ -120,7 +120,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1105,
+      "elo": 1103,
       "ci_95": 7
     },
     {
@@ -142,7 +142,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1100,
+      "elo": 1101,
       "ci_95": 5
     },
     {
@@ -153,19 +153,8 @@
         "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
         "name": "OpenAI"
       },
-      "elo": 1093,
+      "elo": 1097,
       "ci_95": 9
-    },
-    {
-      "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
-      "name": "Kling 3.0 Omni 720p (Standard)",
-      "slug": "kling-o3-standard",
-      "model_creator": {
-        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
-        "name": "KlingAI"
-      },
-      "elo": 1090,
-      "ci_95": 6
     },
     {
       "id": "553f28a1-95de-4991-9084-d9275d862f68",
@@ -175,7 +164,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1089,
+      "elo": 1090,
       "ci_95": 6
     },
     {
@@ -186,7 +175,18 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1088,
+      "elo": 1090,
+      "ci_95": 6
+    },
+    {
+      "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
+      "name": "Kling 3.0 Omni 720p (Standard)",
+      "slug": "kling-o3-standard",
+      "model_creator": {
+        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
+        "name": "KlingAI"
+      },
+      "elo": 1089,
       "ci_95": 6
     },
     {
@@ -223,6 +223,17 @@
       "ci_95": 8
     },
     {
+      "id": "735c14cc-5bab-445d-b8d1-a0bc2045c006",
+      "name": "Sora 2 Pro",
+      "slug": "sora-2-pro",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "elo": 1079,
+      "ci_95": 9
+    },
+    {
       "id": "be866b8a-d073-4ee4-9652-73227c679dc4",
       "name": "PixVerse V6",
       "slug": "pixverse-v6",
@@ -243,17 +254,6 @@
       },
       "elo": 1075,
       "ci_95": 5
-    },
-    {
-      "id": "735c14cc-5bab-445d-b8d1-a0bc2045c006",
-      "name": "Sora 2 Pro",
-      "slug": "sora-2-pro",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI"
-      },
-      "elo": 1073,
-      "ci_95": 9
     },
     {
       "id": "b5343afd-4bff-4e97-99fc-1e2edf2e8eb1",
@@ -285,7 +285,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 1061,
+      "elo": 1060,
       "ci_95": 9
     },
     {
@@ -307,7 +307,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1024,
+      "elo": 1023,
       "ci_95": 9
     },
     {
@@ -340,7 +340,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 977,
+      "elo": 979,
       "ci_95": 6
     },
     {
