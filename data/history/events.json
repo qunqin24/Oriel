@@ -1,6 +1,45 @@
 {
-  "generated_at": "2026-09-11T23:00:09.438Z",
+  "generated_at": "2026-09-12T22:51:55.457Z",
   "events": [
+    {
+      "date": "2026-09-13",
+      "type": "removed",
+      "model": {
+        "id": "992b7b84-5069-4c6a-9295-834252553d50",
+        "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
+        "slug": "claude-opus-4-8",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-12"
+      }
+    },
+    {
+      "date": "2026-09-13",
+      "type": "removed",
+      "model": {
+        "id": "21a0a2f6-bc72-40d2-80db-ea4e66b02b90",
+        "name": "GPT-6 Astra (Non-reasoning)",
+        "slug": "gpt-6-astra-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-04",
+        "last_seen": "2026-09-12"
+      }
+    },
+    {
+      "date": "2026-09-13",
+      "type": "score",
+      "model": {
+        "id": "bb3d7e75-8e22-4082-b9d6-1db0803e042f",
+        "name": "K2 Horizon 375B A23B",
+        "slug": "k2-horizon-375b-a23b",
+        "creator": "MBZUAI Institute of Foundation Models",
+        "first_seen": "2026-09-04",
+        "last_seen": "2026-09-13"
+      },
+      "metric": "intelligence",
+      "from": 30.7,
+      "to": 30.8
+    },
     {
       "date": "2026-09-12",
       "type": "added",

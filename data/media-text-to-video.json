@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-11T23:00:07.391Z",
+  "fetched_at": "2026-09-12T22:51:53.764Z",
   "tier": "free",
   "data": [
     {
@@ -98,7 +98,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1232,
+      "elo": 1233,
       "ci_95": 8
     },
     {
@@ -157,17 +157,6 @@
       "ci_95": 7
     },
     {
-      "id": "b5d5057e-3d0d-4e22-b029-bd976cd1b6a6",
-      "name": "Kling 3.0 720p (Standard)",
-      "slug": "kling-3-0-standard",
-      "model_creator": {
-        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
-        "name": "KlingAI"
-      },
-      "elo": 1214,
-      "ci_95": 7
-    },
-    {
       "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
       "name": "Kling 3.0 Omni 720p (Standard)",
       "slug": "kling-o3-standard",
@@ -177,6 +166,17 @@
       },
       "elo": 1214,
       "ci_95": 8
+    },
+    {
+      "id": "b5d5057e-3d0d-4e22-b029-bd976cd1b6a6",
+      "name": "Kling 3.0 720p (Standard)",
+      "slug": "kling-3-0-standard",
+      "model_creator": {
+        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
+        "name": "KlingAI"
+      },
+      "elo": 1214,
+      "ci_95": 7
     },
     {
       "id": "440843ac-4961-4eef-a504-158724c11fee",
@@ -212,17 +212,6 @@
       "ci_95": 7
     },
     {
-      "id": "50ed6856-5052-431d-8994-584b2e02f023",
-      "name": "SkyReels V4",
-      "slug": "skyreels-v4",
-      "model_creator": {
-        "id": "67b5ce4d-0c81-4edc-b4c3-370acc2df555",
-        "name": "Skywork AI"
-      },
-      "elo": 1210,
-      "ci_95": 9
-    },
-    {
       "id": "7623b756-8b01-4e60-aed4-3322c1933e36",
       "name": "Veo 3",
       "slug": "veo-3-no-audio",
@@ -232,6 +221,17 @@
       },
       "elo": 1210,
       "ci_95": 8
+    },
+    {
+      "id": "50ed6856-5052-431d-8994-584b2e02f023",
+      "name": "SkyReels V4",
+      "slug": "skyreels-v4",
+      "model_creator": {
+        "id": "67b5ce4d-0c81-4edc-b4c3-370acc2df555",
+        "name": "Skywork AI"
+      },
+      "elo": 1210,
+      "ci_95": 9
     },
     {
       "id": "a8f7ab65-828a-4166-8fbf-616cbb01d773",
@@ -373,7 +373,7 @@
         "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
         "name": "OpenAI"
       },
-      "elo": 1183,
+      "elo": 1184,
       "ci_95": 8
     },
     {
@@ -399,6 +399,17 @@
       "ci_95": 7
     },
     {
+      "id": "249f428c-b651-4c9e-b599-5cc3c1db7616",
+      "name": "Sora 2 (December)",
+      "slug": "sora-2-december-no-audio",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "elo": 1172,
+      "ci_95": 9
+    },
+    {
       "id": "3e2f019d-70a5-4743-995b-5674840a89cf",
       "name": "Veo 3 Fast Preview",
       "slug": "veo-3-fast-preview-no-audio",
@@ -416,17 +427,6 @@
       "model_creator": {
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
-      },
-      "elo": 1171,
-      "ci_95": 9
-    },
-    {
-      "id": "249f428c-b651-4c9e-b599-5cc3c1db7616",
-      "name": "Sora 2 (December)",
-      "slug": "sora-2-december-no-audio",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI"
       },
       "elo": 1171,
       "ci_95": 9
@@ -571,7 +571,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1102,
+      "elo": 1103,
       "ci_95": 10
     },
     {

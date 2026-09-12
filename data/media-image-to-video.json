@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-11T23:00:07.391Z",
+  "fetched_at": "2026-09-12T22:51:53.764Z",
   "tier": "free",
   "data": [
     {
@@ -21,7 +21,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1362,
+      "elo": 1361,
       "ci_95": 13
     },
     {
@@ -32,7 +32,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1351,
+      "elo": 1350,
       "ci_95": 11
     },
     {
@@ -43,7 +43,7 @@
         "id": "2354746c-4775-4a06-b64d-0ba4137785b8",
         "name": "ByteDance Seed"
       },
-      "elo": 1341,
+      "elo": 1342,
       "ci_95": 9
     },
     {
@@ -113,17 +113,6 @@
       "ci_95": 9
     },
     {
-      "id": "50ed6856-5052-431d-8994-584b2e02f023",
-      "name": "SkyReels V4",
-      "slug": "skyreels-v4",
-      "model_creator": {
-        "id": "67b5ce4d-0c81-4edc-b4c3-370acc2df555",
-        "name": "Skywork AI"
-      },
-      "elo": 1287,
-      "ci_95": 10
-    },
-    {
       "id": "d149ad95-b3b2-4d23-8611-07a84c1a0e7f",
       "name": "Kling 3.0 1080p (Pro)",
       "slug": "kling-3-0-pro",
@@ -133,6 +122,17 @@
       },
       "elo": 1287,
       "ci_95": 9
+    },
+    {
+      "id": "50ed6856-5052-431d-8994-584b2e02f023",
+      "name": "SkyReels V4",
+      "slug": "skyreels-v4",
+      "model_creator": {
+        "id": "67b5ce4d-0c81-4edc-b4c3-370acc2df555",
+        "name": "Skywork AI"
+      },
+      "elo": 1286,
+      "ci_95": 10
     },
     {
       "id": "d7c0367f-1adf-40ec-8195-5c5d1906efa8",
@@ -201,6 +201,17 @@
       "ci_95": 9
     },
     {
+      "id": "fbe52f99-34a3-44a9-b14b-dc35c030e9f4",
+      "name": "Cosmos3-Super-Image2Video-4Step",
+      "slug": "cosmos3-super-image2video-4step",
+      "model_creator": {
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA"
+      },
+      "elo": 1270,
+      "ci_95": 11
+    },
+    {
       "id": "b5d5057e-3d0d-4e22-b029-bd976cd1b6a6",
       "name": "Kling 3.0 720p (Standard)",
       "slug": "kling-3-0-standard",
@@ -230,19 +241,8 @@
         "id": "a6906d95-a471-4a0c-ad10-b989571de20c",
         "name": "Runway"
       },
-      "elo": 1267,
+      "elo": 1268,
       "ci_95": 9
-    },
-    {
-      "id": "fbe52f99-34a3-44a9-b14b-dc35c030e9f4",
-      "name": "Cosmos3-Super-Image2Video-4Step",
-      "slug": "cosmos3-super-image2video-4step",
-      "model_creator": {
-        "id": "0c303112-430d-4367-a484-51defaa2e166",
-        "name": "NVIDIA"
-      },
-      "elo": 1267,
-      "ci_95": 11
     },
     {
       "id": "5180943f-2a96-44a5-9461-80e5ae1e249e",
@@ -285,7 +285,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1252,
+      "elo": 1253,
       "ci_95": 9
     },
     {
@@ -307,7 +307,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1250,
+      "elo": 1249,
       "ci_95": 10
     },
     {
@@ -406,7 +406,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1229,
+      "elo": 1228,
       "ci_95": 11
     },
     {
@@ -428,7 +428,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1226,
+      "elo": 1227,
       "ci_95": 9
     },
     {
@@ -516,7 +516,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 1193,
+      "elo": 1192,
       "ci_95": 12
     },
     {
@@ -593,7 +593,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 1162,
+      "elo": 1161,
       "ci_95": 9
     },
     {
@@ -681,7 +681,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1108,
+      "elo": 1109,
       "ci_95": 10
     },
     {
@@ -736,7 +736,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1026,
+      "elo": 1027,
       "ci_95": 12
     },
     {

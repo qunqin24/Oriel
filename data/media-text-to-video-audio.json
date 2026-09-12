@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-11T23:00:07.391Z",
+  "fetched_at": "2026-09-12T22:51:53.764Z",
   "tier": "free",
   "data": [
     {
@@ -11,7 +11,7 @@
         "name": "Alibaba"
       },
       "elo": 1242,
-      "ci_95": 10
+      "ci_95": 9
     },
     {
       "id": "88df9253-809f-4dc9-b993-3969fa606473",
@@ -32,7 +32,7 @@
         "id": "d3f67dc4-ba4d-4103-ba79-ee321ca99b40",
         "name": "Fal"
       },
-      "elo": 1230,
+      "elo": 1231,
       "ci_95": 9
     },
     {
@@ -43,7 +43,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1224,
+      "elo": 1225,
       "ci_95": 7
     },
     {
@@ -65,7 +65,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1156,
+      "elo": 1157,
       "ci_95": 6
     },
     {
@@ -76,7 +76,7 @@
         "id": "0ea38458-92d7-45de-a69d-c50bd8277273",
         "name": "Alibaba-ATH"
       },
-      "elo": 1147,
+      "elo": 1146,
       "ci_95": 6
     },
     {
@@ -120,7 +120,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1103,
+      "elo": 1104,
       "ci_95": 7
     },
     {
@@ -153,7 +153,7 @@
         "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
         "name": "OpenAI"
       },
-      "elo": 1097,
+      "elo": 1099,
       "ci_95": 9
     },
     {
@@ -201,6 +201,17 @@
       "ci_95": 6
     },
     {
+      "id": "5518540d-d1bc-48cc-9ad3-8f20769c021e",
+      "name": "Agnes-Video-2.5",
+      "slug": "agnes-video-2-5",
+      "model_creator": {
+        "id": "5db3af1a-e372-4c62-98bd-f6027eeaf990",
+        "name": "Sapiens AI"
+      },
+      "elo": 1085,
+      "ci_95": 8
+    },
+    {
       "id": "f3c7e331-2b60-4f87-bc9c-363264f211a8",
       "name": "Veo 3.1 Fast",
       "slug": "veo-3-1-fast",
@@ -212,28 +223,6 @@
       "ci_95": 5
     },
     {
-      "id": "5518540d-d1bc-48cc-9ad3-8f20769c021e",
-      "name": "Agnes-Video-2.5",
-      "slug": "agnes-video-2-5",
-      "model_creator": {
-        "id": "5db3af1a-e372-4c62-98bd-f6027eeaf990",
-        "name": "Sapiens AI"
-      },
-      "elo": 1084,
-      "ci_95": 8
-    },
-    {
-      "id": "735c14cc-5bab-445d-b8d1-a0bc2045c006",
-      "name": "Sora 2 Pro",
-      "slug": "sora-2-pro",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI"
-      },
-      "elo": 1079,
-      "ci_95": 9
-    },
-    {
       "id": "be866b8a-d073-4ee4-9652-73227c679dc4",
       "name": "PixVerse V6",
       "slug": "pixverse-v6",
@@ -243,6 +232,17 @@
       },
       "elo": 1077,
       "ci_95": 6
+    },
+    {
+      "id": "735c14cc-5bab-445d-b8d1-a0bc2045c006",
+      "name": "Sora 2 Pro",
+      "slug": "sora-2-pro",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "elo": 1076,
+      "ci_95": 9
     },
     {
       "id": "d7c0367f-1adf-40ec-8195-5c5d1906efa8",
