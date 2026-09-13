@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-12T22:51:53.764Z",
+  "fetched_at": "2026-09-13T22:55:08.691Z",
   "tier": "free",
   "data": [
     {
@@ -10,7 +10,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1366,
+      "elo": 1365,
       "ci_95": 11
     },
     {
@@ -21,7 +21,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1361,
+      "elo": 1362,
       "ci_95": 13
     },
     {
@@ -32,7 +32,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1350,
+      "elo": 1351,
       "ci_95": 11
     },
     {
@@ -87,7 +87,7 @@
         "id": "0ea38458-92d7-45de-a69d-c50bd8277273",
         "name": "Alibaba-ATH"
       },
-      "elo": 1307,
+      "elo": 1306,
       "ci_95": 10
     },
     {
@@ -399,17 +399,6 @@
       "ci_95": 9
     },
     {
-      "id": "043f0cb2-3565-45ad-bf78-7e2de8288e94",
-      "name": "Vidu Q3 Turbo",
-      "slug": "vidu-q3-turbo",
-      "model_creator": {
-        "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
-        "name": "Vidu"
-      },
-      "elo": 1228,
-      "ci_95": 11
-    },
-    {
       "id": "dd3e028f-856f-4915-9759-eff55e2f5f9e",
       "name": "Vidu Q2 Turbo",
       "slug": "vidu-q2-turbo",
@@ -419,6 +408,17 @@
       },
       "elo": 1228,
       "ci_95": 9
+    },
+    {
+      "id": "043f0cb2-3565-45ad-bf78-7e2de8288e94",
+      "name": "Vidu Q3 Turbo",
+      "slug": "vidu-q3-turbo",
+      "model_creator": {
+        "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
+        "name": "Vidu"
+      },
+      "elo": 1228,
+      "ci_95": 11
     },
     {
       "id": "57a29e57-e118-4ae7-abb1-aa6e5935634a",
