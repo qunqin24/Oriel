@@ -1,6 +1,131 @@
 {
-  "generated_at": "2026-09-13T22:55:10.002Z",
+  "generated_at": "2026-09-14T23:42:01.436Z",
   "events": [
+    {
+      "date": "2026-09-15",
+      "type": "added",
+      "model": {
+        "id": "992b7b84-5069-4c6a-9295-834252553d50",
+        "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
+        "slug": "claude-opus-4-8",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-15"
+      },
+      "intelligence": 42
+    },
+    {
+      "date": "2026-09-15",
+      "type": "added",
+      "model": {
+        "id": "9e9fb958-87f5-4835-a761-26102ef25898",
+        "name": "K2 Horizon 0.9B",
+        "slug": "k2-1b-final",
+        "creator": "MBZUAI Institute of Foundation Models",
+        "first_seen": "2026-09-15",
+        "last_seen": "2026-09-15"
+      },
+      "intelligence": 3
+    },
+    {
+      "date": "2026-09-15",
+      "type": "added",
+      "model": {
+        "id": "31da3a71-0773-47d9-8560-9f19f069926b",
+        "name": "K2 Horizon 3.7B",
+        "slug": "k2-4b-ph1",
+        "creator": "MBZUAI Institute of Foundation Models",
+        "first_seen": "2026-09-15",
+        "last_seen": "2026-09-15"
+      },
+      "intelligence": 16.2
+    },
+    {
+      "date": "2026-09-15",
+      "type": "added",
+      "model": {
+        "id": "122a1fa1-976a-4089-87a2-5a0a13e2a52c",
+        "name": "K2 Horizon 7B",
+        "slug": "k2-7b-ph2",
+        "creator": "MBZUAI Institute of Foundation Models",
+        "first_seen": "2026-09-15",
+        "last_seen": "2026-09-15"
+      },
+      "intelligence": 21
+    },
+    {
+      "date": "2026-09-15",
+      "type": "added",
+      "model": {
+        "id": "53b9e276-e360-4a39-9076-1a19d72c25fe",
+        "name": "K2 Horizon MoVA 36B A4B",
+        "slug": "k2-mova-36b-mid5",
+        "creator": "MBZUAI Institute of Foundation Models",
+        "first_seen": "2026-09-15",
+        "last_seen": "2026-09-15"
+      },
+      "intelligence": 25.7
+    },
+    {
+      "date": "2026-09-15",
+      "type": "price",
+      "model": {
+        "id": "b23e6c69-96e5-44c9-8f58-4b42e0c399d5",
+        "name": "Hy3",
+        "slug": "hy3",
+        "creator": "Tencent",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-15"
+      },
+      "metric": "priceOut",
+      "from": 0.55,
+      "to": 0.58
+    },
+    {
+      "date": "2026-09-15",
+      "type": "price",
+      "model": {
+        "id": "5b52def2-ac9b-4465-ad80-91ea8079e253",
+        "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
+        "slug": "nvidia-nemotron-3-ultra-550b-a55b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-15"
+      },
+      "metric": "priceOut",
+      "from": 2.6,
+      "to": 2.4
+    },
+    {
+      "date": "2026-09-15",
+      "type": "score",
+      "model": {
+        "id": "f7a4ea75-e548-4069-80d4-9be8bc7c009b",
+        "name": "GLM-5.2 (max)",
+        "slug": "glm-5-2",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-15"
+      },
+      "metric": "intelligence",
+      "from": 38.6,
+      "to": 34
+    },
+    {
+      "date": "2026-09-15",
+      "type": "score",
+      "model": {
+        "id": "512d17ef-13d2-4f65-bf9b-154b0dec7e8d",
+        "name": "Kimi K3 (low)",
+        "slug": "kimi-k3-low",
+        "creator": "Kimi",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-09-15"
+      },
+      "metric": "intelligence",
+      "from": 34.5,
+      "to": 30.5
+    },
     {
       "date": "2026-09-13",
       "type": "removed",

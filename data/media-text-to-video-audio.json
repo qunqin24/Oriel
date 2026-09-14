@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-13T22:55:08.691Z",
+  "fetched_at": "2026-09-14T23:41:57.954Z",
   "tier": "free",
   "data": [
     {
@@ -10,7 +10,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1242,
+      "elo": 1243,
       "ci_95": 9
     },
     {
@@ -21,7 +21,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1237,
+      "elo": 1238,
       "ci_95": 6
     },
     {
@@ -131,7 +131,7 @@
         "id": "67b5ce4d-0c81-4edc-b4c3-370acc2df555",
         "name": "Skywork AI"
       },
-      "elo": 1103,
+      "elo": 1102,
       "ci_95": 7
     },
     {
@@ -142,7 +142,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1101,
+      "elo": 1102,
       "ci_95": 5
     },
     {
@@ -153,7 +153,7 @@
         "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
         "name": "OpenAI"
       },
-      "elo": 1098,
+      "elo": 1097,
       "ci_95": 9
     },
     {
@@ -190,6 +190,17 @@
       "ci_95": 6
     },
     {
+      "id": "5518540d-d1bc-48cc-9ad3-8f20769c021e",
+      "name": "Agnes-Video-2.5",
+      "slug": "agnes-video-2-5",
+      "model_creator": {
+        "id": "5db3af1a-e372-4c62-98bd-f6027eeaf990",
+        "name": "Sapiens AI"
+      },
+      "elo": 1088,
+      "ci_95": 8
+    },
+    {
       "id": "a8f7ab65-828a-4166-8fbf-616cbb01d773",
       "name": "Veo 3.1 Lite",
       "slug": "veo-3-1-lite",
@@ -201,17 +212,6 @@
       "ci_95": 6
     },
     {
-      "id": "5518540d-d1bc-48cc-9ad3-8f20769c021e",
-      "name": "Agnes-Video-2.5",
-      "slug": "agnes-video-2-5",
-      "model_creator": {
-        "id": "5db3af1a-e372-4c62-98bd-f6027eeaf990",
-        "name": "Sapiens AI"
-      },
-      "elo": 1085,
-      "ci_95": 8
-    },
-    {
       "id": "f3c7e331-2b60-4f87-bc9c-363264f211a8",
       "name": "Veo 3.1 Fast",
       "slug": "veo-3-1-fast",
@@ -221,17 +221,6 @@
       },
       "elo": 1084,
       "ci_95": 5
-    },
-    {
-      "id": "735c14cc-5bab-445d-b8d1-a0bc2045c006",
-      "name": "Sora 2 Pro",
-      "slug": "sora-2-pro",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI"
-      },
-      "elo": 1078,
-      "ci_95": 9
     },
     {
       "id": "be866b8a-d073-4ee4-9652-73227c679dc4",
@@ -256,6 +245,17 @@
       "ci_95": 5
     },
     {
+      "id": "735c14cc-5bab-445d-b8d1-a0bc2045c006",
+      "name": "Sora 2 Pro",
+      "slug": "sora-2-pro",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
+      },
+      "elo": 1073,
+      "ci_95": 9
+    },
+    {
       "id": "b5343afd-4bff-4e97-99fc-1e2edf2e8eb1",
       "name": "LTX-2.5 Fast",
       "slug": "ltx-2-5-fast",
@@ -263,7 +263,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 1069,
+      "elo": 1072,
       "ci_95": 9
     },
     {
@@ -307,7 +307,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1022,
+      "elo": 1024,
       "ci_95": 9
     },
     {
@@ -384,7 +384,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 919,
+      "elo": 918,
       "ci_95": 8
     },
     {

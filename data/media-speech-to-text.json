@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-13T22:55:08.691Z",
+  "fetched_at": "2026-09-14T23:41:57.954Z",
   "tier": "free",
   "data": [
     {
@@ -575,6 +575,15 @@
       "model_creator": {
         "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
         "name": "OpenAI"
+      },
+      "aa_wer_index": 0
+    },
+    {
+      "id": "bd9f32b5-fa42-4b12-8749-3a2c7a711cb5",
+      "name": "StepAudio 3 ASR",
+      "model_creator": {
+        "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
+        "name": "StepFun"
       },
       "aa_wer_index": 0
     },
