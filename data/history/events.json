@@ -1,6 +1,169 @@
 {
-  "generated_at": "2026-09-14T23:42:01.436Z",
+  "generated_at": "2026-09-15T23:25:48.939Z",
   "events": [
+    {
+      "date": "2026-09-16",
+      "type": "added",
+      "model": {
+        "id": "b112af07-3bd5-4647-b09f-b23204361bb2",
+        "name": "Qwen3.8 Max (0902)",
+        "slug": "qwen3-8-max",
+        "creator": "Alibaba",
+        "first_seen": "2026-09-16",
+        "last_seen": "2026-09-16"
+      },
+      "intelligence": 45.4
+    },
+    {
+      "date": "2026-09-16",
+      "type": "price",
+      "model": {
+        "id": "d034dafe-463d-4c50-956f-84fca657b26f",
+        "name": "Claude 4 Sonnet (Non-reasoning)",
+        "slug": "claude-4-sonnet",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-16"
+      },
+      "metric": "priceIn",
+      "from": 3,
+      "to": null
+    },
+    {
+      "date": "2026-09-16",
+      "type": "price",
+      "model": {
+        "id": "d034dafe-463d-4c50-956f-84fca657b26f",
+        "name": "Claude 4 Sonnet (Non-reasoning)",
+        "slug": "claude-4-sonnet",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-16"
+      },
+      "metric": "priceOut",
+      "from": 15,
+      "to": null
+    },
+    {
+      "date": "2026-09-16",
+      "type": "price",
+      "model": {
+        "id": "a7564055-f8ba-4c4b-9e2d-060f61263645",
+        "name": "Claude 4 Sonnet (Reasoning)",
+        "slug": "claude-4-sonnet-thinking",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-16"
+      },
+      "metric": "priceIn",
+      "from": 3,
+      "to": null
+    },
+    {
+      "date": "2026-09-16",
+      "type": "price",
+      "model": {
+        "id": "a7564055-f8ba-4c4b-9e2d-060f61263645",
+        "name": "Claude 4 Sonnet (Reasoning)",
+        "slug": "claude-4-sonnet-thinking",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-16"
+      },
+      "metric": "priceOut",
+      "from": 15,
+      "to": null
+    },
+    {
+      "date": "2026-09-16",
+      "type": "price",
+      "model": {
+        "id": "3b5ba264-ad25-429b-a460-4d8698205f0d",
+        "name": "Nex-N2-Pro",
+        "slug": "nex-n2-pro",
+        "creator": "Nex AGI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-16"
+      },
+      "metric": "priceIn",
+      "from": 0.5,
+      "to": null
+    },
+    {
+      "date": "2026-09-16",
+      "type": "price",
+      "model": {
+        "id": "3b5ba264-ad25-429b-a460-4d8698205f0d",
+        "name": "Nex-N2-Pro",
+        "slug": "nex-n2-pro",
+        "creator": "Nex AGI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-16"
+      },
+      "metric": "priceOut",
+      "from": 2.5,
+      "to": null
+    },
+    {
+      "date": "2026-09-16",
+      "type": "score",
+      "model": {
+        "id": "9b97a35e-6ac7-44d9-91c6-422fa678963e",
+        "name": "GPT-5.6 Terra (Non-reasoning)",
+        "slug": "gpt-5-6-terra-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-16"
+      },
+      "metric": "intelligence",
+      "from": 22.3,
+      "to": 21.2
+    },
+    {
+      "date": "2026-09-16",
+      "type": "score",
+      "model": {
+        "id": "0de67206-4d36-4d10-b8f6-cf37fa747a03",
+        "name": "Kimi K2.6",
+        "slug": "kimi-k2-6",
+        "creator": "Kimi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-16"
+      },
+      "metric": "intelligence",
+      "from": 31.3,
+      "to": 27.5
+    },
+    {
+      "date": "2026-09-16",
+      "type": "score",
+      "model": {
+        "id": "e33dc369-ae81-40e0-8c4e-28b002d02197",
+        "name": "Ling 3.0 Flash",
+        "slug": "ling-3-0-flash",
+        "creator": "InclusionAI",
+        "first_seen": "2026-08-07",
+        "last_seen": "2026-09-16"
+      },
+      "metric": "intelligence",
+      "from": 24.9,
+      "to": 20.6
+    },
+    {
+      "date": "2026-09-16",
+      "type": "score",
+      "model": {
+        "id": "433d5c5d-3092-4026-9727-1587ca07915d",
+        "name": "Ling-3.0-flash-VL",
+        "slug": "ling-3-0-flash-vl",
+        "creator": "InclusionAI",
+        "first_seen": "2026-09-11",
+        "last_seen": "2026-09-16"
+      },
+      "metric": "intelligence",
+      "from": 24.8,
+      "to": 25
+    },
     {
       "date": "2026-09-15",
       "type": "added",

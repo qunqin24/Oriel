@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-14T23:41:57.954Z",
+  "fetched_at": "2026-09-15T23:25:47.661Z",
   "tier": "free",
   "data": [
     {
@@ -157,17 +157,6 @@
       "ci_95": 7
     },
     {
-      "id": "b5d5057e-3d0d-4e22-b029-bd976cd1b6a6",
-      "name": "Kling 3.0 720p (Standard)",
-      "slug": "kling-3-0-standard",
-      "model_creator": {
-        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
-        "name": "KlingAI"
-      },
-      "elo": 1214,
-      "ci_95": 7
-    },
-    {
       "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
       "name": "Kling 3.0 Omni 720p (Standard)",
       "slug": "kling-o3-standard",
@@ -177,6 +166,17 @@
       },
       "elo": 1214,
       "ci_95": 8
+    },
+    {
+      "id": "b5d5057e-3d0d-4e22-b029-bd976cd1b6a6",
+      "name": "Kling 3.0 720p (Standard)",
+      "slug": "kling-3-0-standard",
+      "model_creator": {
+        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
+        "name": "KlingAI"
+      },
+      "elo": 1214,
+      "ci_95": 7
     },
     {
       "id": "440843ac-4961-4eef-a504-158724c11fee",
@@ -197,7 +197,7 @@
         "id": "1942f8d6-ab55-4408-99dd-2f99c70353f6",
         "name": "PixVerse"
       },
-      "elo": 1211,
+      "elo": 1212,
       "ci_95": 8
     },
     {
@@ -252,7 +252,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 1205,
+      "elo": 1206,
       "ci_95": 11
     },
     {

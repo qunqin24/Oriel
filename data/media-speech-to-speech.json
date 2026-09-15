@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-14T23:41:57.954Z",
+  "fetched_at": "2026-09-15T23:25:47.661Z",
   "tier": "free",
   "data": [
     {
@@ -13,6 +13,18 @@
       "bba_score": 0.88,
       "fdb_score": null,
       "tau_voice_score": null
+    },
+    {
+      "id": "38a1cac4-afbe-4854-a2ba-3529ee58ad45",
+      "name": "Gemini 3.8 Live",
+      "slug": "walkie-talkie",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "bba_score": 0.92,
+      "fdb_score": 0.96,
+      "tau_voice_score": 0.3
     },
     {
       "id": "b5e9b179-8846-40f6-b0f3-d09097f9a96a",
@@ -61,6 +73,18 @@
       "bba_score": 0.75,
       "fdb_score": 0.92,
       "tau_voice_score": 0.29
+    },
+    {
+      "id": "64c3fb9e-dd65-428a-a397-591134557e27",
+      "name": "Gemini 3.8 Live Extended Thinking (High)",
+      "slug": "bright-chatter-high",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "bba_score": null,
+      "fdb_score": null,
+      "tau_voice_score": 0.69
     },
     {
       "id": "eead24bb-ad0b-45be-b0ab-7b16381c2daf",
@@ -205,6 +229,18 @@
       "bba_score": 0.9,
       "fdb_score": 0.95,
       "tau_voice_score": 0.68
+    },
+    {
+      "id": "6ebbe117-2639-49a5-ab54-5ebc59903735",
+      "name": "StepAudio 3 Realtime",
+      "slug": "stepaudio-3-realtime",
+      "model_creator": {
+        "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
+        "name": "StepFun"
+      },
+      "bba_score": 1,
+      "fdb_score": 0.99,
+      "tau_voice_score": null
     },
     {
       "id": "6ea9257f-c9f6-4789-be83-3d90c49f1c86",
