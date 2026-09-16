@@ -1,6 +1,109 @@
 {
-  "generated_at": "2026-09-15T23:25:48.939Z",
+  "generated_at": "2026-09-16T23:33:38.585Z",
   "events": [
+    {
+      "date": "2026-09-17",
+      "type": "added",
+      "model": {
+        "id": "6d6fa1c9-b833-40b2-8a58-fa810e24a84e",
+        "name": "Ling-3.0-flash-Fin",
+        "slug": "ling-3-0-flash-fin",
+        "creator": "InclusionAI",
+        "first_seen": "2026-09-17",
+        "last_seen": "2026-09-17"
+      },
+      "intelligence": 23
+    },
+    {
+      "date": "2026-09-17",
+      "type": "price",
+      "model": {
+        "id": "340fb211-4fad-41d3-87d5-ed0d0cd34088",
+        "name": "HyperNova 60B 2605 (high, based on gpt-oss-120b)",
+        "slug": "hypernova-60b",
+        "creator": "Multiverse Computing",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-17"
+      },
+      "metric": "priceIn",
+      "from": 0.04,
+      "to": null
+    },
+    {
+      "date": "2026-09-17",
+      "type": "price",
+      "model": {
+        "id": "340fb211-4fad-41d3-87d5-ed0d0cd34088",
+        "name": "HyperNova 60B 2605 (high, based on gpt-oss-120b)",
+        "slug": "hypernova-60b",
+        "creator": "Multiverse Computing",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-17"
+      },
+      "metric": "priceOut",
+      "from": 0.14,
+      "to": null
+    },
+    {
+      "date": "2026-09-17",
+      "type": "price",
+      "model": {
+        "id": "976cc8ad-7904-4056-83c5-960181f47d5f",
+        "name": "Llama 3.3 Instruct 70B",
+        "slug": "llama-3-3-instruct-70b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-17"
+      },
+      "metric": "priceIn",
+      "from": 0.66,
+      "to": 0.71
+    },
+    {
+      "date": "2026-09-17",
+      "type": "score",
+      "model": {
+        "id": "dc64f856-3ded-497d-9527-d41d31267ed5",
+        "name": "GPT-5.6 Luna (Non-reasoning)",
+        "slug": "gpt-5-6-luna-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-17"
+      },
+      "metric": "intelligence",
+      "from": 16.8,
+      "to": 16.1
+    },
+    {
+      "date": "2026-09-17",
+      "type": "score",
+      "model": {
+        "id": "05a32e26-e609-4377-951b-8fa23d329926",
+        "name": "Mistral Medium 3.1",
+        "slug": "mistral-medium-3-1",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-17"
+      },
+      "metric": "intelligence",
+      "from": 9.9,
+      "to": 9.5
+    },
+    {
+      "date": "2026-09-17",
+      "type": "score",
+      "model": {
+        "id": "1e9907e0-ffac-4595-b006-962e4f1da7cf",
+        "name": "North Mini Code",
+        "slug": "north-mini-code",
+        "creator": "Cohere",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-17"
+      },
+      "metric": "intelligence",
+      "from": 12.8,
+      "to": 9.9
+    },
     {
       "date": "2026-09-16",
       "type": "added",

@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-15T23:25:47.661Z",
+  "fetched_at": "2026-09-16T23:33:36.877Z",
   "tier": "free",
   "data": [
     {
@@ -32,7 +32,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1302,
+      "elo": 1303,
       "ci_95": 10
     },
     {
@@ -98,7 +98,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 1232,
+      "elo": 1233,
       "ci_95": 8
     },
     {
@@ -157,17 +157,6 @@
       "ci_95": 7
     },
     {
-      "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
-      "name": "Kling 3.0 Omni 720p (Standard)",
-      "slug": "kling-o3-standard",
-      "model_creator": {
-        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
-        "name": "KlingAI"
-      },
-      "elo": 1214,
-      "ci_95": 8
-    },
-    {
       "id": "b5d5057e-3d0d-4e22-b029-bd976cd1b6a6",
       "name": "Kling 3.0 720p (Standard)",
       "slug": "kling-3-0-standard",
@@ -177,6 +166,17 @@
       },
       "elo": 1214,
       "ci_95": 7
+    },
+    {
+      "id": "f0a7c830-eab1-419f-b61c-bb7143841a9d",
+      "name": "Kling 3.0 Omni 720p (Standard)",
+      "slug": "kling-o3-standard",
+      "model_creator": {
+        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
+        "name": "KlingAI"
+      },
+      "elo": 1214,
+      "ci_95": 8
     },
     {
       "id": "440843ac-4961-4eef-a504-158724c11fee",
@@ -241,7 +241,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1209,
+      "elo": 1208,
       "ci_95": 8
     },
     {
@@ -373,7 +373,7 @@
         "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
         "name": "OpenAI"
       },
-      "elo": 1184,
+      "elo": 1183,
       "ci_95": 8
     },
     {
@@ -571,7 +571,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1103,
+      "elo": 1102,
       "ci_95": 10
     },
     {
