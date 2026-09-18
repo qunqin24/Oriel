@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-16T23:33:36.877Z",
+  "fetched_at": "2026-09-18T00:07:12.027Z",
   "tier": "free",
   "data": [
     {
@@ -154,6 +154,15 @@
         "name": "OpenAI"
       },
       "aa_wer_index": 0
+    },
+    {
+      "id": "26403f98-fe1f-43ab-b1cd-0200269f0d96",
+      "name": "Raon Speech",
+      "model_creator": {
+        "id": "bf5e5871-bb86-4c30-8485-681169debc31",
+        "name": "Krafton"
+      },
+      "aa_wer_index": 0.1
     },
     {
       "id": "ae083e8b-477f-4114-90e2-3484f97f2d76",
