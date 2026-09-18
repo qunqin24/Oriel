@@ -4,7 +4,7 @@
  * 由 .github/workflows/daily-data-update.yml 每天 21:00 UTC（北京时间次日 05:00）触发。
  */
 
-import { mkdir, writeFile } from "node:fs/promises";
+import { access, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { normalizeModelList } from "./lib/model-list.ts";
 import { recordSnapshot, summarize } from "./lib/record.ts";
@@ -38,6 +38,24 @@ const MEDIA_ENDPOINTS = [
 /** 整轮抓取共用一个时间戳，让所有快照文件与历史归档指向同一个时刻。 */
 const fetchedAt = new Date().toISOString();
 
+class HttpResponseError extends Error {
+  constructor(
+    readonly status: number,
+    message: string
+  ) {
+    super(message);
+    this.name = "HttpResponseError";
+  }
+}
+
+function isTransientFetchError(error: unknown) {
+  return (
+    !(error instanceof HttpResponseError) ||
+    error.status === 429 ||
+    error.status >= 500
+  );
+}
+
 async function fetchJson(url: string) {
   let lastError: unknown;
 
@@ -55,8 +73,11 @@ async function fetchJson(url: string) {
     if (res?.ok) return res.json();
     if (res) {
       const body = (await res.text()).slice(0, 500);
-      const error = new Error(`${res.status} ${url}: ${body}`);
-      if (res.status !== 429 && res.status < 500) throw error;
+      const error = new HttpResponseError(
+        res.status,
+        `${res.status} ${url}: ${body}`
+      );
+      if (!isTransientFetchError(error)) throw error;
       lastError = error;
     }
 
@@ -74,6 +95,19 @@ async function fetchJson(url: string) {
 
 function fileName(endpoint: string) {
   return endpoint.replace(/\/models\/free$/, "").replaceAll("/", "-");
+}
+
+function snapshotPath(endpoint: string) {
+  return path.join(OUT_DIR, `${fileName(endpoint)}.json`);
+}
+
+async function hasSnapshot(endpoint: string) {
+  try {
+    await access(snapshotPath(endpoint));
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 async function save(name: string, payload: unknown) {
@@ -122,13 +156,33 @@ async function main() {
   });
   console.log(`archived ${summarize(recorded)}`);
 
+  const staleMediaEndpoints: string[] = [];
   for (const endpoint of MEDIA_ENDPOINTS) {
-    const json = await fetchJson(`${BASE_URL}/${endpoint}`);
-    await save(fileName(endpoint), json);
+    try {
+      const json = await fetchJson(`${BASE_URL}/${endpoint}`);
+      await save(fileName(endpoint), json);
+    } catch (error) {
+      // 媒体榜单彼此独立。上游短暂故障时保留已有快照，不能拖垮
+      // 语言模型和其余媒体数据的更新；确定性的 4xx 仍然立即失败。
+      if (!isTransientFetchError(error) || !(await hasSnapshot(endpoint))) {
+        throw error;
+      }
+      staleMediaEndpoints.push(endpoint);
+      console.warn(
+        `上游暂时不可用，保留已有快照 data/${fileName(endpoint)}.json:`,
+        error
+      );
+    }
     await new Promise((r) => setTimeout(r, 300));
   }
 
-  console.log("done");
+  if (staleMediaEndpoints.length > 0) {
+    console.warn(
+      `done with ${staleMediaEndpoints.length} stale media snapshot(s): ${staleMediaEndpoints.join(", ")}`
+    );
+  } else {
+    console.log("done");
+  }
 }
 
 main().catch((err) => {
