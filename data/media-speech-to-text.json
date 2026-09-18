@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-18T00:07:12.027Z",
+  "fetched_at": "2026-09-18T23:02:42.692Z",
   "tier": "free",
   "data": [
     {
@@ -163,6 +163,15 @@
         "name": "Krafton"
       },
       "aa_wer_index": 0.1
+    },
+    {
+      "id": "102ecb4c-cfc7-4ba2-84df-588b3e64f793",
+      "name": "Grok Voice Transcribe 2.0",
+      "model_creator": {
+        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+        "name": "SpaceXAI"
+      },
+      "aa_wer_index": 0
     },
     {
       "id": "ae083e8b-477f-4114-90e2-3484f97f2d76",
@@ -408,6 +417,15 @@
       "aa_wer_index": 0
     },
     {
+      "id": "4005366d-a689-4e44-a8f1-0f3ca220d862",
+      "name": "Grok Voice Transcribe 1.0",
+      "model_creator": {
+        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+        "name": "SpaceXAI"
+      },
+      "aa_wer_index": 0
+    },
+    {
       "id": "484244d8-0d89-48c2-8f6d-9be27093bf9a",
       "name": "Nova-3, Deepgram",
       "model_creator": {
@@ -458,15 +476,6 @@
       "model_creator": {
         "id": "4fb0e648-ff21-4fe3-909b-290fba140579",
         "name": "AssemblyAI"
-      },
-      "aa_wer_index": 0
-    },
-    {
-      "id": "4005366d-a689-4e44-a8f1-0f3ca220d862",
-      "name": "Grok Speech to Text, SpaceXAI",
-      "model_creator": {
-        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
-        "name": "SpaceXAI"
       },
       "aa_wer_index": 0
     },
@@ -622,6 +631,15 @@
         "name": "Microsoft AI"
       },
       "aa_wer_index": 0
+    },
+    {
+      "id": "bd3cb833-0d0c-45f7-b5b6-f4a500081c77",
+      "name": "Modulate STT Streaming English",
+      "model_creator": {
+        "id": "1cd84a95-a774-4756-b889-264693ba346e",
+        "name": "Modulate"
+      },
+      "aa_wer_index": null
     }
   ]
 }

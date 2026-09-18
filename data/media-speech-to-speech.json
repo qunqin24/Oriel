@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-18T00:07:12.027Z",
+  "fetched_at": "2026-09-18T23:02:42.692Z",
   "tier": "free",
   "data": [
     {
@@ -195,18 +195,6 @@
       "tau_voice_score": 0.59
     },
     {
-      "id": "25d46ae8-c606-49f6-b844-846d441b27c8",
-      "name": "Raon SpeechChat",
-      "slug": "raon-speechchat",
-      "model_creator": {
-        "id": "bf5e5871-bb86-4c30-8485-681169debc31",
-        "name": "Krafton"
-      },
-      "bba_score": 0.57,
-      "fdb_score": 0.86,
-      "tau_voice_score": null
-    },
-    {
       "id": "07c7220d-6974-4533-9c7b-f5b8f05c5afd",
       "name": "Gemini 3.1 Flash Audio Preview (Mar 2026) - Minimal",
       "slug": "gemini-3-1-flash-audio-preview-mar-2026-minimal",
@@ -264,6 +252,18 @@
       },
       "bba_score": null,
       "fdb_score": null,
+      "tau_voice_score": null
+    },
+    {
+      "id": "25d46ae8-c606-49f6-b844-846d441b27c8",
+      "name": "Raon SpeechChat",
+      "slug": "raon-speechchat",
+      "model_creator": {
+        "id": "bf5e5871-bb86-4c30-8485-681169debc31",
+        "name": "Krafton"
+      },
+      "bba_score": 0.57,
+      "fdb_score": 0.86,
       "tau_voice_score": null
     },
     {
