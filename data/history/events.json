@@ -1,6 +1,150 @@
 {
-  "generated_at": "2026-09-20T23:01:22.677Z",
+  "generated_at": "2026-09-21T23:51:08.422Z",
   "events": [
+    {
+      "date": "2026-09-22",
+      "type": "added",
+      "model": {
+        "id": "272f5f03-aea9-4675-a244-2b753b618cdf",
+        "name": "Grok 4.7 (high)",
+        "slug": "grok-4-7-high",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-09-22",
+        "last_seen": "2026-09-22"
+      },
+      "intelligence": 46.3
+    },
+    {
+      "date": "2026-09-22",
+      "type": "added",
+      "model": {
+        "id": "59627802-1546-422c-9a65-65b61c022d36",
+        "name": "Grok 4.7 (xhigh)",
+        "slug": "grok-4-7",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-09-22",
+        "last_seen": "2026-09-22"
+      },
+      "intelligence": 46.4
+    },
+    {
+      "date": "2026-09-22",
+      "type": "added",
+      "model": {
+        "id": "24d8fdfe-6241-424e-b7b7-1b6efb06e4fb",
+        "name": "MiMo-V2.6-Pro",
+        "slug": "mimo-v2-6-pro",
+        "creator": "Xiaomi",
+        "first_seen": "2026-09-22",
+        "last_seen": "2026-09-22"
+      },
+      "intelligence": 46.3
+    },
+    {
+      "date": "2026-09-22",
+      "type": "price",
+      "model": {
+        "id": "433d5c5d-3092-4026-9727-1587ca07915d",
+        "name": "Ling-3.0-flash-VL",
+        "slug": "ling-3-0-flash-vl",
+        "creator": "InclusionAI",
+        "first_seen": "2026-09-11",
+        "last_seen": "2026-09-22"
+      },
+      "metric": "priceIn",
+      "from": 0,
+      "to": 0.07
+    },
+    {
+      "date": "2026-09-22",
+      "type": "price",
+      "model": {
+        "id": "433d5c5d-3092-4026-9727-1587ca07915d",
+        "name": "Ling-3.0-flash-VL",
+        "slug": "ling-3-0-flash-vl",
+        "creator": "InclusionAI",
+        "first_seen": "2026-09-11",
+        "last_seen": "2026-09-22"
+      },
+      "metric": "priceOut",
+      "from": 0,
+      "to": 0.22
+    },
+    {
+      "date": "2026-09-22",
+      "type": "price",
+      "model": {
+        "id": "8c748e53-61ae-48b8-af8d-eb8298b1e9db",
+        "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+        "slug": "nemotron-3-nano-omni-30b-a3b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-22"
+      },
+      "metric": "priceIn",
+      "from": 0.09,
+      "to": 0.2
+    },
+    {
+      "date": "2026-09-22",
+      "type": "price",
+      "model": {
+        "id": "8c748e53-61ae-48b8-af8d-eb8298b1e9db",
+        "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+        "slug": "nemotron-3-nano-omni-30b-a3b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-22"
+      },
+      "metric": "priceOut",
+      "from": 0.36,
+      "to": 1.09
+    },
+    {
+      "date": "2026-09-22",
+      "type": "price",
+      "model": {
+        "id": "63872e9c-3377-4a6b-b477-7bba244c38e9",
+        "name": "Nemotron 3 Super 120B A12B (Reasoning)",
+        "slug": "nvidia-nemotron-3-super-120b-a12b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-22"
+      },
+      "metric": "priceIn",
+      "from": 0.19,
+      "to": 0.3
+    },
+    {
+      "date": "2026-09-22",
+      "type": "price",
+      "model": {
+        "id": "63872e9c-3377-4a6b-b477-7bba244c38e9",
+        "name": "Nemotron 3 Super 120B A12B (Reasoning)",
+        "slug": "nvidia-nemotron-3-super-120b-a12b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-22"
+      },
+      "metric": "priceOut",
+      "from": 0.65,
+      "to": 0.9
+    },
+    {
+      "date": "2026-09-22",
+      "type": "score",
+      "model": {
+        "id": "353c92f3-2148-4c2d-9231-aa7e1322a1fd",
+        "name": "Qwen3.8 27B (Non-reasoning)",
+        "slug": "qwen3-8-27b-non-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-27",
+        "last_seen": "2026-09-22"
+      },
+      "metric": "intelligence",
+      "from": 22.4,
+      "to": 20.2
+    },
     {
       "date": "2026-09-20",
       "type": "added",
