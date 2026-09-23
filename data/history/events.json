@@ -1,6 +1,544 @@
 {
-  "generated_at": "2026-09-22T23:30:21.440Z",
+  "generated_at": "2026-09-23T23:26:23.989Z",
   "events": [
+    {
+      "date": "2026-09-24",
+      "type": "added",
+      "model": {
+        "id": "765c9f31-95ec-4f14-900a-80614c3b0777",
+        "name": "Mercury 2.5",
+        "slug": "mercury-2-5",
+        "creator": "Inception",
+        "first_seen": "2026-09-24",
+        "last_seen": "2026-09-24"
+      },
+      "intelligence": 12.3
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "09f43999-b67b-4c1b-b050-44df41ed7e62",
+        "name": "Devstral 2",
+        "slug": "devstral-2",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "09f43999-b67b-4c1b-b050-44df41ed7e62",
+        "name": "Devstral 2",
+        "slug": "devstral-2",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "ce819310-af7c-49d3-9a02-6845111e1788",
+        "name": "Devstral Small 2",
+        "slug": "devstral-small-2",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "ce819310-af7c-49d3-9a02-6845111e1788",
+        "name": "Devstral Small 2",
+        "slug": "devstral-small-2",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "e2b664ca-7992-4de6-8839-4867f035c892",
+        "name": "LFM2.5-8B-A1B",
+        "slug": "lfm2-5-8b-a1b",
+        "creator": "Liquid AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "e2b664ca-7992-4de6-8839-4867f035c892",
+        "name": "LFM2.5-8B-A1B",
+        "slug": "lfm2-5-8b-a1b",
+        "creator": "Liquid AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "3c5289e5-1c62-434c-bc44-c51c39f640a1",
+        "name": "LFM2.5-VL-1.6B",
+        "slug": "lfm2-5-vl-1-6b",
+        "creator": "Liquid AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "3c5289e5-1c62-434c-bc44-c51c39f640a1",
+        "name": "LFM2.5-VL-1.6B",
+        "slug": "lfm2-5-vl-1-6b",
+        "creator": "Liquid AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "6d6fa1c9-b833-40b2-8a58-fa810e24a84e",
+        "name": "Ling-3.0-flash-Fin",
+        "slug": "ling-3-0-flash-fin",
+        "creator": "InclusionAI",
+        "first_seen": "2026-09-17",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0,
+      "to": 0.07
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "6d6fa1c9-b833-40b2-8a58-fa810e24a84e",
+        "name": "Ling-3.0-flash-Fin",
+        "slug": "ling-3-0-flash-fin",
+        "creator": "InclusionAI",
+        "first_seen": "2026-09-17",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0,
+      "to": 0.22
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "7393c56a-ec31-48e9-b804-c04f2d2cb641",
+        "name": "Llama 3.1 Nemotron Instruct 70B",
+        "slug": "llama-3-1-nemotron-instruct-70b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 1.2,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "7393c56a-ec31-48e9-b804-c04f2d2cb641",
+        "name": "Llama 3.1 Nemotron Instruct 70B",
+        "slug": "llama-3-1-nemotron-instruct-70b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 1.2,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "26c0b5df-efa7-470f-a65e-2d883329e493",
+        "name": "Llama Nemotron Super 49B v1.5 (Non-reasoning)",
+        "slug": "llama-nemotron-super-49b-v1-5",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0.4,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "26c0b5df-efa7-470f-a65e-2d883329e493",
+        "name": "Llama Nemotron Super 49B v1.5 (Non-reasoning)",
+        "slug": "llama-nemotron-super-49b-v1-5",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0.4,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "e1cfa926-9e2b-4a0d-8c31-48366a5041c5",
+        "name": "Llama Nemotron Super 49B v1.5 (Reasoning)",
+        "slug": "llama-nemotron-super-49b-v1-5-reasoning",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0.4,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "e1cfa926-9e2b-4a0d-8c31-48366a5041c5",
+        "name": "Llama Nemotron Super 49B v1.5 (Reasoning)",
+        "slug": "llama-nemotron-super-49b-v1-5-reasoning",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0.4,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "217b34ec-5920-4fc1-8886-6a70a324837d",
+        "name": "Mistral 7B Instruct",
+        "slug": "mistral-7b-instruct",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0.25,
+      "to": 0.15
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "217b34ec-5920-4fc1-8886-6a70a324837d",
+        "name": "Mistral 7B Instruct",
+        "slug": "mistral-7b-instruct",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0.25,
+      "to": 0.2
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "1f05af98-1ec6-4506-a0b8-57a8c9b63878",
+        "name": "Mistral Medium",
+        "slug": "mistral-medium",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 1.5,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "1f05af98-1ec6-4506-a0b8-57a8c9b63878",
+        "name": "Mistral Medium",
+        "slug": "mistral-medium",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 7.5,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "05a32e26-e609-4377-951b-8fa23d329926",
+        "name": "Mistral Medium 3.1",
+        "slug": "mistral-medium-3-1",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0.4,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "05a32e26-e609-4377-951b-8fa23d329926",
+        "name": "Mistral Medium 3.1",
+        "slug": "mistral-medium-3-1",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 2,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "35d602fc-b8b8-4698-9f4d-f2ce11ca50e4",
+        "name": "Mistral Small (Feb '24)",
+        "slug": "mistral-small-2402",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0.15,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "35d602fc-b8b8-4698-9f4d-f2ce11ca50e4",
+        "name": "Mistral Small (Feb '24)",
+        "slug": "mistral-small-2402",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0.6,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "7c045ca0-b331-488d-af31-df0fd331dfd1",
+        "name": "Mistral Small (Sep '24)",
+        "slug": "mistral-small",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0.2,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "7c045ca0-b331-488d-af31-df0fd331dfd1",
+        "name": "Mistral Small (Sep '24)",
+        "slug": "mistral-small",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0.6,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "e5dd499f-c330-45ec-9ff0-a99209c82af7",
+        "name": "Mistral Small 3",
+        "slug": "mistral-small-3",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0.1,
+      "to": 0.05
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "e5dd499f-c330-45ec-9ff0-a99209c82af7",
+        "name": "Mistral Small 3",
+        "slug": "mistral-small-3",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0.3,
+      "to": 0.08
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "24ac5b00-5f03-4c47-8e37-522d1195383e",
+        "name": "Mistral Small 3.1",
+        "slug": "mistral-small-3-1",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0.1,
+      "to": 0.11
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "24ac5b00-5f03-4c47-8e37-522d1195383e",
+        "name": "Mistral Small 3.1",
+        "slug": "mistral-small-3-1",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0.3,
+      "to": 0.17
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "43da3718-3d6e-40dd-901a-05664179ff7f",
+        "name": "Mistral Small 3.2",
+        "slug": "mistral-small-3-2",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0.1,
+      "to": 0.07
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "43da3718-3d6e-40dd-901a-05664179ff7f",
+        "name": "Mistral Small 3.2",
+        "slug": "mistral-small-3-2",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0.3,
+      "to": 0.2
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "6e6e02fd-9cbd-417f-9bfc-673df89c313d",
+        "name": "NVIDIA Nemotron Nano 12B v2 VL (Reasoning)",
+        "slug": "nvidia-nemotron-nano-12b-v2-vl-reasoning",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceIn",
+      "from": 0.2,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "6e6e02fd-9cbd-417f-9bfc-673df89c313d",
+        "name": "NVIDIA Nemotron Nano 12B v2 VL (Reasoning)",
+        "slug": "nvidia-nemotron-nano-12b-v2-vl-reasoning",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0.6,
+      "to": null
+    },
+    {
+      "date": "2026-09-24",
+      "type": "price",
+      "model": {
+        "id": "b6d2e43d-3082-43f5-9318-0f4dbcb54163",
+        "name": "Trinity Large Thinking",
+        "slug": "trinity-large-thinking",
+        "creator": "Arcee AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-24"
+      },
+      "metric": "priceOut",
+      "from": 0.9,
+      "to": 0.8
+    },
     {
       "date": "2026-09-23",
       "type": "added",
