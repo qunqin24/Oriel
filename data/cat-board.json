@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-23T23:26:30.746Z",
+  "fetched_at": "2026-09-24T23:46:52.260Z",
   "source_repo": "https://github.com/llm2014/llm_benchmark",
   "source_site": "https://llm2014.github.io/llm_benchmark/",
   "categories": {
@@ -765,6 +765,18 @@
       ],
       "rows": [
         [
+          "Opus 5.5 (max)",
+          "Pass",
+          "Pass",
+          "4/A+(341.72)",
+          "Perfect(211.83)",
+          "Pending",
+          "2/A+(1365.55)",
+          "5",
+          "Claude Code",
+          "1"
+        ],
+        [
           "GPT-6 Astra (max)",
           "5/A+(41.53)",
           "3/A+(64.74)",
@@ -1025,18 +1037,6 @@
           "Skip",
           "Skip",
           "1",
-          "Claude Code",
-          "1"
-        ],
-        [
-          "Opus 5.5 (max)",
-          "Pass",
-          "Pass",
-          "Pending",
-          "Pending",
-          "Pending",
-          "Pending",
-          "0",
           "Claude Code",
           "1"
         ]

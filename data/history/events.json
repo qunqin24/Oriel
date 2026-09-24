@@ -1,6 +1,128 @@
 {
-  "generated_at": "2026-09-23T23:26:23.989Z",
+  "generated_at": "2026-09-24T23:46:41.577Z",
   "events": [
+    {
+      "date": "2026-09-25",
+      "type": "added",
+      "model": {
+        "id": "73c96f99-0de3-4668-a4bd-b106a0fe18f2",
+        "name": "DeepSeek V4.1 Flash (Non-Reasoning)",
+        "slug": "deepseek-v4-1-flash-non-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25"
+      },
+      "intelligence": 24.7
+    },
+    {
+      "date": "2026-09-25",
+      "type": "added",
+      "model": {
+        "id": "cc1e488b-8ba4-464d-875d-690166b15ad3",
+        "name": "GLM-5.3 (low)",
+        "slug": "glm-5-3-low",
+        "creator": "Z AI",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25"
+      },
+      "intelligence": 34.3
+    },
+    {
+      "date": "2026-09-25",
+      "type": "removed",
+      "model": {
+        "id": "8decf027-5114-4721-9ee1-81c0552980a0",
+        "name": "Agnes 2.5 Pro Alpha (based on Qwen3.5 397B A17B)",
+        "slug": "agnes-2-5-pro-alpha",
+        "creator": "Sapiens AI",
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-09-24"
+      }
+    },
+    {
+      "date": "2026-09-25",
+      "type": "removed",
+      "model": {
+        "id": "f3a0e101-086f-44b3-a1b2-d23498f9716b",
+        "name": "Agnes 2.5 Pro Beta",
+        "slug": "agnes-2-5-pro-beta",
+        "creator": "Sapiens AI",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-09-24"
+      }
+    },
+    {
+      "date": "2026-09-25",
+      "type": "removed",
+      "model": {
+        "id": "6ace0ead-584f-4ce6-a9b7-6c3f9cc91c3c",
+        "name": "Agnes 3.0 Flash",
+        "slug": "agnes-3-0-flash",
+        "creator": "Sapiens AI",
+        "first_seen": "2026-09-12",
+        "last_seen": "2026-09-24"
+      }
+    },
+    {
+      "date": "2026-09-25",
+      "type": "price",
+      "model": {
+        "id": "6e1b44ff-c227-496b-aef4-19b70cd18c76",
+        "name": "Gemma 4 26B A4B (Reasoning)",
+        "slug": "gemma-4-26b-a4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-25"
+      },
+      "metric": "priceIn",
+      "from": 0.12,
+      "to": 0.1
+    },
+    {
+      "date": "2026-09-25",
+      "type": "price",
+      "model": {
+        "id": "583f98fb-c4b8-4df3-8d40-60ac0ed69882",
+        "name": "Muse Glimmer (high)",
+        "slug": "muse-glimmer",
+        "creator": "Meta",
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-09-25"
+      },
+      "metric": "priceIn",
+      "from": 0.35,
+      "to": 0.32
+    },
+    {
+      "date": "2026-09-25",
+      "type": "price",
+      "model": {
+        "id": "583f98fb-c4b8-4df3-8d40-60ac0ed69882",
+        "name": "Muse Glimmer (high)",
+        "slug": "muse-glimmer",
+        "creator": "Meta",
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-09-25"
+      },
+      "metric": "priceOut",
+      "from": 1.5,
+      "to": 1.35
+    },
+    {
+      "date": "2026-09-25",
+      "type": "score",
+      "model": {
+        "id": "08242385-ee91-4de6-be7f-271a6d9780ce",
+        "name": "Apodex 1.1",
+        "slug": "apodex-1-1",
+        "creator": "Apodex",
+        "first_seen": "2026-09-01",
+        "last_seen": "2026-09-25"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 28.4
+    },
     {
       "date": "2026-09-24",
       "type": "added",
