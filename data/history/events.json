@@ -1,6 +1,21 @@
 {
-  "generated_at": "2026-09-24T23:46:41.577Z",
+  "generated_at": "2026-09-25T23:51:36.268Z",
   "events": [
+    {
+      "date": "2026-09-26",
+      "type": "score",
+      "model": {
+        "id": "08242385-ee91-4de6-be7f-271a6d9780ce",
+        "name": "Apodex 1.1",
+        "slug": "apodex-1-1",
+        "creator": "Apodex",
+        "first_seen": "2026-09-01",
+        "last_seen": "2026-09-26"
+      },
+      "metric": "intelligence",
+      "from": 30.4,
+      "to": 26.4
+    },
     {
       "date": "2026-09-25",
       "type": "added",
