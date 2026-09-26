@@ -1,56 +1,36 @@
 {
-  "fetched_at": "2026-09-25T23:51:33.181Z",
+  "fetched_at": "2026-09-26T23:23:34.892Z",
   "tier": "free",
   "data": [
     {
-      "id": "9f962b4f-4f2c-402e-a1b9-48c274cf6d8d",
-      "name": "Mureka V9",
-      "model_creator": {
-        "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
-        "name": "Mureka"
-      },
-      "elo": 1177,
-      "ci_95": 17
-    },
-    {
-      "id": "2f4c8108-bcaa-49fd-a1fb-306b928f787d",
-      "name": "Suno V5.5",
+      "id": "2dd04f45-0137-49c1-b72a-93dd883f0f9c",
+      "name": "Suno v6",
       "model_creator": {
         "id": "30bf1911-2cd9-4bce-a179-009b174196fc",
         "name": "Suno"
       },
-      "elo": 1171,
+      "elo": 1143,
+      "ci_95": 16
+    },
+    {
+      "id": "ae3d2d82-b1bd-4a0d-aea0-bd6fa35edf9c",
+      "name": "Suno v6-mini",
+      "model_creator": {
+        "id": "30bf1911-2cd9-4bce-a179-009b174196fc",
+        "name": "Suno"
+      },
+      "elo": 1112,
       "ci_95": 15
     },
     {
-      "id": "433d2465-b7b9-452f-bb3a-c7729a0cd230",
-      "name": "Mureka V8",
+      "id": "d4c9256e-4c47-46a8-ae2f-7f4b9f1ec8c5",
+      "name": "Mureka V9.5",
       "model_creator": {
         "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
         "name": "Mureka"
       },
-      "elo": 1143,
-      "ci_95": 13
-    },
-    {
-      "id": "57ebe97f-f111-44bd-b222-cef1ae030138",
-      "name": "Suno V5",
-      "model_creator": {
-        "id": "30bf1911-2cd9-4bce-a179-009b174196fc",
-        "name": "Suno"
-      },
-      "elo": 1137,
-      "ci_95": 14
-    },
-    {
-      "id": "79e226d1-b65d-43fe-84f5-583504a348a6",
-      "name": "StepAudio 3 Music",
-      "model_creator": {
-        "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
-        "name": "StepFun"
-      },
-      "elo": 1113,
-      "ci_95": 14
+      "elo": 1083,
+      "ci_95": 15
     },
     {
       "id": "82bc3b6a-ff83-416d-b32f-7bd6824ff376",
@@ -59,8 +39,18 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1102,
-      "ci_95": 13
+      "elo": 1082,
+      "ci_95": 15
+    },
+    {
+      "id": "9f962b4f-4f2c-402e-a1b9-48c274cf6d8d",
+      "name": "Mureka V9",
+      "model_creator": {
+        "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
+        "name": "Mureka"
+      },
+      "elo": 1081,
+      "ci_95": 15
     },
     {
       "id": "0fc68799-de19-4991-a482-315ab880803f",
@@ -69,68 +59,8 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1085,
-      "ci_95": 14
-    },
-    {
-      "id": "1d06bf78-0a16-4fdf-8029-663a694e3470",
-      "name": "Suno V4.5",
-      "model_creator": {
-        "id": "30bf1911-2cd9-4bce-a179-009b174196fc",
-        "name": "Suno"
-      },
-      "elo": 1065,
-      "ci_95": 20
-    },
-    {
-      "id": "2fbed20c-1a4e-4049-8b23-ec6b21208790",
-      "name": "MiniMax Music 2.6",
-      "model_creator": {
-        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
-        "name": "MiniMax"
-      },
-      "elo": 1063,
-      "ci_95": 13
-    },
-    {
-      "id": "cf05d8dd-1699-4c8e-b240-b04a24a7f7a5",
-      "name": "Eleven Music v2",
-      "model_creator": {
-        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
-        "name": "ElevenLabs"
-      },
-      "elo": 1050,
-      "ci_95": 14
-    },
-    {
-      "id": "50494c8c-2099-41a3-a988-e0961b77f0ec",
-      "name": "MiniMax Music 2.5+",
-      "model_creator": {
-        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
-        "name": "MiniMax"
-      },
-      "elo": 1035,
-      "ci_95": 14
-    },
-    {
-      "id": "be7166af-e1bf-4aa0-987e-935bf554d9c2",
-      "name": "FUZZ-2.0 Raw",
-      "model_creator": {
-        "id": "4c7aaf69-80e6-4b43-92b4-58ea2a1fe9e4",
-        "name": "Producer.ai"
-      },
-      "elo": 1034,
-      "ci_95": 22
-    },
-    {
-      "id": "63e9674f-a664-4c5e-a5a0-7c4d56e668d8",
-      "name": "FUZZ-1.1 Pro",
-      "model_creator": {
-        "id": "4c7aaf69-80e6-4b43-92b4-58ea2a1fe9e4",
-        "name": "Producer.ai"
-      },
-      "elo": 1014,
-      "ci_95": 22
+      "elo": 1081,
+      "ci_95": 15
     },
     {
       "id": "b5b7f9d3-85d4-47dc-9213-fe09c1ea5da1",
@@ -139,8 +69,108 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1002,
-      "ci_95": 22
+      "elo": 1024,
+      "ci_95": 15
+    },
+    {
+      "id": "98dc646f-b053-436d-82e6-d715f950cf36",
+      "name": "Stable Audio 3 Large",
+      "model_creator": {
+        "id": "fae49f90-2280-46b0-b364-40d25eb84564",
+        "name": "Stability.ai"
+      },
+      "elo": 1019,
+      "ci_95": 15
+    },
+    {
+      "id": "cf05d8dd-1699-4c8e-b240-b04a24a7f7a5",
+      "name": "Eleven Music v2",
+      "model_creator": {
+        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
+        "name": "ElevenLabs"
+      },
+      "elo": 1012,
+      "ci_95": 15
+    },
+    {
+      "id": "50494c8c-2099-41a3-a988-e0961b77f0ec",
+      "name": "MiniMax Music 2.5+",
+      "model_creator": {
+        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+        "name": "MiniMax"
+      },
+      "elo": 1010,
+      "ci_95": 15
+    },
+    {
+      "id": "0c52ad63-9a04-4c2a-ba24-c7e6906c0d83",
+      "name": "Eleven Music v2.5",
+      "model_creator": {
+        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
+        "name": "ElevenLabs"
+      },
+      "elo": 1006,
+      "ci_95": 15
+    },
+    {
+      "id": "2fbed20c-1a4e-4049-8b23-ec6b21208790",
+      "name": "MiniMax Music 2.6",
+      "model_creator": {
+        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+        "name": "MiniMax"
+      },
+      "elo": 1005,
+      "ci_95": 15
+    },
+    {
+      "id": "071ca6bd-4931-49a0-9d72-a9f02f675acd",
+      "name": "Stable Audio 3 Medium",
+      "model_creator": {
+        "id": "fae49f90-2280-46b0-b364-40d25eb84564",
+        "name": "Stability.ai"
+      },
+      "elo": 1000,
+      "ci_95": 15
+    },
+    {
+      "id": "a2dc2b4c-dd8a-463c-9cd7-e398d7d8f818",
+      "name": "MiniMax Music 3.0",
+      "model_creator": {
+        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+        "name": "MiniMax"
+      },
+      "elo": 1000,
+      "ci_95": 0
+    },
+    {
+      "id": "76a412dd-5a53-48a9-afd9-a00854e27bf0",
+      "name": "Melodia v3",
+      "model_creator": {
+        "id": "e988202c-0f2c-403d-8a90-a7df00a5ce81",
+        "name": "Sonauto"
+      },
+      "elo": 988,
+      "ci_95": 15
+    },
+    {
+      "id": "a8e06685-aff4-43b3-82ea-a8f0e7346bf0",
+      "name": "Stable Audio 2.5",
+      "model_creator": {
+        "id": "fae49f90-2280-46b0-b364-40d25eb84564",
+        "name": "Stability.ai"
+      },
+      "elo": 987,
+      "ci_95": 15
+    },
+    {
+      "id": "6f30f5fd-e9f4-477a-8063-c4a4adf39e61",
+      "name": "Stable Audio 3 Small",
+      "model_creator": {
+        "id": "fae49f90-2280-46b0-b364-40d25eb84564",
+        "name": "Stability.ai"
+      },
+      "elo": 953,
+      "ci_95": 15
     },
     {
       "id": "0c50f506-2c22-41b0-887c-5dbbcf20cb25",
@@ -149,48 +179,8 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1000,
-      "ci_95": 0
-    },
-    {
-      "id": "dc4622f5-9de6-449e-903f-781a7222311b",
-      "name": "FUZZ-2.0",
-      "model_creator": {
-        "id": "4c7aaf69-80e6-4b43-92b4-58ea2a1fe9e4",
-        "name": "Producer.ai"
-      },
-      "elo": 998,
-      "ci_95": 23
-    },
-    {
-      "id": "d1ade256-679e-4edc-a745-372086cdd294",
-      "name": "Stable Audio 2.0",
-      "model_creator": {
-        "id": "fae49f90-2280-46b0-b364-40d25eb84564",
-        "name": "Stability.ai"
-      },
-      "elo": 958,
-      "ci_95": 27
-    },
-    {
-      "id": "e735e896-8754-46b7-890b-06a0f5b69302",
-      "name": "Sonauto V2.1",
-      "model_creator": {
-        "id": "e988202c-0f2c-403d-8a90-a7df00a5ce81",
-        "name": "Sonauto"
-      },
       "elo": 937,
-      "ci_95": 27
-    },
-    {
-      "id": "bcfaf02a-d56e-45bc-b36b-b3fd072215a3",
-      "name": "Udio v1.5 Allegro",
-      "model_creator": {
-        "id": "e2dba554-1abb-4cb9-b2fd-588ca6f5e29c",
-        "name": "Udio"
-      },
-      "elo": 920,
-      "ci_95": 28
+      "ci_95": 15
     },
     {
       "id": "ee2e7e87-4130-4c63-ab1a-97d3b17e7e3c",
@@ -199,8 +189,8 @@
         "id": "e1694725-0192-4e54-b1b8-c97e816c6cbe",
         "name": "Meta"
       },
-      "elo": 846,
-      "ci_95": 34
+      "elo": 882,
+      "ci_95": 16
     }
   ]
 }
