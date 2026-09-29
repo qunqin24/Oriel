@@ -1,6 +1,191 @@
 {
-  "generated_at": "2026-09-27T23:40:52.739Z",
+  "generated_at": "2026-09-29T00:50:11.881Z",
   "events": [
+    {
+      "date": "2026-09-29",
+      "type": "added",
+      "model": {
+        "id": "268525e2-f873-4178-bc07-e6a0ee1f002d",
+        "name": "Claude Sonnet 5.5 (Adaptive Reasoning, High Effort, Default Fallback)",
+        "slug": "claude-sonnet-5-5-high",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-29",
+        "last_seen": "2026-09-29"
+      },
+      "intelligence": 46.7
+    },
+    {
+      "date": "2026-09-29",
+      "type": "added",
+      "model": {
+        "id": "bbc2ffea-cf6b-43be-8c41-1769347e234d",
+        "name": "Claude Sonnet 5.5 (Adaptive Reasoning, Low Effort, Default Fallback)",
+        "slug": "claude-sonnet-5-5-low",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-29",
+        "last_seen": "2026-09-29"
+      },
+      "intelligence": 35.8
+    },
+    {
+      "date": "2026-09-29",
+      "type": "added",
+      "model": {
+        "id": "b171d979-5ec1-45de-b8b9-db1ee65e77ec",
+        "name": "Claude Sonnet 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
+        "slug": "claude-sonnet-5-5",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-29",
+        "last_seen": "2026-09-29"
+      },
+      "intelligence": 56
+    },
+    {
+      "date": "2026-09-29",
+      "type": "added",
+      "model": {
+        "id": "042e8a37-fcd0-40f4-8f41-99215fb68eda",
+        "name": "Claude Sonnet 5.5 (Adaptive Reasoning, Medium Effort, Default Fallback)",
+        "slug": "claude-sonnet-5-5-medium",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-29",
+        "last_seen": "2026-09-29"
+      },
+      "intelligence": 40.7
+    },
+    {
+      "date": "2026-09-29",
+      "type": "added",
+      "model": {
+        "id": "975aeaef-50bd-4a65-9c73-f1015adcd4d4",
+        "name": "Claude Sonnet 5.5 (Adaptive Reasoning, Xhigh Effort, Default Fallback)",
+        "slug": "claude-sonnet-5-5-xhigh",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-29",
+        "last_seen": "2026-09-29"
+      },
+      "intelligence": 51.9
+    },
+    {
+      "date": "2026-09-29",
+      "type": "price",
+      "model": {
+        "id": "ad173c8d-f14f-4230-90e9-60979b7720e7",
+        "name": "DeepSeek V4 Flash 0420 (Non-reasoning)",
+        "slug": "deepseek-v4-flash-0420-non-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-29"
+      },
+      "metric": "priceOut",
+      "from": 0.2,
+      "to": 0.19
+    },
+    {
+      "date": "2026-09-29",
+      "type": "price",
+      "model": {
+        "id": "89a2c945-1fab-4ee4-9f45-83a9f46cb221",
+        "name": "DeepSeek V4 Flash 0420 (Reasoning, High Effort)",
+        "slug": "deepseek-v4-flash-0420-high",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-29"
+      },
+      "metric": "priceIn",
+      "from": 0.13,
+      "to": 0.11
+    },
+    {
+      "date": "2026-09-29",
+      "type": "price",
+      "model": {
+        "id": "89a2c945-1fab-4ee4-9f45-83a9f46cb221",
+        "name": "DeepSeek V4 Flash 0420 (Reasoning, High Effort)",
+        "slug": "deepseek-v4-flash-0420-high",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-29"
+      },
+      "metric": "priceOut",
+      "from": 0.28,
+      "to": 0.24
+    },
+    {
+      "date": "2026-09-29",
+      "type": "price",
+      "model": {
+        "id": "82ed9bd2-c97b-4c35-9312-94bb72001e36",
+        "name": "Granite 4.1 8B",
+        "slug": "granite-4-1-8b",
+        "creator": "IBM",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-29"
+      },
+      "metric": "priceIn",
+      "from": 0.05,
+      "to": null
+    },
+    {
+      "date": "2026-09-29",
+      "type": "price",
+      "model": {
+        "id": "82ed9bd2-c97b-4c35-9312-94bb72001e36",
+        "name": "Granite 4.1 8B",
+        "slug": "granite-4-1-8b",
+        "creator": "IBM",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-29"
+      },
+      "metric": "priceOut",
+      "from": 0.1,
+      "to": null
+    },
+    {
+      "date": "2026-09-29",
+      "type": "price",
+      "model": {
+        "id": "b23e6c69-96e5-44c9-8f58-4b42e0c399d5",
+        "name": "Hy3",
+        "slug": "hy3",
+        "creator": "Tencent",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-29"
+      },
+      "metric": "priceOut",
+      "from": 0.58,
+      "to": 0.55
+    },
+    {
+      "date": "2026-09-29",
+      "type": "score",
+      "model": {
+        "id": "2d28a13a-096e-475a-beb8-26bbd1c7d51c",
+        "name": "Qwen3.5 9B (Reasoning)",
+        "slug": "qwen3-5-9b",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-29"
+      },
+      "metric": "intelligence",
+      "from": 13.7,
+      "to": 11.2
+    },
+    {
+      "date": "2026-09-29",
+      "type": "score",
+      "model": {
+        "id": "2d28a13a-096e-475a-beb8-26bbd1c7d51c",
+        "name": "Qwen3.5 9B (Reasoning)",
+        "slug": "qwen3-5-9b",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-29"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 1.2
+    },
     {
       "date": "2026-09-28",
       "type": "added",
