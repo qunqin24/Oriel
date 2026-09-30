@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-29T00:50:10.886Z",
+  "fetched_at": "2026-09-30T00:04:51.789Z",
   "tier": "free",
   "data": [
     {
@@ -10,7 +10,7 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1315,
+      "elo": 1316,
       "ci_95": 18
     },
     {
@@ -32,7 +32,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1267,
+      "elo": 1268,
       "ci_95": 16
     },
     {
@@ -54,19 +54,8 @@
         "id": "3aab6d2e-04b0-43ee-996f-d8ef76ac3232",
         "name": "Inworld"
       },
-      "elo": 1244,
+      "elo": 1247,
       "ci_95": 17
-    },
-    {
-      "id": "0bacd380-cb3b-4fc9-956d-dd50711ba8bf",
-      "name": "Gemini 3.8 Flash-Lite TTS",
-      "slug": "gemini-3-8-flash-lite-tts",
-      "model_creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google"
-      },
-      "elo": 1241,
-      "ci_95": 16
     },
     {
       "id": "5177af39-8605-4e2f-b13a-b97f94cb8022",
@@ -76,8 +65,19 @@
         "id": "237d1944-ea14-43ed-82e6-3ab69698c9b4",
         "name": "SpeechifyAI"
       },
-      "elo": 1239,
+      "elo": 1241,
       "ci_95": 14
+    },
+    {
+      "id": "0bacd380-cb3b-4fc9-956d-dd50711ba8bf",
+      "name": "Gemini 3.8 Flash-Lite TTS",
+      "slug": "gemini-3-8-flash-lite-tts",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "elo": 1240,
+      "ci_95": 15
     },
     {
       "id": "bbc80a38-96a7-4fc2-ac14-64e6f2d7ea85",
@@ -98,7 +98,7 @@
         "id": "3aab6d2e-04b0-43ee-996f-d8ef76ac3232",
         "name": "Inworld"
       },
-      "elo": 1213,
+      "elo": 1210,
       "ci_95": 15
     },
     {
@@ -113,17 +113,6 @@
       "ci_95": 16
     },
     {
-      "id": "abed0fa5-3a5e-4346-8559-5c9090924546",
-      "name": "Gemini 3.1 Flash TTS",
-      "slug": "gemini-3-1-tts",
-      "model_creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google"
-      },
-      "elo": 1203,
-      "ci_95": 12
-    },
-    {
       "id": "b8ae91a5-c9c0-4972-9b31-293bce09c984",
       "name": "StepAudio 2.5 TTS (Aug 2026)",
       "slug": "st260826",
@@ -131,8 +120,19 @@
         "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
         "name": "StepFun"
       },
-      "elo": 1203,
+      "elo": 1206,
       "ci_95": 16
+    },
+    {
+      "id": "abed0fa5-3a5e-4346-8559-5c9090924546",
+      "name": "Gemini 3.1 Flash TTS",
+      "slug": "gemini-3-1-tts",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "elo": 1204,
+      "ci_95": 12
     },
     {
       "id": "2921a8a0-35f6-483d-b183-0c8a1c8bab30",
@@ -142,7 +142,7 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1196,
+      "elo": 1199,
       "ci_95": 15
     },
     {
@@ -153,7 +153,7 @@
         "id": "1fa5b287-d75e-4268-a1c1-c04c0a9e512a",
         "name": "Cartesia"
       },
-      "elo": 1185,
+      "elo": 1187,
       "ci_95": 12
     },
     {
@@ -164,7 +164,7 @@
         "id": "2ec53bc5-5f0a-4614-b05b-ddefb9c5d4a5",
         "name": "Soniox"
       },
-      "elo": 1176,
+      "elo": 1175,
       "ci_95": 12
     },
     {
@@ -186,7 +186,7 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1169,
+      "elo": 1170,
       "ci_95": 11
     },
     {
@@ -219,7 +219,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1151,
+      "elo": 1150,
       "ci_95": 11
     },
     {
@@ -230,7 +230,7 @@
         "id": "a7dece53-2775-474b-8a96-8be0a1e0ea38",
         "name": "Gradium"
       },
-      "elo": 1148,
+      "elo": 1149,
       "ci_95": 14
     },
     {
@@ -241,7 +241,7 @@
         "id": "b28a9155-95e8-460a-82fe-8271e5f2bc77",
         "name": "Fish Audio"
       },
-      "elo": 1141,
+      "elo": 1139,
       "ci_95": 13
     },
     {
@@ -274,7 +274,7 @@
         "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
         "name": "SpaceXAI"
       },
-      "elo": 1131,
+      "elo": 1133,
       "ci_95": 15
     },
     {
@@ -285,7 +285,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1129,
+      "elo": 1128,
       "ci_95": 11
     },
     {
@@ -296,7 +296,7 @@
         "id": "ef5ce458-9986-4652-915a-e31fac5506b0",
         "name": "Microsoft"
       },
-      "elo": 1127,
+      "elo": 1128,
       "ci_95": 12
     },
     {
@@ -307,7 +307,7 @@
         "id": "237d1944-ea14-43ed-82e6-3ab69698c9b4",
         "name": "SpeechifyAI"
       },
-      "elo": 1121,
+      "elo": 1122,
       "ci_95": 12
     },
     {
@@ -351,7 +351,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1113,
+      "elo": 1112,
       "ci_95": 11
     },
     {
@@ -362,7 +362,7 @@
         "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
         "name": "OpenAI"
       },
-      "elo": 1103,
+      "elo": 1102,
       "ci_95": 12
     },
     {
@@ -373,7 +373,7 @@
         "id": "cca8a754-6c73-4b9f-aaad-aa10f0adb8e4",
         "name": "Resemble AI"
       },
-      "elo": 1101,
+      "elo": 1102,
       "ci_95": 13
     },
     {
@@ -406,7 +406,7 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1094,
+      "elo": 1093,
       "ci_95": 10
     },
     {
@@ -417,7 +417,7 @@
         "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
         "name": "StepFun"
       },
-      "elo": 1094,
+      "elo": 1093,
       "ci_95": 13
     },
     {
@@ -443,17 +443,6 @@
       "ci_95": 12
     },
     {
-      "id": "46730007-0d7b-4395-8077-2b5104ea79b0",
-      "name": "OpenAudio S1",
-      "slug": "openaudio-s1",
-      "model_creator": {
-        "id": "b28a9155-95e8-460a-82fe-8271e5f2bc77",
-        "name": "Fish Audio"
-      },
-      "elo": 1081,
-      "ci_95": 11
-    },
-    {
       "id": "a3824338-576c-4deb-8446-264eb9895db2",
       "name": "Gemini 2.5 Flash Lite TTS",
       "slug": "gemini-2-5-flash-lite",
@@ -463,6 +452,17 @@
       },
       "elo": 1081,
       "ci_95": 12
+    },
+    {
+      "id": "46730007-0d7b-4395-8077-2b5104ea79b0",
+      "name": "OpenAudio S1",
+      "slug": "openaudio-s1",
+      "model_creator": {
+        "id": "b28a9155-95e8-460a-82fe-8271e5f2bc77",
+        "name": "Fish Audio"
+      },
+      "elo": 1080,
+      "ci_95": 11
     },
     {
       "id": "b424cd2e-abb9-4131-8f47-7731bdbff455",
@@ -516,7 +516,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1075,
+      "elo": 1074,
       "ci_95": 13
     },
     {
@@ -527,7 +527,7 @@
         "id": "2dc2b41d-fb75-4fec-8e91-c55cfd34814f",
         "name": "Maya Research"
       },
-      "elo": 1073,
+      "elo": 1074,
       "ci_95": 14
     },
     {
@@ -538,7 +538,7 @@
         "id": "7aef44e5-4337-4f96-afc5-ceb076e18afb",
         "name": "Kokoro"
       },
-      "elo": 1065,
+      "elo": 1064,
       "ci_95": 11
     },
     {
@@ -638,7 +638,7 @@
         "name": "async"
       },
       "elo": 1049,
-      "ci_95": 12
+      "ci_95": 11
     },
     {
       "id": "b4a9f921-ae13-4c12-b907-6e9c6bedaf58",
@@ -670,7 +670,7 @@
         "id": "2dc2b41d-fb75-4fec-8e91-c55cfd34814f",
         "name": "Maya Research"
       },
-      "elo": 1046,
+      "elo": 1045,
       "ci_95": 12
     },
     {
@@ -718,6 +718,17 @@
       "ci_95": 19
     },
     {
+      "id": "009f6201-1862-454e-87b5-e2a367bc027f",
+      "name": "Octave TTS",
+      "slug": "octave-tts",
+      "model_creator": {
+        "id": "a6194e19-3b44-47d8-97b8-7eb2564c5b91",
+        "name": "Hume AI"
+      },
+      "elo": 1032,
+      "ci_95": 11
+    },
+    {
       "id": "c8b0b07c-26a7-444c-a8ff-c412a3d433b7",
       "name": "MAI-Voice-1",
       "slug": "mai-voice-1",
@@ -738,17 +749,6 @@
       },
       "elo": 1032,
       "ci_95": 13
-    },
-    {
-      "id": "009f6201-1862-454e-87b5-e2a367bc027f",
-      "name": "Octave TTS",
-      "slug": "octave-tts",
-      "model_creator": {
-        "id": "a6194e19-3b44-47d8-97b8-7eb2564c5b91",
-        "name": "Hume AI"
-      },
-      "elo": 1031,
-      "ci_95": 12
     },
     {
       "id": "2e9ecf4e-7aca-41ac-9436-a5c0c5664fe0",
@@ -802,7 +802,7 @@
         "id": "5147c8b4-61d5-4070-9324-8adf8aa144c2",
         "name": "Xiaomi"
       },
-      "elo": 1022,
+      "elo": 1021,
       "ci_95": 14
     },
     {
@@ -813,7 +813,7 @@
         "id": "bf5e5871-bb86-4c30-8485-681169debc31",
         "name": "Krafton"
       },
-      "elo": 1002,
+      "elo": 1003,
       "ci_95": 14
     },
     {
@@ -934,8 +934,19 @@
         "id": "2f5ee776-6f01-4c17-8ce2-335e235f45f8",
         "name": "Rime"
       },
-      "elo": 910,
+      "elo": 909,
       "ci_95": 15
+    },
+    {
+      "id": "eb3b0d75-134b-4e6a-82c5-4db2398d5c07",
+      "name": "Polly Neural",
+      "slug": "polly-neural",
+      "model_creator": {
+        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
+        "name": "Amazon"
+      },
+      "elo": 893,
+      "ci_95": 14
     },
     {
       "id": "3b322e37-a016-4b2e-aacb-1aef8df00829",
@@ -958,17 +969,6 @@
       },
       "elo": 892,
       "ci_95": 12
-    },
-    {
-      "id": "eb3b0d75-134b-4e6a-82c5-4db2398d5c07",
-      "name": "Polly Neural",
-      "slug": "polly-neural",
-      "model_creator": {
-        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
-        "name": "Amazon"
-      },
-      "elo": 892,
-      "ci_95": 14
     },
     {
       "id": "7efc9790-17f6-44a5-8b4f-897deaeb0088",
@@ -1000,7 +1000,7 @@
         "id": "f3b30c3c-550d-4a90-870a-9a2f506c333e",
         "name": "MetaVoice"
       },
-      "elo": 847,
+      "elo": 846,
       "ci_95": 18
     },
     {

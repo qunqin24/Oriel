@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-29T00:50:10.886Z",
+  "fetched_at": "2026-09-30T00:04:51.789Z",
   "tier": "free",
   "data": [
     {
@@ -9,7 +9,7 @@
         "id": "30bf1911-2cd9-4bce-a179-009b174196fc",
         "name": "Suno"
       },
-      "elo": 1143,
+      "elo": 1139,
       "ci_95": 16
     },
     {
@@ -19,7 +19,7 @@
         "id": "30bf1911-2cd9-4bce-a179-009b174196fc",
         "name": "Suno"
       },
-      "elo": 1112,
+      "elo": 1108,
       "ci_95": 15
     },
     {
@@ -29,27 +29,7 @@
         "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
         "name": "Mureka"
       },
-      "elo": 1083,
-      "ci_95": 15
-    },
-    {
-      "id": "82bc3b6a-ff83-416d-b32f-7bd6824ff376",
-      "name": "Lyria 3 Pro",
-      "model_creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google"
-      },
-      "elo": 1082,
-      "ci_95": 15
-    },
-    {
-      "id": "9f962b4f-4f2c-402e-a1b9-48c274cf6d8d",
-      "name": "Mureka V9",
-      "model_creator": {
-        "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
-        "name": "Mureka"
-      },
-      "elo": 1081,
+      "elo": 1078,
       "ci_95": 15
     },
     {
@@ -59,7 +39,27 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1081,
+      "elo": 1078,
+      "ci_95": 15
+    },
+    {
+      "id": "82bc3b6a-ff83-416d-b32f-7bd6824ff376",
+      "name": "Lyria 3 Pro",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "elo": 1077,
+      "ci_95": 15
+    },
+    {
+      "id": "9f962b4f-4f2c-402e-a1b9-48c274cf6d8d",
+      "name": "Mureka V9",
+      "model_creator": {
+        "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
+        "name": "Mureka"
+      },
+      "elo": 1077,
       "ci_95": 15
     },
     {
@@ -69,7 +69,7 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1024,
+      "elo": 1020,
       "ci_95": 15
     },
     {
@@ -79,7 +79,7 @@
         "id": "fae49f90-2280-46b0-b364-40d25eb84564",
         "name": "Stability.ai"
       },
-      "elo": 1019,
+      "elo": 1016,
       "ci_95": 15
     },
     {
@@ -89,7 +89,7 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1012,
+      "elo": 1009,
       "ci_95": 15
     },
     {
@@ -99,7 +99,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1010,
+      "elo": 1006,
       "ci_95": 15
     },
     {
@@ -109,27 +109,7 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1006,
-      "ci_95": 15
-    },
-    {
-      "id": "2fbed20c-1a4e-4049-8b23-ec6b21208790",
-      "name": "MiniMax Music 2.6",
-      "model_creator": {
-        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
-        "name": "MiniMax"
-      },
-      "elo": 1005,
-      "ci_95": 15
-    },
-    {
-      "id": "071ca6bd-4931-49a0-9d72-a9f02f675acd",
-      "name": "Stable Audio 3 Medium",
-      "model_creator": {
-        "id": "fae49f90-2280-46b0-b364-40d25eb84564",
-        "name": "Stability.ai"
-      },
-      "elo": 1000,
+      "elo": 1001,
       "ci_95": 15
     },
     {
@@ -143,13 +123,33 @@
       "ci_95": 0
     },
     {
+      "id": "2fbed20c-1a4e-4049-8b23-ec6b21208790",
+      "name": "MiniMax Music 2.6",
+      "model_creator": {
+        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+        "name": "MiniMax"
+      },
+      "elo": 999,
+      "ci_95": 15
+    },
+    {
+      "id": "071ca6bd-4931-49a0-9d72-a9f02f675acd",
+      "name": "Stable Audio 3 Medium",
+      "model_creator": {
+        "id": "fae49f90-2280-46b0-b364-40d25eb84564",
+        "name": "Stability.ai"
+      },
+      "elo": 997,
+      "ci_95": 15
+    },
+    {
       "id": "76a412dd-5a53-48a9-afd9-a00854e27bf0",
       "name": "Melodia v3",
       "model_creator": {
         "id": "e988202c-0f2c-403d-8a90-a7df00a5ce81",
         "name": "Sonauto"
       },
-      "elo": 988,
+      "elo": 987,
       "ci_95": 15
     },
     {
@@ -159,7 +159,7 @@
         "id": "fae49f90-2280-46b0-b364-40d25eb84564",
         "name": "Stability.ai"
       },
-      "elo": 987,
+      "elo": 984,
       "ci_95": 15
     },
     {
@@ -169,7 +169,7 @@
         "id": "fae49f90-2280-46b0-b364-40d25eb84564",
         "name": "Stability.ai"
       },
-      "elo": 953,
+      "elo": 948,
       "ci_95": 15
     },
     {
@@ -179,7 +179,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 937,
+      "elo": 934,
       "ci_95": 15
     },
     {
@@ -189,7 +189,7 @@
         "id": "e1694725-0192-4e54-b1b8-c97e816c6cbe",
         "name": "Meta"
       },
-      "elo": 882,
+      "elo": 879,
       "ci_95": 16
     }
   ]

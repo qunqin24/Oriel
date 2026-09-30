@@ -1,6 +1,221 @@
 {
-  "generated_at": "2026-09-29T00:50:11.881Z",
+  "generated_at": "2026-09-30T00:04:52.930Z",
   "events": [
+    {
+      "date": "2026-09-30",
+      "type": "added",
+      "model": {
+        "id": "3b84fee3-b70a-41bc-819e-5fbdef9a0042",
+        "name": "GPT-6.1 Sol (high)",
+        "slug": "gpt-6-1-sol-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-30",
+        "last_seen": "2026-09-30"
+      },
+      "intelligence": 50.2
+    },
+    {
+      "date": "2026-09-30",
+      "type": "added",
+      "model": {
+        "id": "e76e0fe5-93ca-4272-9359-2eb1740467d1",
+        "name": "GPT-6.1 Sol (low)",
+        "slug": "gpt-6-1-sol-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-30",
+        "last_seen": "2026-09-30"
+      },
+      "intelligence": 42.1
+    },
+    {
+      "date": "2026-09-30",
+      "type": "added",
+      "model": {
+        "id": "b25ac058-1e33-4c31-bbc9-a20c3ad0717a",
+        "name": "GPT-6.1 Sol (max)",
+        "slug": "gpt-6-1-sol",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-30",
+        "last_seen": "2026-09-30"
+      },
+      "intelligence": 51.8
+    },
+    {
+      "date": "2026-09-30",
+      "type": "added",
+      "model": {
+        "id": "a2e51d62-ea4e-4f15-8be0-be9dc1fb489d",
+        "name": "GPT-6.1 Sol (medium)",
+        "slug": "gpt-6-1-sol-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-30",
+        "last_seen": "2026-09-30"
+      },
+      "intelligence": 47.8
+    },
+    {
+      "date": "2026-09-30",
+      "type": "added",
+      "model": {
+        "id": "092a3b0e-c5c8-45dc-bf1b-53673c8ff352",
+        "name": "GPT-6.1 Sol (xhigh)",
+        "slug": "gpt-6-1-sol-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-30",
+        "last_seen": "2026-09-30"
+      },
+      "intelligence": 51
+    },
+    {
+      "date": "2026-09-30",
+      "type": "price",
+      "model": {
+        "id": "75e1c197-f239-4361-a9d6-66dccfead236",
+        "name": "DeepSeek V3 0324",
+        "slug": "deepseek-v3-0324",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-30"
+      },
+      "metric": "priceIn",
+      "from": 0.84,
+      "to": 0.24
+    },
+    {
+      "date": "2026-09-30",
+      "type": "price",
+      "model": {
+        "id": "75e1c197-f239-4361-a9d6-66dccfead236",
+        "name": "DeepSeek V3 0324",
+        "slug": "deepseek-v3-0324",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-30"
+      },
+      "metric": "priceOut",
+      "from": 1.18,
+      "to": 0.9
+    },
+    {
+      "date": "2026-09-30",
+      "type": "price",
+      "model": {
+        "id": "fb65266f-5a7d-403c-85d5-ccdf0d1ca838",
+        "name": "DeepSeek V3.1 (Non-reasoning)",
+        "slug": "deepseek-v3-1",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-30"
+      },
+      "metric": "priceIn",
+      "from": 0.57,
+      "to": 0.56
+    },
+    {
+      "date": "2026-09-30",
+      "type": "price",
+      "model": {
+        "id": "198b717f-42c8-4ab7-a699-ae9373d669d3",
+        "name": "DeepSeek V3.1 (Reasoning)",
+        "slug": "deepseek-v3-1-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-30"
+      },
+      "metric": "priceIn",
+      "from": 0.59,
+      "to": 0.58
+    },
+    {
+      "date": "2026-09-30",
+      "type": "price",
+      "model": {
+        "id": "198b717f-42c8-4ab7-a699-ae9373d669d3",
+        "name": "DeepSeek V3.1 (Reasoning)",
+        "slug": "deepseek-v3-1-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-09-30"
+      },
+      "metric": "priceOut",
+      "from": 1.69,
+      "to": 1.68
+    },
+    {
+      "date": "2026-09-30",
+      "type": "score",
+      "model": {
+        "id": "bbc2ffea-cf6b-43be-8c41-1769347e234d",
+        "name": "Claude Sonnet 5.5 (Adaptive Reasoning, Low Effort, Default Fallback)",
+        "slug": "claude-sonnet-5-5-low",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-29",
+        "last_seen": "2026-09-30"
+      },
+      "metric": "intelligence",
+      "from": 35.8,
+      "to": null
+    },
+    {
+      "date": "2026-09-30",
+      "type": "score",
+      "model": {
+        "id": "e33dc369-ae81-40e0-8c4e-28b002d02197",
+        "name": "Ling 3.0 Flash",
+        "slug": "ling-3-0-flash",
+        "creator": "InclusionAI",
+        "first_seen": "2026-08-07",
+        "last_seen": "2026-09-30"
+      },
+      "metric": "intelligence",
+      "from": 24.9,
+      "to": 20.1
+    },
+    {
+      "date": "2026-09-30",
+      "type": "score",
+      "model": {
+        "id": "e33dc369-ae81-40e0-8c4e-28b002d02197",
+        "name": "Ling 3.0 Flash",
+        "slug": "ling-3-0-flash",
+        "creator": "InclusionAI",
+        "first_seen": "2026-08-07",
+        "last_seen": "2026-09-30"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 19.3
+    },
+    {
+      "date": "2026-09-30",
+      "type": "score",
+      "model": {
+        "id": "7eaf926c-5f39-4e58-ae50-c38b5fc630fc",
+        "name": "Ling 3.0 Tiny",
+        "slug": "ling-3-0-tiny",
+        "creator": "InclusionAI",
+        "first_seen": "2026-08-07",
+        "last_seen": "2026-09-30"
+      },
+      "metric": "intelligence",
+      "from": 15.3,
+      "to": 11.1
+    },
+    {
+      "date": "2026-09-30",
+      "type": "score",
+      "model": {
+        "id": "7eaf926c-5f39-4e58-ae50-c38b5fc630fc",
+        "name": "Ling 3.0 Tiny",
+        "slug": "ling-3-0-tiny",
+        "creator": "InclusionAI",
+        "first_seen": "2026-08-07",
+        "last_seen": "2026-09-30"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 4.4
+    },
     {
       "date": "2026-09-29",
       "type": "added",

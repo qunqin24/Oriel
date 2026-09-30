@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-29T00:50:10.886Z",
+  "fetched_at": "2026-09-30T00:04:51.789Z",
   "tier": "free",
   "data": [
     {
@@ -9,7 +9,7 @@
         "id": "30bf1911-2cd9-4bce-a179-009b174196fc",
         "name": "Suno"
       },
-      "elo": 1134,
+      "elo": 1140,
       "ci_95": 15
     },
     {
@@ -19,7 +19,7 @@
         "id": "30bf1911-2cd9-4bce-a179-009b174196fc",
         "name": "Suno"
       },
-      "elo": 1110,
+      "elo": 1114,
       "ci_95": 15
     },
     {
@@ -29,7 +29,7 @@
         "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
         "name": "Mureka"
       },
-      "elo": 1098,
+      "elo": 1099,
       "ci_95": 15
     },
     {
@@ -49,7 +49,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1045,
+      "elo": 1047,
       "ci_95": 15
     },
     {
@@ -69,7 +69,17 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1010,
+      "elo": 1008,
+      "ci_95": 15
+    },
+    {
+      "id": "2fbed20c-1a4e-4049-8b23-ec6b21208790",
+      "name": "MiniMax Music 2.6",
+      "model_creator": {
+        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+        "name": "MiniMax"
+      },
+      "elo": 1002,
       "ci_95": 15
     },
     {
@@ -83,11 +93,11 @@
       "ci_95": 0
     },
     {
-      "id": "2fbed20c-1a4e-4049-8b23-ec6b21208790",
-      "name": "MiniMax Music 2.6",
+      "id": "b5b7f9d3-85d4-47dc-9213-fe09c1ea5da1",
+      "name": "Eleven Music",
       "model_creator": {
-        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
-        "name": "MiniMax"
+        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
+        "name": "ElevenLabs"
       },
       "elo": 999,
       "ci_95": 15
@@ -99,17 +109,7 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 997,
-      "ci_95": 15
-    },
-    {
-      "id": "b5b7f9d3-85d4-47dc-9213-fe09c1ea5da1",
-      "name": "Eleven Music",
-      "model_creator": {
-        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
-        "name": "ElevenLabs"
-      },
-      "elo": 997,
+      "elo": 996,
       "ci_95": 15
     },
     {
@@ -119,7 +119,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 984,
+      "elo": 985,
       "ci_95": 15
     },
     {
@@ -129,7 +129,7 @@
         "id": "e988202c-0f2c-403d-8a90-a7df00a5ce81",
         "name": "Sonauto"
       },
-      "elo": 974,
+      "elo": 981,
       "ci_95": 15
     }
   ]

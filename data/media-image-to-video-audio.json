@@ -1,10 +1,10 @@
 {
-  "fetched_at": "2026-09-29T00:50:10.886Z",
+  "fetched_at": "2026-09-30T00:04:51.789Z",
   "tier": "free",
   "data": [
     {
       "id": "0aa31432-4bf3-4f1b-ad2d-b31abba7a98c",
-      "name": "Minimax H3 Max (post-trained by fal)",
+      "name": "Minimax H3 Max (Based on MiniMax H3)",
       "slug": "minimax-h3-turbo-768p",
       "model_creator": {
         "id": "d3f67dc4-ba4d-4103-ba79-ee321ca99b40",
@@ -48,8 +48,8 @@
     },
     {
       "id": "747aed35-d2f4-44ca-b74d-e02ba0039595",
-      "name": "HiDream-O1-Video",
-      "slug": "hidream-o1-video",
+      "name": "HiDream-O1-Video-1.0",
+      "slug": "hidream-o1-video-1-0",
       "model_creator": {
         "id": "040f2c41-5df4-4708-8c77-6a2030be2539",
         "name": "HiDream"
