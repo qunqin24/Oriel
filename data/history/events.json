@@ -1,6 +1,208 @@
 {
-  "generated_at": "2026-09-30T00:04:52.930Z",
+  "generated_at": "2026-10-01T00:23:13.701Z",
   "events": [
+    {
+      "date": "2026-10-01",
+      "type": "added",
+      "model": {
+        "id": "d4f5b250-be37-4801-85e6-32fda4179337",
+        "name": "DeepSeek V4 Pro 0813 (Non-reasoning)",
+        "slug": "deepseek-v4-pro-non-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-10-01",
+        "last_seen": "2026-10-01"
+      },
+      "intelligence": 20.4
+    },
+    {
+      "date": "2026-10-01",
+      "type": "added",
+      "model": {
+        "id": "d366dfa1-d940-4788-aa73-d298c45699b3",
+        "name": "Gemini 4 Argon (High)",
+        "slug": "gemini-4-argon",
+        "creator": "Google",
+        "first_seen": "2026-10-01",
+        "last_seen": "2026-10-01"
+      },
+      "intelligence": 52.6
+    },
+    {
+      "date": "2026-10-01",
+      "type": "added",
+      "model": {
+        "id": "46f11cdf-1725-4abb-b39b-bd6bd948149c",
+        "name": "JT-4.1 Flash 236B A21B",
+        "slug": "jt236b",
+        "creator": "China Mobile",
+        "first_seen": "2026-10-01",
+        "last_seen": "2026-10-01"
+      },
+      "intelligence": 33.9
+    },
+    {
+      "date": "2026-10-01",
+      "type": "added",
+      "model": {
+        "id": "62ea3198-9866-4d9f-8406-a79ee78c7164",
+        "name": "Solar Mini 4",
+        "slug": "solar-mini4",
+        "creator": "Upstage",
+        "first_seen": "2026-10-01",
+        "last_seen": "2026-10-01"
+      },
+      "intelligence": 24.1
+    },
+    {
+      "date": "2026-10-01",
+      "type": "price",
+      "model": {
+        "id": "29976311-665a-4b2f-ac72-557c33e0758e",
+        "name": "Nemotron 3.5 Lightning",
+        "slug": "nemotron-3-5-lightning",
+        "creator": "NVIDIA",
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-10-01"
+      },
+      "metric": "priceIn",
+      "from": 0.07,
+      "to": 0.06
+    },
+    {
+      "date": "2026-10-01",
+      "type": "price",
+      "model": {
+        "id": "29976311-665a-4b2f-ac72-557c33e0758e",
+        "name": "Nemotron 3.5 Lightning",
+        "slug": "nemotron-3-5-lightning",
+        "creator": "NVIDIA",
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-10-01"
+      },
+      "metric": "priceOut",
+      "from": 0.22,
+      "to": 0.2
+    },
+    {
+      "date": "2026-10-01",
+      "type": "score",
+      "model": {
+        "id": "89a2c945-1fab-4ee4-9f45-83a9f46cb221",
+        "name": "DeepSeek V4 Flash 0420 (High)",
+        "slug": "deepseek-v4-flash-0420-high",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-01"
+      },
+      "metric": "intelligence",
+      "from": 26,
+      "to": 24.4
+    },
+    {
+      "date": "2026-10-01",
+      "type": "score",
+      "model": {
+        "id": "89a2c945-1fab-4ee4-9f45-83a9f46cb221",
+        "name": "DeepSeek V4 Flash 0420 (High)",
+        "slug": "deepseek-v4-flash-0420-high",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-01"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 26.3
+    },
+    {
+      "date": "2026-10-01",
+      "type": "score",
+      "model": {
+        "id": "cd26a386-4873-46ff-b853-d239050025a2",
+        "name": "Gemma 4 31B (Reasoning)",
+        "slug": "gemma-4-31b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-01"
+      },
+      "metric": "intelligence",
+      "from": 19,
+      "to": 14.7
+    },
+    {
+      "date": "2026-10-01",
+      "type": "score",
+      "model": {
+        "id": "7261504e-503c-4a66-a9d3-a3272cdf9ad6",
+        "name": "Inkling Small",
+        "slug": "inkling-small",
+        "creator": "Thinking Machines",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-10-01"
+      },
+      "metric": "intelligence",
+      "from": 27.8,
+      "to": 25.7
+    },
+    {
+      "date": "2026-10-01",
+      "type": "score",
+      "model": {
+        "id": "7261504e-503c-4a66-a9d3-a3272cdf9ad6",
+        "name": "Inkling Small",
+        "slug": "inkling-small",
+        "creator": "Thinking Machines",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-10-01"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 23.5
+    },
+    {
+      "date": "2026-10-01",
+      "type": "score",
+      "model": {
+        "id": "512d17ef-13d2-4f65-bf9b-154b0dec7e8d",
+        "name": "Kimi K3 (Low)",
+        "slug": "kimi-k3-low",
+        "creator": "Kimi",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-10-01"
+      },
+      "metric": "intelligence",
+      "from": 34.5,
+      "to": 30.1
+    },
+    {
+      "date": "2026-10-01",
+      "type": "score",
+      "model": {
+        "id": "512d17ef-13d2-4f65-bf9b-154b0dec7e8d",
+        "name": "Kimi K3 (Low)",
+        "slug": "kimi-k3-low",
+        "creator": "Kimi",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-10-01"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 29.3
+    },
+    {
+      "date": "2026-10-01",
+      "type": "score",
+      "model": {
+        "id": "b01eefb1-c9f8-412d-8353-571031a52f23",
+        "name": "Motif 3",
+        "slug": "motif-3",
+        "creator": "Motif Technologies",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-10-01"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 28.4
+    },
     {
       "date": "2026-09-30",
       "type": "added",

@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-30T00:04:51.789Z",
+  "fetched_at": "2026-10-01T00:23:12.761Z",
   "tier": "free",
   "data": [
     {
@@ -9,8 +9,8 @@
         "id": "30bf1911-2cd9-4bce-a179-009b174196fc",
         "name": "Suno"
       },
-      "elo": 1139,
-      "ci_95": 16
+      "elo": 1140,
+      "ci_95": 15
     },
     {
       "id": "ae3d2d82-b1bd-4a0d-aea0-bd6fa35edf9c",
@@ -19,37 +19,7 @@
         "id": "30bf1911-2cd9-4bce-a179-009b174196fc",
         "name": "Suno"
       },
-      "elo": 1108,
-      "ci_95": 15
-    },
-    {
-      "id": "d4c9256e-4c47-46a8-ae2f-7f4b9f1ec8c5",
-      "name": "Mureka V9.5",
-      "model_creator": {
-        "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
-        "name": "Mureka"
-      },
-      "elo": 1078,
-      "ci_95": 15
-    },
-    {
-      "id": "0fc68799-de19-4991-a482-315ab880803f",
-      "name": "Lyria 3.5",
-      "model_creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google"
-      },
-      "elo": 1078,
-      "ci_95": 15
-    },
-    {
-      "id": "82bc3b6a-ff83-416d-b32f-7bd6824ff376",
-      "name": "Lyria 3 Pro",
-      "model_creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google"
-      },
-      "elo": 1077,
+      "elo": 1109,
       "ci_95": 15
     },
     {
@@ -59,8 +29,38 @@
         "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
         "name": "Mureka"
       },
-      "elo": 1077,
+      "elo": 1081,
+      "ci_95": 14
+    },
+    {
+      "id": "d4c9256e-4c47-46a8-ae2f-7f4b9f1ec8c5",
+      "name": "Mureka V9.5",
+      "model_creator": {
+        "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
+        "name": "Mureka"
+      },
+      "elo": 1080,
       "ci_95": 15
+    },
+    {
+      "id": "82bc3b6a-ff83-416d-b32f-7bd6824ff376",
+      "name": "Lyria 3 Pro",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "elo": 1078,
+      "ci_95": 14
+    },
+    {
+      "id": "0fc68799-de19-4991-a482-315ab880803f",
+      "name": "Lyria 3.5",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "elo": 1076,
+      "ci_95": 14
     },
     {
       "id": "b5b7f9d3-85d4-47dc-9213-fe09c1ea5da1",
@@ -69,8 +69,8 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1020,
-      "ci_95": 15
+      "elo": 1021,
+      "ci_95": 14
     },
     {
       "id": "98dc646f-b053-436d-82e6-d715f950cf36",
@@ -79,8 +79,8 @@
         "id": "fae49f90-2280-46b0-b364-40d25eb84564",
         "name": "Stability.ai"
       },
-      "elo": 1016,
-      "ci_95": 15
+      "elo": 1017,
+      "ci_95": 14
     },
     {
       "id": "cf05d8dd-1699-4c8e-b240-b04a24a7f7a5",
@@ -89,8 +89,8 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1009,
-      "ci_95": 15
+      "elo": 1010,
+      "ci_95": 14
     },
     {
       "id": "50494c8c-2099-41a3-a988-e0961b77f0ec",
@@ -99,8 +99,18 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1006,
-      "ci_95": 15
+      "elo": 1005,
+      "ci_95": 14
+    },
+    {
+      "id": "2fbed20c-1a4e-4049-8b23-ec6b21208790",
+      "name": "MiniMax Music 2.6",
+      "model_creator": {
+        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+        "name": "MiniMax"
+      },
+      "elo": 1002,
+      "ci_95": 14
     },
     {
       "id": "0c52ad63-9a04-4c2a-ba24-c7e6906c0d83",
@@ -109,8 +119,8 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1001,
-      "ci_95": 15
+      "elo": 1002,
+      "ci_95": 14
     },
     {
       "id": "a2dc2b4c-dd8a-463c-9cd7-e398d7d8f818",
@@ -123,24 +133,14 @@
       "ci_95": 0
     },
     {
-      "id": "2fbed20c-1a4e-4049-8b23-ec6b21208790",
-      "name": "MiniMax Music 2.6",
-      "model_creator": {
-        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
-        "name": "MiniMax"
-      },
-      "elo": 999,
-      "ci_95": 15
-    },
-    {
       "id": "071ca6bd-4931-49a0-9d72-a9f02f675acd",
       "name": "Stable Audio 3 Medium",
       "model_creator": {
         "id": "fae49f90-2280-46b0-b364-40d25eb84564",
         "name": "Stability.ai"
       },
-      "elo": 997,
-      "ci_95": 15
+      "elo": 998,
+      "ci_95": 14
     },
     {
       "id": "76a412dd-5a53-48a9-afd9-a00854e27bf0",
@@ -149,7 +149,7 @@
         "id": "e988202c-0f2c-403d-8a90-a7df00a5ce81",
         "name": "Sonauto"
       },
-      "elo": 987,
+      "elo": 988,
       "ci_95": 15
     },
     {
@@ -159,7 +159,7 @@
         "id": "fae49f90-2280-46b0-b364-40d25eb84564",
         "name": "Stability.ai"
       },
-      "elo": 984,
+      "elo": 986,
       "ci_95": 15
     },
     {
@@ -179,7 +179,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 934,
+      "elo": 932,
       "ci_95": 15
     },
     {
@@ -189,7 +189,7 @@
         "id": "e1694725-0192-4e54-b1b8-c97e816c6cbe",
         "name": "Meta"
       },
-      "elo": 879,
+      "elo": 881,
       "ci_95": 16
     }
   ]
