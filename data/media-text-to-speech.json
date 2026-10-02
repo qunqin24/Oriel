@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-01T00:23:12.761Z",
+  "fetched_at": "2026-10-02T00:33:22.257Z",
   "tier": "free",
   "data": [
     {
@@ -14,6 +14,17 @@
       "ci_95": 18
     },
     {
+      "id": "115c856c-4b94-4c4d-b9c9-5fb7817ca4a4",
+      "name": "Qwen-Audio-3.1-TTS-Plus",
+      "slug": "qwen-audio-3-1-tts-plus",
+      "model_creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba"
+      },
+      "elo": 1291,
+      "ci_95": 18
+    },
+    {
       "id": "d03dbdcb-d7b8-4bc9-aa3e-90a9e6cb43be",
       "name": "Sonic 3.6",
       "slug": "sonic-3-6",
@@ -21,7 +32,7 @@
         "id": "1fa5b287-d75e-4268-a1c1-c04c0a9e512a",
         "name": "Cartesia"
       },
-      "elo": 1275,
+      "elo": 1273,
       "ci_95": 16
     },
     {
@@ -32,7 +43,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1270,
+      "elo": 1272,
       "ci_95": 16
     },
     {
@@ -43,7 +54,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1257,
+      "elo": 1259,
       "ci_95": 16
     },
     {
@@ -54,7 +65,7 @@
         "id": "3aab6d2e-04b0-43ee-996f-d8ef76ac3232",
         "name": "Inworld"
       },
-      "elo": 1248,
+      "elo": 1247,
       "ci_95": 17
     },
     {
@@ -77,7 +88,7 @@
         "name": "SpeechifyAI"
       },
       "elo": 1239,
-      "ci_95": 14
+      "ci_95": 13
     },
     {
       "id": "bbc80a38-96a7-4fc2-ac14-64e6f2d7ea85",
@@ -87,7 +98,7 @@
         "id": "1b623c0b-db8b-401a-b26c-f0a48e0c17e1",
         "name": "VUI Labs"
       },
-      "elo": 1227,
+      "elo": 1226,
       "ci_95": 13
     },
     {
@@ -109,7 +120,18 @@
         "id": "8cdb637a-ba81-4e96-98b5-6f8d743c20ee",
         "name": "BreezeBlue"
       },
-      "elo": 1209,
+      "elo": 1206,
+      "ci_95": 16
+    },
+    {
+      "id": "b8ae91a5-c9c0-4972-9b31-293bce09c984",
+      "name": "StepAudio 2.5 TTS (Aug 2026)",
+      "slug": "st260826",
+      "model_creator": {
+        "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
+        "name": "StepFun"
+      },
+      "elo": 1206,
       "ci_95": 16
     },
     {
@@ -120,19 +142,8 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1206,
+      "elo": 1205,
       "ci_95": 12
-    },
-    {
-      "id": "b8ae91a5-c9c0-4972-9b31-293bce09c984",
-      "name": "StepAudio 2.5 TTS (Aug 2026)",
-      "slug": "st260826",
-      "model_creator": {
-        "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
-        "name": "StepFun"
-      },
-      "elo": 1202,
-      "ci_95": 16
     },
     {
       "id": "2921a8a0-35f6-483d-b183-0c8a1c8bab30",
@@ -142,7 +153,7 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1198,
+      "elo": 1200,
       "ci_95": 15
     },
     {
@@ -164,8 +175,19 @@
         "id": "2ec53bc5-5f0a-4614-b05b-ddefb9c5d4a5",
         "name": "Soniox"
       },
-      "elo": 1173,
+      "elo": 1175,
       "ci_95": 12
+    },
+    {
+      "id": "49285d46-f230-416c-aa92-6322c9f60629",
+      "name": "Eleven v3",
+      "slug": "eleven-v3",
+      "model_creator": {
+        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
+        "name": "ElevenLabs"
+      },
+      "elo": 1171,
+      "ci_95": 11
     },
     {
       "id": "1a91c803-1508-4c8e-9327-e05d09b0cfc8",
@@ -179,17 +201,6 @@
       "ci_95": 11
     },
     {
-      "id": "49285d46-f230-416c-aa92-6322c9f60629",
-      "name": "Eleven v3",
-      "slug": "eleven-v3",
-      "model_creator": {
-        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
-        "name": "ElevenLabs"
-      },
-      "elo": 1170,
-      "ci_95": 11
-    },
-    {
       "id": "55614001-84e3-4605-b2fc-5550364a74b0",
       "name": "Lightning V3.1 Pro (Jul 2026)",
       "slug": "lightning-v3-1-pro-july",
@@ -197,7 +208,18 @@
         "id": "000cfce6-a1fa-478d-a83c-16a4928d91cf",
         "name": "Smallest.ai"
       },
-      "elo": 1167,
+      "elo": 1170,
+      "ci_95": 14
+    },
+    {
+      "id": "58476ab8-ff13-4b24-9340-58d94ebea241",
+      "name": "Falcon 2",
+      "slug": "falcon-2",
+      "model_creator": {
+        "id": "b4f8bea1-3777-4cfb-a062-0487d3ea1de6",
+        "name": "Murf AI"
+      },
+      "elo": 1154,
       "ci_95": 14
     },
     {
@@ -208,19 +230,8 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1151,
+      "elo": 1152,
       "ci_95": 11
-    },
-    {
-      "id": "58476ab8-ff13-4b24-9340-58d94ebea241",
-      "name": "Falcon 2",
-      "slug": "falcon-2",
-      "model_creator": {
-        "id": "b4f8bea1-3777-4cfb-a062-0487d3ea1de6",
-        "name": "Murf AI"
-      },
-      "elo": 1151,
-      "ci_95": 14
     },
     {
       "id": "3d455593-5cc5-4b00-bd35-289fe2c785de",
@@ -241,7 +252,7 @@
         "id": "b28a9155-95e8-460a-82fe-8271e5f2bc77",
         "name": "Fish Audio"
       },
-      "elo": 1138,
+      "elo": 1137,
       "ci_95": 13
     },
     {
@@ -252,7 +263,7 @@
         "id": "fccade0c-ac6f-4c87-9c6e-59957a1e93b9",
         "name": "async"
       },
-      "elo": 1135,
+      "elo": 1133,
       "ci_95": 13
     },
     {
@@ -263,7 +274,7 @@
         "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
         "name": "SpaceXAI"
       },
-      "elo": 1134,
+      "elo": 1132,
       "ci_95": 15
     },
     {
@@ -274,7 +285,7 @@
         "id": "ce2e2e8b-7a22-4020-98ec-8ef71000dd42",
         "name": "StepFun"
       },
-      "elo": 1131,
+      "elo": 1130,
       "ci_95": 13
     },
     {
@@ -307,7 +318,7 @@
         "id": "237d1944-ea14-43ed-82e6-3ab69698c9b4",
         "name": "SpeechifyAI"
       },
-      "elo": 1124,
+      "elo": 1123,
       "ci_95": 12
     },
     {
@@ -318,7 +329,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1119,
+      "elo": 1121,
       "ci_95": 11
     },
     {
@@ -329,7 +340,7 @@
         "id": "fccade0c-ac6f-4c87-9c6e-59957a1e93b9",
         "name": "async"
       },
-      "elo": 1117,
+      "elo": 1118,
       "ci_95": 13
     },
     {
@@ -340,7 +351,7 @@
         "id": "b28a9155-95e8-460a-82fe-8271e5f2bc77",
         "name": "Fish Audio"
       },
-      "elo": 1116,
+      "elo": 1117,
       "ci_95": 12
     },
     {
@@ -355,17 +366,6 @@
       "ci_95": 11
     },
     {
-      "id": "06b8f3e3-e4fe-4cf7-9774-30816972bb59",
-      "name": "Chatterbox HD",
-      "slug": "chatterbox-hd",
-      "model_creator": {
-        "id": "cca8a754-6c73-4b9f-aaad-aa10f0adb8e4",
-        "name": "Resemble AI"
-      },
-      "elo": 1102,
-      "ci_95": 13
-    },
-    {
       "id": "4a2776b8-a0c6-42f2-8ebe-db364f1ddf13",
       "name": "TTS-1 HD",
       "slug": "tts-1-hd",
@@ -373,8 +373,19 @@
         "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
         "name": "OpenAI"
       },
-      "elo": 1101,
+      "elo": 1102,
       "ci_95": 12
+    },
+    {
+      "id": "06b8f3e3-e4fe-4cf7-9774-30816972bb59",
+      "name": "Chatterbox HD",
+      "slug": "chatterbox-hd",
+      "model_creator": {
+        "id": "cca8a754-6c73-4b9f-aaad-aa10f0adb8e4",
+        "name": "Resemble AI"
+      },
+      "elo": 1101,
+      "ci_95": 13
     },
     {
       "id": "6d2c7daa-7585-4b85-b1db-239c1c29b9a3",
@@ -439,7 +450,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1087,
+      "elo": 1089,
       "ci_95": 12
     },
     {
@@ -450,19 +461,8 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1081,
+      "elo": 1082,
       "ci_95": 12
-    },
-    {
-      "id": "46730007-0d7b-4395-8077-2b5104ea79b0",
-      "name": "OpenAudio S1",
-      "slug": "openaudio-s1",
-      "model_creator": {
-        "id": "b28a9155-95e8-460a-82fe-8271e5f2bc77",
-        "name": "Fish Audio"
-      },
-      "elo": 1079,
-      "ci_95": 11
     },
     {
       "id": "b424cd2e-abb9-4131-8f47-7731bdbff455",
@@ -476,6 +476,28 @@
       "ci_95": 13
     },
     {
+      "id": "46730007-0d7b-4395-8077-2b5104ea79b0",
+      "name": "OpenAudio S1",
+      "slug": "openaudio-s1",
+      "model_creator": {
+        "id": "b28a9155-95e8-460a-82fe-8271e5f2bc77",
+        "name": "Fish Audio"
+      },
+      "elo": 1078,
+      "ci_95": 11
+    },
+    {
+      "id": "02265a20-67bc-4892-89d0-f54545b6b4a1",
+      "name": "Studio",
+      "slug": "studio",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "elo": 1077,
+      "ci_95": 12
+    },
+    {
       "id": "cccb3742-da05-4447-910c-43a5d3eda5b7",
       "name": "Flash v2.5",
       "slug": "flash-v2-5",
@@ -487,15 +509,15 @@
       "ci_95": 11
     },
     {
-      "id": "02265a20-67bc-4892-89d0-f54545b6b4a1",
-      "name": "Studio",
-      "slug": "studio",
+      "id": "99365f44-415e-4ff2-94c9-59b8b2ec5847",
+      "name": "GPT-Realtime-2",
+      "slug": "gpt-realtime-2",
       "model_creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google"
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI"
       },
-      "elo": 1076,
-      "ci_95": 12
+      "elo": 1074,
+      "ci_95": 13
     },
     {
       "id": "2b5bb443-e32e-4cb4-a9f2-918c00210211",
@@ -505,18 +527,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1075,
-      "ci_95": 13
-    },
-    {
-      "id": "99365f44-415e-4ff2-94c9-59b8b2ec5847",
-      "name": "GPT-Realtime-2",
-      "slug": "gpt-realtime-2",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI"
-      },
-      "elo": 1075,
+      "elo": 1073,
       "ci_95": 13
     },
     {
@@ -527,7 +538,7 @@
         "id": "2dc2b41d-fb75-4fec-8e91-c55cfd34814f",
         "name": "Maya Research"
       },
-      "elo": 1073,
+      "elo": 1071,
       "ci_95": 14
     },
     {
@@ -538,7 +549,7 @@
         "id": "7aef44e5-4337-4f96-afc5-ceb076e18afb",
         "name": "Kokoro"
       },
-      "elo": 1064,
+      "elo": 1063,
       "ci_95": 11
     },
     {
@@ -549,7 +560,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1064,
+      "elo": 1063,
       "ci_95": 11
     },
     {
@@ -571,7 +582,7 @@
         "id": "0c303112-430d-4367-a484-51defaa2e166",
         "name": "NVIDIA"
       },
-      "elo": 1063,
+      "elo": 1062,
       "ci_95": 13
     },
     {
@@ -582,7 +593,7 @@
         "id": "2f5ee776-6f01-4c17-8ce2-335e235f45f8",
         "name": "Rime"
       },
-      "elo": 1059,
+      "elo": 1060,
       "ci_95": 13
     },
     {
@@ -670,7 +681,7 @@
         "id": "2dc2b41d-fb75-4fec-8e91-c55cfd34814f",
         "name": "Maya Research"
       },
-      "elo": 1045,
+      "elo": 1046,
       "ci_95": 12
     },
     {
@@ -692,7 +703,7 @@
         "id": "8342a503-53a9-4cb5-bc5b-daaa9e13dc23",
         "name": "Boson AI"
       },
-      "elo": 1037,
+      "elo": 1036,
       "ci_95": 13
     },
     {
@@ -703,7 +714,7 @@
         "id": "3ab10c2e-eaa1-472e-b59c-d79818a52469",
         "name": "Bland AI"
       },
-      "elo": 1034,
+      "elo": 1035,
       "ci_95": 13
     },
     {
@@ -718,17 +729,6 @@
       "ci_95": 19
     },
     {
-      "id": "8b4be309-2f31-4ff2-be79-a6652c29ab12",
-      "name": "Polly Long-Form",
-      "slug": "polly-long-form",
-      "model_creator": {
-        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
-        "name": "Amazon"
-      },
-      "elo": 1032,
-      "ci_95": 13
-    },
-    {
       "id": "009f6201-1862-454e-87b5-e2a367bc027f",
       "name": "Octave TTS",
       "slug": "octave-tts",
@@ -736,7 +736,7 @@
         "id": "a6194e19-3b44-47d8-97b8-7eb2564c5b91",
         "name": "Hume AI"
       },
-      "elo": 1031,
+      "elo": 1032,
       "ci_95": 12
     },
     {
@@ -746,6 +746,17 @@
       "model_creator": {
         "id": "ef5ce458-9986-4652-915a-e31fac5506b0",
         "name": "Microsoft"
+      },
+      "elo": 1032,
+      "ci_95": 13
+    },
+    {
+      "id": "8b4be309-2f31-4ff2-be79-a6652c29ab12",
+      "name": "Polly Long-Form",
+      "slug": "polly-long-form",
+      "model_creator": {
+        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
+        "name": "Amazon"
       },
       "elo": 1031,
       "ci_95": 13
@@ -781,7 +792,7 @@
         "name": "Resemble AI"
       },
       "elo": 1023,
-      "ci_95": 11
+      "ci_95": 12
     },
     {
       "id": "ed574df4-d4f7-4c60-b19a-f1b80828aa98",
@@ -791,7 +802,7 @@
         "id": "000cfce6-a1fa-478d-a83c-16a4928d91cf",
         "name": "Smallest.ai"
       },
-      "elo": 1022,
+      "elo": 1021,
       "ci_95": 13
     },
     {
@@ -802,7 +813,7 @@
         "id": "5147c8b4-61d5-4070-9324-8adf8aa144c2",
         "name": "Xiaomi"
       },
-      "elo": 1021,
+      "elo": 1020,
       "ci_95": 14
     },
     {
@@ -813,7 +824,7 @@
         "id": "bf5e5871-bb86-4c30-8485-681169debc31",
         "name": "Krafton"
       },
-      "elo": 1004,
+      "elo": 1002,
       "ci_95": 14
     },
     {
@@ -890,7 +901,7 @@
         "id": "b3c6f289-a15c-4591-a8c4-ea0d42a976a7",
         "name": "KugelAudio"
       },
-      "elo": 935,
+      "elo": 934,
       "ci_95": 13
     },
     {
@@ -989,7 +1000,7 @@
         "id": "bbdb8b42-981b-4085-b6b4-40e6b8f9d3ee",
         "name": "Noiz"
       },
-      "elo": 882,
+      "elo": 883,
       "ci_95": 15
     },
     {

@@ -1,6 +1,229 @@
 {
-  "generated_at": "2026-10-01T00:23:13.701Z",
+  "generated_at": "2026-10-02T00:33:24.594Z",
   "events": [
+    {
+      "date": "2026-10-02",
+      "type": "added",
+      "model": {
+        "id": "208c16f0-8c5b-4524-ac8a-ac74c02e80a9",
+        "name": "Grok 4.7 (Low)",
+        "slug": "grok-4-7-low",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-10-02",
+        "last_seen": "2026-10-02"
+      },
+      "intelligence": 42.2
+    },
+    {
+      "date": "2026-10-02",
+      "type": "price",
+      "model": {
+        "id": "bb3d7e75-8e22-4082-b9d6-1db0803e042f",
+        "name": "K2 Horizon 375B A23B",
+        "slug": "k2-horizon-375b-a23b",
+        "creator": "Institute of Foundation Models",
+        "first_seen": "2026-09-04",
+        "last_seen": "2026-10-02"
+      },
+      "metric": "priceIn",
+      "from": null,
+      "to": 0
+    },
+    {
+      "date": "2026-10-02",
+      "type": "price",
+      "model": {
+        "id": "bb3d7e75-8e22-4082-b9d6-1db0803e042f",
+        "name": "K2 Horizon 375B A23B",
+        "slug": "k2-horizon-375b-a23b",
+        "creator": "Institute of Foundation Models",
+        "first_seen": "2026-09-04",
+        "last_seen": "2026-10-02"
+      },
+      "metric": "priceOut",
+      "from": null,
+      "to": 0
+    },
+    {
+      "date": "2026-10-02",
+      "type": "score",
+      "model": {
+        "id": "6e1b44ff-c227-496b-aef4-19b70cd18c76",
+        "name": "Gemma 4 26B A4B (Reasoning)",
+        "slug": "gemma-4-26b-a4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-02"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 2.9
+    },
+    {
+      "date": "2026-10-02",
+      "type": "score",
+      "model": {
+        "id": "7d1229bc-deea-4717-ba5b-f59a35d991e3",
+        "name": "GPT-6 Luna (High)",
+        "slug": "gpt-6-luna-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-10-02"
+      },
+      "metric": "intelligence",
+      "from": 32.1,
+      "to": 32.9
+    },
+    {
+      "date": "2026-10-02",
+      "type": "score",
+      "model": {
+        "id": "bf9708d8-933d-44f6-affa-b696a7a650c9",
+        "name": "GPT-6 Luna (Low)",
+        "slug": "gpt-6-luna-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-10-02"
+      },
+      "metric": "intelligence",
+      "from": 20.9,
+      "to": 21.5
+    },
+    {
+      "date": "2026-10-02",
+      "type": "score",
+      "model": {
+        "id": "6fb13851-40ce-4bda-ad3f-6b38e0c5daa7",
+        "name": "GPT-6 Luna (Max)",
+        "slug": "gpt-6-luna",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-10-02"
+      },
+      "metric": "intelligence",
+      "from": 37.3,
+      "to": 38.1
+    },
+    {
+      "date": "2026-10-02",
+      "type": "score",
+      "model": {
+        "id": "36667da0-9222-4967-adbb-f7efa15ad213",
+        "name": "GPT-6 Luna (Medium)",
+        "slug": "gpt-6-luna-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-10-02"
+      },
+      "metric": "intelligence",
+      "from": 29.5,
+      "to": 29.9
+    },
+    {
+      "date": "2026-10-02",
+      "type": "score",
+      "model": {
+        "id": "63cb48ea-0b0c-4e07-8ded-6d28dec4fa28",
+        "name": "GPT-6 Luna (Non-reasoning)",
+        "slug": "gpt-6-luna-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-10-02"
+      },
+      "metric": "intelligence",
+      "from": 18.3,
+      "to": 18.5
+    },
+    {
+      "date": "2026-10-02",
+      "type": "score",
+      "model": {
+        "id": "19813eb2-460a-475c-af65-810bb8660fec",
+        "name": "GPT-6 Luna (Xhigh)",
+        "slug": "gpt-6-luna-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-10-02"
+      },
+      "metric": "intelligence",
+      "from": 33.9,
+      "to": 34.6
+    },
+    {
+      "date": "2026-10-02",
+      "type": "score",
+      "model": {
+        "id": "52eebe3e-6ede-4e46-92db-c5dea49fc410",
+        "name": "GPT-6 Sol (High)",
+        "slug": "gpt-6-sol-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-10-02"
+      },
+      "metric": "intelligence",
+      "from": 42.8,
+      "to": 42.4
+    },
+    {
+      "date": "2026-10-02",
+      "type": "score",
+      "model": {
+        "id": "01459872-433a-4ab2-8e99-7083162172eb",
+        "name": "GPT-6 Sol (Low)",
+        "slug": "gpt-6-sol-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-10-02"
+      },
+      "metric": "intelligence",
+      "from": 33.9,
+      "to": 34.2
+    },
+    {
+      "date": "2026-10-02",
+      "type": "score",
+      "model": {
+        "id": "c50ea08c-88c0-4eb7-85b8-27f2bbf6d527",
+        "name": "GPT-6 Sol (Max)",
+        "slug": "gpt-6-sol",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-10-02"
+      },
+      "metric": "intelligence",
+      "from": 47.5,
+      "to": 47.6
+    },
+    {
+      "date": "2026-10-02",
+      "type": "score",
+      "model": {
+        "id": "d3e20e76-9e1a-45b6-b809-ad6aa37430cf",
+        "name": "GPT-6 Sol (Non-reasoning)",
+        "slug": "gpt-6-sol-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-10-02"
+      },
+      "metric": "intelligence",
+      "from": 28.1,
+      "to": 28.5
+    },
+    {
+      "date": "2026-10-02",
+      "type": "score",
+      "model": {
+        "id": "da2642fe-9f73-4788-b5af-24edcd55b37e",
+        "name": "GPT-6 Sol (Xhigh)",
+        "slug": "gpt-6-sol-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-10-02"
+      },
+      "metric": "intelligence",
+      "from": 44.1,
+      "to": 44.2
+    },
     {
       "date": "2026-10-01",
       "type": "added",

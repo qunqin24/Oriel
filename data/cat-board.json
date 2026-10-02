@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-01T00:23:20.690Z",
+  "fetched_at": "2026-10-02T00:33:34.969Z",
   "source_repo": "https://github.com/llm2014/llm_benchmark",
   "source_site": "https://llm2014.github.io/llm_benchmark/",
   "categories": {
@@ -568,6 +568,18 @@
           "1"
         ],
         [
+          "GPT-6.1 Sol (max)",
+          "Pass",
+          "Pass",
+          "10/A(16.90)",
+          "6/A(46.00)",
+          "Pending",
+          "9/A(18.70)",
+          "0",
+          "Codex CLI",
+          "1"
+        ],
+        [
           "Fable 5 (high)",
           "2/A+(90.52)",
           "3/A+(103.95)",
@@ -633,7 +645,7 @@
           "7/A(109.76)",
           "21/C(102.71)",
           "13/D(211.18)",
-          "Pending",
+          "Skip",
           "26/D(347.42)",
           "0",
           "Claude Code",
@@ -669,8 +681,8 @@
           "5/A(50.68)",
           "Failed",
           "30/D(71.77)",
-          "Pending",
-          "Pending",
+          "Skip",
+          "Skip",
           "0",
           "Claude Code",
           "1"
@@ -681,7 +693,7 @@
           "7/B(2.92)",
           "Failed",
           "20/C(5.88)",
-          "Pending",
+          "Skip",
           "Skip",
           "0",
           "Claude Code",
