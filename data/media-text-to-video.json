@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-03T00:10:38.658Z",
+  "fetched_at": "2026-10-03T23:32:28.786Z",
   "tier": "free",
   "data": [
     {
@@ -10,7 +10,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1127,
+      "elo": 1129,
       "ci_95": 12
     },
     {
@@ -21,7 +21,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 1114,
+      "elo": 1118,
       "ci_95": 12
     },
     {
@@ -32,7 +32,7 @@
         "id": "d3f67dc4-ba4d-4103-ba79-ee321ca99b40",
         "name": "Fal"
       },
-      "elo": 1111,
+      "elo": 1115,
       "ci_95": 12
     },
     {
@@ -54,7 +54,7 @@
         "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
         "name": "Black Forest Labs"
       },
-      "elo": 1091,
+      "elo": 1094,
       "ci_95": 12
     },
     {
@@ -65,7 +65,7 @@
         "id": "67b5ce4d-0c81-4edc-b4c3-370acc2df555",
         "name": "Skywork AI"
       },
-      "elo": 1084,
+      "elo": 1086,
       "ci_95": 12
     },
     {
@@ -76,7 +76,7 @@
         "id": "2354746c-4775-4a06-b64d-0ba4137785b8",
         "name": "ByteDance Seed"
       },
-      "elo": 1078,
+      "elo": 1080,
       "ci_95": 12
     },
     {
@@ -88,7 +88,7 @@
         "name": "Google"
       },
       "elo": 1070,
-      "ci_95": 12
+      "ci_95": 11
     },
     {
       "id": "5518540d-d1bc-48cc-9ad3-8f20769c021e",
@@ -98,7 +98,7 @@
         "id": "5db3af1a-e372-4c62-98bd-f6027eeaf990",
         "name": "Sapiens AI"
       },
-      "elo": 1052,
+      "elo": 1054,
       "ci_95": 12
     },
     {
@@ -109,7 +109,18 @@
         "id": "0ea38458-92d7-45de-a69d-c50bd8277273",
         "name": "Alibaba-ATH"
       },
-      "elo": 1036,
+      "elo": 1039,
+      "ci_95": 11
+    },
+    {
+      "id": "a4dc21f8-7a35-497e-90a4-4c9a1593c8ca",
+      "name": "HappyHorse-1.0",
+      "slug": "happyhorse-1-0",
+      "model_creator": {
+        "id": "0ea38458-92d7-45de-a69d-c50bd8277273",
+        "name": "Alibaba-ATH"
+      },
+      "elo": 1035,
       "ci_95": 12
     },
     {
@@ -124,17 +135,6 @@
       "ci_95": 12
     },
     {
-      "id": "a4dc21f8-7a35-497e-90a4-4c9a1593c8ca",
-      "name": "HappyHorse-1.0",
-      "slug": "happyhorse-1-0",
-      "model_creator": {
-        "id": "0ea38458-92d7-45de-a69d-c50bd8277273",
-        "name": "Alibaba-ATH"
-      },
-      "elo": 1032,
-      "ci_95": 12
-    },
-    {
       "id": "03ff7ea5-2ee9-4f2d-9c41-01f4279362cb",
       "name": "Wan2.7-260612",
       "slug": "wan2-7-260612",
@@ -142,8 +142,8 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1023,
-      "ci_95": 12
+      "elo": 1024,
+      "ci_95": 11
     },
     {
       "id": "d149ad95-b3b2-4d23-8611-07a84c1a0e7f",
@@ -164,7 +164,7 @@
         "id": "1942f8d6-ab55-4408-99dd-2f99c70353f6",
         "name": "PixVerse"
       },
-      "elo": 998,
+      "elo": 1000,
       "ci_95": 12
     },
     {
@@ -175,7 +175,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 987,
+      "elo": 989,
       "ci_95": 12
     },
     {
@@ -197,8 +197,8 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 960,
-      "ci_95": 12
+      "elo": 964,
+      "ci_95": 11
     },
     {
       "id": "1d0f4e17-4e52-44fa-9de7-36308c5cee61",
@@ -208,7 +208,7 @@
         "id": "319e519d-a916-49f0-8708-ce0b54073a3c",
         "name": "Sand.ai"
       },
-      "elo": 958,
+      "elo": 960,
       "ci_95": 12
     },
     {
@@ -219,7 +219,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 953,
+      "elo": 955,
       "ci_95": 12
     },
     {
@@ -230,7 +230,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 937,
+      "elo": 938,
       "ci_95": 12
     },
     {
@@ -241,7 +241,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 929,
+      "elo": 931,
       "ci_95": 12
     },
     {
@@ -252,7 +252,18 @@
         "id": "a6906d95-a471-4a0c-ad10-b989571de20c",
         "name": "Runway"
       },
-      "elo": 919,
+      "elo": 921,
+      "ci_95": 12
+    },
+    {
+      "id": "043f0cb2-3565-45ad-bf78-7e2de8288e94",
+      "name": "Vidu Q3 Turbo",
+      "slug": "vidu-q3-turbo",
+      "model_creator": {
+        "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
+        "name": "Vidu"
+      },
+      "elo": 911,
       "ci_95": 12
     },
     {
@@ -267,17 +278,6 @@
       "ci_95": 12
     },
     {
-      "id": "043f0cb2-3565-45ad-bf78-7e2de8288e94",
-      "name": "Vidu Q3 Turbo",
-      "slug": "vidu-q3-turbo",
-      "model_creator": {
-        "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
-        "name": "Vidu"
-      },
-      "elo": 909,
-      "ci_95": 12
-    },
-    {
       "id": "46b5ed93-3586-4fc3-875b-4231492aea82",
       "name": "Kling O1 Pro (January)",
       "slug": "kling-o1-pro-january",
@@ -285,7 +285,7 @@
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
-      "elo": 895,
+      "elo": 896,
       "ci_95": 12
     },
     {
@@ -296,8 +296,8 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 856,
-      "ci_95": 13
+      "elo": 859,
+      "ci_95": 12
     },
     {
       "id": "c783d9aa-c387-4f44-b371-563fd9bab06d",
@@ -307,7 +307,7 @@
         "id": "ed94442e-da40-4fa6-a209-c7e9e095a75f",
         "name": "Lightricks"
       },
-      "elo": 855,
+      "elo": 856,
       "ci_95": 12
     },
     {
@@ -329,7 +329,7 @@
         "id": "033e3219-6b49-43b4-a86f-b92a63e3ebb2",
         "name": "Creatify"
       },
-      "elo": 840,
+      "elo": 842,
       "ci_95": 13
     },
     {
@@ -340,7 +340,7 @@
         "id": "a98e0396-4ef1-4a39-bb12-b004c7590bee",
         "name": "Pruna AI"
       },
-      "elo": 817,
+      "elo": 819,
       "ci_95": 13
     }
   ]
