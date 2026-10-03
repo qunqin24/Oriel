@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-02T00:33:22.257Z",
+  "fetched_at": "2026-10-03T00:10:38.658Z",
   "tier": "free",
   "data": [
     {
@@ -174,15 +174,6 @@
       "aa_wer_index": 0
     },
     {
-      "id": "ae083e8b-477f-4114-90e2-3484f97f2d76",
-      "name": "Gemini 2.0 Flash Lite, Google",
-      "model_creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google"
-      },
-      "aa_wer_index": 0
-    },
-    {
       "id": "bb5af4f9-cb59-4424-bd6c-a1b2ce7732ec",
       "name": "Gemini 3.1 Pro Preview (High)",
       "model_creator": {
@@ -206,15 +197,6 @@
       "model_creator": {
         "id": "3aab6d2e-04b0-43ee-996f-d8ef76ac3232",
         "name": "Inworld"
-      },
-      "aa_wer_index": 0
-    },
-    {
-      "id": "cf64b74a-9c92-4ea2-a1c8-559b93375b23",
-      "name": "MAI-Transcribe-1",
-      "model_creator": {
-        "id": "4756ee95-5ddf-45e8-a9d1-075d0e5b5200",
-        "name": "Microsoft AI"
       },
       "aa_wer_index": 0
     },
@@ -287,15 +269,6 @@
       "model_creator": {
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
-      },
-      "aa_wer_index": 0
-    },
-    {
-      "id": "d0e234f7-4a65-406c-b2ad-48160e82c834",
-      "name": "Soniox V4",
-      "model_creator": {
-        "id": "2ec53bc5-5f0a-4614-b05b-ddefb9c5d4a5",
-        "name": "Soniox"
       },
       "aa_wer_index": 0
     },
@@ -451,15 +424,6 @@
         "name": "Google"
       },
       "aa_wer_index": null
-    },
-    {
-      "id": "39cc7fd8-fb66-46ef-b611-071fc5bb0a22",
-      "name": "LLM Speech, Azure",
-      "model_creator": {
-        "id": "ef5ce458-9986-4652-915a-e31fac5506b0",
-        "name": "Microsoft"
-      },
-      "aa_wer_index": 0
     },
     {
       "id": "9abf9a6a-0b89-4261-b0f6-01780e1e86ea",
