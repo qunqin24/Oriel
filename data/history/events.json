@@ -1,6 +1,81 @@
 {
-  "generated_at": "2026-10-04T23:50:47.458Z",
+  "generated_at": "2026-10-06T01:40:28.660Z",
   "events": [
+    {
+      "date": "2026-10-06",
+      "type": "price",
+      "model": {
+        "id": "d4f5b250-be37-4801-85e6-32fda4179337",
+        "name": "DeepSeek V4 Pro 0813 (Non-reasoning)",
+        "slug": "deepseek-v4-pro-non-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-10-01",
+        "last_seen": "2026-10-06"
+      },
+      "metric": "priceIn",
+      "from": 0.91,
+      "to": 1.32
+    },
+    {
+      "date": "2026-10-06",
+      "type": "price",
+      "model": {
+        "id": "d4f5b250-be37-4801-85e6-32fda4179337",
+        "name": "DeepSeek V4 Pro 0813 (Non-reasoning)",
+        "slug": "deepseek-v4-pro-non-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-10-01",
+        "last_seen": "2026-10-06"
+      },
+      "metric": "priceOut",
+      "from": 2.98,
+      "to": 3.96
+    },
+    {
+      "date": "2026-10-06",
+      "type": "price",
+      "model": {
+        "id": "d0aa27aa-4705-4184-9a1d-483b78c9331c",
+        "name": "Gemma 4 31B (Non-reasoning)",
+        "slug": "gemma-4-31b-non-reasoning",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-06"
+      },
+      "metric": "priceIn",
+      "from": 0.14,
+      "to": 0.15
+    },
+    {
+      "date": "2026-10-06",
+      "type": "score",
+      "model": {
+        "id": "8215372b-66ff-457b-855e-e8abeafc9571",
+        "name": "A.X-K2",
+        "slug": "a-x-k2",
+        "creator": "SK Telecom",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-10-06"
+      },
+      "metric": "intelligence",
+      "from": 22.7,
+      "to": 21.5
+    },
+    {
+      "date": "2026-10-06",
+      "type": "score",
+      "model": {
+        "id": "8215372b-66ff-457b-855e-e8abeafc9571",
+        "name": "A.X-K2",
+        "slug": "a-x-k2",
+        "creator": "SK Telecom",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-10-06"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 16.2
+    },
     {
       "date": "2026-10-04",
       "type": "added",

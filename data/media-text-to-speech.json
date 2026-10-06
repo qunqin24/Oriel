@@ -1,7 +1,18 @@
 {
-  "fetched_at": "2026-10-04T23:50:42.550Z",
+  "fetched_at": "2026-10-06T01:40:27.835Z",
   "tier": "free",
   "data": [
+    {
+      "id": "1743efcc-71b5-415c-9a64-f03c739127ef",
+      "name": "Eleven v4 Turbo",
+      "slug": "eleven-v4-turbo",
+      "model_creator": {
+        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
+        "name": "ElevenLabs"
+      },
+      "elo": 1334,
+      "ci_95": 19
+    },
     {
       "id": "5731ba67-aafe-4ebd-be07-5b7f86454d01",
       "name": "Eleven v4",
