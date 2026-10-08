@@ -1,6 +1,131 @@
 {
-  "generated_at": "2026-10-07T00:23:00.007Z",
+  "generated_at": "2026-10-08T00:43:52.971Z",
   "events": [
+    {
+      "date": "2026-10-08",
+      "type": "added",
+      "model": {
+        "id": "20829974-af06-497e-9f42-77fb958d43b9",
+        "name": "Claude Haiku 5.5 (High)",
+        "slug": "claude-haiku-5-5-high",
+        "creator": "Anthropic",
+        "first_seen": "2026-10-08",
+        "last_seen": "2026-10-08"
+      },
+      "intelligence": 37.8
+    },
+    {
+      "date": "2026-10-08",
+      "type": "added",
+      "model": {
+        "id": "42908ae3-d3bd-4934-be19-fbff93d3fde8",
+        "name": "Claude Haiku 5.5 (Low)",
+        "slug": "claude-haiku-5-5-low",
+        "creator": "Anthropic",
+        "first_seen": "2026-10-08",
+        "last_seen": "2026-10-08"
+      },
+      "intelligence": 29.4
+    },
+    {
+      "date": "2026-10-08",
+      "type": "added",
+      "model": {
+        "id": "7d064a11-6e78-4030-b535-cdf940615041",
+        "name": "Claude Haiku 5.5 (Max)",
+        "slug": "claude-haiku-5-5",
+        "creator": "Anthropic",
+        "first_seen": "2026-10-08",
+        "last_seen": "2026-10-08"
+      },
+      "intelligence": 43.4
+    },
+    {
+      "date": "2026-10-08",
+      "type": "added",
+      "model": {
+        "id": "af26fff4-8120-41be-a5f0-86aaea023f20",
+        "name": "Claude Haiku 5.5 (Medium)",
+        "slug": "claude-haiku-5-5-medium",
+        "creator": "Anthropic",
+        "first_seen": "2026-10-08",
+        "last_seen": "2026-10-08"
+      },
+      "intelligence": 34.5
+    },
+    {
+      "date": "2026-10-08",
+      "type": "added",
+      "model": {
+        "id": "41b5bf5e-daf6-42d9-b8d1-60e340a3028d",
+        "name": "Claude Haiku 5.5 (Xhigh)",
+        "slug": "claude-haiku-5-5-xhigh",
+        "creator": "Anthropic",
+        "first_seen": "2026-10-08",
+        "last_seen": "2026-10-08"
+      },
+      "intelligence": 41.2
+    },
+    {
+      "date": "2026-10-08",
+      "type": "price",
+      "model": {
+        "id": "89a2c945-1fab-4ee4-9f45-83a9f46cb221",
+        "name": "DeepSeek V4 Flash 0420 (High)",
+        "slug": "deepseek-v4-flash-0420-high",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-08"
+      },
+      "metric": "priceIn",
+      "from": 0.1119,
+      "to": 0.13
+    },
+    {
+      "date": "2026-10-08",
+      "type": "price",
+      "model": {
+        "id": "89a2c945-1fab-4ee4-9f45-83a9f46cb221",
+        "name": "DeepSeek V4 Flash 0420 (High)",
+        "slug": "deepseek-v4-flash-0420-high",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-08"
+      },
+      "metric": "priceOut",
+      "from": 0.2375,
+      "to": 0.28
+    },
+    {
+      "date": "2026-10-08",
+      "type": "price",
+      "model": {
+        "id": "ad173c8d-f14f-4230-90e9-60979b7720e7",
+        "name": "DeepSeek V4 Flash 0420 (Non-reasoning)",
+        "slug": "deepseek-v4-flash-0420-non-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-08"
+      },
+      "metric": "priceIn",
+      "from": 0.0919,
+      "to": 0.0938
+    },
+    {
+      "date": "2026-10-08",
+      "type": "price",
+      "model": {
+        "id": "ad173c8d-f14f-4230-90e9-60979b7720e7",
+        "name": "DeepSeek V4 Flash 0420 (Non-reasoning)",
+        "slug": "deepseek-v4-flash-0420-non-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-08"
+      },
+      "metric": "priceOut",
+      "from": 0.1913,
+      "to": 0.1876
+    },
     {
       "date": "2026-10-07",
       "type": "added",

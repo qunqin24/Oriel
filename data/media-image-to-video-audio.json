@@ -1,10 +1,10 @@
 {
-  "fetched_at": "2026-10-07T00:22:57.911Z",
+  "fetched_at": "2026-10-08T00:43:51.607Z",
   "tier": "free",
   "data": [
     {
       "id": "75aebebb-6692-4bca-8c59-54336e4da6a3",
-      "name": "MiniMax H3 Max (based on MiniMax H3)",
+      "name": "MiniMax H3 Max",
       "slug": "minimax-h3-max",
       "model_creator": {
         "id": "d3f67dc4-ba4d-4103-ba79-ee321ca99b40",
@@ -23,6 +23,17 @@
       },
       "elo": 1181,
       "ci_95": 8
+    },
+    {
+      "id": "54f5425f-cb50-4d7c-9d00-797211584f88",
+      "name": "Vidu Q4 Preview",
+      "slug": "vidu-q4-preview",
+      "model_creator": {
+        "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
+        "name": "Vidu"
+      },
+      "elo": 1179,
+      "ci_95": 10
     },
     {
       "id": "88df9253-809f-4dc9-b993-3969fa606473",
@@ -81,7 +92,7 @@
     },
     {
       "id": "e83498b8-ae29-4eb7-a343-2a2a74eb0e53",
-      "name": "grok-imagine-video-1.5",
+      "name": "Grok Imagine Video 1.5",
       "slug": "grok-imagine-video-1.5",
       "model_creator": {
         "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",

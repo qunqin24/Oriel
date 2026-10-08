@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-07T00:22:57.911Z",
+  "fetched_at": "2026-10-08T00:43:51.607Z",
   "tier": "free",
   "data": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "id": "48635dd3-c2f3-400e-b739-49a29c61c0ad",
-      "name": "Utopai X (based on MiniMax H3)",
+      "name": "Utopai X",
       "slug": "utopai-x",
       "model_creator": {
         "id": "a38daf25-05f7-417a-9d4f-2ebfbab51ae5",
@@ -48,7 +48,7 @@
     },
     {
       "id": "75aebebb-6692-4bca-8c59-54336e4da6a3",
-      "name": "MiniMax H3 Max (based on MiniMax H3)",
+      "name": "MiniMax H3 Max",
       "slug": "minimax-h3-max",
       "model_creator": {
         "id": "d3f67dc4-ba4d-4103-ba79-ee321ca99b40",
@@ -114,7 +114,7 @@
     },
     {
       "id": "e83498b8-ae29-4eb7-a343-2a2a74eb0e53",
-      "name": "grok-imagine-video-1.5",
+      "name": "Grok Imagine Video 1.5",
       "slug": "grok-imagine-video-1.5",
       "model_creator": {
         "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
@@ -177,6 +177,17 @@
       },
       "elo": 1000,
       "ci_95": 0
+    },
+    {
+      "id": "c478c4a7-cd9f-41ac-8995-355556eb8707",
+      "name": "Grok Imagine Video 1.5 Lite",
+      "slug": "grok-imagine-video-1-5-lite",
+      "model_creator": {
+        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+        "name": "SpaceXAI"
+      },
+      "elo": 993,
+      "ci_95": 10
     },
     {
       "id": "be866b8a-d073-4ee4-9652-73227c679dc4",

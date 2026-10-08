@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-07T00:22:57.911Z",
+  "fetched_at": "2026-10-08T00:43:51.607Z",
   "tier": "free",
   "data": [
     {
@@ -309,15 +309,6 @@
       "aa_wer_index": 0
     },
     {
-      "id": "f3f9b16a-ff56-4b1e-95c6-a606e9a76009",
-      "name": "Universal-3.6 Pro Realtime - Max Accuracy",
-      "model_creator": {
-        "id": "4fb0e648-ff21-4fe3-909b-290fba140579",
-        "name": "AssemblyAI"
-      },
-      "aa_wer_index": null
-    },
-    {
       "id": "69a3c281-fbaa-4102-b7de-7eb99354a561",
       "name": "Scribe v2, ElevenLabs",
       "model_creator": {
@@ -327,8 +318,8 @@
       "aa_wer_index": 0
     },
     {
-      "id": "735adb0e-d1a9-4785-a4b6-468af29a62d7",
-      "name": "Universal Streaming English",
+      "id": "d9d4af2c-567f-4ce5-b52c-b6f6ec96c4f5",
+      "name": "Universal-3.6 Pro Realtime - Min Latency",
       "model_creator": {
         "id": "4fb0e648-ff21-4fe3-909b-290fba140579",
         "name": "AssemblyAI"
@@ -345,8 +336,8 @@
       "aa_wer_index": null
     },
     {
-      "id": "d9d4af2c-567f-4ce5-b52c-b6f6ec96c4f5",
-      "name": "Universal-3.6 Pro Realtime - Min Latency",
+      "id": "f3f9b16a-ff56-4b1e-95c6-a606e9a76009",
+      "name": "Universal-3.6 Pro Realtime - Max Accuracy",
       "model_creator": {
         "id": "4fb0e648-ff21-4fe3-909b-290fba140579",
         "name": "AssemblyAI"
@@ -433,6 +424,15 @@
         "name": "Microsoft AI"
       },
       "aa_wer_index": 0
+    },
+    {
+      "id": "735adb0e-d1a9-4785-a4b6-468af29a62d7",
+      "name": "Universal Streaming English",
+      "model_creator": {
+        "id": "4fb0e648-ff21-4fe3-909b-290fba140579",
+        "name": "AssemblyAI"
+      },
+      "aa_wer_index": null
     },
     {
       "id": "4005366d-a689-4e44-a8f1-0f3ca220d862",
