@@ -1,6 +1,49 @@
 {
-  "generated_at": "2026-10-08T00:43:52.971Z",
+  "generated_at": "2026-10-09T01:00:00.348Z",
   "events": [
+    {
+      "date": "2026-10-09",
+      "type": "added",
+      "model": {
+        "id": "93e12518-6e04-4713-b52d-2c56dac49c63",
+        "name": "GPT-6 Sol (Daybreak Blue, max)",
+        "slug": "gpt-6-sol-daybreak-blue",
+        "creator": "OpenAI",
+        "first_seen": "2026-10-09",
+        "last_seen": "2026-10-09"
+      },
+      "intelligence": null
+    },
+    {
+      "date": "2026-10-09",
+      "type": "score",
+      "model": {
+        "id": "1071dea1-43e7-4fe9-b936-3034bb622b2e",
+        "name": "Granite 4.2 30B",
+        "slug": "granite-4-2-30b",
+        "creator": "IBM",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-10-09"
+      },
+      "metric": "intelligence",
+      "from": 14.8,
+      "to": 12.7
+    },
+    {
+      "date": "2026-10-09",
+      "type": "score",
+      "model": {
+        "id": "1071dea1-43e7-4fe9-b936-3034bb622b2e",
+        "name": "Granite 4.2 30B",
+        "slug": "granite-4-2-30b",
+        "creator": "IBM",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-10-09"
+      },
+      "metric": "agentic",
+      "from": null,
+      "to": 3.5
+    },
     {
       "date": "2026-10-08",
       "type": "added",

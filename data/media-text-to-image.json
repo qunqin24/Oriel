@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-08T00:43:51.607Z",
+  "fetched_at": "2026-10-09T00:59:58.773Z",
   "tier": "free",
   "data": [
     {
@@ -34,6 +34,17 @@
       },
       "elo": 1172,
       "ci_95": 8
+    },
+    {
+      "id": "b6f834da-1ca2-4f4c-a215-158970a058fa",
+      "name": "Nano Banana 2.1",
+      "slug": "nano-banana-2-1",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "elo": 1160,
+      "ci_95": 10
     },
     {
       "id": "748fadd1-ecd9-41d0-9b43-f5fccd4fb843",
@@ -978,7 +989,7 @@
         "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
         "name": "OpenAI"
       },
-      "elo": 919,
+      "elo": 918,
       "ci_95": 7
     },
     {
@@ -1044,7 +1055,7 @@
         "id": "cc6e981e-eb3c-4ac3-a23e-4dbe3e1ffd99",
         "name": "Reve"
       },
-      "elo": 913,
+      "elo": 912,
       "ci_95": 9
     },
     {
@@ -1429,7 +1440,7 @@
         "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
         "name": "Black Forest Labs"
       },
-      "elo": 841,
+      "elo": 840,
       "ci_95": 7
     },
     {
@@ -1550,7 +1561,7 @@
         "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
         "name": "Black Forest Labs"
       },
-      "elo": 802,
+      "elo": 803,
       "ci_95": 7
     },
     {
