@@ -1,6 +1,261 @@
 {
-  "generated_at": "2026-10-09T01:00:00.348Z",
+  "generated_at": "2026-10-10T00:30:13.290Z",
   "events": [
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "6e1b44ff-c227-496b-aef4-19b70cd18c76",
+        "name": "Gemma 4 26B A4B (Reasoning)",
+        "slug": "gemma-4-26b-a4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceOut",
+      "from": 0.37,
+      "to": 0.4
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "f0083258-8646-45b8-8082-7aaf6c2ea82a",
+        "name": "gpt-oss-120b (High)",
+        "slug": "gpt-oss-120b",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceOut",
+      "from": 0.595,
+      "to": 0.59
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "c99f3bde-7c08-4de8-bd5c-8ee9123ebffa",
+        "name": "gpt-oss-120b (Low)",
+        "slug": "gpt-oss-120b-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceOut",
+      "from": 0.545,
+      "to": 0.5
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "e1bfc488-5f48-4d42-abf6-7f3c53d79f9c",
+        "name": "LFM2.5-2.6B",
+        "slug": "lfm2-5-2-6b",
+        "creator": "Liquid AI",
+        "first_seen": "2026-08-25",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceIn",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "e1bfc488-5f48-4d42-abf6-7f3c53d79f9c",
+        "name": "LFM2.5-2.6B",
+        "slug": "lfm2-5-2-6b",
+        "creator": "Liquid AI",
+        "first_seen": "2026-08-25",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceOut",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "739684ba-0f63-4e2a-b4ee-30741c9e9320",
+        "name": "Llama 3.1 Instruct 8B",
+        "slug": "llama-3-1-instruct-8b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceIn",
+      "from": 0.02,
+      "to": 0.035
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "739684ba-0f63-4e2a-b4ee-30741c9e9320",
+        "name": "Llama 3.1 Instruct 8B",
+        "slug": "llama-3-1-instruct-8b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceOut",
+      "from": 0.05,
+      "to": 0.065
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "adf9a85e-abc3-4f28-937b-db6655cc5238",
+        "name": "Llama 4 Scout",
+        "slug": "llama-4-scout",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceIn",
+      "from": 0.19,
+      "to": 0.18
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "adf9a85e-abc3-4f28-937b-db6655cc5238",
+        "name": "Llama 4 Scout",
+        "slug": "llama-4-scout",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceOut",
+      "from": 0.68,
+      "to": 0.66
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "5c3bdc0d-abab-4526-8079-34de4089bb4a",
+        "name": "LongCat 2.0",
+        "slug": "longcat-2-0",
+        "creator": "LongCat",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceIn",
+      "from": 0.3,
+      "to": 0.75
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "5c3bdc0d-abab-4526-8079-34de4089bb4a",
+        "name": "LongCat 2.0",
+        "slug": "longcat-2-0",
+        "creator": "LongCat",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceOut",
+      "from": 1.2,
+      "to": 2.95
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "24ac5b00-5f03-4c47-8e37-522d1195383e",
+        "name": "Mistral Small 3.1",
+        "slug": "mistral-small-3-1",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceIn",
+      "from": 0.11,
+      "to": 0.08
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "24ac5b00-5f03-4c47-8e37-522d1195383e",
+        "name": "Mistral Small 3.1",
+        "slug": "mistral-small-3-1",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceOut",
+      "from": 0.17,
+      "to": 0.135
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "fc92f822-04b7-420d-9c07-a21af5e9aac7",
+        "name": "Qwen3 Coder Next",
+        "slug": "qwen3-coder-next",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceIn",
+      "from": 0.35,
+      "to": 0.5
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "ceb4d610-d0a4-48c1-bea0-80ed76f1e5ca",
+        "name": "QwQ 32B",
+        "slug": "qwq-32b",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceIn",
+      "from": 0.66,
+      "to": null
+    },
+    {
+      "date": "2026-10-10",
+      "type": "price",
+      "model": {
+        "id": "ceb4d610-d0a4-48c1-bea0-80ed76f1e5ca",
+        "name": "QwQ 32B",
+        "slug": "qwq-32b",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "priceOut",
+      "from": 1,
+      "to": null
+    },
+    {
+      "date": "2026-10-10",
+      "type": "score",
+      "model": {
+        "id": "42908ae3-d3bd-4934-be19-fbff93d3fde8",
+        "name": "Claude Haiku 5.5 (Low)",
+        "slug": "claude-haiku-5-5-low",
+        "creator": "Anthropic",
+        "first_seen": "2026-10-08",
+        "last_seen": "2026-10-10"
+      },
+      "metric": "intelligence",
+      "from": 29.4,
+      "to": 29.5
+    },
     {
       "date": "2026-10-09",
       "type": "added",

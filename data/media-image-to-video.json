@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-09T00:59:58.773Z",
+  "fetched_at": "2026-10-10T00:30:12.399Z",
   "tier": "free",
   "data": [
     {
@@ -45,6 +45,17 @@
       },
       "elo": 1356,
       "ci_95": 11
+    },
+    {
+      "id": "60f8f6e0-6b69-4f5b-83fb-e5a9a9144858",
+      "name": "Vimoo 1.0",
+      "slug": "vimoo-1-0",
+      "model_creator": {
+        "id": "83f18d77-237c-4f11-bd9d-393d74396972",
+        "name": "Vimoo"
+      },
+      "elo": 1348,
+      "ci_95": 14
     },
     {
       "id": "36db1f4d-a9f6-49d1-a74d-06bddbf2fe4f",

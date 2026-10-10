@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-09T00:59:58.773Z",
+  "fetched_at": "2026-10-10T00:30:12.399Z",
   "tier": "free",
   "data": [
     {
@@ -78,6 +78,17 @@
       },
       "elo": 1126,
       "ci_95": 7
+    },
+    {
+      "id": "952cb4e8-6155-45f4-a653-f426669cf80a",
+      "name": "FLUX 3 Image",
+      "slug": "flux-3-image",
+      "model_creator": {
+        "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
+        "name": "Black Forest Labs"
+      },
+      "elo": 1117,
+      "ci_95": 11
     },
     {
       "id": "0a7b7bb4-caa5-4334-aff3-57ad2bdead0d",
@@ -813,7 +824,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 962,
+      "elo": 961,
       "ci_95": 9
     },
     {
