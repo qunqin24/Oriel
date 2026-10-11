@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-10-10T00:30:13.290Z",
+  "generated_at": "2026-10-11T00:06:06.036Z",
   "events": [
+    {
+      "date": "2026-10-11",
+      "type": "price",
+      "model": {
+        "id": "2443ac9e-a3db-423d-accb-8963f6fb0a53",
+        "name": "Grok 3",
+        "slug": "grok-3",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-11"
+      },
+      "metric": "priceIn",
+      "from": 4,
+      "to": 3
+    },
+    {
+      "date": "2026-10-11",
+      "type": "price",
+      "model": {
+        "id": "2443ac9e-a3db-423d-accb-8963f6fb0a53",
+        "name": "Grok 3",
+        "slug": "grok-3",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-11"
+      },
+      "metric": "priceOut",
+      "from": 20,
+      "to": 15
+    },
     {
       "date": "2026-10-10",
       "type": "price",
