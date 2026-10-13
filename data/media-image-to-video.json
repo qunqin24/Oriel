@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-12T00:14:52.193Z",
+  "fetched_at": "2026-10-13T02:25:43.163Z",
   "tier": "free",
   "data": [
     {
@@ -428,7 +428,7 @@
         "id": "e3a5ba75-0127-45b0-8bcc-2864b8dd404d",
         "name": "Vidu"
       },
-      "elo": 1234,
+      "elo": 1233,
       "ci_95": 10
     },
     {
@@ -472,7 +472,7 @@
         "id": "09468924-69a9-499b-8dd6-d0bb4c05285d",
         "name": "Luma Labs"
       },
-      "elo": 1216,
+      "elo": 1215,
       "ci_95": 10
     },
     {
@@ -487,17 +487,6 @@
       "ci_95": 12
     },
     {
-      "id": "c308a441-376d-4783-b193-1da5ff10212e",
-      "name": "Hailuo 02 Fast",
-      "slug": "hailuo-02-fast",
-      "model_creator": {
-        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
-        "name": "MiniMax"
-      },
-      "elo": 1208,
-      "ci_95": 11
-    },
-    {
       "id": "1f1d69b1-4fd1-4499-ab22-9d9fd47fca21",
       "name": "Kling 2.1 Master",
       "slug": "kling-2-1-master",
@@ -507,6 +496,17 @@
       },
       "elo": 1208,
       "ci_95": 12
+    },
+    {
+      "id": "c308a441-376d-4783-b193-1da5ff10212e",
+      "name": "Hailuo 02 Fast",
+      "slug": "hailuo-02-fast",
+      "model_creator": {
+        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+        "name": "MiniMax"
+      },
+      "elo": 1207,
+      "ci_95": 11
     },
     {
       "id": "e451b7d7-42eb-4c07-9f57-5b5e9bd80c97",
@@ -626,7 +626,7 @@
         "id": "1942f8d6-ab55-4408-99dd-2f99c70353f6",
         "name": "PixVerse"
       },
-      "elo": 1153,
+      "elo": 1152,
       "ci_95": 12
     },
     {
@@ -648,7 +648,7 @@
         "id": "2354746c-4775-4a06-b64d-0ba4137785b8",
         "name": "ByteDance Seed"
       },
-      "elo": 1139,
+      "elo": 1138,
       "ci_95": 11
     },
     {
@@ -769,7 +769,7 @@
         "id": "c104be52-31ea-4948-b921-265dc297f3ac",
         "name": "Leonardo.Ai"
       },
-      "elo": 1027,
+      "elo": 1026,
       "ci_95": 13
     },
     {
@@ -846,7 +846,7 @@
         "id": "a4e5bd55-a6cd-4dcf-8d4a-1d9643cd3826",
         "name": "Tencent"
       },
-      "elo": 920,
+      "elo": 921,
       "ci_95": 13
     }
   ]
