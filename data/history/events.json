@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-10-13T02:25:46.033Z",
+  "generated_at": "2026-10-14T00:09:38.561Z",
   "events": [
+    {
+      "date": "2026-10-14",
+      "type": "price",
+      "model": {
+        "id": "583f98fb-c4b8-4df3-8d40-60ac0ed69882",
+        "name": "Muse Glimmer (High)",
+        "slug": "muse-glimmer",
+        "creator": "Meta",
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-10-14"
+      },
+      "metric": "priceIn",
+      "from": 0.325,
+      "to": 0.3
+    },
+    {
+      "date": "2026-10-14",
+      "type": "price",
+      "model": {
+        "id": "583f98fb-c4b8-4df3-8d40-60ac0ed69882",
+        "name": "Muse Glimmer (High)",
+        "slug": "muse-glimmer",
+        "creator": "Meta",
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-10-14"
+      },
+      "metric": "priceOut",
+      "from": 1.35,
+      "to": 1.2
+    },
     {
       "date": "2026-10-13",
       "type": "added",
