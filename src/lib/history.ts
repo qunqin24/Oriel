@@ -64,20 +64,28 @@ export function catalogEntry(id: string): CatalogEntry | undefined {
 export const MODEL_COUNT_TREND: Array<{ date: string; count: number }> =
   SNAPSHOTS.map(({ date, snapshot }) => ({ date, count: snapshot.count }));
 
+const VERSION_INDEPENDENT: readonly MetricKey[] = [
+  "priceIn",
+  "priceOut",
+  "throughput",
+  "latency",
+];
+
 export type SeriesPoint = { date: string; value: number };
 
 /**
  * 单个模型某项指标的时间序列，按指数版本切段。
  *
  * 换版后分数不可跨版本比较，所以返回的是若干独立段落而不是一条线——
- * 调用方各画各的，中间自然断开。价格类指标不受版本影响，永远只有一段。
+ * 调用方各画各的，中间自然断开。价格与实测性能不受版本影响，只会被缺失数据切断。
  */
 export function metricSeries(
   modelId: string,
   metric: MetricKey
 ): SeriesPoint[][] {
-  const affectedByVersion =
-    metric === "intelligence" || metric === "coding" || metric === "agentic";
+  // 只有价格和实测性能与指数版本无关。分数类（含行业指数）同属一套评测；
+  // 评测成本取决于指数包含哪些题，换版后同样不可跨版本比较。
+  const affectedByVersion = !VERSION_INDEPENDENT.includes(metric);
 
   const segments: SeriesPoint[][] = [];
   let current: SeriesPoint[] = [];

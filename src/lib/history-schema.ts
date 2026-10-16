@@ -5,13 +5,20 @@
  * 所以只能是纯函数——不碰 fs、不碰 Astro 运行时、不 import 任何 JSON。
  *
  * 存储策略：按月分文件的**全量**快照，不做增量 delta。
- * 全量约 35KB/天、1MB/月；delta 能省一半空间，但重建逻辑是 bug 温床，
+ * 全量约 45KB/天、1.4MB/月；delta 能省一半空间，但重建逻辑是 bug 温床，
  * 在这个体积下不值得冒险。
  */
 
 import type { LanguageModel } from "./types";
 
-/** 每个模型每天存这 7 个数字，顺序固定，省掉重复的 key 名。 */
+/**
+ * 每个模型每天存这些数字，顺序固定，省掉重复的 key 名。
+ *
+ * **只能在末尾追加，不得调整已有 key 的顺序或删除。**
+ * 最早的快照是 7 元组（前 7 个 key），后来追加的 key 在旧快照里根本不存在；
+ * readMetric 用 `tuple[idx] ?? null`，所以旧快照读新 key 自然得到 null
+ * （= 当时没有这项数据），无需迁移。重放回填则会把旧快照重写成完整长度。
+ */
 export const METRIC_KEYS = [
   "intelligence",
   "coding",
@@ -20,14 +27,26 @@ export const METRIC_KEYS = [
   "priceOut",
   "throughput",
   "latency",
+  // 以下为后续追加：6 项行业指数 + 评测成本。
+  "finance",
+  "strategy",
+  "legal",
+  "healthcare",
+  "engineering",
+  "economics",
+  /** 跑完一遍智能指数评测的总美元。0 是真实的 0（免费模型），不是缺失。 */
+  "indexCost",
+  /** 单任务成本（美元）。 */
+  "taskCost",
 ] as const;
 
 export type MetricKey = (typeof METRIC_KEYS)[number];
 
-type Tuple7<T> = [T, T, T, T, T, T, T];
-
 /** 与 METRIC_KEYS 一一对应。null = 当天没有这项数据（不是 0）。 */
-export type MetricTuple = Tuple7<number | null>;
+export type MetricTuple = Nullable<typeof METRIC_KEYS>;
+
+/** 把只读元组 [a, b, …] 映射为等长可变的 [number | null, …]（保持长度联动）。 */
+type Nullable<T extends readonly unknown[]> = { -readonly [K in keyof T]: number | null };
 
 export type HistorySnapshot = {
   /**
@@ -117,6 +136,11 @@ export type EventLog = {
  *
  * 刻意排除 throughput 和 latency：它们是实测中位数，每天都在小幅漂移，
  * 纳入后会每天产生几百条噪音事件，把真正的新模型和降价淹掉。
+ *
+ * 同理，行业指数与评测成本（finance … taskCost）也不产生事件：
+ * 行业指数的 null ↔ 有值切换太频繁，会淹没真正的新模型和降价。
+ * 比较只遍历这里列出的 key，且 readMetric 对缺失位置返回 null，
+ * 所以「前一天 7 元组、今天 15 元组」不会因长度不同产生虚假事件。
  */
 const EVENT_METRICS: readonly MetricKey[] = [
   "intelligence",
@@ -158,6 +182,14 @@ export function toMetricTuple(model: LanguageModel): MetricTuple {
     model.pricing?.price_1m_output_tokens ?? null,
     model.performance?.median_output_tokens_per_second ?? null,
     model.performance?.median_time_to_first_token_seconds ?? null,
+    model.evaluations?.artificial_analysis_finance_and_accounting_index ?? null,
+    model.evaluations?.artificial_analysis_strategy_and_ops_index ?? null,
+    model.evaluations?.artificial_analysis_legal_index ?? null,
+    model.evaluations?.artificial_analysis_healthcare_and_medical_index ?? null,
+    model.evaluations?.artificial_analysis_engineering_index ?? null,
+    model.evaluations?.artificial_analysis_economics_index ?? null,
+    model.artificial_analysis_intelligence_index_cost?.total_cost ?? null,
+    model.artificial_analysis_intelligence_index_cost?.cost_per_task?.total_cost ?? null,
   ];
 }
 
