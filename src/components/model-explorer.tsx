@@ -137,8 +137,28 @@ function initialSortColumn(
   return (sort as ColumnId) || DIMENSION_COLUMNS[dimension].sort;
 }
 
-function initialSortDir(params: URLSearchParams | null): SortDir {
-  return params?.get("dir") === "asc" ? "asc" : "desc";
+/**
+ * 地址里没有 dir 时的隐含方向。
+ *
+ * 维度的默认排序列按它自己「好」的方向走（成本越低越好，所以升序）；
+ * 其它列沿用旧约定——没写 dir 就是降序，已分享的旧链接含义不变。
+ */
+function impliedSortDir(dimension: Dimension, column: ColumnId): SortDir {
+  if (column === "name" || column !== DIMENSION_COLUMNS[dimension].sort) {
+    return "desc";
+  }
+  return HIGHER_IS_BETTER[column] ? "desc" : "asc";
+}
+
+function initialSortDir(
+  params: URLSearchParams | null,
+  dimension: Dimension,
+  column: ColumnId
+): SortDir {
+  const dir = params?.get("dir");
+  return dir === "asc" || dir === "desc"
+    ? dir
+    : impliedSortDir(dimension, column);
 }
 
 export default function ModelExplorer({
@@ -158,9 +178,11 @@ export default function ModelExplorer({
   const [sortColumn, setSortColumn] = useState<ColumnId>(() =>
     initialSortColumn(readParams(), initialDimension(readParams()))
   );
-  const [sortDir, setSortDir] = useState<SortDir>(() =>
-    initialSortDir(readParams())
-  );
+  const [sortDir, setSortDir] = useState<SortDir>(() => {
+    const params = readParams();
+    const dim = initialDimension(params);
+    return initialSortDir(params, dim, initialSortColumn(params, dim));
+  });
   const [vendorQuery, setVendorQuery] = useState("");
   const vendorMenuRef = useRef<HTMLDetailsElement>(null);
 
@@ -198,7 +220,7 @@ export default function ModelExplorer({
     if (query) params.set("q", query);
     if (selectedVendors.length) params.set("vendor", selectedVendors.join(","));
     if (sortColumn !== DIMENSION_COLUMNS[dimension].sort) params.set("sort", sortColumn);
-    if (sortDir === "asc") params.set("dir", "asc");
+    if (sortDir !== impliedSortDir(dimension, sortColumn)) params.set("dir", sortDir);
     const search = params.toString();
     const url = search ? `?${search}` : window.location.pathname;
     // ClientRouter 把导航 index 与滚动位置放在 history.state 里；这里如果

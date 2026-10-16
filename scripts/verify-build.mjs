@@ -176,6 +176,137 @@ check(
   changes.includes("text-rise")
 );
 
+console.log("\n【额外】行业评测与评测成本");
+{
+  // 英文文案取自 src/i18n/en.ts 的 models.dims，避免在这里写死第二份。
+  const enSource = fs.readFileSync(path.join(ROOT, "src/i18n/en.ts"), "utf8");
+  const dims = enSource.match(/dims:\s*\{([^}]*)\}/)?.[1] ?? "";
+  const enDomains = dims.match(/domains:\s*"([^"]+)"/)?.[1];
+  const enCost = dims.match(/cost:\s*"([^"]+)"/)?.[1];
+  check("能从 en.ts 读到 dims.domains / dims.cost", Boolean(enDomains && enCost), `${enDomains} / ${enCost}`);
+
+  const zhTabs = read("models/index.html");
+  const enTabs = read("en/models/index.html");
+  check(
+    "中文探索器含「行业」「评测成本」维度 tab",
+    zhTabs.includes(">行业<") && zhTabs.includes(">评测成本<")
+  );
+  check(
+    `英文探索器含「${enDomains}」「${enCost}」维度 tab`,
+    Boolean(enDomains && enCost) && enTabs.includes(`>${enDomains}<`) && enTabs.includes(`>${enCost}<`)
+  );
+
+  const DOMAIN_FIELDS = [
+    "finance_and_accounting",
+    "strategy_and_ops",
+    "legal",
+    "healthcare_and_medical",
+    "engineering",
+    "economics",
+  ].map((key) => `artificial_analysis_${key}_index`);
+  const domainOf = (m) => DOMAIN_FIELDS.map((f) => m.evaluations?.[f] ?? null);
+  const totalCostOf = (m) => m.artificial_analysis_intelligence_index_cost?.total_cost ?? null;
+
+  // 取页面里某个标题之后、到所在 </section> 为止的片段（找不到 </section> 就取 3000 字符）。
+  // 同一标题可能出现多次（目录、锚点），所以返回全部片段。
+  const sectionsAfter = (html, title) => {
+    const slices = [];
+    let from = html.indexOf(title);
+    while (from !== -1) {
+      const end = html.indexOf("</section>", from);
+      slices.push(html.slice(from, end === -1 ? from + 3000 : end));
+      from = html.indexOf(title, from + title.length);
+    }
+    return slices;
+  };
+
+  // —— 行业评测 ——
+  const withDomain = allModels.find((m) => (m.evaluations?.artificial_analysis_engineering_index ?? null) != null);
+  if (!withDomain) {
+    console.log("  · 当日数据里没有工程指数有值的模型，跳过「有值」断言");
+  } else {
+    const html = read(`models/${withDomain.slug}/index.html`);
+    const value = withDomain.evaluations.artificial_analysis_engineering_index.toFixed(1);
+    const slices = sectionsAfter(html, "行业评测");
+    check(`有行业分的模型页含「行业评测」(${withDomain.slug})`, slices.length > 0);
+    check(
+      `行业评测区块里渲染了工程指数 ${value}`,
+      slices.some((s) => s.includes(value)),
+      "依赖详情页最终渲染：一位小数"
+    );
+  }
+
+  const noDomain = allModels.find((m) => domainOf(m).every((v) => v == null));
+  if (!noDomain) {
+    console.log("  · 当日数据里每个模型都有行业分，跳过「全空」断言");
+  } else {
+    const html = read(`models/${noDomain.slug}/index.html`);
+    check(`全无行业分的模型页显示「未评测」(${noDomain.slug})`, html.includes("未评测"));
+    // 缺失不得被渲染成 0：区块内不能出现 >0< / >0.0< / >0%< 这类零值文本节点。
+    const zeroNode = />\s*0(?:\.0+)?\s*(?:分|%)?\s*</;
+    const slices = sectionsAfter(html, "行业评测");
+    check(
+      "行业评测区块里缺失不渲染成 0",
+      slices.every((s) => !zeroNode.test(s)),
+      slices.length ? "" : "页面没有该区块（也可接受）"
+    );
+  }
+
+  // —— 评测成本 ——
+  const withCost = allModels.find((m) => (totalCostOf(m) ?? 0) > 0);
+  if (!withCost) {
+    console.log("  · 当日数据里没有评测成本大于 0 的模型，跳过「有值」断言");
+  } else {
+    check(
+      `有评测成本的模型页含「评测成本」(${withCost.slug})`,
+      read(`models/${withCost.slug}/index.html`).includes("评测成本")
+    );
+  }
+
+  const nullCost = allModels.find((m) => m.artificial_analysis_intelligence_index_cost == null);
+  if (!nullCost) {
+    console.log("  · 当日数据里每个模型都有评测成本，跳过「缺失」断言");
+  } else {
+    const html = read(`models/${nullCost.slug}/index.html`);
+    // 价格为 0 的免费模型成本是真实的 0，不在此列——这里挑的是 null。
+    const zeroMoney = /\$\s*0(?:\.0+)?(?![\d.])/;
+    const slices = sectionsAfter(html, "评测成本");
+    check(
+      `评测成本为 null 的模型页不渲染 $0 (${nullCost.slug})`,
+      slices.every((s) => !zeroMoney.test(s)),
+      slices.length ? "" : "页面没有该区块（也可接受）"
+    );
+  }
+
+  // —— 历史快照 ——
+  const NEW_METRIC_KEYS = [
+    "finance", "strategy", "legal", "healthcare",
+    "engineering", "economics", "indexCost", "taskCost",
+  ];
+  const latestMonthFile = fs
+    .readdirSync(historyDir)
+    .filter((name) => /^\d{4}-\d{2}\.json$/.test(name))
+    .sort()
+    .at(-1);
+  const latestMonth = JSON.parse(fs.readFileSync(path.join(historyDir, latestMonthFile), "utf8"));
+  const latestDay = Object.keys(latestMonth.snapshots).sort().at(-1);
+  const tuples = Object.values(latestMonth.snapshots[latestDay].models);
+  const lengths = tuples.map((t) => t.length);
+  check(
+    `最新快照 ${latestDay} 每个模型元组长度 ≥ 7`,
+    tuples.length > 0 && lengths.every((n) => n >= 7),
+    `最短 ${Math.min(...lengths)}`
+  );
+  const wide = lengths.filter((n) => n >= 15).length;
+  // 回填完成前这里是 0%，不作硬失败；只是让人在日志里看见进度。
+  console.log(`  · 15 元组占比 ${wide}/${tuples.length}（${((wide / tuples.length) * 100).toFixed(1)}%），仅供参考，不作硬失败`);
+  check(
+    "事件日志里没有新指标的事件（新指标不产生变化事件）",
+    !eventLog.events.some((e) => NEW_METRIC_KEYS.includes(e.metric)),
+    eventLog.events.find((e) => NEW_METRIC_KEYS.includes(e.metric))?.metric ?? ""
+  );
+}
+
 console.log("\n【额外】诚实性与主题");
 const media = read("media/index.html");
 // 并列警告只在并列数够多时才渲染（口径同 src/views/media.astro），
@@ -472,10 +603,15 @@ const broken = [...seen].filter((href) => {
 check(`站内链接全部有对应产物（检查 ${seen.size} 个）`, broken.length === 0, broken.slice(0, 5).join(", "));
 
 console.log("\n【额外】体积");
+// 默认预算 70KB。模型榜页要把探索器的行数据当 props 内联给水合用，
+// 接入行业指数与评测成本（8 个字段）后真实增量约 5KB，单独放宽到 80KB；
+// 预算的目的是拦住「整份数据集被打进页面」，不是卡死在某个数上。
+const PAGE_BUDGET_KB = { "models/index.html": 80 };
 for (const p of ["index.html", "models/index.html", "media/index.html"]) {
   const raw = read(p);
   const gz = zlib.gzipSync(raw).length;
-  check(`${p} gzip ${(gz / 1024).toFixed(1)}KB`, gz < 70 * 1024);
+  const budget = PAGE_BUDGET_KB[p] ?? 70;
+  check(`${p} gzip ${(gz / 1024).toFixed(1)}KB（预算 ${budget}KB）`, gz < budget * 1024);
 }
 const js = fs
   .readdirSync(path.join(DIST, "_astro"))
