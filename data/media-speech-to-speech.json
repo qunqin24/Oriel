@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-14T00:09:37.420Z",
+  "fetched_at": "2026-10-16T01:28:58.043Z",
   "tier": "free",
   "data": [
     {
@@ -267,6 +267,18 @@
       "tau_voice_score": null
     },
     {
+      "id": "b47058e4-4daa-4027-9544-012da741dc2a",
+      "name": "Grok Voice 3.0",
+      "slug": "grok-voice-3-0",
+      "model_creator": {
+        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+        "name": "SpaceXAI"
+      },
+      "bba_score": 0.98,
+      "fdb_score": 0.97,
+      "tau_voice_score": 0.72
+    },
+    {
       "id": "eb149ab8-c4ed-4b96-87a5-07d1caf6f3bb",
       "name": "GPT Realtime Mini (Oct 2025)",
       "slug": "gpt-realtime-mini-oct-25",
@@ -313,6 +325,18 @@
       "bba_score": 0.83,
       "fdb_score": 0.94,
       "tau_voice_score": 0.3
+    },
+    {
+      "id": "d9f4eed0-6367-4f1f-abbb-6ed522044afc",
+      "name": "Grok Voice 1.0",
+      "slug": "grok-voice-think-fast-1-0",
+      "model_creator": {
+        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+        "name": "SpaceXAI"
+      },
+      "bba_score": 0.97,
+      "fdb_score": 0.78,
+      "tau_voice_score": 0.52
     },
     {
       "id": "62e7db61-ca85-4d6a-a672-8be58febaca3",
@@ -447,18 +471,6 @@
       "tau_voice_score": null
     },
     {
-      "id": "d9f4eed0-6367-4f1f-abbb-6ed522044afc",
-      "name": "Grok Voice Think Fast 1.0",
-      "slug": "grok-voice-think-fast-1-0",
-      "model_creator": {
-        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
-        "name": "SpaceXAI"
-      },
-      "bba_score": 0.97,
-      "fdb_score": 0.78,
-      "tau_voice_score": 0.52
-    },
-    {
       "id": "95efc3a2-6a67-4c4d-bd62-284403a4552f",
       "name": "GPT-Realtime-2 High",
       "slug": "gpt-realtime-2-high",
@@ -520,7 +532,7 @@
     },
     {
       "id": "ad8b4198-6d80-483a-aaeb-ce9150e0eade",
-      "name": "Grok Voice Think Fast 2.0 High",
+      "name": "Grok Voice 2.0",
       "slug": "grok-voice-think-high-2-0",
       "model_creator": {
         "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",

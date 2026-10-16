@@ -1,6 +1,388 @@
 {
-  "generated_at": "2026-10-14T00:09:38.561Z",
+  "generated_at": "2026-10-16T01:28:59.652Z",
   "events": [
+    {
+      "date": "2026-10-16",
+      "type": "added",
+      "model": {
+        "id": "f3a0e101-086f-44b3-a1b2-d23498f9716b",
+        "name": "Agnes 2.5 Pro Beta",
+        "slug": "agnes-2-5-pro-beta",
+        "creator": "Sapiens AI",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-10-16"
+      },
+      "intelligence": 35.2
+    },
+    {
+      "date": "2026-10-16",
+      "type": "added",
+      "model": {
+        "id": "3661c8fb-caf7-4118-aa18-65b84fea8e44",
+        "name": "Muse Spark Open (Xhigh)",
+        "slug": "muse-spark-open",
+        "creator": "Meta",
+        "first_seen": "2026-10-16",
+        "last_seen": "2026-10-16"
+      },
+      "intelligence": 38.9
+    },
+    {
+      "date": "2026-10-16",
+      "type": "added",
+      "model": {
+        "id": "7d2aa050-888e-4c27-a92d-10337a4dfb3a",
+        "name": "Nemotron 3.5 Bolt 74B-A9B",
+        "slug": "nemotron-3-5-bolt-74b-a9b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-10-16",
+        "last_seen": "2026-10-16"
+      },
+      "intelligence": 21.4
+    },
+    {
+      "date": "2026-10-16",
+      "type": "added",
+      "model": {
+        "id": "e2c0623e-c855-4a61-bb66-be1f1ed43234",
+        "name": "Nemotron 3.5 Super VL",
+        "slug": "nemotron-3-5-super-vl",
+        "creator": "NVIDIA",
+        "first_seen": "2026-10-16",
+        "last_seen": "2026-10-16"
+      },
+      "intelligence": 26.5
+    },
+    {
+      "date": "2026-10-16",
+      "type": "price",
+      "model": {
+        "id": "61bd9367-e520-4ec8-989e-5fbf50e61610",
+        "name": "Nova 2.0 Lite (High)",
+        "slug": "nova-2-0-lite-reasoning",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "priceIn",
+      "from": 0.33,
+      "to": 0.3
+    },
+    {
+      "date": "2026-10-16",
+      "type": "price",
+      "model": {
+        "id": "61bd9367-e520-4ec8-989e-5fbf50e61610",
+        "name": "Nova 2.0 Lite (High)",
+        "slug": "nova-2-0-lite-reasoning",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "priceOut",
+      "from": 2.75,
+      "to": 2.5
+    },
+    {
+      "date": "2026-10-16",
+      "type": "price",
+      "model": {
+        "id": "6fd796d3-f346-4f66-97df-5da81714fc73",
+        "name": "Nova 2.0 Lite (Low)",
+        "slug": "nova-2-0-lite-reasoning-low",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "priceIn",
+      "from": 0.33,
+      "to": 0.3
+    },
+    {
+      "date": "2026-10-16",
+      "type": "price",
+      "model": {
+        "id": "6fd796d3-f346-4f66-97df-5da81714fc73",
+        "name": "Nova 2.0 Lite (Low)",
+        "slug": "nova-2-0-lite-reasoning-low",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "priceOut",
+      "from": 2.75,
+      "to": 2.5
+    },
+    {
+      "date": "2026-10-16",
+      "type": "price",
+      "model": {
+        "id": "fbdf8da1-b341-448c-b3cb-8aff1d8f70b9",
+        "name": "Nova 2.0 Lite (Medium)",
+        "slug": "nova-2-0-lite-reasoning-medium",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "priceIn",
+      "from": 0.33,
+      "to": 0.3
+    },
+    {
+      "date": "2026-10-16",
+      "type": "price",
+      "model": {
+        "id": "fbdf8da1-b341-448c-b3cb-8aff1d8f70b9",
+        "name": "Nova 2.0 Lite (Medium)",
+        "slug": "nova-2-0-lite-reasoning-medium",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "priceOut",
+      "from": 2.75,
+      "to": 2.5
+    },
+    {
+      "date": "2026-10-16",
+      "type": "price",
+      "model": {
+        "id": "76bce7fb-3a3f-4b66-a78d-35ccf3edf5d2",
+        "name": "Nova 2.0 Lite (Non-reasoning)",
+        "slug": "nova-2-0-lite",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "priceIn",
+      "from": 0.33,
+      "to": 0.3
+    },
+    {
+      "date": "2026-10-16",
+      "type": "price",
+      "model": {
+        "id": "76bce7fb-3a3f-4b66-a78d-35ccf3edf5d2",
+        "name": "Nova 2.0 Lite (Non-reasoning)",
+        "slug": "nova-2-0-lite",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "priceOut",
+      "from": 2.75,
+      "to": 2.5
+    },
+    {
+      "date": "2026-10-16",
+      "type": "price",
+      "model": {
+        "id": "f4274721-ef28-4121-aa88-8e97267a5a82",
+        "name": "Nova 2.0 Pro Preview (Low)",
+        "slug": "nova-2-0-pro-reasoning-low",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "priceIn",
+      "from": 1.375,
+      "to": 1.25
+    },
+    {
+      "date": "2026-10-16",
+      "type": "price",
+      "model": {
+        "id": "f4274721-ef28-4121-aa88-8e97267a5a82",
+        "name": "Nova 2.0 Pro Preview (Low)",
+        "slug": "nova-2-0-pro-reasoning-low",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "priceOut",
+      "from": 11,
+      "to": 10
+    },
+    {
+      "date": "2026-10-16",
+      "type": "price",
+      "model": {
+        "id": "0d94dc87-12c8-4d4a-8d99-804ce3f17bc2",
+        "name": "Nova 2.0 Pro Preview (Medium)",
+        "slug": "nova-2-0-pro-reasoning-medium",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "priceIn",
+      "from": 1.375,
+      "to": 1.25
+    },
+    {
+      "date": "2026-10-16",
+      "type": "price",
+      "model": {
+        "id": "0d94dc87-12c8-4d4a-8d99-804ce3f17bc2",
+        "name": "Nova 2.0 Pro Preview (Medium)",
+        "slug": "nova-2-0-pro-reasoning-medium",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "priceOut",
+      "from": 11,
+      "to": 10
+    },
+    {
+      "date": "2026-10-16",
+      "type": "price",
+      "model": {
+        "id": "a20ae33a-46e1-41e6-81a0-fe8b00d2e538",
+        "name": "Nova 2.0 Pro Preview (Non-reasoning)",
+        "slug": "nova-2-0-pro",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "priceIn",
+      "from": 1.375,
+      "to": 1.25
+    },
+    {
+      "date": "2026-10-16",
+      "type": "price",
+      "model": {
+        "id": "a20ae33a-46e1-41e6-81a0-fe8b00d2e538",
+        "name": "Nova 2.0 Pro Preview (Non-reasoning)",
+        "slug": "nova-2-0-pro",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "priceOut",
+      "from": 11,
+      "to": 10
+    },
+    {
+      "date": "2026-10-16",
+      "type": "score",
+      "model": {
+        "id": "922c69c7-9037-43c6-8bcf-a1c555e7f3eb",
+        "name": "Llama 4 Maverick",
+        "slug": "llama-4-maverick",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "intelligence",
+      "from": 10,
+      "to": 9.3
+    },
+    {
+      "date": "2026-10-16",
+      "type": "score",
+      "model": {
+        "id": "adf9a85e-abc3-4f28-937b-db6655cc5238",
+        "name": "Llama 4 Scout",
+        "slug": "llama-4-scout",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "intelligence",
+      "from": 8.1,
+      "to": 6.5
+    },
+    {
+      "date": "2026-10-16",
+      "type": "score",
+      "model": {
+        "id": "016d330a-2141-4afa-b2fc-62b314423dc1",
+        "name": "Mercury 2",
+        "slug": "mercury-2",
+        "creator": "Inception",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "intelligence",
+      "from": 13.8,
+      "to": 10.8
+    },
+    {
+      "date": "2026-10-16",
+      "type": "score",
+      "model": {
+        "id": "22d09131-343b-4adf-8760-533e20a2155f",
+        "name": "MiMo-V2.5",
+        "slug": "mimo-v2-5-0424",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "intelligence",
+      "from": 25.2,
+      "to": 21.8
+    },
+    {
+      "date": "2026-10-16",
+      "type": "score",
+      "model": {
+        "id": "43da3718-3d6e-40dd-901a-05664179ff7f",
+        "name": "Mistral Small 3.2",
+        "slug": "mistral-small-3-2",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "intelligence",
+      "from": 8.2,
+      "to": 7
+    },
+    {
+      "date": "2026-10-16",
+      "type": "score",
+      "model": {
+        "id": "4559e9f0-8aad-4681-89fb-68cb915e0f16",
+        "name": "Qwen3 14B (Reasoning)",
+        "slug": "qwen3-14b-instruct-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "intelligence",
+      "from": 8.2,
+      "to": 6.4
+    },
+    {
+      "date": "2026-10-16",
+      "type": "score",
+      "model": {
+        "id": "b00ecd62-a53f-4aed-b833-3e9d6b0170ba",
+        "name": "Qwen3 32B (Reasoning)",
+        "slug": "qwen3-32b-instruct-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "intelligence",
+      "from": 8.6,
+      "to": 7.2
+    },
+    {
+      "date": "2026-10-16",
+      "type": "score",
+      "model": {
+        "id": "9dba61f5-78ee-4190-8d1d-8e7063ffd386",
+        "name": "Qwen3 8B (Reasoning)",
+        "slug": "qwen3-8b-instruct-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-16"
+      },
+      "metric": "intelligence",
+      "from": 7.3,
+      "to": 5.2
+    },
     {
       "date": "2026-10-14",
       "type": "price",
