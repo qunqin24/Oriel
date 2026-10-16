@@ -1,6 +1,764 @@
 {
-  "generated_at": "2026-10-16T01:28:59.652Z",
+  "generated_at": "2026-10-16T23:16:23.743Z",
   "events": [
+    {
+      "date": "2026-10-17",
+      "type": "added",
+      "model": {
+        "id": "69468cce-7b5c-414a-b498-41df4c34df85",
+        "name": "Beam 1.0",
+        "slug": "reflection-beam",
+        "creator": "Reflection",
+        "first_seen": "2026-10-17",
+        "last_seen": "2026-10-17"
+      },
+      "intelligence": 30.3
+    },
+    {
+      "date": "2026-10-17",
+      "type": "added",
+      "model": {
+        "id": "15c4cbd7-b9aa-42c8-9ce5-5abbde0e6963",
+        "name": "Solar Pro 4",
+        "slug": "solar-pro4",
+        "creator": "Upstage",
+        "first_seen": "2026-10-17",
+        "last_seen": "2026-10-17"
+      },
+      "intelligence": 26.6
+    },
+    {
+      "date": "2026-10-17",
+      "type": "removed",
+      "model": {
+        "id": "1b64aa81-c223-4b8f-909b-82185a234765",
+        "name": "Solar Pro 4",
+        "slug": "solar-pro4",
+        "creator": "Upstage",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-10-16"
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "49e70a38-4ac1-4659-b490-09b2c7ff21d6",
+        "name": "Apertus 70B Instruct",
+        "slug": "apertus-70b-instruct",
+        "creator": "Swiss AI Initiative",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.82,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "49e70a38-4ac1-4659-b490-09b2c7ff21d6",
+        "name": "Apertus 70B Instruct",
+        "slug": "apertus-70b-instruct",
+        "creator": "Swiss AI Initiative",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 2.92,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "a71c1a35-ccc8-43f0-a5a2-070a690b9a00",
+        "name": "Apriel-v1.6-15B-Thinker",
+        "slug": "apriel-v1-6-15b-thinker",
+        "creator": "ServiceNow",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "a71c1a35-ccc8-43f0-a5a2-070a690b9a00",
+        "name": "Apriel-v1.6-15B-Thinker",
+        "slug": "apriel-v1-6-15b-thinker",
+        "creator": "ServiceNow",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "ea5d2c10-1051-437d-95c2-18d5e4d14ff3",
+        "name": "Cogito v2.1 (Reasoning)",
+        "slug": "cogito-v2-1-reasoning",
+        "creator": "Deep Cogito",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 1.25,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "ea5d2c10-1051-437d-95c2-18d5e4d14ff3",
+        "name": "Cogito v2.1 (Reasoning)",
+        "slug": "cogito-v2-1-reasoning",
+        "creator": "Deep Cogito",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 1.25,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "ae4fe623-80ab-4ea3-8921-70a18ea0fc7e",
+        "name": "ERNIE 4.5 300B A47B",
+        "slug": "ernie-4-5-300b-a47b",
+        "creator": "Baidu",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.28,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "ae4fe623-80ab-4ea3-8921-70a18ea0fc7e",
+        "name": "ERNIE 4.5 300B A47B",
+        "slug": "ernie-4-5-300b-a47b",
+        "creator": "Baidu",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 1.1,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "c1c5db7c-968f-445a-a274-7b5689348bf8",
+        "name": "G9v3-39A5B",
+        "slug": "g9v3-39a5b",
+        "creator": "AI9Stars",
+        "first_seen": "2026-08-25",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "c1c5db7c-968f-445a-a274-7b5689348bf8",
+        "name": "G9v3-39A5B",
+        "slug": "g9v3-39a5b",
+        "creator": "AI9Stars",
+        "first_seen": "2026-08-25",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "2ffa7571-fa78-453a-b589-9aa3fac702d2",
+        "name": "G9v3-3B",
+        "slug": "g9v3-3b",
+        "creator": "AI9Stars",
+        "first_seen": "2026-07-24",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "2ffa7571-fa78-453a-b589-9aa3fac702d2",
+        "name": "G9v3-3B",
+        "slug": "g9v3-3b",
+        "creator": "AI9Stars",
+        "first_seen": "2026-07-24",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "6e1b44ff-c227-496b-aef4-19b70cd18c76",
+        "name": "Gemma 4 26B A4B (Reasoning)",
+        "slug": "gemma-4-26b-a4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0.4,
+      "to": 0.37
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "f0083258-8646-45b8-8082-7aaf6c2ea82a",
+        "name": "gpt-oss-120b (High)",
+        "slug": "gpt-oss-120b",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.15,
+      "to": 0.125
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "f0083258-8646-45b8-8082-7aaf6c2ea82a",
+        "name": "gpt-oss-120b (High)",
+        "slug": "gpt-oss-120b",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0.59,
+      "to": 0.595
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "c99f3bde-7c08-4de8-bd5c-8ee9123ebffa",
+        "name": "gpt-oss-120b (Low)",
+        "slug": "gpt-oss-120b-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.15,
+      "to": 0.1
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "c99f3bde-7c08-4de8-bd5c-8ee9123ebffa",
+        "name": "gpt-oss-120b (Low)",
+        "slug": "gpt-oss-120b-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0.5,
+      "to": 0.59
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "36f73aaf-d38a-4b56-a2b3-d04d17186910",
+        "name": "gpt-oss-20b (High)",
+        "slug": "gpt-oss-20b",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.07,
+      "to": 0.0575
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "36f73aaf-d38a-4b56-a2b3-d04d17186910",
+        "name": "gpt-oss-20b (High)",
+        "slug": "gpt-oss-20b",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0.18,
+      "to": 0.215
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "16149b9c-a1e9-4669-a5cb-ff3c00d78f89",
+        "name": "gpt-oss-20b (Low)",
+        "slug": "gpt-oss-20b-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0.215,
+      "to": 0.25
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "5dba8d07-9992-483c-81db-dac97cb15ba8",
+        "name": "Granite 4.0 H Small",
+        "slug": "granite-4-0-h-small",
+        "creator": "IBM",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.06,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "5dba8d07-9992-483c-81db-dac97cb15ba8",
+        "name": "Granite 4.0 H Small",
+        "slug": "granite-4-0-h-small",
+        "creator": "IBM",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0.25,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "bb3d7e75-8e22-4082-b9d6-1db0803e042f",
+        "name": "K2 Horizon 375B A23B",
+        "slug": "k2-horizon-375b-a23b",
+        "creator": "Institute of Foundation Models",
+        "first_seen": "2026-09-04",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "bb3d7e75-8e22-4082-b9d6-1db0803e042f",
+        "name": "K2 Horizon 375B A23B",
+        "slug": "k2-horizon-375b-a23b",
+        "creator": "Institute of Foundation Models",
+        "first_seen": "2026-09-04",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "fc4223e8-4586-4ca1-97ca-bb55ff586947",
+        "name": "KAT Coder Pro V2",
+        "slug": "kat-coder-pro-v2",
+        "creator": "KwaiKAT",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.3,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "fc4223e8-4586-4ca1-97ca-bb55ff586947",
+        "name": "KAT Coder Pro V2",
+        "slug": "kat-coder-pro-v2",
+        "creator": "KwaiKAT",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 1.2,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "922c69c7-9037-43c6-8bcf-a1c555e7f3eb",
+        "name": "Llama 4 Maverick",
+        "slug": "llama-4-maverick",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0.87,
+      "to": 0.92
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "5b52def2-ac9b-4465-ad80-91ea8079e253",
+        "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
+        "slug": "nvidia-nemotron-3-ultra-550b-a55b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 2.5,
+      "to": 2.7
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "e2c0623e-c855-4a61-bb66-be1f1ed43234",
+        "name": "Nemotron 3.5 Super VL",
+        "slug": "nemotron-3-5-super-vl",
+        "creator": "NVIDIA",
+        "first_seen": "2026-10-16",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.25,
+      "to": 0.225
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "e2c0623e-c855-4a61-bb66-be1f1ed43234",
+        "name": "Nemotron 3.5 Super VL",
+        "slug": "nemotron-3-5-super-vl",
+        "creator": "NVIDIA",
+        "first_seen": "2026-10-16",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0.65,
+      "to": 0.575
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "b36ff8f3-0323-49d1-a063-ab09704fdb0c",
+        "name": "Nova 2.0 Omni (Low)",
+        "slug": "nova-2-0-omni-reasoning-low",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.3,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "b36ff8f3-0323-49d1-a063-ab09704fdb0c",
+        "name": "Nova 2.0 Omni (Low)",
+        "slug": "nova-2-0-omni-reasoning-low",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 2.5,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "018c60e8-e908-431a-ba57-c840b1df3987",
+        "name": "Nova 2.0 Omni (Medium)",
+        "slug": "nova-2-0-omni-reasoning-medium",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.3,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "018c60e8-e908-431a-ba57-c840b1df3987",
+        "name": "Nova 2.0 Omni (Medium)",
+        "slug": "nova-2-0-omni-reasoning-medium",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 2.5,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "1f6478c9-3e22-4586-adbe-841782859677",
+        "name": "Nova 2.0 Omni (Non-reasoning)",
+        "slug": "nova-2-0-omni",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.3,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "1f6478c9-3e22-4586-adbe-841782859677",
+        "name": "Nova 2.0 Omni (Non-reasoning)",
+        "slug": "nova-2-0-omni",
+        "creator": "Amazon",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 2.5,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "8f74a6ed-f82f-4a2f-a96b-4914993e47da",
+        "name": "Olmo 3 7B Instruct",
+        "slug": "olmo-3-7b-instruct",
+        "creator": "Allen Institute for AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.1,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "8f74a6ed-f82f-4a2f-a96b-4914993e47da",
+        "name": "Olmo 3 7B Instruct",
+        "slug": "olmo-3-7b-instruct",
+        "creator": "Allen Institute for AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0.2,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "39b64e04-7a69-4aa2-9e2e-fe38c24681ec",
+        "name": "Olmo 3.1 32B Think",
+        "slug": "olmo-3-1-32b-think",
+        "creator": "Allen Institute for AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "39b64e04-7a69-4aa2-9e2e-fe38c24681ec",
+        "name": "Olmo 3.1 32B Think",
+        "slug": "olmo-3-1-32b-think",
+        "creator": "Allen Institute for AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "fc92f822-04b7-420d-9c07-a21af5e9aac7",
+        "name": "Qwen3 Coder Next",
+        "slug": "qwen3-coder-next",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.5,
+      "to": 0.31
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "fc92f822-04b7-420d-9c07-a21af5e9aac7",
+        "name": "Qwen3 Coder Next",
+        "slug": "qwen3-coder-next",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 1.2,
+      "to": 1
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "2698f6c6-e436-47ce-a583-dbc25596c571",
+        "name": "Qwen3 Next 80B A3B Instruct",
+        "slug": "qwen3-next-80b-a3b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.15,
+      "to": 0.125
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "2698f6c6-e436-47ce-a583-dbc25596c571",
+        "name": "Qwen3 Next 80B A3B Instruct",
+        "slug": "qwen3-next-80b-a3b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 1.1,
+      "to": 1.15
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "47b7df55-5804-40de-ba11-317de786710a",
+        "name": "Ring-flash-2.0",
+        "slug": "ring-flash-2-0",
+        "creator": "InclusionAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.14,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "47b7df55-5804-40de-ba11-317de786710a",
+        "name": "Ring-flash-2.0",
+        "slug": "ring-flash-2-0",
+        "creator": "InclusionAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0.57,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "764dd095-6ebd-4760-8eb3-cbc40964db2e",
+        "name": "Sarvam 30B (High)",
+        "slug": "sarvam-30b",
+        "creator": "Sarvam",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceIn",
+      "from": 0.026,
+      "to": null
+    },
+    {
+      "date": "2026-10-17",
+      "type": "price",
+      "model": {
+        "id": "764dd095-6ebd-4760-8eb3-cbc40964db2e",
+        "name": "Sarvam 30B (High)",
+        "slug": "sarvam-30b",
+        "creator": "Sarvam",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-17"
+      },
+      "metric": "priceOut",
+      "from": 0.11,
+      "to": null
+    },
     {
       "date": "2026-10-16",
       "type": "added",
