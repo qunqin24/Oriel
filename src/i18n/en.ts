@@ -158,6 +158,14 @@ export const en: Dict = {
       priceOut: "Output price",
       throughput: "Output throughput",
       latency: "Time to first token",
+      finance: "Finance & accounting",
+      strategy: "Strategy & operations",
+      legal: "Legal",
+      healthcare: "Healthcare & medical",
+      engineering: "Engineering",
+      economics: "Economics",
+      indexCost: "Eval total cost",
+      taskCost: "Cost per task",
     },
     firstScore: "First measured",
     withdrawn: "Metric withdrawn",
@@ -229,7 +237,7 @@ export const en: Dict = {
 
     coverageTitle: "Coverage",
     coverageBody:
-      "Of {total} language models, only some are measured on any given metric: intelligence {intelligence}, coding {coding}, agentic {agentic}, pricing {price}, performance {performance}. A dash means not tested — not tested badly. Those are different claims, so selecting a dimension removes models without that metric from the board instead of leaving you to read several hundred dashes.",
+      "Of {total} language models, only some are measured on any given metric: intelligence {intelligence}, coding {coding}, agentic {agentic}; in the domain evaluations, finance & accounting {finance}, strategy & operations {strategy}, legal {legal}, healthcare {healthcare}, engineering {engineering}, economics {economics}; evaluation cost {cost}; pricing {price}, performance {performance}. Domain evaluations and evaluation cost cover far fewer models than the overall index. A dash means not tested — not tested badly. Those are different claims, so selecting a dimension removes models without that metric from the board instead of leaving you to read several hundred dashes.",
 
     historyTitle: "History",
     historyBody:
@@ -241,7 +249,7 @@ export const en: Dict = {
 
     limitsTitle: "Known limits",
     limitsBody:
-      "The speech-to-text word error rate index is published to one decimal place, leaving many models tied at the same value; that board cannot actually order them, and the page marks how many are tied. Performance figures (throughput, latency) are medians measured at a particular time over a particular route, and move with provider load and your location. Prices cover base token billing only — no volume discounts, committed-use rates, or caching strategy.",
+      "The speech-to-text word error rate index is published to one decimal place, leaving many models tied at the same value; that board cannot actually order them, and the page marks how many are tied. Performance figures (throughput, latency) are medians measured at a particular time over a particular route, and move with provider load and your location. Prices cover base token billing only — no volume discounts, committed-use rates, or caching strategy. Evaluation cost is what upstream actually spent running the Intelligence Index once; like the index itself it is re-measured per version and not comparable across versions. A $0 for a free model is a real zero, not a missing value.",
   },
 
   catBoard: {
