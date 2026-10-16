@@ -26,8 +26,23 @@ export type LanguageModel = {
     artificial_analysis_coding_index: number | null;
     /** 171/586 有值 */
     artificial_analysis_agentic_index: number | null;
+    /**
+     * 六项行业指数。覆盖率都比智能指数低得多（医疗最低），
+     * 而且是近期才出现的字段，旧快照里一律没有——读取时必须按 null 处理。
+     */
+    artificial_analysis_finance_and_accounting_index?: number | null;
+    artificial_analysis_strategy_and_ops_index?: number | null;
+    artificial_analysis_legal_index?: number | null;
+    artificial_analysis_healthcare_and_medical_index?: number | null;
+    artificial_analysis_engineering_index?: number | null;
+    artificial_analysis_economics_index?: number | null;
   };
-  artificial_analysis_intelligence_index_cost: {
+  /**
+   * 跑完一遍智能指数评测要花多少美元，以及折合每个任务的花费。
+   * 价格表之外唯一反映「这个模型实际有多费」的数据——推理型模型输出 token 多，
+   * 单价低不代表跑下来便宜。价格为 0 的免费模型这里也是 0，是真实值不是缺失。
+   */
+  artificial_analysis_intelligence_index_cost?: {
     total_cost: number | null;
     cost_per_task: { total_cost: number | null };
   } | null;

@@ -10,6 +10,7 @@ import {
 import CompareRadar from "./compare-radar";
 import VendorIcon from "./vendor-icon";
 import {
+  formatCost,
   formatNumber,
   formatPrice,
   formatSeconds,
@@ -31,11 +32,19 @@ const METRIC_ROWS: Array<{ id: Exclude<ColumnId, "name">; key: keyof Dict["model
   { id: "intelligence", key: "intelligence" },
   { id: "coding", key: "coding" },
   { id: "agentic", key: "agentic" },
+  { id: "finance", key: "finance" },
+  { id: "strategy", key: "strategy" },
+  { id: "legal", key: "legal" },
+  { id: "healthcare", key: "healthcare" },
+  { id: "engineering", key: "engineering" },
+  { id: "economics", key: "economics" },
   { id: "value", key: "value" },
   { id: "priceIn", key: "priceIn" },
   { id: "priceOut", key: "priceOut" },
   { id: "throughput", key: "speed" },
   { id: "ttft", key: "ttft" },
+  { id: "indexCost", key: "indexCost" },
+  { id: "taskCost", key: "taskCost" },
 ];
 
 function display(
@@ -52,6 +61,9 @@ function display(
       return formatSeconds(row.ttft);
     case "throughput":
       return formatNumber(row.throughput, locale, 0);
+    case "indexCost":
+    case "taskCost":
+      return formatCost(row[metric], locale);
     case "release":
       return row.release ?? NO_VALUE;
     default:

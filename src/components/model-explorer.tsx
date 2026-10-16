@@ -5,6 +5,7 @@ import {
   DIMENSIONS,
   DIMENSION_COLUMNS,
   HIGHER_IS_BETTER,
+  hasFocusData,
   rowValue,
   unpackRow,
   type ColumnId,
@@ -13,6 +14,7 @@ import {
   type PackedRow,
 } from "@/lib/explorer-config";
 import {
+  formatCost,
   formatNumber,
   formatPrice,
   formatSeconds,
@@ -66,6 +68,16 @@ function formatCell(
       return formatNumber(row.coding, locale, 1);
     case "agentic":
       return formatNumber(row.agentic, locale, 1);
+    case "finance":
+    case "strategy":
+    case "legal":
+    case "healthcare":
+    case "engineering":
+    case "economics":
+      return formatNumber(row[column], locale, 1);
+    case "indexCost":
+    case "taskCost":
+      return formatCost(row[column], locale);
     case "value":
       return formatNumber(row.value, locale, 1);
     case "priceIn":
@@ -218,7 +230,7 @@ export default function ModelExplorer({
     return rows.filter((row) => {
       // 选定某个维度时，没有该项数据的模型直接不进表——
       // 让读者对着 388 行破折号猜，比少列几行更糟。
-      if (focus && rowValue(row, focus as ColumnId) == null) return false;
+      if (!hasFocusData(row, focus)) return false;
       if (vendorSet && !vendorSet.has(row.creator)) return false;
       if (!needle) return true;
       return (
@@ -286,7 +298,7 @@ export default function ModelExplorer({
     query !== "" || selectedVendors.length > 0 || dimension !== "overview";
 
   const coverageCount = config.focus
-    ? rows.filter((row) => rowValue(row, config.focus as ColumnId) != null).length
+    ? rows.filter((row) => hasFocusData(row, config.focus)).length
     : rows.length;
 
   return (

@@ -66,6 +66,8 @@ export const zh = {
       agentic: "智能体",
       value: "性价比",
       speed: "速度",
+      domains: "行业",
+      cost: "评测成本",
     },
     cols: {
       name: "模型",
@@ -73,6 +75,14 @@ export const zh = {
       intelligence: "智能",
       coding: "编程",
       agentic: "智能体",
+      finance: "金融",
+      strategy: "战略运营",
+      legal: "法律",
+      healthcare: "医疗",
+      engineering: "工程",
+      economics: "经济",
+      indexCost: "评测总成本",
+      taskCost: "单任务成本",
       value: "性价比",
       priceIn: "输入价",
       priceOut: "输出价",
@@ -99,6 +109,20 @@ export const zh = {
     intelligence: "智能指数",
     coding: "编程指数",
     agentic: "智能体指数",
+    domainsTitle: "行业评测",
+    domainsNote:
+      "Artificial Analysis 按行业场景做的评测。覆盖面比综合指数小得多，没评测的明说未评测，不当成 0 分。",
+    finance: "金融与会计",
+    strategy: "战略与运营",
+    legal: "法律",
+    healthcare: "医疗",
+    engineering: "工程",
+    economics: "经济",
+    costTitle: "评测成本",
+    costNote:
+      "跑完一遍智能指数评测实际花的钱。推理型模型输出的 token 多，单价低不代表跑下来便宜。",
+    indexCost: "评测总成本",
+    taskCost: "单任务成本",
     pricing: "价格",
     performance: "性能",
     priceIn: "输入",
@@ -209,7 +233,7 @@ export const zh = {
 
     coverageTitle: "覆盖率",
     coverageBody:
-      "{total} 款语言模型里，只有一部分被测过每一项。智能指数 {intelligence}、编程 {coding}、智能体 {agentic}、价格 {price}、性能 {performance}。破折号的意思是「没测」，不是「测得差」——这两件事完全不同，所以本站在选定某个维度时会把没有该项数据的模型移出榜单，而不是让你对着几百行破折号猜。",
+      "{total} 款语言模型里，只有一部分被测过每一项。智能指数 {intelligence}、编程 {coding}、智能体 {agentic}；行业评测里金融与会计 {finance}、战略与运营 {strategy}、法律 {legal}、医疗 {healthcare}、工程 {engineering}、经济 {economics}；评测成本 {cost}；价格 {price}、性能 {performance}。行业评测和评测成本的覆盖面比综合指数小得多，尤其是医疗。破折号的意思是「没测」，不是「测得差」——这两件事完全不同，所以本站在选定某个维度时会把没有该项数据的模型移出榜单，而不是让你对着几百行破折号猜。",
 
     historyTitle: "历史",
     historyBody:

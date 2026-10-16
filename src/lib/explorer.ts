@@ -1,5 +1,5 @@
 import { MODELS } from "./data.ts";
-import { valueScore } from "./metrics.ts";
+import { METRICS, valueScore } from "./metrics.ts";
 import { packRow, type ExplorerRow, type PackedRow } from "./explorer-config.ts";
 
 /**
@@ -24,6 +24,14 @@ const ROWS: ExplorerRow[] = MODELS.map((model) => ({
   throughput: model.performance?.median_output_tokens_per_second ?? null,
   ttft: model.performance?.median_time_to_first_token_seconds ?? null,
   release: model.release_date,
+  finance: METRICS.finance.get(model),
+  strategy: METRICS.strategy.get(model),
+  legal: METRICS.legal.get(model),
+  healthcare: METRICS.healthcare.get(model),
+  engineering: METRICS.engineering.get(model),
+  economics: METRICS.economics.get(model),
+  indexCost: METRICS.indexCost.get(model),
+  taskCost: METRICS.taskCost.get(model),
 }));
 
 /** 传给 island 的形态：定长数组，省掉 586 份重复的字段名。 */
