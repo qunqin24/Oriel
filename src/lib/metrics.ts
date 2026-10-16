@@ -2,6 +2,7 @@ import type { LanguageModel } from "./types.ts";
 import type { Dict } from "@/i18n";
 import type { Locale } from "@/i18n";
 import {
+  formatCost,
   formatDate,
   formatNumber,
   formatPrice,
@@ -20,6 +21,14 @@ export type MetricId =
   | "intelligence"
   | "coding"
   | "agentic"
+  | "finance"
+  | "strategy"
+  | "legal"
+  | "healthcare"
+  | "engineering"
+  | "economics"
+  | "indexCost"
+  | "taskCost"
   | "value"
   | "priceIn"
   | "priceOut"
@@ -82,6 +91,63 @@ export const METRICS: Record<MetricId, MetricDef> = {
     higherIsBetter: true,
     label: (d) => d.models.cols.agentic,
     format: (v, l) => formatNumber(v, l, 1),
+  },
+  finance: {
+    id: "finance",
+    get: (m) => m.evaluations.artificial_analysis_finance_and_accounting_index ?? null,
+    higherIsBetter: true,
+    label: (d) => d.models.cols.finance,
+    format: (v, l) => formatNumber(v, l, 1),
+  },
+  strategy: {
+    id: "strategy",
+    get: (m) => m.evaluations.artificial_analysis_strategy_and_ops_index ?? null,
+    higherIsBetter: true,
+    label: (d) => d.models.cols.strategy,
+    format: (v, l) => formatNumber(v, l, 1),
+  },
+  legal: {
+    id: "legal",
+    get: (m) => m.evaluations.artificial_analysis_legal_index ?? null,
+    higherIsBetter: true,
+    label: (d) => d.models.cols.legal,
+    format: (v, l) => formatNumber(v, l, 1),
+  },
+  healthcare: {
+    id: "healthcare",
+    get: (m) => m.evaluations.artificial_analysis_healthcare_and_medical_index ?? null,
+    higherIsBetter: true,
+    label: (d) => d.models.cols.healthcare,
+    format: (v, l) => formatNumber(v, l, 1),
+  },
+  engineering: {
+    id: "engineering",
+    get: (m) => m.evaluations.artificial_analysis_engineering_index ?? null,
+    higherIsBetter: true,
+    label: (d) => d.models.cols.engineering,
+    format: (v, l) => formatNumber(v, l, 1),
+  },
+  economics: {
+    id: "economics",
+    get: (m) => m.evaluations.artificial_analysis_economics_index ?? null,
+    higherIsBetter: true,
+    label: (d) => d.models.cols.economics,
+    format: (v, l) => formatNumber(v, l, 1),
+  },
+  indexCost: {
+    id: "indexCost",
+    get: (m) => m.artificial_analysis_intelligence_index_cost?.total_cost ?? null,
+    higherIsBetter: false,
+    label: (d) => d.models.cols.indexCost,
+    format: (v, l) => formatCost(v, l),
+  },
+  taskCost: {
+    id: "taskCost",
+    get: (m) =>
+      m.artificial_analysis_intelligence_index_cost?.cost_per_task?.total_cost ?? null,
+    higherIsBetter: false,
+    label: (d) => d.models.cols.taskCost,
+    format: (v, l) => formatCost(v, l),
   },
   value: {
     id: "value",

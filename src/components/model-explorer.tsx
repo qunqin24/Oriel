@@ -5,6 +5,7 @@ import {
   DIMENSIONS,
   DIMENSION_COLUMNS,
   HIGHER_IS_BETTER,
+  hasFocusData,
   rowValue,
   unpackRow,
   type ColumnId,
@@ -13,6 +14,7 @@ import {
   type PackedRow,
 } from "@/lib/explorer-config";
 import {
+  formatCost,
   formatNumber,
   formatPrice,
   formatSeconds,
@@ -66,6 +68,16 @@ function formatCell(
       return formatNumber(row.coding, locale, 1);
     case "agentic":
       return formatNumber(row.agentic, locale, 1);
+    case "finance":
+    case "strategy":
+    case "legal":
+    case "healthcare":
+    case "engineering":
+    case "economics":
+      return formatNumber(row[column], locale, 1);
+    case "indexCost":
+    case "taskCost":
+      return formatCost(row[column], locale);
     case "value":
       return formatNumber(row.value, locale, 1);
     case "priceIn":
@@ -125,8 +137,28 @@ function initialSortColumn(
   return (sort as ColumnId) || DIMENSION_COLUMNS[dimension].sort;
 }
 
-function initialSortDir(params: URLSearchParams | null): SortDir {
-  return params?.get("dir") === "asc" ? "asc" : "desc";
+/**
+ * 地址里没有 dir 时的隐含方向。
+ *
+ * 维度的默认排序列按它自己「好」的方向走（成本越低越好，所以升序）；
+ * 其它列沿用旧约定——没写 dir 就是降序，已分享的旧链接含义不变。
+ */
+function impliedSortDir(dimension: Dimension, column: ColumnId): SortDir {
+  if (column === "name" || column !== DIMENSION_COLUMNS[dimension].sort) {
+    return "desc";
+  }
+  return HIGHER_IS_BETTER[column] ? "desc" : "asc";
+}
+
+function initialSortDir(
+  params: URLSearchParams | null,
+  dimension: Dimension,
+  column: ColumnId
+): SortDir {
+  const dir = params?.get("dir");
+  return dir === "asc" || dir === "desc"
+    ? dir
+    : impliedSortDir(dimension, column);
 }
 
 export default function ModelExplorer({
@@ -146,9 +178,11 @@ export default function ModelExplorer({
   const [sortColumn, setSortColumn] = useState<ColumnId>(() =>
     initialSortColumn(readParams(), initialDimension(readParams()))
   );
-  const [sortDir, setSortDir] = useState<SortDir>(() =>
-    initialSortDir(readParams())
-  );
+  const [sortDir, setSortDir] = useState<SortDir>(() => {
+    const params = readParams();
+    const dim = initialDimension(params);
+    return initialSortDir(params, dim, initialSortColumn(params, dim));
+  });
   const [vendorQuery, setVendorQuery] = useState("");
   const vendorMenuRef = useRef<HTMLDetailsElement>(null);
 
@@ -186,7 +220,7 @@ export default function ModelExplorer({
     if (query) params.set("q", query);
     if (selectedVendors.length) params.set("vendor", selectedVendors.join(","));
     if (sortColumn !== DIMENSION_COLUMNS[dimension].sort) params.set("sort", sortColumn);
-    if (sortDir === "asc") params.set("dir", "asc");
+    if (sortDir !== impliedSortDir(dimension, sortColumn)) params.set("dir", sortDir);
     const search = params.toString();
     const url = search ? `?${search}` : window.location.pathname;
     // ClientRouter 把导航 index 与滚动位置放在 history.state 里；这里如果
@@ -218,7 +252,7 @@ export default function ModelExplorer({
     return rows.filter((row) => {
       // 选定某个维度时，没有该项数据的模型直接不进表——
       // 让读者对着 388 行破折号猜，比少列几行更糟。
-      if (focus && rowValue(row, focus as ColumnId) == null) return false;
+      if (!hasFocusData(row, focus)) return false;
       if (vendorSet && !vendorSet.has(row.creator)) return false;
       if (!needle) return true;
       return (
@@ -286,7 +320,7 @@ export default function ModelExplorer({
     query !== "" || selectedVendors.length > 0 || dimension !== "overview";
 
   const coverageCount = config.focus
-    ? rows.filter((row) => rowValue(row, config.focus as ColumnId) != null).length
+    ? rows.filter((row) => hasFocusData(row, config.focus)).length
     : rows.length;
 
   return (

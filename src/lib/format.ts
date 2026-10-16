@@ -55,6 +55,19 @@ export function formatPrice(value: number | null | undefined): string {
   return `$${Math.round(value)}`;
 }
 
+/**
+ * 评测总花费从 $0 到上万美元。小额沿用 formatPrice 的按量级精度，
+ * 大额加千分位——「$4222」不如「$4,222」好读。
+ */
+export function formatCost(
+  value: number | null | undefined,
+  locale: Locale
+): string {
+  if (!isNumber(value)) return NO_VALUE;
+  if (value < 100) return formatPrice(value);
+  return `$${Math.round(value).toLocaleString(INTL_LOCALE[locale])}`;
+}
+
 export function formatSeconds(value: number | null | undefined): string {
   if (!isNumber(value)) return NO_VALUE;
   if (value < 1) return `${Math.round(value * 1000)}ms`;

@@ -16,6 +16,7 @@ import {
   NO_VALUE,
 } from "@/lib/format";
 import { fill, href, t, type Locale } from "@/i18n";
+import type { MetricKey } from "@/lib/history-schema";
 import type { LanguageModel } from "@/lib/types";
 
 interface Props {
@@ -36,6 +37,45 @@ const indices: Array<{ id: MetricId; label: string }> = [
   { id: "coding", label: dict.model.coding },
   { id: "agentic", label: dict.model.agentic },
 ];
+
+/** 六项行业评测。覆盖面比综合指数小得多，部分模型一项都没有。 */
+const domains: Array<{ id: MetricId; label: string }> = [
+  { id: "finance", label: dict.model.finance },
+  { id: "strategy", label: dict.model.strategy },
+  { id: "legal", label: dict.model.legal },
+  { id: "healthcare", label: dict.model.healthcare },
+  { id: "engineering", label: dict.model.engineering },
+  { id: "economics", label: dict.model.economics },
+];
+const hasAnyDomain = domains.some(({ id }) => METRICS[id].get(model) != null);
+
+/** 评测成本越低越好；$0 是免费模型的真实值，只有 null 才是未评测。 */
+const costs: Array<{ id: MetricId; label: string }> = [
+  { id: "indexCost", label: dict.model.indexCost },
+  { id: "taskCost", label: dict.model.taskCost },
+];
+const hasAnyCost = costs.some(({ id }) => METRICS[id].get(model) != null);
+
+/** 新增指标的历史：没有可画的历史就不占位（Trajectory 的 hideWhenEmpty）。 */
+const extraTrajectories: Array<{
+  id: MetricId;
+  label: string;
+  lowerIsBetter: boolean;
+  format: (value: number) => string;
+}> = [
+  ...domains.map(({ id, label }) => ({
+    id,
+    label,
+    lowerIsBetter: false,
+    format: (value: number) => formatNumber(value, locale, 1),
+  })),
+  ...costs.map(({ id, label }) => ({
+    id,
+    label,
+    lowerIsBetter: true,
+    format: (value: number) => METRICS[id].format(value, locale),
+  })),
+].filter(({ id }) => METRICS[id].get(model) != null);
 
 const pricing = [
   { label: dict.model.priceIn, value: model.pricing?.price_1m_input_tokens },
@@ -181,6 +221,55 @@ const description = `${model.name}${creator ? ` · ${creator}` : ""} — ${dict.
     </header>
 
     <section>
+      <SectionHead title={dict.model.domainsTitle} />
+      <p class="mb-4 max-w-2xl text-[12px] leading-relaxed text-mute">{dict.model.domainsNote}</p>
+      {
+        hasAnyDomain ? (
+          <div class="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-rule bg-rule sm:grid-cols-3">
+            {domains.map(({ id, label }) => {
+              const value = METRICS[id].get(model);
+              const rank = rankAmong(model, MODELS, id);
+              return (
+                <div class="flex flex-col gap-1 bg-ground px-4 py-3">
+                  <span class="eyebrow">{label}</span>
+                  {value == null ? (
+                    <>
+                      <span class="figure text-xl text-mute/60">{NO_VALUE}</span>
+                      <span class="text-[12px] text-mute">{dict.model.noData}</span>
+                    </>
+                  ) : (
+                    <>
+                      <span
+                        class:list={[
+                          "figure text-2xl",
+                          rank?.rank === 1 ? "text-gold" : "text-fg",
+                        ]}
+                      >
+                        {METRICS[id].format(value, locale)}
+                      </span>
+                      {rank && (
+                        <span class="text-[12px] text-mute">
+                          {fill(dict.model.rankAmong, {
+                            rank: rank.rank,
+                            total: rank.total,
+                          })}
+                        </span>
+                      )}
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <p class="text-sm text-mute">
+            {dict.model.noData} · {dict.model.noDataHint}
+          </p>
+        )
+      }
+    </section>
+
+    <section>
       <SectionHead title={dict.model.radarTitle} note={dict.model.radarNote} />
       <RadarChart locale={locale} model={model} />
     </section>
@@ -224,6 +313,55 @@ const description = `${model.name}${creator ? ` · ${creator}` : ""} — ${dict.
     </div>
 
     <section>
+      <SectionHead title={dict.model.costTitle} />
+      <p class="mb-4 max-w-2xl text-[12px] leading-relaxed text-mute">{dict.model.costNote}</p>
+      {
+        hasAnyCost ? (
+          <div class="grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-rule bg-rule sm:grid-cols-2">
+            {costs.map(({ id, label }) => {
+              const value = METRICS[id].get(model);
+              const rank = rankAmong(model, MODELS, id);
+              return (
+                <div class="flex flex-col gap-1 bg-ground px-4 py-3">
+                  <span class="eyebrow">{label}</span>
+                  {value == null ? (
+                    <>
+                      <span class="figure text-xl text-mute/60">{NO_VALUE}</span>
+                      <span class="text-[12px] text-mute">{dict.model.noData}</span>
+                    </>
+                  ) : (
+                    <>
+                      <span
+                        class:list={[
+                          "figure text-2xl",
+                          rank?.rank === 1 ? "text-gold" : "text-fg",
+                        ]}
+                      >
+                        {METRICS[id].format(value, locale)}
+                      </span>
+                      {rank && (
+                        <span class="text-[12px] text-mute">
+                          {fill(dict.model.rankAmong, {
+                            rank: rank.rank,
+                            total: rank.total,
+                          })}
+                        </span>
+                      )}
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <p class="text-sm text-mute">
+            {dict.model.noData} · {dict.model.noDataHint}
+          </p>
+        )
+      }
+    </section>
+
+    <section>
       <SectionHead title={dict.model.trajectory} note={`${modelEvents.length}`} />
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <Trajectory
@@ -248,6 +386,19 @@ const description = `${model.name}${creator ? ` · ${creator}` : ""} — ${dict.
           label={dict.model.throughput}
           format={(value) => formatNumber(value, locale, 0)}
         />
+        {
+          extraTrajectories.map((item) => (
+            <Trajectory
+              modelId={model.id}
+              metric={item.id as MetricKey}
+              locale={locale}
+              label={item.label}
+              lowerIsBetter={item.lowerIsBetter}
+              hideWhenEmpty
+              format={item.format}
+            />
+          ))
+        }
       </div>
     </section>
 

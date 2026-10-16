@@ -17,20 +17,36 @@ interface Props {
   label: string;
   /** 数值越低越好时，下降画成上涨色 */
   lowerIsBetter?: boolean;
+  /**
+   * 没有可画的历史时整块不渲染，而不是占一格「积累中」。
+   * 新增的行业评测/评测成本指标用它——大多数模型只有部分有值，不该让详情页变长。
+   */
+  hideWhenEmpty?: boolean;
   format: (value: number) => string;
 }
 
-const { modelId, metric, locale, label, lowerIsBetter = false, format } =
-  Astro.props;
+const {
+  modelId,
+  metric,
+  locale,
+  label,
+  lowerIsBetter = false,
+  hideWhenEmpty = false,
+  format,
+} = Astro.props;
 const dict = t(locale);
 
 const segments = metricSeries(modelId, metric);
-const flat = segments.flat();
+const hasAnyPoint = segments.some((segment) => segment.length > 0);
 const days = SNAPSHOT_DATES.length;
 
-const values = flat.map((point) => point.value);
-const changed = values.length > 1 && new Set(values).size > 1;
-const drawable = changed && segments.some((s) => s.length >= 2);
+/**
+ * 只画点数 ≥ MIN_TREND_POINTS 的段落：两个点能连成线但说明不了任何事。
+ * 版本换代后新段落还短时，宁可明说「积累中」也不画一条两点的线。
+ */
+const drawn = segments.filter((segment) => segment.length >= MIN_TREND_POINTS);
+const values = drawn.flat().map((point) => point.value);
+const changed = new Set(values).size > 1;
 
 const W = 168;
 const H = 34;
@@ -48,36 +64,54 @@ const px = (date: string) =>
 const py = (value: number) =>
   PAD + (1 - (value - min) / span) * (H - PAD * 2);
 
-const paths = drawable
-  ? segments
-      .filter((segment) => segment.length >= 2)
-      .map((segment) =>
-        segment
-          .map(
-            (point, index) =>
-              `${index === 0 ? "M" : "L"}${px(point.date).toFixed(1)},${py(point.value).toFixed(1)}`
-          )
-          .join(" ")
-      )
+const paths = changed
+  ? drawn.map((segment) =>
+      segment
+        .map(
+          (point, index) =>
+            `${index === 0 ? "M" : "L"}${px(point.date).toFixed(1)},${py(point.value).toFixed(1)}`
+        )
+        .join(" ")
+    )
   : [];
 
-const first = flat[0]?.value ?? null;
-const last = flat.at(-1)?.value ?? null;
+// 首尾取最近一段：跨 index_version 的首尾值不可比。
+const latest = drawn.at(-1) ?? [];
+const first = latest[0]?.value ?? null;
+const last = latest.at(-1)?.value ?? null;
 const improved =
   first != null && last != null && first !== last
     ? lowerIsBetter
       ? last < first
       : last > first
     : null;
+
+type State = "hidden" | "noData" | "thin" | "flat" | "chart";
+const state: State = !hasAnyPoint
+  ? hideWhenEmpty
+    ? "hidden"
+    : "noData"
+  : days < MIN_TREND_POINTS || drawn.length === 0
+    ? hideWhenEmpty
+      ? "hidden"
+      : "thin"
+    : !changed
+      ? hideWhenEmpty
+        ? "hidden"
+        : "flat"
+      : "chart";
 ---
 
+{state !== "hidden" && (
 <div class="flex flex-col gap-1.5">
   <span class="eyebrow">{label}</span>
 
   {
-    days < MIN_TREND_POINTS ? (
+    state === "noData" ? (
+      <p class="text-[12px] text-mute">{dict.model.noData}</p>
+    ) : state === "thin" ? (
       <p class="text-[12px] text-mute">{dict.model.trajectoryThin}</p>
-    ) : !changed ? (
+    ) : state === "flat" ? (
       <p class="text-[12px] text-mute">
         {fill(dict.model.trajectoryFlat, { days })}
       </p>
@@ -108,10 +142,10 @@ const improved =
               vector-effect="non-scaling-stroke"
             />
           ))}
-          {flat.length > 0 && (
+          {latest.length > 0 && (
             <circle
-              cx={px(flat.at(-1)!.date).toFixed(1)}
-              cy={py(flat.at(-1)!.value).toFixed(1)}
+              cx={px(latest.at(-1)!.date).toFixed(1)}
+              cy={py(latest.at(-1)!.value).toFixed(1)}
               r="2"
               fill="var(--gold)"
             />
@@ -126,3 +160,4 @@ const improved =
     )
   }
 </div>
+)}

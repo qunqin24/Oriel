@@ -66,6 +66,8 @@ export const zh = {
       agentic: "智能体",
       value: "性价比",
       speed: "速度",
+      domains: "行业",
+      cost: "评测成本",
     },
     cols: {
       name: "模型",
@@ -73,6 +75,14 @@ export const zh = {
       intelligence: "智能",
       coding: "编程",
       agentic: "智能体",
+      finance: "金融",
+      strategy: "战略运营",
+      legal: "法律",
+      healthcare: "医疗",
+      engineering: "工程",
+      economics: "经济",
+      indexCost: "评测总成本",
+      taskCost: "单任务成本",
       value: "性价比",
       priceIn: "输入价",
       priceOut: "输出价",
@@ -99,6 +109,20 @@ export const zh = {
     intelligence: "智能指数",
     coding: "编程指数",
     agentic: "智能体指数",
+    domainsTitle: "行业评测",
+    domainsNote:
+      "Artificial Analysis 按行业场景做的评测。覆盖面比综合指数小得多，没评测的明说未评测，不当成 0 分。",
+    finance: "金融与会计",
+    strategy: "战略与运营",
+    legal: "法律",
+    healthcare: "医疗",
+    engineering: "工程",
+    economics: "经济",
+    costTitle: "评测成本",
+    costNote:
+      "跑完一遍智能指数评测实际花的钱。推理型模型输出的 token 多，单价低不代表跑下来便宜。",
+    indexCost: "评测总成本",
+    taskCost: "单任务成本",
     pricing: "价格",
     performance: "性能",
     priceIn: "输入",
@@ -138,6 +162,14 @@ export const zh = {
       priceOut: "输出价",
       throughput: "输出吞吐",
       latency: "首字延迟",
+      finance: "金融与会计",
+      strategy: "战略与运营",
+      legal: "法律",
+      healthcare: "医疗",
+      engineering: "工程",
+      economics: "经济",
+      indexCost: "评测总成本",
+      taskCost: "单任务成本",
     },
     firstScore: "首次评测",
     withdrawn: "指标撤下",
@@ -209,7 +241,7 @@ export const zh = {
 
     coverageTitle: "覆盖率",
     coverageBody:
-      "{total} 款语言模型里，只有一部分被测过每一项。智能指数 {intelligence}、编程 {coding}、智能体 {agentic}、价格 {price}、性能 {performance}。破折号的意思是「没测」，不是「测得差」——这两件事完全不同，所以本站在选定某个维度时会把没有该项数据的模型移出榜单，而不是让你对着几百行破折号猜。",
+      "{total} 款语言模型里，只有一部分被测过每一项。智能指数 {intelligence}、编程 {coding}、智能体 {agentic}；行业评测里金融与会计 {finance}、战略与运营 {strategy}、法律 {legal}、医疗 {healthcare}、工程 {engineering}、经济 {economics}；评测成本 {cost}；价格 {price}、性能 {performance}。行业评测和评测成本的覆盖面比综合指数小得多。破折号的意思是「没测」，不是「测得差」——这两件事完全不同，所以本站在选定某个维度时会把没有该项数据的模型移出榜单，而不是让你对着几百行破折号猜。",
 
     historyTitle: "历史",
     historyBody:
@@ -221,7 +253,7 @@ export const zh = {
 
     limitsTitle: "已知局限",
     limitsBody:
-      "语音转文本榜的词错误率指数只发布到 1 位小数，大量模型并列在同一个值上，那份榜单实际排不出先后，本站会在页面上标出并列数量。性能数据（吞吐、延迟）是特定时间从特定线路测得的中位数，会随服务商的负载和你的地理位置变化。价格只算基础 token 计费，不含批量折扣、承诺用量或缓存策略带来的实际差异。",
+      "语音转文本榜的词错误率指数只发布到 1 位小数，大量模型并列在同一个值上，那份榜单实际排不出先后，本站会在页面上标出并列数量。性能数据（吞吐、延迟）是特定时间从特定线路测得的中位数，会随服务商的负载和你的地理位置变化。价格只算基础 token 计费，不含批量折扣、承诺用量或缓存策略带来的实际差异。评测成本是上游跑完一遍智能指数评测的实际花费，和智能指数一样随版本重新测算，跨版本不可比；免费模型的 $0 是真实的零，不是缺失。",
   },
 
   catBoard: {

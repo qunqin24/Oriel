@@ -42,7 +42,7 @@ async function writeJson(file: string, value: unknown): Promise<void> {
 /**
  * 每个模型一行地序列化月度快照。
  *
- * 直接 JSON.stringify(…, 2) 会把每个 7 元组摊成 9 行，文件大三倍，
+ * 直接 JSON.stringify(…, 2) 会把每个元组（15 个数字）摊成十几行，文件大三倍，
  * 而且 git diff 完全没法看。一行一模型既省空间，又让「今天哪些模型变了」
  * 在 diff 里一目了然——这个文件每天都会被 commit，可读性是硬需求。
  */
