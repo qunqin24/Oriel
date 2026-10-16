@@ -178,9 +178,28 @@ check(
 
 console.log("\n【额外】诚实性与主题");
 const media = read("media/index.html");
+// 并列警告只在并列数够多时才渲染（口径同 src/views/media.astro），
+// 所以断言要跟着当天数据走：该显示时必须显示，不该显示时不应出现。
+// 上游把精度提高、并列消失是好事，不该让每日更新因此失败。
+const sttValues = JSON.parse(
+  fs.readFileSync(path.join(ROOT, "data/media-speech-to-text.json"), "utf8")
+)
+  .data.map((model) => model.aa_wer_index)
+  .filter((value) => value != null);
+const sttStart = media.indexOf('id="speech-to-text"');
+const sttSection = media.slice(
+  sttStart,
+  media.indexOf("<section", sttStart + 1) === -1
+    ? undefined
+    : media.indexOf("<section", sttStart + 1)
+);
+const sttBest = sttValues.length ? Math.min(...sttValues) : null;
+const sttTied = sttValues.filter((value) => value === sttBest).length;
+const sttTieMatters = sttTied >= Math.max(3, sttValues.length * 0.25);
 check(
-  "语音转文本标出并列数（该榜排不出先后）",
-  media.includes("并列最优")
+  "语音转文本仅在并列过多时标出并列数（该榜排不出先后）",
+  sttStart !== -1 && sttSection.includes("并列最优") === sttTieMatters,
+  `${sttTied}/${sttValues.length} 并列最优，${sttTieMatters ? "应" : "不应"}标出`
 );
 check("Elo 榜画出置信区间误差须", (media.match(/border-x border-mute/g) || []).length > 50);
 const css = fs.readdirSync(path.join(DIST, "_astro")).find((f) => f.endsWith(".css"));
