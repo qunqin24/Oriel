@@ -1,6 +1,66 @@
 {
-  "generated_at": "2026-10-16T23:16:23.743Z",
+  "generated_at": "2026-10-17T22:54:46.095Z",
   "events": [
+    {
+      "date": "2026-10-18",
+      "type": "price",
+      "model": {
+        "id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+        "name": "DeepSeek V4 Flash 0731 (Max)",
+        "slug": "deepseek-v4-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-10-18"
+      },
+      "metric": "priceIn",
+      "from": 0.44,
+      "to": 0.14
+    },
+    {
+      "date": "2026-10-18",
+      "type": "price",
+      "model": {
+        "id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+        "name": "DeepSeek V4 Flash 0731 (Max)",
+        "slug": "deepseek-v4-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-10-18"
+      },
+      "metric": "priceOut",
+      "from": 1.32,
+      "to": 0.28
+    },
+    {
+      "date": "2026-10-18",
+      "type": "price",
+      "model": {
+        "id": "bb3d7e75-8e22-4082-b9d6-1db0803e042f",
+        "name": "K2 Horizon 375B A23B",
+        "slug": "k2-horizon-375b-a23b",
+        "creator": "Institute of Foundation Models",
+        "first_seen": "2026-09-04",
+        "last_seen": "2026-10-18"
+      },
+      "metric": "priceIn",
+      "from": null,
+      "to": 0
+    },
+    {
+      "date": "2026-10-18",
+      "type": "price",
+      "model": {
+        "id": "bb3d7e75-8e22-4082-b9d6-1db0803e042f",
+        "name": "K2 Horizon 375B A23B",
+        "slug": "k2-horizon-375b-a23b",
+        "creator": "Institute of Foundation Models",
+        "first_seen": "2026-09-04",
+        "last_seen": "2026-10-18"
+      },
+      "metric": "priceOut",
+      "from": null,
+      "to": 0
+    },
     {
       "date": "2026-10-17",
       "type": "added",
