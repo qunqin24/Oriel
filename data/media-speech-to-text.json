@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-20T00:06:59.286Z",
+  "fetched_at": "2026-10-20T23:38:35.901Z",
   "tier": "free",
   "data": [
     {
@@ -28,15 +28,6 @@
         "name": "Speechmatics"
       },
       "aa_wer_index": 0.041
-    },
-    {
-      "id": "5a86207e-e78f-48ba-bad4-894caded7b99",
-      "name": "Voxtral Small, Mistral",
-      "model_creator": {
-        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
-        "name": "Mistral"
-      },
-      "aa_wer_index": 0.028
     },
     {
       "id": "88ba5688-920d-411d-a341-5f21d27ead16",
@@ -228,6 +219,15 @@
       "aa_wer_index": 0.312
     },
     {
+      "id": "9e41d390-c0f2-483c-bed7-32c5364c0ab4",
+      "name": "Voxtral Mini Transcribe Realtime 3 960ms",
+      "model_creator": {
+        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
+        "name": "Mistral"
+      },
+      "aa_wer_index": null
+    },
+    {
       "id": "e95f995b-c4d9-494b-9398-4cf64e3567b0",
       "name": "Qwen3 ASR 1.7B",
       "model_creator": {
@@ -244,6 +244,15 @@
         "name": "AssemblyAI"
       },
       "aa_wer_index": 0.038
+    },
+    {
+      "id": "5a86207e-e78f-48ba-bad4-894caded7b99",
+      "name": "Voxtral Small, Mistral",
+      "model_creator": {
+        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
+        "name": "Mistral"
+      },
+      "aa_wer_index": 0.028
     },
     {
       "id": "38853c48-3328-44a9-a5eb-a233c806e2a6",
@@ -298,15 +307,6 @@
         "name": "Alibaba"
       },
       "aa_wer_index": null
-    },
-    {
-      "id": "8580ae07-5e50-4d47-ae23-28c374a3ba21",
-      "name": "Voxtral Mini Transcribe 2, Mistral",
-      "model_creator": {
-        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
-        "name": "Mistral"
-      },
-      "aa_wer_index": 0.036
     },
     {
       "id": "69a3c281-fbaa-4102-b7de-7eb99354a561",
@@ -433,6 +433,15 @@
         "name": "AssemblyAI"
       },
       "aa_wer_index": 0.03
+    },
+    {
+      "id": "3c776695-24a0-4c90-bf72-b43089a99966",
+      "name": "Voxtral Small Transcribe 3",
+      "model_creator": {
+        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
+        "name": "Mistral"
+      },
+      "aa_wer_index": 0.021
     },
     {
       "id": "484244d8-0d89-48c2-8f6d-9be27093bf9a",
@@ -579,15 +588,6 @@
       "aa_wer_index": 0.038
     },
     {
-      "id": "fcbcc38c-3aa2-4f95-8cbc-7d6d8547ac2a",
-      "name": "Zoom Scribe V2 Pro",
-      "model_creator": {
-        "id": "9a4d9663-1141-4a13-ba84-7b97610a993c",
-        "name": "Zoom"
-      },
-      "aa_wer_index": 0.028
-    },
-    {
       "id": "4810d50c-9471-43f2-a53c-e68f496e24dd",
       "name": "Whisper Large v3, OpenAI",
       "model_creator": {
@@ -595,6 +595,24 @@
         "name": "OpenAI"
       },
       "aa_wer_index": 0.041
+    },
+    {
+      "id": "0797c904-621a-41a4-be01-673893d0289e",
+      "name": "Voxtral Mini Transcribe 3",
+      "model_creator": {
+        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
+        "name": "Mistral"
+      },
+      "aa_wer_index": 0.022
+    },
+    {
+      "id": "fcbcc38c-3aa2-4f95-8cbc-7d6d8547ac2a",
+      "name": "Zoom Scribe V2 Pro",
+      "model_creator": {
+        "id": "9a4d9663-1141-4a13-ba84-7b97610a993c",
+        "name": "Zoom"
+      },
+      "aa_wer_index": 0.028
     },
     {
       "id": "bd9f32b5-fa42-4b12-8749-3a2c7a711cb5",
@@ -640,6 +658,24 @@
         "name": "Modulate"
       },
       "aa_wer_index": null
+    },
+    {
+      "id": "2d27f507-0596-4110-ac7b-49534d4c05a0",
+      "name": "Voxtral Mini Transcribe Realtime 3 480ms",
+      "model_creator": {
+        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
+        "name": "Mistral"
+      },
+      "aa_wer_index": null
+    },
+    {
+      "id": "8580ae07-5e50-4d47-ae23-28c374a3ba21",
+      "name": "Voxtral Mini Transcribe 2, Mistral",
+      "model_creator": {
+        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
+        "name": "Mistral"
+      },
+      "aa_wer_index": 0.036
     }
   ]
 }

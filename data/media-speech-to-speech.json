@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-20T00:06:59.286Z",
+  "fetched_at": "2026-10-20T23:38:35.901Z",
   "tier": "free",
   "data": [
     {
@@ -264,6 +264,18 @@
       },
       "bba_score": 0.57,
       "fdb_score": 0.86,
+      "tau_voice_score": null
+    },
+    {
+      "id": "8e7f29a2-1316-4b1c-8ba5-a729bf589bdb",
+      "name": "Eleven Realtime v1 Max",
+      "slug": "eleven-realtime-v1-max",
+      "model_creator": {
+        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
+        "name": "ElevenLabs"
+      },
+      "bba_score": 0.99,
+      "fdb_score": 0.94,
       "tau_voice_score": null
     },
     {
@@ -541,6 +553,18 @@
       "bba_score": 0.97,
       "fdb_score": 0.95,
       "tau_voice_score": 0.56
+    },
+    {
+      "id": "6a0eabd0-acfc-4ece-8ca4-39957c1ca34c",
+      "name": "Eleven Realtime v1 Mini",
+      "slug": "eleven-realtime-v1-mini",
+      "model_creator": {
+        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
+        "name": "ElevenLabs"
+      },
+      "bba_score": 0.76,
+      "fdb_score": 0.96,
+      "tau_voice_score": 0.47
     }
   ]
 }

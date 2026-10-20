@@ -1,6 +1,366 @@
 {
-  "generated_at": "2026-10-20T00:07:00.877Z",
+  "generated_at": "2026-10-20T23:38:36.989Z",
   "events": [
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "b2331108-72ed-415a-82d1-188633875bbc",
+        "name": "Gemini 3.7 Flash (High)",
+        "slug": "gemini-3-7-flash",
+        "creator": "Google",
+        "first_seen": "2026-08-14",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceIn",
+      "from": 0.75,
+      "to": 0.375
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "b2331108-72ed-415a-82d1-188633875bbc",
+        "name": "Gemini 3.7 Flash (High)",
+        "slug": "gemini-3-7-flash",
+        "creator": "Google",
+        "first_seen": "2026-08-14",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceOut",
+      "from": 3.75,
+      "to": 1.875
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "ddfdaf64-3f8e-40a6-a492-608ee83a1351",
+        "name": "Gemini 3.7 Flash (Low)",
+        "slug": "gemini-3-7-flash-low",
+        "creator": "Google",
+        "first_seen": "2026-08-14",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceIn",
+      "from": 0.75,
+      "to": null
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "ddfdaf64-3f8e-40a6-a492-608ee83a1351",
+        "name": "Gemini 3.7 Flash (Low)",
+        "slug": "gemini-3-7-flash-low",
+        "creator": "Google",
+        "first_seen": "2026-08-14",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceOut",
+      "from": 3.75,
+      "to": null
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "eb0d4272-7204-42b9-b875-8866fed58548",
+        "name": "Gemini 3.7 Flash (Medium)",
+        "slug": "gemini-3-7-flash-medium",
+        "creator": "Google",
+        "first_seen": "2026-08-14",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceIn",
+      "from": 0.75,
+      "to": null
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "eb0d4272-7204-42b9-b875-8866fed58548",
+        "name": "Gemini 3.7 Flash (Medium)",
+        "slug": "gemini-3-7-flash-medium",
+        "creator": "Google",
+        "first_seen": "2026-08-14",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceOut",
+      "from": 3.75,
+      "to": null
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "70882ec6-914c-41f0-9754-5e8f75005f77",
+        "name": "Gemma 4 26B A4B (Non-reasoning)",
+        "slug": "gemma-4-26b-a4b-non-reasoning",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceIn",
+      "from": 0.13,
+      "to": 0.115
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "6e1b44ff-c227-496b-aef4-19b70cd18c76",
+        "name": "Gemma 4 26B A4B (Reasoning)",
+        "slug": "gemma-4-26b-a4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceOut",
+      "from": 0.37,
+      "to": 0.34
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "f0083258-8646-45b8-8082-7aaf6c2ea82a",
+        "name": "gpt-oss-120b (High)",
+        "slug": "gpt-oss-120b",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceIn",
+      "from": 0.125,
+      "to": 0.15
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "f0083258-8646-45b8-8082-7aaf6c2ea82a",
+        "name": "gpt-oss-120b (High)",
+        "slug": "gpt-oss-120b",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceOut",
+      "from": 0.595,
+      "to": 0.6
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "c99f3bde-7c08-4de8-bd5c-8ee9123ebffa",
+        "name": "gpt-oss-120b (Low)",
+        "slug": "gpt-oss-120b-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceIn",
+      "from": 0.1,
+      "to": 0.125
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "c99f3bde-7c08-4de8-bd5c-8ee9123ebffa",
+        "name": "gpt-oss-120b (Low)",
+        "slug": "gpt-oss-120b-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceOut",
+      "from": 0.59,
+      "to": 0.595
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "36f73aaf-d38a-4b56-a2b3-d04d17186910",
+        "name": "gpt-oss-20b (High)",
+        "slug": "gpt-oss-20b",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceIn",
+      "from": 0.0575,
+      "to": 0.07
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "36f73aaf-d38a-4b56-a2b3-d04d17186910",
+        "name": "gpt-oss-20b (High)",
+        "slug": "gpt-oss-20b",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceOut",
+      "from": 0.215,
+      "to": 0.25
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "16149b9c-a1e9-4669-a5cb-ff3c00d78f89",
+        "name": "gpt-oss-20b (Low)",
+        "slug": "gpt-oss-20b-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceOut",
+      "from": 0.25,
+      "to": 0.275
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "a550ffca-f89e-4381-ade6-a85dc6a1fb4c",
+        "name": "Kimi K2.5 (Reasoning)",
+        "slug": "kimi-k2-5",
+        "creator": "Kimi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceOut",
+      "from": 2.75,
+      "to": 3
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "8c748e53-61ae-48b8-af8d-eb8298b1e9db",
+        "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+        "slug": "nemotron-3-nano-omni-30b-a3b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceIn",
+      "from": 0.3,
+      "to": 0.4
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "8c748e53-61ae-48b8-af8d-eb8298b1e9db",
+        "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+        "slug": "nemotron-3-nano-omni-30b-a3b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceOut",
+      "from": 0.9,
+      "to": 1.365
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "5e0164b3-d902-4bcb-a1b2-83b4f4cd6143",
+        "name": "Qwen3 30B A3B 2507 (Reasoning)",
+        "slug": "qwen3-30b-a3b-2507-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceIn",
+      "from": 0.36,
+      "to": null
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "5e0164b3-d902-4bcb-a1b2-83b4f4cd6143",
+        "name": "Qwen3 30B A3B 2507 (Reasoning)",
+        "slug": "qwen3-30b-a3b-2507-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceOut",
+      "from": 1.3,
+      "to": null
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "7ec1065a-c90e-41e4-bd17-abb7042eed76",
+        "name": "Qwen3 30B A3B 2507 Instruct",
+        "slug": "qwen3-30b-a3b-2507",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceIn",
+      "from": 0.2,
+      "to": 0.1
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "7ec1065a-c90e-41e4-bd17-abb7042eed76",
+        "name": "Qwen3 30B A3B 2507 Instruct",
+        "slug": "qwen3-30b-a3b-2507",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceOut",
+      "from": 0.4,
+      "to": 0.3
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "da9fe224-8af3-46d7-a8c4-6220779c3f35",
+        "name": "Qwen3 Coder 30B A3B Instruct",
+        "slug": "qwen3-coder-30b-a3b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceIn",
+      "from": 0.15,
+      "to": 0.19
+    },
+    {
+      "date": "2026-10-21",
+      "type": "price",
+      "model": {
+        "id": "da9fe224-8af3-46d7-a8c4-6220779c3f35",
+        "name": "Qwen3 Coder 30B A3B Instruct",
+        "slug": "qwen3-coder-30b-a3b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-21"
+      },
+      "metric": "priceOut",
+      "from": 0.7481,
+      "to": 0.765
+    },
     {
       "date": "2026-10-20",
       "type": "added",
