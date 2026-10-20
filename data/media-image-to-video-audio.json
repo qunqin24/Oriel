@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-18T22:48:20.820Z",
+  "fetched_at": "2026-10-20T00:06:59.286Z",
   "tier": "free",
   "data": [
     {
@@ -12,6 +12,17 @@
       },
       "elo": 1140,
       "ci_95": 16
+    },
+    {
+      "id": "fdb751fc-8e67-489c-830d-bd13f469e865",
+      "name": "FLUX 3 Max (720p)",
+      "slug": "flux-3-max-720p",
+      "model_creator": {
+        "id": "d3f67dc4-ba4d-4103-ba79-ee321ca99b40",
+        "name": "Fal"
+      },
+      "elo": 1138,
+      "ci_95": 15
     },
     {
       "id": "57913d03-a959-4752-8027-8991612448ed",

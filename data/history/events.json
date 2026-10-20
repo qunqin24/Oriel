@@ -1,6 +1,32 @@
 {
-  "generated_at": "2026-10-18T22:48:21.978Z",
+  "generated_at": "2026-10-20T00:07:00.877Z",
   "events": [
+    {
+      "date": "2026-10-20",
+      "type": "added",
+      "model": {
+        "id": "f151fd0b-2139-40cf-a3ec-995e8cedc592",
+        "name": "DeepSeek V4.1 Flash 1017 (Max)",
+        "slug": "deepseek-v4-1-flash-1017",
+        "creator": "DeepSeek",
+        "first_seen": "2026-10-20",
+        "last_seen": "2026-10-20"
+      },
+      "intelligence": 45.1
+    },
+    {
+      "date": "2026-10-20",
+      "type": "added",
+      "model": {
+        "id": "d49c8680-e29b-400e-9511-824f7ddebe07",
+        "name": "MiniMax-M3.1-Flash",
+        "slug": "minimax-m3-1-flash",
+        "creator": "MiniMax",
+        "first_seen": "2026-10-20",
+        "last_seen": "2026-10-20"
+      },
+      "intelligence": 42.7
+    },
     {
       "date": "2026-10-18",
       "type": "price",
