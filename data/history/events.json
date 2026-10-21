@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-10-20T23:38:36.989Z",
+  "generated_at": "2026-10-21T23:54:32.056Z",
   "events": [
+    {
+      "date": "2026-10-22",
+      "type": "price",
+      "model": {
+        "id": "69468cce-7b5c-414a-b498-41df4c34df85",
+        "name": "Beam 1.0",
+        "slug": "reflection-beam",
+        "creator": "Reflection",
+        "first_seen": "2026-10-17",
+        "last_seen": "2026-10-22"
+      },
+      "metric": "priceIn",
+      "from": 0.7,
+      "to": 0.4
+    },
+    {
+      "date": "2026-10-22",
+      "type": "price",
+      "model": {
+        "id": "69468cce-7b5c-414a-b498-41df4c34df85",
+        "name": "Beam 1.0",
+        "slug": "reflection-beam",
+        "creator": "Reflection",
+        "first_seen": "2026-10-17",
+        "last_seen": "2026-10-22"
+      },
+      "metric": "priceOut",
+      "from": 2.1,
+      "to": 1.2
+    },
     {
       "date": "2026-10-21",
       "type": "price",

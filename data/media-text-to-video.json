@@ -1,7 +1,18 @@
 {
-  "fetched_at": "2026-10-20T23:38:35.901Z",
+  "fetched_at": "2026-10-21T23:54:30.205Z",
   "tier": "free",
   "data": [
+    {
+      "id": "af7808f7-e0bf-4832-9e2e-65c036899b95",
+      "name": "HeyGen Video (ultraquality)",
+      "slug": "heygen-video",
+      "model_creator": {
+        "id": "42a993bf-a299-4dfa-add5-a90343098244",
+        "name": "HeyGen"
+      },
+      "elo": 1145,
+      "ci_95": 17
+    },
     {
       "id": "ceee978e-c560-4ba9-9405-f7d390a47709",
       "name": "Wan 3.0",
