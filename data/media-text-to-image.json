@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-21T23:54:30.205Z",
+  "fetched_at": "2026-10-22T23:53:38.108Z",
   "tier": "free",
   "data": [
     {
@@ -221,6 +221,17 @@
       },
       "elo": 1049,
       "ci_95": 9
+    },
+    {
+      "id": "2fcb2223-b343-48c5-b6ed-31bdc0e0678c",
+      "name": "FLUX 3 Image Klein",
+      "slug": "flux-3-image-klein",
+      "model_creator": {
+        "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
+        "name": "Black Forest Labs"
+      },
+      "elo": 1043,
+      "ci_95": 12
     },
     {
       "id": "dea37206-747e-49f3-8bed-6541ca505d03",

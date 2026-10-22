@@ -1,6 +1,79 @@
 {
-  "generated_at": "2026-10-21T23:54:32.056Z",
+  "generated_at": "2026-10-22T23:53:38.798Z",
   "events": [
+    {
+      "date": "2026-10-23",
+      "type": "added",
+      "model": {
+        "id": "539ed227-38f4-4bea-a015-117057c14b18",
+        "name": "Ling 3.1 Flash 1019",
+        "slug": "ling-3-1-flash-1019",
+        "creator": "InclusionAI",
+        "first_seen": "2026-10-23",
+        "last_seen": "2026-10-23"
+      },
+      "intelligence": 43.9
+    },
+    {
+      "date": "2026-10-23",
+      "type": "price",
+      "model": {
+        "id": "b2331108-72ed-415a-82d1-188633875bbc",
+        "name": "Gemini 3.7 Flash (High)",
+        "slug": "gemini-3-7-flash",
+        "creator": "Google",
+        "first_seen": "2026-08-14",
+        "last_seen": "2026-10-23"
+      },
+      "metric": "priceIn",
+      "from": 0.375,
+      "to": 0.75
+    },
+    {
+      "date": "2026-10-23",
+      "type": "price",
+      "model": {
+        "id": "b2331108-72ed-415a-82d1-188633875bbc",
+        "name": "Gemini 3.7 Flash (High)",
+        "slug": "gemini-3-7-flash",
+        "creator": "Google",
+        "first_seen": "2026-08-14",
+        "last_seen": "2026-10-23"
+      },
+      "metric": "priceOut",
+      "from": 1.875,
+      "to": 3.75
+    },
+    {
+      "date": "2026-10-23",
+      "type": "price",
+      "model": {
+        "id": "f9739750-6d42-450f-ba1e-2f76c869b4fe",
+        "name": "Quasar 438B (Max, Based on GLM-5.2)",
+        "slug": "quasar-438b",
+        "creator": "Multiverse Computing",
+        "first_seen": "2026-09-02",
+        "last_seen": "2026-10-23"
+      },
+      "metric": "priceIn",
+      "from": 0.6,
+      "to": 0.11
+    },
+    {
+      "date": "2026-10-23",
+      "type": "price",
+      "model": {
+        "id": "f9739750-6d42-450f-ba1e-2f76c869b4fe",
+        "name": "Quasar 438B (Max, Based on GLM-5.2)",
+        "slug": "quasar-438b",
+        "creator": "Multiverse Computing",
+        "first_seen": "2026-09-02",
+        "last_seen": "2026-10-23"
+      },
+      "metric": "priceOut",
+      "from": 1.8,
+      "to": 0.33
+    },
     {
       "date": "2026-10-22",
       "type": "price",
