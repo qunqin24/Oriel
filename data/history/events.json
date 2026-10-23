@@ -1,6 +1,197 @@
 {
-  "generated_at": "2026-10-22T23:53:38.798Z",
+  "generated_at": "2026-10-23T23:45:44.753Z",
   "events": [
+    {
+      "date": "2026-10-24",
+      "type": "added",
+      "model": {
+        "id": "665c67ca-09eb-48f0-a7a3-0096e1d5de51",
+        "name": "Kimi K3.1 Pro",
+        "slug": "kimi-k3-1-pro",
+        "creator": "Kimi",
+        "first_seen": "2026-10-24",
+        "last_seen": "2026-10-24"
+      },
+      "intelligence": 55.1
+    },
+    {
+      "date": "2026-10-24",
+      "type": "added",
+      "model": {
+        "id": "610595ba-a40d-46c4-acfd-44fa239a6351",
+        "name": "Nemotron 3.5 Bolt E4B 4GB (Reasoning)",
+        "slug": "nemotron-3-5-bolt-e4b-4gb",
+        "creator": "NVIDIA",
+        "first_seen": "2026-10-24",
+        "last_seen": "2026-10-24"
+      },
+      "intelligence": null
+    },
+    {
+      "date": "2026-10-24",
+      "type": "price",
+      "model": {
+        "id": "dbe7c625-3100-4463-b479-a228c41f75dd",
+        "name": "DeepSeek V4.1 Flash (Max)",
+        "slug": "deepseek-v4-1-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-09-11",
+        "last_seen": "2026-10-24"
+      },
+      "metric": "priceIn",
+      "from": 0.3,
+      "to": 0.295
+    },
+    {
+      "date": "2026-10-24",
+      "type": "price",
+      "model": {
+        "id": "6d6fa1c9-b833-40b2-8a58-fa810e24a84e",
+        "name": "Ling-3.0-flash-Fin",
+        "slug": "ling-3-0-flash-fin",
+        "creator": "InclusionAI",
+        "first_seen": "2026-09-17",
+        "last_seen": "2026-10-24"
+      },
+      "metric": "priceIn",
+      "from": 0.075,
+      "to": null
+    },
+    {
+      "date": "2026-10-24",
+      "type": "price",
+      "model": {
+        "id": "6d6fa1c9-b833-40b2-8a58-fa810e24a84e",
+        "name": "Ling-3.0-flash-Fin",
+        "slug": "ling-3-0-flash-fin",
+        "creator": "InclusionAI",
+        "first_seen": "2026-09-17",
+        "last_seen": "2026-10-24"
+      },
+      "metric": "priceOut",
+      "from": 0.22,
+      "to": null
+    },
+    {
+      "date": "2026-10-24",
+      "type": "price",
+      "model": {
+        "id": "22d09131-343b-4adf-8760-533e20a2155f",
+        "name": "MiMo-V2.5",
+        "slug": "mimo-v2-5-0424",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-24"
+      },
+      "metric": "priceIn",
+      "from": 0.14,
+      "to": 0.133
+    },
+    {
+      "date": "2026-10-24",
+      "type": "price",
+      "model": {
+        "id": "22d09131-343b-4adf-8760-533e20a2155f",
+        "name": "MiMo-V2.5",
+        "slug": "mimo-v2-5-0424",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-24"
+      },
+      "metric": "priceOut",
+      "from": 0.28,
+      "to": 0.266
+    },
+    {
+      "date": "2026-10-24",
+      "type": "price",
+      "model": {
+        "id": "4764d31d-f4af-4297-8bd1-e993f26bcb64",
+        "name": "MiMo-V2.5-Pro (Non-reasoning)",
+        "slug": "mimo-v2-5-pro-non-reasoning",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-24"
+      },
+      "metric": "priceIn",
+      "from": 0.435,
+      "to": 0.39
+    },
+    {
+      "date": "2026-10-24",
+      "type": "price",
+      "model": {
+        "id": "4764d31d-f4af-4297-8bd1-e993f26bcb64",
+        "name": "MiMo-V2.5-Pro (Non-reasoning)",
+        "slug": "mimo-v2-5-pro-non-reasoning",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-24"
+      },
+      "metric": "priceOut",
+      "from": 0.87,
+      "to": 1.17
+    },
+    {
+      "date": "2026-10-24",
+      "type": "price",
+      "model": {
+        "id": "00f1248e-78e3-4230-8dc8-5e13ba8645e2",
+        "name": "MiMo-V2.5-Pro (Reasoning)",
+        "slug": "mimo-v2-5-pro",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-24"
+      },
+      "metric": "priceIn",
+      "from": 0.435,
+      "to": 0.4125
+    },
+    {
+      "date": "2026-10-24",
+      "type": "price",
+      "model": {
+        "id": "00f1248e-78e3-4230-8dc8-5e13ba8645e2",
+        "name": "MiMo-V2.5-Pro (Reasoning)",
+        "slug": "mimo-v2-5-pro",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-24"
+      },
+      "metric": "priceOut",
+      "from": 0.87,
+      "to": 1.02
+    },
+    {
+      "date": "2026-10-24",
+      "type": "price",
+      "model": {
+        "id": "352f834f-a03c-4117-8a29-c3ccd8a568ce",
+        "name": "Qwen2.5 Turbo",
+        "slug": "qwen-turbo",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-24"
+      },
+      "metric": "priceIn",
+      "from": 0.05,
+      "to": null
+    },
+    {
+      "date": "2026-10-24",
+      "type": "price",
+      "model": {
+        "id": "352f834f-a03c-4117-8a29-c3ccd8a568ce",
+        "name": "Qwen2.5 Turbo",
+        "slug": "qwen-turbo",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-24"
+      },
+      "metric": "priceOut",
+      "from": 0.2,
+      "to": null
+    },
     {
       "date": "2026-10-23",
       "type": "added",
