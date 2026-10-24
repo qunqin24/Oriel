@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-23T23:45:43.625Z",
+  "fetched_at": "2026-10-24T22:55:25.912Z",
   "tier": "free",
   "data": [
     {
@@ -29,7 +29,7 @@
         "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
         "name": "Mureka"
       },
-      "elo": 1106,
+      "elo": 1107,
       "ci_95": 19
     },
     {
@@ -39,22 +39,22 @@
         "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
         "name": "Mureka"
       },
-      "elo": 1059,
-      "ci_95": 19
-    },
-    {
-      "id": "82bc3b6a-ff83-416d-b32f-7bd6824ff376",
-      "name": "Lyria 3 Pro",
-      "model_creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google"
-      },
-      "elo": 1051,
+      "elo": 1060,
       "ci_95": 19
     },
     {
       "id": "0fc68799-de19-4991-a482-315ab880803f",
       "name": "Lyria 3.5",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "elo": 1053,
+      "ci_95": 19
+    },
+    {
+      "id": "82bc3b6a-ff83-416d-b32f-7bd6824ff376",
+      "name": "Lyria 3 Pro",
       "model_creator": {
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
@@ -69,7 +69,7 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1013,
+      "elo": 1015,
       "ci_95": 19
     },
     {
@@ -89,17 +89,7 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 997,
-      "ci_95": 19
-    },
-    {
-      "id": "2fbed20c-1a4e-4049-8b23-ec6b21208790",
-      "name": "MiniMax Music 2.6",
-      "model_creator": {
-        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
-        "name": "MiniMax"
-      },
-      "elo": 997,
+      "elo": 999,
       "ci_95": 19
     },
     {
@@ -109,7 +99,17 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 997,
+      "elo": 998,
+      "ci_95": 19
+    },
+    {
+      "id": "2fbed20c-1a4e-4049-8b23-ec6b21208790",
+      "name": "MiniMax Music 2.6",
+      "model_creator": {
+        "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+        "name": "MiniMax"
+      },
+      "elo": 998,
       "ci_95": 19
     },
     {
@@ -119,7 +119,7 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 987,
+      "elo": 990,
       "ci_95": 19
     },
     {

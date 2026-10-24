@@ -1,6 +1,291 @@
 {
-  "generated_at": "2026-10-23T23:45:44.753Z",
+  "generated_at": "2026-10-24T22:55:27.337Z",
   "events": [
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "a83f84b3-473a-4276-9ae1-8909da723159",
+        "name": "DeepSeek R1 0528 (May '25)",
+        "slug": "deepseek-r1",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceIn",
+      "from": 1.35,
+      "to": 1.85
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "a83f84b3-473a-4276-9ae1-8909da723159",
+        "name": "DeepSeek R1 0528 (May '25)",
+        "slug": "deepseek-r1",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceOut",
+      "from": 3,
+      "to": 2.75
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "81b6ddfc-111e-4422-bd44-42ee6165b699",
+        "name": "GLM-4.7 (Non-reasoning)",
+        "slug": "glm-4-7-non-reasoning",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceIn",
+      "from": 0.6,
+      "to": 0.525
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "81b6ddfc-111e-4422-bd44-42ee6165b699",
+        "name": "GLM-4.7 (Non-reasoning)",
+        "slug": "glm-4-7-non-reasoning",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceOut",
+      "from": 2.2,
+      "to": 2.1
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "6fc35842-0165-44cf-8570-c484a92b3d8c",
+        "name": "GLM-4.7 (Reasoning)",
+        "slug": "glm-4-7",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceIn",
+      "from": 0.6,
+      "to": 0.525
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "6fc35842-0165-44cf-8570-c484a92b3d8c",
+        "name": "GLM-4.7 (Reasoning)",
+        "slug": "glm-4-7",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceOut",
+      "from": 2.2,
+      "to": 2.1
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "36f73aaf-d38a-4b56-a2b3-d04d17186910",
+        "name": "gpt-oss-20b (High)",
+        "slug": "gpt-oss-20b",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceIn",
+      "from": 0.07,
+      "to": 0.05
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "36f73aaf-d38a-4b56-a2b3-d04d17186910",
+        "name": "gpt-oss-20b (High)",
+        "slug": "gpt-oss-20b",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceOut",
+      "from": 0.25,
+      "to": 0.22
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "16149b9c-a1e9-4669-a5cb-ff3c00d78f89",
+        "name": "gpt-oss-20b (Low)",
+        "slug": "gpt-oss-20b-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceOut",
+      "from": 0.275,
+      "to": 0.3
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "976cc8ad-7904-4056-83c5-960181f47d5f",
+        "name": "Llama 3.3 Instruct 70B",
+        "slug": "llama-3-3-instruct-70b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceIn",
+      "from": 0.71,
+      "to": 0.655
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "976cc8ad-7904-4056-83c5-960181f47d5f",
+        "name": "Llama 3.3 Instruct 70B",
+        "slug": "llama-3-3-instruct-70b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceOut",
+      "from": 0.72,
+      "to": 0.715
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "3373245b-e6dc-4b66-a7b0-3f06f9b7bd46",
+        "name": "Qwen3 235B A22B 2507 Instruct",
+        "slug": "qwen3-235b-a22b-instruct-2507",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceIn",
+      "from": 0.22,
+      "to": 0.21
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "3373245b-e6dc-4b66-a7b0-3f06f9b7bd46",
+        "name": "Qwen3 235B A22B 2507 Instruct",
+        "slug": "qwen3-235b-a22b-instruct-2507",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceOut",
+      "from": 0.88,
+      "to": 0.84
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "093883ed-f5fc-443b-8e18-afbfb166699e",
+        "name": "Qwen3 Coder 480B A35B Instruct",
+        "slug": "qwen3-coder-480b-a35b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceIn",
+      "from": 0.3,
+      "to": 0.375
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "093883ed-f5fc-443b-8e18-afbfb166699e",
+        "name": "Qwen3 Coder 480B A35B Instruct",
+        "slug": "qwen3-coder-480b-a35b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceOut",
+      "from": 1.8,
+      "to": 1.4
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "c8a79180-7d16-4474-8701-9a77c0baa56a",
+        "name": "Qwen3 Next 80B A3B (Reasoning)",
+        "slug": "qwen3-next-80b-a3b-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceIn",
+      "from": 0.15,
+      "to": null
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "c8a79180-7d16-4474-8701-9a77c0baa56a",
+        "name": "Qwen3 Next 80B A3B (Reasoning)",
+        "slug": "qwen3-next-80b-a3b-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceOut",
+      "from": 1.2,
+      "to": null
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "2698f6c6-e436-47ce-a583-dbc25596c571",
+        "name": "Qwen3 Next 80B A3B Instruct",
+        "slug": "qwen3-next-80b-a3b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceIn",
+      "from": 0.125,
+      "to": 0.1
+    },
+    {
+      "date": "2026-10-25",
+      "type": "price",
+      "model": {
+        "id": "2698f6c6-e436-47ce-a583-dbc25596c571",
+        "name": "Qwen3 Next 80B A3B Instruct",
+        "slug": "qwen3-next-80b-a3b-instruct",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-25"
+      },
+      "metric": "priceOut",
+      "from": 1.15,
+      "to": 1.1
+    },
     {
       "date": "2026-10-24",
       "type": "added",
