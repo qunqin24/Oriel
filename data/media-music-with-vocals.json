@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-25T23:01:49.200Z",
+  "fetched_at": "2026-10-27T00:14:56.980Z",
   "tier": "free",
   "data": [
     {
@@ -9,8 +9,8 @@
         "id": "30bf1911-2cd9-4bce-a179-009b174196fc",
         "name": "Suno"
       },
-      "elo": 1147,
-      "ci_95": 20
+      "elo": 1144,
+      "ci_95": 18
     },
     {
       "id": "ae3d2d82-b1bd-4a0d-aea0-bd6fa35edf9c",
@@ -19,8 +19,8 @@
         "id": "30bf1911-2cd9-4bce-a179-009b174196fc",
         "name": "Suno"
       },
-      "elo": 1130,
-      "ci_95": 19
+      "elo": 1132,
+      "ci_95": 18
     },
     {
       "id": "d4c9256e-4c47-46a8-ae2f-7f4b9f1ec8c5",
@@ -29,8 +29,8 @@
         "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
         "name": "Mureka"
       },
-      "elo": 1107,
-      "ci_95": 19
+      "elo": 1101,
+      "ci_95": 18
     },
     {
       "id": "9f962b4f-4f2c-402e-a1b9-48c274cf6d8d",
@@ -39,8 +39,8 @@
         "id": "129097a7-4b31-4f07-9482-91fb1814f1d0",
         "name": "Mureka"
       },
-      "elo": 1060,
-      "ci_95": 19
+      "elo": 1062,
+      "ci_95": 18
     },
     {
       "id": "0fc68799-de19-4991-a482-315ab880803f",
@@ -49,8 +49,8 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1053,
-      "ci_95": 19
+      "elo": 1051,
+      "ci_95": 18
     },
     {
       "id": "82bc3b6a-ff83-416d-b32f-7bd6824ff376",
@@ -59,8 +59,8 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1051,
-      "ci_95": 19
+      "elo": 1047,
+      "ci_95": 18
     },
     {
       "id": "0c52ad63-9a04-4c2a-ba24-c7e6906c0d83",
@@ -69,8 +69,18 @@
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 1015,
-      "ci_95": 19
+      "elo": 1016,
+      "ci_95": 18
+    },
+    {
+      "id": "cf05d8dd-1699-4c8e-b240-b04a24a7f7a5",
+      "name": "Eleven Music v2",
+      "model_creator": {
+        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
+        "name": "ElevenLabs"
+      },
+      "elo": 1000,
+      "ci_95": 18
     },
     {
       "id": "a2dc2b4c-dd8a-463c-9cd7-e398d7d8f818",
@@ -83,24 +93,14 @@
       "ci_95": 0
     },
     {
-      "id": "cf05d8dd-1699-4c8e-b240-b04a24a7f7a5",
-      "name": "Eleven Music v2",
-      "model_creator": {
-        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
-        "name": "ElevenLabs"
-      },
-      "elo": 999,
-      "ci_95": 19
-    },
-    {
       "id": "b5b7f9d3-85d4-47dc-9213-fe09c1ea5da1",
       "name": "Eleven Music",
       "model_creator": {
         "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
         "name": "ElevenLabs"
       },
-      "elo": 998,
-      "ci_95": 19
+      "elo": 999,
+      "ci_95": 18
     },
     {
       "id": "2fbed20c-1a4e-4049-8b23-ec6b21208790",
@@ -109,8 +109,8 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 998,
-      "ci_95": 19
+      "elo": 997,
+      "ci_95": 18
     },
     {
       "id": "50494c8c-2099-41a3-a988-e0961b77f0ec",
@@ -119,8 +119,8 @@
         "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
         "name": "MiniMax"
       },
-      "elo": 990,
-      "ci_95": 19
+      "elo": 989,
+      "ci_95": 18
     },
     {
       "id": "76a412dd-5a53-48a9-afd9-a00854e27bf0",
@@ -129,8 +129,8 @@
         "id": "e988202c-0f2c-403d-8a90-a7df00a5ce81",
         "name": "Sonauto"
       },
-      "elo": 970,
-      "ci_95": 19
+      "elo": 963,
+      "ci_95": 18
     }
   ]
 }

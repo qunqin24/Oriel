@@ -1,6 +1,129 @@
 {
-  "generated_at": "2026-10-25T23:01:51.047Z",
+  "generated_at": "2026-10-27T00:14:57.899Z",
   "events": [
+    {
+      "date": "2026-10-27",
+      "type": "added",
+      "model": {
+        "id": "ea3e1f50-f62d-41d2-849a-9af0413e4d37",
+        "name": "GPT-6.1 Terra (High)",
+        "slug": "gpt-6-1-terra-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-10-27",
+        "last_seen": "2026-10-27"
+      },
+      "intelligence": 43.9
+    },
+    {
+      "date": "2026-10-27",
+      "type": "added",
+      "model": {
+        "id": "c955b262-a17f-4f1a-b097-6860b866295b",
+        "name": "GPT-6.1 Terra (Low)",
+        "slug": "gpt-6-1-terra-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-10-27",
+        "last_seen": "2026-10-27"
+      },
+      "intelligence": 36.2
+    },
+    {
+      "date": "2026-10-27",
+      "type": "added",
+      "model": {
+        "id": "b0c462cf-f2d0-4126-9434-28db9502219f",
+        "name": "GPT-6.1 Terra (Max)",
+        "slug": "gpt-6-1-terra",
+        "creator": "OpenAI",
+        "first_seen": "2026-10-27",
+        "last_seen": "2026-10-27"
+      },
+      "intelligence": 48.1
+    },
+    {
+      "date": "2026-10-27",
+      "type": "added",
+      "model": {
+        "id": "c441e158-a87d-4116-911b-93325e4b4f1c",
+        "name": "GPT-6.1 Terra (Medium)",
+        "slug": "gpt-6-1-terra-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-10-27",
+        "last_seen": "2026-10-27"
+      },
+      "intelligence": 41.3
+    },
+    {
+      "date": "2026-10-27",
+      "type": "added",
+      "model": {
+        "id": "0d3c777f-6817-42d7-9bb9-223314bc5a57",
+        "name": "GPT-6.1 Terra (Non-reasoning)",
+        "slug": "gpt-6-1-terra-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-10-27",
+        "last_seen": "2026-10-27"
+      },
+      "intelligence": 33.5
+    },
+    {
+      "date": "2026-10-27",
+      "type": "added",
+      "model": {
+        "id": "e8d443ba-8aca-4830-a186-ae869bb9c6fe",
+        "name": "GPT-6.1 Terra (Xhigh)",
+        "slug": "gpt-6-1-terra-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-10-27",
+        "last_seen": "2026-10-27"
+      },
+      "intelligence": 45.4
+    },
+    {
+      "date": "2026-10-27",
+      "type": "price",
+      "model": {
+        "id": "dbe7c625-3100-4463-b479-a228c41f75dd",
+        "name": "DeepSeek V4.1 Flash (Max)",
+        "slug": "deepseek-v4-1-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-09-11",
+        "last_seen": "2026-10-27"
+      },
+      "metric": "priceIn",
+      "from": 0.295,
+      "to": 0.3
+    },
+    {
+      "date": "2026-10-27",
+      "type": "price",
+      "model": {
+        "id": "976cc8ad-7904-4056-83c5-960181f47d5f",
+        "name": "Llama 3.3 Instruct 70B",
+        "slug": "llama-3-3-instruct-70b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-27"
+      },
+      "metric": "priceIn",
+      "from": 0.655,
+      "to": 0.6
+    },
+    {
+      "date": "2026-10-27",
+      "type": "price",
+      "model": {
+        "id": "976cc8ad-7904-4056-83c5-960181f47d5f",
+        "name": "Llama 3.3 Instruct 70B",
+        "slug": "llama-3-3-instruct-70b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-27"
+      },
+      "metric": "priceOut",
+      "from": 0.715,
+      "to": 0.71
+    },
     {
       "date": "2026-10-25",
       "type": "price",

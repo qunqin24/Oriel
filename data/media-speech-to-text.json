@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-25T23:01:49.200Z",
+  "fetched_at": "2026-10-27T00:14:56.980Z",
   "tier": "free",
   "data": [
     {
@@ -28,6 +28,15 @@
         "name": "Speechmatics"
       },
       "aa_wer_index": 0.041
+    },
+    {
+      "id": "26403f98-fe1f-43ab-b1cd-0200269f0d96",
+      "name": "Raon Speech",
+      "model_creator": {
+        "id": "bf5e5871-bb86-4c30-8485-681169debc31",
+        "name": "Krafton"
+      },
+      "aa_wer_index": 0.06
     },
     {
       "id": "88ba5688-920d-411d-a341-5f21d27ead16",
@@ -145,15 +154,6 @@
         "name": "OpenAI"
       },
       "aa_wer_index": 0.033
-    },
-    {
-      "id": "26403f98-fe1f-43ab-b1cd-0200269f0d96",
-      "name": "Raon Speech",
-      "model_creator": {
-        "id": "bf5e5871-bb86-4c30-8485-681169debc31",
-        "name": "Krafton"
-      },
-      "aa_wer_index": 0.06
     },
     {
       "id": "102ecb4c-cfc7-4ba2-84df-588b3e64f793",
@@ -280,6 +280,15 @@
         "name": "Alibaba"
       },
       "aa_wer_index": 0.035
+    },
+    {
+      "id": "c63b5a19-70ff-4e86-a506-562b87486bc2",
+      "name": "Voxtral Mini Transcribe, Mistral",
+      "model_creator": {
+        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
+        "name": "Mistral"
+      },
+      "aa_wer_index": 0.038
     },
     {
       "id": "9c53fcbc-f016-4bc0-af49-57b8a906e81d",
@@ -586,6 +595,15 @@
         "name": "Soniox"
       },
       "aa_wer_index": 0.038
+    },
+    {
+      "id": "32c45c79-c546-4df6-909e-a02421799668",
+      "name": "Parakeet TDT 0.6B V3, NVIDIA",
+      "model_creator": {
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA"
+      },
+      "aa_wer_index": 0.045
     },
     {
       "id": "4810d50c-9471-43f2-a53c-e68f496e24dd",

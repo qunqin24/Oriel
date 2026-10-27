@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-25T23:01:58.298Z",
+  "fetched_at": "2026-10-27T00:15:04.047Z",
   "source_repo": "https://github.com/llm2014/llm_benchmark",
   "source_site": "https://llm2014.github.io/llm_benchmark/",
   "categories": {
@@ -692,8 +692,8 @@
           "5/B+(12.60)",
           "Pass",
           "17/B(38.77)",
-          "Pending",
-          "Pending",
+          "11/B(80.81)",
+          "13/D+(110.89)",
           "16/B(25.80)",
           "23/C(221.21)",
           "1",
@@ -763,6 +763,19 @@
           "Skip",
           "4",
           "OpenCode CLI",
+          "1"
+        ],
+        [
+          "Hy4 preview (high)",
+          "12/B(4.23)",
+          "5/B+(15.32)",
+          "18/C+(37.80)",
+          "20/D(33.23)",
+          "Failed",
+          "Skip",
+          "Skip",
+          "0",
+          "Claude Code",
           "1"
         ],
         [
