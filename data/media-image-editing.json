@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-27T00:14:56.980Z",
+  "fetched_at": "2026-10-28T00:16:19.318Z",
   "tier": "free",
   "data": [
     {
@@ -12,6 +12,17 @@
       },
       "elo": 1199,
       "ci_95": 11
+    },
+    {
+      "id": "e0c7ffeb-f6b7-4f54-902a-fbedccea863e",
+      "name": "MAI-Image-2.7-Preview",
+      "slug": "MAI-Image-2-7-Preview",
+      "model_creator": {
+        "id": "4756ee95-5ddf-45e8-a9d1-075d0e5b5200",
+        "name": "Microsoft AI"
+      },
+      "elo": 1193,
+      "ci_95": 15
     },
     {
       "id": "ac3abe51-14ca-4c04-b215-01a85f3a36ac",

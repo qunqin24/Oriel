@@ -1,6 +1,96 @@
 {
-  "generated_at": "2026-10-27T00:14:57.899Z",
+  "generated_at": "2026-10-28T00:16:20.665Z",
   "events": [
+    {
+      "date": "2026-10-28",
+      "type": "price",
+      "model": {
+        "id": "037dec2f-51e8-4127-a1f1-85155dae7a1d",
+        "name": "GPT-3.5 Turbo",
+        "slug": "gpt-35-turbo",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-28"
+      },
+      "metric": "priceIn",
+      "from": 0.5,
+      "to": null
+    },
+    {
+      "date": "2026-10-28",
+      "type": "price",
+      "model": {
+        "id": "037dec2f-51e8-4127-a1f1-85155dae7a1d",
+        "name": "GPT-3.5 Turbo",
+        "slug": "gpt-35-turbo",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-28"
+      },
+      "metric": "priceOut",
+      "from": 1.5,
+      "to": null
+    },
+    {
+      "date": "2026-10-28",
+      "type": "price",
+      "model": {
+        "id": "6a7c0e25-1dcb-4b15-8495-a8536a9da051",
+        "name": "GPT-4",
+        "slug": "gpt-4",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-28"
+      },
+      "metric": "priceIn",
+      "from": 30,
+      "to": null
+    },
+    {
+      "date": "2026-10-28",
+      "type": "price",
+      "model": {
+        "id": "6a7c0e25-1dcb-4b15-8495-a8536a9da051",
+        "name": "GPT-4",
+        "slug": "gpt-4",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-10-28"
+      },
+      "metric": "priceOut",
+      "from": 60,
+      "to": null
+    },
+    {
+      "date": "2026-10-28",
+      "type": "price",
+      "model": {
+        "id": "1071dea1-43e7-4fe9-b936-3034bb622b2e",
+        "name": "Granite 4.2 30B",
+        "slug": "granite-4-2-30b",
+        "creator": "IBM",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-10-28"
+      },
+      "metric": "priceIn",
+      "from": 0.16,
+      "to": null
+    },
+    {
+      "date": "2026-10-28",
+      "type": "price",
+      "model": {
+        "id": "1071dea1-43e7-4fe9-b936-3034bb622b2e",
+        "name": "Granite 4.2 30B",
+        "slug": "granite-4-2-30b",
+        "creator": "IBM",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-10-28"
+      },
+      "metric": "priceOut",
+      "from": 0.65,
+      "to": null
+    },
     {
       "date": "2026-10-27",
       "type": "added",
