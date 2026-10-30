@@ -11,6 +11,7 @@ import fs from "node:fs";
 import path from "node:path";
 import zlib from "node:zlib";
 import vm from "node:vm";
+import { inspectFrontier } from "./lib/verify-frontier.mjs";
 
 const ROOT = process.cwd();
 const DIST = path.join(ROOT, "dist");
@@ -57,11 +58,14 @@ check(
 console.log("\n【4】零 JS 可读性");
 const home = read("index.html");
 check("首页无 island", !home.includes("<astro-island"));
-check(
-  "前沿图 SVG 在 HTML 里",
-  home.includes('viewBox="0 0 900 340"') && (home.match(/<circle/g) || []).length > 500,
-  `${(home.match(/<circle/g) || []).length} 个散点`
-);
+for (const page of ["index.html", "en/index.html"]) {
+  const frontier = inspectFrontier(read(page), languageEnvelope.data);
+  check(
+    `${page} 前沿图 SVG 完整渲染本次快照的模型点`,
+    frontier.ok,
+    `${frontier.actual} 个模型点 / 期望 ${frontier.expected}`
+  );
+}
 check("前沿兜底表格存在", (home.match(/<tbody>/g) || []).length >= 1);
 check(
   "主榜 Top 10 在 HTML 里",

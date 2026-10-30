@@ -2,7 +2,7 @@
 /**
  * 能力前沿图——本站的签名元素。
  *
- * 573 个「有发布日期且有智能指数」的模型各是一个点，按发布时间铺开。
+ * 每个「有发布日期且有智能指数」的模型各是一个点，按发布时间铺开。
  * 金色阶梯是当时的能力上界：只会被抬高，不会因为某个弱模型发布而回落。
  *
  * 全部在构建期算好，输出为内联 SVG。没有 JS，也没有客户端图表库——
@@ -160,7 +160,7 @@ const desc = hasData
         {/* 每个模型一个点。重叠处自然变亮，密度即分布。 */}
         <g fill="var(--plot-dot)" fill-opacity="0.7">
           {others.map((point) => (
-            <circle cx={r2(x(point.time))} cy={r2(y(point.intelligence))} r="2.2" />
+            <circle data-frontier-point cx={r2(x(point.time))} cy={r2(y(point.intelligence))} r="2.2" />
           ))}
         </g>
 
@@ -181,7 +181,7 @@ const desc = hasData
         */}
         <g fill="var(--gold)" stroke="var(--ground)" stroke-width="1.5">
           {leaders.map((leader) => (
-            <circle cx={r2(x(leader.time))} cy={r2(y(leader.intelligence))} r="3.2">
+            <circle data-frontier-point cx={r2(x(leader.time))} cy={r2(y(leader.intelligence))} r="3.2">
               <title>{leaderTips.get(leader.slug)}</title>
             </circle>
           ))}
