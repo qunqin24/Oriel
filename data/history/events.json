@@ -1,6 +1,433 @@
 {
-  "generated_at": "2026-10-28T00:16:20.665Z",
+  "generated_at": "2026-11-02T01:15:06.211Z",
   "events": [
+    {
+      "date": "2026-11-02",
+      "type": "added",
+      "model": {
+        "id": "5720fd2f-873a-4765-8640-a153b38bd64d",
+        "name": "DeepSeek V4.1 Flash 1017 (Non-reasoning)",
+        "slug": "deepseek-v4-1-flash-1017-non-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-11-02",
+        "last_seen": "2026-11-02"
+      },
+      "intelligence": 18.5
+    },
+    {
+      "date": "2026-11-02",
+      "type": "added",
+      "model": {
+        "id": "909ed0ba-bcc5-4f38-8162-08a4e187a772",
+        "name": "Gemini 4 Carbon (High)",
+        "slug": "gemini-4-carbon",
+        "creator": "Google",
+        "first_seen": "2026-11-02",
+        "last_seen": "2026-11-02"
+      },
+      "intelligence": 59.4
+    },
+    {
+      "date": "2026-11-02",
+      "type": "added",
+      "model": {
+        "id": "ea5019ae-b0b7-49a5-80b3-0e584807af0f",
+        "name": "Mistral Large 4 (High)",
+        "slug": "mistral-large-4",
+        "creator": "Mistral",
+        "first_seen": "2026-11-02",
+        "last_seen": "2026-11-02"
+      },
+      "intelligence": 26
+    },
+    {
+      "date": "2026-11-02",
+      "type": "added",
+      "model": {
+        "id": "27b24366-fd1a-44b7-8011-e24d7501318d",
+        "name": "Mistral Large 4 (Medium)",
+        "slug": "mistral-large-4-medium",
+        "creator": "Mistral",
+        "first_seen": "2026-11-02",
+        "last_seen": "2026-11-02"
+      },
+      "intelligence": 23.1
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "5da3c0e2-65d2-4bff-a410-cb2132ddafb6",
+        "name": "DeepSeek V4 Pro 0424 (High)",
+        "slug": "deepseek-v4-pro-0424-high",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceIn",
+      "from": 0.435,
+      "to": 1.67
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "5da3c0e2-65d2-4bff-a410-cb2132ddafb6",
+        "name": "DeepSeek V4 Pro 0424 (High)",
+        "slug": "deepseek-v4-pro-0424-high",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceOut",
+      "from": 0.87,
+      "to": 3.34
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "bf220674-68bd-43cc-a1b8-ce5ed4d2f18d",
+        "name": "DeepSeek V4 Pro 0424 (Max)",
+        "slug": "deepseek-v4-pro-0424",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceIn",
+      "from": 0.435,
+      "to": 1.4058
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "bf220674-68bd-43cc-a1b8-ce5ed4d2f18d",
+        "name": "DeepSeek V4 Pro 0424 (Max)",
+        "slug": "deepseek-v4-pro-0424",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceOut",
+      "from": 0.87,
+      "to": 3.1675
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "6e2a2572-ed8d-4616-8d7d-68d125fc8ee7",
+        "name": "DeepSeek V4 Pro 0424 (Non-reasoning)",
+        "slug": "deepseek-v4-pro-0424-non-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceIn",
+      "from": 0.435,
+      "to": 1.74
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "6e2a2572-ed8d-4616-8d7d-68d125fc8ee7",
+        "name": "DeepSeek V4 Pro 0424 (Non-reasoning)",
+        "slug": "deepseek-v4-pro-0424-non-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceOut",
+      "from": 0.87,
+      "to": 3.49
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "d366dfa1-d940-4788-aa73-d298c45699b3",
+        "name": "Gemini 4 Argon (High)",
+        "slug": "gemini-4-argon",
+        "creator": "Google",
+        "first_seen": "2026-10-01",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceIn",
+      "from": 2,
+      "to": 4
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "d366dfa1-d940-4788-aa73-d298c45699b3",
+        "name": "Gemini 4 Argon (High)",
+        "slug": "gemini-4-argon",
+        "creator": "Google",
+        "first_seen": "2026-10-01",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceOut",
+      "from": 10,
+      "to": 20
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "2cff73da-4855-403c-afc9-5540feadcc15",
+        "name": "Granite 3.3 8B (Non-reasoning)",
+        "slug": "granite-3-3-8b-instruct",
+        "creator": "IBM",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceIn",
+      "from": 0.03,
+      "to": null
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "2cff73da-4855-403c-afc9-5540feadcc15",
+        "name": "Granite 3.3 8B (Non-reasoning)",
+        "slug": "granite-3-3-8b-instruct",
+        "creator": "IBM",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceOut",
+      "from": 0.25,
+      "to": null
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "0c64b008-20c3-408d-bd68-15136df8cd2c",
+        "name": "Granite 4.2 3B",
+        "slug": "granite-4-2-3b",
+        "creator": "IBM",
+        "first_seen": "2026-08-27",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceIn",
+      "from": 0.03,
+      "to": null
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "0c64b008-20c3-408d-bd68-15136df8cd2c",
+        "name": "Granite 4.2 3B",
+        "slug": "granite-4-2-3b",
+        "creator": "IBM",
+        "first_seen": "2026-08-27",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceOut",
+      "from": 0.12,
+      "to": null
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "ffd65ef7-fbdb-4145-98ae-b5d01cda770b",
+        "name": "Llama 2 Chat 7B",
+        "slug": "llama-2-chat-7b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceIn",
+      "from": 0.05,
+      "to": null
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "ffd65ef7-fbdb-4145-98ae-b5d01cda770b",
+        "name": "Llama 2 Chat 7B",
+        "slug": "llama-2-chat-7b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceOut",
+      "from": 0.25,
+      "to": null
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "765c9f31-95ec-4f14-900a-80614c3b0777",
+        "name": "Mercury 2.5",
+        "slug": "mercury-2-5",
+        "creator": "Inception",
+        "first_seen": "2026-09-24",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceIn",
+      "from": 0.25,
+      "to": 0.2
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "34fc646a-0174-470e-9e62-d8df452210b3",
+        "name": "Mistral Large 4 Preview",
+        "slug": "mistral-large-4-preview",
+        "creator": "Mistral",
+        "first_seen": "2026-10-07",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceIn",
+      "from": 1.36,
+      "to": 0.7
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "34fc646a-0174-470e-9e62-d8df452210b3",
+        "name": "Mistral Large 4 Preview",
+        "slug": "mistral-large-4-preview",
+        "creator": "Mistral",
+        "first_seen": "2026-10-07",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceOut",
+      "from": 4.18,
+      "to": 2.1
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "8c748e53-61ae-48b8-af8d-eb8298b1e9db",
+        "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+        "slug": "nemotron-3-nano-omni-30b-a3b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceIn",
+      "from": 0.4,
+      "to": 0.5
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "8c748e53-61ae-48b8-af8d-eb8298b1e9db",
+        "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+        "slug": "nemotron-3-nano-omni-30b-a3b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceOut",
+      "from": 1.365,
+      "to": 0.9
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "e2c0623e-c855-4a61-bb66-be1f1ed43234",
+        "name": "Nemotron 3.5 Super VL",
+        "slug": "nemotron-3-5-super-vl",
+        "creator": "NVIDIA",
+        "first_seen": "2026-10-16",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceIn",
+      "from": 0.225,
+      "to": 0.2
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "e2c0623e-c855-4a61-bb66-be1f1ed43234",
+        "name": "Nemotron 3.5 Super VL",
+        "slug": "nemotron-3-5-super-vl",
+        "creator": "NVIDIA",
+        "first_seen": "2026-10-16",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceOut",
+      "from": 0.575,
+      "to": 0.5
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "dbbcf240-a69e-4078-8f16-7c94c7a8c514",
+        "name": "Reka Flash 3",
+        "slug": "reka-flash-3",
+        "creator": "Reka AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceIn",
+      "from": 0.2,
+      "to": 0.1
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "dbbcf240-a69e-4078-8f16-7c94c7a8c514",
+        "name": "Reka Flash 3",
+        "slug": "reka-flash-3",
+        "creator": "Reka AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceOut",
+      "from": 0.8,
+      "to": 0.2
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "b6d2e43d-3082-43f5-9318-0f4dbcb54163",
+        "name": "Trinity Large Thinking",
+        "slug": "trinity-large-thinking",
+        "creator": "Arcee AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceIn",
+      "from": 0.25,
+      "to": null
+    },
+    {
+      "date": "2026-11-02",
+      "type": "price",
+      "model": {
+        "id": "b6d2e43d-3082-43f5-9318-0f4dbcb54163",
+        "name": "Trinity Large Thinking",
+        "slug": "trinity-large-thinking",
+        "creator": "Arcee AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-02"
+      },
+      "metric": "priceOut",
+      "from": 0.8,
+      "to": null
+    },
     {
       "date": "2026-10-28",
       "type": "price",

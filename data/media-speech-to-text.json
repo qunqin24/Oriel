@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-28T00:16:19.318Z",
+  "fetched_at": "2026-11-02T01:15:05.148Z",
   "tier": "free",
   "data": [
     {
@@ -289,6 +289,15 @@
         "name": "Mistral"
       },
       "aa_wer_index": 0.038
+    },
+    {
+      "id": "28c91081-caf7-4d9a-b24b-2c8430c615d7",
+      "name": "Nemotron 3.5 Transcribe",
+      "model_creator": {
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA"
+      },
+      "aa_wer_index": 0.028
     },
     {
       "id": "9c53fcbc-f016-4bc0-af49-57b8a906e81d",
