@@ -1,6 +1,283 @@
 {
-  "generated_at": "2026-11-02T01:15:06.211Z",
+  "generated_at": "2026-11-03T02:46:20.180Z",
   "events": [
+    {
+      "date": "2026-11-03",
+      "type": "added",
+      "model": {
+        "id": "c3b66080-fdcb-48e4-8ade-6baf77921c7c",
+        "name": "DeepSeek V4.1 Flash 1017 (High)",
+        "slug": "deepseek-v4-1-flash-1017-high",
+        "creator": "DeepSeek",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-03"
+      },
+      "intelligence": 28.5
+    },
+    {
+      "date": "2026-11-03",
+      "type": "added",
+      "model": {
+        "id": "b3866703-a9f7-4ea2-8f3f-b361c90aaf0e",
+        "name": "Gemini 4 Carbon (Low)",
+        "slug": "gemini-4-carbon-low",
+        "creator": "Google",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-03"
+      },
+      "intelligence": 53.7
+    },
+    {
+      "date": "2026-11-03",
+      "type": "added",
+      "model": {
+        "id": "0d3eaafd-54ed-4f78-bdd7-05a2db883986",
+        "name": "Gemini 4 Carbon (Medium)",
+        "slug": "gemini-4-carbon-medium",
+        "creator": "Google",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-03"
+      },
+      "intelligence": 57.7
+    },
+    {
+      "date": "2026-11-03",
+      "type": "added",
+      "model": {
+        "id": "4cef9716-27a3-4ac3-9620-cd75135d7bbf",
+        "name": "Nanbeige4.3-33B",
+        "slug": "nanbeige4-3-33b",
+        "creator": "Nanbeige",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-03"
+      },
+      "intelligence": 20.4
+    },
+    {
+      "date": "2026-11-03",
+      "type": "price",
+      "model": {
+        "id": "891bcdf2-8dd2-4dc3-829b-d963fde25876",
+        "name": "Apertus 8B Instruct",
+        "slug": "apertus-8b-instruct",
+        "creator": "Swiss AI Initiative",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "priceIn",
+      "from": 0.1,
+      "to": null
+    },
+    {
+      "date": "2026-11-03",
+      "type": "price",
+      "model": {
+        "id": "891bcdf2-8dd2-4dc3-829b-d963fde25876",
+        "name": "Apertus 8B Instruct",
+        "slug": "apertus-8b-instruct",
+        "creator": "Swiss AI Initiative",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "priceOut",
+      "from": 0.2,
+      "to": null
+    },
+    {
+      "date": "2026-11-03",
+      "type": "price",
+      "model": {
+        "id": "5da3c0e2-65d2-4bff-a410-cb2132ddafb6",
+        "name": "DeepSeek V4 Pro 0424 (High)",
+        "slug": "deepseek-v4-pro-0424-high",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "priceIn",
+      "from": 1.67,
+      "to": 1.6
+    },
+    {
+      "date": "2026-11-03",
+      "type": "price",
+      "model": {
+        "id": "5da3c0e2-65d2-4bff-a410-cb2132ddafb6",
+        "name": "DeepSeek V4 Pro 0424 (High)",
+        "slug": "deepseek-v4-pro-0424-high",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "priceOut",
+      "from": 3.34,
+      "to": 3.2
+    },
+    {
+      "date": "2026-11-03",
+      "type": "price",
+      "model": {
+        "id": "bf220674-68bd-43cc-a1b8-ce5ed4d2f18d",
+        "name": "DeepSeek V4 Pro 0424 (Max)",
+        "slug": "deepseek-v4-pro-0424",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "priceIn",
+      "from": 1.4058,
+      "to": 1.31
+    },
+    {
+      "date": "2026-11-03",
+      "type": "price",
+      "model": {
+        "id": "bf220674-68bd-43cc-a1b8-ce5ed4d2f18d",
+        "name": "DeepSeek V4 Pro 0424 (Max)",
+        "slug": "deepseek-v4-pro-0424",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "priceOut",
+      "from": 3.1675,
+      "to": 3.135
+    },
+    {
+      "date": "2026-11-03",
+      "type": "price",
+      "model": {
+        "id": "6e2a2572-ed8d-4616-8d7d-68d125fc8ee7",
+        "name": "DeepSeek V4 Pro 0424 (Non-reasoning)",
+        "slug": "deepseek-v4-pro-0424-non-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "priceOut",
+      "from": 3.49,
+      "to": 3.48
+    },
+    {
+      "date": "2026-11-03",
+      "type": "price",
+      "model": {
+        "id": "92f245a7-43b4-4ffd-8bfb-866746bf824d",
+        "name": "GLM-5.1 (Non-reasoning)",
+        "slug": "glm-5-1-non-reasoning",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "priceIn",
+      "from": 1.38,
+      "to": 1.285
+    },
+    {
+      "date": "2026-11-03",
+      "type": "price",
+      "model": {
+        "id": "92f245a7-43b4-4ffd-8bfb-866746bf824d",
+        "name": "GLM-5.1 (Non-reasoning)",
+        "slug": "glm-5-1-non-reasoning",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "priceOut",
+      "from": 4.4,
+      "to": 4.07
+    },
+    {
+      "date": "2026-11-03",
+      "type": "price",
+      "model": {
+        "id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
+        "name": "GLM-5.1 (Reasoning)",
+        "slug": "glm-5-1",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "priceIn",
+      "from": 1.285,
+      "to": 1.19
+    },
+    {
+      "date": "2026-11-03",
+      "type": "price",
+      "model": {
+        "id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
+        "name": "GLM-5.1 (Reasoning)",
+        "slug": "glm-5-1",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "priceOut",
+      "from": 4.07,
+      "to": 3.74
+    },
+    {
+      "date": "2026-11-03",
+      "type": "price",
+      "model": {
+        "id": "3373245b-e6dc-4b66-a7b0-3f06f9b7bd46",
+        "name": "Qwen3 235B A22B 2507 Instruct",
+        "slug": "qwen3-235b-a22b-instruct-2507",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "priceIn",
+      "from": 0.21,
+      "to": 0.22
+    },
+    {
+      "date": "2026-11-03",
+      "type": "price",
+      "model": {
+        "id": "3373245b-e6dc-4b66-a7b0-3f06f9b7bd46",
+        "name": "Qwen3 235B A22B 2507 Instruct",
+        "slug": "qwen3-235b-a22b-instruct-2507",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "priceOut",
+      "from": 0.84,
+      "to": 0.88
+    },
+    {
+      "date": "2026-11-03",
+      "type": "score",
+      "model": {
+        "id": "adfae555-f489-4f3e-9064-c6b7fcdd0783",
+        "name": "Granite 4.2 8B",
+        "slug": "granite-4-2-8b",
+        "creator": "IBM",
+        "first_seen": "2026-08-27",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 5.1
+    },
+    {
+      "date": "2026-11-03",
+      "type": "score",
+      "model": {
+        "id": "59627802-1546-422c-9a65-65b61c022d36",
+        "name": "Grok 4.7 (Xhigh)",
+        "slug": "grok-4-7",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-09-22",
+        "last_seen": "2026-11-03"
+      },
+      "metric": "intelligence",
+      "from": 34.3,
+      "to": 35.3
+    },
     {
       "date": "2026-11-02",
       "type": "added",
