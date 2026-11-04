@@ -1,6 +1,921 @@
 {
-  "generated_at": "2026-11-03T02:46:20.180Z",
+  "generated_at": "2026-11-04T01:03:56.659Z",
   "events": [
+    {
+      "date": "2026-11-04",
+      "type": "price",
+      "model": {
+        "id": "4764d31d-f4af-4297-8bd1-e993f26bcb64",
+        "name": "MiMo-V2.5-Pro (Non-reasoning)",
+        "slug": "mimo-v2-5-pro-non-reasoning",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "priceIn",
+      "from": 0.39,
+      "to": 0.674
+    },
+    {
+      "date": "2026-11-04",
+      "type": "price",
+      "model": {
+        "id": "4764d31d-f4af-4297-8bd1-e993f26bcb64",
+        "name": "MiMo-V2.5-Pro (Non-reasoning)",
+        "slug": "mimo-v2-5-pro-non-reasoning",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "priceOut",
+      "from": 1.17,
+      "to": 1.848
+    },
+    {
+      "date": "2026-11-04",
+      "type": "price",
+      "model": {
+        "id": "00f1248e-78e3-4230-8dc8-5e13ba8645e2",
+        "name": "MiMo-V2.5-Pro (Reasoning)",
+        "slug": "mimo-v2-5-pro",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "priceIn",
+      "from": 0.4125,
+      "to": 0.435
+    },
+    {
+      "date": "2026-11-04",
+      "type": "price",
+      "model": {
+        "id": "00f1248e-78e3-4230-8dc8-5e13ba8645e2",
+        "name": "MiMo-V2.5-Pro (Reasoning)",
+        "slug": "mimo-v2-5-pro",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "priceOut",
+      "from": 1.02,
+      "to": 0.87
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "9d7d72cd-d95d-45a0-b109-4ad292c9aabd",
+        "name": "Claude Fable 5.1 (High, Default Fallback)",
+        "slug": "claude-fable-5-1-high",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-02",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 47,
+      "to": 47.2
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "05776db7-f5c0-40f7-b824-079160f8cfa8",
+        "name": "Claude Fable 5.1 (Low, Default Fallback)",
+        "slug": "claude-fable-5-1-low",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-02",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 38.5,
+      "to": 38.7
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "3e87c73e-a257-495e-9730-367a66229811",
+        "name": "Claude Fable 5.1 (Max, Default Fallback)",
+        "slug": "claude-fable-5-1",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-02",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 49,
+      "to": 49.2
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "3b7de71c-e034-4591-8ca6-6b6be2fa471f",
+        "name": "Claude Fable 5.1 (Medium, Default Fallback)",
+        "slug": "claude-fable-5-1-medium",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-02",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 43,
+      "to": 43.2
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "9b166bf3-42db-4f63-8338-1c4a1244ffe8",
+        "name": "Claude Fable 5.1 (Xhigh, Default Fallback)",
+        "slug": "claude-fable-5-1-xhigh",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-02",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 49.7,
+      "to": 50
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "20829974-af06-497e-9f42-77fb958d43b9",
+        "name": "Claude Haiku 5.5 (High)",
+        "slug": "claude-haiku-5-5-high",
+        "creator": "Anthropic",
+        "first_seen": "2026-10-08",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 29.6,
+      "to": 29.9
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "7d064a11-6e78-4030-b535-cdf940615041",
+        "name": "Claude Haiku 5.5 (Max)",
+        "slug": "claude-haiku-5-5",
+        "creator": "Anthropic",
+        "first_seen": "2026-10-08",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 36.2,
+      "to": 36.5
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "41b5bf5e-daf6-42d9-b8d1-60e340a3028d",
+        "name": "Claude Haiku 5.5 (Xhigh)",
+        "slug": "claude-haiku-5-5-xhigh",
+        "creator": "Anthropic",
+        "first_seen": "2026-10-08",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 34.3,
+      "to": 34.6
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "f314eade-2232-44bf-a3ab-9b326bc67de6",
+        "name": "Claude Opus 5.5 (High, Default Fallback)",
+        "slug": "claude-opus-5-5-high",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 51.7,
+      "to": 51.8
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "4416ca93-fde6-4b7b-abbc-3a6be109cc3d",
+        "name": "Claude Opus 5.5 (Low, Default Fallback)",
+        "slug": "claude-opus-5-5-low",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 34.5,
+      "to": 34.8
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "2f3c4dc9-a450-4303-8697-0237257cf08f",
+        "name": "Claude Opus 5.5 (Max, Default Fallback)",
+        "slug": "claude-opus-5-5",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 58.4,
+      "to": 59.1
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "ea9e0da6-169f-43c6-92f5-730a10d6ff8d",
+        "name": "Claude Opus 5.5 (Medium, Default Fallback)",
+        "slug": "claude-opus-5-5-medium",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 48.1,
+      "to": 48.2
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "df5bf99d-d228-4715-b41b-19ca86118777",
+        "name": "Claude Opus 5.5 (Xhigh, Default Fallback)",
+        "slug": "claude-opus-5-5-xhigh",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 57,
+      "to": 57.4
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "268525e2-f873-4178-bc07-e6a0ee1f002d",
+        "name": "Claude Sonnet 5.5 (High, Default Fallback)",
+        "slug": "claude-sonnet-5-5-high",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-29",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 41.1,
+      "to": 41.5
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "bbc2ffea-cf6b-43be-8c41-1769347e234d",
+        "name": "Claude Sonnet 5.5 (Low, Default Fallback)",
+        "slug": "claude-sonnet-5-5-low",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-29",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 25.3,
+      "to": 25.6
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "b171d979-5ec1-45de-b8b9-db1ee65e77ec",
+        "name": "Claude Sonnet 5.5 (Max, Default Fallback)",
+        "slug": "claude-sonnet-5-5",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-29",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 54.2,
+      "to": 54.5
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "042e8a37-fcd0-40f4-8f41-99215fb68eda",
+        "name": "Claude Sonnet 5.5 (Medium, Default Fallback)",
+        "slug": "claude-sonnet-5-5-medium",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-29",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 30.3,
+      "to": 30.8
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "975aeaef-50bd-4a65-9c73-f1015adcd4d4",
+        "name": "Claude Sonnet 5.5 (Xhigh, Default Fallback)",
+        "slug": "claude-sonnet-5-5-xhigh",
+        "creator": "Anthropic",
+        "first_seen": "2026-09-29",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 49.6,
+      "to": 49.9
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "c3b66080-fdcb-48e4-8ade-6baf77921c7c",
+        "name": "DeepSeek V4.1 Flash 1017 (High)",
+        "slug": "deepseek-v4-1-flash-1017-high",
+        "creator": "DeepSeek",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 28.5,
+      "to": 28.6
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "f151fd0b-2139-40cf-a3ec-995e8cedc592",
+        "name": "DeepSeek V4.1 Flash 1017 (Max)",
+        "slug": "deepseek-v4-1-flash-1017",
+        "creator": "DeepSeek",
+        "first_seen": "2026-10-20",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 32.5,
+      "to": 32.6
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "8a999846-4c1d-4ce7-a8b7-1310a7166fd7",
+        "name": "Gemini 3.8 Flash (High)",
+        "slug": "gemini-3-8-flash",
+        "creator": "Google",
+        "first_seen": "2026-09-03",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 30.5,
+      "to": 30.8
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "f6db039b-0f3b-485c-9d7f-982988e44f26",
+        "name": "Gemini 3.8 Flash (Low)",
+        "slug": "gemini-3-8-flash-low",
+        "creator": "Google",
+        "first_seen": "2026-09-03",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 22.3,
+      "to": 22.5
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "744fa3c1-42a7-4995-b138-fb6be11f463c",
+        "name": "Gemini 3.8 Flash (Medium)",
+        "slug": "gemini-3-8-flash-medium",
+        "creator": "Google",
+        "first_seen": "2026-09-03",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 30,
+      "to": 30.1
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "909ed0ba-bcc5-4f38-8162-08a4e187a772",
+        "name": "Gemini 4 Carbon (High)",
+        "slug": "gemini-4-carbon",
+        "creator": "Google",
+        "first_seen": "2026-11-02",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 59.4,
+      "to": 60
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "b3866703-a9f7-4ea2-8f3f-b361c90aaf0e",
+        "name": "Gemini 4 Carbon (Low)",
+        "slug": "gemini-4-carbon-low",
+        "creator": "Google",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 53.7,
+      "to": 54.2
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "0d3eaafd-54ed-4f78-bdd7-05a2db883986",
+        "name": "Gemini 4 Carbon (Medium)",
+        "slug": "gemini-4-carbon-medium",
+        "creator": "Google",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 57.7,
+      "to": 58.3
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "bcf8db0a-3bb6-4d82-9516-0f57370c85a6",
+        "name": "GPT-5.6 Terra (Max)",
+        "slug": "gpt-5-6-terra",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 32.2
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "a3f8100d-e38f-408b-b0fa-0085dae18dc1",
+        "name": "GPT-6 Astra (Low)",
+        "slug": "gpt-6-astra-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-04",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 43,
+      "to": 43.3
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "e97a4ef5-e817-480e-9595-12f81dc4974f",
+        "name": "GPT-6 Astra (Medium)",
+        "slug": "gpt-6-astra-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-04",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 51.5,
+      "to": 51.6
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "6fb13851-40ce-4bda-ad3f-6b38e0c5daa7",
+        "name": "GPT-6 Luna (Max)",
+        "slug": "gpt-6-luna",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 27.8,
+      "to": 27.9
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "36667da0-9222-4967-adbb-f7efa15ad213",
+        "name": "GPT-6 Luna (Medium)",
+        "slug": "gpt-6-luna-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 18.3,
+      "to": 18.5
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "19813eb2-460a-475c-af65-810bb8660fec",
+        "name": "GPT-6 Luna (Xhigh)",
+        "slug": "gpt-6-luna-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 23.3,
+      "to": 23.5
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "c50ea08c-88c0-4eb7-85b8-27f2bbf6d527",
+        "name": "GPT-6 Sol (Max)",
+        "slug": "gpt-6-sol",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 44.1
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "3b84fee3-b70a-41bc-819e-5fbdef9a0042",
+        "name": "GPT-6.1 Sol (High)",
+        "slug": "gpt-6-1-sol-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-30",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 50.2,
+      "to": 50.3
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "e76e0fe5-93ca-4272-9359-2eb1740467d1",
+        "name": "GPT-6.1 Sol (Low)",
+        "slug": "gpt-6-1-sol-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-30",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 34.5,
+      "to": 34.8
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "b25ac058-1e33-4c31-bbc9-a20c3ad0717a",
+        "name": "GPT-6.1 Sol (Max)",
+        "slug": "gpt-6-1-sol",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-30",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 54.5,
+      "to": 54.6
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "a2e51d62-ea4e-4f15-8be0-be9dc1fb489d",
+        "name": "GPT-6.1 Sol (Medium)",
+        "slug": "gpt-6-1-sol-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-30",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 46.1,
+      "to": 46.3
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "092a3b0e-c5c8-45dc-bf1b-53673c8ff352",
+        "name": "GPT-6.1 Sol (Xhigh)",
+        "slug": "gpt-6-1-sol-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-30",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 52.3,
+      "to": 52.5
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "ea3e1f50-f62d-41d2-849a-9af0413e4d37",
+        "name": "GPT-6.1 Terra (High)",
+        "slug": "gpt-6-1-terra-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-10-27",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 42.3,
+      "to": 42.4
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "c955b262-a17f-4f1a-b097-6860b866295b",
+        "name": "GPT-6.1 Terra (Low)",
+        "slug": "gpt-6-1-terra-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-10-27",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 29.2,
+      "to": 29.4
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "b0c462cf-f2d0-4126-9434-28db9502219f",
+        "name": "GPT-6.1 Terra (Max)",
+        "slug": "gpt-6-1-terra",
+        "creator": "OpenAI",
+        "first_seen": "2026-10-27",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 51,
+      "to": 51.3
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "c441e158-a87d-4116-911b-93325e4b4f1c",
+        "name": "GPT-6.1 Terra (Medium)",
+        "slug": "gpt-6-1-terra-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-10-27",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 38.1,
+      "to": 38.2
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "0d3c777f-6817-42d7-9bb9-223314bc5a57",
+        "name": "GPT-6.1 Terra (Non-reasoning)",
+        "slug": "gpt-6-1-terra-non-reasoning",
+        "creator": "OpenAI",
+        "first_seen": "2026-10-27",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 30.4,
+      "to": 30.5
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "e8d443ba-8aca-4830-a186-ae869bb9c6fe",
+        "name": "GPT-6.1 Terra (Xhigh)",
+        "slug": "gpt-6-1-terra-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-10-27",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 45,
+      "to": 45.3
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "272f5f03-aea9-4675-a244-2b753b618cdf",
+        "name": "Grok 4.7 (High)",
+        "slug": "grok-4-7-high",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-09-22",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 35,
+      "to": 35.2
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "208c16f0-8c5b-4524-ac8a-ac74c02e80a9",
+        "name": "Grok 4.7 (Low)",
+        "slug": "grok-4-7-low",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-10-02",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 30.9,
+      "to": 31.1
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "59627802-1546-422c-9a65-65b61c022d36",
+        "name": "Grok 4.7 (Xhigh)",
+        "slug": "grok-4-7",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-09-22",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 35.3,
+      "to": 35.5
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "665c67ca-09eb-48f0-a7a3-0096e1d5de51",
+        "name": "Kimi K3.1 Pro",
+        "slug": "kimi-k3-1-pro",
+        "creator": "Kimi",
+        "first_seen": "2026-10-24",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 46,
+      "to": 46.5
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "539ed227-38f4-4bea-a015-117057c14b18",
+        "name": "Ling 3.1 Flash 1019",
+        "slug": "ling-3-1-flash-1019",
+        "creator": "InclusionAI",
+        "first_seen": "2026-10-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 29.5,
+      "to": 29.6
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "277f939a-985b-4b37-859d-b3eabc7c0b26",
+        "name": "MiniMax-M3",
+        "slug": "minimax-m3",
+        "creator": "MiniMax",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 18.7,
+      "to": 18.9
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "d49c8680-e29b-400e-9511-824f7ddebe07",
+        "name": "MiniMax-M3.1-Flash",
+        "slug": "minimax-m3-1-flash",
+        "creator": "MiniMax",
+        "first_seen": "2026-10-20",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 28.9,
+      "to": 29.1
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "ea5019ae-b0b7-49a5-80b3-0e584807af0f",
+        "name": "Mistral Large 4 (High)",
+        "slug": "mistral-large-4",
+        "creator": "Mistral",
+        "first_seen": "2026-11-02",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 26,
+      "to": 26.1
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "9999672c-b687-4026-9c15-5cef02ff53bb",
+        "name": "Muse Spark 1.3 (Max)",
+        "slug": "muse-spark-1-3",
+        "creator": "Meta",
+        "first_seen": "2026-09-09",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 36.4,
+      "to": 36.6
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "3661c8fb-caf7-4118-aa18-65b84fea8e44",
+        "name": "Muse Spark Open (Xhigh)",
+        "slug": "muse-spark-open",
+        "creator": "Meta",
+        "first_seen": "2026-10-16",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 24.7,
+      "to": 24.9
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "ff2f3f3d-783f-4e27-8a39-47237501a313",
+        "name": "Muse Wonder (Max)",
+        "slug": "muse-wonder",
+        "creator": "Meta",
+        "first_seen": "2026-10-13",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 43.3,
+      "to": 43.6
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "e994a6e0-d36b-4dab-8ae1-c1b469e4d9e2",
+        "name": "Muse Wonder Full (Max)",
+        "slug": "muse-wonder-full",
+        "creator": "Meta",
+        "first_seen": "2026-10-13",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 49.7,
+      "to": 50.1
+    },
+    {
+      "date": "2026-11-04",
+      "type": "score",
+      "model": {
+        "id": "b112af07-3bd5-4647-b09f-b23204361bb2",
+        "name": "Qwen3.8 Max (0902)",
+        "slug": "qwen3-8-max",
+        "creator": "Alibaba",
+        "first_seen": "2026-09-16",
+        "last_seen": "2026-11-04"
+      },
+      "metric": "intelligence",
+      "from": 33.6,
+      "to": 33.7
+    },
     {
       "date": "2026-11-03",
       "type": "added",
