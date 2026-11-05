@@ -1,6 +1,171 @@
 {
-  "generated_at": "2026-11-04T01:03:56.659Z",
+  "generated_at": "2026-11-05T01:19:13.939Z",
   "events": [
+    {
+      "date": "2026-11-05",
+      "type": "price",
+      "model": {
+        "id": "f3a0e101-086f-44b3-a1b2-d23498f9716b",
+        "name": "Agnes 2.5 Pro Beta",
+        "slug": "agnes-2-5-pro-beta",
+        "creator": "Sapiens AI",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-11-05"
+      },
+      "metric": "priceIn",
+      "from": 0.1,
+      "to": null
+    },
+    {
+      "date": "2026-11-05",
+      "type": "price",
+      "model": {
+        "id": "f3a0e101-086f-44b3-a1b2-d23498f9716b",
+        "name": "Agnes 2.5 Pro Beta",
+        "slug": "agnes-2-5-pro-beta",
+        "creator": "Sapiens AI",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-11-05"
+      },
+      "metric": "priceOut",
+      "from": 0.3,
+      "to": null
+    },
+    {
+      "date": "2026-11-05",
+      "type": "price",
+      "model": {
+        "id": "dbe7c625-3100-4463-b479-a228c41f75dd",
+        "name": "DeepSeek V4.1 Flash (Max)",
+        "slug": "deepseek-v4-1-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-09-11",
+        "last_seen": "2026-11-05"
+      },
+      "metric": "priceIn",
+      "from": 0.3,
+      "to": 0.29
+    },
+    {
+      "date": "2026-11-05",
+      "type": "score",
+      "model": {
+        "id": "a6340098-d7ae-462d-b372-0a0a67fc44b4",
+        "name": "Claude 4.5 Haiku (Reasoning)",
+        "slug": "claude-4-5-haiku-reasoning",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-05"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 7.4
+    },
+    {
+      "date": "2026-11-05",
+      "type": "score",
+      "model": {
+        "id": "d4f5b250-be37-4801-85e6-32fda4179337",
+        "name": "DeepSeek V4 Pro 0813 (Non-reasoning)",
+        "slug": "deepseek-v4-pro-non-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-10-01",
+        "last_seen": "2026-11-05"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 12.6
+    },
+    {
+      "date": "2026-11-05",
+      "type": "score",
+      "model": {
+        "id": "598190f8-dc9c-4fea-a7ea-4b81c402ab18",
+        "name": "Gemini 3.1 Flash-Lite",
+        "slug": "gemini-3-1-flash-lite-preview",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-05"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 6.2
+    },
+    {
+      "date": "2026-11-05",
+      "type": "score",
+      "model": {
+        "id": "426d24c8-49ae-482a-b4a8-20f1c53f21c1",
+        "name": "GPT-5.6 Luna (Max)",
+        "slug": "gpt-5-6-luna",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-05"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 23.8
+    },
+    {
+      "date": "2026-11-05",
+      "type": "score",
+      "model": {
+        "id": "bcf8db0a-3bb6-4d82-9516-0f57370c85a6",
+        "name": "GPT-5.6 Terra (Max)",
+        "slug": "gpt-5-6-terra",
+        "creator": "OpenAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-05"
+      },
+      "metric": "intelligence",
+      "from": 32.2,
+      "to": 32.3
+    },
+    {
+      "date": "2026-11-05",
+      "type": "score",
+      "model": {
+        "id": "c50ea08c-88c0-4eb7-85b8-27f2bbf6d527",
+        "name": "GPT-6 Sol (Max)",
+        "slug": "gpt-6-sol",
+        "creator": "OpenAI",
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-11-05"
+      },
+      "metric": "intelligence",
+      "from": 44.1,
+      "to": 44.2
+    },
+    {
+      "date": "2026-11-05",
+      "type": "score",
+      "model": {
+        "id": "d6f43d0a-e8c4-447c-9ff7-5cf0a9d59aa3",
+        "name": "Grok 4.6 (Xhigh)",
+        "slug": "grok-4-6-xhigh",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-08-25",
+        "last_seen": "2026-11-05"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 31
+    },
+    {
+      "date": "2026-11-05",
+      "type": "score",
+      "model": {
+        "id": "dd059b25-d82a-4ead-82a4-4adceaaec48b",
+        "name": "Mistral Medium 3.5",
+        "slug": "mistral-medium-3-5",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-05"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 4.6
+    },
     {
       "date": "2026-11-04",
       "type": "price",
