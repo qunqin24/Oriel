@@ -1,6 +1,180 @@
 {
-  "generated_at": "2026-11-05T01:19:13.939Z",
+  "generated_at": "2026-11-06T01:23:29.965Z",
   "events": [
+    {
+      "date": "2026-11-06",
+      "type": "added",
+      "model": {
+        "id": "e2ed7885-d46b-4da7-a873-f12f88af0081",
+        "name": "Inkling 2 Small",
+        "slug": "inkling-2-small",
+        "creator": "Thinking Machines",
+        "first_seen": "2026-11-06",
+        "last_seen": "2026-11-06"
+      },
+      "intelligence": 30.6
+    },
+    {
+      "date": "2026-11-06",
+      "type": "added",
+      "model": {
+        "id": "38a98e3d-779b-49ec-b005-230a3a72088a",
+        "name": "Muse Wonder (High)",
+        "slug": "muse-wonder-high",
+        "creator": "Meta",
+        "first_seen": "2026-11-06",
+        "last_seen": "2026-11-06"
+      },
+      "intelligence": 40.5
+    },
+    {
+      "date": "2026-11-06",
+      "type": "added",
+      "model": {
+        "id": "d274918e-ea82-4951-8b37-8ed9ab898dbc",
+        "name": "Tencent Hy4",
+        "slug": "tencent-hy4",
+        "creator": "Tencent",
+        "first_seen": "2026-11-06",
+        "last_seen": "2026-11-06"
+      },
+      "intelligence": 34.6
+    },
+    {
+      "date": "2026-11-06",
+      "type": "price",
+      "model": {
+        "id": "fb65266f-5a7d-403c-85d5-ccdf0d1ca838",
+        "name": "DeepSeek V3.1 (Non-reasoning)",
+        "slug": "deepseek-v3-1",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-06"
+      },
+      "metric": "priceIn",
+      "from": 0.56,
+      "to": 0.555
+    },
+    {
+      "date": "2026-11-06",
+      "type": "price",
+      "model": {
+        "id": "fb65266f-5a7d-403c-85d5-ccdf0d1ca838",
+        "name": "DeepSeek V3.1 (Non-reasoning)",
+        "slug": "deepseek-v3-1",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-06"
+      },
+      "metric": "priceOut",
+      "from": 1.68,
+      "to": 1.665
+    },
+    {
+      "date": "2026-11-06",
+      "type": "price",
+      "model": {
+        "id": "198b717f-42c8-4ab7-a699-ae9373d669d3",
+        "name": "DeepSeek V3.1 (Reasoning)",
+        "slug": "deepseek-v3-1-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-06"
+      },
+      "metric": "priceIn",
+      "from": 0.58,
+      "to": 0.425
+    },
+    {
+      "date": "2026-11-06",
+      "type": "price",
+      "model": {
+        "id": "198b717f-42c8-4ab7-a699-ae9373d669d3",
+        "name": "DeepSeek V3.1 (Reasoning)",
+        "slug": "deepseek-v3-1-reasoning",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-06"
+      },
+      "metric": "priceOut",
+      "from": 1.68,
+      "to": 1.34
+    },
+    {
+      "date": "2026-11-06",
+      "type": "price",
+      "model": {
+        "id": "f9739750-6d42-450f-ba1e-2f76c869b4fe",
+        "name": "Quasar 438B (Max, Based on GLM-5.2)",
+        "slug": "quasar-438b",
+        "creator": "Multiverse Computing",
+        "first_seen": "2026-09-02",
+        "last_seen": "2026-11-06"
+      },
+      "metric": "priceIn",
+      "from": 0.11,
+      "to": null
+    },
+    {
+      "date": "2026-11-06",
+      "type": "price",
+      "model": {
+        "id": "f9739750-6d42-450f-ba1e-2f76c869b4fe",
+        "name": "Quasar 438B (Max, Based on GLM-5.2)",
+        "slug": "quasar-438b",
+        "creator": "Multiverse Computing",
+        "first_seen": "2026-09-02",
+        "last_seen": "2026-11-06"
+      },
+      "metric": "priceOut",
+      "from": 0.33,
+      "to": null
+    },
+    {
+      "date": "2026-11-06",
+      "type": "score",
+      "model": {
+        "id": "b8fc61f7-5e9a-49e6-8547-6ac56db24627",
+        "name": "Claude Opus 5 (Max)",
+        "slug": "claude-opus-5",
+        "creator": "Anthropic",
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-11-06"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 44.2
+    },
+    {
+      "date": "2026-11-06",
+      "type": "score",
+      "model": {
+        "id": "cd26a386-4873-46ff-b853-d239050025a2",
+        "name": "Gemma 4 31B (Reasoning)",
+        "slug": "gemma-4-31b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-06"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 4.4
+    },
+    {
+      "date": "2026-11-06",
+      "type": "score",
+      "model": {
+        "id": "1e9907e0-ffac-4595-b006-962e4f1da7cf",
+        "name": "North Mini Code",
+        "slug": "north-mini-code",
+        "creator": "Cohere",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-06"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 3.4
+    },
     {
       "date": "2026-11-05",
       "type": "price",
