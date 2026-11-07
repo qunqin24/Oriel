@@ -1,6 +1,96 @@
 {
-  "generated_at": "2026-11-06T01:23:29.965Z",
+  "generated_at": "2026-11-07T00:38:31.886Z",
   "events": [
+    {
+      "date": "2026-11-07",
+      "type": "price",
+      "model": {
+        "id": "fb65266f-5a7d-403c-85d5-ccdf0d1ca838",
+        "name": "DeepSeek V3.1 (Non-reasoning)",
+        "slug": "deepseek-v3-1",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-07"
+      },
+      "metric": "priceIn",
+      "from": 0.555,
+      "to": 0.53
+    },
+    {
+      "date": "2026-11-07",
+      "type": "price",
+      "model": {
+        "id": "fb65266f-5a7d-403c-85d5-ccdf0d1ca838",
+        "name": "DeepSeek V3.1 (Non-reasoning)",
+        "slug": "deepseek-v3-1",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-07"
+      },
+      "metric": "priceOut",
+      "from": 1.665,
+      "to": 1.59
+    },
+    {
+      "date": "2026-11-07",
+      "type": "price",
+      "model": {
+        "id": "22d09131-343b-4adf-8760-533e20a2155f",
+        "name": "MiMo-V2.5",
+        "slug": "mimo-v2-5-0424",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-07"
+      },
+      "metric": "priceIn",
+      "from": 0.133,
+      "to": 0.181
+    },
+    {
+      "date": "2026-11-07",
+      "type": "price",
+      "model": {
+        "id": "22d09131-343b-4adf-8760-533e20a2155f",
+        "name": "MiMo-V2.5",
+        "slug": "mimo-v2-5-0424",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-07"
+      },
+      "metric": "priceOut",
+      "from": 0.266,
+      "to": 0.362
+    },
+    {
+      "date": "2026-11-07",
+      "type": "price",
+      "model": {
+        "id": "e2c0623e-c855-4a61-bb66-be1f1ed43234",
+        "name": "Nemotron 3.5 Super VL",
+        "slug": "nemotron-3-5-super-vl",
+        "creator": "NVIDIA",
+        "first_seen": "2026-10-16",
+        "last_seen": "2026-11-07"
+      },
+      "metric": "priceIn",
+      "from": 0.2,
+      "to": 0.175
+    },
+    {
+      "date": "2026-11-07",
+      "type": "score",
+      "model": {
+        "id": "18721247-4e56-4cf7-9a9d-c71cc60c0961",
+        "name": "K-EXAONE 2.0",
+        "slug": "k-exaone-2-0-0803",
+        "creator": "LG AI Research",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-11-07"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 7.6
+    },
     {
       "date": "2026-11-06",
       "type": "added",
