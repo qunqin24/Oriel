@@ -16,8 +16,6 @@ const dict = t(locale);
 
 const covered = {
   intelligence: coverage(MODELS, "intelligence"),
-  coding: coverage(MODELS, "coding"),
-  agentic: coverage(MODELS, "agentic"),
   priceOut: coverage(MODELS, "priceOut"),
   throughput: coverage(MODELS, "throughput"),
 };
@@ -43,6 +41,8 @@ const covered = {
         </span>
       </div>
       <p class="max-w-2xl text-sm leading-relaxed text-mute">{dict.models.lead}</p>
+      <p class="max-w-2xl text-[12px] leading-relaxed text-mute">{dict.models.retiredNote}</p>
+      <p class="max-w-2xl text-[12px] leading-relaxed text-mute">{dict.models.performanceNote}</p>
 
       {/* 覆盖率一次说清，省得读者以为破折号是「测出来很差」 */}
       <dl class="flex flex-wrap gap-x-6 gap-y-1 text-[12px] text-mute">
@@ -50,8 +50,6 @@ const covered = {
           (
             [
               ["intelligence", covered.intelligence],
-              ["coding", covered.coding],
-              ["agentic", covered.agentic],
               ["priceOut", covered.priceOut],
               ["speed", covered.throughput],
             ] as const

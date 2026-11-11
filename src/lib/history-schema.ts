@@ -10,6 +10,7 @@
  */
 
 import type { LanguageModel } from "./types";
+import { getPerformance } from "./performance.ts";
 
 /**
  * 每个模型每天存这些数字，顺序固定，省掉重复的 key 名。
@@ -38,6 +39,10 @@ export const METRIC_KEYS = [
   "indexCost",
   /** 单任务成本（美元）。 */
   "taskCost",
+  // v3 means get new slots. The old throughput/latency slots always stay medians.
+  "throughputMean",
+  "latencyMean",
+  "answerLatencyMean",
 ] as const;
 
 export type MetricKey = (typeof METRIC_KEYS)[number];
@@ -174,6 +179,7 @@ function metricIndex(metric: MetricKey): number {
 }
 
 export function toMetricTuple(model: LanguageModel): MetricTuple {
+  const performance = getPerformance(model);
   return [
     model.evaluations?.artificial_analysis_intelligence_index ?? null,
     model.evaluations?.artificial_analysis_coding_index ?? null,
@@ -190,6 +196,9 @@ export function toMetricTuple(model: LanguageModel): MetricTuple {
     model.evaluations?.artificial_analysis_economics_index ?? null,
     model.artificial_analysis_intelligence_index_cost?.total_cost ?? null,
     model.artificial_analysis_intelligence_index_cost?.cost_per_task?.total_cost ?? null,
+    performance.throughput,
+    performance.ttft,
+    performance.ttfat,
   ];
 }
 

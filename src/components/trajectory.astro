@@ -2,7 +2,7 @@
 /**
  * 单个指标的历史轨迹。
  *
- * 目前只有 4 天历史，绝大多数模型的线是平的。平线不算错，但等于噪音——
+ * 没有变动的历史无需画平线——
  * 所以值没变过时直接写「N 天记录内无变化」，比画一条水平线信息量更大。
  * 版本换代造成的断段由 metricSeries 切好，这里各段各画，中间自然断开。
  */
@@ -38,7 +38,6 @@ const dict = t(locale);
 
 const segments = metricSeries(modelId, metric);
 const hasAnyPoint = segments.some((segment) => segment.length > 0);
-const days = SNAPSHOT_DATES.length;
 
 /**
  * 只画点数 ≥ MIN_TREND_POINTS 的段落：两个点能连成线但说明不了任何事。
@@ -77,6 +76,9 @@ const paths = changed
 
 // 首尾取最近一段：跨 index_version 的首尾值不可比。
 const latest = drawn.at(-1) ?? [];
+// Count observations of this metric in a comparable segment, never all archive
+// days. In particular, three new v3 points are not months of v3 observations.
+const days = latest.length;
 const first = latest[0]?.value ?? null;
 const last = latest.at(-1)?.value ?? null;
 const improved =

@@ -22,6 +22,8 @@ const NEW_KEYS = [
   "taskCost",
 ] as const;
 
+const V3_KEYS = ["throughputMean", "latencyMean", "answerLatencyMean"] as const;
+
 const OLD_KEYS = [
   "intelligence",
   "coding",
@@ -54,6 +56,11 @@ const FULL_MODEL = model({
     cost_per_task: { total_cost: 3.6937 },
   },
   pricing: { price_1m_input_tokens: 1.5, price_1m_output_tokens: 6 },
+  performance_v3: {
+    mean_output_tokens_per_second: 55.5,
+    mean_time_to_first_token_seconds: 1.2,
+    mean_time_to_first_answer_token_seconds: 2.4,
+  },
   performance: {
     median_output_tokens_per_second: 77.7,
     median_time_to_first_token_seconds: 0.8,
@@ -76,11 +83,14 @@ const FULL_EXPECTED: Record<MetricKey, number> = {
   economics: 66.6,
   indexCost: 4222.12,
   taskCost: 3.6937,
+  throughputMean: 55.5,
+  latencyMean: 1.2,
+  answerLatencyMean: 2.4,
 };
 
-test("METRIC_KEYS：前 7 个顺序不变，新增 8 个按约定顺序追加", () => {
-  assert.deepEqual([...METRIC_KEYS], [...OLD_KEYS, ...NEW_KEYS]);
-  assert.equal(METRIC_KEYS.length, 15);
+test("METRIC_KEYS：前 15 个顺序不变，v3 均值只在末尾追加", () => {
+  assert.deepEqual([...METRIC_KEYS], [...OLD_KEYS, ...NEW_KEYS, ...V3_KEYS]);
+  assert.equal(METRIC_KEYS.length, 18);
 });
 
 test("toMetricTuple 长度等于 METRIC_KEYS.length，并按 METRIC_KEYS 的顺序放值", () => {
