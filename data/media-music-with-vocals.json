@@ -1,7 +1,17 @@
 {
-  "fetched_at": "2026-11-10T03:12:18.934Z",
+  "fetched_at": "2026-11-11T01:02:14.325Z",
   "tier": "free",
   "data": [
+    {
+      "id": "4f44eaaf-6eab-4bf6-961c-6a020dd13afb",
+      "name": "ACE Music v1",
+      "model_creator": {
+        "id": "683f71f4-9ce6-462b-8ad7-df5659221956",
+        "name": "ACE Studio"
+      },
+      "elo": 1160,
+      "ci_95": 21
+    },
     {
       "id": "2dd04f45-0137-49c1-b72a-93dd883f0f9c",
       "name": "Suno v6",

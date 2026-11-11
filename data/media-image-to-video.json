@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-10T03:12:18.934Z",
+  "fetched_at": "2026-11-11T01:02:14.325Z",
   "tier": "free",
   "data": [
     {
@@ -166,6 +166,17 @@
       },
       "elo": 1055,
       "ci_95": 16
+    },
+    {
+      "id": "939dcfbc-2322-4224-bfdb-5395c4046b6c",
+      "name": "Gemini Omni Flash 1.2",
+      "slug": "gemini-omni-flash-1-2",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google"
+      },
+      "elo": 1054,
+      "ci_95": 17
     },
     {
       "id": "e83498b8-ae29-4eb7-a343-2a2a74eb0e53",

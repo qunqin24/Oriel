@@ -1,6 +1,51 @@
 {
-  "generated_at": "2026-11-10T03:12:20.790Z",
+  "generated_at": "2026-11-11T01:02:15.415Z",
   "events": [
+    {
+      "date": "2026-11-11",
+      "type": "price",
+      "model": {
+        "id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+        "name": "DeepSeek V4 Flash 0731 (Max)",
+        "slug": "deepseek-v4-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-11-11"
+      },
+      "metric": "priceIn",
+      "from": 0.14,
+      "to": 0.135
+    },
+    {
+      "date": "2026-11-11",
+      "type": "price",
+      "model": {
+        "id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+        "name": "DeepSeek V4 Flash 0731 (Max)",
+        "slug": "deepseek-v4-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-11-11"
+      },
+      "metric": "priceOut",
+      "from": 0.28,
+      "to": 0.275
+    },
+    {
+      "date": "2026-11-11",
+      "type": "score",
+      "model": {
+        "id": "08242385-ee91-4de6-be7f-271a6d9780ce",
+        "name": "Apodex 1.1",
+        "slug": "apodex-1-1",
+        "creator": "Apodex",
+        "first_seen": "2026-09-01",
+        "last_seen": "2026-11-11"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 13.7
+    },
     {
       "date": "2026-11-10",
       "type": "added",
