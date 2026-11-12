@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-11T01:02:21.345Z",
+  "fetched_at": "2026-11-12T02:08:03.938Z",
   "source_repo": "https://github.com/llm2014/llm_benchmark",
   "source_site": "https://llm2014.github.io/llm_benchmark/",
   "categories": {
@@ -202,6 +202,19 @@
           "1"
         ],
         [
+          "Muse Ember (xhigh)",
+          "55.83",
+          "42.99",
+          "23.00%",
+          "-",
+          "131",
+          "70013",
+          "¥6.76",
+          "¥3.45",
+          "26-11-09",
+          "1"
+        ],
+        [
           "Seed-2.1-pro 0915 (high)",
           "57.84",
           "46.15",
@@ -303,6 +316,19 @@
           "¥5.60",
           "¥3.45",
           "26-10-08",
+          "1"
+        ],
+        [
+          "ERNIE-5.5-Flash-Preview (high)",
+          "34.62",
+          "28.66",
+          "17.22%",
+          "+522%",
+          "183",
+          "49783",
+          "¥5.58",
+          "¥4.00",
+          "26-11-11",
           "1"
         ],
         [
@@ -719,6 +745,19 @@
           "5/A(50.68)",
           "Failed",
           "30/D(71.77)",
+          "Skip",
+          "Skip",
+          "Skip",
+          "Skip",
+          "Claude Code",
+          "1"
+        ],
+        [
+          "ERNIE-5.5-Flash-Preview (high)",
+          "8/B(6.91)",
+          "8/B(4.23)",
+          "Failed",
+          "Skip",
           "Skip",
           "Skip",
           "Skip",

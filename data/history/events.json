@@ -1,6 +1,169 @@
 {
-  "generated_at": "2026-11-11T01:02:15.415Z",
+  "generated_at": "2026-11-12T02:07:52.825Z",
   "events": [
+    {
+      "date": "2026-11-12",
+      "type": "added",
+      "model": {
+        "id": "b268d7c1-5a0b-41c1-9590-1d89e66cf156",
+        "name": "JT-4.1 Flash 236B A21B",
+        "slug": "jt-4-1-flash-236b-a21b",
+        "creator": "China Mobile",
+        "first_seen": "2026-11-12",
+        "last_seen": "2026-11-12"
+      },
+      "intelligence": 19
+    },
+    {
+      "date": "2026-11-12",
+      "type": "price",
+      "model": {
+        "id": "025ec6b6-df4a-449f-9a03-24e4388d6863",
+        "name": "Gemma 4 12B (Non-reasoning)",
+        "slug": "gemma-4-12b-non-reasoning",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-12"
+      },
+      "metric": "priceIn",
+      "from": 0.1,
+      "to": null
+    },
+    {
+      "date": "2026-11-12",
+      "type": "price",
+      "model": {
+        "id": "025ec6b6-df4a-449f-9a03-24e4388d6863",
+        "name": "Gemma 4 12B (Non-reasoning)",
+        "slug": "gemma-4-12b-non-reasoning",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-12"
+      },
+      "metric": "priceOut",
+      "from": 0.3,
+      "to": null
+    },
+    {
+      "date": "2026-11-12",
+      "type": "price",
+      "model": {
+        "id": "feb02d3b-ff8d-4ed4-b165-13f8d4a7192c",
+        "name": "Gemma 4 12B (Reasoning)",
+        "slug": "gemma-4-12b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-12"
+      },
+      "metric": "priceIn",
+      "from": 0.1,
+      "to": null
+    },
+    {
+      "date": "2026-11-12",
+      "type": "price",
+      "model": {
+        "id": "feb02d3b-ff8d-4ed4-b165-13f8d4a7192c",
+        "name": "Gemma 4 12B (Reasoning)",
+        "slug": "gemma-4-12b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-12"
+      },
+      "metric": "priceOut",
+      "from": 0.3,
+      "to": null
+    },
+    {
+      "date": "2026-11-12",
+      "type": "price",
+      "model": {
+        "id": "d0aa27aa-4705-4184-9a1d-483b78c9331c",
+        "name": "Gemma 4 31B (Non-reasoning)",
+        "slug": "gemma-4-31b-non-reasoning",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-12"
+      },
+      "metric": "priceIn",
+      "from": 0.165,
+      "to": 0.15
+    },
+    {
+      "date": "2026-11-12",
+      "type": "price",
+      "model": {
+        "id": "922c69c7-9037-43c6-8bcf-a1c555e7f3eb",
+        "name": "Llama 4 Maverick",
+        "slug": "llama-4-maverick",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-12"
+      },
+      "metric": "priceOut",
+      "from": 0.92,
+      "to": 0.97
+    },
+    {
+      "date": "2026-11-12",
+      "type": "price",
+      "model": {
+        "id": "8c748e53-61ae-48b8-af8d-eb8298b1e9db",
+        "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+        "slug": "nemotron-3-nano-omni-30b-a3b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-12"
+      },
+      "metric": "priceIn",
+      "from": 0.5,
+      "to": null
+    },
+    {
+      "date": "2026-11-12",
+      "type": "price",
+      "model": {
+        "id": "8c748e53-61ae-48b8-af8d-eb8298b1e9db",
+        "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+        "slug": "nemotron-3-nano-omni-30b-a3b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-12"
+      },
+      "metric": "priceOut",
+      "from": 0.9,
+      "to": null
+    },
+    {
+      "date": "2026-11-12",
+      "type": "score",
+      "model": {
+        "id": "9ac3908c-9eb2-44db-8c01-3ec7da6fc2ae",
+        "name": "Qwen3.8-Flash-Next",
+        "slug": "qwen3-8-flash-next",
+        "creator": "Alibaba",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-11-12"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 28.6
+    },
+    {
+      "date": "2026-11-12",
+      "type": "score",
+      "model": {
+        "id": "15c4cbd7-b9aa-42c8-9ce5-5abbde0e6963",
+        "name": "Solar Pro 4",
+        "slug": "solar-pro4",
+        "creator": "Upstage",
+        "first_seen": "2026-10-17",
+        "last_seen": "2026-11-12"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 14.2
+    },
     {
       "date": "2026-11-11",
       "type": "price",

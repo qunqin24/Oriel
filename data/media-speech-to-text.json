@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-11T01:02:14.325Z",
+  "fetched_at": "2026-11-12T02:07:51.720Z",
   "tier": "free",
   "data": [
     {
@@ -327,15 +327,6 @@
       "aa_wer_index": null
     },
     {
-      "id": "69a3c281-fbaa-4102-b7de-7eb99354a561",
-      "name": "Scribe v2, ElevenLabs",
-      "model_creator": {
-        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
-        "name": "ElevenLabs"
-      },
-      "aa_wer_index": 0.022
-    },
-    {
       "id": "d9d4af2c-567f-4ce5-b52c-b6f6ec96c4f5",
       "name": "Universal-3.6 Pro Realtime - Min Latency",
       "model_creator": {
@@ -361,6 +352,15 @@
         "name": "AssemblyAI"
       },
       "aa_wer_index": null
+    },
+    {
+      "id": "69a3c281-fbaa-4102-b7de-7eb99354a561",
+      "name": "Scribe v2, ElevenLabs",
+      "model_creator": {
+        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
+        "name": "ElevenLabs"
+      },
+      "aa_wer_index": 0.022
     },
     {
       "id": "3a525d2a-dabf-494c-bc60-9c4bf6924207",
@@ -703,6 +703,33 @@
         "name": "Mistral"
       },
       "aa_wer_index": 0.036
+    },
+    {
+      "id": "85db18e0-122d-403c-a30f-4687185b58d4",
+      "name": "Scribe v3, ElevenLabs",
+      "model_creator": {
+        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
+        "name": "ElevenLabs"
+      },
+      "aa_wer_index": 0.019
+    },
+    {
+      "id": "bed4e6b1-9b51-431b-9891-a0b2d17c152b",
+      "name": "ElevenLabs Scribe v3 Live",
+      "model_creator": {
+        "id": "8d057760-0a8b-460a-9625-6dd261bb325c",
+        "name": "ElevenLabs"
+      },
+      "aa_wer_index": null
+    },
+    {
+      "id": "efa7e329-b154-458e-bdc5-8349b831ea61",
+      "name": "Soniox v6 Async",
+      "model_creator": {
+        "id": "2ec53bc5-5f0a-4614-b05b-ddefb9c5d4a5",
+        "name": "Soniox"
+      },
+      "aa_wer_index": 0.03
     }
   ]
 }
