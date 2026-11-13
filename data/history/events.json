@@ -1,6 +1,253 @@
 {
-  "generated_at": "2026-11-12T02:07:52.825Z",
+  "generated_at": "2026-11-13T01:41:39.818Z",
   "events": [
+    {
+      "date": "2026-11-13",
+      "type": "added",
+      "model": {
+        "id": "dae0262d-26a4-44d1-925a-6f2731cbda6a",
+        "name": "Gemini 4 Hydrogen (High)",
+        "slug": "gemini-4-hydrogen-high",
+        "creator": "Google",
+        "first_seen": "2026-11-13",
+        "last_seen": "2026-11-13"
+      },
+      "intelligence": 50.8
+    },
+    {
+      "date": "2026-11-13",
+      "type": "added",
+      "model": {
+        "id": "88c68c50-03c1-458a-9292-bd398c27adc5",
+        "name": "Gemini 4 Hydrogen (Low)",
+        "slug": "gemini-4-hydrogen-low",
+        "creator": "Google",
+        "first_seen": "2026-11-13",
+        "last_seen": "2026-11-13"
+      },
+      "intelligence": 26.9
+    },
+    {
+      "date": "2026-11-13",
+      "type": "added",
+      "model": {
+        "id": "f0537484-af30-4a8a-bf34-368c552e5cfd",
+        "name": "Gemini 4 Hydrogen (Medium)",
+        "slug": "gemini-4-hydrogen-medium",
+        "creator": "Google",
+        "first_seen": "2026-11-13",
+        "last_seen": "2026-11-13"
+      },
+      "intelligence": 41.2
+    },
+    {
+      "date": "2026-11-13",
+      "type": "added",
+      "model": {
+        "id": "dad0e3b1-e3e7-477a-99f9-c14457a91114",
+        "name": "Gemini 4 Hydrogen (Xhigh)",
+        "slug": "gemini-4-hydrogen",
+        "creator": "Google",
+        "first_seen": "2026-11-13",
+        "last_seen": "2026-11-13"
+      },
+      "intelligence": 53.9
+    },
+    {
+      "date": "2026-11-13",
+      "type": "price",
+      "model": {
+        "id": "d366dfa1-d940-4788-aa73-d298c45699b3",
+        "name": "Gemini 4 Argon (High)",
+        "slug": "gemini-4-argon",
+        "creator": "Google",
+        "first_seen": "2026-10-01",
+        "last_seen": "2026-11-13"
+      },
+      "metric": "priceIn",
+      "from": 4,
+      "to": 2
+    },
+    {
+      "date": "2026-11-13",
+      "type": "price",
+      "model": {
+        "id": "d366dfa1-d940-4788-aa73-d298c45699b3",
+        "name": "Gemini 4 Argon (High)",
+        "slug": "gemini-4-argon",
+        "creator": "Google",
+        "first_seen": "2026-10-01",
+        "last_seen": "2026-11-13"
+      },
+      "metric": "priceOut",
+      "from": 20,
+      "to": 10
+    },
+    {
+      "date": "2026-11-13",
+      "type": "price",
+      "model": {
+        "id": "909ed0ba-bcc5-4f38-8162-08a4e187a772",
+        "name": "Gemini 4 Carbon (High)",
+        "slug": "gemini-4-carbon",
+        "creator": "Google",
+        "first_seen": "2026-11-02",
+        "last_seen": "2026-11-13"
+      },
+      "metric": "priceIn",
+      "from": 4,
+      "to": 2
+    },
+    {
+      "date": "2026-11-13",
+      "type": "price",
+      "model": {
+        "id": "909ed0ba-bcc5-4f38-8162-08a4e187a772",
+        "name": "Gemini 4 Carbon (High)",
+        "slug": "gemini-4-carbon",
+        "creator": "Google",
+        "first_seen": "2026-11-02",
+        "last_seen": "2026-11-13"
+      },
+      "metric": "priceOut",
+      "from": 20,
+      "to": 10
+    },
+    {
+      "date": "2026-11-13",
+      "type": "price",
+      "model": {
+        "id": "b3866703-a9f7-4ea2-8f3f-b361c90aaf0e",
+        "name": "Gemini 4 Carbon (Low)",
+        "slug": "gemini-4-carbon-low",
+        "creator": "Google",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-13"
+      },
+      "metric": "priceIn",
+      "from": 4,
+      "to": 2
+    },
+    {
+      "date": "2026-11-13",
+      "type": "price",
+      "model": {
+        "id": "b3866703-a9f7-4ea2-8f3f-b361c90aaf0e",
+        "name": "Gemini 4 Carbon (Low)",
+        "slug": "gemini-4-carbon-low",
+        "creator": "Google",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-13"
+      },
+      "metric": "priceOut",
+      "from": 20,
+      "to": 10
+    },
+    {
+      "date": "2026-11-13",
+      "type": "price",
+      "model": {
+        "id": "0d3eaafd-54ed-4f78-bdd7-05a2db883986",
+        "name": "Gemini 4 Carbon (Medium)",
+        "slug": "gemini-4-carbon-medium",
+        "creator": "Google",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-13"
+      },
+      "metric": "priceIn",
+      "from": 4,
+      "to": 2
+    },
+    {
+      "date": "2026-11-13",
+      "type": "price",
+      "model": {
+        "id": "0d3eaafd-54ed-4f78-bdd7-05a2db883986",
+        "name": "Gemini 4 Carbon (Medium)",
+        "slug": "gemini-4-carbon-medium",
+        "creator": "Google",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-13"
+      },
+      "metric": "priceOut",
+      "from": 20,
+      "to": 10
+    },
+    {
+      "date": "2026-11-13",
+      "type": "price",
+      "model": {
+        "id": "70882ec6-914c-41f0-9754-5e8f75005f77",
+        "name": "Gemma 4 26B A4B (Non-reasoning)",
+        "slug": "gemma-4-26b-a4b-non-reasoning",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-13"
+      },
+      "metric": "priceIn",
+      "from": 0.115,
+      "to": 0.13
+    },
+    {
+      "date": "2026-11-13",
+      "type": "price",
+      "model": {
+        "id": "6e1b44ff-c227-496b-aef4-19b70cd18c76",
+        "name": "Gemma 4 26B A4B (Reasoning)",
+        "slug": "gemma-4-26b-a4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-13"
+      },
+      "metric": "priceIn",
+      "from": 0.1,
+      "to": 0.09
+    },
+    {
+      "date": "2026-11-13",
+      "type": "price",
+      "model": {
+        "id": "6e1b44ff-c227-496b-aef4-19b70cd18c76",
+        "name": "Gemma 4 26B A4B (Reasoning)",
+        "slug": "gemma-4-26b-a4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-13"
+      },
+      "metric": "priceOut",
+      "from": 0.34,
+      "to": 0.32
+    },
+    {
+      "date": "2026-11-13",
+      "type": "price",
+      "model": {
+        "id": "ff9bc5e5-a02f-4270-983e-4b3f834f3363",
+        "name": "Grok 3 mini Reasoning (High)",
+        "slug": "grok-3-mini-reasoning",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-13"
+      },
+      "metric": "priceIn",
+      "from": 0.3,
+      "to": 0
+    },
+    {
+      "date": "2026-11-13",
+      "type": "price",
+      "model": {
+        "id": "ff9bc5e5-a02f-4270-983e-4b3f834f3363",
+        "name": "Grok 3 mini Reasoning (High)",
+        "slug": "grok-3-mini-reasoning",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-13"
+      },
+      "metric": "priceOut",
+      "from": 0.5,
+      "to": 0
+    },
     {
       "date": "2026-11-12",
       "type": "added",

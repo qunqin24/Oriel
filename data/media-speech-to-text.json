@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-12T02:07:51.720Z",
+  "fetched_at": "2026-11-13T01:41:38.636Z",
   "tier": "free",
   "data": [
     {
@@ -55,15 +55,6 @@
         "name": "OpenAI"
       },
       "aa_wer_index": null
-    },
-    {
-      "id": "615fd1ea-2158-4c5d-b758-8c97a5469f7a",
-      "name": "Nova 2 Omni, Amazon",
-      "model_creator": {
-        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
-        "name": "Amazon"
-      },
-      "aa_wer_index": 0.058
     },
     {
       "id": "a85d608d-5bd5-47aa-a363-cf10161d6733",
@@ -289,15 +280,6 @@
         "name": "Mistral"
       },
       "aa_wer_index": 0.038
-    },
-    {
-      "id": "28c91081-caf7-4d9a-b24b-2c8430c615d7",
-      "name": "Nemotron 3.5 Transcribe",
-      "model_creator": {
-        "id": "0c303112-430d-4367-a484-51defaa2e166",
-        "name": "NVIDIA"
-      },
-      "aa_wer_index": 0.028
     },
     {
       "id": "9c53fcbc-f016-4bc0-af49-57b8a906e81d",
@@ -714,6 +696,15 @@
       "aa_wer_index": 0.019
     },
     {
+      "id": "bf50b08c-352b-4172-be37-dfcf901a672d",
+      "name": "SOV-Transcribe-1, Salesforce",
+      "model_creator": {
+        "id": "d06c8d1e-2e3a-4fd7-8f56-5ee8368cd7da",
+        "name": "Salesforce"
+      },
+      "aa_wer_index": 0.023
+    },
+    {
       "id": "bed4e6b1-9b51-431b-9891-a0b2d17c152b",
       "name": "ElevenLabs Scribe v3 Live",
       "model_creator": {
@@ -730,6 +721,15 @@
         "name": "Soniox"
       },
       "aa_wer_index": 0.03
+    },
+    {
+      "id": "28c91081-caf7-4d9a-b24b-2c8430c615d7",
+      "name": "Nemotron 3.5 Transcribe",
+      "model_creator": {
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA"
+      },
+      "aa_wer_index": 0.028
     }
   ]
 }
