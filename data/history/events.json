@@ -1,6 +1,47 @@
 {
-  "generated_at": "2026-11-13T01:41:39.818Z",
+  "generated_at": "2026-11-14T01:18:11.239Z",
   "events": [
+    {
+      "date": "2026-11-14",
+      "type": "added",
+      "model": {
+        "id": "e94c7595-a320-4c88-8f07-d9fd50fc4595",
+        "name": "DeepSeek V4 Pro 0813 (High)",
+        "slug": "deepseek-v4-pro-high",
+        "creator": "DeepSeek",
+        "first_seen": "2026-11-14",
+        "last_seen": "2026-11-14"
+      },
+      "intelligence": 20.8
+    },
+    {
+      "date": "2026-11-14",
+      "type": "added",
+      "model": {
+        "id": "48e6f735-f2bc-418f-b99f-3dc5a0ddda77",
+        "name": "Gemini 4 Argon (Medium)",
+        "slug": "gemini-4-argon-medium",
+        "creator": "Google",
+        "first_seen": "2026-11-14",
+        "last_seen": "2026-11-14"
+      },
+      "intelligence": 47.6
+    },
+    {
+      "date": "2026-11-14",
+      "type": "price",
+      "model": {
+        "id": "dbe7c625-3100-4463-b479-a228c41f75dd",
+        "name": "DeepSeek V4.1 Flash (Max)",
+        "slug": "deepseek-v4-1-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-09-11",
+        "last_seen": "2026-11-14"
+      },
+      "metric": "priceIn",
+      "from": 0.29,
+      "to": 0.295
+    },
     {
       "date": "2026-11-13",
       "type": "added",

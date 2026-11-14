@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-13T01:41:38.636Z",
+  "fetched_at": "2026-11-14T01:18:10.059Z",
   "tier": "free",
   "data": [
     {
@@ -56,6 +56,17 @@
       },
       "elo": 1184,
       "ci_95": 11
+    },
+    {
+      "id": "c1c59bcb-5836-4bd0-aac8-09fdee960eec",
+      "name": "Kling Image 4.0 (preview)",
+      "slug": "kling-image-4-0-preview",
+      "model_creator": {
+        "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
+        "name": "KlingAI"
+      },
+      "elo": 1182,
+      "ci_95": 14
     },
     {
       "id": "b8852bf6-1e75-4209-ac4d-a135170dc1f3",
