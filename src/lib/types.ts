@@ -22,9 +22,9 @@ export type LanguageModel = {
   evaluations: {
     /** 573/586 有值 */
     artificial_analysis_intelligence_index: number | null;
-    /** 198/586 有值 */
+    /** 已停发；保留类型以读取历史原始快照。 */
     artificial_analysis_coding_index: number | null;
-    /** 171/586 有值 */
+    /** 已停发；保留类型以读取历史原始快照。 */
     artificial_analysis_agentic_index: number | null;
     /**
      * 六项行业指数。覆盖率都比智能指数低得多（医疗最低），
@@ -53,12 +53,18 @@ export type LanguageModel = {
     price_1m_cache_hit_tokens: number | null;
     price_1m_cache_write_tokens: number | null;
   } | null;
-  /** 306/586 有值 */
-  performance: {
+  /** 旧中位数，仅供历史归档。2026-12-10 起上游返回 null，未来可能删除。 */
+  performance?: {
     median_output_tokens_per_second: number | null;
     median_time_to_first_token_seconds: number | null;
     median_time_to_first_answer_token_seconds: number | null;
     median_end_to_end_response_time_seconds: number | null;
+  } | null;
+  /** 当前免费 API 的 v3 均值，不能与旧中位数互换或拼接。 */
+  performance_v3?: {
+    mean_output_tokens_per_second?: number | null;
+    mean_time_to_first_token_seconds?: number | null;
+    mean_time_to_first_answer_token_seconds?: number | null;
   } | null;
 };
 

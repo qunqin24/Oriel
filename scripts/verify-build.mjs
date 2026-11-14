@@ -98,14 +98,32 @@ check("hreflang 互指", zhAlt?.endsWith("/en") && enAlt?.endsWith("/"), `${zhAl
 const zhModel = read("models/glm-4-5v/index.html");
 const enModel = read("en/models/glm-4-5v/index.html");
 check("模型页双语都存在且内容不同", zhModel.length > 0 && enModel.length > 0 && zhModel !== enModel);
-// 吞吐量数值每天随上游刷新变化，不能硬编码具体数字——只校验中英文两页渲染的是同一个数。
-const zhThroughput = zhModel.match(/([\d,.]+)\s*token\/秒/)?.[1];
-const enThroughput = enModel.match(/([\d,.]+)\s*tokens\/sec/)?.[1];
-check(
-  "模型页数值一致（吞吐量）",
-  !!zhThroughput && zhThroughput === enThroughput,
-  `${zhThroughput} ⇄ ${enThroughput} tok/s`
-);
+// Upstream may stop measuring any particular model. Pick a current v3 sample,
+// never require a fixed model's deprecated performance field to be populated.
+const speedSample = languageEnvelope.data.find((model) => {
+  const value = model.performance_v3?.mean_output_tokens_per_second;
+  return typeof value === "number" && Number.isFinite(value) && value >= 0;
+});
+if (speedSample) {
+  const zhSpeed = read(`models/${speedSample.slug}/index.html`);
+  const enSpeed = read(`en/models/${speedSample.slug}/index.html`);
+  const zhThroughput = zhSpeed.match(/([\d,.]+)\s*token\/秒/)?.[1];
+  const enThroughput = enSpeed.match(/([\d,.]+)\s*tokens\/sec/)?.[1];
+  const expected = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 })
+    .format(speedSample.performance_v3.mean_output_tokens_per_second);
+  check("模型页双语吞吐量均来自 performance_v3", zhThroughput === expected && enThroughput === expected,
+    `${zhThroughput} / ${enThroughput}, expected ${expected}`);
+} else {
+  // All-null is an honest upstream state, not an excuse to reuse old medians.
+  check("v3 全空时不展示旧中位数为当前吞吐量", languageEnvelope.data.every((model) =>
+    !/[\d,.]+\s*token\/秒/.test(read(`models/${model.slug}/index.html`))));
+}
+check("双语模型页明确区分均值和历史中位数",
+  zhModel.includes("均值") && enModel.includes("(mean)") &&
+  zhModel.includes("中位数") && enModel.includes("medians"));
+check("实时探索器无停发维度入口", !/>(?:Coding|Agentic|Value)<\/button>/.test(read("en/models/index.html")));
+check("双语说明端到端耗时没有免费替代值",
+  zhModel.includes("端到端") && enModel.includes("no equivalent replacement"));
 
 console.log("\n【6】稀疏度降级");
 // 动态挑一个三项评测全空的模型，不写死 slug——上游随时会改。

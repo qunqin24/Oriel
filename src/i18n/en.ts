@@ -45,7 +45,9 @@ export const en: Dict = {
 
   models: {
     title: "Language models",
-    lead: "Filter by intelligence, coding, agentic ability, value, or speed. Every filter lives in the URL, so you can share the exact view.",
+    lead: "Filter by intelligence, speed, domain evaluations, or evaluation cost. Every filter lives in the URL, so you can share the exact view.",
+    retiredNote: "Artificial Analysis no longer publishes Coding or Agentic indices. Their live rankings and the old value score that depended on them have been retired; historical records remain.",
+    performanceNote: "Current performance uses performance_v3 means. Legacy medians are not directly comparable and never fill missing current values.",
     search: "Search models or vendors",
     searchLabel: "Search",
     vendor: "Vendor",
@@ -82,8 +84,8 @@ export const en: Dict = {
       value: "Value",
       priceIn: "Input",
       priceOut: "Output",
-      speed: "Throughput",
-      ttft: "First token",
+      speed: "Throughput (mean)",
+      ttft: "First token (mean)",
       release: "Released",
     },
     units: {
@@ -125,10 +127,14 @@ export const en: Dict = {
     priceOut: "Output",
     cacheHit: "Cache read",
     cacheWrite: "Cache write",
-    throughput: "Output throughput",
-    ttft: "Time to first token",
-    ttfat: "First answer token",
+    throughput: "Output throughput (mean)",
+    ttft: "Time to first token (mean)",
+    ttfat: "First answer token latency (mean)",
     e2e: "End-to-end response",
+    e2eUnavailable: "The free API has no equivalent replacement for legacy end-to-end response time. It is no longer shown or estimated from other metrics.",
+    performanceHistoryNote: "Performance means and legacy medians are stored and charted separately, never joined into one curve. New-method trends appear only after enough observations accumulate.",
+    legacyThroughput: "Legacy throughput (median)",
+    legacyLatency: "Legacy first-token latency (median)",
     trajectory: "History",
     trajectoryThin: "Building history — a trend needs more days than we have",
     trajectoryFlat: "Unchanged across {days} days of records",
@@ -152,11 +158,14 @@ export const en: Dict = {
     },
     metrics: {
       intelligence: "Intelligence index",
-      coding: "Coding index",
-      agentic: "Agentic index",
+      coding: "Coding index (discontinued)",
+      agentic: "Agentic index (discontinued)",
       priceIn: "Input price",
       priceOut: "Output price",
       throughput: "Output throughput",
+      throughputMean: "Output throughput (mean)",
+      latencyMean: "Time to first token (mean)",
+      answerLatencyMean: "First answer token latency (mean)",
       latency: "Time to first token",
       finance: "Finance & accounting",
       strategy: "Strategy & operations",
@@ -230,14 +239,16 @@ export const en: Dict = {
     indexBody:
       "The intelligence index is Artificial Analysis's composite of several benchmarks, currently v{version}. One thing matters above all: **scores from different versions are not comparable**. Upstream recalibrates every model when the version changes, so trend lines here break at version boundaries rather than joining into a smooth but meaningless curve. Score movements across a version change are excluded from the changes feed for the same reason.",
 
-    valueTitle: "How value is calculated",
-    valueFormula: "Value = mean of available benchmark scores ÷ price per 1M output tokens",
-    valueBody:
-      "This one is Oriel's own derivation, not upstream data. It is computed only when a model has at least two benchmark scores and an output price — with a single score the ratio is too noisy, and a cheap small model measured on one benchmark would top the list on nothing. It measures points per dollar. It does not tell you whether a model fits your work.",
+    valueTitle: "Discontinued indices and the old value score",
+    valueFormula: "Retired formula: mean of available benchmark scores ÷ price per 1M output tokens",
+    valueBody: "Artificial Analysis no longer publishes Coding or Agentic indices; those fields are always null. The old value formula required at least two of Intelligence, Coding, and Agentic scores, so it is no longer applicable to current data. Their live rankings and the five-axis radar charts have been removed. Intelligence alone or domain scores are not silently substituted into the old formula. Historical indices and change events remain archived.",
+
+    performanceTitle: "Performance methodology",
+    performanceBody: "Current pages consistently use performance_v3 means for output throughput, time to first token, and time to first answer token. Legacy performance fields return null from December 10, 2026. V3 also changes workloads and measurement windows, and its throughput includes time to first token. This is not simply the same measurements summarized with a mean instead of a median; old and new values are not directly comparable. Old history positions remain intact; new means have separate fields and charts. We do not backfill estimates or fill missing current values with legacy data. The free API has no equivalent replacement for legacy end-to-end response time, so it is no longer presented as a current metric.",
 
     coverageTitle: "Coverage",
     coverageBody:
-      "Of {total} language models, only some are measured on any given metric: intelligence {intelligence}, coding {coding}, agentic {agentic}; in the domain evaluations, finance & accounting {finance}, strategy & operations {strategy}, legal {legal}, healthcare {healthcare}, engineering {engineering}, economics {economics}; evaluation cost {cost}; pricing {price}, performance {performance}. Domain evaluations and evaluation cost cover far fewer models than the overall index. A dash means not tested — not tested badly. Those are different claims, so selecting a dimension removes models without that metric from the board instead of leaving you to read several hundred dashes.",
+      "Of {total} language models, only some are measured on any given metric: intelligence {intelligence}; in the domain evaluations, finance & accounting {finance}, strategy & operations {strategy}, legal {legal}, healthcare {healthcare}, engineering {engineering}, economics {economics}; evaluation cost {cost}; pricing {price}, performance {performance}. Domain evaluations and evaluation cost cover far fewer models than the overall index. A dash means not tested — not tested badly. Those are different claims, so selecting a dimension removes models without that metric from the board instead of leaving you to read several hundred dashes.",
 
     historyTitle: "History",
     historyBody:
@@ -249,7 +260,7 @@ export const en: Dict = {
 
     limitsTitle: "Known limits",
     limitsBody:
-      "The speech-to-text word error rate index is published to one decimal place, leaving many models tied at the same value; that board cannot actually order them, and the page marks how many are tied. Performance figures (throughput, latency) are medians measured at a particular time over a particular route, and move with provider load and your location. Prices cover base token billing only — no volume discounts, committed-use rates, or caching strategy. Evaluation cost is what upstream actually spent running the Intelligence Index once; like the index itself it is re-measured per version and not comparable across versions. A $0 for a free model is a real zero, not a missing value.",
+      "The speech-to-text word error rate index is published to one decimal place, leaving many models tied at the same value; that board cannot actually order them, and the page marks how many are tied. Performance figures (throughput, latency) use upstream v3 means and vary with provider load and measurement conditions; they do not guarantee your actual experience. Prices cover base token billing only — no volume discounts, committed-use rates, or caching strategy. Evaluation cost is what upstream actually spent running the Intelligence Index once; like the index itself it is re-measured per version and not comparable across versions. A $0 for a free model is a real zero, not a missing value.",
   },
 
   catBoard: {
