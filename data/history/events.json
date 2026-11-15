@@ -1,6 +1,201 @@
 {
-  "generated_at": "2026-11-14T01:18:11.239Z",
+  "generated_at": "2026-11-15T00:47:40.600Z",
   "events": [
+    {
+      "date": "2026-11-15",
+      "type": "price",
+      "model": {
+        "id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+        "name": "DeepSeek V4 Flash 0731 (Max)",
+        "slug": "deepseek-v4-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-11-15"
+      },
+      "metric": "priceIn",
+      "from": 0.135,
+      "to": 0.14
+    },
+    {
+      "date": "2026-11-15",
+      "type": "price",
+      "model": {
+        "id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+        "name": "DeepSeek V4 Flash 0731 (Max)",
+        "slug": "deepseek-v4-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-11-15"
+      },
+      "metric": "priceOut",
+      "from": 0.275,
+      "to": 0.28
+    },
+    {
+      "date": "2026-11-15",
+      "type": "price",
+      "model": {
+        "id": "bf220674-68bd-43cc-a1b8-ce5ed4d2f18d",
+        "name": "DeepSeek V4 Pro 0424 (Max)",
+        "slug": "deepseek-v4-pro-0424",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-15"
+      },
+      "metric": "priceIn",
+      "from": 1.31,
+      "to": 1.5016
+    },
+    {
+      "date": "2026-11-15",
+      "type": "price",
+      "model": {
+        "id": "bf220674-68bd-43cc-a1b8-ce5ed4d2f18d",
+        "name": "DeepSeek V4 Pro 0424 (Max)",
+        "slug": "deepseek-v4-pro-0424",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-15"
+      },
+      "metric": "priceOut",
+      "from": 3.135,
+      "to": 3.2
+    },
+    {
+      "date": "2026-11-15",
+      "type": "price",
+      "model": {
+        "id": "dbe7c625-3100-4463-b479-a228c41f75dd",
+        "name": "DeepSeek V4.1 Flash (Max)",
+        "slug": "deepseek-v4-1-flash",
+        "creator": "DeepSeek",
+        "first_seen": "2026-09-11",
+        "last_seen": "2026-11-15"
+      },
+      "metric": "priceIn",
+      "from": 0.295,
+      "to": 0.3
+    },
+    {
+      "date": "2026-11-15",
+      "type": "price",
+      "model": {
+        "id": "b2331108-72ed-415a-82d1-188633875bbc",
+        "name": "Gemini 3.7 Flash (High)",
+        "slug": "gemini-3-7-flash",
+        "creator": "Google",
+        "first_seen": "2026-08-14",
+        "last_seen": "2026-11-15"
+      },
+      "metric": "priceIn",
+      "from": 0.75,
+      "to": null
+    },
+    {
+      "date": "2026-11-15",
+      "type": "price",
+      "model": {
+        "id": "b2331108-72ed-415a-82d1-188633875bbc",
+        "name": "Gemini 3.7 Flash (High)",
+        "slug": "gemini-3-7-flash",
+        "creator": "Google",
+        "first_seen": "2026-08-14",
+        "last_seen": "2026-11-15"
+      },
+      "metric": "priceOut",
+      "from": 3.75,
+      "to": null
+    },
+    {
+      "date": "2026-11-15",
+      "type": "price",
+      "model": {
+        "id": "00f1248e-78e3-4230-8dc8-5e13ba8645e2",
+        "name": "MiMo-V2.5-Pro (Reasoning)",
+        "slug": "mimo-v2-5-pro",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-15"
+      },
+      "metric": "priceIn",
+      "from": 0.3915,
+      "to": 0.348
+    },
+    {
+      "date": "2026-11-15",
+      "type": "price",
+      "model": {
+        "id": "00f1248e-78e3-4230-8dc8-5e13ba8645e2",
+        "name": "MiMo-V2.5-Pro (Reasoning)",
+        "slug": "mimo-v2-5-pro",
+        "creator": "Xiaomi",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-15"
+      },
+      "metric": "priceOut",
+      "from": 0.783,
+      "to": 0.696
+    },
+    {
+      "date": "2026-11-15",
+      "type": "price",
+      "model": {
+        "id": "583f98fb-c4b8-4df3-8d40-60ac0ed69882",
+        "name": "Muse Glimmer (High)",
+        "slug": "muse-glimmer",
+        "creator": "Meta",
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-11-15"
+      },
+      "metric": "priceIn",
+      "from": 0.3,
+      "to": 0.325
+    },
+    {
+      "date": "2026-11-15",
+      "type": "price",
+      "model": {
+        "id": "583f98fb-c4b8-4df3-8d40-60ac0ed69882",
+        "name": "Muse Glimmer (High)",
+        "slug": "muse-glimmer",
+        "creator": "Meta",
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-11-15"
+      },
+      "metric": "priceOut",
+      "from": 1.2,
+      "to": 1.35
+    },
+    {
+      "date": "2026-11-15",
+      "type": "price",
+      "model": {
+        "id": "5b52def2-ac9b-4465-ad80-91ea8079e253",
+        "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
+        "slug": "nvidia-nemotron-3-ultra-550b-a55b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-15"
+      },
+      "metric": "priceOut",
+      "from": 2.7,
+      "to": 2.4
+    },
+    {
+      "date": "2026-11-15",
+      "type": "price",
+      "model": {
+        "id": "e2c0623e-c855-4a61-bb66-be1f1ed43234",
+        "name": "Nemotron 3.5 Super VL",
+        "slug": "nemotron-3-5-super-vl",
+        "creator": "NVIDIA",
+        "first_seen": "2026-10-16",
+        "last_seen": "2026-11-15"
+      },
+      "metric": "priceIn",
+      "from": 0.175,
+      "to": 0.2
+    },
     {
       "date": "2026-11-14",
       "type": "added",
