@@ -1,6 +1,34 @@
 {
-  "generated_at": "2026-11-16T00:47:23.829Z",
+  "generated_at": "2026-11-17T03:25:59.035Z",
   "events": [
+    {
+      "date": "2026-11-17",
+      "type": "added",
+      "model": {
+        "id": "fef6625d-9097-45f6-95c0-bcaa06e3d8e1",
+        "name": "Qwen4 Max",
+        "slug": "qwen4-max",
+        "creator": "Alibaba",
+        "first_seen": "2026-11-17",
+        "last_seen": "2026-11-17"
+      },
+      "intelligence": 42.9
+    },
+    {
+      "date": "2026-11-17",
+      "type": "score",
+      "model": {
+        "id": "d80eb0f1-f62e-4d31-99d2-7a925eb126b0",
+        "name": "Gemma 4 E4B (Reasoning)",
+        "slug": "gemma-4-e4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-17"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 4.8
+    },
     {
       "date": "2026-11-15",
       "type": "price",
