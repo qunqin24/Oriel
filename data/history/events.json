@@ -1,6 +1,321 @@
 {
-  "generated_at": "2026-11-17T03:25:59.035Z",
+  "generated_at": "2026-11-18T02:44:41.432Z",
   "events": [
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "583498f2-dcb7-42ff-b705-40ce8ef87a88",
+        "name": "Astra for Law 6.2 (Max)",
+        "slug": "astra-for-law-6-2",
+        "creator": "OpenAI",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": null
+    },
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "fe959a7a-944c-4ba8-8e41-349712599b39",
+        "name": "GPT-6.2 Astra (High)",
+        "slug": "gpt-6-2-astra-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": 60.1
+    },
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "cc93ecfd-845e-455d-9642-6799d7133b7e",
+        "name": "GPT-6.2 Astra (Low)",
+        "slug": "gpt-6-2-astra-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": 45.7
+    },
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "75c1b0b8-9db3-4c7e-95be-d74e59defee4",
+        "name": "GPT-6.2 Astra (Max)",
+        "slug": "gpt-6-2-astra",
+        "creator": "OpenAI",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": 62.1
+    },
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "8cec011f-c959-4726-8668-2ee2409a6bca",
+        "name": "GPT-6.2 Astra (Medium)",
+        "slug": "gpt-6-2-astra-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": 57
+    },
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "592572d5-f789-4106-abbc-fadf2206d10b",
+        "name": "GPT-6.2 Astra (Xhigh)",
+        "slug": "gpt-6-2-astra-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": 61.6
+    },
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "cd85e412-c43f-4535-bf8e-5ba113d97ca3",
+        "name": "GPT-6.2 Sol (High)",
+        "slug": "gpt-6-2-sol-high",
+        "creator": "OpenAI",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": 54.9
+    },
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "a77965fb-2117-4e2c-bd8b-80b5579a7e7e",
+        "name": "GPT-6.2 Sol (Low)",
+        "slug": "gpt-6-2-sol-low",
+        "creator": "OpenAI",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": 40.6
+    },
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "a1a84b18-e8c9-48fb-8e04-6003bd9f6ff4",
+        "name": "GPT-6.2 Sol (Max)",
+        "slug": "gpt-6-2-sol",
+        "creator": "OpenAI",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": 57.3
+    },
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "82b37079-56d9-4451-8a1a-22b0a921f4f8",
+        "name": "GPT-6.2 Sol (Medium)",
+        "slug": "gpt-6-2-sol-medium",
+        "creator": "OpenAI",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": 52.7
+    },
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "27c326a6-ec9b-415f-a29e-b1f4927484dc",
+        "name": "GPT-6.2 Sol (Xhigh)",
+        "slug": "gpt-6-2-sol-xhigh",
+        "creator": "OpenAI",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": 55.7
+    },
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "ba83cb41-370c-4331-9e7e-3074d6cc66c4",
+        "name": "Inkling (High)",
+        "slug": "inkling-high",
+        "creator": "Thinking Machines",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": 11
+    },
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "f586801a-2cff-4e77-8322-577cd57bbdd1",
+        "name": "Inkling Small (High)",
+        "slug": "inkling-small-high",
+        "creator": "Thinking Machines",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": 9.6
+    },
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "c76e1f60-9766-4ac5-8717-2837a05924af",
+        "name": "LFM3-1.7B",
+        "slug": "lfm3-1-7b",
+        "creator": "Liquid AI",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": 6
+    },
+    {
+      "date": "2026-11-18",
+      "type": "added",
+      "model": {
+        "id": "2b17227e-a229-474f-a86d-0dacb76212ca",
+        "name": "LFM3-VL-2B",
+        "slug": "lfm3-vl-2b",
+        "creator": "Liquid AI",
+        "first_seen": "2026-11-18",
+        "last_seen": "2026-11-18"
+      },
+      "intelligence": 1.7
+    },
+    {
+      "date": "2026-11-18",
+      "type": "price",
+      "model": {
+        "id": "6e1b44ff-c227-496b-aef4-19b70cd18c76",
+        "name": "Gemma 4 26B A4B (Reasoning)",
+        "slug": "gemma-4-26b-a4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-18"
+      },
+      "metric": "priceIn",
+      "from": 0.09,
+      "to": 0.095
+    },
+    {
+      "date": "2026-11-18",
+      "type": "price",
+      "model": {
+        "id": "1dcea4f7-7e8b-49f8-abe2-5860ff9f349e",
+        "name": "Hermes 3 - Llama-3.1 70B",
+        "slug": "hermes-3-llama-3-1-70b",
+        "creator": "Nous Research",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-18"
+      },
+      "metric": "priceIn",
+      "from": 0.7,
+      "to": null
+    },
+    {
+      "date": "2026-11-18",
+      "type": "price",
+      "model": {
+        "id": "1dcea4f7-7e8b-49f8-abe2-5860ff9f349e",
+        "name": "Hermes 3 - Llama-3.1 70B",
+        "slug": "hermes-3-llama-3-1-70b",
+        "creator": "Nous Research",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-18"
+      },
+      "metric": "priceOut",
+      "from": 0.7,
+      "to": null
+    },
+    {
+      "date": "2026-11-18",
+      "type": "price",
+      "model": {
+        "id": "976cc8ad-7904-4056-83c5-960181f47d5f",
+        "name": "Llama 3.3 Instruct 70B",
+        "slug": "llama-3-3-instruct-70b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-18"
+      },
+      "metric": "priceIn",
+      "from": 0.6,
+      "to": 0.65
+    },
+    {
+      "date": "2026-11-18",
+      "type": "price",
+      "model": {
+        "id": "e2c0623e-c855-4a61-bb66-be1f1ed43234",
+        "name": "Nemotron 3.5 Super VL",
+        "slug": "nemotron-3-5-super-vl",
+        "creator": "NVIDIA",
+        "first_seen": "2026-10-16",
+        "last_seen": "2026-11-18"
+      },
+      "metric": "priceIn",
+      "from": 0.2,
+      "to": 0.15
+    },
+    {
+      "date": "2026-11-18",
+      "type": "price",
+      "model": {
+        "id": "eb4ba465-3fcd-4065-9fe2-e8225e7b2c6c",
+        "name": "Ring-2.6-1T",
+        "slug": "ring-2-6-1t",
+        "creator": "InclusionAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-18"
+      },
+      "metric": "priceIn",
+      "from": 0.3,
+      "to": null
+    },
+    {
+      "date": "2026-11-18",
+      "type": "price",
+      "model": {
+        "id": "eb4ba465-3fcd-4065-9fe2-e8225e7b2c6c",
+        "name": "Ring-2.6-1T",
+        "slug": "ring-2-6-1t",
+        "creator": "InclusionAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-18"
+      },
+      "metric": "priceOut",
+      "from": 2.5,
+      "to": null
+    },
+    {
+      "date": "2026-11-18",
+      "type": "score",
+      "model": {
+        "id": "8215372b-66ff-457b-855e-e8abeafc9571",
+        "name": "A.X-K2",
+        "slug": "a-x-k2",
+        "creator": "SK Telecom",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-11-18"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 9
+    },
     {
       "date": "2026-11-17",
       "type": "added",

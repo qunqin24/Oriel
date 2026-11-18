@@ -1,7 +1,18 @@
 {
-  "fetched_at": "2026-11-17T03:25:58.272Z",
+  "fetched_at": "2026-11-18T02:44:40.159Z",
   "tier": "free",
   "data": [
+    {
+      "id": "19495b13-2819-4280-a705-97b7700687d5",
+      "name": "MAI-Image-2.7",
+      "slug": "mai-image-2-7",
+      "model_creator": {
+        "id": "4756ee95-5ddf-45e8-a9d1-075d0e5b5200",
+        "name": "Microsoft AI"
+      },
+      "elo": 1215,
+      "ci_95": 14
+    },
     {
       "id": "a126a6fd-2f15-4da2-8b9a-700b2973a4e3",
       "name": "GPT Image 2.6 Sunburst (max)",
@@ -36,17 +47,6 @@
       "ci_95": 11
     },
     {
-      "id": "e0c7ffeb-f6b7-4f54-902a-fbedccea863e",
-      "name": "MAI-Image-2.7-Preview",
-      "slug": "MAI-Image-2-7-Preview",
-      "model_creator": {
-        "id": "4756ee95-5ddf-45e8-a9d1-075d0e5b5200",
-        "name": "Microsoft AI"
-      },
-      "elo": 1197,
-      "ci_95": 14
-    },
-    {
       "id": "ac3abe51-14ca-4c04-b215-01a85f3a36ac",
       "name": "GPT Image 2.5 Flare (max)",
       "slug": "gpt-image-2-5-flare",
@@ -59,14 +59,25 @@
     },
     {
       "id": "c1c59bcb-5836-4bd0-aac8-09fdee960eec",
-      "name": "Kling Image 4.0 (preview)",
-      "slug": "kling-image-4-0-preview",
+      "name": "Kling Image 4.0",
+      "slug": "kling-image-4-0",
       "model_creator": {
         "id": "62cc833b-f55a-4489-bcae-54806d4b04ff",
         "name": "KlingAI"
       },
       "elo": 1183,
       "ci_95": 14
+    },
+    {
+      "id": "03e11c81-0db5-4eb2-934e-0a91d6138276",
+      "name": "MAI-Image-2.7-Flash",
+      "slug": "mai-image-2-7-flash",
+      "model_creator": {
+        "id": "4756ee95-5ddf-45e8-a9d1-075d0e5b5200",
+        "name": "Microsoft AI"
+      },
+      "elo": 1179,
+      "ci_95": 13
     },
     {
       "id": "b8852bf6-1e75-4209-ac4d-a135170dc1f3",

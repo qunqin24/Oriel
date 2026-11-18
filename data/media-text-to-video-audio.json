@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-17T03:25:58.272Z",
+  "fetched_at": "2026-11-18T02:44:40.159Z",
   "tier": "free",
   "data": [
     {
@@ -45,6 +45,17 @@
       },
       "elo": 1156,
       "ci_95": 13
+    },
+    {
+      "id": "d55f3c1f-f2c8-4093-aeab-7d8816f6aae7",
+      "name": "Hyperflow H3",
+      "slug": "hyperflow-h3",
+      "model_creator": {
+        "id": "8fd60081-cd8e-4838-bd7c-01f705ed7f7e",
+        "name": "Video Rebirth"
+      },
+      "elo": 1154,
+      "ci_95": 14
     },
     {
       "id": "a7f0b4bb-703a-4563-a318-c6644415cae9",

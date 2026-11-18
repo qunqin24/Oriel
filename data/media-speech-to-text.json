@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-17T03:25:58.272Z",
+  "fetched_at": "2026-11-18T02:44:40.159Z",
   "tier": "free",
   "data": [
     {
@@ -723,6 +723,15 @@
       "aa_wer_index": 0.021
     },
     {
+      "id": "d27f2f86-4b0a-491f-98b7-a80a09247b56",
+      "name": "Yoob ASR Pro v1",
+      "model_creator": {
+        "id": "e5d6a1f4-d2de-4f31-bfc9-4042bf73a940",
+        "name": "Yoob"
+      },
+      "aa_wer_index": 0.03
+    },
+    {
       "id": "bed4e6b1-9b51-431b-9891-a0b2d17c152b",
       "name": "ElevenLabs Scribe v3 Live",
       "model_creator": {
@@ -748,6 +757,42 @@
         "name": "NVIDIA"
       },
       "aa_wer_index": 0.028
+    },
+    {
+      "id": "b025e16d-80be-4527-baeb-9a6943fd7d89",
+      "name": "Rime STT",
+      "model_creator": {
+        "id": "2f5ee776-6f01-4c17-8ce2-335e235f45f8",
+        "name": "Rime"
+      },
+      "aa_wer_index": 0.046
+    },
+    {
+      "id": "f2f637de-a407-48d6-bfb4-deec43f25ea6",
+      "name": "Rumble-2",
+      "model_creator": {
+        "id": "98f2673d-23e8-46f8-8938-c8391fb15967",
+        "name": "Reson8"
+      },
+      "aa_wer_index": 0.027
+    },
+    {
+      "id": "5cf8e91a-5ec7-4722-a6eb-7651cbba04c0",
+      "name": "Yoob ASR Turbo v1",
+      "model_creator": {
+        "id": "e5d6a1f4-d2de-4f31-bfc9-4042bf73a940",
+        "name": "Yoob"
+      },
+      "aa_wer_index": 0.041
+    },
+    {
+      "id": "284fbed0-7acd-4b8a-8a20-1ec1d262e19a",
+      "name": "Conv 2.0",
+      "model_creator": {
+        "id": "e775e9d8-735d-4a75-9bd2-7032af8daaac",
+        "name": "Lokutor"
+      },
+      "aa_wer_index": 0.075
     }
   ]
 }

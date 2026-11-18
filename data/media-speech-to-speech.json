@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-17T03:25:58.272Z",
+  "fetched_at": "2026-11-18T02:44:40.159Z",
   "tier": "free",
   "data": [
     {
@@ -145,18 +145,6 @@
       "bba_score": 0.91,
       "fdb_score": null,
       "tau_voice_score": null
-    },
-    {
-      "id": "88cd2439-5343-481c-88f4-ee0895880f6c",
-      "name": "Grok Voice Agent",
-      "slug": "grok-voice",
-      "model_creator": {
-        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
-        "name": "SpaceXAI"
-      },
-      "bba_score": 0.93,
-      "fdb_score": 0.72,
-      "tau_voice_score": 0.27
     },
     {
       "id": "68ce64b6-1461-48c5-90b9-5318f969bea5",
@@ -351,18 +339,6 @@
       "tau_voice_score": 0.3
     },
     {
-      "id": "d9f4eed0-6367-4f1f-abbb-6ed522044afc",
-      "name": "Grok Voice 1.0",
-      "slug": "grok-voice-think-fast-1-0",
-      "model_creator": {
-        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
-        "name": "SpaceXAI"
-      },
-      "bba_score": 0.97,
-      "fdb_score": 0.78,
-      "tau_voice_score": 0.52
-    },
-    {
       "id": "62e7db61-ca85-4d6a-a672-8be58febaca3",
       "name": "Qwen3.5 Omni Plus Realtime",
       "slug": "qwen-3-5-omni-plus-realtime",
@@ -553,18 +529,6 @@
       "bba_score": 0.99,
       "fdb_score": 0.98,
       "tau_voice_score": 0.6
-    },
-    {
-      "id": "ad8b4198-6d80-483a-aaeb-ce9150e0eade",
-      "name": "Grok Voice 2.0",
-      "slug": "grok-voice-think-high-2-0",
-      "model_creator": {
-        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
-        "name": "SpaceXAI"
-      },
-      "bba_score": 0.97,
-      "fdb_score": 0.95,
-      "tau_voice_score": 0.56
     },
     {
       "id": "6a0eabd0-acfc-4ece-8ca4-39957c1ca34c",
