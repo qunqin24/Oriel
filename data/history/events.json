@@ -1,6 +1,249 @@
 {
-  "generated_at": "2026-11-18T02:44:41.432Z",
+  "generated_at": "2026-11-19T02:17:49.363Z",
   "events": [
+    {
+      "date": "2026-11-19",
+      "type": "added",
+      "model": {
+        "id": "9b696f5b-b5d2-4b1f-9ed5-7c1446ec8421",
+        "name": "Gemini 4 Neon (High)",
+        "slug": "gemini-4-neon-high",
+        "creator": "Google",
+        "first_seen": "2026-11-19",
+        "last_seen": "2026-11-19"
+      },
+      "intelligence": 59.6
+    },
+    {
+      "date": "2026-11-19",
+      "type": "added",
+      "model": {
+        "id": "09fea5f5-7217-452d-b693-fcca01e07bdf",
+        "name": "Gemini 4 Neon (Low)",
+        "slug": "gemini-4-neon-low",
+        "creator": "Google",
+        "first_seen": "2026-11-19",
+        "last_seen": "2026-11-19"
+      },
+      "intelligence": 44.1
+    },
+    {
+      "date": "2026-11-19",
+      "type": "added",
+      "model": {
+        "id": "2ba1a8f6-e052-4a33-b178-4db1e86157e4",
+        "name": "Gemini 4 Neon (Medium)",
+        "slug": "gemini-4-neon-medium",
+        "creator": "Google",
+        "first_seen": "2026-11-19",
+        "last_seen": "2026-11-19"
+      },
+      "intelligence": 54.9
+    },
+    {
+      "date": "2026-11-19",
+      "type": "added",
+      "model": {
+        "id": "7c667f2d-0149-4eb1-864c-7e66c166ad88",
+        "name": "Gemini 4 Neon (Xhigh)",
+        "slug": "gemini-4-neon",
+        "creator": "Google",
+        "first_seen": "2026-11-19",
+        "last_seen": "2026-11-19"
+      },
+      "intelligence": 61.4
+    },
+    {
+      "date": "2026-11-19",
+      "type": "added",
+      "model": {
+        "id": "5ca91b0e-0e47-4793-ace9-2ca763106e62",
+        "name": "JoyAI-VL-Preview",
+        "slug": "joyai-vl",
+        "creator": "Joy Future Academy",
+        "first_seen": "2026-11-19",
+        "last_seen": "2026-11-19"
+      },
+      "intelligence": 28
+    },
+    {
+      "date": "2026-11-19",
+      "type": "added",
+      "model": {
+        "id": "9034b7fc-11d6-433e-9b71-ec8520c487dd",
+        "name": "K2 Horizon 32B",
+        "slug": "k2-horizon-32b",
+        "creator": "Institute of Foundation Models",
+        "first_seen": "2026-11-19",
+        "last_seen": "2026-11-19"
+      },
+      "intelligence": 13.9
+    },
+    {
+      "date": "2026-11-19",
+      "type": "price",
+      "model": {
+        "id": "909ed0ba-bcc5-4f38-8162-08a4e187a772",
+        "name": "Gemini 4 Carbon (High)",
+        "slug": "gemini-4-carbon",
+        "creator": "Google",
+        "first_seen": "2026-11-02",
+        "last_seen": "2026-11-19"
+      },
+      "metric": "priceIn",
+      "from": 2,
+      "to": 4
+    },
+    {
+      "date": "2026-11-19",
+      "type": "price",
+      "model": {
+        "id": "909ed0ba-bcc5-4f38-8162-08a4e187a772",
+        "name": "Gemini 4 Carbon (High)",
+        "slug": "gemini-4-carbon",
+        "creator": "Google",
+        "first_seen": "2026-11-02",
+        "last_seen": "2026-11-19"
+      },
+      "metric": "priceOut",
+      "from": 10,
+      "to": 20
+    },
+    {
+      "date": "2026-11-19",
+      "type": "price",
+      "model": {
+        "id": "b3866703-a9f7-4ea2-8f3f-b361c90aaf0e",
+        "name": "Gemini 4 Carbon (Low)",
+        "slug": "gemini-4-carbon-low",
+        "creator": "Google",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-19"
+      },
+      "metric": "priceIn",
+      "from": 2,
+      "to": 4
+    },
+    {
+      "date": "2026-11-19",
+      "type": "price",
+      "model": {
+        "id": "b3866703-a9f7-4ea2-8f3f-b361c90aaf0e",
+        "name": "Gemini 4 Carbon (Low)",
+        "slug": "gemini-4-carbon-low",
+        "creator": "Google",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-19"
+      },
+      "metric": "priceOut",
+      "from": 10,
+      "to": 20
+    },
+    {
+      "date": "2026-11-19",
+      "type": "price",
+      "model": {
+        "id": "0d3eaafd-54ed-4f78-bdd7-05a2db883986",
+        "name": "Gemini 4 Carbon (Medium)",
+        "slug": "gemini-4-carbon-medium",
+        "creator": "Google",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-19"
+      },
+      "metric": "priceIn",
+      "from": 2,
+      "to": 4
+    },
+    {
+      "date": "2026-11-19",
+      "type": "price",
+      "model": {
+        "id": "0d3eaafd-54ed-4f78-bdd7-05a2db883986",
+        "name": "Gemini 4 Carbon (Medium)",
+        "slug": "gemini-4-carbon-medium",
+        "creator": "Google",
+        "first_seen": "2026-11-03",
+        "last_seen": "2026-11-19"
+      },
+      "metric": "priceOut",
+      "from": 10,
+      "to": 20
+    },
+    {
+      "date": "2026-11-19",
+      "type": "score",
+      "model": {
+        "id": "1071dea1-43e7-4fe9-b936-3034bb622b2e",
+        "name": "Granite 4.2 30B",
+        "slug": "granite-4-2-30b",
+        "creator": "IBM",
+        "first_seen": "2026-08-28",
+        "last_seen": "2026-11-19"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 5.5
+    },
+    {
+      "date": "2026-11-19",
+      "type": "score",
+      "model": {
+        "id": "9e9fb958-87f5-4835-a761-26102ef25898",
+        "name": "K2 Horizon 0.9B",
+        "slug": "k2-horizon-0-9b",
+        "creator": "Institute of Foundation Models",
+        "first_seen": "2026-09-15",
+        "last_seen": "2026-11-19"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 2.7
+    },
+    {
+      "date": "2026-11-19",
+      "type": "score",
+      "model": {
+        "id": "31da3a71-0773-47d9-8560-9f19f069926b",
+        "name": "K2 Horizon 3.7B",
+        "slug": "k2-horizon-3-7b",
+        "creator": "Institute of Foundation Models",
+        "first_seen": "2026-09-15",
+        "last_seen": "2026-11-19"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 8
+    },
+    {
+      "date": "2026-11-19",
+      "type": "score",
+      "model": {
+        "id": "122a1fa1-976a-4089-87a2-5a0a13e2a52c",
+        "name": "K2 Horizon 7B",
+        "slug": "k2-horizon-7b",
+        "creator": "Institute of Foundation Models",
+        "first_seen": "2026-09-15",
+        "last_seen": "2026-11-19"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 10.6
+    },
+    {
+      "date": "2026-11-19",
+      "type": "score",
+      "model": {
+        "id": "53b9e276-e360-4a39-9076-1a19d72c25fe",
+        "name": "K2 Horizon MoVA 36B A4B",
+        "slug": "k2-horizon-mova-36b-a4b",
+        "creator": "Institute of Foundation Models",
+        "first_seen": "2026-09-15",
+        "last_seen": "2026-11-19"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 13.8
+    },
     {
       "date": "2026-11-18",
       "type": "added",

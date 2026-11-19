@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-18T02:44:40.159Z",
+  "fetched_at": "2026-11-19T02:17:47.825Z",
   "tier": "free",
   "data": [
     {
@@ -301,6 +301,18 @@
       "bba_score": 0.64,
       "fdb_score": 0.96,
       "tau_voice_score": 0.15
+    },
+    {
+      "id": "e2f93453-5793-446c-add6-2b97c370e0f7",
+      "name": "Ming-3.0-audio-flash",
+      "slug": "ming-3-0-audio-flash",
+      "model_creator": {
+        "id": "501421c0-4870-4151-b8c0-fa31662a0b7e",
+        "name": "Ant Group"
+      },
+      "bba_score": 1,
+      "fdb_score": null,
+      "tau_voice_score": null
     },
     {
       "id": "35eb07d8-832c-4483-97af-c5acff809414",
