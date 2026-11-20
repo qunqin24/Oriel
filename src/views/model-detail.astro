@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "@/layouts/base.astro";
 import SectionHead from "@/components/section-head.astro";
-import RadarChart from "@/components/radar-chart.astro";
+import { getPerformance } from "@/lib/performance";
 import VendorIcon from "@/components/vendor-icon.astro";
 import Trajectory from "@/components/trajectory.astro";
 import CompareButton from "@/components/compare-button";
@@ -31,11 +31,9 @@ const creator = model.model_creator?.name ?? "";
 const catalog = catalogEntry(model.id);
 const intelligence = model.evaluations.artificial_analysis_intelligence_index;
 
-/** 三个指数并排，各自带同侪排名。没测的明说「未评测」而不是留白。 */
+/** 仅展示仍在发布的综合指数；已停发指数保留在存档中。 */
 const indices: Array<{ id: MetricId; label: string }> = [
   { id: "intelligence", label: dict.model.intelligence },
-  { id: "coding", label: dict.model.coding },
-  { id: "agentic", label: dict.model.agentic },
 ];
 
 /** 六项行业评测。覆盖面比综合指数小得多，部分模型一项都没有。 */
@@ -84,25 +82,21 @@ const pricing = [
   { label: dict.model.cacheWrite, value: model.pricing?.price_1m_cache_write_tokens },
 ].filter((row) => row.value != null);
 
+const measuredPerformance = getPerformance(model);
 const performance = [
   {
     label: dict.model.throughput,
-    value: model.performance?.median_output_tokens_per_second,
+    value: measuredPerformance.throughput,
     format: (v: number) => `${formatNumber(v, locale, 0)} ${dict.models.units.tokensPerSecond}`,
   },
   {
     label: dict.model.ttft,
-    value: model.performance?.median_time_to_first_token_seconds,
+    value: measuredPerformance.ttft,
     format: (v: number) => formatSeconds(v),
   },
   {
     label: dict.model.ttfat,
-    value: model.performance?.median_time_to_first_answer_token_seconds,
-    format: (v: number) => formatSeconds(v),
-  },
-  {
-    label: dict.model.e2e,
-    value: model.performance?.median_end_to_end_response_time_seconds,
+    value: measuredPerformance.ttfat,
     format: (v: number) => formatSeconds(v),
   },
 ].filter((row) => row.value != null);
@@ -180,7 +174,7 @@ const description = `${model.name}${creator ? ` · ${creator}` : ""} — ${dict.
       </div>
 
       {/* 页面上最大的元素是指数值 */}
-      <div class="grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-rule bg-rule sm:grid-cols-3">
+      <div class="grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-rule bg-rule">
         {
           indices.map(({ id, label }) => {
             const value = METRICS[id].get(model);
@@ -218,6 +212,7 @@ const description = `${model.name}${creator ? ` · ${creator}` : ""} — ${dict.
           })
         }
       </div>
+      <p class="max-w-2xl text-[12px] leading-relaxed text-mute">{dict.models.retiredNote}</p>
     </header>
 
     <section>
@@ -269,11 +264,6 @@ const description = `${model.name}${creator ? ` · ${creator}` : ""} — ${dict.
       }
     </section>
 
-    <section>
-      <SectionHead title={dict.model.radarTitle} note={dict.model.radarNote} />
-      <RadarChart locale={locale} model={model} />
-    </section>
-
     <div class="grid gap-10 md:grid-cols-2">
       <section>
         <SectionHead title={dict.model.pricing} note={dict.models.units.perMillion} />
@@ -295,6 +285,8 @@ const description = `${model.name}${creator ? ` · ${creator}` : ""} — ${dict.
 
       <section>
         <SectionHead title={dict.model.performance} />
+        <p class="mb-3 text-[12px] leading-relaxed text-mute">{dict.models.performanceNote}</p>
+        <p class="mb-3 text-[12px] leading-relaxed text-mute">{dict.model.e2eUnavailable}</p>
         {
           performance.length === 0 ? (
             <p class="text-sm text-mute">{dict.model.noDataHint}</p>
@@ -363,6 +355,7 @@ const description = `${model.name}${creator ? ` · ${creator}` : ""} — ${dict.
 
     <section>
       <SectionHead title={dict.model.trajectory} note={`${modelEvents.length}`} />
+      <p class="mb-4 text-[12px] leading-relaxed text-mute">{dict.model.performanceHistoryNote}</p>
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <Trajectory
           modelId={model.id}
@@ -381,10 +374,45 @@ const description = `${model.name}${creator ? ` · ${creator}` : ""} — ${dict.
         />
         <Trajectory
           modelId={model.id}
-          metric="throughput"
+          metric="throughputMean"
           locale={locale}
           label={dict.model.throughput}
           format={(value) => formatNumber(value, locale, 0)}
+        />
+        <Trajectory
+          modelId={model.id}
+          metric="latencyMean"
+          locale={locale}
+          label={dict.model.ttft}
+          lowerIsBetter
+          hideWhenEmpty
+          format={(value) => formatSeconds(value)}
+        />
+        <Trajectory
+          modelId={model.id}
+          metric="answerLatencyMean"
+          locale={locale}
+          label={dict.model.ttfat}
+          lowerIsBetter
+          hideWhenEmpty
+          format={(value) => formatSeconds(value)}
+        />
+        <Trajectory
+          modelId={model.id}
+          metric="throughput"
+          locale={locale}
+          label={dict.model.legacyThroughput}
+          hideWhenEmpty
+          format={(value) => formatNumber(value, locale, 0)}
+        />
+        <Trajectory
+          modelId={model.id}
+          metric="latency"
+          locale={locale}
+          label={dict.model.legacyLatency}
+          lowerIsBetter
+          hideWhenEmpty
+          format={(value) => formatSeconds(value)}
         />
         {
           extraTrajectories.map((item) => (

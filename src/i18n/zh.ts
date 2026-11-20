@@ -49,7 +49,9 @@ export const zh = {
 
   models: {
     title: "语言模型",
-    lead: "按智能、编程、智能体、性价比与速度筛选，全部条件写进网址，可直接分享。",
+    lead: "按智能、速度、行业评测与评测成本筛选，全部条件写进网址，可直接分享。",
+    retiredNote: "Artificial Analysis 已停止发布编程与智能体指数。本站已撤下这两项实时排名，以及依赖它们的旧性价比评分；历史记录仍保留。",
+    performanceNote: "当前性能采用 performance_v3 均值；旧中位数不可直接比较，缺失值不以旧值补齐。",
     search: "搜索模型或厂商",
     searchLabel: "搜索",
     vendor: "厂商",
@@ -86,8 +88,8 @@ export const zh = {
       value: "性价比",
       priceIn: "输入价",
       priceOut: "输出价",
-      speed: "吞吐",
-      ttft: "首字延迟",
+      speed: "吞吐（均值）",
+      ttft: "首字延迟（均值）",
       release: "发布",
     },
     units: {
@@ -129,10 +131,14 @@ export const zh = {
     priceOut: "输出",
     cacheHit: "缓存命中",
     cacheWrite: "缓存写入",
-    throughput: "输出吞吐",
-    ttft: "首字延迟",
-    ttfat: "首个答案 token",
+    throughput: "输出吞吐（均值）",
+    ttft: "首字延迟（均值）",
+    ttfat: "首个答案 token 延迟（均值）",
     e2e: "端到端响应",
+    e2eUnavailable: "免费 API 没有旧端到端响应耗时的等价替代字段，因此不再展示该项，也不根据其他指标推算。",
+    performanceHistoryNote: "性能均值与旧中位数分别记录、分别绘图，不连成同一条曲线；新口径积累足够数据后才显示趋势。",
+    legacyThroughput: "旧输出吞吐（中位数）",
+    legacyLatency: "旧首字延迟（中位数）",
     trajectory: "历史轨迹",
     trajectoryThin: "历史积累中——需要更多天数才能画出趋势",
     trajectoryFlat: "{days} 天记录内无变化",
@@ -156,11 +162,14 @@ export const zh = {
     },
     metrics: {
       intelligence: "智能指数",
-      coding: "编程指数",
-      agentic: "智能体指数",
+      coding: "编程指数（已停发）",
+      agentic: "智能体指数（已停发）",
       priceIn: "输入价",
       priceOut: "输出价",
       throughput: "输出吞吐",
+      throughputMean: "输出吞吐（均值）",
+      latencyMean: "首字延迟（均值）",
+      answerLatencyMean: "首个答案 token 延迟（均值）",
       latency: "首字延迟",
       finance: "金融与会计",
       strategy: "战略与运营",
@@ -234,14 +243,16 @@ export const zh = {
     indexBody:
       "智能指数是 Artificial Analysis 把多项基准测试合成的单一分数，当前为 v{version}。关键的一点：**不同版本的分数不可比较**。上游换版时会重新标定全部模型，所以本站的趋势线在版本边界会断开，而不是连成一条看起来平滑但没有意义的曲线；同理，跨版本的分数变动也不会计入变化流。",
 
-    valueTitle: "性价比怎么算",
-    valueFormula: "性价比 = 可用评测分的平均值 ÷ 每百万输出 token 价格",
-    valueBody:
-      "这是 Oriel 自己的推导，不是上游数据。只有当模型至少有两项评测分、且有输出价时才计算——只有一项分数时这个比值噪音太大，一个只测过智能指数的便宜小模型会凭空登顶。它衡量的是「每块钱买到多少分」，不代表这个模型适合你的场景。",
+    valueTitle: "已停发指标与旧性价比",
+    valueFormula: "已停用的旧公式：可用评测分的平均值 ÷ 每百万输出 token 价格",
+    valueBody: "Artificial Analysis 已停止发布编程与智能体指数，相关字段始终为空。旧性价比公式至少需要智能、编程、智能体三项中的两项有效分数，因此不再适用于当前数据。本站撤下相关实时排名和五维雷达图，不用单项智能分或行业分数悄悄替换原公式。旧指数和变化事件继续保留在历史存档中。",
+
+    performanceTitle: "性能统计口径",
+    performanceBody: "当前页面统一使用 performance_v3 的均值：输出吞吐、首字延迟和首个答案 token 延迟。旧 performance 字段从 2026 年 12 月 10 日起返回 null。v3 同时更改了工作负载、测量窗口和统计口径，其吞吐计算包含首字等待时间；不能把它理解为同一次测量只把中位数换成均值。新旧数据不可直接比较；本站保留旧历史位置，为新均值另设字段和曲线，不回填估计值，也不以旧字段补齐缺失值。免费 API 没有旧端到端响应耗时的等价替代，因此不再把该项显示为当前指标。",
 
     coverageTitle: "覆盖率",
     coverageBody:
-      "{total} 款语言模型里，只有一部分被测过每一项。智能指数 {intelligence}、编程 {coding}、智能体 {agentic}；行业评测里金融与会计 {finance}、战略与运营 {strategy}、法律 {legal}、医疗 {healthcare}、工程 {engineering}、经济 {economics}；评测成本 {cost}；价格 {price}、性能 {performance}。行业评测和评测成本的覆盖面比综合指数小得多。破折号的意思是「没测」，不是「测得差」——这两件事完全不同，所以本站在选定某个维度时会把没有该项数据的模型移出榜单，而不是让你对着几百行破折号猜。",
+      "{total} 款语言模型里，只有一部分被测过每一项。智能指数 {intelligence}；行业评测里金融与会计 {finance}、战略与运营 {strategy}、法律 {legal}、医疗 {healthcare}、工程 {engineering}、经济 {economics}；评测成本 {cost}；价格 {price}、性能 {performance}。行业评测和评测成本的覆盖面比综合指数小得多。破折号的意思是「没测」，不是「测得差」——这两件事完全不同，所以本站在选定某个维度时会把没有该项数据的模型移出榜单，而不是让你对着几百行破折号猜。",
 
     historyTitle: "历史",
     historyBody:
@@ -253,7 +264,7 @@ export const zh = {
 
     limitsTitle: "已知局限",
     limitsBody:
-      "语音转文本榜的词错误率指数只发布到 1 位小数，大量模型并列在同一个值上，那份榜单实际排不出先后，本站会在页面上标出并列数量。性能数据（吞吐、延迟）是特定时间从特定线路测得的中位数，会随服务商的负载和你的地理位置变化。价格只算基础 token 计费，不含批量折扣、承诺用量或缓存策略带来的实际差异。评测成本是上游跑完一遍智能指数评测的实际花费，和智能指数一样随版本重新测算，跨版本不可比；免费模型的 $0 是真实的零，不是缺失。",
+      "语音转文本榜的词错误率指数只发布到 1 位小数，大量模型并列在同一个值上，那份榜单实际排不出先后，本站会在页面上标出并列数量。性能数据（吞吐、延迟）采用上游 v3 均值，会随服务商负载及测量条件变化，不保证等于你的实际体验。价格只算基础 token 计费，不含批量折扣、承诺用量或缓存策略带来的实际差异。评测成本是上游跑完一遍智能指数评测的实际花费，和智能指数一样随版本重新测算，跨版本不可比；免费模型的 $0 是真实的零，不是缺失。",
   },
 
   catBoard: {

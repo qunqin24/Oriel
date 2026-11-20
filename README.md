@@ -42,7 +42,7 @@ GitHub 托管定时任务可能因 runner 繁忙延迟；失败时可在 Actions
 
 - `data/*.json` —— 当日快照，覆盖写入（12 个榜单）
 - `data/history/` —— **累积存档**
-  - `YYYY-MM.json` 每月一个文件，每天一份紧凑快照（每模型 7 个数字，约 49KB/天）
+  - `YYYY-MM.json` 每月一个文件，每天一份紧凑快照（仅追加字段的数字元组，旧版 7/15 项，现为 18 项）
   - `catalog.json` 模型名录，含已下架的，附 `first_seen` / `last_seen`
   - `events.json` 与前一日差分出的变化事件（新增 / 下架 / 分数 / 价格）
 
@@ -85,10 +85,22 @@ pnpm build && pnpm verify
 `pnpm verify` 检查 60+ 项，包括页面数、双语一致性、内链完整性、产物体积，以及几件容易悄悄退化的事：
 
 - **内容不依赖 JS** —— 全部内容都在 HTML 里，关掉 JS 也读得到（榜单的 586 行是全的、前沿图是内联 SVG）。首页、变化、媒体、方法、猫榜几页只加载 Astro 运行时（路由 13.3KB + 预取 2.4KB），不碰 React
-- **稀疏度降级** —— 只有 198/586 个模型有编程指数，未评测必须显示「未评测」而不是留白或破折号
+- **稀疏度降级** —— 各指标覆盖率不同，停发指标退出实时榜单，未评测必须显示「未评测」而不是留白或破折号
 - **历史降级** —— 数据点不足时不画趋势线
 - **第三方数据降级** —— 猫榜数据缺失或过期时页面显示提示，不影响其余页面构建
 - **主题在软导航中存活** —— 模拟 `astro:before-swap` 的真实流程，确认深浅主题不会在切页时被清空
 
 每日 Action 在提交数据前会跑单元测试和这套检查，上游数据形状变了能在入库前拦住。
 普通 push 与 pull request 也会运行同一套只读 CI，但不会抓取或提交数据。
+
+### Artificial Analysis performance v3 / 性能口径迁移
+
+- 实时性能只读取 `performance_v3` 的三项 `mean_*` 字段：输出吞吐、首 token 延迟、首回答 token 延迟。缺失、null 或无效值显示为未评测，真实的 0 仍保留；不回退到旧 `performance` 中位数。
+- v3 改变了工作负载、汇总窗口和吞吐计算方法，不只是字段改名。旧中位数与新均值不得拼接成同一条历史曲线。`METRIC_KEYS` 的前 15 个位置不变，旧 `throughput` / `latency` 保留中位数；末尾新增 `throughputMean` / `latencyMean` / `answerLatencyMean`。旧 7/15 元组读新增字段为 null，后续每日抓取开始累积 18 元组，不改写旧数据。
+- 免费 API 没有新版端到端响应耗时，不用延迟、吞吐或 token 数估算替代值。
+- Coding / Agentic 指数已停发，退出实时排名、对比和雷达图。依赖它们的旧性价比分也停用，不改成单指数或行业分混算；历史原始数据与既有变化事件保留。
+- 构建校验动态选择有 v3 数据的模型，不要求某个固定模型有性能数据。旧字段为空或消失不会阻断每日刷新，v3 全空时也必须诚实降级而非使用旧值。
+
+Live performance reads only the three `performance_v3.mean_*` fields. Missing values remain missing, and measured zero is preserved. There is no legacy-median fallback or estimated end-to-end response time. v3 changes the workload and timing methodology, so new mean history uses appended tuple slots, separate from legacy medians. Existing archives remain unchanged; new daily snapshots accumulate the v3 history. Retired Coding/Agentic indices and their dependent value score are removed from live views, while historical observations remain available. No substitute score is invented.
+
+Sources: [API deprecations](https://artificialanalysis.ai/data-api/docs#deprecations), [v3 methodology](https://artificialanalysis.ai/methodology/performance-benchmarking), [free endpoint schema](https://artificialanalysis.ai/api/v2/openapi). The old `performance` fields return null from **2026-12-10**.

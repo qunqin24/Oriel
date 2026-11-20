@@ -7,7 +7,6 @@ import {
   type ExplorerRow,
   type PackedRow,
 } from "@/lib/explorer-config";
-import CompareRadar from "./compare-radar";
 import VendorIcon from "./vendor-icon";
 import {
   formatCost,
@@ -30,15 +29,12 @@ type Props = {
 /** 对比表的行。与探索器共用 explorer-config 的取值与方向定义。 */
 const METRIC_ROWS: Array<{ id: Exclude<ColumnId, "name">; key: keyof Dict["models"]["cols"] }> = [
   { id: "intelligence", key: "intelligence" },
-  { id: "coding", key: "coding" },
-  { id: "agentic", key: "agentic" },
   { id: "finance", key: "finance" },
   { id: "strategy", key: "strategy" },
   { id: "legal", key: "legal" },
   { id: "healthcare", key: "healthcare" },
   { id: "engineering", key: "engineering" },
   { id: "economics", key: "economics" },
-  { id: "value", key: "value" },
   { id: "priceIn", key: "priceIn" },
   { id: "priceOut", key: "priceOut" },
   { id: "throughput", key: "speed" },
@@ -94,9 +90,6 @@ export default function CompareBoard({
     .map((entry) => bySlug.get(entry.slug))
     .filter((row): row is ExplorerRow => row != null);
 
-  // 雷达图的「全站均值」参照系需要完整分布，不只是选中的几个。
-  const pool = useMemo(() => Array.from(bySlug.values()), [bySlug]);
-
   if (selected.length === 0) {
     return (
       <div className="panel px-5 py-12 text-center">
@@ -114,7 +107,6 @@ export default function CompareBoard({
 
   return (
     <div>
-      <CompareRadar selected={selected} pool={pool} labels={labels} />
       <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
         <table className="w-full border-collapse text-sm">
           <thead>

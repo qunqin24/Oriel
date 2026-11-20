@@ -38,9 +38,6 @@ export type ColumnId = MetricId | "name";
 export const DIMENSIONS = [
   "overview",
   "intelligence",
-  "coding",
-  "agentic",
-  "value",
   "speed",
   "domains",
   "cost",
@@ -63,7 +60,7 @@ export const DOMAIN_METRICS = [
  * 每个维度显示哪些列，以及默认按哪列排序。
  *
  * 维度不只是换排序——它换的是「这一屏在回答什么问题」。
- * 看编程能力时不需要首字延迟，看速度时不需要智能体分数。
+ * 已停发的编程、智能体指数与依赖它们的旧性价比不再作为实时维度。
  * focus 非空时，没有该项数据的模型直接不进表。focus 可以是一组指标，
  * 此时只要其中任意一项有值就留下（行业评测各项覆盖不齐，不能只认其中一项）。
  */
@@ -75,8 +72,6 @@ export const DIMENSION_COLUMNS: Record<
     columns: [
       "name",
       "intelligence",
-      "coding",
-      "agentic",
       "priceOut",
       "throughput",
       "release",
@@ -88,21 +83,6 @@ export const DIMENSION_COLUMNS: Record<
     columns: ["name", "intelligence", "priceOut", "throughput", "release"],
     sort: "intelligence",
     focus: "intelligence",
-  },
-  coding: {
-    columns: ["name", "coding", "intelligence", "priceOut", "release"],
-    sort: "coding",
-    focus: "coding",
-  },
-  agentic: {
-    columns: ["name", "agentic", "intelligence", "priceOut", "release"],
-    sort: "agentic",
-    focus: "agentic",
-  },
-  value: {
-    columns: ["name", "value", "intelligence", "priceOut", "release"],
-    sort: "value",
-    focus: "value",
   },
   speed: {
     columns: ["name", "throughput", "ttft", "priceOut", "intelligence"],
@@ -293,4 +273,17 @@ export function hasFocusData(row: ExplorerRow, focus: Focus): boolean {
   if (focus == null) return true;
   const ids: readonly MetricId[] = typeof focus === "string" ? [focus] : focus;
   return ids.some((id) => rowValue(row, id) != null);
+}
+
+/** Retired or unknown URL dimensions resolve to the live overview. */
+export function resolveDimension(value: string | null | undefined): Dimension {
+  return value && (DIMENSIONS as readonly string[]).includes(value)
+    ? value as Dimension
+    : "overview";
+}
+
+/** Keep valid shared sorts, but never silently sort by a retired metric. */
+export function resolveSortColumn(value: string | null | undefined, dimension: Dimension): ColumnId {
+  const active = new Set<ColumnId>(Object.values(DIMENSION_COLUMNS).flatMap((config) => config.columns));
+  return value && active.has(value as ColumnId) ? value as ColumnId : DIMENSION_COLUMNS[dimension].sort;
 }

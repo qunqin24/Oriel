@@ -1,4 +1,5 @@
 import type { LanguageModel } from "./types.ts";
+import { getPerformance } from "./performance.ts";
 import type { Dict } from "@/i18n";
 import type { Locale } from "@/i18n";
 import {
@@ -45,23 +46,11 @@ export type MetricDef = {
 };
 
 /**
- * 性价比 = 可用评测分的平均 ÷ 每百万输出 token 价格。
- *
- * 至少要有两项评测分才算——只有一项时这个比值噪音太大，
- * 一个只测过智能指数的便宜小模型会凭空登顶。
+ * 旧性价比分依赖 Coding / Agentic 指数，二者已停发。
+ * 保留兼容入口但不再计算；不以单项智能指数或行业分悄悄替代旧公式。
  */
-export function valueScore(model: LanguageModel): number | null {
-  const scores = [
-    model.evaluations.artificial_analysis_intelligence_index,
-    model.evaluations.artificial_analysis_coding_index,
-    model.evaluations.artificial_analysis_agentic_index,
-  ].filter((score): score is number => score != null && Number.isFinite(score));
-
-  const price = model.pricing?.price_1m_output_tokens;
-  if (scores.length < 2 || price == null || !Number.isFinite(price) || price <= 0) {
-    return null;
-  }
-  return scores.reduce((sum, score) => sum + score, 0) / scores.length / price;
+export function valueScore(_model: LanguageModel): number | null {
+  return null;
 }
 
 function releaseTime(model: LanguageModel): number | null {
@@ -80,14 +69,14 @@ export const METRICS: Record<MetricId, MetricDef> = {
   },
   coding: {
     id: "coding",
-    get: (m) => m.evaluations.artificial_analysis_coding_index,
+    get: () => null,
     higherIsBetter: true,
     label: (d) => d.models.cols.coding,
     format: (v, l) => formatNumber(v, l, 1),
   },
   agentic: {
     id: "agentic",
-    get: (m) => m.evaluations.artificial_analysis_agentic_index,
+    get: () => null,
     higherIsBetter: true,
     label: (d) => d.models.cols.agentic,
     format: (v, l) => formatNumber(v, l, 1),
@@ -172,14 +161,14 @@ export const METRICS: Record<MetricId, MetricDef> = {
   },
   throughput: {
     id: "throughput",
-    get: (m) => m.performance?.median_output_tokens_per_second ?? null,
+    get: (m) => getPerformance(m).throughput,
     higherIsBetter: true,
     label: (d) => d.models.cols.speed,
     format: (v, l) => formatNumber(v, l, 0),
   },
   ttft: {
     id: "ttft",
-    get: (m) => m.performance?.median_time_to_first_token_seconds ?? null,
+    get: (m) => getPerformance(m).ttft,
     higherIsBetter: false,
     label: (d) => d.models.cols.ttft,
     format: (v) => formatSeconds(v),

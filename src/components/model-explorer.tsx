@@ -7,6 +7,8 @@ import {
   HIGHER_IS_BETTER,
   hasFocusData,
   rowValue,
+  resolveDimension,
+  resolveSortColumn,
   unpackRow,
   type ColumnId,
   type Dimension,
@@ -108,10 +110,7 @@ function readParams(): URLSearchParams | null {
 }
 
 function initialDimension(params: URLSearchParams | null): Dimension {
-  const dim = params?.get("dim");
-  return dim && (DIMENSIONS as readonly string[]).includes(dim)
-    ? (dim as Dimension)
-    : "overview";
+  return resolveDimension(params?.get("dim"));
 }
 
 function initialQuery(params: URLSearchParams | null): string {
@@ -133,8 +132,7 @@ function initialSortColumn(
   params: URLSearchParams | null,
   dimension: Dimension
 ): ColumnId {
-  const sort = params?.get("sort");
-  return (sort as ColumnId) || DIMENSION_COLUMNS[dimension].sort;
+  return resolveSortColumn(params?.get("sort"), dimension);
 }
 
 /**
