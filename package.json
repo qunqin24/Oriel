@@ -10,12 +10,13 @@
     "start": "astro preview",
     "check": "astro check",
     "lint": "astro check",
-    "test": "tsx --test scripts/lib/model-list.test.ts scripts/lib/history-schema.test.ts scripts/lib/performance.test.ts scripts/lib/verify-frontier.test.mjs",
+    "test": "tsx --test scripts/lib/model-list.test.ts scripts/lib/history-schema.test.ts scripts/lib/performance.test.ts scripts/lib/backfill-performance.test.ts scripts/lib/verify-frontier.test.mjs",
     "fetch:data": "tsx scripts/fetch-data.ts",
     "fetch:cat-board": "tsx scripts/fetch-cat-board.ts",
     "sync:icons": "tsx scripts/sync-vendor-icons.ts",
     "backfill:history": "tsx scripts/backfill-history.ts",
-    "verify": "node scripts/verify-build.mjs"
+    "verify": "node scripts/verify-build.mjs",
+    "backfill:performance": "tsx scripts/backfill-performance.ts"
   },
   "dependencies": {
     "@fontsource-variable/instrument-sans": "^5.3.0",

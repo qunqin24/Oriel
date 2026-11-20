@@ -22,6 +22,7 @@ pnpm verify             # 校验构建产物（见下）
 pnpm preview            # 预览生产构建
 pnpm fetch:data         # 抓取当日快照（需要 AA_API_KEY）
 pnpm backfill:history   # 从 git 历史回填快照存档
+pnpm backfill:performance  # 预览从 Git 快照补齐缺失的 v3 均值
 ```
 
 部署域名通过 `SITE_URL` 传入。设了才会产出 sitemap，hreflang 也才是绝对地址：
@@ -96,11 +97,11 @@ pnpm build && pnpm verify
 ### Artificial Analysis performance v3 / 性能口径迁移
 
 - 实时性能只读取 `performance_v3` 的三项 `mean_*` 字段：输出吞吐、首 token 延迟、首回答 token 延迟。缺失、null 或无效值显示为未评测，真实的 0 仍保留；不回退到旧 `performance` 中位数。
-- v3 改变了工作负载、汇总窗口和吞吐计算方法，不只是字段改名。旧中位数与新均值不得拼接成同一条历史曲线。`METRIC_KEYS` 的前 15 个位置不变，旧 `throughput` / `latency` 保留中位数；末尾新增 `throughputMean` / `latencyMean` / `answerLatencyMean`。旧 7/15 元组读新增字段为 null，后续每日抓取开始累积 18 元组，不改写旧数据。
+- v3 改变了工作负载、汇总窗口和吞吐计算方法，不只是字段改名。旧中位数与新均值不得拼接成同一条历史曲线。`METRIC_KEYS` 的前 15 个位置不变，旧 `throughput` / `latency` 保留中位数；末尾新增 `throughputMean` / `latencyMean` / `answerLatencyMean`。旧 7/15 元组读新增字段为 null，后续每日抓取开始累积 18 元组；历史回填仅补已有模型行末尾缺失的三个 v3 槽位，不覆盖已有值。用完整 Git 历史运行 `pnpm backfill:performance` 预览，加 `--apply` 才写入月度存档。
 - 免费 API 没有新版端到端响应耗时，不用延迟、吞吐或 token 数估算替代值。
 - Coding / Agentic 指数已停发，退出实时排名、对比和雷达图。依赖它们的旧性价比分也停用，不改成单指数或行业分混算；历史原始数据与既有变化事件保留。
 - 构建校验动态选择有 v3 数据的模型，不要求某个固定模型有性能数据。旧字段为空或消失不会阻断每日刷新，v3 全空时也必须诚实降级而非使用旧值。
 
-Live performance reads only the three `performance_v3.mean_*` fields. Missing values remain missing, and measured zero is preserved. There is no legacy-median fallback or estimated end-to-end response time. v3 changes the workload and timing methodology, so new mean history uses appended tuple slots, separate from legacy medians. Existing archives remain unchanged; new daily snapshots accumulate the v3 history. Retired Coding/Agentic indices and their dependent value score are removed from live views, while historical observations remain available. No substitute score is invented.
+Live performance reads only the three `performance_v3.mean_*` fields. Missing values remain missing, and measured zero is preserved. There is no legacy-median fallback or estimated end-to-end response time. v3 changes the workload and timing methodology, so new mean history uses appended tuple slots, separate from legacy medians. Daily snapshots accumulate v3 history. The targeted backfill only fills missing v3 slots on existing rows, using the latest committed raw snapshot for each Beijing calendar date. It leaves legacy metrics, the model catalogue, and the change log intact. Retired Coding/Agentic indices and their dependent value score are removed from live views, while historical observations remain available. No substitute score is invented.
 
 Sources: [API deprecations](https://artificialanalysis.ai/data-api/docs#deprecations), [v3 methodology](https://artificialanalysis.ai/methodology/performance-benchmarking), [free endpoint schema](https://artificialanalysis.ai/api/v2/openapi). The old `performance` fields return null from **2026-12-10**.
