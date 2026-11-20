@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-19T02:17:47.825Z",
+  "fetched_at": "2026-11-20T02:01:50.240Z",
   "tier": "free",
   "data": [
     {
@@ -426,15 +426,6 @@
       "aa_wer_index": null
     },
     {
-      "id": "b1e3a5c7-0001-4a3a-9f01-0a1b2c3d4e5f",
-      "name": "Universal-3.5 Pro, AssemblyAI",
-      "model_creator": {
-        "id": "4fb0e648-ff21-4fe3-909b-290fba140579",
-        "name": "AssemblyAI"
-      },
-      "aa_wer_index": 0.03
-    },
-    {
       "id": "3c776695-24a0-4c90-bf72-b43089a99966",
       "name": "Voxtral Small Transcribe 3",
       "model_creator": {
@@ -487,6 +478,15 @@
         "name": "Zoom"
       },
       "aa_wer_index": null
+    },
+    {
+      "id": "b1e3a5c7-0001-4a3a-9f01-0a1b2c3d4e5f",
+      "name": "Universal-3.5 Pro, AssemblyAI",
+      "model_creator": {
+        "id": "4fb0e648-ff21-4fe3-909b-290fba140579",
+        "name": "AssemblyAI"
+      },
+      "aa_wer_index": 0.03
     },
     {
       "id": "e838f4db-f772-4cdb-b5b6-bedacbe43178",
@@ -793,6 +793,24 @@
         "name": "Lokutor"
       },
       "aa_wer_index": 0.075
+    },
+    {
+      "id": "d25fee3a-dc51-4afa-adc5-41d339b978d6",
+      "name": "AssemblyAI-STT-3.7",
+      "model_creator": {
+        "id": "4fb0e648-ff21-4fe3-909b-290fba140579",
+        "name": "AssemblyAI"
+      },
+      "aa_wer_index": 0.025
+    },
+    {
+      "id": "ff2287d5-a6de-47b6-bde1-723886a78d1d",
+      "name": "AssemblyAI-STT-3.7-Realtime-Agent",
+      "model_creator": {
+        "id": "4fb0e648-ff21-4fe3-909b-290fba140579",
+        "name": "AssemblyAI"
+      },
+      "aa_wer_index": null
     }
   ]
 }

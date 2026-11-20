@@ -1,6 +1,591 @@
 {
-  "generated_at": "2026-11-19T02:17:49.363Z",
+  "generated_at": "2026-11-20T02:01:54.963Z",
   "events": [
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "4a845d7b-a52d-43bb-80b7-b58c7a0c155e",
+        "name": "DeepSeek R1 Distill Llama 70B",
+        "slug": "deepseek-r1-distill-llama-70b",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 1.1,
+      "to": 1.4
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "75e1c197-f239-4361-a9d6-66dccfead236",
+        "name": "DeepSeek V3 0324",
+        "slug": "deepseek-v3-0324",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.24,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "75e1c197-f239-4361-a9d6-66dccfead236",
+        "name": "DeepSeek V3 0324",
+        "slug": "deepseek-v3-0324",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 0.9,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "dfb9292d-bc7c-4425-a260-4256217e709f",
+        "name": "DeepSeek V3.1 Terminus (Non-reasoning)",
+        "slug": "deepseek-v3-1-terminus",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.27,
+      "to": 1.635
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "dfb9292d-bc7c-4425-a260-4256217e709f",
+        "name": "DeepSeek V3.1 Terminus (Non-reasoning)",
+        "slug": "deepseek-v3-1-terminus",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 1,
+      "to": 2.75
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "5303601c-8133-4f52-bc4e-5241ee6b3c10",
+        "name": "Gemma 4 E4B (Non-reasoning)",
+        "slug": "gemma-4-e4b-non-reasoning",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.02,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "5303601c-8133-4f52-bc4e-5241ee6b3c10",
+        "name": "Gemma 4 E4B (Non-reasoning)",
+        "slug": "gemma-4-e4b-non-reasoning",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 0.1,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "d80eb0f1-f62e-4d31-99d2-7a925eb126b0",
+        "name": "Gemma 4 E4B (Reasoning)",
+        "slug": "gemma-4-e4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.02,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "d80eb0f1-f62e-4d31-99d2-7a925eb126b0",
+        "name": "Gemma 4 E4B (Reasoning)",
+        "slug": "gemma-4-e4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 0.1,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "92f245a7-43b4-4ffd-8bfb-866746bf824d",
+        "name": "GLM-5.1 (Non-reasoning)",
+        "slug": "glm-5-1-non-reasoning",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 1.285,
+      "to": 1.38
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "92f245a7-43b4-4ffd-8bfb-866746bf824d",
+        "name": "GLM-5.1 (Non-reasoning)",
+        "slug": "glm-5-1-non-reasoning",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 4.07,
+      "to": 4.4
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
+        "name": "GLM-5.1 (Reasoning)",
+        "slug": "glm-5-1",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 1.19,
+      "to": 1.285
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
+        "name": "GLM-5.1 (Reasoning)",
+        "slug": "glm-5-1",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 3.74,
+      "to": 4.07
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "b23e6c69-96e5-44c9-8f58-4b42e0c399d5",
+        "name": "Hy3",
+        "slug": "hy3",
+        "creator": "Tencent",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.136,
+      "to": 0.14
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "b23e6c69-96e5-44c9-8f58-4b42e0c399d5",
+        "name": "Hy3",
+        "slug": "hy3",
+        "creator": "Tencent",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 0.555,
+      "to": 0.58
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "82879bb8-89fb-4adc-b519-315b8ef30b77",
+        "name": "Llama 3 Instruct 8B",
+        "slug": "llama-3-instruct-8b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.045,
+      "to": 0.05
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "82879bb8-89fb-4adc-b519-315b8ef30b77",
+        "name": "Llama 3 Instruct 8B",
+        "slug": "llama-3-instruct-8b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 0.145,
+      "to": 0.25
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "466aecdb-3d96-4191-bc52-b3366db38851",
+        "name": "Llama 3.1 Instruct 70B",
+        "slug": "llama-3-1-instruct-70b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.56,
+      "to": 0.81
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "466aecdb-3d96-4191-bc52-b3366db38851",
+        "name": "Llama 3.1 Instruct 70B",
+        "slug": "llama-3-1-instruct-70b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 0.56,
+      "to": 0.81
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "739684ba-0f63-4e2a-b4ee-30741c9e9320",
+        "name": "Llama 3.1 Instruct 8B",
+        "slug": "llama-3-1-instruct-8b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.035,
+      "to": 0.05
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "739684ba-0f63-4e2a-b4ee-30741c9e9320",
+        "name": "Llama 3.1 Instruct 8B",
+        "slug": "llama-3-1-instruct-8b",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 0.065,
+      "to": 0.08
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "5fb47ff6-a30e-4c2c-96f2-55e95a13390f",
+        "name": "Llama 3.2 Instruct 11B (Vision)",
+        "slug": "llama-3-2-instruct-11b-vision",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.345,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "5fb47ff6-a30e-4c2c-96f2-55e95a13390f",
+        "name": "Llama 3.2 Instruct 11B (Vision)",
+        "slug": "llama-3-2-instruct-11b-vision",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 0.345,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "922c69c7-9037-43c6-8bcf-a1c555e7f3eb",
+        "name": "Llama 4 Maverick",
+        "slug": "llama-4-maverick",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.25,
+      "to": 0.26
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "922c69c7-9037-43c6-8bcf-a1c555e7f3eb",
+        "name": "Llama 4 Maverick",
+        "slug": "llama-4-maverick",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 0.97,
+      "to": 0.985
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "24ac5b00-5f03-4c47-8e37-522d1195383e",
+        "name": "Mistral Small 3.1",
+        "slug": "mistral-small-3-1",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.08,
+      "to": 0.11
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "24ac5b00-5f03-4c47-8e37-522d1195383e",
+        "name": "Mistral Small 3.1",
+        "slug": "mistral-small-3-1",
+        "creator": "Mistral",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 0.135,
+      "to": 0.17
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "5b52def2-ac9b-4465-ad80-91ea8079e253",
+        "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
+        "slug": "nvidia-nemotron-3-ultra-550b-a55b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.6,
+      "to": 0.55
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "5b52def2-ac9b-4465-ad80-91ea8079e253",
+        "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
+        "slug": "nvidia-nemotron-3-ultra-550b-a55b",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 2.4,
+      "to": 2.3
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "2e8694f9-7782-47a6-a6ba-fdce89d939c8",
+        "name": "NVIDIA Nemotron Nano 9B V2 (Non-reasoning)",
+        "slug": "nvidia-nemotron-nano-9b-v2",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.05,
+      "to": 0.06
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "2e8694f9-7782-47a6-a6ba-fdce89d939c8",
+        "name": "NVIDIA Nemotron Nano 9B V2 (Non-reasoning)",
+        "slug": "nvidia-nemotron-nano-9b-v2",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 0.195,
+      "to": 0.23
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "f1d52583-9d20-4099-99ac-b5df9430c3b6",
+        "name": "NVIDIA Nemotron Nano 9B V2 (Reasoning)",
+        "slug": "nvidia-nemotron-nano-9b-v2-reasoning",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.04,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "f1d52583-9d20-4099-99ac-b5df9430c3b6",
+        "name": "NVIDIA Nemotron Nano 9B V2 (Reasoning)",
+        "slug": "nvidia-nemotron-nano-9b-v2-reasoning",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 0.16,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "f6ccbe1d-bd7e-484b-9795-18cc9f91552d",
+        "name": "Qwen3 235B A22B 2507 (Reasoning)",
+        "slug": "qwen3-235b-a22b-instruct-2507-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.23,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "f6ccbe1d-bd7e-484b-9795-18cc9f91552d",
+        "name": "Qwen3 235B A22B 2507 (Reasoning)",
+        "slug": "qwen3-235b-a22b-instruct-2507-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 2.3,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "30c9ba61-d0a1-4794-938e-35865f379d15",
+        "name": "Qwen3.5 4B (Non-reasoning)",
+        "slug": "qwen3-5-4b-non-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.03,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "30c9ba61-d0a1-4794-938e-35865f379d15",
+        "name": "Qwen3.5 4B (Non-reasoning)",
+        "slug": "qwen3-5-4b-non-reasoning",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 0.15,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "651ef7ae-9a8f-477e-9c8e-460aa156ba02",
+        "name": "Qwen3.5 4B (Reasoning)",
+        "slug": "qwen3-5-4b",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceIn",
+      "from": 0.03,
+      "to": null
+    },
+    {
+      "date": "2026-11-20",
+      "type": "price",
+      "model": {
+        "id": "651ef7ae-9a8f-477e-9c8e-460aa156ba02",
+        "name": "Qwen3.5 4B (Reasoning)",
+        "slug": "qwen3-5-4b",
+        "creator": "Alibaba",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-20"
+      },
+      "metric": "priceOut",
+      "from": 0.15,
+      "to": null
+    },
     {
       "date": "2026-11-19",
       "type": "added",
