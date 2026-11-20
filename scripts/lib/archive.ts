@@ -46,7 +46,7 @@ async function writeJson(file: string, value: unknown): Promise<void> {
  * 而且 git diff 完全没法看。一行一模型既省空间，又让「今天哪些模型变了」
  * 在 diff 里一目了然——这个文件每天都会被 commit，可读性是硬需求。
  */
-function stringifyMonth(month: HistoryMonth): string {
+export function stringifyMonth(month: HistoryMonth): string {
   const dates = Object.keys(month.snapshots).sort();
   const blocks = dates.map((date) => {
     const snapshot = month.snapshots[date]!;
