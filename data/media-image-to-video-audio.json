@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-20T02:01:50.240Z",
+  "fetched_at": "2026-11-21T01:58:56.236Z",
   "tier": "free",
   "data": [
     {
@@ -23,6 +23,17 @@
       },
       "elo": 1151,
       "ci_95": 14
+    },
+    {
+      "id": "e57f1c3d-a585-497f-84c6-818adea1abe9",
+      "name": "Boreal-H3",
+      "slug": "boreal-h3",
+      "model_creator": {
+        "id": "033e3219-6b49-43b4-a86f-b92a63e3ebb2",
+        "name": "Creatify"
+      },
+      "elo": 1148,
+      "ci_95": 18
     },
     {
       "id": "b8289cfd-3843-4d4c-a3fb-ec5ae5e752e0",
@@ -279,8 +290,8 @@
     },
     {
       "id": "be866b8a-d073-4ee4-9652-73227c679dc4",
-      "name": "PixVerse V6",
-      "slug": "pixverse-v6",
+      "name": "PixVerse V6 (Legacy)",
+      "slug": "pixverse-v6-legacy",
       "model_creator": {
         "id": "1942f8d6-ab55-4408-99dd-2f99c70353f6",
         "name": "PixVerse"

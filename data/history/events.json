@@ -1,6 +1,139 @@
 {
-  "generated_at": "2026-11-20T02:01:54.963Z",
+  "generated_at": "2026-11-21T01:58:57.126Z",
   "events": [
+    {
+      "date": "2026-11-21",
+      "type": "added",
+      "model": {
+        "id": "da3ba2f4-f4f1-43b6-95dc-8e9fa2a48402",
+        "name": "Inkling 2 Mini",
+        "slug": "inkling-2-mini",
+        "creator": "Thinking Machines",
+        "first_seen": "2026-11-21",
+        "last_seen": "2026-11-21"
+      },
+      "intelligence": 20.1
+    },
+    {
+      "date": "2026-11-21",
+      "type": "price",
+      "model": {
+        "id": "d366dfa1-d940-4788-aa73-d298c45699b3",
+        "name": "Gemini 4 Argon (High)",
+        "slug": "gemini-4-argon",
+        "creator": "Google",
+        "first_seen": "2026-10-01",
+        "last_seen": "2026-11-21"
+      },
+      "metric": "priceIn",
+      "from": 2,
+      "to": 4
+    },
+    {
+      "date": "2026-11-21",
+      "type": "price",
+      "model": {
+        "id": "d366dfa1-d940-4788-aa73-d298c45699b3",
+        "name": "Gemini 4 Argon (High)",
+        "slug": "gemini-4-argon",
+        "creator": "Google",
+        "first_seen": "2026-10-01",
+        "last_seen": "2026-11-21"
+      },
+      "metric": "priceOut",
+      "from": 10,
+      "to": 20
+    },
+    {
+      "date": "2026-11-21",
+      "type": "price",
+      "model": {
+        "id": "48e6f735-f2bc-418f-b99f-3dc5a0ddda77",
+        "name": "Gemini 4 Argon (Medium)",
+        "slug": "gemini-4-argon-medium",
+        "creator": "Google",
+        "first_seen": "2026-11-14",
+        "last_seen": "2026-11-21"
+      },
+      "metric": "priceIn",
+      "from": 2,
+      "to": 4
+    },
+    {
+      "date": "2026-11-21",
+      "type": "price",
+      "model": {
+        "id": "48e6f735-f2bc-418f-b99f-3dc5a0ddda77",
+        "name": "Gemini 4 Argon (Medium)",
+        "slug": "gemini-4-argon-medium",
+        "creator": "Google",
+        "first_seen": "2026-11-14",
+        "last_seen": "2026-11-21"
+      },
+      "metric": "priceOut",
+      "from": 10,
+      "to": 20
+    },
+    {
+      "date": "2026-11-21",
+      "type": "price",
+      "model": {
+        "id": "5ca91b0e-0e47-4793-ace9-2ca763106e62",
+        "name": "JoyAI-VL-Preview",
+        "slug": "joyai-vl",
+        "creator": "Joy Future Academy",
+        "first_seen": "2026-11-19",
+        "last_seen": "2026-11-21"
+      },
+      "metric": "priceIn",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-11-21",
+      "type": "price",
+      "model": {
+        "id": "5ca91b0e-0e47-4793-ace9-2ca763106e62",
+        "name": "JoyAI-VL-Preview",
+        "slug": "joyai-vl",
+        "creator": "Joy Future Academy",
+        "first_seen": "2026-11-19",
+        "last_seen": "2026-11-21"
+      },
+      "metric": "priceOut",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-11-21",
+      "type": "price",
+      "model": {
+        "id": "922c69c7-9037-43c6-8bcf-a1c555e7f3eb",
+        "name": "Llama 4 Maverick",
+        "slug": "llama-4-maverick",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-21"
+      },
+      "metric": "priceIn",
+      "from": 0.26,
+      "to": 0.25
+    },
+    {
+      "date": "2026-11-21",
+      "type": "price",
+      "model": {
+        "id": "922c69c7-9037-43c6-8bcf-a1c555e7f3eb",
+        "name": "Llama 4 Maverick",
+        "slug": "llama-4-maverick",
+        "creator": "Meta",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-21"
+      },
+      "metric": "priceOut",
+      "from": 0.985,
+      "to": 1
+    },
     {
       "date": "2026-11-20",
       "type": "price",

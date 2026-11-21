@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-20T02:01:50.240Z",
+  "fetched_at": "2026-11-21T01:58:56.236Z",
   "tier": "free",
   "data": [
     {
@@ -768,15 +768,6 @@
       "aa_wer_index": 0.046
     },
     {
-      "id": "f2f637de-a407-48d6-bfb4-deec43f25ea6",
-      "name": "Rumble-2",
-      "model_creator": {
-        "id": "98f2673d-23e8-46f8-8938-c8391fb15967",
-        "name": "Reson8"
-      },
-      "aa_wer_index": 0.027
-    },
-    {
       "id": "5cf8e91a-5ec7-4722-a6eb-7651cbba04c0",
       "name": "Yoob ASR Turbo v1",
       "model_creator": {
@@ -811,6 +802,33 @@
         "name": "AssemblyAI"
       },
       "aa_wer_index": null
+    },
+    {
+      "id": "8e8f0558-2319-4fd0-b1ef-3371e4ba1ecd",
+      "name": "Azure AI Speech LLM 09-2026",
+      "model_creator": {
+        "id": "ef5ce458-9986-4652-915a-e31fac5506b0",
+        "name": "Microsoft"
+      },
+      "aa_wer_index": 0.028
+    },
+    {
+      "id": "f2f637de-a407-48d6-bfb4-deec43f25ea6",
+      "name": "Rumble-2",
+      "model_creator": {
+        "id": "98f2673d-23e8-46f8-8938-c8391fb15967",
+        "name": "Reson8"
+      },
+      "aa_wer_index": 0.027
+    },
+    {
+      "id": "d618fe3b-efea-43a7-b55c-58e6267b9670",
+      "name": "Xing-Audio4.0-ASR-Preview",
+      "model_creator": {
+        "id": "2c29051a-3c42-457e-96d9-34ced13e6717",
+        "name": "China Telecom AI"
+      },
+      "aa_wer_index": 0.02
     }
   ]
 }
