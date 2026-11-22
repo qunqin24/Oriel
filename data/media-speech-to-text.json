@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-21T01:58:56.236Z",
+  "fetched_at": "2026-11-22T00:58:32.110Z",
   "tier": "free",
   "data": [
     {
@@ -759,6 +759,15 @@
       "aa_wer_index": 0.028
     },
     {
+      "id": "d618fe3b-efea-43a7-b55c-58e6267b9670",
+      "name": "Xing-Audio4.0-ASR-Preview",
+      "model_creator": {
+        "id": "2c29051a-3c42-457e-96d9-34ced13e6717",
+        "name": "China Telecom AI"
+      },
+      "aa_wer_index": 0.02
+    },
+    {
       "id": "b025e16d-80be-4527-baeb-9a6943fd7d89",
       "name": "Rime STT",
       "model_creator": {
@@ -820,15 +829,6 @@
         "name": "Reson8"
       },
       "aa_wer_index": 0.027
-    },
-    {
-      "id": "d618fe3b-efea-43a7-b55c-58e6267b9670",
-      "name": "Xing-Audio4.0-ASR-Preview",
-      "model_creator": {
-        "id": "2c29051a-3c42-457e-96d9-34ced13e6717",
-        "name": "China Telecom AI"
-      },
-      "aa_wer_index": 0.02
     }
   ]
 }
