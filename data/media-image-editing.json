@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-23T01:25:11.644Z",
+  "fetched_at": "2026-11-24T05:08:54.567Z",
   "tier": "free",
   "data": [
     {
@@ -331,6 +331,17 @@
       },
       "elo": 1090,
       "ci_95": 12
+    },
+    {
+      "id": "c1843eeb-10df-475b-b966-b3d2f203903f",
+      "name": "Ideogram 4.6 (High)",
+      "slug": "ideogram-4-6",
+      "model_creator": {
+        "id": "a8b2ac11-1f36-44cb-9e88-383c4e0d749f",
+        "name": "Ideogram"
+      },
+      "elo": 1088,
+      "ci_95": 14
     },
     {
       "id": "5aa06cdc-2d14-44d2-ae75-cd1230bca9f7",

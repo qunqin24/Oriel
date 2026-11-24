@@ -1,6 +1,139 @@
 {
-  "generated_at": "2026-11-23T01:25:16.563Z",
+  "generated_at": "2026-11-24T05:08:56.376Z",
   "events": [
+    {
+      "date": "2026-11-24",
+      "type": "added",
+      "model": {
+        "id": "f232d373-e666-488c-b0f2-39ef90321f64",
+        "name": "Ling-3.2-air",
+        "slug": "ling-3-2-air",
+        "creator": "InclusionAI",
+        "first_seen": "2026-11-24",
+        "last_seen": "2026-11-24"
+      },
+      "intelligence": 23.4
+    },
+    {
+      "date": "2026-11-24",
+      "type": "price",
+      "model": {
+        "id": "92f245a7-43b4-4ffd-8bfb-866746bf824d",
+        "name": "GLM-5.1 (Non-reasoning)",
+        "slug": "glm-5-1-non-reasoning",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-24"
+      },
+      "metric": "priceIn",
+      "from": 1.38,
+      "to": 1.285
+    },
+    {
+      "date": "2026-11-24",
+      "type": "price",
+      "model": {
+        "id": "92f245a7-43b4-4ffd-8bfb-866746bf824d",
+        "name": "GLM-5.1 (Non-reasoning)",
+        "slug": "glm-5-1-non-reasoning",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-24"
+      },
+      "metric": "priceOut",
+      "from": 4.4,
+      "to": 4.07
+    },
+    {
+      "date": "2026-11-24",
+      "type": "price",
+      "model": {
+        "id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
+        "name": "GLM-5.1 (Reasoning)",
+        "slug": "glm-5-1",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-24"
+      },
+      "metric": "priceIn",
+      "from": 1.285,
+      "to": 1.19
+    },
+    {
+      "date": "2026-11-24",
+      "type": "price",
+      "model": {
+        "id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
+        "name": "GLM-5.1 (Reasoning)",
+        "slug": "glm-5-1",
+        "creator": "Z AI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-24"
+      },
+      "metric": "priceOut",
+      "from": 4.07,
+      "to": 3.74
+    },
+    {
+      "date": "2026-11-24",
+      "type": "price",
+      "model": {
+        "id": "0b7efa66-2115-49e0-a1b7-a2ba225fe9f6",
+        "name": "Grok Build 0.1 0616",
+        "slug": "grok-build-0-1-06-16",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-24"
+      },
+      "metric": "priceIn",
+      "from": 1,
+      "to": null
+    },
+    {
+      "date": "2026-11-24",
+      "type": "price",
+      "model": {
+        "id": "0b7efa66-2115-49e0-a1b7-a2ba225fe9f6",
+        "name": "Grok Build 0.1 0616",
+        "slug": "grok-build-0-1-06-16",
+        "creator": "SpaceXAI",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-24"
+      },
+      "metric": "priceOut",
+      "from": 2,
+      "to": null
+    },
+    {
+      "date": "2026-11-24",
+      "type": "price",
+      "model": {
+        "id": "313e14b6-909f-43d2-b795-49c825dc1e21",
+        "name": "LingSante-3.1-flash",
+        "slug": "lingsante-3-1-flash",
+        "creator": "InclusionAI",
+        "first_seen": "2026-11-23",
+        "last_seen": "2026-11-24"
+      },
+      "metric": "priceIn",
+      "from": 0,
+      "to": null
+    },
+    {
+      "date": "2026-11-24",
+      "type": "price",
+      "model": {
+        "id": "313e14b6-909f-43d2-b795-49c825dc1e21",
+        "name": "LingSante-3.1-flash",
+        "slug": "lingsante-3-1-flash",
+        "creator": "InclusionAI",
+        "first_seen": "2026-11-23",
+        "last_seen": "2026-11-24"
+      },
+      "metric": "priceOut",
+      "from": 0,
+      "to": null
+    },
     {
       "date": "2026-11-23",
       "type": "added",

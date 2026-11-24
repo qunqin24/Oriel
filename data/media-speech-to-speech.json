@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-23T01:25:11.644Z",
+  "fetched_at": "2026-11-24T05:08:54.567Z",
   "tier": "free",
   "data": [
     {
@@ -241,6 +241,18 @@
       "bba_score": 1,
       "fdb_score": 0.99,
       "tau_voice_score": null
+    },
+    {
+      "id": "cfb3e397-d937-4e61-aa71-647299156b53",
+      "name": "Phonic 1.1 (High)",
+      "slug": "phonic-1-1-high",
+      "model_creator": {
+        "id": "24e8c9d3-814b-4796-981d-2dc237ffe73d",
+        "name": "Phonic"
+      },
+      "bba_score": 0.99,
+      "fdb_score": null,
+      "tau_voice_score": 0.87
     },
     {
       "id": "6ea9257f-c9f6-4789-be83-3d90c49f1c86",
