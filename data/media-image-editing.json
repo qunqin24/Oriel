@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-24T05:08:54.567Z",
+  "fetched_at": "2026-11-25T03:57:57.091Z",
   "tier": "free",
   "data": [
     {
@@ -208,7 +208,7 @@
         "id": "4756ee95-5ddf-45e8-a9d1-075d0e5b5200",
         "name": "Microsoft AI"
       },
-      "elo": 1123,
+      "elo": 1124,
       "ci_95": 12
     },
     {
@@ -329,7 +329,7 @@
         "id": "4756ee95-5ddf-45e8-a9d1-075d0e5b5200",
         "name": "Microsoft AI"
       },
-      "elo": 1090,
+      "elo": 1091,
       "ci_95": 12
     },
     {
@@ -384,7 +384,7 @@
         "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
         "name": "SpaceXAI"
       },
-      "elo": 1074,
+      "elo": 1075,
       "ci_95": 12
     },
     {
@@ -440,7 +440,7 @@
         "name": "Tencent"
       },
       "elo": 1063,
-      "ci_95": 12
+      "ci_95": 13
     },
     {
       "id": "d82c66de-d55a-4b6a-af16-f5bf808431cc",
@@ -472,7 +472,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 1054,
+      "elo": 1053,
       "ci_95": 15
     },
     {
@@ -483,7 +483,7 @@
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google"
       },
-      "elo": 1052,
+      "elo": 1053,
       "ci_95": 12
     },
     {
@@ -604,7 +604,7 @@
         "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
         "name": "Black Forest Labs"
       },
-      "elo": 1009,
+      "elo": 1010,
       "ci_95": 14
     },
     {
@@ -615,7 +615,7 @@
         "id": "d3f67dc4-ba4d-4103-ba79-ee321ca99b40",
         "name": "Fal"
       },
-      "elo": 1008,
+      "elo": 1009,
       "ci_95": 16
     },
     {
@@ -641,17 +641,6 @@
       "ci_95": 0
     },
     {
-      "id": "6a398b55-7f36-4039-bbbf-2045ef8ab525",
-      "name": "FLUX.2 [max]",
-      "slug": "black_forest_labs_flux-2-max",
-      "model_creator": {
-        "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
-        "name": "Black Forest Labs"
-      },
-      "elo": 998,
-      "ci_95": 12
-    },
-    {
       "id": "2f5ebb1e-6d5f-48b0-95bf-3b590fd45971",
       "name": "GPT Image 1 (high)",
       "slug": "openai-gpt_gpt-image-1--high",
@@ -661,6 +650,17 @@
       },
       "elo": 998,
       "ci_95": 16
+    },
+    {
+      "id": "6a398b55-7f36-4039-bbbf-2045ef8ab525",
+      "name": "FLUX.2 [max]",
+      "slug": "black_forest_labs_flux-2-max",
+      "model_creator": {
+        "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
+        "name": "Black Forest Labs"
+      },
+      "elo": 998,
+      "ci_95": 12
     },
     {
       "id": "878746c7-f8e0-48c0-941e-d8262608ca1a",
@@ -747,7 +747,7 @@
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba"
       },
-      "elo": 962,
+      "elo": 961,
       "ci_95": 17
     },
     {
@@ -813,7 +813,7 @@
         "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
         "name": "OpenAI"
       },
-      "elo": 940,
+      "elo": 939,
       "ci_95": 17
     },
     {
@@ -890,7 +890,7 @@
         "id": "d427ad30-eba3-4945-857a-4eb0ead82e87",
         "name": "Black Forest Labs"
       },
-      "elo": 882,
+      "elo": 883,
       "ci_95": 19
     },
     {
@@ -934,7 +934,7 @@
         "id": "d2928e1f-884a-4728-8d1c-d48db15c561d",
         "name": "VectorSpaceLab"
       },
-      "elo": 779,
+      "elo": 778,
       "ci_95": 21
     },
     {
