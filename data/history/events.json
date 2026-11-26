@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-11-25T03:57:58.489Z",
+  "generated_at": "2026-11-26T03:23:01.358Z",
   "events": [
+    {
+      "date": "2026-11-26",
+      "type": "price",
+      "model": {
+        "id": "f1d52583-9d20-4099-99ac-b5df9430c3b6",
+        "name": "NVIDIA Nemotron Nano 9B V2 (Reasoning)",
+        "slug": "nvidia-nemotron-nano-9b-v2-reasoning",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-26"
+      },
+      "metric": "priceIn",
+      "from": null,
+      "to": 0.06
+    },
+    {
+      "date": "2026-11-26",
+      "type": "price",
+      "model": {
+        "id": "f1d52583-9d20-4099-99ac-b5df9430c3b6",
+        "name": "NVIDIA Nemotron Nano 9B V2 (Reasoning)",
+        "slug": "nvidia-nemotron-nano-9b-v2-reasoning",
+        "creator": "NVIDIA",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-26"
+      },
+      "metric": "priceOut",
+      "from": null,
+      "to": 0.23
+    },
     {
       "date": "2026-11-25",
       "type": "price",
