@@ -1,6 +1,34 @@
 {
-  "generated_at": "2026-11-26T03:23:01.358Z",
+  "generated_at": "2026-11-27T03:30:16.546Z",
   "events": [
+    {
+      "date": "2026-11-27",
+      "type": "added",
+      "model": {
+        "id": "0cb139e2-02de-4c49-b7b4-b174937a83fc",
+        "name": "ERNIE 5.5 Flash Preview",
+        "slug": "ernie-5-5-flash",
+        "creator": "Baidu",
+        "first_seen": "2026-11-27",
+        "last_seen": "2026-11-27"
+      },
+      "intelligence": 31.3
+    },
+    {
+      "date": "2026-11-27",
+      "type": "score",
+      "model": {
+        "id": "6e1b44ff-c227-496b-aef4-19b70cd18c76",
+        "name": "Gemma 4 26B A4B (Reasoning)",
+        "slug": "gemma-4-26b-a4b",
+        "creator": "Google",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-27"
+      },
+      "metric": "intelligence",
+      "from": null,
+      "to": 4
+    },
     {
       "date": "2026-11-26",
       "type": "price",

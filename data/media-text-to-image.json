@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-26T03:23:00.459Z",
+  "fetched_at": "2026-11-27T03:30:15.179Z",
   "tier": "free",
   "data": [
     {
@@ -254,6 +254,17 @@
       },
       "elo": 1105,
       "ci_95": 10
+    },
+    {
+      "id": "735df01c-b832-43c4-a267-5633dc2d7f91",
+      "name": "Ming-Image-0.2-Design",
+      "slug": "ming-image-0-2-design",
+      "model_creator": {
+        "id": "4df238a9-d4fd-4cf2-ab1e-d12956c41f9b",
+        "name": "InclusionAI"
+      },
+      "elo": 1095,
+      "ci_95": 12
     },
     {
       "id": "5538a039-fb86-4cd7-a207-4d692f358032",
