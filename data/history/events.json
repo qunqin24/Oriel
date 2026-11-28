@@ -1,6 +1,49 @@
 {
-  "generated_at": "2026-11-27T03:30:16.546Z",
+  "generated_at": "2026-11-28T03:06:44.077Z",
   "events": [
+    {
+      "date": "2026-11-28",
+      "type": "added",
+      "model": {
+        "id": "178d9aca-b55a-441d-89f7-aec7f9ad3fda",
+        "name": "Quasar 1.2 358B (Max, Based on GLM-5.3)",
+        "slug": "quasar-1-2-358b",
+        "creator": "Multiverse Computing",
+        "first_seen": "2026-11-28",
+        "last_seen": "2026-11-28"
+      },
+      "intelligence": 23.1
+    },
+    {
+      "date": "2026-11-28",
+      "type": "price",
+      "model": {
+        "id": "43fc5506-c5ed-4dee-9b85-962bf7ae3986",
+        "name": "DeepSeek V3 (Dec '24)",
+        "slug": "deepseek-v3",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-28"
+      },
+      "metric": "priceIn",
+      "from": 0.32,
+      "to": 0.285
+    },
+    {
+      "date": "2026-11-28",
+      "type": "price",
+      "model": {
+        "id": "43fc5506-c5ed-4dee-9b85-962bf7ae3986",
+        "name": "DeepSeek V3 (Dec '24)",
+        "slug": "deepseek-v3",
+        "creator": "DeepSeek",
+        "first_seen": "2026-07-23",
+        "last_seen": "2026-11-28"
+      },
+      "metric": "priceOut",
+      "from": 0.89,
+      "to": 0.57
+    },
     {
       "date": "2026-11-27",
       "type": "added",
